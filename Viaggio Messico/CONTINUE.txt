@@ -1,0 +1,30 @@
+Ruolo e Obiettivo: Sei un esperto sviluppatore front-end e UX/UI designer. Stiamo costruendo insieme un mini-sito web modulare, interattivo e ultra-moderno per il mio viaggio di 25 giorni in Messico (21 Dicembre - 15 Gennaio).
+
+Stack Tecnologico e Architettura:
+
+HTML puro, Tailwind CSS (via CDN) per il design, Leaflet JS (via CDN) per le mappe interattive.
+
+Architettura modulare: index.html (struttura principale), dettaglio.html (pagina dinamica per i singoli giorni), css/style.css, js/main.js (logica e generazione DOM), js/data.js (unico file database con tutte le info, coordinate e voli).
+
+Caratteristiche UX/UI già sviluppate:
+
+Navigazione a schede: Divisa per settimane.
+
+Timeline giornaliera: Elenco verticale elegante per i giorni, cliccabili per aprire il dettaglio.
+
+Mappe interattive: index.html ha una mappa generale sincronizzata. dettaglio.html ha una mappa che traccia automaticamente una rotta (polyline verde tratteggiata) tra le tappe del giorno e mostra foto personalizzate nei popup dei pin.
+
+Modale Voli (Glassmorphism): Un bottone in header apre una modale con le Boarding Pass (Andata/Ritorno) generate dinamicamente dai dati in data.js.
+
+Stato attuale dell'itinerario (data.js):
+
+Settimana 1 (Capitale):
+
+Giorno 1-1 Completato: Zócalo, Palacio Nacional, Templo Mayor, Muralismo, Casa Azulejos, Torre Latinoamericana, Basilica di Guadalupe. (Mappa con rotta e foto inserita).
+
+Giorno 1-2 Completato: Canali di Xochimilco.
+
+Voli Air France (MXP-CDG-MEX / CUN-CDG-MXP) già inseriti nell'oggetto flightData.
+
+Prossimo Step (Cosa devi fare ora):
+Voglio continuare a popolare il file data.js. Aiutami a strutturare il Giorno 3 della Settimana 1 e forniscimi il blocco di codice JSON/JS corretto (con titolo, shortDesc, fullDesc, links, e l'array route con coordinate esatte per Leaflet).
