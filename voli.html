@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spedizione Messico 2026 - Atlante & Voli</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #map { height: 420px; width: 100%; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .gallery-img { height: 95px; object-fit: cover; transition: transform 0.2s; }
+        .gallery-img:hover { transform: scale(1.03); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-emerald-50 min-h-screen text-gray-800 font-sans p-4 sm:p-6">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <span class="bg-amber-200 text-amber-900 text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wider">20 Dicembre 2026 - 17 Gennaio 2027 • 30 Giorni</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-emerald-900 mt-2">Spedizione Sud del Messico: Atlante & Voli</h1>
+            <p class="text-gray-600 mt-1">Pianificazione ufficiale, piano voli Air France, mappa interattiva, tappe e link utili.</p>
+        </header>
+
+        <!-- SEZIONE VOLI UFFICIALI (UI/UX Super Moderna - Air France) -->
+        <div class="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 rounded-3xl shadow-2xl p-6 sm:p-8 mb-8 text-white relative overflow-hidden border border-emerald-500/30">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-white/10 pb-4 gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-emerald-500/20 p-2.5 rounded-2xl border border-emerald-400/30 text-emerald-400">
+                        ✈️
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-black tracking-wide text-white">Voli Ufficiali Confermati</h2>
+                        <p class="text-xs text-emerald-300/80">Operati da Air France • Classe Economy • Biglietti Emessi</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        🟢 Andata: 20 Dic 2026
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                        🟢 Ritorno: 16-17 Gen 2027
+                    </span>
+                </div>
+            </div>
+
+            <!-- Griglia Boarding Pass Digitali -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <!-- CARD ANDATA -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center text-xs font-bold text-emerald-400 uppercase tracking-wider mb-3">
+                            <span>Andata • Dom 20 Dic 2026</span>
+                            <span class="bg-white/10 px-2 py-0.5 rounded text-white/80">Milano ➔ CDMX</span>
+                        </div>
+                        
+                        <!-- Tratta 1 -->
+                        <div class="flex items-center justify-between py-2 border-b border-white/10 text-xs">
+                            <div class="flex flex-col">
+                                <span class="font-bold text-base text-white">12:40</span>
+                                <span class="text-gray-400">MXP (T1)</span>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <span class="text-[10px] text-emerald-400 font-semibold">[AF1131]</span>
+                                <div class="w-20 sm:w-32 h-[1px] bg-white/30 relative my-1">
+                                    <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[10px]">✈️</div>
+                                </div>
+                                <span class="text-[10px] text-gray-400">1h 35m • A318</span>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="font-bold text-base text-white">14:15</span>
+                                <span class="text-gray-400">CDG (T2F)</span>
+                            </div>
+                        </div>
+
+                        <!-- Scalo -->
+                        <div class="py-2 text-center">
+                            <span class="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] px-3 py-1 rounded-full font-medium">
+                                ⏱️ Transfer a Parigi CDG: 1h 35m
+                            </span>
+                        </div>
+
+                        <!-- Tratta 2 -->
+                        <div class="flex items-center justify-between py-2 text-xs">
+                            <div class="flex flex-col">
+                                <span class="font-bold text-base text-white">15:50</span>
+                                <span class="text-gray-400">CDG (T2E)</span>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <span class="text-[10px] text-emerald-400 font-semibold">[AF174]</span>
+                                <div class="w-20 sm:w-32 h-[1px] bg-white/30 relative my-1">
+                                    <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[10px]">✈️</div>
+                                </div>
+                                <span class="text-[10px] text-gray-400">12h 05m • A350-900</span>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="font-bold text-base text-white">20:55</span>
+                                <span class="text-gray-400">MEX (T1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD RITORNO -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center text-xs font-bold text-blue-400 uppercase tracking-wider mb-3">
+                            <span>Ritorno • 16-17 Gen 2027</span>
+                            <span class="bg-white/10 px-2 py-0.5 rounded text-white/80">Cancún ➔ Milano</span>
+                        </div>
+                        
+                        <!-- Tratta 3 -->
+                        <div class="flex items-center justify-between py-2 border-b border-white/10 text-xs">
+                            <div class="flex flex-col">
+                                <span class="font-bold text-base text-white">21:00</span>
+                                <span class="text-gray-400">CUN (T4) • Sab 16 gen</span>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <span class="text-[10px] text-blue-400 font-semibold">[AF651]</span>
+                                <div class="w-20 sm:w-32 h-[1px] bg-white/30 relative my-1">
+                                    <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[10px]">✈️</div>
+                                </div>
+                                <span class="text-[10px] text-gray-400">9h 30m • B777-300</span>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="font-bold text-base text-white">12:30*</span>
+                                <span class="text-gray-400">CDG (T2E) • Dom 17</span>
+                            </div>
+                        </div>
+
+                        <!-- Scalo -->
+                        <div class="py-2 text-center">
+                            <span class="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] px-3 py-1 rounded-full font-medium">
+                                ⏱️ Transfer a Parigi CDG: 3h 25m
+                            </span>
+                        </div>
+
+                        <!-- Tratta 4 -->
+                        <div class="flex items-center justify-between py-2 text-xs">
+                            <div class="flex flex-col">
+                                <span class="font-bold text-base text-white">15:55</span>
+                                <span class="text-gray-400">CDG (T2F)</span>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <span class="text-[10px] text-blue-400 font-semibold">[AF1730]</span>
+                                <div class="w-20 sm:w-32 h-[1px] bg-white/30 relative my-1">
+                                    <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[10px]">✈️</div>
+                                </div>
+                                <span class="text-[10px] text-gray-400">1h 30m • A220-300</span>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="font-bold text-base text-white">17:25</span>
+                                <span class="text-gray-400">MXP (T1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navigazione Principale delle 4 Settimane -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+            <button onclick="switchWeek(1)" id="nav-btn-1" class="py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-emerald-700 text-white shadow-md transition text-center flex flex-col items-center">
+                <span>Settimana 1</span>
+                <span class="text-[10px] font-normal opacity-90">Altopiano & Aztechi</span>
+            </button>
+            <button onclick="switchWeek(2)" id="nav-btn-2" class="py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition text-center border border-gray-200 flex flex-col items-center">
+                <span>Settimana 2</span>
+                <span class="text-[10px] font-normal opacity-70">Oaxaca & Chiapas</span>
+            </button>
+            <button onclick="switchWeek(3)" id="nav-btn-3" class="py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition text-center border border-gray-200 flex flex-col items-center">
+                <span>Settimana 3</span>
+                <span class="text-[10px] font-normal opacity-70">Giungla & Calakmul</span>
+            </button>
+            <button onclick="switchWeek(4)" id="nav-btn-4" class="py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition text-center border border-gray-200 flex flex-col items-center">
+                <span>Settimana 4</span>
+                <span class="text-[10px] font-normal opacity-70">Yucatán & Caraibi</span>
+            </button>
+        </div>
+
+        <!-- Layout Principale: Mappa a sinistra (5 col) / Contenuti a destra (7 col) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- COLONNA SINISTRA: Mappa Interattiva -->
+            <div class="lg:col-span-5 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 flex flex-col">
+                <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-xs font-bold text-emerald-900 uppercase tracking-wide">Mappa Geografica</h2>
+                    <span class="text-[11px] text-gray-400">Clicca sui pin rossi</span>
+                </div>
+                <div id="map" class="rounded-xl shadow-inner z-10"></div>
+                <div class="mt-3 text-xs text-emerald-800 bg-emerald-50 p-2.5 rounded-lg text-center">
+                    💡 <strong>Sincronizzata:</strong> Cliccando sui pin o sui tab la mappa si sposta automaticamente.
+                </div>
+            </div>
+
+            <!-- COLONNA DESTRA: Contenuti Dinamici per Settimana -->
+            <div class="lg:col-span-7 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between">
+                
+                <!-- CONTENUTO SETTIMANA 1 -->
+                <div id="content-week-1" class="tab-content active p-6 space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Giorni 1 - 4 • Altopiano</span>
+                        <span class="text-xs text-gray-400">Città del Messico & Dintorni</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-gray-900">L'Altopiano e gli Aztechi</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Atterraggio all'aeroporto Benito Juárez di Città del Messico con Air France. Esplorazione dello Zócalo storico, i canali pre-hispani di Xochimilco, la Casa Azul di Frida Kahlo a Coyoacán e la scalata alle Piramidi di Teotihuacán.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-2 pt-2">
+                        <img src="https://images.unsplash.com/photo-1512813598632-45ec2f475f78?auto=format&fit=crop&w=600&q=80" alt="CDMX" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Teotihuacan" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1585464231875-d94e7565251d?auto=format&fit=crop&w=600&q=80" alt="Coyoacan" class="rounded-lg gallery-img w-full">
+                    </div>
+
+                    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3 rounded-r-lg text-xs text-emerald-900">
+                        <strong>Logistica & Spostamenti:</strong> Metro di Città del Messico, Uber (estremamente economico e sicuro) e bus turistici per Teotihuacán.
+                    </div>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg text-xs text-amber-900">
+                        <strong>Cibo & Sapori:</strong> Tacos al pastor storici, churros da El Moro e mezcal artigianale nelle cantine storiche di Centro Histórico.
+                    </div>
+                    <div class="pt-2 border-t text-xs flex flex-wrap gap-2">
+                        <a href="https://www.getyourguide.it" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Tour Teotihuacan (GetYourGuide)</a>
+                        <a href="https://www.mexicodesconocido.com.mx" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Guida CDMX</a>
+                    </div>
+                </div>
+
+                <!-- CONTENUTO SETTIMANA 2 -->
+                <div id="content-week-2" class="tab-content p-6 space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Giorni 5 - 8 • Oaxaca & Chiapas</span>
+                        <span class="text-xs text-gray-400">Tradizioni & Montagna</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-gray-900">Il Cuore Coloniale e Zapoteco</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Capitale gastronomica di Oaxaca, mercati incredibili, l'antica capitale zapoteca di Monte Albán e discesa tra i monti del Chiapas fino all'atmosfera magica di San Cristóbal de las Casas e i riti di San Juan Chamula.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-2 pt-2">
+                        <img src="https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=600&q=80" alt="Oaxaca" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80" alt="San Cristobal" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Chiapas" class="rounded-lg gallery-img w-full">
+                    </div>
+
+                    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3 rounded-r-lg text-xs text-emerald-900">
+                        <strong>Logistica & Spostamenti:</strong> Volo interno rapido o bus di linea ADO da CDMX a Oaxaca; bus notturno ADO di prima classe da Oaxaca a San Cristóbal.
+                    </div>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg text-xs text-amber-900">
+                        <strong>Cibo & Sapori:</strong> Mole negro complesso, tlayudas croccanti e degustazione guidata di Mezcal artigianale.
+                    </div>
+                    <div class="pt-2 border-t text-xs flex flex-wrap gap-2">
+                        <a href="https://www.ado.com.mx" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Prenotazione Bus ADO</a>
+                        <a href="https://www.rutopia.com" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Tour Comunitari Chiapas</a>
+                    </div>
+                </div>
+
+                <!-- CONTENUTO SETTIMANA 3 -->
+                <div id="content-week-3" class="tab-content p-6 space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Giorni 9 - 16 • Giungla & Maya</span>
+                        <span class="text-xs text-gray-400">Palenque & Calakmul Wild</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-gray-900">La Giungla e le Piramidi Perdute</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Discesa verso la foresta tropicale passando per le cascate di Agua Azul, le rovine avvolte dalle radici di Palenque e il capodanno mistico nella Riserva della Biosfera di Calakmul tra le scimmie urlatrici.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-2 pt-2">
+                        <img src="https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80" alt="Palenque" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1608953979462-87063327d896?auto=format&fit=crop&w=600&q=80" alt="Calakmul" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Campeche" class="rounded-lg gallery-img w-full">
+                    </div>
+
+                    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3 rounded-r-lg text-xs text-emerald-900">
+                        <strong>Logistica & Spostamenti:</strong> Colectivos dal Chiapas a Palenque; passaggio all'auto a noleggio per addentrarsi nella giungla di Calakmul e risalire a Campeche/Uxmal.
+                    </div>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg text-xs text-amber-900">
+                        <strong>Cibo & Sapori:</strong> Pesce fresco del Golfo, cucina tropicale degli eco-lodge e piatti tipici yucatechi.
+                    </div>
+                    <div class="pt-2 border-t text-xs flex flex-wrap gap-2">
+                        <a href="https://www.cabalek.com" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Guide Locali Calakmul</a>
+                        <a href="https://www.rentalcars.com" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Noleggio Auto Messico</a>
+                    </div>
+                </div>
+
+                <!-- CONTENUTO SETTIMANA 4 -->
+                <div id="content-week-4" class="tab-content p-6 space-y-4">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Giorni 17 - 30 • Yucatán & Caraibi</span>
+                        <span class="text-xs text-gray-400">Cenotes, Bacalar & Rientro</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-gray-900">Yucatán, Cenote e Rientro da Cancún</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Chichén Itzá all'alba, la coloniale Valladolid, bagni mistici nei cenote sotterranei, la laguna di Bacalar e la settimana di relax a Tulum prima del volo di rientro Air France da Cancún.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-2 pt-2">
+                        <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80" alt="Chichen Itza" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Cenote" class="rounded-lg gallery-img w-full">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Tulum" class="rounded-lg gallery-img w-full">
+                    </div>
+
+                    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3 rounded-r-lg text-xs text-emerald-900">
+                        <strong>Logistica & Spostamenti:</strong> Auto a noleggio per i cenote, discesa a Bacalar e rilascio finale dell'auto all'aeroporto di Cancún (CUN) per il volo AF651.
+                    </div>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg text-xs text-amber-900">
+                        <strong>Cibo & Sapori:</strong> Cochinita pibil cotta lentamente sottoterra, margarita ghiacciati e pesce fresco sulla spiaggia.
+                    </div>
+                    <div class="pt-2 border-t text-xs flex flex-wrap gap-2">
+                        <a href="https://www.inah.gob.mx" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Biglietti INAH</a>
+                        <a href="https://www.viator.com" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-md font-medium transition">🔗 Tour Bacalar (Viator)</a>
+                    </div>
+                </div>
+
+                <!-- Footer comune della scheda -->
+                <div class="px-6 py-3 bg-gray-50 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500 mt-4">
+                    <span>Spedizione Sud Messico (30 Giorni)</span>
+                    <span class="font-bold text-emerald-700">Dicembre 2026 - Gennaio 2027</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script Gestione Mappa & Sincronizzazione -->
+    <script>
+        var map = L.map('map').setView([19.5, -93.0], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const locations = [
+            { week: 1, name: "Città del Messico & Teotihuacán", coords: [19.4326, -99.1332], days: "Giorni 1 - 4" },
+            { week: 2, name: "Oaxaca & Monte Albán", coords: [17.0753, -96.7237], days: "Giorni 5 - 6" },
+            { week: 2, name: "San Cristóbal de las Casas", coords: [16.7370, -92.6376], days: "Giorni 7 - 8" },
+            { week: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "Giorni 9 - 10" },
+            { week: 3, name: "Calakmul (Riserva Biosfera)", coords: [18.1075, -89.8105], days: "Giorni 11 - 12" },
+            { week: 3, name: "Campeche, Uxmal & Mérida", coords: [20.9674, -89.5926], days: "Giorni 13 - 16" },
+            { week: 4, name: "Chichén Itzá & Valladolid", coords: [20.6843, -88.5678], days: "Giorni 17 - 18" },
+            { week: 4, name: "Laguna di Bacalar & Tulum", coords: [18.6796, -88.3900], days: "Giorni 19 - 30" }
+        ];
+
+        locations.forEach(function(loc) {
+            var marker = L.marker(loc.coords).addTo(map);
+            marker.bindPopup("<b>" + loc.name + "</b><br>" + loc.days);
+            
+            marker.on('click', function() {
+                switchWeek(loc.week);
+                map.setView(loc.coords, 9, {animate: true});
+            });
+        });
+
+        function switchWeek(weekNum) {
+            for(let i=1; i<=4; i++) {
+                let btn = document.getElementById('nav-btn-' + i);
+                if(i === weekNum) {
+                    btn.className = "py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-emerald-700 text-white shadow-md transition text-center flex flex-col items-center";
+                } else {
+                    btn.className = "py-3 px-4 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition text-center border border-gray-200 flex flex-col items-center";
+                }
+            }
+
+            for(let i=1; i<=4; i++) {
+                let content = document.getElementById('content-week-' + i);
+                if(i === weekNum) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            }
+
+            let targetCoords = [19.5, -93.0];
+            let targetZoom = 6;
+            if(weekNum === 1) { targetCoords = [19.43, -99.13]; targetZoom = 8; }
+            else if(weekNum === 2) { targetCoords = [17.07, -96.72]; targetZoom = 7; }
+            else if(weekNum === 3) { targetCoords = [18.10, -89.81]; targetZoom = 7; }
+            else if(weekNum === 4) { targetCoords = [19.50, -88.00]; targetZoom = 7; }
+
+            map.setView(targetCoords, targetZoom, {animate: true});
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* Custom Styles - css/style.css */
+#map { 
+    height: 420px; 
+    width: 100%; 
+}
+
+.tab-content { 
+    display: none; 
+}
+
+.tab-content.active { 
+    display: block; 
+}
+
+.img-card { 
+    height: 220px; 
+    object-fit: cover; 
+}
+
+.gallery-img { 
+    height: 95px; 
+    width: 100%;
+    object-fit: cover; 
+    transition: transform 0.2s; 
+}
+
+.gallery-img:hover { 
+    transform: scale(1.03); 
+}
