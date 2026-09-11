@@ -424,19 +424,12 @@ function initOrganicMosaic() {
     const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
-    const COLORS = [
-        '#f6ad55',
-        '#ed8936',
-        '#dd6b20',
-        '#fbd38d',
-        '#e87925'
-    ];
+    const TWO_PI = Math.PI * 2;
 
-    const CENTER_COLORS = [
-        '#9c5a1a',
-        '#a84f12',
-        '#7c3f12'
-    ];
+    const COLORS = ['#f6ad55', '#ed8936', '#dd6b20', '#fbd38d', '#e87925'];
+    const CENTER_COLORS = ['#9c5a1a', '#a84f12', '#7c3f12'];
+    const LARGE_LAYER_COLORS = ['#ed8936', '#dd6b20', '#f6ad55'];
+    const HUGE_LAYER_COLORS = ['#dd6b20', '#ed8936', '#f6ad55'];
 
     // --------------------------------------------------
     // ANIMAZIONE
@@ -456,30 +449,100 @@ function initOrganicMosaic() {
     // 4 LIVELLI DI GRANDEZZA
     // --------------------------------------------------
 
-    const SMALL_MIN = 7;
-    const SMALL_MAX = 12;
+    const SMALL_MIN = 7, SMALL_MAX = 12;
+    const MEDIUM_MIN = 13, MEDIUM_MAX = 21;
+    const LARGE_MIN = 23, LARGE_MAX = 38;
+    const HUGE_MIN = 42, HUGE_MAX = 65;
 
-    const MEDIUM_MIN = 13;
-    const MEDIUM_MAX = 21;
-
-    const LARGE_MIN = 23;
-    const LARGE_MAX = 38;
-
-    const HUGE_MIN = 42;
-    const HUGE_MAX = 65;
-
-    // Numero di grandi fiori distribuiti sopra il pattern.
     const LARGE_FLOWER_COUNT = 42;
     const HUGE_FLOWER_COUNT = 12;
+
+    // --------------------------------------------------
+    // LAYOUT: MARGINI PIENI, CENTRO RAREFATTO,
+    // FASCE ALTA E BASSA PIÙ DENSE
+    // --------------------------------------------------
+
+    /*
+     * Componente orizzontale: la colonna di lettura (max-w-7xl = 1280px)
+     * sta al centro. Fuori i fiori sono densi, dentro radi e sfumati.
+     */
+    const CONTENT_MAX_WIDTH = 1280;  // max-w-7xl
+    const CONTENT_PADDING = 32;      // padding orizzontale dei box (px-8)
+    const FADE_BAND = 200;           // larghezza della transizione laterale
+    const MIN_MARGIN = 96;           // sotto questo margine l'effetto laterale si disattiva
+
+    /*
+     * Componente verticale: vicino al bordo alto e basso della viewport
+     * la densità risale anche dentro la colonna centrale.
+     */
+    const VERTICAL_BAND = 220;       // altezza della fascia alta/bassa (px)
+    const VERTICAL_STRENGTH = 0.75;  // quanto le fasce si avvicinano alla densità dei margini (0–1)
+
+    const CENTER_DENSITY = 0.22;     // probabilità di tenere un fiore nel centro "puro"
+    const CENTER_ALPHA = 0.50;       // opacità nel centro "puro"
+    const MARGIN_BOOST = 1.7;        // candidati extra per il riempimento (finiscono nelle zone permesse)
+
+    const PROFILES = {
+        small: {
+            petalCount: 12, layers: 2, lengthK: 0.95, widthK: 0.42,
+            alphaBase: 0.20, alphaGain: 0.46,
+            centerK: 0.19, centerAlphaBase: 0.46, centerAlphaGain: 0.34,
+            core: false
+        },
+        medium: {
+            petalCount: 15, layers: 3, lengthK: 0.92, widthK: 0.39,
+            alphaBase: 0.20, alphaGain: 0.46,
+            centerK: 0.19, centerAlphaBase: 0.46, centerAlphaGain: 0.34,
+            core: false
+        },
+        large: {
+            petalCount: 18, layers: 4, lengthK: 0.90, widthK: 0.36,
+            alphaBase: 0.18, alphaGain: 0.34,
+            centerK: 0.21, centerAlphaBase: 0.44, centerAlphaGain: 0.36,
+            core: true
+        },
+        huge: {
+            petalCount: 20, layers: 4, lengthK: 0.88, widthK: 0.34,
+            alphaBase: 0.17, alphaGain: 0.32,
+            centerK: 0.22, centerAlphaBase: 0.40, centerAlphaGain: 0.38,
+            core: true
+        }
+    };
+
+    for (const key in PROFILES) {
+        const p = PROFILES[key];
+        p.petalStep = TWO_PI / p.petalCount;
+        p.layerData = [];
+        for (let layer = 0; layer < p.layers; layer++) {
+            const lp = layer / Math.max(1, p.layers - 1);
+            p.layerData.push({
+                lengthMul: 0.54 + lp * 0.46,
+                widthMul: 0.68 + lp * 0.32,
+                offset: lp * 0.18,
+                rotation: layer * 0.13,
+                randomColor: layer % 2 === 1
+            });
+        }
+    }
 
     let width = 0;
     let height = 0;
 
     let flowers = [];
+    let lastBloomEnd = BLOOM_DURATION;
 
     let animationId = null;
     let startTime = 0;
     let resizeTimeout = null;
+
+    // Stato del layout, ricalcolato ad ogni resize.
+    let contentHalf = 0;
+    let layoutActive = false;
+
+    // Layer statico dove vengono "cotti" i fiori già completamente sbocciati.
+    const bakedCanvas = document.createElement('canvas');
+    const bakedCtx = bakedCanvas.getContext('2d', { alpha: true });
+    let bakedIndex = 0;
 
     // --------------------------------------------------
     // UTILITY
@@ -490,16 +553,81 @@ function initOrganicMosaic() {
     }
 
     function choose(array) {
-        return array[
-            Math.floor(Math.random() * array.length)
-        ];
+        return array[(Math.random() * array.length) | 0];
     }
 
-    function clamp(value, min, max) {
-        return Math.max(
-            min,
-            Math.min(max, value)
-        );
+    function smoothstep(t) {
+        if (t <= 0) return 0;
+        if (t >= 1) return 1;
+        return t * t * (3 - 2 * t);
+    }
+
+    /*
+     * Peso complessivo di un punto: 1 = zona piena (margini laterali),
+     * 0 = centro "puro" (colonna di lettura, a metà altezza).
+     */
+    function weightAt(x, y) {
+        if (!layoutActive) return 1;
+
+        // Componente orizzontale: distanza dal bordo della colonna.
+        const dx = Math.abs(x - width / 2) - contentHalf; // > 0 fuori dal contenuto
+        const wx = smoothstep((dx + FADE_BAND / 2) / FADE_BAND);
+
+        // Componente verticale: vicinanza al bordo alto o basso.
+        const dy = Math.min(y, height - y);               // distanza dal bordo più vicino
+        const wy = (1 - smoothstep(dy / VERTICAL_BAND)) * VERTICAL_STRENGTH;
+
+        return Math.max(wx, wy);
+    }
+
+    // Decide se generare un fiore in (x, y).
+    function keepAt(x, y) {
+        return Math.random() < CENTER_DENSITY + (1 - CENTER_DENSITY) * weightAt(x, y);
+    }
+
+    // Moltiplicatore di opacità in (x, y).
+    function fadeAt(x, y) {
+        return CENTER_ALPHA + (1 - CENTER_ALPHA) * weightAt(x, y);
+    }
+
+    /*
+     * Estrae un punto nel rettangolo dato rispettando la distribuzione
+     * di densità. Il risultato viene lasciato in sampledX / sampledY.
+     */
+    let sampledX = 0;
+    let sampledY = 0;
+
+    function samplePoint(margin) {
+        sampledX = random(-margin, width + margin);
+        sampledY = random(-margin, height + margin);
+        for (let tries = 0; tries < 24 && !keepAt(sampledX, sampledY); tries++) {
+            sampledX = random(-margin, width + margin);
+            sampledY = random(-margin, height + margin);
+        }
+    }
+
+    function makeFlower(x, y, radius, rotation, color, centerColor, sizeLevel, bloomOffset) {
+        const profile = PROFILES[sizeLevel];
+        const phase = random(0, TWO_PI);
+        const petalCount = profile.petalCount;
+        const layers = profile.layers;
+
+        const lengthVar = new Float64Array(petalCount * layers);
+        const widthVar = new Float64Array(petalCount);
+
+        for (let i = 0; i < petalCount; i++) {
+            widthVar[i] = 0.92 + Math.sin(phase + i * 2.37) * 0.07;
+            for (let layer = 0; layer < layers; layer++) {
+                lengthVar[layer * petalCount + i] =
+                    0.94 + Math.sin(phase + i * 1.83 + layer * 2.1) * 0.035;
+            }
+        }
+
+        return {
+            x, y, radius, rotation, color, centerColor, phase,
+            sizeLevel, bloomOffset, profile, lengthVar, widthVar,
+            fade: fadeAt(x, y)
+        };
     }
 
     // --------------------------------------------------
@@ -509,291 +637,84 @@ function initOrganicMosaic() {
     function createFlowers() {
         flowers = [];
 
-        /*
-         * I nuclei vengono disposti su tutto il canvas.
-         * Le loro spirali sono abbastanza grandi da fondersi
-         * tra loro e creare una superficie continua.
-         */
+        contentHalf = CONTENT_MAX_WIDTH / 2 + CONTENT_PADDING;
+        layoutActive = (width / 2 - contentHalf) >= MIN_MARGIN;
 
-        const cols = Math.ceil(
-            Math.sqrt(CLUSTER_COUNT)
-        );
+        // --------------------------------------------------
+        // SPIRALI
+        // --------------------------------------------------
 
-        const rows = Math.ceil(
-            CLUSTER_COUNT / cols
-        );
+        const cols = Math.ceil(Math.sqrt(CLUSTER_COUNT));
+        const rows = Math.ceil(CLUSTER_COUNT / cols);
+        const cellW = width / cols;
+        const cellH = height / rows;
+        const diagonal = Math.hypot(width, height);
+        const bloomSpan = BLOOM_DURATION * 0.82;
 
-        const cellW =
-            width / cols;
+        for (let cluster = 0; cluster < CLUSTER_COUNT; cluster++) {
+            const col = cluster % cols;
+            const row = (cluster / cols) | 0;
 
-        const cellH =
-            height / rows;
+            const centerX = col * cellW + cellW * random(0.22, 0.78);
+            const centerY = row * cellH + cellH * random(0.22, 0.78);
 
-        for (
-            let cluster = 0;
-            cluster < CLUSTER_COUNT;
-            cluster++
-        ) {
-            const col =
-                cluster % cols;
+            const maxRadius = diagonal * random(0.29, 0.37);
+            const turns = random(2.6, 3.6);
+            const startAngle = random(0, TWO_PI);
+            const wavePhase = cluster * 1.73;
+            const clusterDelay = cluster * 100;
 
-            const row =
-                Math.floor(
-                    cluster / cols
-                );
+            for (let i = 0; i < FLOWERS_PER_CLUSTER; i++) {
+                const t = i / (FLOWERS_PER_CLUSTER - 1);
 
-            const centerX =
-                col * cellW +
-                cellW * random(
-                    0.22,
-                    0.78
-                );
+                const spiralAngle = startAngle + t * TWO_PI * turns;
+                const spiralRadius = Math.pow(t, 0.72) * maxRadius;
 
-            const centerY =
-                row * cellH +
-                cellH * random(
-                    0.22,
-                    0.78
-                );
+                const spread = 20 + Math.pow(t, 0.60) * 82;
+                const radialOffset = random(-spread, spread);
+                const tangentialOffset = random(-spread * 0.70, spread * 0.70);
+                const angleOffset = tangentialOffset / Math.max(spiralRadius, 25);
 
-            /*
-             * Manteniamo la dimensione delle spirali
-             * che funzionava bene nella versione precedente.
-             */
+                const finalAngle = spiralAngle + angleOffset;
+                const finalRadius = Math.max(0, spiralRadius + radialOffset);
 
-            const maxRadius =
-                Math.hypot(
-                    width,
-                    height
-                ) *
-                random(
-                    0.29,
-                    0.37
-                );
+                const r = finalRadius + Math.sin(t * Math.PI * 8 + wavePhase) * 5;
 
-            const turns =
-                random(
-                    2.6,
-                    3.6
-                );
+                const x = centerX + Math.cos(finalAngle) * r;
+                const y = centerY + Math.sin(finalAngle) * r;
 
-            const startAngle =
-                random(
-                    0,
-                    Math.PI * 2
-                );
-
-            for (
-                let i = 0;
-                i < FLOWERS_PER_CLUSTER;
-                i++
-            ) {
-                const t =
-                    i /
-                    (FLOWERS_PER_CLUSTER - 1);
-
-                /*
-                 * Spirale principale.
-                 */
-
-                const spiralAngle =
-                    startAngle +
-                    t *
-                        Math.PI *
-                        2 *
-                        turns;
-
-                const spiralRadius =
-                    Math.pow(
-                        t,
-                        0.72
-                    ) *
-                    maxRadius;
-
-                /*
-                 * Banda larga attorno alla spirale:
-                 * non una linea, ma una massa floreale.
-                 */
-
-                const spread =
-                    20 +
-                    Math.pow(
-                        t,
-                        0.60
-                    ) *
-                        82;
-
-                const radialOffset =
-                    random(
-                        -spread,
-                        spread
-                    );
-
-                const tangentialOffset =
-                    random(
-                        -spread * 0.70,
-                        spread * 0.70
-                    );
-
-                const angleOffset =
-                    tangentialOffset /
-                    Math.max(
-                        spiralRadius,
-                        25
-                    );
-
-                const finalAngle =
-                    spiralAngle +
-                    angleOffset;
-
-                const finalRadius =
-                    Math.max(
-                        0,
-                        spiralRadius +
-                            radialOffset
-                    );
-
-                /*
-                 * Piccolo movimento organico.
-                 */
-
-                const organicWave =
-                    Math.sin(
-                        t *
-                            Math.PI *
-                            8 +
-                            cluster *
-                                1.73
-                    ) *
-                    5;
-
-                const x =
-                    centerX +
-                    Math.cos(
-                        finalAngle
-                    ) *
-                        (
-                            finalRadius +
-                            organicWave
-                        );
-
-                const y =
-                    centerY +
-                    Math.sin(
-                        finalAngle
-                    ) *
-                        (
-                            finalRadius +
-                            organicWave
-                        );
-
-                if (
-                    x < -80 ||
-                    x > width + 80 ||
-                    y < -80 ||
-                    y > height + 80
-                ) {
+                if (x < -80 || x > width + 80 || y < -80 || y > height + 80) {
                     continue;
                 }
 
-                /*
-                 * Distribuzione dei diversi livelli.
-                 *
-                 * La grandezza non cambia in funzione della
-                 * spirale: abbiamo una vera stratificazione
-                 * botanica, con tanti fiori di varie dimensioni.
-                 */
+                // Rarefazione nella colonna centrale (tranne fasce alta/bassa).
+                if (!keepAt(x, y)) continue;
 
                 const sizeRoll = Math.random();
-
-                let size;
-                let sizeLevel;
+                let size, sizeLevel;
 
                 if (sizeRoll < 0.67) {
-                    size =
-                        random(
-                            SMALL_MIN,
-                            SMALL_MAX
-                        );
-
+                    size = random(SMALL_MIN, SMALL_MAX);
                     sizeLevel = 'small';
                 } else if (sizeRoll < 0.91) {
-                    size =
-                        random(
-                            MEDIUM_MIN,
-                            MEDIUM_MAX
-                        );
-
+                    size = random(MEDIUM_MIN, MEDIUM_MAX);
                     sizeLevel = 'medium';
                 } else if (sizeRoll < 0.985) {
-                    size =
-                        random(
-                            LARGE_MIN,
-                            LARGE_MAX
-                        );
-
+                    size = random(LARGE_MIN, LARGE_MAX);
                     sizeLevel = 'large';
                 } else {
-                    size =
-                        random(
-                            HUGE_MIN,
-                            HUGE_MAX
-                        );
-
+                    size = random(HUGE_MIN, HUGE_MAX);
                     sizeLevel = 'huge';
                 }
 
-                flowers.push({
-                    x,
-                    y,
-
-                    radius: size,
-
-                    rotation:
-                        finalAngle +
-                        Math.PI / 2 +
-                        random(
-                            -0.8,
-                            0.8
-                        ),
-
-                    color:
-                        choose(COLORS),
-
-                    centerColor:
-                        choose(
-                            CENTER_COLORS
-                        ),
-
-                    phase:
-                        random(
-                            0,
-                            Math.PI * 2
-                        ),
-
+                flowers.push(makeFlower(
+                    x, y, size,
+                    finalAngle + Math.PI / 2 + random(-0.8, 0.8),
+                    choose(COLORS),
+                    choose(CENTER_COLORS),
                     sizeLevel,
-
-                    /*
-                     * Fioritura dal centro verso l'esterno.
-                     */
-
-                    bloomOffset:
-                        t *
-                            (
-                                BLOOM_DURATION *
-                                0.82
-                            ) +
-                        cluster *
-                            100 +
-                        random(
-                            -180,
-                            180
-                        ),
-
-                    large:
-                        sizeLevel === 'large' ||
-                        sizeLevel === 'huge'
-                });
+                    t * bloomSpan + clusterDelay + random(-180, 180)
+                ));
             }
         }
 
@@ -801,633 +722,171 @@ function initOrganicMosaic() {
         // RIEMPIMENTO DEL PIANO
         // --------------------------------------------------
 
-        /*
-         * Questo layer non segue la spirale:
-         * serve esclusivamente a togliere eventuali buchi
-         * tra una spirale e l'altra.
-         */
+        const boost = layoutActive ? MARGIN_BOOST : 1;
+        const areaFlowers = Math.floor((width * height) / 1500 * boost);
 
-        const areaFlowers =
-            Math.floor(
-                (
-                    width *
-                    height
-                ) /
-                1500
-            );
+        for (let i = 0; i < areaFlowers; i++) {
+            const x = random(-30, width + 30);
+            const y = random(-30, height + 30);
+            if (!keepAt(x, y)) continue;
 
-        for (
-            let i = 0;
-            i < areaFlowers;
-            i++
-        ) {
-            const sizeRoll =
-                Math.random();
-
-            let size;
-            let sizeLevel;
+            const sizeRoll = Math.random();
+            let size, sizeLevel;
 
             if (sizeRoll < 0.73) {
-                size =
-                    random(
-                        SMALL_MIN,
-                        SMALL_MAX
-                    );
-
+                size = random(SMALL_MIN, SMALL_MAX);
                 sizeLevel = 'small';
             } else if (sizeRoll < 0.96) {
-                size =
-                    random(
-                        MEDIUM_MIN,
-                        MEDIUM_MAX
-                    );
-
+                size = random(MEDIUM_MIN, MEDIUM_MAX);
                 sizeLevel = 'medium';
             } else {
-                size =
-                    random(
-                        LARGE_MIN,
-                        LARGE_MAX
-                    );
-
+                size = random(LARGE_MIN, LARGE_MAX);
                 sizeLevel = 'large';
             }
 
-            flowers.push({
-                x:
-                    random(
-                        -30,
-                        width + 30
-                    ),
-
-                y:
-                    random(
-                        -30,
-                        height + 30
-                    ),
-
-                radius:
-                    size,
-
-                rotation:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
-                color:
-                    choose(COLORS),
-
-                centerColor:
-                    choose(
-                        CENTER_COLORS
-                    ),
-
-                phase:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
+            flowers.push(makeFlower(
+                x, y, size,
+                random(0, TWO_PI),
+                choose(COLORS),
+                choose(CENTER_COLORS),
                 sizeLevel,
-
-                /*
-                 * Il riempimento arriva leggermente dopo
-                 * la crescita principale.
-                 */
-
-                bloomOffset:
-                    BLOOM_DURATION *
-                        random(
-                            0.48,
-                            0.84
-                        ),
-
-                large:
-                    sizeLevel === 'large'
-            });
+                BLOOM_DURATION * random(0.48, 0.84)
+            ));
         }
 
         // --------------------------------------------------
         // LAYER DI GRANDI FIORI
         // --------------------------------------------------
 
-        /*
-         * Questi sono veri protagonisti:
-         * grandi corolle arancioni che emergono sopra
-         * la massa di piccoli fiori.
-         */
-
-        for (
-            let i = 0;
-            i < LARGE_FLOWER_COUNT;
-            i++
-        ) {
-            flowers.push({
-                x:
-                    random(
-                        -40,
-                        width + 40
-                    ),
-
-                y:
-                    random(
-                        -40,
-                        height + 40
-                    ),
-
-                radius:
-                    random(
-                        LARGE_MIN,
-                        LARGE_MAX
-                    ),
-
-                rotation:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
-                color:
-                    choose(
-                        [
-                            '#ed8936',
-                            '#dd6b20',
-                            '#f6ad55'
-                        ]
-                    ),
-
-                centerColor:
-                    choose(
-                        CENTER_COLORS
-                    ),
-
-                phase:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
-                sizeLevel:
-                    'large',
-
-                /*
-                 * Questo livello entra da metà animazione.
-                 */
-
-                bloomOffset:
-                    BLOOM_DURATION *
-                        random(
-                            0.46,
-                            0.64
-                        ),
-
-                large: true
-            });
+        for (let i = 0; i < LARGE_FLOWER_COUNT; i++) {
+            samplePoint(40);
+            flowers.push(makeFlower(
+                sampledX, sampledY,
+                random(LARGE_MIN, LARGE_MAX),
+                random(0, TWO_PI),
+                choose(LARGE_LAYER_COLORS),
+                choose(CENTER_COLORS),
+                'large',
+                BLOOM_DURATION * random(0.46, 0.64)
+            ));
         }
 
         // --------------------------------------------------
         // ULTIMO LIVELLO: FIORI ENORMI
         // --------------------------------------------------
 
-        for (
-            let i = 0;
-            i < HUGE_FLOWER_COUNT;
-            i++
-        ) {
-            flowers.push({
-                x:
-                    random(
-                        -60,
-                        width + 60
-                    ),
-
-                y:
-                    random(
-                        -60,
-                        height + 60
-                    ),
-
-                radius:
-                    random(
-                        HUGE_MIN,
-                        HUGE_MAX
-                    ),
-
-                rotation:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
-                color:
-                    choose(
-                        [
-                            '#dd6b20',
-                            '#ed8936',
-                            '#f6ad55'
-                        ]
-                    ),
-
-                centerColor:
-                    choose(
-                        CENTER_COLORS
-                    ),
-
-                phase:
-                    random(
-                        0,
-                        Math.PI * 2
-                    ),
-
-                sizeLevel:
-                    'huge',
-
-                /*
-                 * I fiori enormi arrivano più tardi,
-                 * creando un vero secondo/terzo piano visivo.
-                 */
-
-                bloomOffset:
-                    BLOOM_DURATION *
-                        random(
-                            0.58,
-                            0.76
-                        ),
-
-                large: true
-            });
+        for (let i = 0; i < HUGE_FLOWER_COUNT; i++) {
+            samplePoint(60);
+            flowers.push(makeFlower(
+                sampledX, sampledY,
+                random(HUGE_MIN, HUGE_MAX),
+                random(0, TWO_PI),
+                choose(HUGE_LAYER_COLORS),
+                choose(CENTER_COLORS),
+                'huge',
+                BLOOM_DURATION * random(0.58, 0.76)
+            ));
         }
 
-        /*
-         * I fiori enormi devono essere gli ultimi
-         * a completare la fioritura.
-         */
+        flowers.sort((a, b) => a.bloomOffset - b.bloomOffset);
 
-        flowers.sort(
-            (a, b) =>
-                a.bloomOffset -
-                b.bloomOffset
-        );
+        lastBloomEnd = flowers.length
+            ? flowers[flowers.length - 1].bloomOffset + FLOWER_OPEN_DURATION
+            : BLOOM_DURATION;
     }
 
     // --------------------------------------------------
     // DISEGNO DEL CEMPASÚCHIL
     // --------------------------------------------------
 
-    function drawFlower(
-        flower,
-        progress
-    ) {
-        if (progress <= 0) return;
+    function drawFlower(c, flower, progress) {
+        const eased = progress >= 1 ? 1 : 1 - Math.pow(1 - progress, 3);
+        const size = flower.radius * eased;
 
-        const bloom =
-            Math.min(
-                1,
-                progress
-            );
+        const p = flower.profile;
+        const petalCount = p.petalCount;
+        const petalStep = p.petalStep;
+        const layerData = p.layerData;
+        const layers = p.layers;
+        const petalLength = size * p.lengthK;
+        const petalWidth = size * p.widthK;
+        const lengthVar = flower.lengthVar;
+        const widthVar = flower.widthVar;
+        const color = flower.color;
+        const phaseRotation = flower.phase * 0.08;
+        const fade = flower.fade;
 
-        /*
-         * Ease-out molto morbido.
-         */
+        c.save();
+        c.translate(flower.x, flower.y);
+        c.rotate(flower.rotation);
 
-        const eased =
-            1 -
-            Math.pow(
-                1 - bloom,
-                3
-            );
+        c.globalAlpha = (p.alphaBase + eased * p.alphaGain) * fade;
 
-        const size =
-            flower.radius *
-            eased;
+        for (let layer = 0; layer < layers; layer++) {
+            const ld = layerData[layer];
+            const currentLength = petalLength * ld.lengthMul;
+            const currentWidth = petalWidth * ld.widthMul;
+            const baseY = ld.offset * size;
+            const randomColor = ld.randomColor;
+            const base = layer * petalCount;
 
-        /*
-         * Un cempasúchil più realistico non ha
-         * 5 petali lisci: ha molti piccoli petali
-         * sovrapposti e arrotondati.
-         */
+            c.save();
+            c.rotate(ld.rotation + phaseRotation);
 
-        let petalCount;
-        let layers;
-        let petalLength;
-        let petalWidth;
+            if (!randomColor) c.fillStyle = color;
 
-        if (
-            flower.sizeLevel === 'huge'
-        ) {
-            petalCount = 20;
-            layers = 4;
-            petalLength = size * 0.88;
-            petalWidth = size * 0.34;
-        } else if (
-            flower.sizeLevel === 'large'
-        ) {
-            petalCount = 18;
-            layers = 4;
-            petalLength = size * 0.90;
-            petalWidth = size * 0.36;
-        } else if (
-            flower.sizeLevel === 'medium'
-        ) {
-            petalCount = 15;
-            layers = 3;
-            petalLength = size * 0.92;
-            petalWidth = size * 0.39;
-        } else {
-            petalCount = 12;
-            layers = 2;
-            petalLength = size * 0.95;
-            petalWidth = size * 0.42;
-        }
+            for (let i = 0; i < petalCount; i++) {
+                const L = currentLength * lengthVar[base + i];
+                const W = currentWidth * widthVar[i];
 
-        /*
-         * I fiori grandi sono leggermente più trasparenti.
-         */
-
-        const alpha =
-            flower.sizeLevel === 'huge'
-                ? 0.17 + eased * 0.32
-                : flower.sizeLevel === 'large'
-                    ? 0.18 + eased * 0.34
-                    : 0.20 + eased * 0.46;
-
-        ctx.save();
-
-        ctx.translate(
-            flower.x,
-            flower.y
-        );
-
-        ctx.rotate(
-            flower.rotation
-        );
-
-        ctx.globalAlpha =
-            alpha;
-
-        /*
-         * ------------------------------------------------
-         * COROLLA MULTISTRATO
-         * ------------------------------------------------
-         */
-
-        for (
-            let layer = 0;
-            layer < layers;
-            layer++
-        ) {
-            /*
-             * I petali interni sono più corti e verticali.
-             * Quelli esterni diventano progressivamente più larghi.
-             */
-
-            const layerProgress =
-                layer /
-                Math.max(
-                    1,
-                    layers - 1
+                c.beginPath();
+                c.moveTo(0, baseY);
+                c.bezierCurveTo(
+                    -W * 0.72, L * 0.10,
+                    -W, L * 0.43,
+                    -W * 0.72, L * 0.74
                 );
-
-            const currentLength =
-                petalLength *
-                (
-                    0.54 +
-                    layerProgress *
-                        0.46
+                c.bezierCurveTo(
+                    -W * 0.48, L * 0.96,
+                    W * 0.48, L * 0.96,
+                    W * 0.72, L * 0.74
                 );
-
-            const currentWidth =
-                petalWidth *
-                (
-                    0.68 +
-                    layerProgress *
-                        0.32
+                c.bezierCurveTo(
+                    W, L * 0.43,
+                    W * 0.72, L * 0.10,
+                    0, baseY
                 );
+                c.quadraticCurveTo(-W * 0.16, L * 0.24, 0, baseY);
 
-            const layerOffset =
-                layerProgress *
-                0.18;
+                if (randomColor) {
+                    const roll = (Math.random() * 3) | 0;
+                    c.fillStyle = roll === 0 ? color : roll === 1 ? '#f6ad55' : '#ed8936';
+                }
 
-            const layerRotation =
-                layer *
-                    0.13 +
-                flower.phase *
-                    0.08;
-
-            for (
-                let i = 0;
-                i < petalCount;
-                i++
-            ) {
-                const angle =
-                    (
-                        Math.PI * 2 * i
-                    ) /
-                    petalCount +
-                    layerRotation;
-
-                ctx.save();
-
-                ctx.rotate(
-                    angle
-                );
-
-                /*
-                 * Leggera variazione individuale
-                 * dei petali per evitare il look sintetico.
-                 */
-
-                const localWave =
-                    Math.sin(
-                        flower.phase +
-                        i * 1.83 +
-                        layer * 2.1
-                    );
-
-                const lengthVariation =
-                    0.94 +
-                    localWave *
-                        0.035;
-
-                const widthVariation =
-                    0.92 +
-                    Math.sin(
-                        flower.phase +
-                        i * 2.37
-                    ) *
-                        0.07;
-
-                const L =
-                    currentLength *
-                    lengthVariation;
-
-                const W =
-                    currentWidth *
-                    widthVariation;
-
-                /*
-                 * Petalo a forma di linguetta tondeggiante,
-                 * molto più vicino alla corolla compatta
-                 * del cempasúchil.
-                 */
-
-                ctx.beginPath();
-
-                ctx.moveTo(
-                    0,
-                    layerOffset * size
-                );
-
-                /*
-                 * Base sinistra.
-                 */
-
-                ctx.bezierCurveTo(
-                    -W * 0.72,
-                    L * 0.10,
-
-                    -W,
-                    L * 0.43,
-
-                    -W * 0.72,
-                    L * 0.74
-                );
-
-                /*
-                 * Punta larga e arrotondata.
-                 */
-
-                ctx.bezierCurveTo(
-                    -W * 0.48,
-                    L * 0.96,
-
-                    W * 0.48,
-                    L * 0.96,
-
-                    W * 0.72,
-                    L * 0.74
-                );
-
-                /*
-                 * Ritorno sul lato destro.
-                 */
-
-                ctx.bezierCurveTo(
-                    W,
-                    L * 0.43,
-
-                    W * 0.72,
-                    L * 0.10,
-
-                    0,
-                    layerOffset * size
-                );
-
-                /*
-                 * Piccola asimmetria sulla base
-                 * per evitare petali perfettamente matematici.
-                 */
-
-                ctx.quadraticCurveTo(
-                    -W * 0.16,
-                    L * 0.24,
-                    0,
-                    layerOffset * size
-                );
-
-                ctx.fillStyle =
-                    layer === 0
-                        ? flower.color
-                        : (
-                            layer % 2 === 0
-                                ? flower.color
-                                : choose(
-                                    [
-                                        flower.color,
-                                        '#f6ad55',
-                                        '#ed8936'
-                                    ]
-                                )
-                        );
-
-                ctx.fill();
-
-                ctx.restore();
+                c.fill();
+                c.rotate(petalStep);
             }
+
+            c.restore();
         }
 
-        /*
-         * ------------------------------------------------
-         * CENTRO PROFONDO
-         * ------------------------------------------------
-         *
-         * Nei fiori grandi il centro è più evidente,
-         * con più livelli di piccoli petali centrali.
-         */
+        const centerSize = size * p.centerK;
 
-        const centerSize =
-            size *
-            (
-                flower.sizeLevel === 'huge'
-                    ? 0.22
-                    : flower.sizeLevel === 'large'
-                        ? 0.21
-                        : 0.19
-            );
+        c.globalAlpha = (p.centerAlphaBase + eased * p.centerAlphaGain) * fade;
+        c.fillStyle = flower.centerColor;
+        c.beginPath();
+        c.arc(0, 0, centerSize, 0, TWO_PI);
+        c.fill();
 
-        ctx.globalAlpha =
-            flower.sizeLevel === 'huge'
-                ? 0.40 + eased * 0.38
-                : flower.sizeLevel === 'large'
-                    ? 0.44 + eased * 0.36
-                    : 0.46 + eased * 0.34;
-
-        ctx.fillStyle =
-            flower.centerColor;
-
-        ctx.beginPath();
-
-        ctx.arc(
-            0,
-            0,
-            centerSize,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fill();
-
-        /*
-         * Piccolo nucleo centrale più scuro.
-         */
-
-        if (
-            flower.sizeLevel === 'large' ||
-            flower.sizeLevel === 'huge'
-        ) {
-            ctx.globalAlpha =
-                0.30 +
-                eased *
-                    0.30;
-
-            ctx.fillStyle =
-                '#713b10';
-
-            ctx.beginPath();
-
-            ctx.arc(
-                0,
-                0,
-                centerSize * 0.42,
-                0,
-                Math.PI * 2
-            );
-
-            ctx.fill();
+        if (p.core) {
+            c.globalAlpha = (0.30 + eased * 0.30) * fade;
+            c.fillStyle = '#713b10';
+            c.beginPath();
+            c.arc(0, 0, centerSize * 0.42, 0, TWO_PI);
+            c.fill();
         }
 
-        ctx.restore();
+        c.restore();
     }
 
     // --------------------------------------------------
@@ -1435,58 +894,31 @@ function initOrganicMosaic() {
     // --------------------------------------------------
 
     function render(timestamp) {
-        const elapsed =
-            timestamp -
-            startTime;
+        const elapsed = timestamp - startTime;
+        const n = flowers.length;
 
-        ctx.clearRect(
-            0,
-            0,
-            width,
-            height
-        );
-
-        for (
-            const flower of flowers
+        while (
+            bakedIndex < n &&
+            elapsed - flowers[bakedIndex].bloomOffset >= FLOWER_OPEN_DURATION
         ) {
-            const progress =
-                (
-                    elapsed -
-                    flower.bloomOffset
-                ) /
-                FLOWER_OPEN_DURATION;
-
-            drawFlower(
-                flower,
-                progress
-            );
+            drawFlower(bakedCtx, flowers[bakedIndex], 1);
+            bakedIndex++;
         }
 
-        /*
-         * Troviamo realmente il momento in cui l'ultimo
-         * fiore ha finito di aprirsi, invece di basarci
-         * semplicemente su BLOOM_DURATION.
-         */
+        ctx.clearRect(0, 0, width, height);
+        if (bakedCanvas.width > 0 && bakedCanvas.height > 0) {
+            ctx.drawImage(bakedCanvas, 0, 0, width, height);
+        }
 
-        const lastBloomEnd =
-            flowers.length
-                ? Math.max(
-                    ...flowers.map(
-                        flower =>
-                            flower.bloomOffset
-                    )
-                ) +
-                    FLOWER_OPEN_DURATION
-                : BLOOM_DURATION;
+        for (let k = bakedIndex; k < n; k++) {
+            const flower = flowers[k];
+            const progress = (elapsed - flower.bloomOffset) / FLOWER_OPEN_DURATION;
+            if (progress <= 0) break;
+            drawFlower(ctx, flower, progress);
+        }
 
-        if (
-            elapsed <
-            lastBloomEnd
-        ) {
-            animationId =
-                requestAnimationFrame(
-                    render
-                );
+        if (elapsed < lastBloomEnd) {
+            animationId = requestAnimationFrame(render);
         } else {
             animationId = null;
         }
@@ -1497,91 +929,39 @@ function initOrganicMosaic() {
     // --------------------------------------------------
 
     function resize() {
-        if (
-            animationId !== null
-        ) {
-            cancelAnimationFrame(
-                animationId
-            );
-
+        if (animationId !== null) {
+            cancelAnimationFrame(animationId);
             animationId = null;
         }
 
-        clearTimeout(
-            resizeTimeout
-        );
+        clearTimeout(resizeTimeout);
 
-        resizeTimeout =
-            setTimeout(
-                () => {
-                    const dpr =
-                        Math.min(
-                            window.devicePixelRatio ||
-                                1,
-                            2
-                        );
+        resizeTimeout = setTimeout(() => {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-                    width =
-                        window.innerWidth;
+            width = window.innerWidth;
+            height = window.innerHeight;
 
-                    height =
-                        window.innerHeight;
+            canvas.width = Math.round(width * dpr);
+            canvas.height = Math.round(height * dpr);
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.clearRect(0, 0, width, height);
 
-                    canvas.width =
-                        Math.round(
-                            width *
-                                dpr
-                        );
+            bakedCanvas.width = canvas.width;
+            bakedCanvas.height = canvas.height;
+            bakedCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            bakedIndex = 0;
 
-                    canvas.height =
-                        Math.round(
-                            height *
-                                dpr
-                        );
+            createFlowers();
 
-                    canvas.style.width =
-                        `${width}px`;
-
-                    canvas.style.height =
-                        `${height}px`;
-
-                    ctx.setTransform(
-                        dpr,
-                        0,
-                        0,
-                        dpr,
-                        0,
-                        0
-                    );
-
-                    ctx.clearRect(
-                        0,
-                        0,
-                        width,
-                        height
-                    );
-
-                    createFlowers();
-
-                    startTime =
-                        performance.now();
-
-                    animationId =
-                        requestAnimationFrame(
-                            render
-                        );
-                },
-                100
-            );
+            startTime = performance.now();
+            animationId = requestAnimationFrame(render);
+        }, 100);
     }
 
-    window.addEventListener(
-        'resize',
-        resize,
-        {
-            passive: true
-        }
-    );
+    window.addEventListener('resize', resize, { passive: true });
 
     resize();
 }
