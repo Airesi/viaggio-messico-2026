@@ -4,19 +4,21 @@ const tripData = {
     general: {
         dates: "21 Dicembre - 15 Gennaio • 25 Giorni",
         title: "Messico",
-        subtitle: "Esplora la mappa geografica, naviga tra le settimane, scopri gallerie fotografiche e link utili.",
+        subtitle: "Esplora la mappa geografica, naviga tra le aree, scopri gallerie fotografiche e link utili.",
         footerName: "Spedizione Sud Messico (25 Giorni)",
         footerSeason: "Dicembre - Gennaio"
     },
-    weeks: [
+    // Sostituito "weeks" con "areas"
+    areas: [
         {
             id: 1,
-            navTitle: "Settimana 1",
-            navSubtitle: "Città del Messico e Oaxaca",
-            badge: "Giorni 1 - 3 • Capitale",
+            navTitle: "Città del Messico",
+            navSubtitle: "CDMX e Teotihuacán",
+            badge: "Giorni 1 - 4 • Capitale",
             locationText: "Città del Messico",
             title: "Il Cuore della Capitale",
-            description: "Seleziona un giorno per scoprire i dettagli, le foto e le mappe.",
+            description: "Esplora le rovine precolombiane, il cuore storico e i canali del sud.",
+            // Ho mantenuto i tuoi giorni invariati qui
             days: [
                 {
                     id: "1-1",
@@ -91,105 +93,108 @@ const tripData = {
                 ]
             },
             food: "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
+            budget: {
+                total: "€ 450",
+                spent: "€ 310",
+                items: [
+                    { name: "Hotel Condesa (4 notti)", cost: "€ 280" },
+                    { name: "Volo interno per Oaxaca", cost: "€ 60" },
+                    { name: "Ingresso Teotihuacán", cost: "€ 10" }
+                ]
+            },
+            reservations: [
+                { name: "Boutique Hotel Condesa", status: "Confermato", type: "success" },
+                { name: "Restaurante La Gruta", status: "Confermato", type: "success" },
+                { name: "Volo AeroMexico MX-OAX", status: "Da Prenotare", type: "warning" }
+            ],
             mapFocus: { coords: [19.35, -99.13], zoom: 10 }
         },
         {
             id: 2,
-            navTitle: "Settimana 2",
-            navSubtitle: "Oaxaca & Chiapas",
-            badge: "Giorni 5 - 8 • Oaxaca & Chiapas",
-            locationText: "Tradizioni & Montagna",
-            title: "Il Cuore Coloniale e Zapoteco",
-            description: "Capitale gastronomica di Oaxaca, mercati incredibili, l'antica capitale zapoteca di Monte Albán e discesa tra i monti del Chiapas fino all'atmosfera magica di San Cristóbal de las Casas e i riti di San Juan Chamula.",
+            navTitle: "Oaxaca",
+            navSubtitle: "Tradizione e Cultura",
+            badge: "Giorni 5 - 6 • La Culla della Tradizione",
+            locationText: "Oaxaca & Dintorni",
+            title: "Il Cuore Zapoteco",
+            description: "Esplora la capitale gastronomica del Messico, i mercati incredibili e l'antica capitale zapoteca di Monte Albán.",
             images: [
                 "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80"
+                "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80"
             ],
-            basecamp: {
-                zone: "La Condesa o Roma Norte",
-                hotelIdea: "Boutique Hotel o Airbnb vicino Parque México",
-                why: "Evita il centro storico. Qui è verde, sicuro, perfetto per cenare a piedi la sera e smaltire il jet-lag in tranquillità.",
-                tags: ["🌳 Verde", "🛡️ Super Sicuro", "🌮 Foodie"],
-                transports: [
-                    { icon: "🚕", title: "Uber / DiDi", desc: "Economico e sicuro per Teotihuacán, Aeroporto e Xochimilco." },
-                    { icon: "👟", title: "A Piedi", desc: "Perfetto per esplorare il Centro Storico (Zócalo) e i quartieri Condesa/Roma." },
-                    { icon: "🚇", title: "MetroBus", desc: "Opzionale per muoversi velocemente lungo il Paseo de la Reforma." }
-                ]
-            },
-            food: "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
             links: [
-                { text: "🔗 Prenotazione Bus ADO", url: "https://www.ado.com.mx" },
-                { text: "🔗 Tour Comunitari Chiapas", url: "https://www.rutopia.com" }
+                { text: "🔗 Prenotazione Bus ADO", url: "https://www.ado.com.mx" }
             ],
-            mapFocus: { coords: [17.07, -96.72], zoom: 7 }
+            mapFocus: { coords: [17.07, -96.72], zoom: 9 }
         },
         {
             id: 3,
-            navTitle: "Settimana 3",
-            navSubtitle: "Giungla & Calakmul",
-            badge: "Giorni 9 - 16 • Giungla & Maya",
-            locationText: "Palenque & Calakmul Wild",
-            title: "La Giungla e le Piramidi Perdute",
-            description: "Discesa verso la foresta tropicale passando per le cascate di Agua Azul, le rovine avvolte dalle radici di Palenque e il capodanno mistico nella Riserva della Biosfera di Calakmul tra le scimmie urlatrici.",
+            navTitle: "Chiapas",
+            navSubtitle: "Montagne e Giungla",
+            badge: "Giorni 7 - 10 • Chiapas Selvaggio",
+            locationText: "San Cristóbal & Palenque",
+            title: "Tra Misticismo e Natura",
+            description: "L'atmosfera magica di San Cristóbal de las Casas, i riti di San Juan Chamula, le cascate di Agua Azul e le rovine avvolte dalle radici di Palenque.",
             images: [
-                "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1608953979462-87063327d896?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80"
+                "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+                "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
             ],
-            logistics: "Pulmini condivisi (colectivos) dal Chiapas a Palenque; passaggio all'auto a noleggio per addentrarsi in sicurezza nella giungla di Calakmul e risalire a Campeche/Uxmal.",
-            food: "Pesce fresco del Golfo, cucina tropicale degli eco-lodge e piatti tipici yucatechi (Poc Chuc).",
+            links: [
+                { text: "🔗 Tour Comunitari Chiapas", url: "https://www.rutopia.com" }
+            ],
+            mapFocus: { coords: [16.90, -92.30], zoom: 7 }
+        },
+        {
+            id: 4,
+            navTitle: "Campeche",
+            navSubtitle: "Biosfera & Golfo",
+            badge: "Giorni 11 - 16 • Calakmul & Campeche",
+            locationText: "Calakmul & Campeche",
+            title: "Le Piramidi Perdute",
+            description: "Capodanno mistico nella Riserva della Biosfera di Calakmul tra le scimmie urlatrici e risalita verso la splendida città fortificata di Campeche.",
+            images: [
+                "https://images.unsplash.com/photo-1608953979462-87063327d896?auto=format&fit=crop&w=600&q=80"
+            ],
+            logistics: "Noleggio auto consigliato per addentrarsi in sicurezza nella giungla di Calakmul.",
             links: [
                 { text: "🔗 Guide Locali Calakmul", url: "https://www.cabalek.com" },
                 { text: "🔗 Noleggio Auto Messico", url: "https://www.rentalcars.com" }
             ],
-            mapFocus: { coords: [18.10, -89.81], zoom: 7 }
+            mapFocus: { coords: [18.80, -90.20], zoom: 7 }
         },
         {
-            id: 4,
-            navTitle: "Settimana 4",
-            navSubtitle: "Yucatán & Caraibi",
-            badge: "Giorni 17 - 30 • Yucatán & Caraibi",
-            locationText: "Cenotes, Bacalar & Tulum",
-            title: "Yucatán, Cenote e Relax Caraibico",
-            description: "Chichén Itzá all'alba, la coloniale Valladolid, bagni mistici nei cenote sotterranei, la laguna dai sette colori di Bacalar e una settimana conclusiva di puro relax tra le spiagge bianche e le rovine sul mare di Tulum.",
+            id: 5,
+            navTitle: "Yucatán",
+            navSubtitle: "Cenotes e Caraibi",
+            badge: "Giorni 17 - 30 • Yucatán & Quintana Roo",
+            locationText: "Valladolid, Bacalar & Tulum",
+            title: "Yucatán, Cenotes e Relax Caraibico",
+            description: "Chichén Itzá all'alba, la coloniale Valladolid, bagni mistici nei cenote sotterranei, la laguna dai sette colori di Bacalar e la conclusione tra le spiagge bianche e le rovine sul mare di Tulum.",
             images: [
-                "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+                "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
             ],
-            basecamp: {
-                zone: "La Condesa o Roma Norte",
-                hotelIdea: "Boutique Hotel o Airbnb vicino Parque México",
-                why: "Evita il centro storico. Qui è verde, sicuro, perfetto per cenare a piedi la sera e smaltire il jet-lag in tranquillità.",
-                tags: ["🌳 Verde", "🛡️ Super Sicuro", "🌮 Foodie"],
-                transports: [
-                    { icon: "🚕", title: "Uber / DiDi", desc: "Economico e sicuro per Teotihuacán, Aeroporto e Xochimilco." },
-                    { icon: "👟", title: "A Piedi", desc: "Perfetto per esplorare il Centro Storico (Zócalo) e i quartieri Condesa/Roma." },
-                    { icon: "🚇", title: "MetroBus", desc: "Opzionale per muoversi velocemente lungo il Paseo de la Reforma." }
-                ]
-            },
-            food: "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
             links: [
                 { text: "🔗 Biglietti Ufficiali INAH", url: "https://www.inah.gob.mx" },
                 { text: "🔗 Tour Catamarano Bacalar", url: "https://www.viator.com" }
             ],
-            mapFocus: { coords: [19.50, -88.00], zoom: 7 }
+            mapFocus: { coords: [20.00, -88.00], zoom: 7 }
         }
     ],
+    // Aggiornato il riferimento da "week" ad "areaId"
     locations: [
-        { week: 1, name: "Città del Messico & Teotihuacán", coords: [19.4326, -99.1332], days: "Giorni 1 - 4" },
-        { week: 2, name: "Oaxaca & Monte Albán", coords: [17.0753, -96.7237], days: "Giorni 5 - 6" },
-        { week: 2, name: "San Cristóbal de las Casas", coords: [16.7370, -92.6376], days: "Giorni 7 - 8" },
-        { week: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "Giorni 9 - 10" },
-        { week: 3, name: "Calakmul (Riserva Biosfera)", coords: [18.1075, -89.8105], days: "Giorni 11 - 12" },
-        { week: 3, name: "Campeche, Uxmal & Mérida", coords: [20.9674, -89.5926], days: "Giorni 13 - 16" },
-        { week: 4, name: "Chichén Itzá & Valladolid", coords: [20.6843, -88.5678], days: "Giorni 17 - 18" },
-        { week: 4, name: "Laguna di Bacalar & Tulum", coords: [18.6796, -88.3900], days: "Giorni 19 - 30" }
+        { areaId: 1, name: "Città del Messico & Teotihuacán", coords: [19.4326, -99.1332], days: "Giorni 1 - 4" },
+        { areaId: 2, name: "Oaxaca & Monte Albán", coords: [17.0753, -96.7237], days: "Giorni 5 - 6" },
+        { areaId: 3, name: "San Cristóbal de las Casas", coords: [16.7370, -92.6376], days: "Giorni 7 - 8" },
+        { areaId: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "Giorni 9 - 10" },
+        { areaId: 4, name: "Calakmul (Riserva Biosfera)", coords: [18.1075, -89.8105], days: "Giorni 11 - 12" },
+        { areaId: 4, name: "Campeche, Uxmal & Mérida", coords: [20.9674, -89.5926], days: "Giorni 13 - 16" },
+        { areaId: 5, name: "Chichén Itzá & Valladolid", coords: [20.6843, -88.5678], days: "Giorni 17 - 18" },
+        { areaId: 5, name: "Laguna di Bacalar & Tulum", coords: [18.6796, -88.3900], days: "Giorni 19 - 30" }
     ]
 };
 
 const flightData = {
+    // ... [MANTIENI IL TUO OGGETTO flightData INVARIATO] ...
     operator: "Air France",
     travelClass: "Economy",
     outbound: {

@@ -37,9 +37,9 @@
         const dayId = urlParams.get('day');
 
         let selectedDay = null;
-        tripData.weeks.forEach(week => {
-            if (week.days) {
-                const found = week.days.find(d => d.id === dayId);
+        tripData.areas.forEach(area => {
+            if (area.days) {
+                const found = area.days.find(d => d.id === dayId);
                 if (found) selectedDay = found;
             }
         });
