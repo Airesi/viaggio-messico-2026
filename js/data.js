@@ -4,11 +4,9 @@ const tripData = {
     general: {
         dates: "21 Dicembre - 15 Gennaio • 25 Giorni",
         title: "Messico",
-        subtitle: "Esplora la mappa geografica, naviga tra le aree, scopri gallerie fotografiche e link utili.",
         footerName: "Spedizione Sud Messico (25 Giorni)",
         footerSeason: "Dicembre - Gennaio"
     },
-    // Sostituito "weeks" con "areas"
     areas: [
         {
             id: 1,
@@ -18,7 +16,10 @@ const tripData = {
             locationText: "Città del Messico",
             title: "Il Cuore della Capitale",
             description: "Esplora le rovine precolombiane, il cuore storico e i canali del sud.",
-            // Ho mantenuto i tuoi giorni invariati qui
+            images: ["assets/img/Citta_Del_Messico.png"],
+            links: [
+                { text: "🔗 Prenotazione Bus ADO", url: "https://www.ado.com.mx" }
+            ],
             days: [
                 {
                     id: "1-1",

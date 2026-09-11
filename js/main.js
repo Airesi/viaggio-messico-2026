@@ -60,34 +60,37 @@ function generateContent() {
             </a>`
         ).join('');
 
-        // 1. LOGISTICA (Ora sta in alto, ho rimosso il bordo superiore)
+        // 1. LOGISTICA 
         const basecampHtml = area.basecamp ? `
             <div class="mb-8">
-                <span class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">⛺ Logistica Base</span>
+                <span class="block text-[11px] font-black text-amber-800 uppercase tracking-widest mb-4">⛺ Logistica Base</span>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-slate-800 text-white rounded-2xl p-4 shadow-sm relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl"></div>
-                        <span class="text-[9px] uppercase tracking-widest text-emerald-400 font-bold block mb-1">Dove Dormire</span>
+                    <!-- Box Dove Dormire: Stile Notte Messicana / Blu Cobalto -->
+                    <div class="bg-blue-950 text-white rounded-2xl p-4 shadow-md relative overflow-hidden border border-blue-900">
+                        <div class="absolute -right-4 -top-4 w-20 h-20 bg-amber-500/20 rounded-full blur-xl"></div>
+                        <span class="text-[9px] uppercase tracking-widest text-amber-400 font-bold block mb-1">Dove Dormire</span>
                         <h4 class="text-sm font-bold mb-2 relative z-10">${area.basecamp.zone || ''}</h4>
                         <div class="flex items-center gap-2 mt-3 pt-3 border-t border-white/10 relative z-10">
                             <span class="text-lg">🛖</span>
-                            <span class="text-[10px] text-slate-300 font-medium leading-tight">${area.basecamp.hotelIdea || ''}</span>
+                            <span class="text-[10px] text-blue-100 font-medium leading-tight">${area.basecamp.hotelIdea || ''}</span>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
-                        <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-3">Spostamenti</span>
+                    <!-- Box Spostamenti -->
+                    <div class="bg-white rounded-2xl p-4 border border-amber-100 shadow-sm">
+                        <span class="text-[9px] uppercase tracking-widest text-amber-700 font-bold block mb-3">Spostamenti</span>
                         <div class="space-y-3">
                             ${(area.basecamp.transports || []).slice(0,2).map(t => `
                                 <div class="flex items-center gap-2">
-                                    <div class="w-6 h-6 rounded-md bg-gray-50 flex items-center justify-center text-xs shrink-0">${t.icon}</div>
+                                    <div class="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center text-xs shrink-0">${t.icon}</div>
                                     <h5 class="text-[11px] font-bold text-gray-700">${t.title}</h5>
                                 </div>
                             `).join('')}
                         </div>
                     </div>
-                    <div class="bg-amber-50 rounded-2xl p-4 border border-amber-100/50 shadow-sm flex flex-col justify-center">
-                        <span class="text-[9px] uppercase tracking-widest text-amber-500 font-bold block mb-2">Food</span>
-                        <p class="text-[11px] text-amber-900 font-medium leading-snug line-clamp-3">${area.food || ''}</p>
+                    <!-- Box Food: Colore Terracotta / Speziato -->
+                    <div class="bg-orange-50 rounded-2xl p-4 border border-orange-200 shadow-sm flex flex-col justify-center">
+                        <span class="text-[9px] uppercase tracking-widest text-orange-600 font-bold block mb-2">🌮 Food & Sapori</span>
+                        <p class="text-[11px] text-orange-950 font-medium leading-snug line-clamp-3">${area.food || ''}</p>
                     </div>
                 </div>
             </div>
@@ -216,17 +219,28 @@ function generateContent() {
 }
 
 function switchArea(areaId) {
+    // Palette messicana dinamica per i bottoni e i dettagli
+    const mexThemes = [
+        { activeBg: 'bg-amber-500 text-white shadow-lg shadow-amber-500/30 border-amber-600', subText: 'text-amber-100' },     // Cempasúchil
+        { activeBg: 'bg-pink-600 text-white shadow-lg shadow-pink-600/30 border-pink-700', subText: 'text-pink-100' },         // Rosa Mexicano
+        { activeBg: 'bg-teal-700 text-white shadow-lg shadow-teal-700/30 border-teal-800', subText: 'text-teal-100' },         // Caraibi / Cenote
+        { activeBg: 'bg-blue-800 text-white shadow-lg shadow-blue-800/30 border-blue-900', subText: 'text-blue-100' },         // Blu Talavera
+        { activeBg: 'bg-orange-700 text-white shadow-lg shadow-orange-700/30 border-orange-800', subText: 'text-orange-100' }    // Terracotta
+    ];
+
     // 1. Aggiorna stile bottoni Navigazione
-    tripData.areas.forEach(area => {
+    tripData.areas.forEach((area, index) => {
         const btn = document.getElementById(`nav-btn-${area.id}`);
         if(btn) {
             const subtitle = btn.querySelector('span:nth-child(2)');
+            const theme = mexThemes[index % mexThemes.length];
+            
             if(area.id === areaId) {
-                btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-emerald-50 text-emerald-900 shadow-sm border border-emerald-100 border-b-4 border-b-emerald-600 transition text-center flex flex-col items-center h-full justify-center";
-                subtitle.className = "text-[10px] font-medium opacity-90 mt-1 text-emerald-700";
+                btn.className = `py-3 px-2 text-xs sm:text-sm font-extrabold rounded-xl transition text-center flex flex-col items-center h-full justify-center border-b-4 ${theme.activeBg}`;
+                subtitle.className = `text-[10px] font-medium mt-1 ${theme.subText}`;
             } else {
-                btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition text-center border border-gray-200 border-b-4 border-transparent flex flex-col items-center h-full justify-center";
-                subtitle.className = "text-[10px] font-normal opacity-70 mt-1";
+                btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white/80 text-gray-600 hover:bg-amber-50 hover:text-amber-900 transition text-center border border-amber-200/60 border-b-4 border-transparent flex flex-col items-center h-full justify-center shadow-sm";
+                subtitle.className = "text-[10px] font-normal opacity-70 mt-1 text-gray-500";
             }
         }
     });
@@ -251,12 +265,13 @@ function switchArea(areaId) {
         const topText = document.getElementById('dynamic-area-text');
         
         // Logica Colori dinamici per i badge sull'immagine
+        // Sostituisci l'array dei colori in switchArea con questa palette messicana:
         const colors = [
-            { bg: 'bg-emerald-500/80', text: 'text-white', dot: 'bg-white' },
-            { bg: 'bg-amber-500/80', text: 'text-white', dot: 'bg-white' },
-            { bg: 'bg-cyan-500/80', text: 'text-white', dot: 'bg-white' },
-            { bg: 'bg-indigo-500/80', text: 'text-white', dot: 'bg-white' },
-            { bg: 'bg-rose-500/80', text: 'text-white', dot: 'bg-white' }
+            { bg: 'bg-amber-100/80', text: 'text-amber-900', dot: 'bg-amber-600' },     // Cempasúchil (Giallo Sole)
+            { bg: 'bg-pink-100/80', text: 'text-pink-900', dot: 'bg-pink-600' },         // Rosa Mexicano
+            { bg: 'bg-teal-100/80', text: 'text-teal-900', dot: 'bg-teal-600' },         // Cenote / Caraibi
+            { bg: 'bg-blue-100/80', text: 'text-blue-900', dot: 'bg-blue-700' },         // Blu Talavera
+            { bg: 'bg-orange-100/80', text: 'text-orange-900', dot: 'bg-orange-600' }    // Terracotta Speziata
         ];
         const areaIndex = tripData.areas.findIndex(a => a.id === areaId);
         const color = colors[areaIndex % colors.length];
@@ -265,15 +280,44 @@ function switchArea(areaId) {
             topText.style.opacity = 0;
             setTimeout(() => {
                 topText.innerHTML = `
-                    <div class="flex flex-wrap items-center gap-3 mb-3">
-                        <span class="${color.bg} ${color.text} backdrop-blur-md border border-white/20 text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-                            <span class="w-1.5 h-1.5 rounded-full ${color.dot}"></span>
-                            ${selectedArea.badge}
+                    <div class="flex items-center gap-2 mb-2">
+
+                        <span class="w-6 h-px bg-orange-300/70"></span>
+
+                        <span class="
+                            text-[9px] sm:text-[10px]
+                            font-black
+                            uppercase
+                            tracking-[0.2em]
+                            text-orange-200
+                            drop-shadow-md
+                        ">
+                            ${selectedArea.locationText}
                         </span>
-                        <span class="text-[11px] font-bold text-white/90 uppercase tracking-widest drop-shadow-md">${selectedArea.locationText}</span>
+
                     </div>
-                    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-lg mb-2">${selectedArea.title}</h2>
-                    <p class="text-white/90 text-sm sm:text-base leading-relaxed max-w-2xl drop-shadow-md">${selectedArea.description}</p>
+
+                    <h2 class="
+                        text-2xl sm:text-3xl lg:text-4xl
+                        font-black
+                        text-white
+                        tracking-tight
+                        leading-[1.05]
+                        drop-shadow-lg
+                        mb-2
+                    ">
+                        ${selectedArea.title}
+                    </h2>
+
+                    <p class="
+                        text-xs sm:text-sm
+                        text-white/80
+                        leading-relaxed
+                        max-w-2xl
+                        drop-shadow-md
+                    ">
+                        ${selectedArea.description}
+                    </p>
                 `;
                 topText.style.opacity = 1;
             }, 150);
