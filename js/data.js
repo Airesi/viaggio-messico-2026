@@ -23,7 +23,7 @@ const tripData = {
             days: [
                 {
                     id: "1-1",
-                    dayName: "Giorno 1",
+                    dayName: "Giorno 1 (21 Dic)",
                     title: "La Città degli Dei: Teotihuacán",
                     location: "Teotihuacán (Nord CDMX)",
                     shortDesc: "Colossali piramidi precolombiane e pranzo all'interno di una grotta vulcanica.",
@@ -42,7 +42,7 @@ const tripData = {
                 },
                 {
                     id: "1-2",
-                    dayName: "Giorno 2",
+                    dayName: "Giorno 2 (22 Dic)",
                     title: "Zócalo, Storia Azteca e il Polmone Verde",
                     location: "CDMX (Centro e Ovest)",
                     shortDesc: "Dai resti dell'impero azteco al grande parco cittadino di Chapultepec",
@@ -65,20 +65,21 @@ const tripData = {
                 },
                 {
                     id: "1-3",
-                    dayName: "Giorno 3",
-                    title: "Borghi Colorati e Canali Pre-ispanici",
-                    location: "Coyoacán & Xochimilco (Sud CDMX)",
-                    shortDesc: "Atmosfere rilassate a sud: le vie acciottolate di Coyoacán, la Casa di Frida e la navigazione sulle trajineras.",
-                    fullDesc: "<p>La giornata inizia a <strong>Coyoacán</strong>, un quartiere dall'anima coloniale e bohémien, tra piazze tranquille, mercatini e la celebre <em>Casa Azul</em> di Frida Kahlo. Nel pomeriggio scendiamo ancora più a sud verso <strong>Xochimilco</strong>. Noleggeremo una colorata <em>trajinera</em> per navigare in totale relax sui canali alberati patrimonio UNESCO, gustando street food locale (quesadillas, elotes) venduto dalle barchette e ascoltando i suoni dei Mariachi sull'acqua.</p>",
+                    dayName: "Giorno 3 (23 Dic)",
+                    title: "Borghi Colorati, Canali e... Partenza Notturna!",
+                    location: "Coyoacán, Xochimilco & Bus Notturno",
+                    shortDesc: "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno ADO per Oaxaca.",
+                    fullDesc: "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e la <em>Casa Azul</em> di Frida Kahlo. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui prenderemo il comodo pullman notturno della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
                     images: ["assets/img/Xochimilco_trajineras.jpg"],
                     links: [
-                        { text: "🔗 Museo Frida Kahlo (Casa Azul)", url: "https://www.museofridakahlo.org.mx/" },
-                        { text: "🔗 Guida Xochimilco", url: "https://ecobnb.it/blog/2021/08/xochimilco/" }
+                        { text: "🔗 Museo Frida Kahlo", url: "https://www.museofridakahlo.org.mx/" },
+                        { text: "🔗 Biglietti Bus ADO (Notturno)", url: "https://www.ado.com.mx" }
                     ],
                     route: [
                         { name: "Plaza Hidalgo, Coyoacán", coords: [19.3496, -99.1626], image: "https://images.unsplash.com/photo-1587822557480-1a76a5df489c?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Casa Azul (Frida Kahlo)", coords: [19.3551, -99.1625], image: "https://images.unsplash.com/photo-1596752763297-76eb95c96b75?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Imbarcadero Nuevo Nativitas", coords: [19.2543, -99.1035], image: "assets/img/Xochimilco_trajineras.jpg" }
+                        { name: "Casa Azul", coords: [19.3551, -99.1625], image: "https://images.unsplash.com/photo-1596752763297-76eb95c96b75?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Imbarcadero Xochimilco", coords: [19.2543, -99.1035], image: "assets/img/Xochimilco_trajineras.jpg" },
+                        { name: "Terminal Taxqueña (Partenza)", coords: [19.3440, -99.1398], image: "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80" }
                     ]
                 }
             ],
@@ -114,18 +115,113 @@ const tripData = {
             id: 2,
             navTitle: "Oaxaca",
             navSubtitle: "Tradizione e Cultura",
-            badge: "Giorni 5 - 6 • La Culla della Tradizione",
+            badge: "Giorni 4 - 6 • La Culla della Tradizione",
             locationText: "Oaxaca & Dintorni",
-            title: "Il Cuore Zapoteco",
-            description: "Esplora la capitale gastronomica del Messico, i mercati incredibili e l'antica capitale zapoteca di Monte Albán.",
-            images: [
-                "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=600&q=80"
-            ],
+            title: "Il Cuore Zapoteco e Gastronomico",
+            description: "Esplora la capitale culinaria del Messico, i mercati incredibili, il barocco del centro storico e l'antica capitale zapoteca di Monte Albán.",
+            images: ["assets/img/Oaxaca_Ciudad.png"],
             links: [
-                { text: "🔗 Prenotazione Bus ADO", url: "https://www.ado.com.mx" }
+                { text: "🔗 Oaxaca Street Food Tour", url: "https://oaxacastreetfoodtour.com" },
+                { text: "🔗 Terminal ADO Oaxaca", url: "https://www.ado.com.mx" }
             ],
-            mapFocus: { coords: [17.07, -96.72], zoom: 9 }
+            basecamp: {
+                zone: "Centro Storico (Zona Santo Domingo / Zócalo)",
+                hotelIdea: "Boutique Hotel in stile coloniale con patio interno (early check-in se possibile)",
+                why: "Il centro si gira perfettamente a piedi. Alloggiare qui permette di vivere la magia serale, uscire a cena e raggiungere i mercati in pochi minuti.",
+                tags: ["🌮 Capitale Food", "🏛️ Barocco", "🚶‍♂️ Walkable"],
+                transports: [
+                    { icon: "👟", title: "A Piedi", desc: "La scelta migliore per perdersi tra le vie colorate del centro e i mercati." },
+                    { icon: "🚕", title: "Taxi / Colectivo", desc: "Economici per raggiungere i siti archeologici (Monte Albán) e le valli." }
+                ]
+            },
+            food: "La Mecca del cibo messicano: Tlayudas croccanti, i 7 tipi di Mole (specialmente il nero), Memelas e l'immancabile Mezcal.",
+            budget: {
+                total: "€ 220",
+                spent: "€ 0",
+                items: [
+                    { name: "Bus ADO CDMX - Oaxaca", cost: "€ 45" },
+                    { name: "Oaxaca Street Food Tour", cost: "Da definire" },
+                    { name: "Hotel Oaxaca (2-3 notti)", cost: "Da definire" }
+                ]
+            },
+            reservations: [
+                { name: "Bus ADO Taxqueña - Oaxaca (Notturno)", status: "Da Prenotare", type: "warning" },
+                { name: "Oaxaca Street Food Tour", status: "Da Prenotare", type: "warning" }
+            ],
+            days: [
+                {
+                    id: "2-1",
+                    dayName: "Giorno 4 (24 Dic)",
+                    title: "La Vigilia: Street Food, Barocco e Calendas",
+                    location: "Oaxaca Centro",
+                    shortDesc: "Street Food Tour nei mercati, Jardín Etnobotánico e festeggiamenti natalizi serali allo Zócalo.",
+                    fullDesc: "<p>Arrivo mattutino dal viaggio notturno. Iniziamo subito a tuffarci nella gastronomia locale con l'imperdibile <strong>Street Food Tour</strong> tra i banchi del <em>Mercado 20 de Noviembre</em>, assaggiando Tlayudas, memelas e i ricchi mole. A stomaco pieno, ammiriamo il barocco del <strong>Templo de Santo Domingo</strong> e, orari permettendo, ci immergiamo nel vicino <em>Jardín Etnobotánico</em> (ingresso solo guidato).</p><p>Nel pomeriggio riposo in hotel per recuperare le energie. La sera scendiamo in strada verso lo <strong>Zócalo</strong> per goderci la magia della Vigilia (<em>Nochebuena</em>): assisteremo alle colorate sfilate delle <em>Calendas</em> e mangeremo i tradizionali <em>buñuelos</em> dolci serviti su piatti di ceramica che, per buon auspicio, vanno lanciati e rotti per terra!</p>",
+                    images: ["https://images.unsplash.com/photo-1608670154625-f761bb22f87a?auto=format&fit=crop&w=400&q=80"],
+                    links: [
+                        { text: "🔗 Oaxaca Street Food Tour", url: "https://oaxacastreetfoodtour.com" },
+                        { text: "🔗 Orari Jardín Etnobotánico", url: "https://jardinoaxaca.mx/" },
+                        { text: "🔗 Orari Jardín Etnobotánico", url: "https://montealbanoaxaca.com/es/abrira-monte-alban-en-navidad/"}
+                    ],
+                    route: [
+                        { name: "Terminal ADO Oaxaca", coords: [17.0694, -96.7188], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Mercato 20 de Noviembre", coords: [17.0583, -96.7251], image: "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Zócalo di Oaxaca", coords: [17.0605, -96.7253], image: "https://images.unsplash.com/photo-1619441207753-481bf16279eb?auto=format&fit=crop&w=400&q=80" }
+                    ]
+                },
+                {
+                    id: "2-2",
+                    dayName: "Giorno 5 (25 Dic)",
+                    title: "Natale Zapoteco a Monte Albán e Street Art",
+                    location: "Monte Albán e Jalatlaco",
+                    shortDesc: "Mattinata tra le rovine precolombiane aperte 365 giorni l'anno e pomeriggio rilassato a Jalatlaco.",
+                    fullDesc: "<p>Dato che in città molte attività potrebbero essere chiuse o fare orario ridotto, è il momento perfetto per esplorare <strong>Monte Albán</strong> (i siti archeologici non chiudono mai). Arriveremo presto per evitare il sole e ammireremo l'incredibile spianata artificiale costruita sulla collina, cuore dell'antico impero Zapoteco, a soli 20-30 minuti di taxi o navetta dal centro.</p><p>Nel pomeriggio rientriamo in città per passeggiare nel pittoresco <strong>Barrio de Jalatlaco</strong>. È il quartiere più bohémien e antico della città, famoso per le strade acciottolate e i meravigliosi murales. Perfetto per bere un caffè messicano in totale relax celebrando il giorno di Natale.</p>",
+                    images: ["https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"],
+                    links: [
+                        { text: "🔗 Info Monte Albán INAH", url: "https://www.inah.gob.mx/zonas/103-zona-arqueologica-de-monte-alban" }
+                    ],
+                    route: [
+                        { name: "Sito Archeologico Monte Albán", coords: [17.0439, -96.7676], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Barrio de Jalatlaco", coords: [17.0667, -96.7138], image: "https://images.unsplash.com/photo-1634568800171-cb4be1b898be?auto=format&fit=crop&w=400&q=80" }
+                    ]
+                },
+                {
+                    id: "2-3",
+                    dayName: "Giorno 6 (26 Dic)",
+                    title: "Cascate, Mezcal e Pedalate Notturne",
+                    location: "Valle dell'Est & Oaxaca Centro",
+                    shortDesc: "Tour fuori porta tra bellezze naturali e rovine, seguito da un festoso tour serale in bicicletta per le strade di Oaxaca.",
+                    fullDesc: "<p>Oggi noleggiamo un'auto o partecipiamo a un tour condiviso verso est. Prima tappa: l'incredibile <strong>Árbol del Tule</strong>, un enorme e millenario cipresso di Montezuma dal tronco più largo del mondo. Proseguiamo verso <strong>Mitla</strong>, il secondo sito archeologico più importante, unico per i complessi e affascinanti mosaici geometrici che adornano i suoi palazzi.</p><p>Il pezzo forte naturalistico è <strong>Hierve el Agua</strong>: spettacolari cascate pietrificate affacciate su una gola vertiginosa. Chi vorrà potrà tuffarsi nelle piscine naturali sulfuree in cima. Sulla via del ritorno a Oaxaca, chiudiamo la giornata in un <em>palenque</em> per scoprire come l'agave si trasforma nel pungente <strong>Mezcal artigianale</strong>.</p><p><strong>Serata:</strong> Rientro previsto verso le 17:00 / 18:00. Avremo il tempo per una doccia rigenerante e una cena leggera a base di tacos veloci (verso le 19:00). Alle 20:45 ci faremo trovare sulla spianata del <strong>Templo de Santo Domingo</strong> per noleggiare le biciclette con <em>Mundo Ceiba</em>. Essendo sabato, ci godremo l'ultima notte oaxaqueña pedalando a suon di musica tra le vie illuminate a festa!</p>", images: ["https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"],
+                    links: [
+                        { text: "🔗 Ecobnb Hierve el Agua", url: "https://ecobnb.it/blog/2021/11/hierve-el-agua-cascate-pietrificate-messico/" },
+                        { text: "🔗 Hierve el Agua", url: "https://www.hierveelagua.org/" },
+                        { text: "🔗 Mundo Ceiba (Tour in Bici)", url: "https://www.facebook.com/mundoceibaoaxaca/" }
+                    ],
+                    route: [
+                        { name: "Árbol del Tule", coords: [17.0468, -96.6364], image: "https://images.unsplash.com/photo-1628105754593-90b63b9fcebf?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Sito Archeologico di Mitla", coords: [16.9234, -96.3598], image: "https://images.unsplash.com/photo-1578330744654-205128ff3a49?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Hierve el Agua", coords: [16.8647, -96.2764], image: "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Ritrovo Bici Mundo Ceiba", coords: [17.0664, -96.7214], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" }
+                    ]
+                },
+                {
+                    id: "2-4",
+                    dayName: "Giorno 7 (27 Dic)",
+                    title: "Dalle Montagne all'Oceano",
+                    location: "Puerto Escondido",
+                    shortDesc: "Viaggio panoramico mattutino sulla nuova autostrada e arrivo sulla costa del Pacifico per ceviche e mare.",
+                    fullDesc: "<p>Dopo aver ricaricato le batterie la notte precedente, partiamo la mattina (ore 8:00 o 9:00) dal terminal di Oaxaca a bordo di un comodo autobus ADO. Sfrutteremo la nuovissima autostrada, che riduce drasticamente i tempi di percorrenza e regala paesaggi diurni spettacolari mentre attraversiamo la Sierra Sur per scendere verso la costa.</p><p>Arriveremo a <strong>Puerto Escondido</strong> prima di mezzogiorno: freschi e riposati! L'obiettivo del pomeriggio è uno solo: abbandonare le scarpe, sentire la sabbia sotto i piedi in spiagge come <em>Carrizalillo</em> o <em>Zicatela</em>, ordinare un freschissimo <em>ceviche</em> e goderci il primo, maestoso tramonto sulle onde dell'Oceano Pacifico.</p>",
+                    images: ["https://images.unsplash.com/photo-1579685651478-f32b13c38cb6?auto=format&fit=crop&w=400&q=80"],
+                    links: [
+                        { text: "🔗 Biglietti Bus ADO (Oaxaca-Puerto Escondido)", url: "https://www.ado.com.mx" },
+                        { text: "🔗 Guida Spiagge Puerto Escondido", url: "https://www.mexicodesconocido.com.mx/puerto-escondido.html" }
+                    ],
+                    route: [
+                        { name: "Terminal ADO Oaxaca", coords: [17.0694, -96.7188], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
+                        { name: "Playa Carrizalillo, Puerto Escondido", coords: [15.8643, -97.0764], image: "https://images.unsplash.com/photo-1579685651478-f32b13c38cb6?auto=format&fit=crop&w=400&q=80" }
+                    ]
+                }
+            ],
+            mapFocus: { coords: [17.06, -96.72], zoom: 14 }
         },
         {
             id: 3,

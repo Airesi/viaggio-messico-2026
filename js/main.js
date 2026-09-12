@@ -11,10 +11,12 @@ function initApp() {
     generateContent();
     generateFlights();
     initMap();
-    initOrganicMosaic();;
-    
-    // Attiva la prima area di default
-    switchArea(1);   
+    initOrganicMosaic();
+
+    // RECUPERA L'ULTIMA AREA VISITATA (se non c'è, usa 1 di default)
+    const savedArea = localStorage.getItem('activeTripArea');
+    const initialArea = savedArea ? parseInt(savedArea) : 1;
+    switchArea(initialArea);
 }
 
 function populateHeaderFooter() {
@@ -219,6 +221,9 @@ function generateContent() {
 }
 
 function switchArea(areaId) {
+    // SALVA LA SCELTA NELLA MEMORIA DEL BROWSER
+    localStorage.setItem('activeTripArea', areaId);
+
     // Palette messicana dinamica per i bottoni e i dettagli
     const mexThemes = [
         { activeBg: 'bg-amber-500 text-white shadow-lg shadow-amber-500/30 border-amber-600', subText: 'text-amber-100' },     // Cempasúchil
