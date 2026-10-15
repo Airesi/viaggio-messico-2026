@@ -519,7 +519,7 @@ const tripData = {
             "badge": "27 Dic – 2 Gen · Caminos Reales e San Agustinillo",
             "locationText": "Sierra Norte · Pueblos Mancomunados · Costa di Oaxaca",
             "title": "40 chilometri fra i villaggi zapotechi, poi l'oceano",
-            "description": "Dal 27 al 29 dicembre il trekking comunitario Caminos Reales (3 giorni e 2 notti) tra San Miguel Amatlán, Latuvi e Benito Juárez. Rientro a Oaxaca il 29 e quattro notti a San Agustinillo dal 30 dicembre al 3 gennaio.",
+            "description": "ATTENZIONE: acquisto Caminos Reales PAGATO per il 26–28 dicembre, mentre questo programma mostra ancora il 27–29 dicembre. Prima di spostare le giornate, confermare se le date del voucher siano volute o vadano rettificate con Sierra Norte. Il pacchetto attraversa Amatlán, Latuvi e Benito Juárez (40 km, 3 giorni / 2 notti); dal 30 dicembre sono previste quattro notti a San Agustinillo.",
             "images": [
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
@@ -543,10 +543,10 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "27–29 dicembre 2026 · Pacchetto scelto, NON ancora prenotato",
-                "title": "Caminos Reales · 3 giorni / 2 notti",
+                "eyebrow": "PAGATO · Prenotazione 26–28 dicembre 2026 · Date diverse dall'itinerario",
+                "title": "Caminos Reales: pagamento confermato, date da riallineare",
                 "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · 40 km di trekking",
-                "cost": "Da 6.459 MXN a persona · da 12.918 MXN in due",
+                "cost": "12.917,70 MXN per 2 persone · già pagato",
                 "duration": "3 giorni · circa 40 km complessivi · difficoltà alta",
                 "legs": [
                     {
@@ -580,7 +580,7 @@ const tripData = {
                         "note": "Ultima tappa verso Benito Juárez, belvedere e ponte sospeso. Ritorno a Oaxaca con il gruppo/organizzatore; notte del 29 dicembre in città, fuori dalle 2 notti in cabaña."
                     }
                 ],
-                "warning": "Confermare disponibilità del 27–29 dicembre, prezzo definitivo (6.459 MXN è una quota 'da' per persona), punto/orario di partenza e rientro a Oaxaca, inclusioni effettive di trasporto, pasti, cabanas e assicurazione, dimensione del gruppo e lingua della guida. Circa 40 km in 3 giorni, sentieri montani in quota: verificare difficoltà, equipaggiamento, condizioni fisiche e temperature di dicembre. Il pacchetto è stato scelto come proposta, non risulta acquistato.",
+                "warning": "IMPORTANTE: il voucher pagato indica ARRIVO 26/12/2026, PARTENZA 28/12/2026; 1ª notte Amatlán 26/12 e 2ª notte Latuvi 27/12. Il programma sottostante è ancora il piano PRECEDENTE 27–29/12. Verificare immediatamente se modificare il viaggio oppure chiedere la rettifica a Sierra Norte: il 26 è già occupato da attività a Oaxaca. Importo totale già pagato: 12.917,70 MXN per due persone. Inclusi, secondo il voucher: trasporto Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas, pasti in Sierra Norte, guide locali per 3 trekking, sala dei codici, ponte sospeso, accessi comunitari e assicurazione del viaggiatore. Ritrovo previsto 08:00 a Oaxaca il primo giorno; rientro a Oaxaca dalle 16:00 il terzo giorno. Le guide parlano spagnolo. Attività soggette al meteo e condizioni locali; portare abbigliamento adatto ai 2.000–3.100 m di quota.",
                 "sources": [
                     {
                         "text": "Pacchetto ufficiale Sierra Norte",
@@ -621,12 +621,12 @@ const tripData = {
             },
             "food": "Sapori comunitari in Sierra Norte, cucina di montagna e trota durante il trekking; dal 30 dicembre pesce fresco, caffè e tramonti sul Pacifico.",
             "budget": {
-                "total": "Da 12.918 MXN in due · pacchetto, più soggiorni e trasferimenti",
-                "spent": "0 € registrati · pacchetto non prenotato",
+                "total": "12.917,70 MXN già pagati · altri costi viaggio da definire",
+                "spent": "12.917,70 MXN · pacchetto pagato",
                 "items": [
                     {
-                        "name": "Caminos Reales 3D/2N · 2 persone",
-                        "cost": "Da 12.918 MXN (6.459 cad.)"
+                        "name": "Caminos Reales 3D/2N · 2 persone · PAGATO",
+                        "cost": "12.917,70 MXN"
                     },
                     {
                         "name": "Notte Oaxaca · 29 dic",
@@ -648,8 +648,13 @@ const tripData = {
             },
             "reservations": [
                 {
-                    "name": "Caminos Reales, 27–29 dic (Sierra Norte)",
-                    "status": "Scelto · da prenotare",
+                    "name": "Caminos Reales · 26–28 dic (come da voucher)",
+                    "status": "Pagato",
+                    "type": "success"
+                },
+                {
+                    "name": "Date voucher 26–28 vs itinerario 27–29",
+                    "status": "Da chiarire",
                     "type": "warning"
                 },
                 {
@@ -675,7 +680,7 @@ const tripData = {
                     "title": "Caminos Reales I: miniere storiche e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
                     "shortDesc": "Partenza da Oaxaca con l'organizzatore, circa 12 km di trekking fra le miniere e le antiche haciendas; notte in cabaña.",
-                    "fullDesc": "<p><strong>Inizia Caminos Reales</strong>, il pacchetto <strong>3 giorni / 2 notti</strong> di Expediciones Sierra Norte nei Pueblos Mancomunados. Ritrovo a Oaxaca (luogo e ora da confermare) e trasferimento organizzato verso <strong>San Miguel Amatlán</strong>, indicativamente <strong>2 ore</strong>.</p><p><strong>Trekking del giorno: circa 12 km / 4 ore</strong>, fra antichi sentieri, miniere e resti delle haciendas. La proposta include la zona de <em>Las Minas</em>, pranzo con trota e visita alla sala dedicata ai codici e alla storia locale. Attività e sequenza vanno riconfermate con la guida.</p><p>Prima notte in <strong>cabaña a San Miguel Amatlán</strong>. Si dorme in montagna: portare indumenti caldi a strati, scarpe da trekking già collaudate, acqua e una piccola borsa per i tre giorni.</p><p><strong>Pacchetto selezionato, non ancora prenotato.</strong> Prezzo pubblicato <strong>da 6.459 MXN per persona</strong> (da 12.918 MXN in due); chiedere conferma per le date 27–29 dicembre e delle inclusioni.</p>",
+                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p><strong>Inizia Caminos Reales</strong>, il pacchetto <strong>3 giorni / 2 notti</strong> di Expediciones Sierra Norte nei Pueblos Mancomunados. Ritrovo a Oaxaca (luogo e ora da confermare) e trasferimento organizzato verso <strong>San Miguel Amatlán</strong>, indicativamente <strong>2 ore</strong>.</p><p><strong>Trekking del giorno: circa 12 km / 4 ore</strong>, fra antichi sentieri, miniere e resti delle haciendas. La proposta include la zona de <em>Las Minas</em>, pranzo con trota e visita alla sala dedicata ai codici e alla storia locale. Attività e sequenza vanno riconfermate con la guida.</p><p>Prima notte in <strong>cabaña a San Miguel Amatlán</strong>. Si dorme in montagna: portare indumenti caldi a strati, scarpe da trekking già collaudate, acqua e una piccola borsa per i tre giorni.</p><p><strong>Pacchetto già pagato: 12.917,70 MXN in due.</strong> Il voucher conferma la prenotazione per il 26–28 dicembre: date da chiarire prima di ripianificare il soggiorno a Oaxaca.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -712,7 +717,7 @@ const tripData = {
                     "title": "Caminos Reales II: sul Camino Real da Amatlán a Latuvi",
                     "location": "San Miguel Amatlán → Santa Marta Latuvi",
                     "shortDesc": "Tappa più lunga: circa 16 km / 5–6 ore lungo un antico Camino Real zapoteco; seconda notte in cabaña.",
-                    "fullDesc": "<p>La giornata più lunga di <strong>Caminos Reales</strong>: lasciamo San Miguel Amatlán e percorriamo un antico <strong>Camino Real zapoteco</strong> in direzione di <strong>Santa Marta Latuvi</strong>, fra boschi, rilievi e percorsi utilizzati storicamente dalle comunità serrane.</p><p><strong>Circa 16 km / 5–6 ore di cammino</strong>, con guida del programma. Il dislivello e le condizioni del sentiero vanno confermati dall'organizzatore, considerando che siamo in zona montana.</p><p>Arrivo a <strong>Latuvi</strong>, riposo, cena comunitaria secondo il programma e <strong>seconda notte in cabaña</strong>. Questa è una tappa di trekking a tutti gli effetti: nessun trasferimento aggiuntivo al mare o a Oaxaca.</p>",
+                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p>La giornata più lunga di <strong>Caminos Reales</strong>: lasciamo San Miguel Amatlán e percorriamo un antico <strong>Camino Real zapoteco</strong> in direzione di <strong>Santa Marta Latuvi</strong>, fra boschi, rilievi e percorsi utilizzati storicamente dalle comunità serrane.</p><p><strong>Circa 16 km / 5–6 ore di cammino</strong>, con guida del programma. Il dislivello e le condizioni del sentiero vanno confermati dall'organizzatore, considerando che siamo in zona montana.</p><p>Arrivo a <strong>Latuvi</strong>, riposo, cena comunitaria secondo il programma e <strong>seconda notte in cabaña</strong>. Questa è una tappa di trekking a tutti gli effetti: nessun trasferimento aggiuntivo al mare o a Oaxaca.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -745,7 +750,7 @@ const tripData = {
                     "title": "Caminos Reales III: Benito Juárez e rientro a Oaxaca",
                     "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
                     "shortDesc": "Ultimi 12 km verso Benito Juárez (circa 4,5 ore), belvedere e ponte sospeso; rientro con l'organizzatore e notte a Oaxaca.",
-                    "fullDesc": "<p>Terzo e ultimo giorno del trekking: <strong>Santa Marta Latuvi → Benito Juárez</strong>, lungo una tappa di circa <strong>12 km / 4 ore e mezza</strong>. Il percorso sale fino alla zona dei <strong>2.900 metri</strong> e termina con i panorami montani, il belvedere e il caratteristico <strong>ponte sospeso</strong>, secondo l'itinerario indicato dall'organizzatore.</p><p>Il trasporto previsto dal pacchetto ci riporta a <strong>Oaxaca de Juárez</strong>; confermare l'orario preciso di rientro al momento della prenotazione.</p><p><strong>Pernottamento a Oaxaca il 29 dicembre</strong> (hotel separato, da prenotare). Dopo circa <strong>40 km di trekking in tre giorni</strong>, evitiamo di aggiungere una lunga corsa fino alla costa la sera stessa: il trasferimento a San Agustinillo è previsto per il 30 dicembre.</p>",
+                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p>Terzo e ultimo giorno del trekking: <strong>Santa Marta Latuvi → Benito Juárez</strong>, lungo una tappa di circa <strong>12 km / 4 ore e mezza</strong>. Il percorso sale fino alla zona dei <strong>2.900 metri</strong> e termina con i panorami montani, il belvedere e il caratteristico <strong>ponte sospeso</strong>, secondo l'itinerario indicato dall'organizzatore.</p><p>Il trasporto previsto dal pacchetto ci riporta a <strong>Oaxaca de Juárez</strong>; confermare l'orario preciso di rientro al momento della prenotazione.</p><p><strong>Pernottamento a Oaxaca il 29 dicembre</strong> (hotel separato, da prenotare). Dopo circa <strong>40 km di trekking in tre giorni</strong>, evitiamo di aggiungere una lunga corsa fino alla costa la sera stessa: il trasferimento a San Agustinillo è previsto per il 30 dicembre.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
