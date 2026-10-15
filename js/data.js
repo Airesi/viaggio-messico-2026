@@ -224,21 +224,212 @@ const tripData = {
             mapFocus: { coords: [17.06, -96.72], zoom: 14 }
         },
         {
-            id: 3,
-            navTitle: "Chiapas",
-            navSubtitle: "Montagne e Giungla",
-            badge: "Giorni 7 - 10 • Chiapas Selvaggio",
-            locationText: "San Cristóbal & Palenque",
-            title: "Tra Misticismo e Natura",
-            description: "L'atmosfera magica di San Cristóbal de las Casas, i riti di San Juan Chamula, le cascate di Agua Azul e le rovine avvolte dalle radici di Palenque.",
-            images: [
+            "id": 3,
+            "navTitle": "Chiapas",
+            "navSubtitle": "Palenque e foresta tropicale",
+            "badge": "3–6 Gen · Dalla costa alla giungla",
+            "locationText": "San Agustinillo → Palenque",
+            "title": "Dal Pacifico alle rovine di Palenque",
+            "description": "Da San Agustinillo attraversiamo la costa di Oaxaca fino a Salina Cruz, poi raggiungiamo Villahermosa in autobus notturno e Palenque il 4 gennaio. Rovine il 5 e Cascadas Roberto Barrios il 6 gennaio.",
+            "images": [
                 "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
             ],
-            links: [
-                { text: "🔗 Tour Comunitari Chiapas", url: "https://www.rutopia.com" }
+            "links": [
+                {
+                    "text": "🔗 Bus ADO · biglietti",
+                    "url": "https://www.ado.com.mx/"
+                },
+                {
+                    "text": "🔗 Rome2Rio · orari di riferimento",
+                    "url": "https://www.rome2rio.com/it/"
+                }
             ],
-            mapFocus: { coords: [16.90, -92.30], zoom: 7 }
+            "transferPlan": {
+                "eyebrow": "3–4 gennaio 2027 · Itinerario candidato, da prenotare",
+                "title": "Dal Pacifico alla giungla, seguendo la costa",
+                "subtitle": "San Agustinillo → Pochutla → Salina Cruz → Villahermosa → Palenque",
+                "cost": "~135–150 € in due per 3 bus, più trasferimenti locali",
+                "duration": "Dal 3 gennaio pomeriggio al 4 gennaio ore 13:00 · ~22 ore complessive",
+                "legs": [
+                    {
+                        "day": "3 gen",
+                        "time": "Prima delle 16:15",
+                        "from": "San Agustinillo",
+                        "to": "San Pedro Pochutla",
+                        "operator": "Taxi / colectivo",
+                        "duration": "30–45 min indicativi",
+                        "price": "Da verificare",
+                        "note": "Partire con margine e individuare il punto di salita AltaMar a Pochutla."
+                    },
+                    {
+                        "day": "3 gen",
+                        "time": "16:15 → 20:10",
+                        "from": "Pochutla",
+                        "to": "Salina Cruz",
+                        "operator": "AltaMar · diretto (Rome2Rio)",
+                        "duration": "3 h 55 min",
+                        "price": "13–20 € / persona, indicativi",
+                        "note": "Orario mostrato su Rome2Rio per il 3 gennaio; verificare la corsa e il punto esatto d'arrivo. Margine teorico prima dell'ADO: 2 h 50 min."
+                    },
+                    {
+                        "day": "3 → 4 gen",
+                        "time": "23:00 → 08:55 (+1)",
+                        "from": "Salina Cruz",
+                        "to": "Villahermosa",
+                        "operator": "ADO · notturno",
+                        "duration": "9 h 55 min",
+                        "price": "964 MXN / persona; 1.928 MXN in due",
+                        "note": "Partenza da Calle Primero de Mayo 32, colonia Espinal (Salina Cruz). Arrivo ad Av. Francisco Javier Mina 297 (Villahermosa). Prezzo e orario mostrati nella ricerca ADO; non prenotato."
+                    },
+                    {
+                        "day": "4 gen",
+                        "time": "10:30 → 13:00",
+                        "from": "Villahermosa Tabasco Central",
+                        "to": "Palenque",
+                        "operator": "Autobus · Rome2Rio",
+                        "duration": "2 h 30 min",
+                        "price": "~7 € / persona, indicativi",
+                        "note": "Arrivo alla Central de Autobuses ADO Palenque. Margine teorico dall'ADO notturno: 1 h 35 min. Potrebbe essere necessario spostarsi tra due terminal a Villahermosa."
+                    }
+                ],
+                "warning": "Corsa AltaMar delle 16:15 e collegamento Villahermosa–Palenque delle 10:30: orari indicativi Rome2Rio, da confermare per il 3–4 gennaio 2027. Verificare la fermata AltaMar a Salina Cruz, il terminal ADO di partenza e l'eventuale spostamento tra terminal a Villahermosa. Coincidenze NON garantite su biglietti separati; nessun biglietto ancora acquistato.",
+                "sources": [
+                    {
+                        "text": "Controlla gli autobus ADO",
+                        "url": "https://www.ado.com.mx/"
+                    },
+                    {
+                        "text": "Confronta su Rome2Rio",
+                        "url": "https://www.rome2rio.com/it/"
+                    }
+                ]
+            },
+            "days": [
+                {
+                    "id": "3-jan03",
+                    "dayName": "Giorno 14 (3 Gen)",
+                    "title": "Da San Agustinillo verso Salina Cruz: la costa di Oaxaca",
+                    "location": "San Agustinillo · Pochutla · Salina Cruz",
+                    "shortDesc": "AltaMar Pochutla 16:15–20:10; ADO notturno delle 23:00 per Villahermosa.",
+                    "fullDesc": "<p>Ultime ore sul Pacifico a <strong>San Agustinillo</strong>. Con taxi o colectivo raggiungiamo <strong>San Pedro Pochutla</strong> (circa 30–45 minuti indicativi), con margine per individuare la fermata dell'autobus.</p><p><strong>16:15–20:10</strong> · <strong>AltaMar diretto Pochutla → Salina Cruz</strong>, 3 h 55 min, circa <strong>13–20 € a persona</strong> secondo Rome2Rio. La strada segue la costa in buona parte: niente ritorno a Oaxaca. <strong>Da verificare</strong> disponibilità effettiva per il 3 gennaio e fermata di arrivo a Salina Cruz.</p><p><strong>23:00</strong> · Partenza <strong>ADO Salina Cruz → Villahermosa</strong>, bus notturno di 9 h 55 min con arrivo alle <strong>08:55 del 4 gennaio</strong>. Tariffa visualizzata su ADO: <strong>964 MXN a persona</strong> (1.928 MXN in due). Punto di partenza indicato: <strong>Calle Primero de Mayo 32, colonia Espinal, Salina Cruz</strong>. Tra gli autobus abbiamo 2 h 50 min sulla carta, ma sono biglietti separati e un ritardo può far perdere la coincidenza.</p><p><strong>Stato: non prenotato.</strong> Confermare orari e terminal prima di acquistare.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🚌 Prenota ADO",
+                            "url": "https://www.ado.com.mx/"
+                        },
+                        {
+                            "text": "🗺️ Cerca AltaMar su Rome2Rio",
+                            "url": "https://www.rome2rio.com/it/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "San Agustinillo",
+                            "coords": [
+                                15.667,
+                                -96.55
+                            ]
+                        },
+                        {
+                            "name": "San Pedro Pochutla",
+                            "coords": [
+                                15.744,
+                                -96.466
+                            ]
+                        },
+                        {
+                            "name": "Salina Cruz",
+                            "coords": [
+                                16.169,
+                                -95.199
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3-jan04",
+                    "dayName": "Giorno 15 (4 Gen)",
+                    "title": "Da Villahermosa a Palenque: arrivo nella giungla",
+                    "location": "Villahermosa · Palenque",
+                    "shortDesc": "ADO arriva alle 08:55, bus verso Palenque alle 10:30 e arrivo previsto alle 13:00.",
+                    "fullDesc": "<p><strong>08:55</strong> · Arrivo del bus ADO a <strong>Villahermosa</strong> presso <strong>Av. Francisco Javier Mina 297</strong>, angolo Lino Merino e Lamberto Castellanos Rivera.</p><p><strong>10:30–13:00</strong> · Collegamento diretto <strong>Villahermosa Tabasco Central → Central de Autobuses ADO Palenque</strong> mostrato da Rome2Rio, durata <strong>2 h 30 min</strong> e prezzo indicativo <strong>7 € a persona</strong>. La coincidenza teorica è di <strong>1 h 35 min</strong>, ma <strong>i terminal potrebbero essere differenti</strong>: verificare gli indirizzi e prevedere l'eventuale breve trasferimento.</p><p><strong>13:00</strong> · Arrivo previsto a <strong>Palenque</strong>. Sistemazione e pomeriggio tranquillo dopo il lungo viaggio. <strong>5 gennaio</strong>: rovine di Palenque; <strong>6 gennaio</strong>: Cascadas Roberto Barrios. Successivo collegamento verso il Tren Maya da confermare.</p><p><strong>Budget stimato per due:</strong> circa <strong>135–150 €</strong> per i tre autobus principali, esclusi San Agustinillo–Pochutla e eventuali taxi tra terminal. Prezzi non bloccati e orari da riconfermare.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🚌 Autobus ADO",
+                            "url": "https://www.ado.com.mx/"
+                        },
+                        {
+                            "text": "🗺️ Rome2Rio",
+                            "url": "https://www.rome2rio.com/it/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Villahermosa",
+                            "coords": [
+                                17.989,
+                                -92.93
+                            ]
+                        },
+                        {
+                            "name": "Palenque",
+                            "coords": [
+                                17.509,
+                                -92.045
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "budget": {
+                "total": "135–150 € + trasferimenti locali · 2 persone",
+                "spent": "0 € · non prenotato",
+                "items": [
+                    {
+                        "name": "Pochutla → Salina Cruz (AltaMar)",
+                        "cost": "26–40 € / 2"
+                    },
+                    {
+                        "name": "Salina Cruz → Villahermosa (ADO)",
+                        "cost": "1.928 MXN / 2"
+                    },
+                    {
+                        "name": "Villahermosa → Palenque",
+                        "cost": "~14 € / 2"
+                    },
+                    {
+                        "name": "Taxi/colectivo iniziale + cambi terminal",
+                        "cost": "Da quotare"
+                    }
+                ]
+            },
+            "reservations": [
+                {
+                    "name": "AltaMar · 3 gen 16:15",
+                    "status": "Da verificare",
+                    "type": "warning"
+                },
+                {
+                    "name": "ADO · 3 gen 23:00",
+                    "status": "Da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Villahermosa–Palenque · 4 gen 10:30",
+                    "status": "Da verificare",
+                    "type": "warning"
+                }
+            ],
+            "mapFocus": {
+                "coords": [
+                    17.509,
+                    -92.045
+                ],
+                "zoom": 9
+            }
         },
         {
             id: 4,
@@ -281,8 +472,9 @@ const tripData = {
     locations: [
         { areaId: 1, name: "Città del Messico & Teotihuacán", coords: [19.4326, -99.1332], days: "Giorni 1 - 4" },
         { areaId: 2, name: "Oaxaca & Monte Albán", coords: [17.0753, -96.7237], days: "Giorni 5 - 6" },
-        { areaId: 3, name: "San Cristóbal de las Casas", coords: [16.7370, -92.6376], days: "Giorni 7 - 8" },
-        { areaId: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "Giorni 9 - 10" },
+        { areaId: 3, name: "Salina Cruz (trasferimento)", coords: [16.169, -95.199], days: "3 Gen" },
+        { areaId: 3, name: "Villahermosa (cambio bus)", coords: [17.989, -92.93], days: "4 Gen" },
+        { areaId: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "4–6 Gen" },
         { areaId: 4, name: "Calakmul (Riserva Biosfera)", coords: [18.1075, -89.8105], days: "Giorni 11 - 12" },
         { areaId: 4, name: "Campeche, Uxmal & Mérida", coords: [20.9674, -89.5926], days: "Giorni 13 - 16" },
         { areaId: 5, name: "Chichén Itzá & Valladolid", coords: [20.6843, -88.5678], days: "Giorni 17 - 18" },
