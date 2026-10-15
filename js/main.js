@@ -98,6 +98,36 @@ function generateContent() {
             </div>
         ` : '';
 
+
+        // Timeline del trasferimento (solo per le tappe con transferPlan)
+        const transferHtml = area.transferPlan ? `
+            <section class="mb-8 rounded-[1.5rem] border border-amber-200/80 overflow-hidden bg-amber-50/40 shadow-sm">
+                <div class="bg-blue-950 text-white px-5 py-4">
+                    <span class="text-[10px] uppercase tracking-widest text-amber-300 font-black">${area.transferPlan.eyebrow}</span>
+                    <h3 class="text-base font-extrabold mt-1">${area.transferPlan.title}</h3>
+                    <p class="text-xs text-blue-100 mt-1">${area.transferPlan.subtitle}</p>
+                </div>
+                <div class="p-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">💸 Budget stimato</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.cost}</p></div>
+                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">🕒 Durata</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.duration}</p></div>
+                    </div>
+                    <div class="space-y-3">
+                        ${area.transferPlan.legs.map((leg, i) => `
+                            <div class="bg-white border border-gray-200 rounded-xl p-3">
+                                <div class="flex items-center justify-between gap-2 mb-1"><span class="text-[10px] font-black text-emerald-700 uppercase">${i+1}. ${leg.day}</span><span class="text-xs font-black text-gray-800">${leg.time}</span></div>
+                                <div class="text-sm font-extrabold text-gray-900">${leg.from} <span class="text-amber-700">→</span> ${leg.to}</div>
+                                <div class="flex justify-between flex-wrap gap-1 mt-1 text-[11px] text-gray-600"><span>${leg.operator} · ${leg.duration}</span><strong>${leg.price}</strong></div>
+                                <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">${leg.note}</p>
+                            </div>
+                        `).join("")}
+                    </div>
+                    <p class="text-xs text-amber-950 bg-amber-100/70 rounded-xl p-3 mt-4 leading-relaxed"><strong>⚠️ Prima di prenotare:</strong> ${area.transferPlan.warning}</p>
+                    <div class="flex flex-wrap gap-3 mt-4">${area.transferPlan.sources.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-emerald-800 underline">${link.text} ↗</a>`).join("")}</div>
+                </div>
+            </section>
+        ` : '';
+
         // 2. ITINERARIO (Ora sta sotto, con il suo nuovo titoletto)
         let daysHtml = '';
         if (area.days && area.days.length > 0) {
@@ -137,6 +167,7 @@ function generateContent() {
 
         contentDiv.innerHTML = `
             ${basecampHtml}
+            ${transferHtml}
             ${daysHtml}
             <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
                 <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Risorse Utili:</span>
