@@ -109,7 +109,7 @@ function generateContent() {
                 </div>
                 <div class="p-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">💸 Budget stimato</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.cost}</p></div>
+                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">${area.id === 6 ? '✅ Già pagato' : '💸 Budget stimato'}</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.cost}</p></div>
                         <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">🕒 Durata</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.duration}</p></div>
                     </div>
                     <div class="space-y-3">
@@ -124,6 +124,51 @@ function generateContent() {
                     </div>
                     <p class="text-xs text-amber-950 bg-amber-100/70 rounded-xl p-3 mt-4 leading-relaxed"><strong>⚠️ Prima di prenotare:</strong> ${area.transferPlan.warning}</p>
                     <div class="flex flex-wrap gap-3 mt-4">${area.transferPlan.sources.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-emerald-800 underline">${link.text} ↗</a>`).join("")}</div>
+                </div>
+            </section>
+        ` : '';
+
+
+        // Riepilogo delle prenotazioni Booking: visibile nella tappa Sierra e Pacifico.
+        // Il totale riguarda prenotazioni confermate, non necessariamente già pagate.
+        const hotelSummary = area.id === 6 ? tripData.general.hotelBookings : null;
+        const displayShortDate = iso => {
+            const parts = iso.split('-');
+            return parts[2] + '/' + parts[1];
+        };
+        const hotelSummaryHtml = hotelSummary ? `
+            <section class="mb-8 rounded-[1.5rem] border border-gray-200 bg-white shadow-sm overflow-hidden">
+                <div class="flex flex-wrap justify-between items-center gap-3 px-5 py-4 bg-gray-50 border-b border-gray-200">
+                    <div>
+                        <span class="block text-[10px] font-black uppercase tracking-widest text-amber-700 mb-1">🏨 Prenotazioni Booking · 2 persone</span>
+                        <h3 class="text-sm font-extrabold text-gray-900">4 soggiorni confermati</h3>
+                        <p class="text-[11px] text-gray-500 mt-1">Importi prenotati, pagamento non verificato</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xl font-black text-gray-900">€ ${hotelSummary.totalEuro}</p>
+                        <p class="text-[10px] text-gray-500">Totale delle 4 prenotazioni attuali</p>
+                    </div>
+                </div>
+                <div class="px-5 py-3">
+                    ${hotelSummary.items.map(stay => {
+                        const dateMismatch = stay.status.includes('date da modificare');
+                        return `
+                            <div class="py-3 border-b border-gray-100 last:border-0 flex flex-wrap items-start justify-between gap-2">
+                                <div class="flex-1 min-w-0">
+                                    <div class="text-xs font-bold text-gray-800">${stay.name}</div>
+                                    <p class="text-[11px] text-gray-500">${stay.city} · ${displayShortDate(stay.checkin)}–${displayShortDate(stay.checkout)} · ${stay.cancellation}</p>
+                                    ${dateMismatch ? '<p class="text-[11px] font-bold text-amber-800 mt-1">⚠️ Date da cambiare: 30/12–03/01</p>' : ''}
+                                </div>
+                                <div class="text-right">
+                                    <span class="block text-sm font-black text-gray-900">€ ${stay.totalEuro}</span>
+                                    <span class="text-[10px] font-bold ${dateMismatch ? 'text-amber-700' : 'text-emerald-700'}">${dateMismatch ? 'Confermato, da modificare' : 'Confermato'}</span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                <div class="mx-5 mb-5 rounded-xl bg-amber-50 border border-amber-200 p-3">
+                    <p class="text-xs text-amber-950 leading-relaxed"><strong>⚠️ Posada Paloma:</strong> prenotazione attuale 29/12–02/01 (€242), ma il programma prevede 30/12–03/01. La notte del 29 è già prenotata a Oaxaca; occorre modificare Booking. Il costo finale potrebbe cambiare.</p>
                 </div>
             </section>
         ` : '';
@@ -167,6 +212,7 @@ function generateContent() {
 
         contentDiv.innerHTML = `
             ${basecampHtml}
+            ${hotelSummaryHtml}
             ${transferHtml}
             ${daysHtml}
             <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
