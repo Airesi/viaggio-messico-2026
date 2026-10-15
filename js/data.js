@@ -2,9 +2,9 @@
 
 const tripData = {
     general: {
-        dates: "21 Dicembre - 15 Gennaio • 25 Giorni",
+        dates: "20 Dicembre 2026 – 17 Gennaio 2027 • 29 Giorni",
         title: "Messico",
-        footerName: "Spedizione Sud Messico (25 Giorni)",
+        footerName: "Spedizione Sud Messico (29 Giorni)",
         footerSeason: "Dicembre - Gennaio"
     },
     areas: [
@@ -229,8 +229,8 @@ const tripData = {
             "navSubtitle": "Palenque e foresta tropicale",
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
-            "title": "Dal Pacifico alle rovine di Palenque",
-            "description": "Da San Agustinillo attraversiamo la costa di Oaxaca fino a Salina Cruz, poi raggiungiamo Villahermosa in autobus notturno e Palenque il 4 gennaio. Rovine il 5 e Cascadas Roberto Barrios il 6 gennaio.",
+            "title": "Palenque: giungla, città maya e cascate",
+            "description": "Arrivo dalla costa del Pacifico il 4 gennaio; il 5 esploriamo le rovine maya di Palenque, il 6 le Cascadas Roberto Barrios. Il 7 si prosegue verso Bacalar con il Tren Maya.",
             "images": [
                 "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
@@ -243,6 +243,10 @@ const tripData = {
                 {
                     "text": "🔗 Rome2Rio · orari di riferimento",
                     "url": "https://www.rome2rio.com/it/"
+                },
+                {
+                    "text": "🔗 Orari e accesso Palenque (INAH)",
+                    "url": "https://lugares.inah.gob.mx/es/node/4853"
                 }
             ],
             "transferPlan": {
@@ -382,6 +386,72 @@ const tripData = {
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "3-jan05",
+                    "dayName": "Giorno 16 (5 Gen)",
+                    "title": "Palenque: la città maya nascosta nella giungla",
+                    "location": "Zona archeologica di Palenque",
+                    "shortDesc": "Giornata dedicata al sito UNESCO: Tempio delle Iscrizioni, Palazzo, complessi cerimoniali e sentieri nella foresta.",
+                    "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🏛️ Sito ufficiale INAH · Palenque",
+                            "url": "https://lugares.inah.gob.mx/es/node/4853"
+                        },
+                        {
+                            "text": "🏛️ Museo di sito INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/5072"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Palenque, centro",
+                            "coords": [
+                                17.509,
+                                -92.045
+                            ]
+                        },
+                        {
+                            "name": "Zona archeologica Palenque",
+                            "coords": [
+                                17.483,
+                                -92.047
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3-jan06",
+                    "dayName": "Giorno 17 (6 Gen)",
+                    "title": "Cascadas Roberto Barrios: acqua turchese e foresta",
+                    "location": "Roberto Barrios · Palenque",
+                    "shortDesc": "Escursione alle cascate e alle piscine naturali nella giungla, con tempo per fermarsi e fare il bagno dove consentito.",
+                    "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🗺️ Roberto Barrios · posizione su OpenStreetMap",
+                            "url": "https://www.openstreetmap.org/search?query=Cascadas%20Roberto%20Barrios%20Chiapas"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Palenque",
+                            "coords": [
+                                17.509,
+                                -92.045
+                            ]
+                        },
+                        {
+                            "name": "Cascadas Roberto Barrios",
+                            "coords": [
+                                17.318,
+                                -92.142
+                            ]
+                        }
+                    ]
                 }
             ],
             "budget": {
@@ -421,6 +491,16 @@ const tripData = {
                     "name": "Villahermosa–Palenque · 4 gen 10:30",
                     "status": "Da verificare",
                     "type": "warning"
+                },
+                {
+                    "name": "Ingresso zona archeologica Palenque · 5 gen",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Trasporto / visita Roberto Barrios · 6 gen",
+                    "status": "Da organizzare",
+                    "type": "warning"
                 }
             ],
             "mapFocus": {
@@ -432,55 +512,563 @@ const tripData = {
             }
         },
         {
-            id: 4,
-            navTitle: "Campeche",
-            navSubtitle: "Biosfera & Golfo",
-            badge: "Giorni 11 - 16 • Calakmul & Campeche",
-            locationText: "Calakmul & Campeche",
-            title: "Le Piramidi Perdute",
-            description: "Capodanno mistico nella Riserva della Biosfera di Calakmul tra le scimmie urlatrici e risalita verso la splendida città fortificata di Campeche.",
-            images: [
-                "https://images.unsplash.com/photo-1608953979462-87063327d896?auto=format&fit=crop&w=600&q=80"
+            "id": 4,
+            "navTitle": "Bacalar",
+            "navSubtitle": "Tren Maya e laguna",
+            "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
+            "locationText": "Palenque → Escárcega → Bacalar",
+            "title": "Il Tren Maya e la laguna dai sette colori",
+            "description": "Il 7 gennaio attraversiamo la penisola con il Tren Maya fino alla stazione Bacalar. L'8 e il 9 ci prendiamo due giorni per la laguna, prima di risalire verso Muyil il 10 gennaio.",
+            "images": [
+                "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
-            logistics: "Noleggio auto consigliato per addentrarsi in sicurezza nella giungla di Calakmul.",
-            links: [
-                { text: "🔗 Guide Locali Calakmul", url: "https://www.cabalek.com" },
-                { text: "🔗 Noleggio Auto Messico", url: "https://www.rentalcars.com" }
+            "links": [
+                {
+                    "text": "🔗 Tren Maya · orari ufficiali",
+                    "url": "https://www.trenmaya.gob.mx/horarios.php"
+                },
+                {
+                    "text": "🔗 Tren Maya · sito e biglietti",
+                    "url": "https://www.trenmaya.gob.mx/"
+                },
+                {
+                    "text": "🔗 Foto Bacalar CC BY 2.0 · Roberto Bolaños",
+                    "url": "https://commons.wikimedia.org/wiki/File:Bacalar_-_Lagoon_of_Colors.jpg"
+                }
             ],
-            mapFocus: { coords: [18.80, -90.20], zoom: 7 }
+            "transferPlan": {
+                "eyebrow": "7 gennaio 2027 · Biglietti e orari da verificare",
+                "title": "Attraverso la penisola con il Tren Maya",
+                "subtitle": "Palenque → Escárcega → stazione Bacalar → alloggio",
+                "cost": "Treno e trasferimento finale: prezzi da quotare",
+                "duration": "Un pomeriggio e una serata di viaggio · possibile arrivo tardi",
+                "legs": [
+                    {
+                        "day": "Gio 7 gen",
+                        "time": "Partenza indicativa 14:00",
+                        "from": "Palenque",
+                        "to": "Escárcega",
+                        "operator": "Tren Maya · riferimento ufficiale attuale",
+                        "duration": "Circa 2 h 49 min (orario pubblicato)",
+                        "price": "Da verificare",
+                        "note": "La tabella ufficiale indica Palenque 14:00 → Escárcega 16:49; non è una conferma per il 7/1/2027. Prevedere trasferimento dal centro alla stazione di Palenque."
+                    },
+                    {
+                        "day": "Gio 7 gen",
+                        "time": "Coincidenza indicativa 17:09",
+                        "from": "Escárcega",
+                        "to": "Bacalar",
+                        "operator": "Tren Maya · prosecuzione verso Chetumal",
+                        "duration": "Arrivo a Bacalar in serata, ora da confermare",
+                        "price": "Da verificare",
+                        "note": "Il servizio pubblicato prosegue fino a Chetumal (arrivo indicato 21:57), ma Bacalar è una fermata precedente: scendere a Bacalar, evitando il giro inutile via Chetumal. Verificare il biglietto e l'operatività della coincidenza."
+                    },
+                    {
+                        "day": "Gio 7 gen",
+                        "time": "Sera",
+                        "from": "Stazione Bacalar",
+                        "to": "Alloggio a Bacalar",
+                        "operator": "Taxi / transfer da organizzare",
+                        "duration": "Da verificare",
+                        "price": "Da quotare",
+                        "note": "La stazione ferroviaria è fuori dal centro: concordare il pickup in anticipo e verificare che l'alloggio consenta il check-in serale."
+                    }
+                ],
+                "warning": "Gli orari riportati sono quelli pubblicati oggi dal Tren Maya, NON confermati per il 7 gennaio 2027. Chiedere la fermata effettiva a Bacalar, l'eventuale cambio a Escárcega, i fusi orari regionali, disponibilità dei biglietti e taxi serale dalla stazione. In caso di corse diverse, potrebbe servire ripianificare il 7 gennaio.",
+                "sources": [
+                    {
+                        "text": "Orari ufficiali Tren Maya",
+                        "url": "https://www.trenmaya.gob.mx/horarios.php"
+                    },
+                    {
+                        "text": "Mappa e stazioni Tren Maya",
+                        "url": "https://www.trenmaya.gob.mx/"
+                    }
+                ]
+            },
+            "basecamp": {
+                "zone": "Bacalar · vicinanza alla laguna",
+                "hotelIdea": "Pousada/cabaña con accesso alla laguna o pontile, check-in serale il 7 gennaio",
+                "why": "Tre notti (7, 8 e 9 gennaio) per rallentare davvero: il 7 è viaggio, l'8 e il 9 sono giornate piene sulla laguna.",
+                "tags": [
+                    "💧 Laguna, non mare",
+                    "🛶 Kayak",
+                    "🌿 Ritmo lento"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚕",
+                        "title": "Transfer stazione → alloggio",
+                        "desc": "Organizzare in anticipo per l'arrivo serale del Tren Maya."
+                    },
+                    {
+                        "icon": "🛶",
+                        "title": "Kayak / tour locale",
+                        "desc": "Per visitare la laguna seguendo le regole ambientali."
+                    }
+                ]
+            },
+            "food": "Colazione con vista sulla laguna, cucina del Quintana Roo e due cene senza fretta nel centro di Bacalar.",
+            "budget": {
+                "total": "Da definire",
+                "spent": "€ 0 · non prenotato",
+                "items": [
+                    {
+                        "name": "Tren Maya Palenque → Bacalar (2 persone)",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Transfer stazione Bacalar → alloggio",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Alloggio Bacalar · 3 notti (7–9 gen)",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Kayak / giro in laguna",
+                        "cost": "Facoltativo"
+                    }
+                ]
+            },
+            "reservations": [
+                {
+                    "name": "Tren Maya · 7 gen",
+                    "status": "Da verificare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Alloggio Bacalar · 7–10 gen",
+                    "status": "Da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Transfer stazione Bacalar · sera 7 gen",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                }
+            ],
+            "days": [
+                {
+                    "id": "4-jan07",
+                    "dayName": "Giorno 18 (7 Gen)",
+                    "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
+                    "location": "Palenque · Escárcega · Bacalar",
+                    "shortDesc": "Trasferimento ferroviario attraverso il sud della penisola, arrivo a Bacalar in serata.",
+                    "fullDesc": "<p>Mattinata tranquilla a Palenque e trasferimento verso la <strong>stazione Tren Maya</strong>. La tabella oraria ufficiale attualmente consultabile indica un servizio <strong>Palenque 14:00 → Escárcega 16:49</strong> e prosecuzione <strong>Escárcega 17:09 → Chetumal 21:57</strong>. <strong>Bacalar si trova lungo la linea prima di Chetumal</strong>: vogliamo scendere alla <strong>stazione Bacalar</strong> e raggiungere direttamente la pousada, senza proseguire fino a Chetumal.</p><p><strong>Attenzione:</strong> questi sono orari di riferimento del 2026, non un servizio confermato per <strong>giovedì 7 gennaio 2027</strong>. Verificare disponibilità, arrivo alla stazione Bacalar, possibile coincidenza a Escárcega e gli orari locali, anche per la differenza di fuso orario tra gli stati attraversati.</p><p>L'arrivo è previsto in serata: prenotare <strong>taxi/transfer dalla stazione</strong> e avvisare l'alloggio per il check-in tardivo. Nessuna attività impegnativa prevista all'arrivo.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🚆 Orario ufficiale Tren Maya",
+                            "url": "https://www.trenmaya.gob.mx/horarios.php"
+                        },
+                        {
+                            "text": "🚆 Sito Tren Maya",
+                            "url": "https://www.trenmaya.gob.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Stazione Tren Maya Palenque",
+                            "coords": [
+                                17.51,
+                                -92.045
+                            ]
+                        },
+                        {
+                            "name": "Escárcega",
+                            "coords": [
+                                18.608,
+                                -90.739
+                            ]
+                        },
+                        {
+                            "name": "Bacalar",
+                            "coords": [
+                                18.676,
+                                -88.392
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4-jan08",
+                    "dayName": "Giorno 19 (8 Gen)",
+                    "title": "Bacalar: il primo giorno sulla laguna",
+                    "location": "Bacalar · Laguna dei Sette Colori",
+                    "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
+                    "fullDesc": "<p>Finalmente una giornata senza trasferimenti. Esploriamo la <strong>Laguna dei Sette Colori</strong> in <strong>kayak</strong>, preferibilmente al mattino se le condizioni del vento lo consentono, oppure partecipiamo a una breve escursione organizzata con un operatore rispettoso dell'ecosistema.</p><p>Pomeriggio sul pontile o in un <em>balneario</em> autorizzato, con tempo per il centro di Bacalar. L'obiettivo qui non è collezionare visite: è fermarsi, nuotare dove consentito e godersi i cambi di colore dell'acqua.</p><p><strong>Nota ambientale:</strong> evitare creme e prodotti in acqua dove vietati, rispettare le aree con stromatoliti e seguire le regole di balneazione locali.</p>",
+                    "images": [
+                        "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
+                    ],
+                    "links": [
+                        {
+                            "text": "🗺️ Bacalar su OpenStreetMap",
+                            "url": "https://www.openstreetmap.org/search?query=Bacalar%20Quintana%20Roo"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Bacalar centro",
+                            "coords": [
+                                18.677,
+                                -88.393
+                            ]
+                        },
+                        {
+                            "name": "Laguna di Bacalar",
+                            "coords": [
+                                18.67,
+                                -88.38
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4-jan09",
+                    "dayName": "Giorno 20 (9 Gen)",
+                    "title": "Bacalar senza orologio",
+                    "location": "Bacalar",
+                    "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
+                    "fullDesc": "<p>La seconda giornata a Bacalar resta volutamente <strong>leggera</strong>: colazione lenta, passeggiata sul lungolago, kayak o giro in barca solo se ne abbiamo voglia e se il tempo è buono.</p><p>Possiamo valutare un'uscita verso il <strong>Canal de los Piratas</strong> o altri punti visitabili della laguna con guide locali, senza trasformare la giornata in un programma serrato. Nessuna escursione obbligatoria.</p><p>La sera prepariamo il trasferimento del 10 gennaio verso <strong>Muyil</strong>, nella zona di Sian Ka'an.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🗺️ Laguna Bacalar su OpenStreetMap",
+                            "url": "https://www.openstreetmap.org/search?query=Laguna%20de%20Bacalar"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Bacalar",
+                            "coords": [
+                                18.677,
+                                -88.393
+                            ]
+                        },
+                        {
+                            "name": "Laguna dei Sette Colori",
+                            "coords": [
+                                18.68,
+                                -88.38
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4-jan10",
+                    "dayName": "Giorno 21 (10 Gen)",
+                    "title": "Verso Muyil: dalle acque dolci alla foresta maya",
+                    "location": "Bacalar → Muyil / area Tulum",
+                    "shortDesc": "Partenza verso nord, visita delle rovine di Muyil se l'orario lo consente e notte di passaggio nei dintorni.",
+                    "fullDesc": "<p>Lasciamo Bacalar dopo tre notti e risaliamo verso <strong>Muyil</strong>, lungo la direttrice per Tulum, con autobus interurbano e ultimo tratto locale da verificare.</p><p>Se gli orari coincidono, visitiamo già la <strong>zona archeologica di Muyil</strong>, immersa nella vegetazione a ridosso della riserva di Sian Ka'an. Secondo INAH è aperta <strong>08:00–17:00</strong> (ultimo accesso 16:30), ma ricontrollare per gennaio.</p><p><strong>Notte di passaggio 10 gennaio</strong> nell'area Muyil/Tulum sud: posizione esatta da scegliere in base alla facilità di partecipare al tour dei canali l'11 mattina. Se il trasferimento è più lento, spostiamo la visita archeologica alla mattina successiva.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🏛️ Orari e accesso Muyil (INAH)",
+                            "url": "https://lugares.inah.gob.mx/es/node/4440"
+                        },
+                        {
+                            "text": "🚌 Ricerca autobus ADO",
+                            "url": "https://www.ado.com.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Bacalar",
+                            "coords": [
+                                18.677,
+                                -88.393
+                            ]
+                        },
+                        {
+                            "name": "Muyil",
+                            "coords": [
+                                20.078,
+                                -87.615
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mapFocus": {
+                "coords": [
+                    18.677,
+                    -88.39
+                ],
+                "zoom": 9
+            }
         },
         {
-            id: 5,
-            navTitle: "Yucatán",
-            navSubtitle: "Cenotes e Caraibi",
-            badge: "Giorni 17 - 30 • Yucatán & Quintana Roo",
-            locationText: "Valladolid, Bacalar & Tulum",
-            title: "Yucatán, Cenotes e Relax Caraibico",
-            description: "Chichén Itzá all'alba, la coloniale Valladolid, bagni mistici nei cenote sotterranei, la laguna dai sette colori di Bacalar e la conclusione tra le spiagge bianche e le rovine sul mare di Tulum.",
-            images: [
-                "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+            "id": 5,
+            "navTitle": "Caribe",
+            "navSubtitle": "Sian Ka'an e mare",
+            "badge": "11–16 Gen • Si rallenta davvero",
+            "locationText": "Muyil / Sian Ka'an → costa caraibica → Cancún",
+            "title": "Canali di Sian Ka'an e ultimi giorni di mare",
+            "description": "L'11 gennaio esperienza nei canali di Muyil e trasferimento verso una base sul mar dei Caraibi ancora da scegliere. Cinque notti dedicate soprattutto al riposo e partenza da Cancún il 16 gennaio alle 21:00.",
+            "images": [
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
-            links: [
-                { text: "🔗 Biglietti Ufficiali INAH", url: "https://www.inah.gob.mx" },
-                { text: "🔗 Tour Catamarano Bacalar", url: "https://www.viator.com" }
+            "links": [
+                {
+                    "text": "🔗 Zona archeologica Muyil (INAH)",
+                    "url": "https://lugares.inah.gob.mx/es/node/4440"
+                },
+                {
+                    "text": "🔗 Parco Nazionale Isla Contoy (CONANP)",
+                    "url": "https://descubreanp.conanp.gob.mx/en/conanp/ANP?suri=72"
+                },
+                {
+                    "text": "🔗 Volo di ritorno · dettagli nel sito",
+                    "url": "#"
+                }
             ],
-            mapFocus: { coords: [20.00, -88.00], zoom: 7 }
+            "basecamp": {
+                "zone": "Costa caraibica · località finale da scegliere",
+                "hotelIdea": "Pousada fronte mare o piccola struttura tranquilla · 5 notti, dall'11 al 16 gennaio",
+                "why": "L'obiettivo è terminare il viaggio in mare e relax, non aggiungere lunghi spostamenti. Scegliere una base che consenta il trasferimento a Cancún il 16.",
+                "tags": [
+                    "🏖️ Mare (non laguna)",
+                    "🐠 Snorkeling facoltativo",
+                    "🌴 Relax"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚕",
+                        "title": "Ultimo transfer verso la costa",
+                        "desc": "Dal tour Muyil alla base scelta: tempi da pianificare."
+                    },
+                    {
+                        "icon": "✈️",
+                        "title": "Rientro da Cancún",
+                        "desc": "Volo sabato 16 gennaio, ore 21:00: organizzare la partenza in anticipo."
+                    }
+                ]
+            },
+            "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
+            "budget": {
+                "total": "Da definire · dipende dalla località finale",
+                "spent": "€ 0 · non prenotato",
+                "items": [
+                    {
+                        "name": "Tour Muyil / flottazione a Sian Ka'an",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Alloggio al mare · 5 notti (11–15 gen)",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Trasferimento a aeroporto CUN · 16 gen",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Isla Contoy (solo se fattibile)",
+                        "cost": "Opzionale"
+                    }
+                ]
+            },
+            "reservations": [
+                {
+                    "name": "Tour canali di Muyil / Sian Ka'an",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Base e alloggio mare · 11–16 gen",
+                    "status": "Da scegliere",
+                    "type": "warning"
+                },
+                {
+                    "name": "Transfer verso aeroporto Cancún",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                }
+            ],
+            "days": [
+                {
+                    "id": "5-jan11",
+                    "dayName": "Giorno 22 (11 Gen)",
+                    "title": "Sian Ka'an: galleggiare nei canali maya, poi il mare",
+                    "location": "Muyil · Sian Ka'an → Caribe",
+                    "shortDesc": "Tour nella laguna di Muyil e floating nei canali (se condizioni e posti lo permettono), poi trasferimento verso la base sul mare.",
+                    "fullDesc": "<p>Dedichiamo la mattina al sistema lagunare di <strong>Muyil / Sian Ka'an</strong>, con escursione guidata in barca e, se consentito, <strong>flottazione nei canali d'acqua dolce</strong> fra le mangrovie. Il tour va prenotato con operatori autorizzati, verificando durata, orario di partenza e condizioni meteo.</p><p>Se non siamo riusciti a visitare le <strong>rovine di Muyil</strong> il 10 gennaio, le inseriamo prima o dopo l'escursione, soltanto se compatibile con gli orari.</p><p>Nel pomeriggio raggiungiamo la <strong>località caraibica definitiva, ancora da scegliere</strong>, e facciamo check-in per cinque notti. Da qui in avanti il viaggio diventa soprattutto mare e relax.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🏛️ Muyil · INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4440"
+                        },
+                        {
+                            "text": "🌿 Riserva Sian Ka'an · CONANP",
+                            "url": "https://www.gob.mx/conanp"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Muyil / Sian Ka'an",
+                            "coords": [
+                                20.078,
+                                -87.615
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "5-jan12-15",
+                    "dayName": "Giorni 23–26 (12–15 Gen)",
+                    "title": "Ultimi quattro giorni: piedi nella sabbia",
+                    "location": "Costa caraibica · base da scegliere",
+                    "shortDesc": "Quattro giorni di vero relax: spiaggia, snorkeling leggero se piace, ottimo cibo e zero cambi di alloggio.",
+                    "fullDesc": "<p><strong>Quattro giorni pieni di mare</strong>, senza tour obbligatori né ulteriori spostamenti di base. Alterniamo spiaggia, lettura, nuotate e un po' di snorkeling dove consentito, in funzione del meteo.</p><p><strong>Isla Contoy</strong> rimane <strong>solo un'eventuale escursione di giornata</strong>: è un'area naturale protetta, non una località in cui pernottare, e le uscite in gennaio possono essere annullate per il vento e la chiusura del porto. Non decidiamo l'alloggio finale in funzione di questo tour.</p><p><strong>Importante:</strong> la località precisa sul Caribe è <strong>ancora da scegliere</strong>; il criterio principale è una spiaggia gradevole e poco stress logistico per il volo da Cancún del 16 gennaio.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🌿 Isla Contoy · informazioni ufficiali CONANP",
+                            "url": "https://descubreanp.conanp.gob.mx/en/conanp/ANP?suri=72"
+                        }
+                    ],
+                    "route": []
+                },
+                {
+                    "id": "5-jan16",
+                    "dayName": "Giorno 27 (16 Gen)",
+                    "title": "Ultimo bagno e partenza da Cancún",
+                    "location": "Costa caraibica → aeroporto CUN",
+                    "shortDesc": "Check-out, trasferimento verso l'aeroporto di Cancún e volo Air France alle 21:00.",
+                    "fullDesc": "<p>Ultima colazione e, se la distanza dall'aeroporto lo permette, ancora qualche ora di mare prima del check-out. Poi trasferimento verso <strong>Cancún (CUN), Terminal 4</strong>, con ampio margine per traffico, restituzione di eventuali mezzi, check-in e controlli.</p><p><strong>Volo già previsto:</strong> Air France <strong>AF651</strong>, sabato <strong>16 gennaio 2027 alle 21:00</strong>, Cancún → Parigi CDG. Lo scalo e il collegamento verso Milano sono già riportati nella scheda voli del sito.</p><p>Non programmare escursioni lontane in questo giorno: l'orario effettivo di partenza dall'alloggio dipenderà dalla località finale scelta.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "✈️ Aeroporto internazionale di Cancún",
+                            "url": "https://www.cancunairport.com/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Aeroporto di Cancún (CUN)",
+                            "coords": [
+                                21.0365,
+                                -86.8771
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "5-jan17",
+                    "dayName": "Giorno 28 (17 Gen)",
+                    "title": "Rientro in Italia",
+                    "location": "Parigi CDG → Milano MXP",
+                    "shortDesc": "Arrivo a Milano Malpensa previsto alle 17:25 dopo lo scalo a Parigi.",
+                    "fullDesc": "<p>Arriviamo a <strong>Parigi CDG alle 12:30</strong> e ripartiamo con il collegamento Air France <strong>AF1730</strong> alle <strong>15:55</strong>. Atterraggio previsto a <strong>Milano Malpensa alle 17:25</strong> di domenica <strong>17 gennaio 2027</strong>.</p><p>Fine del viaggio di 29 giorni, dal 20 dicembre al 17 gennaio. Controllare eventuali aggiornamenti degli operativi di volo prima della partenza.</p>",
+                    "images": [],
+                    "links": [],
+                    "route": []
+                }
+            ],
+            "mapFocus": {
+                "coords": [
+                    20.25,
+                    -87.4
+                ],
+                "zoom": 9
+            }
         }
     ],
     // Aggiornato il riferimento da "week" ad "areaId"
     locations: [
-        { areaId: 1, name: "Città del Messico & Teotihuacán", coords: [19.4326, -99.1332], days: "Giorni 1 - 4" },
-        { areaId: 2, name: "Oaxaca & Monte Albán", coords: [17.0753, -96.7237], days: "Giorni 5 - 6" },
-        { areaId: 3, name: "Salina Cruz (trasferimento)", coords: [16.169, -95.199], days: "3 Gen" },
-        { areaId: 3, name: "Villahermosa (cambio bus)", coords: [17.989, -92.93], days: "4 Gen" },
-        { areaId: 3, name: "Palenque & Cascate", coords: [17.5090, -92.0458], days: "4–6 Gen" },
-        { areaId: 4, name: "Calakmul (Riserva Biosfera)", coords: [18.1075, -89.8105], days: "Giorni 11 - 12" },
-        { areaId: 4, name: "Campeche, Uxmal & Mérida", coords: [20.9674, -89.5926], days: "Giorni 13 - 16" },
-        { areaId: 5, name: "Chichén Itzá & Valladolid", coords: [20.6843, -88.5678], days: "Giorni 17 - 18" },
-        { areaId: 5, name: "Laguna di Bacalar & Tulum", coords: [18.6796, -88.3900], days: "Giorni 19 - 30" }
-    ]
-};
+        {
+            "areaId": 1,
+            "name": "Città del Messico e Teotihuacán",
+            "coords": [
+                19.4326,
+                -99.1332
+            ],
+            "days": "21–23 Dic"
+        },
+        {
+            "areaId": 2,
+            "name": "Oaxaca e Monte Albán",
+            "coords": [
+                17.0753,
+                -96.7237
+            ],
+            "days": "24–26 Dic"
+        },
+        {
+            "areaId": 3,
+            "name": "San Agustinillo → Salina Cruz",
+            "coords": [
+                16.169,
+                -95.199
+            ],
+            "days": "3 Gen · trasferimento"
+        },
+        {
+            "areaId": 3,
+            "name": "Villahermosa · cambio bus",
+            "coords": [
+                17.989,
+                -92.93
+            ],
+            "days": "4 Gen"
+        },
+        {
+            "areaId": 3,
+            "name": "Palenque e Roberto Barrios",
+            "coords": [
+                17.509,
+                -92.0458
+            ],
+            "days": "4–6 Gen"
+        },
+        {
+            "areaId": 4,
+            "name": "Escárcega · Tren Maya",
+            "coords": [
+                18.608,
+                -90.739
+            ],
+            "days": "7 Gen"
+        },
+        {
+            "areaId": 4,
+            "name": "Laguna di Bacalar",
+            "coords": [
+                18.676,
+                -88.39
+            ],
+            "days": "7–10 Gen"
+        },
+        {
+            "areaId": 5,
+            "name": "Muyil e Sian Ka'an",
+            "coords": [
+                20.078,
+                -87.615
+            ],
+            "days": "10–11 Gen"
+        },
+        {
+            "areaId": 5,
+            "name": "Costa caraibica · base da scegliere (pin indicativo)",
+            "coords": [
+                20.34,
+                -87.33
+            ],
+            "days": "11–16 Gen"
+        },
+        {
+            "areaId": 5,
+            "name": "Aeroporto di Cancún",
+            "coords": [
+                21.0365,
+                -86.8771
+            ],
+            "days": "16 Gen, volo 21:00"
+        }
+    ]};
 
 const flightData = {
     // ... [MANTIENI IL TUO OGGETTO flightData INVARIATO] ...
