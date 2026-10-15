@@ -7,11 +7,11 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Screenshot Booking · quattro prenotazioni confermate per due adulti",
-            "totalEuro": 898,
-            "paidStatus": "Importi delle prenotazioni, non necessariamente già addebitati",
-            "validTotalEuro": 656,
-            "warning": "Posada Paloma è prenotata 29 dicembre–2 gennaio, ma l'itinerario richiede 30 dicembre–3 gennaio. Il costo €242 potrebbe cambiare con la modifica.",
+            "source": "Riepilogo Booking aggiornato al 15 ottobre 2026: 4 prenotazioni confermate, 2 adulti",
+            "totalEuro": 923,
+            "paidStatus": "Prezzi confermati per le prenotazioni, non prova di addebito o pagamento",
+            "validTotalEuro": 923,
+            "warning": "",
             "items": [
                 {
                     "name": "The PM at Condesa Arts & Boutique Experience",
@@ -20,7 +20,8 @@ const tripData = {
                     "checkout": "2026-12-23",
                     "totalEuro": 224,
                     "cancellation": "Non rimborsabile",
-                    "status": "Confermato"
+                    "status": "Confermato",
+                    "areaId": 1
                 },
                 {
                     "name": "Hotel Cazomalli Oaxaca",
@@ -29,7 +30,8 @@ const tripData = {
                     "checkout": "2026-12-26",
                     "totalEuro": 200,
                     "cancellation": "Cancellazione gratuita",
-                    "status": "Confermato"
+                    "status": "Confermato",
+                    "areaId": 2
                 },
                 {
                     "name": "Hotel Cazomalli Oaxaca",
@@ -38,16 +40,18 @@ const tripData = {
                     "checkout": "2026-12-30",
                     "totalEuro": 232,
                     "cancellation": "Cancellazione gratuita",
-                    "status": "Confermato"
+                    "status": "Confermato",
+                    "areaId": 2
                 },
                 {
                     "name": "Posada Paloma",
                     "city": "San Agustinillo",
-                    "checkin": "2026-12-29",
-                    "checkout": "2027-01-02",
-                    "totalEuro": 242,
+                    "checkin": "2026-12-30",
+                    "checkout": "2027-01-03",
+                    "totalEuro": 267,
                     "cancellation": "Cancellazione gratuita",
-                    "status": "Confermato · date da modificare"
+                    "status": "Confermato",
+                    "areaId": 6
                 }
             ]
         }
@@ -330,14 +334,15 @@ const tripData = {
         },
         {
             "id": 2,
-            "navTitle": "Oaxaca",
-            "navSubtitle": "Vigilia e Natale",
-            "badge": "24–25 Dic · Monte Albán e Natale tra le valli",
-            "locationText": "Oaxaca de Juárez, Monte Albán e Valle di Tlacolula",
-            "title": "Il Cuore Zapoteco e Gastronomico",
-            "description": "Il 24 dicembre visita a Monte Albán e pomeriggio fra i mercati del centro; il 25 tentiamo Hierve el Agua, soltanto se apertura e trasporto natalizi sono confermati. Il 26 mattina partiamo per il trekking Sierra Norte già pagato.",
+            "navTitle": "Oaxaca e Sierra",
+            "navSubtitle": "Città e trekking",
+            "badge": "24–29 Dic • Oaxaca, Pueblos Mancomunados e Caminos Reales",
+            "locationText": "Oaxaca · Monte Albán · Sierra Norte · Oaxaca",
+            "title": "Tradizioni zapoteche e trekking nella Sierra Norte",
+            "description": "Due notti all'Hotel Cazomalli (24–26 dic), trekking Caminos Reales PAGATO (26–28 dic, 40 km e due notti in cabañas) e altre due notti al Cazomalli (28–30 dic). Il 29 resta libero per esplorare Oaxaca o recuperare Hierve el Agua.",
             "images": [
-                "assets/img/Oaxaca_Ciudad.png"
+                "assets/img/Oaxaca_Ciudad.png",
+                "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
             ],
             "links": [
                 {
@@ -357,63 +362,89 @@ const tripData = {
                     "url": "https://www.sierranorte.org.mx/#/paquete/25"
                 },
                 {
-                    "text": "🚌 Terminal ADO Oaxaca",
+                    "text": "🥾 Pacchetto Caminos Reales · Sierra Norte",
+                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                },
+                {
+                    "text": "🌲 Operatore Expediciones Sierra Norte",
+                    "url": "https://www.sierranorte.org.mx/"
+                },
+                {
+                    "text": "🚌 Autobus ADO",
                     "url": "https://www.ado.com.mx/"
                 }
             ],
             "basecamp": {
-                "zone": "Jalatlaco · Hotel Cazomalli Oaxaca · 24–26 dicembre",
-                "hotelIdea": "Hotel Cazomalli Oaxaca · 24–26 dicembre · 2 notti / 2 ospiti · Booking confermato € 200, cancellazione gratuita",
-                "why": "Arrivo da CDMX il 24 via bus notturno; chiedere all'hotel di lasciare i bagagli prima dell'orario di check-in. Il 26 Sierra Norte parte da Oaxaca alle 08:00: occorre fare check-out presto e verificare se l'hotel può custodire le valigie durante il trekking, poiché torniamo nello stesso albergo il 28.",
+                "zone": "Jalatlaco · Cazomalli (24–26 e 28–30 dic) · Sierra Norte (26–28 dic)",
+                "hotelIdea": "Hotel Cazomalli Oaxaca: 24–26 dic (€200) e 28–30 dic (€232), entrambi confermati per 2 persone. Caminos Reales: cabañas ad Amatlán e Latuvi incluse nel pacchetto pagato.",
+                "why": "La stessa struttura prima e dopo il trekking facilita la logistica dei bagagli: chiedere al Cazomalli se può custodirli mentre sarete in Sierra Norte. Il trasferimento Sierra Norte parte da Oaxaca il 26 alle 08:00, con rientro dal pomeriggio del 28. Il 29 è flessibile.",
                 "tags": [
-                    "🏛️ Monte Albán 24/12",
-                    "💧 Hierve el Agua 25/12?",
-                    "🥾 Sierra 26/12"
+                    "🏛️ Oaxaca 24–25 e 29",
+                    "🥾 Sierra 26–28",
+                    "✅ Trekking pagato"
                 ],
                 "transports": [
                     {
                         "icon": "🚌",
-                        "title": "Arrivo ADO da CDMX",
-                        "desc": "Notte del 23→24: considerare l'ora reale di arrivo prima di fissare la guida a Monte Albán."
-                    },
-                    {
-                        "icon": "🚕",
-                        "title": "Monte Albán 24/12",
-                        "desc": "Taxi/transfer da Oaxaca, ingresso secondo apertura festiva da confermare."
+                        "title": "ADO CDMX → Oaxaca",
+                        "desc": "Arrivo notturno il 24, controllare orario e deposito bagagli presso Cazomalli."
                     },
                     {
                         "icon": "🚐",
-                        "title": "Hierve 25/12",
-                        "desc": "Prenotare soltanto se tour o autista confermano esplicitamente servizio a Natale."
+                        "title": "Sierra Norte 26–28",
+                        "desc": "Partenza da Oaxaca il 26 alle 08:00; ritorno da Benito Juárez nel pomeriggio del 28, incluso nel pacchetto."
+                    },
+                    {
+                        "icon": "👟",
+                        "title": "29 dicembre · jolly",
+                        "desc": "Oaxaca a piedi oppure Hierve el Agua / Mitla se il tour natalizio del 25 non si potesse fare."
                     }
                 ]
             },
-            "food": "La Mecca del cibo messicano: Tlayudas croccanti, i 7 tipi di Mole (specialmente il nero), Memelas e l'immancabile Mezcal.",
+            "food": "Mercati e cucina oaxaqueña il 24–25 e il 29; pasti comunitari inclusi nel pacchetto Sierra Norte, con trota, pulque e tepache.",
             "budget": {
-                "total": "€ 200 hotel confermato + escursioni",
-                "spent": "Pagamento hotel non verificato",
+                "total": "€ 432 alloggi Booking confermati + 12.917,70 MXN trekking pagato",
+                "spent": "12.917,70 MXN · trekking PAGATO; pagamento hotel non verificato",
                 "items": [
                     {
-                        "name": "Hotel Cazomalli · 24–26 dic · 2 notti · 2 ospiti",
-                        "cost": "€ 200 · prenotato"
+                        "name": "Cazomalli Oaxaca · 24–26 dic · 2 notti",
+                        "cost": "€ 200 · confermato"
                     },
                     {
-                        "name": "ADO CDMX → Oaxaca · 23/24 dic",
-                        "cost": "Da quotare"
+                        "name": "Caminos Reales 26–28 dic · 2 persone",
+                        "cost": "12.917,70 MXN · PAGATO"
+                    },
+                    {
+                        "name": "Cazomalli Oaxaca · 28–30 dic · 2 notti",
+                        "cost": "€ 232 · confermato"
+                    },
+                    {
+                        "name": "ADO da CDMX · 23/24 dic",
+                        "cost": "Da prenotare"
                     },
                     {
                         "name": "Monte Albán · 24 dic",
-                        "cost": "Ingresso da verificare"
+                        "cost": "Ingresso da confermare"
                     },
                     {
-                        "name": "Hierve el Agua · 25 dic (se aperto)",
-                        "cost": "Tour e accesso da verificare"
+                        "name": "Hierve el Agua · 25 oppure 29 dic",
+                        "cost": "Apertura e tour da verificare"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Hotel Cazomalli · 24–26 dic · cancellazione gratuita",
+                    "name": "Cazomalli Oaxaca · 24–26 dic · 200 €",
+                    "status": "Confermato",
+                    "type": "success"
+                },
+                {
+                    "name": "Caminos Reales · 26–28 dic · 12.917,70 MXN",
+                    "status": "Pagato",
+                    "type": "success"
+                },
+                {
+                    "name": "Cazomalli Oaxaca · 28–30 dic · 232 €",
                     "status": "Confermato",
                     "type": "success"
                 },
@@ -428,8 +459,8 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Hierve el Agua · 25 dic",
-                    "status": "Apertura da verificare",
+                    "name": "Hierve el Agua · 25/29 dic",
+                    "status": "Da verificare",
                     "type": "warning"
                 }
             ],
@@ -550,177 +581,7 @@ const tripData = {
                             ]
                         }
                     ]
-                }
-            ],
-            "mapFocus": {
-                "coords": [
-                    17.0605,
-                    -96.7251
-                ],
-                "zoom": 11
-            }
-        },
-        {
-            "id": 6,
-            "navTitle": "Sierra e Pacifico",
-            "navSubtitle": "Trekking, poi mare",
-            "badge": "26 Dic – 2 Gen · Sierra Norte pagata e Pacifico",
-            "locationText": "Sierra Norte · Pueblos Mancomunados · Costa di Oaxaca",
-            "title": "40 chilometri fra i villaggi zapotechi, poi l'oceano",
-            "description": "Caminos Reales PAGATO per il 26–28 dicembre (40 km, Amatlán–Latuvi–Benito Juárez). Hotel Cazomalli confermato per il 28–30 dicembre; il 29 è libero a Oaxaca. Posada Paloma a San Agustinillo è prenotata dal 29 dicembre al 2 gennaio, ma va spostata al 30 dicembre–3 gennaio.",
-            "images": [
-                "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
-                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
-            ],
-            "links": [
-                {
-                    "text": "🥾 Pacchetto Caminos Reales · Sierra Norte",
-                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
                 },
-                {
-                    "text": "🌲 Operatore Expediciones Sierra Norte",
-                    "url": "https://www.sierranorte.org.mx/"
-                },
-                {
-                    "text": "🏖️ San Agustinillo · informazioni locali",
-                    "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
-                },
-                {
-                    "text": "🚌 ADO · spostamento verso la costa",
-                    "url": "https://www.ado.com.mx/"
-                }
-            ],
-            "transferPlan": {
-                "eyebrow": "CONFERMATO E PAGATO · 26–28 dicembre 2026 · 2 persone",
-                "title": "Caminos Reales · 3 giorni / 2 notti · 40 km",
-                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · rientro Oaxaca il 28 dicembre",
-                "cost": "12.917,70 MXN per 2 persone · già pagato",
-                "duration": "26–28 dicembre · 12 + 16 + 12 km · 2 notti in cabañas",
-                "legs": [
-                    {
-                        "day": "Sab 26 dic · Giorno 1",
-                        "time": "08:00 → 20:00",
-                        "from": "Oaxaca → San Miguel Amatlán",
-                        "to": "Las Minas · cabaña Amatlán",
-                        "operator": "Sierra Norte · transfer e guida inclusi",
-                        "duration": "10:00 trekking 12 km · ~4 ore",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 transfer da Oaxaca; 10:00 sentiero Las Minas (12 km); 14:00 pranzo con trota; 17:00 sala dei codici e antichità; 19:00 cena; 20:00 prima notte in cabaña ad Amatlán."
-                    },
-                    {
-                        "day": "Dom 27 dic · Giorno 2",
-                        "time": "08:00 → 20:00",
-                        "from": "Lachatao / zona Amatlán",
-                        "to": "Santa Marta Latuvi",
-                        "operator": "Sierra Norte · trekking Camino Real guidato",
-                        "duration": "09:00 trekking 16 km · 5–6 ore",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 colazione; 09:00 Camino Real da Lachatao a Latuvi (16 km); 15:00 pranzo; 16:00 laboratorio di pulque e tepache; 19:00 cena; 20:00 seconda notte in cabaña a Latuvi."
-                    },
-                    {
-                        "day": "Lun 28 dic · Giorno 3",
-                        "time": "08:00 → rientro da 16:00",
-                        "from": "Santa Marta Latuvi",
-                        "to": "Benito Juárez → Oaxaca",
-                        "operator": "Sierra Norte · camminata e ritorno inclusi",
-                        "duration": "09:00 trekking 12 km · ~4 h 30 min",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
-                    }
-                ],
-                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 è libero a Oaxaca. LOGISTICA ALLOGGI SEPARATA DAL PACCHETTO: Hotel Cazomalli è confermato 28–30 dicembre (€ 232); Posada Paloma è confermata 29 dicembre–2 gennaio (€ 242), ma le date vanno spostate al 30 dicembre–3 gennaio. L'aggiornamento Booking NON è stato eseguito.",
-                "sources": [
-                    {
-                        "text": "Pacchetto ufficiale Sierra Norte",
-                        "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                    },
-                    {
-                        "text": "Contatti e informazioni Expediciones Sierra Norte",
-                        "url": "https://www.sierranorte.org.mx/"
-                    }
-                ]
-            },
-            "basecamp": {
-                "zone": "Sierra: 26–28 dic · Oaxaca/Jalatlaco: 28–30 dic · San Agustinillo: 30 dic–3 gen (da correggere)",
-                "hotelIdea": "26–27: cabañas incluse nel trekking pagato. 28–29: Hotel Cazomalli Oaxaca prenotato € 232 (2 notti, cancellazione gratuita). Costa: Posada Paloma prenotata € 242 dal 29/12 al 02/01, da spostare al 30/12–03/01.",
-                "why": "Rientro da Sierra Norte il 28, poi due notti confermate nello stesso Hotel Cazomalli usato il 24–26. Trasferimento al Pacifico il 30: la prenotazione Posada Paloma ha le date sfalsate di un giorno rispetto all'itinerario.",
-                "tags": [
-                    "🥾 40 km / 3 giorni",
-                    "✅ Sierra pagata 26–28",
-                    "🌊 4 notti Pacifico"
-                ],
-                "transports": [
-                    {
-                        "icon": "🚐",
-                        "title": "26–28 · trasferimenti inclusi",
-                        "desc": "Ritrovo Oaxaca il 26 alle 08:00, ritorno il 28 dal pomeriggio. Verificare punto di ritrovo."
-                    },
-                    {
-                        "icon": "🚌",
-                        "title": "30 dic · Oaxaca → costa",
-                        "desc": "Autobus verso Pochutla / costa; ultimo tratto in taxi o colectivo per San Agustinillo."
-                    },
-                    {
-                        "icon": "🛺",
-                        "title": "3 gen · San Agustinillo → Pochutla",
-                        "desc": "Taxi o colectivo per AltaMar delle 16:15: dettagli nella scheda Chiapas."
-                    }
-                ]
-            },
-            "food": "Sapori comunitari in Sierra Norte, cucina di montagna e trota durante il trekking; dal 30 dicembre pesce fresco, caffè e tramonti sul Pacifico.",
-            "budget": {
-                "total": "12.917,70 MXN pagati + € 474 hotel Booking confermati (di cui € 242 con date da modificare)",
-                "spent": "12.917,70 MXN · trekking pagato; pagamento hotel non verificato",
-                "items": [
-                    {
-                        "name": "Caminos Reales · 26–28 dic · 2 ospiti · PAGATO",
-                        "cost": "12.917,70 MXN"
-                    },
-                    {
-                        "name": "Hotel Cazomalli · 28–30 dic · 2 notti",
-                        "cost": "€ 232 · confermato"
-                    },
-                    {
-                        "name": "Posada Paloma · 29/12–02/01 · 4 notti",
-                        "cost": "€ 242 · date errate"
-                    },
-                    {
-                        "name": "Date corrette desiderate per Posada Paloma",
-                        "cost": "30/12–03/01 · prezzo da riconfermare"
-                    },
-                    {
-                        "name": "Oaxaca → San Agustinillo · 30 dic",
-                        "cost": "Da quotare"
-                    },
-                    {
-                        "name": "Escursioni costiere e pasti extra",
-                        "cost": "Facoltativi"
-                    }
-                ]
-            },
-            "reservations": [
-                {
-                    "name": "Caminos Reales · 26–28 dic · PAGATO",
-                    "status": "Pagato",
-                    "type": "success"
-                },
-                {
-                    "name": "Hotel Cazomalli · 28–30 dic · € 232",
-                    "status": "Confermato",
-                    "type": "success"
-                },
-                {
-                    "name": "Posada Paloma · confermata 29/12–02/01 · € 242",
-                    "status": "Date da modificare",
-                    "type": "warning"
-                },
-                {
-                    "name": "Trasferimento Oaxaca → costa · 30 dic",
-                    "status": "Da organizzare",
-                    "type": "warning"
-                }
-            ],
-            "days": [
                 {
                     "id": "6-dec26",
                     "dayName": "Giorno 6 (26 Dic)",
@@ -874,14 +735,162 @@ const tripData = {
                             ]
                         }
                     ]
+                }
+            ],
+            "mapFocus": {
+                "coords": [
+                    17.17,
+                    -96.61
+                ],
+                "zoom": 10
+            },
+            "transferPlan": {
+                "eyebrow": "CONFERMATO E PAGATO · 26–28 dicembre 2026 · 2 persone",
+                "title": "Caminos Reales · 3 giorni / 2 notti · 40 km",
+                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · rientro Oaxaca il 28 dicembre",
+                "cost": "12.917,70 MXN per 2 persone · già pagato",
+                "duration": "26–28 dicembre · 12 + 16 + 12 km · 2 notti in cabañas",
+                "legs": [
+                    {
+                        "day": "Sab 26 dic · Giorno 1",
+                        "time": "08:00 → 20:00",
+                        "from": "Oaxaca → San Miguel Amatlán",
+                        "to": "Las Minas · cabaña Amatlán",
+                        "operator": "Sierra Norte · transfer e guida inclusi",
+                        "duration": "10:00 trekking 12 km · ~4 ore",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 transfer da Oaxaca; 10:00 sentiero Las Minas (12 km); 14:00 pranzo con trota; 17:00 sala dei codici e antichità; 19:00 cena; 20:00 prima notte in cabaña ad Amatlán."
+                    },
+                    {
+                        "day": "Dom 27 dic · Giorno 2",
+                        "time": "08:00 → 20:00",
+                        "from": "Lachatao / zona Amatlán",
+                        "to": "Santa Marta Latuvi",
+                        "operator": "Sierra Norte · trekking Camino Real guidato",
+                        "duration": "09:00 trekking 16 km · 5–6 ore",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 colazione; 09:00 Camino Real da Lachatao a Latuvi (16 km); 15:00 pranzo; 16:00 laboratorio di pulque e tepache; 19:00 cena; 20:00 seconda notte in cabaña a Latuvi."
+                    },
+                    {
+                        "day": "Lun 28 dic · Giorno 3",
+                        "time": "08:00 → rientro da 16:00",
+                        "from": "Santa Marta Latuvi",
+                        "to": "Benito Juárez → Oaxaca",
+                        "operator": "Sierra Norte · camminata e ritorno inclusi",
+                        "duration": "09:00 trekking 12 km · ~4 h 30 min",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
+                    }
+                ],
+                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 è libero a Oaxaca. LOGISTICA ALLOGGI SEPARATA DAL PACCHETTO: Hotel Cazomalli è confermato 28–30 dicembre (€ 232); Posada Paloma è confermata 29 dicembre–2 gennaio (€ 242), ma le date vanno spostate al 30 dicembre–3 gennaio. L'aggiornamento Booking NON è stato eseguito.",
+                "sources": [
+                    {
+                        "text": "Pacchetto ufficiale Sierra Norte",
+                        "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                    },
+                    {
+                        "text": "Contatti e informazioni Expediciones Sierra Norte",
+                        "url": "https://www.sierranorte.org.mx/"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "navTitle": "Pacifico",
+            "navSubtitle": "San Agustinillo",
+            "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
+            "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
+            "title": "Il Pacifico: quattro notti senza fretta",
+            "description": "Dal 30 dicembre al 3 gennaio soggiorno CONFERMATO a Posada Paloma a San Agustinillo (€267, 4 notti, 2 persone). Riposo dopo la Sierra Norte, Capodanno sul mare e partenza per Pochutla il 3 gennaio per il trasferimento verso Palenque.",
+            "images": [
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+            ],
+            "links": [
+                {
+                    "text": "🏖️ San Agustinillo · informazioni locali",
+                    "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
                 },
+                {
+                    "text": "🚌 ADO · spostamento verso la costa",
+                    "url": "https://www.ado.com.mx/"
+                }
+            ],
+            "basecamp": {
+                "zone": "San Agustinillo · Posada Paloma · 30 dic–3 gen",
+                "hotelIdea": "Posada Paloma · 4 notti per 2 adulti · 267 € su Booking · confermata, cancellazione gratuita",
+                "why": "Le date Booking ora coincidono con il programma: check-in il 30 dicembre, check-out il 3 gennaio. Il 3 trasferimento verso Pochutla per AltaMar e ADO notturno (scheda Chiapas).",
+                "tags": [
+                    "🌊 Pacifico",
+                    "✅ Posada Paloma confermata",
+                    "🌅 Capodanno sulla costa"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚌",
+                        "title": "30 dic · Oaxaca → costa",
+                        "desc": "Verificare corsa verso Pochutla e taxi/colectivo per San Agustinillo."
+                    },
+                    {
+                        "icon": "🚶",
+                        "title": "31 dic–2 gen · dintorni",
+                        "desc": "Mazunte, Punta Cometa e La Ventanilla facoltativi, senza spostare l'alloggio."
+                    },
+                    {
+                        "icon": "🚕",
+                        "title": "3 gen · Pochutla",
+                        "desc": "Partire con margine per AltaMar 16:15 → Salina Cruz, ancora da confermare."
+                    }
+                ]
+            },
+            "food": "Pesce fresco, frutta e specialità locali sul Pacifico. Dopo il trekking priorità a mare, riposo e Capodanno tranquillo a San Agustinillo.",
+            "budget": {
+                "total": "€ 267 · Posada Paloma confermata (4 notti), più trasferimenti",
+                "spent": "Pagamento Posada Paloma non verificato",
+                "items": [
+                    {
+                        "name": "Posada Paloma · 30 dic–3 gen · 4 notti / 2 persone",
+                        "cost": "€ 267 · confermato"
+                    },
+                    {
+                        "name": "Oaxaca → San Agustinillo · 30 dic",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Tour La Ventanilla / attività costiere",
+                        "cost": "Facoltativi"
+                    },
+                    {
+                        "name": "Pochutla → Palenque · dal 3 gen",
+                        "cost": "Vedi sezione Chiapas"
+                    }
+                ]
+            },
+            "reservations": [
+                {
+                    "name": "Posada Paloma · 30 dic–3 gen · € 267",
+                    "status": "Confermato",
+                    "type": "success"
+                },
+                {
+                    "name": "Trasferimento Oaxaca → costa · 30 dic",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                },
+                {
+                    "name": "AltaMar Pochutla → Salina Cruz · 3 gen",
+                    "status": "Da verificare",
+                    "type": "warning"
+                }
+            ],
+            "days": [
                 {
                     "id": "6-dec30",
                     "dayName": "Giorno 10 (30 Dic)",
-                    "title": "Dalle montagne al Pacifico: San Agustinillo",
+                    "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Trasferimento verso il Pacifico, check-in in pousada e prima serata davanti all'oceano.",
-                    "fullDesc": "<p>La mattina lasciamo Oaxaca e scendiamo verso la costa del Pacifico per raggiungere <strong>San Agustinillo</strong>, tranquillo paese tra Mazunte e Zipolite. Pianificare una corsa interurbana verso la zona di <strong>San Pedro Pochutla</strong> e l'ultimo tratto in taxi o colectivo, oppure un trasferimento diretto: <strong>orari, percorso e tempi precisi sono ancora da verificare</strong> per il 30 dicembre.</p><p>Arrivo, check-in nella <strong>pousada a San Agustinillo</strong> e pomeriggio senza impegni, ideale per recuperare dal trekking. Prima delle <strong>quattro notti sulla costa</strong>: 30 e 31 dicembre, 1 e 2 gennaio, con partenza il 3.</p><p><strong>Prenotazione alloggio già esistente ma modificabile:</strong> <strong>Booking conferma Posada Paloma dal 29 dicembre 2026 al 2 gennaio 2027, prezzo visualizzato € 242 per due persone, cancellazione gratuita</strong>; le date si sovrappongono all'hotel di Oaxaca e lasciano scoperta la notte del 2 gennaio. <strong>Chiedere il cambio a 30 dicembre 2026 – 3 gennaio 2027</strong>, tenendo presente che il prezzo potrebbe cambiare. La prenotazione NON è stata modificata.</p>",
+                    "shortDesc": "Partenza da Oaxaca, arrivo a San Agustinillo e check-in a Posada Paloma, confermata 30 dic–3 gen per €267 (2 persone).",
+                    "fullDesc": "<p>Il <strong>30 dicembre</strong> lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico. Per il viaggio verifichiamo un autobus verso la zona di San Pedro Pochutla e l'ultimo tratto in taxi/colectivo, oppure un trasferimento diretto; gli orari del 30 dicembre sono ancora da controllare.</p><p><strong>Posada Paloma è confermata su Booking dal 30 dicembre 2026 al 3 gennaio 2027, quattro notti per due adulti, totale €267, cancellazione gratuita.</strong> La prenotazione coincide adesso con le date del programma: nessuna modifica ulteriore richiesta.</p><p>Dopo i 40 km di Sierra Norte, pomeriggio tranquillo e primo tramonto sul mare. La mattina del <strong>3 gennaio</strong> avremo ancora tempo a San Agustinillo prima di partire verso Pochutla per il trasferimento notturno in direzione Palenque.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
                     ],
@@ -924,8 +933,8 @@ const tripData = {
                     "dayName": "Giorni 11–13 (31 Dic – 2 Gen)",
                     "title": "San Agustinillo: Capodanno e tre giorni sul Pacifico",
                     "location": "San Agustinillo · Mazunte · Punta Cometa",
-                    "shortDesc": "Mare, relax e piccole escursioni facoltative: Mazunte, Punta Cometa e La Ventanilla senza cambiare alloggio.",
-                    "fullDesc": "<p><strong>31 dicembre, 1 e 2 gennaio</strong>: restiamo idealmente nella stessa <strong>Posada Paloma a San Agustinillo</strong>, senza spostamenti impegnativi. <strong>Attenzione alle date:</strong> la prenotazione Booking attuale termina il <strong>2 gennaio</strong>, mentre per dormire anche la notte del 2 e partire il 3 occorre correggerla al <strong>30 dicembre – 3 gennaio</strong>. Dopo le tappe di Sierra Norte, la priorità è godersi la costa, i tramonti e il ritmo dei piccoli villaggi del Pacifico.</p><p>Escursioni <strong>solo facoltative</strong>: passeggiata a <strong>Mazunte</strong>, tramonto a <strong>Punta Cometa</strong> se le condizioni del sentiero lo permettono, oppure un'esperienza comunitaria fra mangrovie e fauna a <strong>La Ventanilla</strong>. Per Capodanno scegliamo una serata semplice in zona, senza trasferimenti lontani.</p><p><strong>2 gennaio:</strong> ultime ore di relax e verifica pratica del trasferimento del giorno seguente. Il <strong>3 gennaio</strong> è previsto taxi/colectivo per <strong>Pochutla</strong>, AltaMar delle <strong>16:15</strong> per Salina Cruz e ADO notturno delle <strong>23:00</strong> verso Villahermosa: gli orari e i terminal restano da riconfermare, come dettagliato nella scheda <strong>Chiapas</strong>.</p>",
+                    "shortDesc": "Capodanno sul Pacifico con base a Posada Paloma già confermata; Mazunte, Punta Cometa e La Ventanilla facoltativi.",
+                    "fullDesc": "<p><strong>31 dicembre, 1 e 2 gennaio</strong>: tre giornate sulla costa, con base sempre a <strong>Posada Paloma, San Agustinillo</strong> (prenotazione confermata <strong>30 dicembre–3 gennaio, €267 totali in due</strong>). Nessun cambio di alloggio e nessuna escursione obbligatoria.</p><p>Se ne abbiamo voglia possiamo visitare <strong>Mazunte</strong>, vedere il tramonto da <strong>Punta Cometa</strong> se il sentiero è praticabile, oppure partecipare a un'escursione locale fra mangrovie e fauna a <strong>La Ventanilla</strong>. Per Capodanno niente spostamenti lunghi: restiamo sul Pacifico.</p><p><strong>2 gennaio:</strong> ultimo giorno pieno al mare e preparazione dei bagagli. Il <strong>3 gennaio</strong>, dopo check-out, taxi o colectivo per <strong>San Pedro Pochutla</strong> in tempo per il collegamento AltaMar indicativo delle <strong>16:15</strong> e la successiva corsa ADO notturna: confermare orari e terminal come spiegato nella scheda Chiapas.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
                     ],
@@ -959,10 +968,10 @@ const tripData = {
             ],
             "mapFocus": {
                 "coords": [
-                    17.24,
-                    -96.49
+                    15.6659,
+                    -96.5438
                 ],
-                "zoom": 9
+                "zoom": 12
             }
         },
         {
@@ -1738,7 +1747,7 @@ const tripData = {
             "days": "24–25 Dic; 29 Dic recupero"
         },
         {
-            "areaId": 6,
+            "areaId": 2,
             "name": "San Miguel Amatlán · Caminos Reales",
             "coords": [
                 17.27556,
@@ -1747,7 +1756,7 @@ const tripData = {
             "days": "26 Dic"
         },
         {
-            "areaId": 6,
+            "areaId": 2,
             "name": "Santa Marta Latuvi",
             "coords": [
                 17.2625,
@@ -1756,7 +1765,7 @@ const tripData = {
             "days": "27 Dic"
         },
         {
-            "areaId": 6,
+            "areaId": 2,
             "name": "Benito Juárez · Sierra Norte",
             "coords": [
                 17.18667,
