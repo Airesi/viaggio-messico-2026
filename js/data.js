@@ -1,4 +1,5 @@
 // Dati del Viaggio - js/data.js
+// I consigli di hotel non costituiscono prenotazioni.
 
 const tripData = {
     "general": {
@@ -1320,7 +1321,7 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "Il 7 gennaio attraversiamo la penisola con il Tren Maya fino alla stazione Bacalar. L'8 e il 9 ci prendiamo due giorni per la laguna, prima di risalire verso Muyil il 10 gennaio.",
+            "description": "7–10 gennaio · 3 notti sulla Laguna dei Sette Colori. Il 7 Tren Maya da Palenque con arrivo potenzialmente tardo; l'8 e il 9 giorni interi di laguna. Il 10 proseguimento in Tren Maya verso Tulum. Hotel ancora da scegliere.",
             "images": [
                 "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
@@ -1389,31 +1390,31 @@ const tripData = {
                 ]
             },
             "basecamp": {
-                "zone": "Bacalar · vicinanza alla laguna",
-                "hotelIdea": "Pousada/cabaña con accesso alla laguna o pontile, check-in serale il 7 gennaio",
-                "why": "Tre notti (7, 8 e 9 gennaio) per rallentare davvero: il 7 è viaggio, l'8 e il 9 sono giornate piene sulla laguna.",
+                "zone": "Bacalar · 7–10 gen, 3 notti · nessun hotel prenotato",
+                "hotelIdea": "Preferenza: vero accesso diretto alla laguna con late check-in. Possibile split Hotel Tuparenda 7–8 + 7 Cielos 8–10; valutare prezzo totale, taxi e camera vista lago.",
+                "why": "Il 7 è giornata di viaggio; l'8 e il 9 sono giornate piene. Una foto del pontile non basta: verificare distanza reale della camera dall'acqua e servizi. Richiedere conferma scritta del check-in tardivo, anche in caso di ritardi del treno.",
                 "tags": [
-                    "💧 Laguna, non mare",
-                    "🛶 Kayak",
-                    "🌿 Ritmo lento"
+                    "💧 Laguna e kayak",
+                    "🛌 Hotel ancora da cercare",
+                    "🚆 10 gen verso Tulum"
                 ],
                 "transports": [
                     {
-                        "icon": "🚕",
-                        "title": "Transfer stazione → alloggio",
-                        "desc": "Organizzare in anticipo per l'arrivo serale del Tren Maya."
+                        "icon": "🚆",
+                        "title": "7 gen · Tren Maya da Palenque",
+                        "desc": "Orario gennaio 2027 da verificare; taxi serale e check-in."
                     },
                     {
-                        "icon": "🛶",
-                        "title": "Kayak / tour locale",
-                        "desc": "Per visitare la laguna seguendo le regole ambientali."
+                        "icon": "🚆",
+                        "title": "10 gen · Tren Maya per Tulum",
+                        "desc": "Confermare stazione d'arrivo e trasferimento al nuovo hotel."
                     }
                 ]
             },
             "food": "Colazione con vista sulla laguna, cucina del Quintana Roo e due cene senza fretta nel centro di Bacalar.",
             "budget": {
-                "total": "Da definire",
-                "spent": "€ 0 · non prenotato",
+                "total": "Bacalar 7–10 gen: alloggio, taxi e treni da quotare",
+                "spent": "€ 0 · alloggio non prenotato",
                 "items": [
                     {
                         "name": "Tren Maya Palenque → Bacalar (2 persone)",
@@ -1424,7 +1425,7 @@ const tripData = {
                         "cost": "Da quotare"
                     },
                     {
-                        "name": "Alloggio Bacalar · 3 notti (7–9 gen)",
+                        "name": "Bacalar · 7–10 gen (3 notti), anche formula 1+2",
                         "cost": "Da quotare"
                     },
                     {
@@ -1435,18 +1436,23 @@ const tripData = {
             },
             "reservations": [
                 {
-                    "name": "Tren Maya · 7 gen",
-                    "status": "Da verificare",
+                    "name": "Tren Maya Palenque → Bacalar · 7 gen",
+                    "status": "Orario 2027 da confermare",
                     "type": "warning"
                 },
                 {
-                    "name": "Alloggio Bacalar · 7–10 gen",
+                    "name": "Bacalar · 7–10 gen · hotel da scegliere",
                     "status": "Da prenotare",
                     "type": "warning"
                 },
                 {
-                    "name": "Transfer stazione Bacalar · sera 7 gen",
-                    "status": "Da organizzare",
+                    "name": "Check-in tardivo / taxi dalla stazione",
+                    "status": "Conferma scritta necessaria",
+                    "type": "warning"
+                },
+                {
+                    "name": "Tren Maya Bacalar → Tulum · 10 gen",
+                    "status": "Da verificare/prenotare",
                     "type": "warning"
                 }
             ],
@@ -1456,8 +1462,8 @@ const tripData = {
                     "dayName": "Giorno 18 (7 Gen)",
                     "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
                     "location": "Palenque · Escárcega · Bacalar",
-                    "shortDesc": "Trasferimento ferroviario attraverso il sud della penisola, arrivo a Bacalar in serata.",
-                    "fullDesc": "<p>Mattinata tranquilla a Palenque e trasferimento verso la <strong>stazione Tren Maya</strong>. La tabella oraria ufficiale attualmente consultabile indica un servizio <strong>Palenque 14:00 → Escárcega 16:49</strong> e prosecuzione <strong>Escárcega 17:09 → Chetumal 21:57</strong>. <strong>Bacalar si trova lungo la linea prima di Chetumal</strong>: vogliamo scendere alla <strong>stazione Bacalar</strong> e raggiungere direttamente la pousada, senza proseguire fino a Chetumal.</p><p><strong>Attenzione:</strong> questi sono orari di riferimento del 2026, non un servizio confermato per <strong>giovedì 7 gennaio 2027</strong>. Verificare disponibilità, arrivo alla stazione Bacalar, possibile coincidenza a Escárcega e gli orari locali, anche per la differenza di fuso orario tra gli stati attraversati.</p><p>L'arrivo è previsto in serata: prenotare <strong>taxi/transfer dalla stazione</strong> e avvisare l'alloggio per il check-in tardivo. Nessuna attività impegnativa prevista all'arrivo.</p>",
+                    "shortDesc": "Tren Maya da Palenque, taxi dalla stazione e check-in tardivo da confermare.",
+                    "fullDesc": "<p><strong>Palenque → Bacalar con Tren Maya</strong> il 7 gennaio 2027, treno da prenotare. Orario 2027, fermata Bacalar, eventuale cambio a Escárcega e fuso orario da verificare sul sito ufficiale. Possibile arrivo dopo le 22:00: richiedere <strong>conferma scritta di check-in dopo le 23:00 e tolleranza per eventuali ritardi</strong>, oltre a un taxi dalla stazione fuori paese.</p><p><strong>Hotel non prenotato.</strong> Due opzioni: <strong>un solo hotel per 7–10 gennaio</strong> che accolga la sera tardi e abbia accesso reale alla laguna; oppure <strong>Hotel Tuparenda 7–8 gennaio</strong> per la notte d'arrivo e <strong>7 Cielos Bacalar 8–10 gennaio</strong> per due notti davvero vicino all'acqua, se prezzi e spostamento sono convenienti.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1532,7 +1538,7 @@ const tripData = {
                     "title": "Bacalar senza orologio",
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
-                    "fullDesc": "<p>La seconda giornata a Bacalar resta volutamente <strong>leggera</strong>: colazione lenta, passeggiata sul lungolago, kayak o giro in barca solo se ne abbiamo voglia e se il tempo è buono.</p><p>Possiamo valutare un'uscita verso il <strong>Canal de los Piratas</strong> o altri punti visitabili della laguna con guide locali, senza trasformare la giornata in un programma serrato. Nessuna escursione obbligatoria.</p><p>La sera prepariamo il trasferimento del 10 gennaio verso <strong>Muyil</strong>, nella zona di Sian Ka'an.</p>",
+                    "fullDesc": "<p>Seconda giornata lenta sulla <strong>laguna di Bacalar</strong>: kayak, balneazione dove consentita, riposo sul pontile o un'uscita guidata rispettosa dell'ecosistema. Non aggiungere tour solo per riempire il programma.</p><p>La mattina del <strong>10 gennaio</strong> check-out e proseguimento con <strong>Tren Maya verso Tulum</strong>, senza pernottamento separato a Muyil: la visita ai canali avverrà l'11 come escursione dalla base Tulum.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1556,41 +1562,6 @@ const tripData = {
                             ]
                         }
                     ]
-                },
-                {
-                    "id": "4-jan10",
-                    "dayName": "Giorno 21 (10 Gen)",
-                    "title": "Verso Muyil: dalle acque dolci alla foresta maya",
-                    "location": "Bacalar → Muyil / area Tulum",
-                    "shortDesc": "Partenza verso nord, visita delle rovine di Muyil se l'orario lo consente e notte di passaggio nei dintorni.",
-                    "fullDesc": "<p>Lasciamo Bacalar dopo tre notti e risaliamo verso <strong>Muyil</strong>, lungo la direttrice per Tulum, con autobus interurbano e ultimo tratto locale da verificare.</p><p>Se gli orari coincidono, visitiamo già la <strong>zona archeologica di Muyil</strong>, immersa nella vegetazione a ridosso della riserva di Sian Ka'an. Secondo INAH è aperta <strong>08:00–17:00</strong> (ultimo accesso 16:30), ma ricontrollare per gennaio.</p><p><strong>Notte di passaggio 10 gennaio</strong> nell'area Muyil/Tulum sud: posizione esatta da scegliere in base alla facilità di partecipare al tour dei canali l'11 mattina. Se il trasferimento è più lento, spostiamo la visita archeologica alla mattina successiva.</p>",
-                    "images": [],
-                    "links": [
-                        {
-                            "text": "🏛️ Orari e accesso Muyil (INAH)",
-                            "url": "https://lugares.inah.gob.mx/es/node/4440"
-                        },
-                        {
-                            "text": "🚌 Ricerca autobus ADO",
-                            "url": "https://www.ado.com.mx/"
-                        }
-                    ],
-                    "route": [
-                        {
-                            "name": "Bacalar",
-                            "coords": [
-                                18.677,
-                                -88.393
-                            ]
-                        },
-                        {
-                            "name": "Muyil",
-                            "coords": [
-                                20.078,
-                                -87.615
-                            ]
-                        }
-                    ]
                 }
             ],
             "mapFocus": {
@@ -1599,16 +1570,64 @@ const tripData = {
                     -88.39
                 ],
                 "zoom": 9
-            }
+            },
+            "researchNotes": [
+                {
+                    "title": "Villas Ecotucan · scartato",
+                    "body": "361 € per 3 notti nella ricerca effettuata. Camera vista giardino nel verde, non vista laguna; il pontile è una zona separata. Isolato e check-in ordinario incompatibile con il possibile arrivo tardivo: le foto della laguna non compensano."
+                },
+                {
+                    "title": "Hotel Tuparenda · opzione prima notte",
+                    "body": "Possibile 7–8 gennaio per arrivo ferroviario. L'accoglienza tardiva non è garantita: chiedere espressamente check-in dopo le 23:00 e come gestire ritardi del treno."
+                },
+                {
+                    "title": "7 Cielos Bacalar · candidato fronte laguna",
+                    "body": "Da controllare per l'8–10 gennaio dopo Tuparenda: piccolo alloggio a riva, ma verificare camera effettiva vista acqua, cucina/pasti disponibili, strada d'accesso e costo taxi."
+                },
+                {
+                    "title": "Criterio generale",
+                    "body": "Priorità a stare davvero vicino alla laguna, non solo ad averne un pontile fotografato. Due giorni pieni bastano; confronto sul prezzo totale per due adulti, incluso il trasporto."
+                }
+            ],
+            "hotelSearches": [
+                {
+                    "label": "Bacalar · un solo hotel per 3 notti",
+                    "ss": "Bacalar, Quintana Roo, Messico",
+                    "checkin": "2027-01-07",
+                    "checkout": "2027-01-10",
+                    "note": "Controllare mappa, vista/acceso laguna e check-in dopo le 23:00."
+                },
+                {
+                    "label": "Hotel Tuparenda · notte di arrivo",
+                    "ss": "Hotel Tuparenda, Bacalar",
+                    "checkin": "2027-01-07",
+                    "checkout": "2027-01-08",
+                    "note": "Solo se conferma scritta di arrivo notturno e taxi da stazione."
+                },
+                {
+                    "label": "7 Cielos · 2 notti fronte laguna",
+                    "ss": "7 Cielos Bacalar",
+                    "checkin": "2027-01-08",
+                    "checkout": "2027-01-10",
+                    "note": "Preferire la camera con vera vista lago; verificare cena, taxi e costo."
+                },
+                {
+                    "label": "Bacalar · altre cabañas sul lago",
+                    "ss": "Bacalar, Quintana Roo, Messico",
+                    "checkin": "2027-01-08",
+                    "checkout": "2027-01-10",
+                    "note": "Da abbinare alla prima notte a Tuparenda, filtri fronte acqua e piccole strutture."
+                }
+            ]
         },
         {
             "id": 5,
             "navTitle": "Caribe",
-            "navSubtitle": "Sian Ka'an e mare",
+            "navSubtitle": "Tulum, Muyil e Cancún",
             "badge": "11–16 Gen • Si rallenta davvero",
             "locationText": "Muyil / Sian Ka'an → costa caraibica → Cancún",
-            "title": "Canali di Sian Ka'an e ultimi giorni di mare",
-            "description": "L'11 gennaio esperienza nei canali di Muyil e trasferimento verso una base sul mar dei Caraibi ancora da scegliere. Cinque notti dedicate soprattutto al riposo e partenza da Cancún il 16 gennaio alle 21:00.",
+            "title": "Sian Ka'an, Isla Contoy e gli ultimi giorni caraibici",
+            "description": "Finale con due basi distinte: 10–13 gennaio 3 notti nella zona di Tulum (Muyil l'11), poi Tren Maya Tulum → Cancún il 13 e 3 notti nella zona nord di Cancún fino al 16. Isla Contoy il 14, con il 15 come seconda possibilità meteo. Hotel tutti da cercare.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1622,151 +1641,165 @@ const tripData = {
                     "url": "https://descubreanp.conanp.gob.mx/en/conanp/ANP?suri=72"
                 },
                 {
-                    "text": "🔗 Volo di ritorno · dettagli nel sito",
-                    "url": "#"
+                    "text": "🚆 Orari ufficiali Tren Maya",
+                    "url": "https://www.trenmaya.gob.mx/horarios.php"
+                },
+                {
+                    "text": "🚆 Biglietti Tren Maya",
+                    "url": "https://reservas.ventaboletostrenmaya.com.mx/"
                 }
             ],
             "basecamp": {
-                "zone": "Costa caraibica · località finale da scegliere",
-                "hotelIdea": "Pousada fronte mare o piccola struttura tranquilla · 5 notti, dall'11 al 16 gennaio",
-                "why": "L'obiettivo è terminare il viaggio in mare e relax, non aggiungere lunghi spostamenti. Scegliere una base che consenta il trasferimento a Cancún il 16.",
+                "zone": "Tulum 10–13 gen (3 notti) · Cancún 13–16 gen (3 notti)",
+                "hotelIdea": "Due hotel ancora da cercare: Tulum pueblo/sud per Muyil; Punta Sam, Costa Mujeres o Puerto Juárez per Contoy e volo. Alternativa Puerto Morelos.",
+                "why": "Si torna al piano con due basi e un cambio d'hotel il 13. In cambio il tour di Contoy è più vicino e il 16 siete già nella zona di Cancún. Tren Maya il 10 (da Bacalar) e il 13 (verso Cancún), da confermare per le date.",
                 "tags": [
-                    "🏖️ Mare (non laguna)",
-                    "🐠 Snorkeling facoltativo",
-                    "🌴 Relax"
+                    "🌿 11 gen · Muyil",
+                    "🚆 13 gen · Tren Maya",
+                    "🏝️ 14/15 gen · Contoy facoltativa"
                 ],
                 "transports": [
                     {
+                        "icon": "🚆",
+                        "title": "10 e 13 gen · Tren Maya",
+                        "desc": "Bacalar → Tulum → Cancún Aeroporto; verificare gli orari del 2027."
+                    },
+                    {
                         "icon": "🚕",
-                        "title": "Ultimo transfer verso la costa",
-                        "desc": "Dal tour Muyil alla base scelta: tempi da pianificare."
+                        "title": "11 / 14–15 · escursioni",
+                        "desc": "Muyil da Tulum; Isla Contoy dalla zona di Cancún con tour autorizzato."
                     },
                     {
                         "icon": "✈️",
-                        "title": "Rientro da Cancún",
-                        "desc": "Volo sabato 16 gennaio, ore 21:00: organizzare la partenza in anticipo."
+                        "title": "16 gen · aeroporto CUN",
+                        "desc": "Volo AF651 ore 21:00, organizzare transfer con margine."
                     }
                 ]
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "Da definire · dipende dalla località finale",
-                "spent": "€ 0 · non prenotato",
+                "total": "Da quotare · due hotel (3+3 notti), due treni e tour",
+                "spent": "€ 0 · hotel non prenotati",
                 "items": [
                     {
-                        "name": "Tour Muyil / flottazione a Sian Ka'an",
+                        "name": "Tulum · hotel 10–13 gen, 3 notti per due",
+                        "cost": "Da cercare Booking"
+                    },
+                    {
+                        "name": "Zona Cancún · hotel 13–16 gen, 3 notti per due",
+                        "cost": "Da cercare Booking"
+                    },
+                    {
+                        "name": "Tren Maya Bacalar → Tulum e Tulum → Cancún",
                         "cost": "Da quotare"
                     },
                     {
-                        "name": "Alloggio al mare · 5 notti (11–15 gen)",
+                        "name": "Tour Muyil / Sian Ka'an",
                         "cost": "Da quotare"
                     },
                     {
-                        "name": "Trasferimento a aeroporto CUN · 16 gen",
-                        "cost": "Da quotare"
+                        "name": "Isla Contoy (14 o 15 gen, se meteo consente)",
+                        "cost": "Facoltativo"
                     },
                     {
-                        "name": "Isla Contoy (solo se fattibile)",
-                        "cost": "Opzionale"
+                        "name": "Taxi per hotel/stazioni/aeroporto",
+                        "cost": "Da quotare"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Tour canali di Muyil / Sian Ka'an",
+                    "name": "Hotel Tulum · 10–13 gen",
+                    "status": "Da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Tren Maya Bacalar → Tulum · 10 gen",
+                    "status": "Da verificare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Escursione Muyil / Sian Ka'an · 11 gen",
                     "status": "Da organizzare",
                     "type": "warning"
                 },
                 {
-                    "name": "Base e alloggio mare · 11–16 gen",
-                    "status": "Da scegliere",
+                    "name": "Tren Maya Tulum → Cancún · 13 gen",
+                    "status": "Da verificare",
                     "type": "warning"
                 },
                 {
-                    "name": "Transfer verso aeroporto Cancún",
+                    "name": "Hotel zona Cancún · 13–16 gen",
+                    "status": "Da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Tour Isla Contoy · 14 / 15 gen",
+                    "status": "Opzionale · vincolato al meteo",
+                    "type": "warning"
+                },
+                {
+                    "name": "Transfer aeroporto Cancún · 16 gen",
                     "status": "Da organizzare",
                     "type": "warning"
                 }
             ],
             "days": [
                 {
-                    "id": "5-jan11",
-                    "dayName": "Giorno 22 (11 Gen)",
-                    "title": "Sian Ka'an: galleggiare nei canali maya, poi il mare",
-                    "location": "Muyil · Sian Ka'an → Caribe",
-                    "shortDesc": "Tour nella laguna di Muyil e floating nei canali (se condizioni e posti lo permettono), poi trasferimento verso la base sul mare.",
-                    "fullDesc": "<p>Dedichiamo la mattina al sistema lagunare di <strong>Muyil / Sian Ka'an</strong>, con escursione guidata in barca e, se consentito, <strong>flottazione nei canali d'acqua dolce</strong> fra le mangrovie. Il tour va prenotato con operatori autorizzati, verificando durata, orario di partenza e condizioni meteo.</p><p>Se non siamo riusciti a visitare le <strong>rovine di Muyil</strong> il 10 gennaio, le inseriamo prima o dopo l'escursione, soltanto se compatibile con gli orari.</p><p>Nel pomeriggio raggiungiamo la <strong>località caraibica definitiva, ancora da scegliere</strong>, e facciamo check-in per cinque notti. Da qui in avanti il viaggio diventa soprattutto mare e relax.</p>",
-                    "images": [],
-                    "links": [
-                        {
-                            "text": "🏛️ Muyil · INAH",
-                            "url": "https://lugares.inah.gob.mx/es/node/4440"
-                        },
-                        {
-                            "text": "🌿 Riserva Sian Ka'an · CONANP",
-                            "url": "https://www.gob.mx/conanp"
-                        }
-                    ],
-                    "route": [
-                        {
-                            "name": "Muyil / Sian Ka'an",
-                            "coords": [
-                                20.078,
-                                -87.615
-                            ]
-                        }
-                    ]
+                    "id": "5-jan10",
+                    "dayName": "Giorno 21 (10 Gen)",
+                    "title": "Con il Tren Maya a Tulum: prima base sul Caribe",
+                    "location": "Bacalar → Tulum",
+                    "shortDesc": "Tren Maya, taxi alla struttura, check-in per 3 notti.",
+                    "fullDesc": "<p>Check-out a Bacalar e viaggio <strong>Tren Maya Bacalar → Tulum</strong>. Confermare per domenica 10 gennaio 2027 stazione, orari, biglietti e trasferimento stradale dalla stazione al pernottamento.</p><p><strong>Da cercare: 10–13 gennaio, 3 notti a Tulum.</strong> Preferire piccolo hotel a Tulum pueblo o nel settore sud ben collegato alla strada per Muyil. Ristoranti possibilmente raggiungibili a piedi; il pernottamento separato a Muyil non serve.</p>"
                 },
                 {
-                    "id": "5-jan12-15",
-                    "dayName": "Giorni 23–26 (12–15 Gen)",
-                    "title": "Ultimi quattro giorni: piedi nella sabbia",
-                    "location": "Costa caraibica · base da scegliere",
-                    "shortDesc": "Quattro giorni di vero relax: spiaggia, snorkeling leggero se piace, ottimo cibo e zero cambi di alloggio.",
-                    "fullDesc": "<p><strong>Quattro giorni pieni di mare</strong>, senza tour obbligatori né ulteriori spostamenti di base. Alterniamo spiaggia, lettura, nuotate e un po' di snorkeling dove consentito, in funzione del meteo.</p><p><strong>Isla Contoy</strong> rimane <strong>solo un'eventuale escursione di giornata</strong>: è un'area naturale protetta, non una località in cui pernottare, e le uscite in gennaio possono essere annullate per il vento e la chiusura del porto. Non decidiamo l'alloggio finale in funzione di questo tour.</p><p><strong>Importante:</strong> la località precisa sul Caribe è <strong>ancora da scegliere</strong>; il criterio principale è una spiaggia gradevole e poco stress logistico per il volo da Cancún del 16 gennaio.</p>",
-                    "images": [],
-                    "links": [
-                        {
-                            "text": "🌿 Isla Contoy · informazioni ufficiali CONANP",
-                            "url": "https://descubreanp.conanp.gob.mx/en/conanp/ANP?suri=72"
-                        }
-                    ],
-                    "route": []
+                    "id": "5-jan11",
+                    "dayName": "Giorno 22 (11 Gen)",
+                    "title": "Muyil e flottazione nei canali di Sian Ka'an",
+                    "location": "Muyil / Sian Ka'an",
+                    "shortDesc": "Rovine e canali di Sian Ka'an in giornata dalla base Tulum.",
+                    "fullDesc": "<p><strong>Escursione a Muyil</strong> dalla base Tulum: visita del sito archeologico nella foresta e tour in barca con <strong>flottazione nei canali di Sian Ka'an</strong>, condizioni e autorizzazioni permettendo. Controllare guida locale, orario, trasporto da Tulum e prenotazione.</p><p>Rientro <strong>nello stesso hotel di Tulum</strong>; è una delle esperienze da preservare anche se si riducono gli spostamenti.</p>"
+                },
+                {
+                    "id": "5-jan12",
+                    "dayName": "Giorno 23 (12 Gen)",
+                    "title": "Mare e cenote: giornata flessibile",
+                    "location": "Tulum e dintorni",
+                    "shortDesc": "Una giornata senza valigie: spiaggia, cenote o riposo.",
+                    "fullDesc": "<p>Giornata di mare o cenote, senza attività obbligatorie. La zona di Tulum può essere costosa e dispersiva, quindi scegliere l'hotel con attenzione alla mobilità senza auto.</p><p>Controllare treno per Cancún del giorno successivo e organizzare il taxi fino alla stazione.</p>"
+                },
+                {
+                    "id": "5-jan13",
+                    "dayName": "Giorno 24 (13 Gen)",
+                    "title": "Tren Maya Tulum → Cancún: ultima base",
+                    "location": "Tulum → Cancún",
+                    "shortDesc": "Tren Maya, transfer dalla stazione aeroportuale, check-in per 3 notti.",
+                    "fullDesc": "<p><strong>Tren Maya Tulum → Cancún Aeropuerto</strong>, da confermare per il 13 gennaio. La stazione è <strong>nell'area aeroportuale, non nel centro di Cancún</strong>, quindi serve un trasferimento fino all'hotel.</p><p><strong>Da cercare: 13–16 gennaio, 3 notti.</strong> Priorità a Punta Sam / Costa Mujeres (piccoli hotel e spiaggia) oppure Puerto Juárez (più pratico per il porto dei tour). Alternativa Puerto Morelos per atmosfera di paese, ma i transfer a Isla Contoy diventano più lunghi. Evitare grandi resort troppo cari e hotel senza una vera spiaggia vicina.</p>"
+                },
+                {
+                    "id": "5-jan14-15",
+                    "dayName": "Giorni 25–26 (14–15 Gen)",
+                    "title": "Isla Contoy, vento permettendo",
+                    "location": "Isla Contoy / zona Cancún",
+                    "shortDesc": "Tour autorizzato il 14, 15 come possibile data di riserva; altrimenti mare.",
+                    "fullDesc": "<p><strong>14 gennaio:</strong> tentativo di escursione autorizzata a <strong>Isla Contoy</strong>, parco naturale contingentato. Controllare operatore autorizzato, imbarco (Punta Sam/Puerto Juárez secondo il tour), eventuale pickup e rimborsi meteo.</p><p><strong>15 gennaio:</strong> secondo tentativo solo se la prima uscita viene cancellata e il mare lo permette; altrimenti giornata di relax in spiaggia. <strong>A gennaio i venti da nord possono chiudere i porti</strong>: Contoy è opzionale e non garantita. Notti entrambe nella stessa base zona Cancún.</p>"
                 },
                 {
                     "id": "5-jan16",
                     "dayName": "Giorno 27 (16 Gen)",
-                    "title": "Ultimo bagno e partenza da Cancún",
-                    "location": "Costa caraibica → aeroporto CUN",
-                    "shortDesc": "Check-out, trasferimento verso l'aeroporto di Cancún e volo Air France alle 21:00.",
-                    "fullDesc": "<p>Ultima colazione e, se la distanza dall'aeroporto lo permette, ancora qualche ora di mare prima del check-out. Poi trasferimento verso <strong>Cancún (CUN), Terminal 4</strong>, con ampio margine per traffico, restituzione di eventuali mezzi, check-in e controlli.</p><p><strong>Volo già previsto:</strong> Air France <strong>AF651</strong>, sabato <strong>16 gennaio 2027 alle 21:00</strong>, Cancún → Parigi CDG. Lo scalo e il collegamento verso Milano sono già riportati nella scheda voli del sito.</p><p>Non programmare escursioni lontane in questo giorno: l'orario effettivo di partenza dall'alloggio dipenderà dalla località finale scelta.</p>",
-                    "images": [],
-                    "links": [
-                        {
-                            "text": "✈️ Aeroporto internazionale di Cancún",
-                            "url": "https://www.cancunairport.com/"
-                        }
-                    ],
-                    "route": [
-                        {
-                            "name": "Aeroporto di Cancún (CUN)",
-                            "coords": [
-                                21.0365,
-                                -86.8771
-                            ]
-                        }
-                    ]
+                    "title": "Ultimo mare, aeroporto e volo delle 21:00",
+                    "location": "Cancún Aeroporto",
+                    "shortDesc": "Trasferimento verso CUN con margine, volo Air France AF651.",
+                    "fullDesc": "<p>Ultima colazione e, se c'è tempo, spiaggia; poi trasferimento all'<strong>aeroporto Cancún Terminal 4</strong> con adeguato anticipo per il volo <strong>AF651 del 16 gennaio alle 21:00</strong>. Nessuna escursione lontana oggi.</p>"
                 },
                 {
                     "id": "5-jan17",
                     "dayName": "Giorno 28 (17 Gen)",
-                    "title": "Rientro in Italia",
-                    "location": "Parigi CDG → Milano MXP",
-                    "shortDesc": "Arrivo a Milano Malpensa previsto alle 17:25 dopo lo scalo a Parigi.",
-                    "fullDesc": "<p>Arriviamo a <strong>Parigi CDG alle 12:30</strong> e ripartiamo con il collegamento Air France <strong>AF1730</strong> alle <strong>15:55</strong>. Atterraggio previsto a <strong>Milano Malpensa alle 17:25</strong> di domenica <strong>17 gennaio 2027</strong>.</p><p>Fine del viaggio di 29 giorni, dal 20 dicembre al 17 gennaio. Controllare eventuali aggiornamenti degli operativi di volo prima della partenza.</p>",
-                    "images": [],
-                    "links": [],
-                    "route": []
+                    "title": "Rientro a Milano Malpensa",
+                    "location": "Parigi → Milano",
+                    "shortDesc": "Scalo Air France a Parigi e arrivo a MXP.",
+                    "fullDesc": "<p>Arrivo Parigi CDG indicato alle 12:30; proseguimento con <strong>AF1730 alle 15:55</strong>, arrivo Milano Malpensa alle <strong>17:25</strong> del 17 gennaio. Ricontrollare gli operativi prima della partenza.</p>"
                 }
             ],
             "mapFocus": {
@@ -1775,7 +1808,73 @@ const tripData = {
                     -87.4
                 ],
                 "zoom": 9
-            }
+            },
+            "researchNotes": [
+                {
+                    "title": "Piano originario ripristinato",
+                    "body": "Tre notti nella zona di Tulum (10–13 gennaio), poi tre notti nella zona di Cancún (13–16); più cambi rispetto a sei notti a Xpu-Há, ma Contoy e l'aeroporto sono più comodi."
+                },
+                {
+                    "title": "La Villa Mexicana by Diving Prestige · scartata",
+                    "body": "Troppo costosa per 6 notti, immersa nel verde e non direttamente sulla spiaggia: senza auto richiederebbe taxi/navetta per il mare ogni giorno."
+                },
+                {
+                    "title": "Hotel Tulum · obiettivi",
+                    "body": "Piccolo alloggio vicino ai ristoranti, facile accesso a Muyil e alla stazione Tren Maya; niente notte aggiuntiva a Muyil. Controllare eventuale costo dei taxi."
+                },
+                {
+                    "title": "Hotel zona Cancún · obiettivi",
+                    "body": "Punta Sam / Costa Mujeres se troviamo piccola struttura vicino a una spiaggia bella; Puerto Juárez per praticità del porto ma verificare qualità spiaggia. Puerto Morelos più vivibile, ma con transfer più lungo per Contoy."
+                },
+                {
+                    "title": "Isla Contoy · attenzione gennaio",
+                    "body": "Prima opportunità 14 gennaio, 15 di riserva. Il vento da nord può causare chiusure del porto: non scegliere la sistemazione solo per questo tour e prenotare escursione con termini di rimborso espliciti."
+                }
+            ],
+            "hotelSearches": [
+                {
+                    "label": "Tulum pueblo · 3 notti",
+                    "ss": "Tulum, Quintana Roo, Messico",
+                    "checkin": "2027-01-10",
+                    "checkout": "2027-01-13",
+                    "note": "Piccolo hotel, ristoranti a piedi, transfer per Muyil, cancellazione gratuita."
+                },
+                {
+                    "label": "Tulum sud · comodo per Muyil",
+                    "ss": "Tulum, Quintana Roo, Messico",
+                    "checkin": "2027-01-10",
+                    "checkout": "2027-01-13",
+                    "note": "Usare la mappa per valutare strada verso Muyil e taxi/stazione."
+                },
+                {
+                    "label": "Punta Sam · 3 notti",
+                    "ss": "Punta Sam, Quintana Roo, Messico",
+                    "checkin": "2027-01-13",
+                    "checkout": "2027-01-16",
+                    "note": "Spiaggia e porti Contoy: verificare posizione effettiva hotel."
+                },
+                {
+                    "label": "Costa Mujeres · 3 notti",
+                    "ss": "Costa Mujeres, Quintana Roo, Messico",
+                    "checkin": "2027-01-13",
+                    "checkout": "2027-01-16",
+                    "note": "Escludere resort fuori budget; controllare spiaggia raggiungibile a piedi."
+                },
+                {
+                    "label": "Puerto Juárez · 3 notti",
+                    "ss": "Puerto Juárez, Cancún, Messico",
+                    "checkin": "2027-01-13",
+                    "checkout": "2027-01-16",
+                    "note": "Logistica tour comoda, ma verificare qualità del mare proprio davanti all'hotel."
+                },
+                {
+                    "label": "Puerto Morelos · alternativa",
+                    "ss": "Puerto Morelos, Quintana Roo, Messico",
+                    "checkin": "2027-01-13",
+                    "checkout": "2027-01-16",
+                    "note": "Più atmosfera da paese; chiedere costo pickup per Contoy."
+                }
+            ]
         }
     ],
     "locations": [
@@ -1885,16 +1984,16 @@ const tripData = {
                 20.078,
                 -87.615
             ],
-            "days": "10–11 Gen"
+            "days": "11 Gen"
         },
         {
             "areaId": 5,
-            "name": "Costa caraibica · base da scegliere (pin indicativo)",
+            "name": "Tulum · base indicativa da cercare",
             "coords": [
-                20.34,
-                -87.33
+                20.211,
+                -87.465
             ],
-            "days": "11–16 Gen"
+            "days": "10–13 Gen"
         },
         {
             "areaId": 5,
@@ -1904,6 +2003,15 @@ const tripData = {
                 -86.8771
             ],
             "days": "16 Gen, volo 21:00"
+        },
+        {
+            "areaId": 5,
+            "name": "Cancún nord · base indicativa da cercare",
+            "coords": [
+                21.23,
+                -86.8
+            ],
+            "days": "13–16 Gen"
         }
     ]
 };
