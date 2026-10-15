@@ -1,227 +1,873 @@
 // Dati del Viaggio - js/data.js
 
 const tripData = {
-    general: {
-        dates: "20 Dicembre 2026 – 17 Gennaio 2027 • 29 Giorni",
-        title: "Messico",
-        footerName: "Spedizione Sud Messico (29 Giorni)",
-        footerSeason: "Dicembre - Gennaio"
+    "general": {
+        "dates": "20 Dicembre 2026 – 17 Gennaio 2027 • 29 Giorni",
+        "title": "Messico",
+        "footerName": "Spedizione Sud Messico (29 Giorni)",
+        "footerSeason": "Dicembre - Gennaio"
     },
-    areas: [
+    "areas": [
         {
-            id: 1,
-            navTitle: "Città del Messico",
-            navSubtitle: "CDMX e Teotihuacán",
-            badge: "Giorni 1 - 4 • Capitale",
-            locationText: "Città del Messico",
-            title: "Il Cuore della Capitale",
-            description: "Esplora le rovine precolombiane, il cuore storico e i canali del sud.",
-            images: ["assets/img/Citta_Del_Messico.png"],
-            links: [
-                { text: "🔗 Prenotazione Bus ADO", url: "https://www.ado.com.mx" }
+            "id": 1,
+            "navTitle": "Città del Messico",
+            "navSubtitle": "CDMX e Teotihuacán",
+            "badge": "Giorni 1 - 4 • Capitale",
+            "locationText": "Città del Messico",
+            "title": "Il Cuore della Capitale",
+            "description": "Esplora le rovine precolombiane, il cuore storico e i canali del sud.",
+            "images": [
+                "assets/img/Citta_Del_Messico.png"
             ],
-            days: [
+            "links": [
                 {
-                    id: "1-1",
-                    dayName: "Giorno 1 (21 Dic)",
-                    title: "La Città degli Dei: Teotihuacán",
-                    location: "Teotihuacán (Nord CDMX)",
-                    shortDesc: "Colossali piramidi precolombiane e pranzo all'interno di una grotta vulcanica.",
-                    fullDesc: "<p>Iniziamo la nostra avventura facendo un salto indietro nel tempo di duemila anni. L'esplorazione inizia percorrendo la maestosa <strong>Calzada de los Muertos</strong> di Teotihuacán. Saliremo verso la <strong>Piramide del Sole</strong> per assorbirne l'energia e godremo del miglior panorama dal piazzale della <strong>Piramide della Luna</strong>. Per chiudere in bellezza, il nostro primo pranzo messicano si terrà al <em>Restaurante La Gruta</em>, situato all'interno di una spettacolare caverna vulcanica naturale. Pranzo prenotato alle 13 a La Gruta, consigliato Uber per andare e tornare accordandosi con l'autista per il ritorno dato che c'è poca copertura di rete. Costo indicativo dell'uber 75 euro, costo medio del ristorante 30-40 euro, costo dell'ingresso per gli stranieri 10 euro </p>",
-                    images: ["assets/img/Teotihuacan_Piramide_Sole.png"],
-                    links: [
-                        { text: "🔗 Sito Ufficiale INAH - Teotihuacán", url: "https://www.inah.gob.mx/zonas/23-zona-arqueologica-de-teotihuacan" },
-                        { text: "🔗 Restaurante La Gruta, prenotato 21 alle 13 p.m.", url: "https://lagruta.mx/" },
-                        { text: "🔗 Amigo Tour per prenotare guida con Basilica", url: "https://amigotours.com/tours/mexico/mexico-city/teotihuacan-guadalupe-shrine" }                        
+                    "text": "🔗 Prenotazione Bus ADO",
+                    "url": "https://www.ado.com.mx"
+                }
+            ],
+            "days": [
+                {
+                    "id": "1-1",
+                    "dayName": "Giorno 1 (21 Dic)",
+                    "title": "La Città degli Dei: Teotihuacán",
+                    "location": "Teotihuacán (Nord CDMX)",
+                    "shortDesc": "Colossali piramidi precolombiane e pranzo all'interno di una grotta vulcanica.",
+                    "fullDesc": "<p>Iniziamo la nostra avventura facendo un salto indietro nel tempo di duemila anni. L'esplorazione inizia percorrendo la maestosa <strong>Calzada de los Muertos</strong> di Teotihuacán. Saliremo verso la <strong>Piramide del Sole</strong> per assorbirne l'energia e godremo del miglior panorama dal piazzale della <strong>Piramide della Luna</strong>. Per chiudere in bellezza, il nostro primo pranzo messicano si terrà al <em>Restaurante La Gruta</em>, situato all'interno di una spettacolare caverna vulcanica naturale. Pranzo prenotato alle 13 a La Gruta, consigliato Uber per andare e tornare accordandosi con l'autista per il ritorno dato che c'è poca copertura di rete. Costo indicativo dell'uber 75 euro, costo medio del ristorante 30-40 euro, costo dell'ingresso per gli stranieri 10 euro </p>",
+                    "images": [
+                        "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
-                    route: [
-                        { name: "Calzada de los Muertos", coords: [19.6900, -98.8445], image: "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Piramide del Sole", coords: [19.6925, -98.8439], image: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Restaurante La Gruta", coords: [19.6917, -98.8384], image: "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&w=400&q=80" }
+                    "links": [
+                        {
+                            "text": "🔗 Sito Ufficiale INAH - Teotihuacán",
+                            "url": "https://www.inah.gob.mx/zonas/23-zona-arqueologica-de-teotihuacan"
+                        },
+                        {
+                            "text": "🔗 Restaurante La Gruta, prenotato 21 alle 13 p.m.",
+                            "url": "https://lagruta.mx/"
+                        },
+                        {
+                            "text": "🔗 Amigo Tour per prenotare guida con Basilica",
+                            "url": "https://amigotours.com/tours/mexico/mexico-city/teotihuacan-guadalupe-shrine"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Calzada de los Muertos",
+                            "coords": [
+                                19.69,
+                                -98.8445
+                            ],
+                            "image": "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Piramide del Sole",
+                            "coords": [
+                                19.6925,
+                                -98.8439
+                            ],
+                            "image": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Restaurante La Gruta",
+                            "coords": [
+                                19.6917,
+                                -98.8384
+                            ],
+                            "image": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&w=400&q=80"
+                        }
                     ]
                 },
                 {
-                    id: "1-2",
-                    dayName: "Giorno 2 (22 Dic)",
-                    title: "Zócalo, Storia Azteca e il Polmone Verde",
-                    location: "CDMX (Centro e Ovest)",
-                    shortDesc: "Dai resti dell'impero azteco al grande parco cittadino di Chapultepec",
-                    fullDesc: "Partenza al mattino presto per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.",
-                    images: ["assets/img/Centro_Historico.png"],
-                    links: [
-                        { text: "🔗 Info Palacio Nacional", url: "https://www.gob.mx/palacionacional" },
-                        { text: "🔗 Info Templo Mayor", url: "https://historia.nationalgeographic.com.es/a/templo-mayor-tenochtitlan-centro-espiritual-mundo-azteca_18891" },
-                        { text: "🔗 Mitologia di Tlaloc", url: "https://mitologiedelmondo.it/tlaloc/" },
-                        { text: "🔗 Museo Nacional de Antropología", url: "https://www.mna.inah.gob.mx/" }
+                    "id": "1-2",
+                    "dayName": "Giorno 2 (22 Dic)",
+                    "title": "Zócalo, Storia Azteca e il Polmone Verde",
+                    "location": "CDMX (Centro e Ovest)",
+                    "shortDesc": "Dai resti dell'impero azteco al grande parco cittadino di Chapultepec",
+                    "fullDesc": "Partenza al mattino presto per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.",
+                    "images": [
+                        "assets/img/Centro_Historico.png"
                     ],
-                    route: [
-                        { name: "Palacio Nacional", coords: [19.4323, -99.1312], image: "assets/img/Palacio_Nacional.png" },
-                        { name: "Templo Mayor", coords: [19.4349, -99.1314], image: "assets/img/Templo_Mayor.png" },
-                        { name: "Museo Vivo del Muralismo", coords: [19.4326, -99.1360], image: "assets/img/Museo_Vivo_Muralismo.png" },
-                        { name: "Casa de los Azulejos", coords: [19.4335, -99.1396], image: "assets/img/Casa_Azulejos.png" },
-                        { name: "Torre Latinoamericana", coords: [19.4339, -99.1406], image: "assets/img/Torre_Latinoamericana.png" },
-                        { name: "Bosque de Chapultepec (Museo)", coords: [19.4260, -99.1863], image: "assets/img/Bosque_Chapultepec.png" }
+                    "links": [
+                        {
+                            "text": "🔗 Info Palacio Nacional",
+                            "url": "https://www.gob.mx/palacionacional"
+                        },
+                        {
+                            "text": "🔗 Info Templo Mayor",
+                            "url": "https://historia.nationalgeographic.com.es/a/templo-mayor-tenochtitlan-centro-espiritual-mundo-azteca_18891"
+                        },
+                        {
+                            "text": "🔗 Mitologia di Tlaloc",
+                            "url": "https://mitologiedelmondo.it/tlaloc/"
+                        },
+                        {
+                            "text": "🔗 Museo Nacional de Antropología",
+                            "url": "https://www.mna.inah.gob.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Palacio Nacional",
+                            "coords": [
+                                19.4323,
+                                -99.1312
+                            ],
+                            "image": "assets/img/Palacio_Nacional.png"
+                        },
+                        {
+                            "name": "Templo Mayor",
+                            "coords": [
+                                19.4349,
+                                -99.1314
+                            ],
+                            "image": "assets/img/Templo_Mayor.png"
+                        },
+                        {
+                            "name": "Museo Vivo del Muralismo",
+                            "coords": [
+                                19.4326,
+                                -99.136
+                            ],
+                            "image": "assets/img/Museo_Vivo_Muralismo.png"
+                        },
+                        {
+                            "name": "Casa de los Azulejos",
+                            "coords": [
+                                19.4335,
+                                -99.1396
+                            ],
+                            "image": "assets/img/Casa_Azulejos.png"
+                        },
+                        {
+                            "name": "Torre Latinoamericana",
+                            "coords": [
+                                19.4339,
+                                -99.1406
+                            ],
+                            "image": "assets/img/Torre_Latinoamericana.png"
+                        },
+                        {
+                            "name": "Bosque de Chapultepec (Museo)",
+                            "coords": [
+                                19.426,
+                                -99.1863
+                            ],
+                            "image": "assets/img/Bosque_Chapultepec.png"
+                        }
                     ]
                 },
                 {
-                    id: "1-3",
-                    dayName: "Giorno 3 (23 Dic)",
-                    title: "Borghi Colorati, Canali e... Partenza Notturna!",
-                    location: "Coyoacán, Xochimilco & Bus Notturno",
-                    shortDesc: "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno ADO per Oaxaca.",
-                    fullDesc: "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e la <em>Casa Azul</em> di Frida Kahlo. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui prenderemo il comodo pullman notturno della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
-                    images: ["assets/img/Xochimilco_trajineras.jpg"],
-                    links: [
-                        { text: "🔗 Museo Frida Kahlo", url: "https://www.museofridakahlo.org.mx/" },
-                        { text: "🔗 Biglietti Bus ADO (Notturno)", url: "https://www.ado.com.mx" }
+                    "id": "1-3",
+                    "dayName": "Giorno 3 (23 Dic)",
+                    "title": "Borghi Colorati, Canali e... Partenza Notturna!",
+                    "location": "Coyoacán, Xochimilco & Bus Notturno",
+                    "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno ADO per Oaxaca.",
+                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e la <em>Casa Azul</em> di Frida Kahlo. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui prenderemo il comodo pullman notturno della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
+                    "images": [
+                        "assets/img/Xochimilco_trajineras.jpg"
                     ],
-                    route: [
-                        { name: "Plaza Hidalgo, Coyoacán", coords: [19.3496, -99.1626], image: "https://images.unsplash.com/photo-1587822557480-1a76a5df489c?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Casa Azul", coords: [19.3551, -99.1625], image: "https://images.unsplash.com/photo-1596752763297-76eb95c96b75?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Imbarcadero Xochimilco", coords: [19.2543, -99.1035], image: "assets/img/Xochimilco_trajineras.jpg" },
-                        { name: "Terminal Taxqueña (Partenza)", coords: [19.3440, -99.1398], image: "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80" }
+                    "links": [
+                        {
+                            "text": "🔗 Museo Frida Kahlo",
+                            "url": "https://www.museofridakahlo.org.mx/"
+                        },
+                        {
+                            "text": "🔗 Biglietti Bus ADO (Notturno)",
+                            "url": "https://www.ado.com.mx"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Plaza Hidalgo, Coyoacán",
+                            "coords": [
+                                19.3496,
+                                -99.1626
+                            ],
+                            "image": "https://images.unsplash.com/photo-1587822557480-1a76a5df489c?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Casa Azul",
+                            "coords": [
+                                19.3551,
+                                -99.1625
+                            ],
+                            "image": "https://images.unsplash.com/photo-1596752763297-76eb95c96b75?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Imbarcadero Xochimilco",
+                            "coords": [
+                                19.2543,
+                                -99.1035
+                            ],
+                            "image": "assets/img/Xochimilco_trajineras.jpg"
+                        },
+                        {
+                            "name": "Terminal Taxqueña (Partenza)",
+                            "coords": [
+                                19.344,
+                                -99.1398
+                            ],
+                            "image": "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80"
+                        }
                     ]
                 }
             ],
-            basecamp: {
-                zone: "La Condesa o Roma Norte",
-                hotelIdea: "Boutique Hotel o Airbnb vicino Parque México",
-                why: "Evita il centro storico. Qui è verde, sicuro, perfetto per cenare a piedi la sera e smaltire il jet-lag in tranquillità.",
-                tags: ["🌳 Verde", "🛡️ Super Sicuro", "🌮 Foodie"],
-                transports: [
-                    { icon: "🚕", title: "Uber / DiDi", desc: "Economico e sicuro per Teotihuacán, Aeroporto e Xochimilco." },
-                    { icon: "👟", title: "A Piedi", desc: "Perfetto per esplorare il Centro Storico (Zócalo) e i quartieri Condesa/Roma." },
-                    { icon: "🚇", title: "MetroBus", desc: "Opzionale per muoversi velocemente lungo il Paseo de la Reforma." }
+            "basecamp": {
+                "zone": "La Condesa o Roma Norte",
+                "hotelIdea": "Boutique Hotel o Airbnb vicino Parque México",
+                "why": "Evita il centro storico. Qui è verde, sicuro, perfetto per cenare a piedi la sera e smaltire il jet-lag in tranquillità.",
+                "tags": [
+                    "🌳 Verde",
+                    "🛡️ Super Sicuro",
+                    "🌮 Foodie"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚕",
+                        "title": "Uber / DiDi",
+                        "desc": "Economico e sicuro per Teotihuacán, Aeroporto e Xochimilco."
+                    },
+                    {
+                        "icon": "👟",
+                        "title": "A Piedi",
+                        "desc": "Perfetto per esplorare il Centro Storico (Zócalo) e i quartieri Condesa/Roma."
+                    },
+                    {
+                        "icon": "🚇",
+                        "title": "MetroBus",
+                        "desc": "Opzionale per muoversi velocemente lungo il Paseo de la Reforma."
+                    }
                 ]
             },
-            food: "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
-            budget: {
-                total: "€ 450",
-                spent: "€ 310",
-                items: [
-                    { name: "Hotel Condesa (4 notti)", cost: "€ 280" },
-                    { name: "Volo interno per Oaxaca", cost: "€ 60" },
-                    { name: "Ingresso Teotihuacán", cost: "€ 10" }
+            "food": "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
+            "budget": {
+                "total": "€ 450",
+                "spent": "€ 310",
+                "items": [
+                    {
+                        "name": "Hotel Condesa (4 notti)",
+                        "cost": "€ 280"
+                    },
+                    {
+                        "name": "Volo interno per Oaxaca",
+                        "cost": "€ 60"
+                    },
+                    {
+                        "name": "Ingresso Teotihuacán",
+                        "cost": "€ 10"
+                    }
                 ]
             },
-            reservations: [
-                { name: "Boutique Hotel Condesa", status: "Confermato", type: "success" },
-                { name: "Restaurante La Gruta", status: "Confermato", type: "success" },
-                { name: "Volo AeroMexico MX-OAX", status: "Da Prenotare", type: "warning" }
+            "reservations": [
+                {
+                    "name": "Boutique Hotel Condesa",
+                    "status": "Confermato",
+                    "type": "success"
+                },
+                {
+                    "name": "Restaurante La Gruta",
+                    "status": "Confermato",
+                    "type": "success"
+                },
+                {
+                    "name": "Volo AeroMexico MX-OAX",
+                    "status": "Da Prenotare",
+                    "type": "warning"
+                }
             ],
-            mapFocus: { coords: [19.35, -99.13], zoom: 10 }
+            "mapFocus": {
+                "coords": [
+                    19.35,
+                    -99.13
+                ],
+                "zoom": 10
+            }
         },
         {
-            id: 2,
-            navTitle: "Oaxaca",
-            navSubtitle: "Tradizione e Cultura",
-            badge: "Giorni 4 - 6 • La Culla della Tradizione",
-            locationText: "Oaxaca & Dintorni",
-            title: "Il Cuore Zapoteco e Gastronomico",
-            description: "Esplora la capitale culinaria del Messico, i mercati incredibili, il barocco del centro storico e l'antica capitale zapoteca di Monte Albán.",
-            images: ["assets/img/Oaxaca_Ciudad.png"],
-            links: [
-                { text: "🔗 Oaxaca Street Food Tour", url: "https://oaxacastreetfoodtour.com" },
-                { text: "🔗 Terminal ADO Oaxaca", url: "https://www.ado.com.mx" }
+            "id": 2,
+            "navTitle": "Oaxaca",
+            "navSubtitle": "La città e le valli",
+            "badge": "24–26 Dic • Tradizioni, valli e Monte Albán",
+            "locationText": "Oaxaca & Dintorni",
+            "title": "Il Cuore Zapoteco e Gastronomico",
+            "description": "Esplora la capitale culinaria del Messico, i mercati incredibili, il barocco del centro storico e l'antica capitale zapoteca di Monte Albán.",
+            "images": [
+                "assets/img/Oaxaca_Ciudad.png"
             ],
-            basecamp: {
-                zone: "Centro Storico (Zona Santo Domingo / Zócalo)",
-                hotelIdea: "Boutique Hotel in stile coloniale con patio interno (early check-in se possibile)",
-                why: "Il centro si gira perfettamente a piedi. Alloggiare qui permette di vivere la magia serale, uscire a cena e raggiungere i mercati in pochi minuti.",
-                tags: ["🌮 Capitale Food", "🏛️ Barocco", "🚶‍♂️ Walkable"],
-                transports: [
-                    { icon: "👟", title: "A Piedi", desc: "La scelta migliore per perdersi tra le vie colorate del centro e i mercati." },
-                    { icon: "🚕", title: "Taxi / Colectivo", desc: "Economici per raggiungere i siti archeologici (Monte Albán) e le valli." }
+            "links": [
+                {
+                    "text": "🔗 Oaxaca Street Food Tour",
+                    "url": "https://oaxacastreetfoodtour.com"
+                },
+                {
+                    "text": "🔗 Terminal ADO Oaxaca",
+                    "url": "https://www.ado.com.mx"
+                }
+            ],
+            "basecamp": {
+                "zone": "Centro Storico (Zona Santo Domingo / Zócalo)",
+                "hotelIdea": "Boutique Hotel in stile coloniale con patio interno (early check-in se possibile)",
+                "why": "Il centro si gira perfettamente a piedi. Alloggiare qui permette di vivere la magia serale, uscire a cena e raggiungere i mercati in pochi minuti.",
+                "tags": [
+                    "🌮 Capitale Food",
+                    "🏛️ Barocco",
+                    "🚶‍♂️ Walkable"
+                ],
+                "transports": [
+                    {
+                        "icon": "👟",
+                        "title": "A Piedi",
+                        "desc": "La scelta migliore per perdersi tra le vie colorate del centro e i mercati."
+                    },
+                    {
+                        "icon": "🚕",
+                        "title": "Taxi / Colectivo",
+                        "desc": "Economici per raggiungere i siti archeologici (Monte Albán) e le valli."
+                    }
                 ]
             },
-            food: "La Mecca del cibo messicano: Tlayudas croccanti, i 7 tipi di Mole (specialmente il nero), Memelas e l'immancabile Mezcal.",
-            budget: {
-                total: "€ 220",
-                spent: "€ 0",
-                items: [
-                    { name: "Bus ADO CDMX - Oaxaca", cost: "€ 45" },
-                    { name: "Oaxaca Street Food Tour", cost: "Da definire" },
-                    { name: "Hotel Oaxaca (2-3 notti)", cost: "Da definire" }
+            "food": "La Mecca del cibo messicano: Tlayudas croccanti, i 7 tipi di Mole (specialmente il nero), Memelas e l'immancabile Mezcal.",
+            "budget": {
+                "total": "€ 220",
+                "spent": "€ 0",
+                "items": [
+                    {
+                        "name": "Bus ADO CDMX - Oaxaca",
+                        "cost": "€ 45"
+                    },
+                    {
+                        "name": "Oaxaca Street Food Tour",
+                        "cost": "Da definire"
+                    },
+                    {
+                        "name": "Hotel Oaxaca (2-3 notti)",
+                        "cost": "Da definire"
+                    }
                 ]
             },
-            reservations: [
-                { name: "Bus ADO Taxqueña - Oaxaca (Notturno)", status: "Da Prenotare", type: "warning" },
-                { name: "Oaxaca Street Food Tour", status: "Da Prenotare", type: "warning" }
+            "reservations": [
+                {
+                    "name": "Bus ADO Taxqueña - Oaxaca (Notturno)",
+                    "status": "Da Prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Oaxaca Street Food Tour",
+                    "status": "Da Prenotare",
+                    "type": "warning"
+                }
             ],
-            days: [
+            "days": [
                 {
-                    id: "2-1",
-                    dayName: "Giorno 4 (24 Dic)",
-                    title: "La Vigilia: Street Food, Barocco e Calendas",
-                    location: "Oaxaca Centro",
-                    shortDesc: "Street Food Tour nei mercati, Jardín Etnobotánico e festeggiamenti natalizi serali allo Zócalo.",
-                    fullDesc: "<p>Arrivo mattutino dal viaggio notturno. Iniziamo subito a tuffarci nella gastronomia locale con l'imperdibile <strong>Street Food Tour</strong> tra i banchi del <em>Mercado 20 de Noviembre</em>, assaggiando Tlayudas, memelas e i ricchi mole. A stomaco pieno, ammiriamo il barocco del <strong>Templo de Santo Domingo</strong> e, orari permettendo, ci immergiamo nel vicino <em>Jardín Etnobotánico</em> (ingresso solo guidato).</p><p>Nel pomeriggio riposo in hotel per recuperare le energie. La sera scendiamo in strada verso lo <strong>Zócalo</strong> per goderci la magia della Vigilia (<em>Nochebuena</em>): assisteremo alle colorate sfilate delle <em>Calendas</em> e mangeremo i tradizionali <em>buñuelos</em> dolci serviti su piatti di ceramica che, per buon auspicio, vanno lanciati e rotti per terra!</p>",
-                    images: ["https://images.unsplash.com/photo-1608670154625-f761bb22f87a?auto=format&fit=crop&w=400&q=80"],
-                    links: [
-                        { text: "🔗 Oaxaca Street Food Tour", url: "https://oaxacastreetfoodtour.com" },
-                        { text: "🔗 Orari Jardín Etnobotánico", url: "https://jardinoaxaca.mx/" },
-                        { text: "🔗 Orari Jardín Etnobotánico", url: "https://montealbanoaxaca.com/es/abrira-monte-alban-en-navidad/"}
+                    "id": "2-1",
+                    "dayName": "Giorno 4 (24 Dic)",
+                    "title": "La Vigilia: Street Food, Barocco e Calendas",
+                    "location": "Oaxaca Centro",
+                    "shortDesc": "Street Food Tour nei mercati, Jardín Etnobotánico e festeggiamenti natalizi serali allo Zócalo.",
+                    "fullDesc": "<p>Arrivo mattutino dal viaggio notturno. Iniziamo subito a tuffarci nella gastronomia locale con l'imperdibile <strong>Street Food Tour</strong> tra i banchi del <em>Mercado 20 de Noviembre</em>, assaggiando Tlayudas, memelas e i ricchi mole. A stomaco pieno, ammiriamo il barocco del <strong>Templo de Santo Domingo</strong> e, orari permettendo, ci immergiamo nel vicino <em>Jardín Etnobotánico</em> (ingresso solo guidato).</p><p>Nel pomeriggio riposo in hotel per recuperare le energie. La sera scendiamo in strada verso lo <strong>Zócalo</strong> per goderci la magia della Vigilia (<em>Nochebuena</em>): assisteremo alle colorate sfilate delle <em>Calendas</em> e mangeremo i tradizionali <em>buñuelos</em> dolci serviti su piatti di ceramica che, per buon auspicio, vanno lanciati e rotti per terra!</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1608670154625-f761bb22f87a?auto=format&fit=crop&w=400&q=80"
                     ],
-                    route: [
-                        { name: "Terminal ADO Oaxaca", coords: [17.0694, -96.7188], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Mercato 20 de Noviembre", coords: [17.0583, -96.7251], image: "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Zócalo di Oaxaca", coords: [17.0605, -96.7253], image: "https://images.unsplash.com/photo-1619441207753-481bf16279eb?auto=format&fit=crop&w=400&q=80" }
+                    "links": [
+                        {
+                            "text": "🔗 Oaxaca Street Food Tour",
+                            "url": "https://oaxacastreetfoodtour.com"
+                        },
+                        {
+                            "text": "🔗 Orari Jardín Etnobotánico",
+                            "url": "https://jardinoaxaca.mx/"
+                        },
+                        {
+                            "text": "🔗 Orari Jardín Etnobotánico",
+                            "url": "https://montealbanoaxaca.com/es/abrira-monte-alban-en-navidad/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Terminal ADO Oaxaca",
+                            "coords": [
+                                17.0694,
+                                -96.7188
+                            ],
+                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Mercato 20 de Noviembre",
+                            "coords": [
+                                17.0583,
+                                -96.7251
+                            ],
+                            "image": "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Zócalo di Oaxaca",
+                            "coords": [
+                                17.0605,
+                                -96.7253
+                            ],
+                            "image": "https://images.unsplash.com/photo-1619441207753-481bf16279eb?auto=format&fit=crop&w=400&q=80"
+                        }
                     ]
                 },
                 {
-                    id: "2-2",
-                    dayName: "Giorno 5 (25 Dic)",
-                    title: "Natale Zapoteco a Monte Albán e Street Art",
-                    location: "Monte Albán e Jalatlaco",
-                    shortDesc: "Mattinata tra le rovine precolombiane aperte 365 giorni l'anno e pomeriggio rilassato a Jalatlaco.",
-                    fullDesc: "<p>Dato che in città molte attività potrebbero essere chiuse o fare orario ridotto, è il momento perfetto per esplorare <strong>Monte Albán</strong> (i siti archeologici non chiudono mai). Arriveremo presto per evitare il sole e ammireremo l'incredibile spianata artificiale costruita sulla collina, cuore dell'antico impero Zapoteco, a soli 20-30 minuti di taxi o navetta dal centro.</p><p>Nel pomeriggio rientriamo in città per passeggiare nel pittoresco <strong>Barrio de Jalatlaco</strong>. È il quartiere più bohémien e antico della città, famoso per le strade acciottolate e i meravigliosi murales. Perfetto per bere un caffè messicano in totale relax celebrando il giorno di Natale.</p>",
-                    images: ["https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"],
-                    links: [
-                        { text: "🔗 Info Monte Albán INAH", url: "https://www.inah.gob.mx/zonas/103-zona-arqueologica-de-monte-alban" }
+                    "id": "2-2",
+                    "dayName": "Giorno 5 (25 Dic)",
+                    "title": "Natale Zapoteco a Monte Albán e Street Art",
+                    "location": "Monte Albán e Jalatlaco",
+                    "shortDesc": "Mattinata tra le rovine precolombiane aperte 365 giorni l'anno e pomeriggio rilassato a Jalatlaco.",
+                    "fullDesc": "<p>Dato che in città molte attività potrebbero essere chiuse o fare orario ridotto, è il momento perfetto per esplorare <strong>Monte Albán</strong> (i siti archeologici non chiudono mai). Arriveremo presto per evitare il sole e ammireremo l'incredibile spianata artificiale costruita sulla collina, cuore dell'antico impero Zapoteco, a soli 20-30 minuti di taxi o navetta dal centro.</p><p>Nel pomeriggio rientriamo in città per passeggiare nel pittoresco <strong>Barrio de Jalatlaco</strong>. È il quartiere più bohémien e antico della città, famoso per le strade acciottolate e i meravigliosi murales. Perfetto per bere un caffè messicano in totale relax celebrando il giorno di Natale.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
-                    route: [
-                        { name: "Sito Archeologico Monte Albán", coords: [17.0439, -96.7676], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Barrio de Jalatlaco", coords: [17.0667, -96.7138], image: "https://images.unsplash.com/photo-1634568800171-cb4be1b898be?auto=format&fit=crop&w=400&q=80" }
+                    "links": [
+                        {
+                            "text": "🔗 Info Monte Albán INAH",
+                            "url": "https://www.inah.gob.mx/zonas/103-zona-arqueologica-de-monte-alban"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Sito Archeologico Monte Albán",
+                            "coords": [
+                                17.0439,
+                                -96.7676
+                            ],
+                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Barrio de Jalatlaco",
+                            "coords": [
+                                17.0667,
+                                -96.7138
+                            ],
+                            "image": "https://images.unsplash.com/photo-1634568800171-cb4be1b898be?auto=format&fit=crop&w=400&q=80"
+                        }
                     ]
                 },
                 {
-                    id: "2-3",
-                    dayName: "Giorno 6 (26 Dic)",
-                    title: "Cascate, Mezcal e Pedalate Notturne",
-                    location: "Valle dell'Est & Oaxaca Centro",
-                    shortDesc: "Tour fuori porta tra bellezze naturali e rovine, seguito da un festoso tour serale in bicicletta per le strade di Oaxaca.",
-                    fullDesc: "<p>Oggi noleggiamo un'auto o partecipiamo a un tour condiviso verso est. Prima tappa: l'incredibile <strong>Árbol del Tule</strong>, un enorme e millenario cipresso di Montezuma dal tronco più largo del mondo. Proseguiamo verso <strong>Mitla</strong>, il secondo sito archeologico più importante, unico per i complessi e affascinanti mosaici geometrici che adornano i suoi palazzi.</p><p>Il pezzo forte naturalistico è <strong>Hierve el Agua</strong>: spettacolari cascate pietrificate affacciate su una gola vertiginosa. Chi vorrà potrà tuffarsi nelle piscine naturali sulfuree in cima. Sulla via del ritorno a Oaxaca, chiudiamo la giornata in un <em>palenque</em> per scoprire come l'agave si trasforma nel pungente <strong>Mezcal artigianale</strong>.</p><p><strong>Serata:</strong> Rientro previsto verso le 17:00 / 18:00. Avremo il tempo per una doccia rigenerante e una cena leggera a base di tacos veloci (verso le 19:00). Alle 20:45 ci faremo trovare sulla spianata del <strong>Templo de Santo Domingo</strong> per noleggiare le biciclette con <em>Mundo Ceiba</em>. Essendo sabato, ci godremo l'ultima notte oaxaqueña pedalando a suon di musica tra le vie illuminate a festa!</p>", images: ["https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"],
-                    links: [
-                        { text: "🔗 Ecobnb Hierve el Agua", url: "https://ecobnb.it/blog/2021/11/hierve-el-agua-cascate-pietrificate-messico/" },
-                        { text: "🔗 Hierve el Agua", url: "https://www.hierveelagua.org/" },
-                        { text: "🔗 Mundo Ceiba (Tour in Bici)", url: "https://www.facebook.com/mundoceibaoaxaca/" }
+                    "id": "2-3",
+                    "dayName": "Giorno 6 (26 Dic)",
+                    "title": "Cascate, Mezcal e Pedalate Notturne",
+                    "location": "Valle dell'Est & Oaxaca Centro",
+                    "shortDesc": "Tour fuori porta tra bellezze naturali e rovine, seguito da un festoso tour serale in bicicletta per le strade di Oaxaca.",
+                    "fullDesc": "<p>Oggi noleggiamo un'auto o partecipiamo a un tour condiviso verso est. Prima tappa: l'incredibile <strong>Árbol del Tule</strong>, un enorme e millenario cipresso di Montezuma dal tronco più largo del mondo. Proseguiamo verso <strong>Mitla</strong>, il secondo sito archeologico più importante, unico per i complessi e affascinanti mosaici geometrici che adornano i suoi palazzi.</p><p>Il pezzo forte naturalistico è <strong>Hierve el Agua</strong>: spettacolari cascate pietrificate affacciate su una gola vertiginosa. Chi vorrà potrà tuffarsi nelle piscine naturali sulfuree in cima. Sulla via del ritorno a Oaxaca, chiudiamo la giornata in un <em>palenque</em> per scoprire come l'agave si trasforma nel pungente <strong>Mezcal artigianale</strong>.</p><p><strong>Serata:</strong> Rientro previsto verso le 17:00 / 18:00. Avremo il tempo per una doccia rigenerante e una cena leggera a base di tacos veloci (verso le 19:00). Alle 20:45 ci faremo trovare sulla spianata del <strong>Templo de Santo Domingo</strong> per noleggiare le biciclette con <em>Mundo Ceiba</em>. Essendo sabato, ci godremo l'ultima notte oaxaqueña pedalando a suon di musica tra le vie illuminate a festa!</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
                     ],
-                    route: [
-                        { name: "Árbol del Tule", coords: [17.0468, -96.6364], image: "https://images.unsplash.com/photo-1628105754593-90b63b9fcebf?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Sito Archeologico di Mitla", coords: [16.9234, -96.3598], image: "https://images.unsplash.com/photo-1578330744654-205128ff3a49?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Hierve el Agua", coords: [16.8647, -96.2764], image: "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Ritrovo Bici Mundo Ceiba", coords: [17.0664, -96.7214], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" }
-                    ]
-                },
-                {
-                    id: "2-4",
-                    dayName: "Giorno 7 (27 Dic)",
-                    title: "Dalle Montagne all'Oceano",
-                    location: "Puerto Escondido",
-                    shortDesc: "Viaggio panoramico mattutino sulla nuova autostrada e arrivo sulla costa del Pacifico per ceviche e mare.",
-                    fullDesc: "<p>Dopo aver ricaricato le batterie la notte precedente, partiamo la mattina (ore 8:00 o 9:00) dal terminal di Oaxaca a bordo di un comodo autobus ADO. Sfrutteremo la nuovissima autostrada, che riduce drasticamente i tempi di percorrenza e regala paesaggi diurni spettacolari mentre attraversiamo la Sierra Sur per scendere verso la costa.</p><p>Arriveremo a <strong>Puerto Escondido</strong> prima di mezzogiorno: freschi e riposati! L'obiettivo del pomeriggio è uno solo: abbandonare le scarpe, sentire la sabbia sotto i piedi in spiagge come <em>Carrizalillo</em> o <em>Zicatela</em>, ordinare un freschissimo <em>ceviche</em> e goderci il primo, maestoso tramonto sulle onde dell'Oceano Pacifico.</p>",
-                    images: ["https://images.unsplash.com/photo-1579685651478-f32b13c38cb6?auto=format&fit=crop&w=400&q=80"],
-                    links: [
-                        { text: "🔗 Biglietti Bus ADO (Oaxaca-Puerto Escondido)", url: "https://www.ado.com.mx" },
-                        { text: "🔗 Guida Spiagge Puerto Escondido", url: "https://www.mexicodesconocido.com.mx/puerto-escondido.html" }
+                    "links": [
+                        {
+                            "text": "🔗 Ecobnb Hierve el Agua",
+                            "url": "https://ecobnb.it/blog/2021/11/hierve-el-agua-cascate-pietrificate-messico/"
+                        },
+                        {
+                            "text": "🔗 Hierve el Agua",
+                            "url": "https://www.hierveelagua.org/"
+                        },
+                        {
+                            "text": "🔗 Mundo Ceiba (Tour in Bici)",
+                            "url": "https://www.facebook.com/mundoceibaoaxaca/"
+                        }
                     ],
-                    route: [
-                        { name: "Terminal ADO Oaxaca", coords: [17.0694, -96.7188], image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80" },
-                        { name: "Playa Carrizalillo, Puerto Escondido", coords: [15.8643, -97.0764], image: "https://images.unsplash.com/photo-1579685651478-f32b13c38cb6?auto=format&fit=crop&w=400&q=80" }
+                    "route": [
+                        {
+                            "name": "Árbol del Tule",
+                            "coords": [
+                                17.0468,
+                                -96.6364
+                            ],
+                            "image": "https://images.unsplash.com/photo-1628105754593-90b63b9fcebf?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Sito Archeologico di Mitla",
+                            "coords": [
+                                16.9234,
+                                -96.3598
+                            ],
+                            "image": "https://images.unsplash.com/photo-1578330744654-205128ff3a49?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Hierve el Agua",
+                            "coords": [
+                                16.8647,
+                                -96.2764
+                            ],
+                            "image": "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Ritrovo Bici Mundo Ceiba",
+                            "coords": [
+                                17.0664,
+                                -96.7214
+                            ],
+                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
+                        }
                     ]
                 }
             ],
-            mapFocus: { coords: [17.06, -96.72], zoom: 14 }
+            "mapFocus": {
+                "coords": [
+                    17.06,
+                    -96.72
+                ],
+                "zoom": 14
+            }
+        },
+        {
+            "id": 6,
+            "navTitle": "Sierra e Pacifico",
+            "navSubtitle": "Trekking, poi mare",
+            "badge": "27 Dic – 2 Gen · Caminos Reales e San Agustinillo",
+            "locationText": "Sierra Norte · Pueblos Mancomunados · Costa di Oaxaca",
+            "title": "40 chilometri fra i villaggi zapotechi, poi l'oceano",
+            "description": "Dal 27 al 29 dicembre il trekking comunitario Caminos Reales (3 giorni e 2 notti) tra San Miguel Amatlán, Latuvi e Benito Juárez. Rientro a Oaxaca il 29 e quattro notti a San Agustinillo dal 30 dicembre al 3 gennaio.",
+            "images": [
+                "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+            ],
+            "links": [
+                {
+                    "text": "🥾 Pacchetto Caminos Reales · Sierra Norte",
+                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                },
+                {
+                    "text": "🌲 Operatore Expediciones Sierra Norte",
+                    "url": "https://www.sierranorte.org.mx/"
+                },
+                {
+                    "text": "🏖️ San Agustinillo · informazioni locali",
+                    "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
+                },
+                {
+                    "text": "🚌 ADO · spostamento verso la costa",
+                    "url": "https://www.ado.com.mx/"
+                }
+            ],
+            "transferPlan": {
+                "eyebrow": "27–29 dicembre 2026 · Pacchetto scelto, NON ancora prenotato",
+                "title": "Caminos Reales · 3 giorni / 2 notti",
+                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · 40 km di trekking",
+                "cost": "Da 6.459 MXN a persona · da 12.918 MXN in due",
+                "duration": "3 giorni · circa 40 km complessivi · difficoltà alta",
+                "legs": [
+                    {
+                        "day": "Dom 27 dic",
+                        "time": "~12 km · ~4 ore",
+                        "from": "Oaxaca → San Miguel Amatlán",
+                        "to": "Las Minas → Amatlán",
+                        "operator": "Trasferimento con organizzatore + guida locale",
+                        "duration": "~2 ore in auto da Oaxaca, poi trekking",
+                        "price": "Nel pacchetto, da riconfermare",
+                        "note": "Percorso tra sentieri, resti delle miniere e antiche haciendas; pranzo con trota, sala dei codici e della storia locale, cena e prima notte in cabaña a San Miguel Amatlán."
+                    },
+                    {
+                        "day": "Lun 28 dic",
+                        "time": "~16 km · 5–6 ore",
+                        "from": "San Miguel Amatlán",
+                        "to": "Santa Marta Latuvi",
+                        "operator": "Trekking sul Camino Real zapoteco",
+                        "duration": "Sentiero storico tra boschi e villaggi",
+                        "price": "Nel pacchetto, da riconfermare",
+                        "note": "Giornata più lunga del trekking lungo gli antichi collegamenti fra i Pueblos Mancomunados. Pernottamento in cabaña a Latuvi."
+                    },
+                    {
+                        "day": "Mar 29 dic",
+                        "time": "~12 km · ~4,5 ore",
+                        "from": "Santa Marta Latuvi",
+                        "to": "Benito Juárez → Oaxaca",
+                        "operator": "Trekking con guida + rientro organizzato",
+                        "duration": "Salita verso circa 2.900 m",
+                        "price": "Nel pacchetto, da riconfermare",
+                        "note": "Ultima tappa verso Benito Juárez, belvedere e ponte sospeso. Ritorno a Oaxaca con il gruppo/organizzatore; notte del 29 dicembre in città, fuori dalle 2 notti in cabaña."
+                    }
+                ],
+                "warning": "Confermare disponibilità del 27–29 dicembre, prezzo definitivo (6.459 MXN è una quota 'da' per persona), punto/orario di partenza e rientro a Oaxaca, inclusioni effettive di trasporto, pasti, cabanas e assicurazione, dimensione del gruppo e lingua della guida. Circa 40 km in 3 giorni, sentieri montani in quota: verificare difficoltà, equipaggiamento, condizioni fisiche e temperature di dicembre. Il pacchetto è stato scelto come proposta, non risulta acquistato.",
+                "sources": [
+                    {
+                        "text": "Pacchetto ufficiale Sierra Norte",
+                        "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                    },
+                    {
+                        "text": "Contatti e informazioni Expediciones Sierra Norte",
+                        "url": "https://www.sierranorte.org.mx/"
+                    }
+                ]
+            },
+            "basecamp": {
+                "zone": "27–28 dic: cabañas Sierra Norte · 29 dic: Oaxaca · 30 dic–2 gen: San Agustinillo",
+                "hotelIdea": "2 notti in cabañas comunitarie incluse nel programma; hotel a Oaxaca il 29; pousada a San Agustinillo per 4 notti",
+                "why": "Il 29 si torna a Oaxaca dopo il trekking, senza forzare un trasferimento serale fino al Pacifico. Il 30 si scende al mare per quattro notti di recupero e natura.",
+                "tags": [
+                    "🥾 40 km / 3 giorni",
+                    "🌲 Comunità zapoteche",
+                    "🌊 4 notti Pacifico"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚐",
+                        "title": "27–29 · trasporto Sierra Norte",
+                        "desc": "Partenza e ritorno a Oaxaca previsti dall'operatore: da confermare in preventivo."
+                    },
+                    {
+                        "icon": "🚌",
+                        "title": "30 dic · Oaxaca → costa",
+                        "desc": "Autobus verso Pochutla / costa; ultimo tratto in taxi o colectivo per San Agustinillo."
+                    },
+                    {
+                        "icon": "🛺",
+                        "title": "3 gen · San Agustinillo → Pochutla",
+                        "desc": "Taxi o colectivo per AltaMar delle 16:15: dettagli nella scheda Chiapas."
+                    }
+                ]
+            },
+            "food": "Sapori comunitari in Sierra Norte, cucina di montagna e trota durante il trekking; dal 30 dicembre pesce fresco, caffè e tramonti sul Pacifico.",
+            "budget": {
+                "total": "Da 12.918 MXN in due · pacchetto, più soggiorni e trasferimenti",
+                "spent": "0 € registrati · pacchetto non prenotato",
+                "items": [
+                    {
+                        "name": "Caminos Reales 3D/2N · 2 persone",
+                        "cost": "Da 12.918 MXN (6.459 cad.)"
+                    },
+                    {
+                        "name": "Notte Oaxaca · 29 dic",
+                        "cost": "Da prenotare"
+                    },
+                    {
+                        "name": "Oaxaca → San Agustinillo · 30 dic",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Pousada San Agustinillo · 30 dic–3 gen, 4 notti",
+                        "cost": "Date da aggiornare"
+                    },
+                    {
+                        "name": "Escursioni costiere / pasti extra",
+                        "cost": "Facoltativi"
+                    }
+                ]
+            },
+            "reservations": [
+                {
+                    "name": "Caminos Reales, 27–29 dic (Sierra Norte)",
+                    "status": "Scelto · da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Notte a Oaxaca · 29 dic",
+                    "status": "Da prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Trasferimento Oaxaca → costa · 30 dic",
+                    "status": "Da organizzare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Pousada San Agustinillo · 30 dic–3 gen",
+                    "status": "Prenotazione da modificare",
+                    "type": "warning"
+                }
+            ],
+            "days": [
+                {
+                    "id": "6-dec27",
+                    "dayName": "Giorno 7 (27 Dic)",
+                    "title": "Caminos Reales I: miniere storiche e Amatlán",
+                    "location": "Oaxaca → San Miguel Amatlán · Las Minas",
+                    "shortDesc": "Partenza da Oaxaca con l'organizzatore, circa 12 km di trekking fra le miniere e le antiche haciendas; notte in cabaña.",
+                    "fullDesc": "<p><strong>Inizia Caminos Reales</strong>, il pacchetto <strong>3 giorni / 2 notti</strong> di Expediciones Sierra Norte nei Pueblos Mancomunados. Ritrovo a Oaxaca (luogo e ora da confermare) e trasferimento organizzato verso <strong>San Miguel Amatlán</strong>, indicativamente <strong>2 ore</strong>.</p><p><strong>Trekking del giorno: circa 12 km / 4 ore</strong>, fra antichi sentieri, miniere e resti delle haciendas. La proposta include la zona de <em>Las Minas</em>, pranzo con trota e visita alla sala dedicata ai codici e alla storia locale. Attività e sequenza vanno riconfermate con la guida.</p><p>Prima notte in <strong>cabaña a San Miguel Amatlán</strong>. Si dorme in montagna: portare indumenti caldi a strati, scarpe da trekking già collaudate, acqua e una piccola borsa per i tre giorni.</p><p><strong>Pacchetto selezionato, non ancora prenotato.</strong> Prezzo pubblicato <strong>da 6.459 MXN per persona</strong> (da 12.918 MXN in due); chiedere conferma per le date 27–29 dicembre e delle inclusioni.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
+                    ],
+                    "links": [
+                        {
+                            "text": "🥾 Programma ufficiale · Caminos Reales",
+                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                        },
+                        {
+                            "text": "🌲 Turismo Sierra Norte",
+                            "url": "https://www.sierranorte.org.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Oaxaca de Juárez · punto d'incontro da confermare",
+                            "coords": [
+                                17.0605,
+                                -96.7251
+                            ]
+                        },
+                        {
+                            "name": "San Miguel Amatlán · Pueblos Mancomunados",
+                            "coords": [
+                                17.27556,
+                                -96.47167
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6-dec28",
+                    "dayName": "Giorno 8 (28 Dic)",
+                    "title": "Caminos Reales II: sul Camino Real da Amatlán a Latuvi",
+                    "location": "San Miguel Amatlán → Santa Marta Latuvi",
+                    "shortDesc": "Tappa più lunga: circa 16 km / 5–6 ore lungo un antico Camino Real zapoteco; seconda notte in cabaña.",
+                    "fullDesc": "<p>La giornata più lunga di <strong>Caminos Reales</strong>: lasciamo San Miguel Amatlán e percorriamo un antico <strong>Camino Real zapoteco</strong> in direzione di <strong>Santa Marta Latuvi</strong>, fra boschi, rilievi e percorsi utilizzati storicamente dalle comunità serrane.</p><p><strong>Circa 16 km / 5–6 ore di cammino</strong>, con guida del programma. Il dislivello e le condizioni del sentiero vanno confermati dall'organizzatore, considerando che siamo in zona montana.</p><p>Arrivo a <strong>Latuvi</strong>, riposo, cena comunitaria secondo il programma e <strong>seconda notte in cabaña</strong>. Questa è una tappa di trekking a tutti gli effetti: nessun trasferimento aggiuntivo al mare o a Oaxaca.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
+                    ],
+                    "links": [
+                        {
+                            "text": "🥾 Pacchetto Caminos Reales",
+                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "San Miguel Amatlán · Pueblos Mancomunados",
+                            "coords": [
+                                17.27556,
+                                -96.47167
+                            ]
+                        },
+                        {
+                            "name": "Santa Marta Latuvi",
+                            "coords": [
+                                17.2625,
+                                -96.49306
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6-dec29",
+                    "dayName": "Giorno 9 (29 Dic)",
+                    "title": "Caminos Reales III: Benito Juárez e rientro a Oaxaca",
+                    "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
+                    "shortDesc": "Ultimi 12 km verso Benito Juárez (circa 4,5 ore), belvedere e ponte sospeso; rientro con l'organizzatore e notte a Oaxaca.",
+                    "fullDesc": "<p>Terzo e ultimo giorno del trekking: <strong>Santa Marta Latuvi → Benito Juárez</strong>, lungo una tappa di circa <strong>12 km / 4 ore e mezza</strong>. Il percorso sale fino alla zona dei <strong>2.900 metri</strong> e termina con i panorami montani, il belvedere e il caratteristico <strong>ponte sospeso</strong>, secondo l'itinerario indicato dall'organizzatore.</p><p>Il trasporto previsto dal pacchetto ci riporta a <strong>Oaxaca de Juárez</strong>; confermare l'orario preciso di rientro al momento della prenotazione.</p><p><strong>Pernottamento a Oaxaca il 29 dicembre</strong> (hotel separato, da prenotare). Dopo circa <strong>40 km di trekking in tre giorni</strong>, evitiamo di aggiungere una lunga corsa fino alla costa la sera stessa: il trasferimento a San Agustinillo è previsto per il 30 dicembre.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
+                    ],
+                    "links": [
+                        {
+                            "text": "🥾 Pacchetto Sierra Norte",
+                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Santa Marta Latuvi",
+                            "coords": [
+                                17.2625,
+                                -96.49306
+                            ]
+                        },
+                        {
+                            "name": "Benito Juárez · Pueblos Mancomunados",
+                            "coords": [
+                                17.18667,
+                                -96.51389
+                            ]
+                        },
+                        {
+                            "name": "Oaxaca de Juárez · punto d'incontro da confermare",
+                            "coords": [
+                                17.0605,
+                                -96.7251
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6-dec30",
+                    "dayName": "Giorno 10 (30 Dic)",
+                    "title": "Dalle montagne al Pacifico: San Agustinillo",
+                    "location": "Oaxaca → zona Pochutla → San Agustinillo",
+                    "shortDesc": "Trasferimento verso il Pacifico, check-in in pousada e prima serata davanti all'oceano.",
+                    "fullDesc": "<p>La mattina lasciamo Oaxaca e scendiamo verso la costa del Pacifico per raggiungere <strong>San Agustinillo</strong>, tranquillo paese tra Mazunte e Zipolite. Pianificare una corsa interurbana verso la zona di <strong>San Pedro Pochutla</strong> e l'ultimo tratto in taxi o colectivo, oppure un trasferimento diretto: <strong>orari, percorso e tempi precisi sono ancora da verificare</strong> per il 30 dicembre.</p><p>Arrivo, check-in nella <strong>pousada a San Agustinillo</strong> e pomeriggio senza impegni, ideale per recuperare dal trekking. Prima delle <strong>quattro notti sulla costa</strong>: 30 e 31 dicembre, 1 e 2 gennaio, con partenza il 3.</p><p><strong>Prenotazione alloggio già esistente ma modificabile:</strong> ricordarsi di adeguare le date al nuovo programma <strong>30 dicembre 2026 – 3 gennaio 2027</strong>. Non considerare la modifica già effettuata.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                    ],
+                    "links": [
+                        {
+                            "text": "🏖️ San Agustinillo · guida locale",
+                            "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
+                        },
+                        {
+                            "text": "🚌 Autobus ADO",
+                            "url": "https://www.ado.com.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Oaxaca de Juárez · punto d'incontro da confermare",
+                            "coords": [
+                                17.0605,
+                                -96.7251
+                            ]
+                        },
+                        {
+                            "name": "San Pedro Pochutla",
+                            "coords": [
+                                15.744,
+                                -96.466
+                            ]
+                        },
+                        {
+                            "name": "Playa San Agustinillo",
+                            "coords": [
+                                15.6659,
+                                -96.5438
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6-dec31-jan02",
+                    "dayName": "Giorni 11–13 (31 Dic – 2 Gen)",
+                    "title": "San Agustinillo: Capodanno e tre giorni sul Pacifico",
+                    "location": "San Agustinillo · Mazunte · Punta Cometa",
+                    "shortDesc": "Mare, relax e piccole escursioni facoltative: Mazunte, Punta Cometa e La Ventanilla senza cambiare alloggio.",
+                    "fullDesc": "<p><strong>31 dicembre, 1 e 2 gennaio</strong>: restiamo nella stessa pousada a <strong>San Agustinillo</strong>, senza spostamenti impegnativi. Dopo le tappe di Sierra Norte, la priorità è godersi la costa, i tramonti e il ritmo dei piccoli villaggi del Pacifico.</p><p>Escursioni <strong>solo facoltative</strong>: passeggiata a <strong>Mazunte</strong>, tramonto a <strong>Punta Cometa</strong> se le condizioni del sentiero lo permettono, oppure un'esperienza comunitaria fra mangrovie e fauna a <strong>La Ventanilla</strong>. Per Capodanno scegliamo una serata semplice in zona, senza trasferimenti lontani.</p><p><strong>2 gennaio:</strong> ultime ore di relax e verifica pratica del trasferimento del giorno seguente. Il <strong>3 gennaio</strong> è previsto taxi/colectivo per <strong>Pochutla</strong>, AltaMar delle <strong>16:15</strong> per Salina Cruz e ADO notturno delle <strong>23:00</strong> verso Villahermosa: gli orari e i terminal restano da riconfermare, come dettagliato nella scheda <strong>Chiapas</strong>.</p>",
+                    "images": [
+                        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                    ],
+                    "links": [
+                        {
+                            "text": "🏖️ San Agustinillo · informazioni",
+                            "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
+                        },
+                        {
+                            "text": "🚌 ADO · trasferimento 3 gennaio",
+                            "url": "https://www.ado.com.mx/"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Playa San Agustinillo",
+                            "coords": [
+                                15.6659,
+                                -96.5438
+                            ]
+                        },
+                        {
+                            "name": "Mazunte",
+                            "coords": [
+                                15.6648,
+                                -96.554
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mapFocus": {
+                "coords": [
+                    17.24,
+                    -96.49
+                ],
+                "zoom": 9
+            }
         },
         {
             "id": 3,
@@ -976,8 +1622,7 @@ const tripData = {
             }
         }
     ],
-    // Aggiornato il riferimento da "week" ad "areaId"
-    locations: [
+    "locations": [
         {
             "areaId": 1,
             "name": "Città del Messico e Teotihuacán",
@@ -995,6 +1640,42 @@ const tripData = {
                 -96.7237
             ],
             "days": "24–26 Dic"
+        },
+        {
+            "areaId": 6,
+            "name": "San Miguel Amatlán · Caminos Reales",
+            "coords": [
+                17.27556,
+                -96.47167
+            ],
+            "days": "27 Dic"
+        },
+        {
+            "areaId": 6,
+            "name": "Santa Marta Latuvi",
+            "coords": [
+                17.2625,
+                -96.49306
+            ],
+            "days": "28 Dic"
+        },
+        {
+            "areaId": 6,
+            "name": "Benito Juárez · Sierra Norte",
+            "coords": [
+                17.18667,
+                -96.51389
+            ],
+            "days": "29 Dic"
+        },
+        {
+            "areaId": 6,
+            "name": "Playa San Agustinillo · costa del Pacifico",
+            "coords": [
+                15.6659,
+                -96.5438
+            ],
+            "days": "30 Dic – 3 Gen"
         },
         {
             "areaId": 3,
@@ -1068,7 +1749,8 @@ const tripData = {
             ],
             "days": "16 Gen, volo 21:00"
         }
-    ]};
+    ]
+};
 
 const flightData = {
     // ... [MANTIENI IL TUO OGGETTO flightData INVARIATO] ...
