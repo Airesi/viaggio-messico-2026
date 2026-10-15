@@ -7,10 +7,10 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Riepilogo Booking aggiornato al 15 ottobre 2026: 4 prenotazioni confermate, 2 adulti",
-            "totalEuro": 923,
-            "paidStatus": "Prezzi confermati per le prenotazioni, non prova di addebito o pagamento",
-            "validTotalEuro": 923,
+            "source": "Riepilogo Booking aggiornato al 15 ottobre 2026: 5 prenotazioni confermate, 2 adulti",
+            "totalEuro": 1089,
+            "paidStatus": "Importi delle 5 prenotazioni confermate, non prova di pagamento o addebito",
+            "validTotalEuro": 1089,
             "warning": "",
             "items": [
                 {
@@ -52,6 +52,16 @@ const tripData = {
                     "cancellation": "Cancellazione gratuita",
                     "status": "Confermato",
                     "areaId": 6
+                },
+                {
+                    "name": "Los Susurros Casa Monkey Rescue and Rehabilitation Sanctuary",
+                    "city": "Palenque",
+                    "checkin": "2027-01-04",
+                    "checkout": "2027-01-07",
+                    "totalEuro": 166,
+                    "cancellation": "Cancellazione gratuita",
+                    "status": "Confermato",
+                    "areaId": 3
                 }
             ]
         }
@@ -981,7 +991,7 @@ const tripData = {
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
             "title": "Palenque: giungla, città maya e cascate",
-            "description": "Arrivo dalla costa del Pacifico il 4 gennaio; il 5 esploriamo le rovine maya di Palenque, il 6 le Cascadas Roberto Barrios. Il 7 si prosegue verso Bacalar con il Tren Maya.",
+            "description": "Il 4 gennaio arrivo dalla costa del Pacifico e check-in al Los Susurros (4–7 gennaio, 3 notti, €166 per due, prenotazione confermata). Il 5 visitiamo le rovine maya e il 6 le Cascadas Roberto Barrios; il 7 partiamo per Bacalar con il Tren Maya.",
             "images": [
                 "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
@@ -1109,7 +1119,7 @@ const tripData = {
                     "title": "Da Villahermosa a Palenque: arrivo nella giungla",
                     "location": "Villahermosa · Palenque",
                     "shortDesc": "ADO arriva alle 08:55, bus verso Palenque alle 10:30 e arrivo previsto alle 13:00.",
-                    "fullDesc": "<p><strong>08:55</strong> · Arrivo del bus ADO a <strong>Villahermosa</strong> presso <strong>Av. Francisco Javier Mina 297</strong>, angolo Lino Merino e Lamberto Castellanos Rivera.</p><p><strong>10:30–13:00</strong> · Collegamento diretto <strong>Villahermosa Tabasco Central → Central de Autobuses ADO Palenque</strong> mostrato da Rome2Rio, durata <strong>2 h 30 min</strong> e prezzo indicativo <strong>7 € a persona</strong>. La coincidenza teorica è di <strong>1 h 35 min</strong>, ma <strong>i terminal potrebbero essere differenti</strong>: verificare gli indirizzi e prevedere l'eventuale breve trasferimento.</p><p><strong>13:00</strong> · Arrivo previsto a <strong>Palenque</strong>. Sistemazione e pomeriggio tranquillo dopo il lungo viaggio. <strong>5 gennaio</strong>: rovine di Palenque; <strong>6 gennaio</strong>: Cascadas Roberto Barrios. Successivo collegamento verso il Tren Maya da confermare.</p><p><strong>Budget stimato per due:</strong> circa <strong>135–150 €</strong> per i tre autobus principali, esclusi San Agustinillo–Pochutla e eventuali taxi tra terminal. Prezzi non bloccati e orari da riconfermare.</p>",
+                    "fullDesc": "<p><strong>08:55</strong> · Arrivo del bus ADO a <strong>Villahermosa</strong> presso <strong>Av. Francisco Javier Mina 297</strong>, angolo Lino Merino e Lamberto Castellanos Rivera.</p><p><strong>10:30–13:00</strong> · Collegamento diretto <strong>Villahermosa Tabasco Central → Central de Autobuses ADO Palenque</strong> mostrato da Rome2Rio, durata <strong>2 h 30 min</strong> e prezzo indicativo <strong>7 € a persona</strong>. La coincidenza teorica è di <strong>1 h 35 min</strong>, ma <strong>i terminal potrebbero essere differenti</strong>: verificare gli indirizzi e prevedere l'eventuale breve trasferimento.</p><p><strong>13:00</strong> · Arrivo previsto a <strong>Palenque</strong> e trasferimento in taxi o altro mezzo da organizzare al <strong>Los Susurros Casa Monkey Rescue and Rehabilitation Sanctuary, sulla Carretera Palenque-Ruinas</strong>. Booking conferma <strong>4–7 gennaio, 3 notti per due persone, €166 e cancellazione gratuita</strong>. Chiedere alla struttura check-in e indicazioni per il transfer; pomeriggio tranquillo dopo il lungo viaggio. <strong>5 gennaio</strong>: rovine di Palenque; <strong>6 gennaio</strong>: Cascadas Roberto Barrios. Successivo collegamento verso il Tren Maya da confermare.</p><p><strong>Budget stimato per due:</strong> circa <strong>135–150 €</strong> per i tre autobus principali, esclusi San Agustinillo–Pochutla e eventuali taxi tra terminal. Prezzi non bloccati e orari da riconfermare.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1144,7 +1154,7 @@ const tripData = {
                     "title": "Palenque: la città maya nascosta nella giungla",
                     "location": "Zona archeologica di Palenque",
                     "shortDesc": "Giornata dedicata al sito UNESCO: Tempio delle Iscrizioni, Palazzo, complessi cerimoniali e sentieri nella foresta.",
-                    "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p>",
+                    "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p><p><strong>Base:</strong> Los Susurros, confermato fino al 7 gennaio. Verificare con la struttura il modo più semplice di raggiungere l'ingresso del sito archeologico, senza dare per scontato che sia raggiungibile a piedi.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1179,7 +1189,7 @@ const tripData = {
                     "title": "Cascadas Roberto Barrios: acqua turchese e foresta",
                     "location": "Roberto Barrios · Palenque",
                     "shortDesc": "Escursione alle cascate e alle piscine naturali nella giungla, con tempo per fermarsi e fare il bagno dove consentito.",
-                    "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p>",
+                    "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p><p><strong>Pernottamento:</strong> ultima notte al Los Susurros. Verificare con l'alloggio un taxi per la partenza del Tren Maya il 7 gennaio e le tempistiche per raggiungere la stazione.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1206,28 +1216,41 @@ const tripData = {
                 }
             ],
             "budget": {
-                "total": "135–150 € + trasferimenti locali · 2 persone",
-                "spent": "0 € · non prenotato",
+                "total": "€ 166 hotel confermato + ~135–150 € autobus indicativi + attività",
+                "spent": "Pagamento hotel non verificato; bus ancora non prenotati",
                 "items": [
                     {
+                        "name": "Los Susurros · 4–7 gen · 3 notti / 2 persone",
+                        "cost": "€ 166 · confermato"
+                    },
+                    {
                         "name": "Pochutla → Salina Cruz (AltaMar)",
-                        "cost": "26–40 € / 2"
+                        "cost": "26–40 € / 2 · indicativi"
                     },
                     {
                         "name": "Salina Cruz → Villahermosa (ADO)",
-                        "cost": "1.928 MXN / 2"
+                        "cost": "1.928 MXN / 2 · da prenotare"
                     },
                     {
                         "name": "Villahermosa → Palenque",
-                        "cost": "~14 € / 2"
+                        "cost": "~14 € / 2 · indicativi"
                     },
                     {
-                        "name": "Taxi/colectivo iniziale + cambi terminal",
+                        "name": "Taxi/colectivo + trasferimenti hotel",
+                        "cost": "Da quotare"
+                    },
+                    {
+                        "name": "Palenque sito archeologico / Roberto Barrios",
                         "cost": "Da quotare"
                     }
                 ]
             },
             "reservations": [
+                {
+                    "name": "Los Susurros · Palenque · 4–7 gen · € 166",
+                    "status": "Confermato",
+                    "type": "success"
+                },
                 {
                     "name": "AltaMar · 3 gen 16:15",
                     "status": "Da verificare",
@@ -1260,7 +1283,35 @@ const tripData = {
                     -92.045
                 ],
                 "zoom": 9
-            }
+            },
+            "basecamp": {
+                "zone": "Palenque · strada Palenque-Ruinas",
+                "hotelIdea": "Los Susurros Casa Monkey Rescue and Rehabilitation Sanctuary · 4–7 gennaio 2027 · 3 notti per 2 adulti · € 166 su Booking · cancellazione gratuita",
+                "why": "Alloggio immerso nella natura lungo la strada per il sito archeologico. Organizzare taxi/transfer dall'arrivo in autobus a Palenque il 4, verso Roberto Barrios il 6 e per la stazione Tren Maya il 7. L'accesso potrebbe richiedere un mezzo: verificare con la struttura.",
+                "tags": [
+                    "🐒 Santuario di recupero primati",
+                    "🌿 Foresta tropicale",
+                    "✅ 3 notti confermate"
+                ],
+                "transports": [
+                    {
+                        "icon": "🚕",
+                        "title": "4 gen · autobus → hotel",
+                        "desc": "Arrivo a Palenque indicativamente alle 13:00, concordare eventuale taxi e deposito bagagli prima del check-in."
+                    },
+                    {
+                        "icon": "🏛️",
+                        "title": "5 gen · rovine maya",
+                        "desc": "Alloggio sulla strada per le rovine; verificare mezzi e tragitto con la struttura."
+                    },
+                    {
+                        "icon": "🚆",
+                        "title": "7 gen · Tren Maya",
+                        "desc": "Verificare transfer e orario di partenza dalla struttura per la stazione, non necessariamente vicina."
+                    }
+                ]
+            },
+            "food": "Per colazioni e cene chiedere disponibilità in struttura o organizzare taxi per Palenque: l'hotel è immerso nel verde, non in pieno centro."
         },
         {
             "id": 4,
