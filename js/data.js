@@ -286,74 +286,100 @@ const tripData = {
         {
             "id": 2,
             "navTitle": "Oaxaca",
-            "navSubtitle": "La città e le valli",
-            "badge": "24–26 Dic • Tradizioni, valli e Monte Albán",
-            "locationText": "Oaxaca & Dintorni",
+            "navSubtitle": "Vigilia e Natale",
+            "badge": "24–25 Dic · Monte Albán e Natale tra le valli",
+            "locationText": "Oaxaca de Juárez, Monte Albán e Valle di Tlacolula",
             "title": "Il Cuore Zapoteco e Gastronomico",
-            "description": "Esplora la capitale culinaria del Messico, i mercati incredibili, il barocco del centro storico e l'antica capitale zapoteca di Monte Albán.",
+            "description": "Il 24 dicembre visita a Monte Albán e pomeriggio fra i mercati del centro; il 25 tentiamo Hierve el Agua, soltanto se apertura e trasporto natalizi sono confermati. Il 26 mattina partiamo per il trekking Sierra Norte già pagato.",
             "images": [
                 "assets/img/Oaxaca_Ciudad.png"
             ],
             "links": [
                 {
-                    "text": "🔗 Oaxaca Street Food Tour",
-                    "url": "https://oaxacastreetfoodtour.com"
+                    "text": "🏛️ Monte Albán · orari ufficiali INAH",
+                    "url": "https://lugares.inah.gob.mx/es/node/4351"
                 },
                 {
-                    "text": "🔗 Terminal ADO Oaxaca",
-                    "url": "https://www.ado.com.mx"
+                    "text": "🏛️ Mitla · orari INAH",
+                    "url": "https://lugares.inah.gob.mx/es/node/4350"
+                },
+                {
+                    "text": "💧 Hierve el Agua · orari indicativi (non festivi)",
+                    "url": "https://www.hierveelaguashuttle.com/hierve.html"
+                },
+                {
+                    "text": "🌲 Caminos Reales · prenotazione del 26 dicembre",
+                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                },
+                {
+                    "text": "🚌 Terminal ADO Oaxaca",
+                    "url": "https://www.ado.com.mx/"
                 }
             ],
             "basecamp": {
-                "zone": "Centro Storico (Zona Santo Domingo / Zócalo)",
-                "hotelIdea": "Boutique Hotel in stile coloniale con patio interno (early check-in se possibile)",
-                "why": "Il centro si gira perfettamente a piedi. Alloggiare qui permette di vivere la magia serale, uscire a cena e raggiungere i mercati in pochi minuti.",
+                "zone": "Centro Oaxaca · 24 e 25 dicembre",
+                "hotelIdea": "Alloggio comodo per arrivo ADO notturno il 24 e ritrovo Sierra Norte alle 08:00 del 26",
+                "why": "La Vigilia consente la visita a Monte Albán e poi il centro. A Natale serve flessibilità sui trasporti verso Hierve el Agua; la mattina del 26 si parte per tre giorni di trekking.",
                 "tags": [
-                    "🌮 Capitale Food",
-                    "🏛️ Barocco",
-                    "🚶‍♂️ Walkable"
+                    "🏛️ Monte Albán 24/12",
+                    "💧 Hierve el Agua 25/12?",
+                    "🥾 Sierra 26/12"
                 ],
                 "transports": [
                     {
-                        "icon": "👟",
-                        "title": "A Piedi",
-                        "desc": "La scelta migliore per perdersi tra le vie colorate del centro e i mercati."
+                        "icon": "🚌",
+                        "title": "Arrivo ADO da CDMX",
+                        "desc": "Notte del 23→24: considerare l'ora reale di arrivo prima di fissare la guida a Monte Albán."
                     },
                     {
                         "icon": "🚕",
-                        "title": "Taxi / Colectivo",
-                        "desc": "Economici per raggiungere i siti archeologici (Monte Albán) e le valli."
+                        "title": "Monte Albán 24/12",
+                        "desc": "Taxi/transfer da Oaxaca, ingresso secondo apertura festiva da confermare."
+                    },
+                    {
+                        "icon": "🚐",
+                        "title": "Hierve 25/12",
+                        "desc": "Prenotare soltanto se tour o autista confermano esplicitamente servizio a Natale."
                     }
                 ]
             },
             "food": "La Mecca del cibo messicano: Tlayudas croccanti, i 7 tipi di Mole (specialmente il nero), Memelas e l'immancabile Mezcal.",
             "budget": {
-                "total": "€ 220",
+                "total": "Da definire · siti, tour e soggiorno Oaxaca",
                 "spent": "€ 0",
                 "items": [
                     {
-                        "name": "Bus ADO CDMX - Oaxaca",
-                        "cost": "€ 45"
+                        "name": "ADO CDMX → Oaxaca · 2 persone",
+                        "cost": "Da quotare"
                     },
                     {
-                        "name": "Oaxaca Street Food Tour",
-                        "cost": "Da definire"
+                        "name": "Alloggio Oaxaca · 24 e 25 dic",
+                        "cost": "Da confermare"
                     },
                     {
-                        "name": "Hotel Oaxaca (2-3 notti)",
-                        "cost": "Da definire"
+                        "name": "Monte Albán · 24 dic",
+                        "cost": "INAH 210 MXN / straniero (indicativo)"
+                    },
+                    {
+                        "name": "Hierve el Agua · 25 dic",
+                        "cost": "Tour e accesso da verificare"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Bus ADO Taxqueña - Oaxaca (Notturno)",
-                    "status": "Da Prenotare",
+                    "name": "ADO CDMX → Oaxaca · notte 23/24 dic",
+                    "status": "Da prenotare",
                     "type": "warning"
                 },
                 {
-                    "name": "Oaxaca Street Food Tour",
-                    "status": "Da Prenotare",
+                    "name": "Monte Albán · ingresso 24 dic",
+                    "status": "Orari da confermare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Hierve el Agua · tour 25 dic",
+                    "status": "Apertura da verificare",
                     "type": "warning"
                 }
             ],
@@ -361,25 +387,25 @@ const tripData = {
                 {
                     "id": "2-1",
                     "dayName": "Giorno 4 (24 Dic)",
-                    "title": "La Vigilia: Street Food, Barocco e Calendas",
-                    "location": "Oaxaca Centro",
-                    "shortDesc": "Street Food Tour nei mercati, Jardín Etnobotánico e festeggiamenti natalizi serali allo Zócalo.",
-                    "fullDesc": "<p>Arrivo mattutino dal viaggio notturno. Iniziamo subito a tuffarci nella gastronomia locale con l'imperdibile <strong>Street Food Tour</strong> tra i banchi del <em>Mercado 20 de Noviembre</em>, assaggiando Tlayudas, memelas e i ricchi mole. A stomaco pieno, ammiriamo il barocco del <strong>Templo de Santo Domingo</strong> e, orari permettendo, ci immergiamo nel vicino <em>Jardín Etnobotánico</em> (ingresso solo guidato).</p><p>Nel pomeriggio riposo in hotel per recuperare le energie. La sera scendiamo in strada verso lo <strong>Zócalo</strong> per goderci la magia della Vigilia (<em>Nochebuena</em>): assisteremo alle colorate sfilate delle <em>Calendas</em> e mangeremo i tradizionali <em>buñuelos</em> dolci serviti su piatti di ceramica che, per buon auspicio, vanno lanciati e rotti per terra!</p>",
+                    "title": "Monte Albán nella Vigilia, poi Oaxaca centro",
+                    "location": "Monte Albán → Santo Domingo · mercati · centro",
+                    "shortDesc": "Visita alla città zapoteca di Monte Albán se l'orario d'arrivo da CDMX lo consente; mercati e centro storico nel pomeriggio, Vigilia in città.",
+                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo in città dal <strong>bus notturno ADO da Città del Messico</strong>. Dopo deposito dei bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; se l'ADO arriva tardi, accorciamo le visite in centro invece di correre.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
                     "images": [
-                        "https://images.unsplash.com/photo-1608670154625-f761bb22f87a?auto=format&fit=crop&w=400&q=80"
+                        "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
                     "links": [
                         {
-                            "text": "🔗 Oaxaca Street Food Tour",
-                            "url": "https://oaxacastreetfoodtour.com"
+                            "text": "🏛️ Monte Albán · INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4351"
                         },
                         {
-                            "text": "🔗 Orari Jardín Etnobotánico",
-                            "url": "https://jardinoaxaca.mx/"
+                            "text": "🏛️ Museo sito Monte Albán · INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4308"
                         },
                         {
-                            "text": "🔗 Orari Jardín Etnobotánico",
-                            "url": "https://montealbanoaxaca.com/es/abrira-monte-alban-en-navidad/"
+                            "text": "🚌 ADO · arrivo da CDMX",
+                            "url": "https://www.ado.com.mx/"
                         }
                     ],
                     "route": [
@@ -388,138 +414,110 @@ const tripData = {
                             "coords": [
                                 17.0694,
                                 -96.7188
-                            ],
-                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
+                            ]
                         },
                         {
-                            "name": "Mercato 20 de Noviembre",
+                            "name": "Monte Albán",
+                            "coords": [
+                                17.0436,
+                                -96.7665
+                            ]
+                        },
+                        {
+                            "name": "Templo de Santo Domingo",
+                            "coords": [
+                                17.0658,
+                                -96.7232
+                            ]
+                        },
+                        {
+                            "name": "Mercado 20 de Noviembre",
                             "coords": [
                                 17.0583,
                                 -96.7251
-                            ],
-                            "image": "https://images.unsplash.com/photo-1563889753232-a5d6255146c2?auto=format&fit=crop&w=400&q=80"
+                            ]
                         },
                         {
                             "name": "Zócalo di Oaxaca",
                             "coords": [
                                 17.0605,
                                 -96.7253
-                            ],
-                            "image": "https://images.unsplash.com/photo-1619441207753-481bf16279eb?auto=format&fit=crop&w=400&q=80"
+                            ]
                         }
                     ]
                 },
                 {
                     "id": "2-2",
                     "dayName": "Giorno 5 (25 Dic)",
-                    "title": "Natale Zapoteco a Monte Albán e Street Art",
-                    "location": "Monte Albán e Jalatlaco",
-                    "shortDesc": "Mattinata tra le rovine precolombiane aperte 365 giorni l'anno e pomeriggio rilassato a Jalatlaco.",
-                    "fullDesc": "<p>Dato che in città molte attività potrebbero essere chiuse o fare orario ridotto, è il momento perfetto per esplorare <strong>Monte Albán</strong> (i siti archeologici non chiudono mai). Arriveremo presto per evitare il sole e ammireremo l'incredibile spianata artificiale costruita sulla collina, cuore dell'antico impero Zapoteco, a soli 20-30 minuti di taxi o navetta dal centro.</p><p>Nel pomeriggio rientriamo in città per passeggiare nel pittoresco <strong>Barrio de Jalatlaco</strong>. È il quartiere più bohémien e antico della città, famoso per le strade acciottolate e i meravigliosi murales. Perfetto per bere un caffè messicano in totale relax celebrando il giorno di Natale.</p>",
-                    "images": [
-                        "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
-                    ],
-                    "links": [
-                        {
-                            "text": "🔗 Info Monte Albán INAH",
-                            "url": "https://www.inah.gob.mx/zonas/103-zona-arqueologica-de-monte-alban"
-                        }
-                    ],
-                    "route": [
-                        {
-                            "name": "Sito Archeologico Monte Albán",
-                            "coords": [
-                                17.0439,
-                                -96.7676
-                            ],
-                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
-                        },
-                        {
-                            "name": "Barrio de Jalatlaco",
-                            "coords": [
-                                17.0667,
-                                -96.7138
-                            ],
-                            "image": "https://images.unsplash.com/photo-1634568800171-cb4be1b898be?auto=format&fit=crop&w=400&q=80"
-                        }
-                    ]
-                },
-                {
-                    "id": "2-3",
-                    "dayName": "Giorno 6 (26 Dic)",
-                    "title": "Cascate, Mezcal e Pedalate Notturne",
-                    "location": "Valle dell'Est & Oaxaca Centro",
-                    "shortDesc": "Tour fuori porta tra bellezze naturali e rovine, seguito da un festoso tour serale in bicicletta per le strade di Oaxaca.",
-                    "fullDesc": "<p>Oggi noleggiamo un'auto o partecipiamo a un tour condiviso verso est. Prima tappa: l'incredibile <strong>Árbol del Tule</strong>, un enorme e millenario cipresso di Montezuma dal tronco più largo del mondo. Proseguiamo verso <strong>Mitla</strong>, il secondo sito archeologico più importante, unico per i complessi e affascinanti mosaici geometrici che adornano i suoi palazzi.</p><p>Il pezzo forte naturalistico è <strong>Hierve el Agua</strong>: spettacolari cascate pietrificate affacciate su una gola vertiginosa. Chi vorrà potrà tuffarsi nelle piscine naturali sulfuree in cima. Sulla via del ritorno a Oaxaca, chiudiamo la giornata in un <em>palenque</em> per scoprire come l'agave si trasforma nel pungente <strong>Mezcal artigianale</strong>.</p><p><strong>Serata:</strong> Rientro previsto verso le 17:00 / 18:00. Avremo il tempo per una doccia rigenerante e una cena leggera a base di tacos veloci (verso le 19:00). Alle 20:45 ci faremo trovare sulla spianata del <strong>Templo de Santo Domingo</strong> per noleggiare le biciclette con <em>Mundo Ceiba</em>. Essendo sabato, ci godremo l'ultima notte oaxaqueña pedalando a suon di musica tra le vie illuminate a festa!</p>",
+                    "title": "Natale a Hierve el Agua, se aperto",
+                    "location": "Hierve el Agua · Mitla e Tlacolula, se disponibili",
+                    "shortDesc": "Prima scelta: le cascate pietrificate a Natale, con trasporto e accesso confermati. Piano B: Oaxaca tranquilla; recupero dell'escursione il 29.",
+                    "fullDesc": "<p><strong>Obiettivo di Natale: Hierve el Agua.</strong> Le cascate pietrificate e le piscine minerali sono una delle esperienze naturalistiche a cui teniamo di più. Gli orari generalmente pubblicati sono giornalieri, ma <strong>NON è confermata l'apertura del 25 dicembre 2026</strong>: l'accesso dipende anche dalle comunità locali e i trasporti organizzati possono non operare a Natale.</p><p><strong>Se confermato:</strong> partenza da Oaxaca al mattino con <strong>tour autorizzato o autista privato</strong> che garantisca esplicitamente il 25 dicembre, visita alle formazioni e ai belvedere, rientro nel pomeriggio. L'intera uscita può richiedere <strong>7–10 ore</strong> in base alle soste. <strong>Mitla, Árbol del Tule e mezcal</strong> sono aggiunte facoltative, soltanto se aperti e senza togliere troppo tempo a Hierve el Agua; per Mitla l'orario INAH ordinario è 08:00–17:00, da riconfermare per Natale.</p><p><strong>Piano B se accesso o trasporto non sono confermati:</strong> Natale tranquillo a Oaxaca, tra passeggiate, cibo locale e riposo prima del trekking. <strong>Il 29 dicembre</strong> resta libero e potrà essere usato per recuperare Hierve el Agua o Mitla, se avremo voglia dopo i 40 km di Sierra Norte.</p><p><strong>Da fare:</strong> chiedere conferma scritta dell'operatività natalizia a un operatore, prima di pagare l'escursione. Non presentare Hierve el Agua del 25 come prenotato.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
                     ],
                     "links": [
                         {
-                            "text": "🔗 Ecobnb Hierve el Agua",
-                            "url": "https://ecobnb.it/blog/2021/11/hierve-el-agua-cascate-pietrificate-messico/"
+                            "text": "💧 Hierve el Agua · orari di riferimento, non validi per Natale",
+                            "url": "https://www.hierveelaguashuttle.com/hierve.html"
                         },
                         {
-                            "text": "🔗 Hierve el Agua",
-                            "url": "https://www.hierveelagua.org/"
+                            "text": "🏛️ Zona archeologica di Mitla · INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4350"
                         },
                         {
-                            "text": "🔗 Mundo Ceiba (Tour in Bici)",
-                            "url": "https://www.facebook.com/mundoceibaoaxaca/"
+                            "text": "🏛️ Monte Albán · piano 24 dicembre",
+                            "url": "https://lugares.inah.gob.mx/es/node/4351"
                         }
                     ],
                     "route": [
                         {
-                            "name": "Árbol del Tule",
+                            "name": "Oaxaca de Juárez",
+                            "coords": [
+                                17.0605,
+                                -96.7251
+                            ]
+                        },
+                        {
+                            "name": "Árbol del Tule · opzionale",
                             "coords": [
                                 17.0468,
                                 -96.6364
-                            ],
-                            "image": "https://images.unsplash.com/photo-1628105754593-90b63b9fcebf?auto=format&fit=crop&w=400&q=80"
+                            ]
                         },
                         {
-                            "name": "Sito Archeologico di Mitla",
+                            "name": "Zona archeologica di Mitla · opzionale",
                             "coords": [
-                                16.9234,
-                                -96.3598
-                            ],
-                            "image": "https://images.unsplash.com/photo-1578330744654-205128ff3a49?auto=format&fit=crop&w=400&q=80"
+                                16.925,
+                                -96.358
+                            ]
                         },
                         {
-                            "name": "Hierve el Agua",
+                            "name": "Hierve el Agua · se aperto",
                             "coords": [
-                                16.8647,
-                                -96.2764
-                            ],
-                            "image": "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
-                        },
-                        {
-                            "name": "Ritrovo Bici Mundo Ceiba",
-                            "coords": [
-                                17.0664,
-                                -96.7214
-                            ],
-                            "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
+                                16.8663,
+                                -96.2758
+                            ]
                         }
                     ]
                 }
             ],
             "mapFocus": {
                 "coords": [
-                    17.06,
-                    -96.72
+                    17.0605,
+                    -96.7251
                 ],
-                "zoom": 14
+                "zoom": 11
             }
         },
         {
             "id": 6,
             "navTitle": "Sierra e Pacifico",
             "navSubtitle": "Trekking, poi mare",
-            "badge": "27 Dic – 2 Gen · Caminos Reales e San Agustinillo",
+            "badge": "26 Dic – 2 Gen · Sierra Norte pagata e Pacifico",
             "locationText": "Sierra Norte · Pueblos Mancomunados · Costa di Oaxaca",
             "title": "40 chilometri fra i villaggi zapotechi, poi l'oceano",
-            "description": "ATTENZIONE: acquisto Caminos Reales PAGATO per il 26–28 dicembre, mentre questo programma mostra ancora il 27–29 dicembre. Prima di spostare le giornate, confermare se le date del voucher siano volute o vadano rettificate con Sierra Norte. Il pacchetto attraversa Amatlán, Latuvi e Benito Juárez (40 km, 3 giorni / 2 notti); dal 30 dicembre sono previste quattro notti a San Agustinillo.",
+            "description": "Pacchetto Caminos Reales PAGATO per il 26–28 dicembre (40 km di trekking fra Amatlán, Latuvi e Benito Juárez); il 29 dicembre giornata jolly a Oaxaca, poi quattro notti a San Agustinillo dal 30 dicembre al 3 gennaio.",
             "images": [
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
@@ -543,44 +541,44 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "PAGATO · Prenotazione 26–28 dicembre 2026 · Date diverse dall'itinerario",
-                "title": "Caminos Reales: pagamento confermato, date da riallineare",
-                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · 40 km di trekking",
+                "eyebrow": "CONFERMATO E PAGATO · 26–28 dicembre 2026 · 2 persone",
+                "title": "Caminos Reales · 3 giorni / 2 notti · 40 km",
+                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · rientro Oaxaca il 28 dicembre",
                 "cost": "12.917,70 MXN per 2 persone · già pagato",
-                "duration": "3 giorni · circa 40 km complessivi · difficoltà alta",
+                "duration": "26–28 dicembre · 12 + 16 + 12 km · 2 notti in cabañas",
                 "legs": [
                     {
-                        "day": "Dom 27 dic",
-                        "time": "~12 km · ~4 ore",
+                        "day": "Sab 26 dic · Giorno 1",
+                        "time": "08:00 → 20:00",
                         "from": "Oaxaca → San Miguel Amatlán",
-                        "to": "Las Minas → Amatlán",
-                        "operator": "Trasferimento con organizzatore + guida locale",
-                        "duration": "~2 ore in auto da Oaxaca, poi trekking",
-                        "price": "Nel pacchetto, da riconfermare",
-                        "note": "Percorso tra sentieri, resti delle miniere e antiche haciendas; pranzo con trota, sala dei codici e della storia locale, cena e prima notte in cabaña a San Miguel Amatlán."
+                        "to": "Las Minas · cabaña Amatlán",
+                        "operator": "Sierra Norte · transfer e guida inclusi",
+                        "duration": "10:00 trekking 12 km · ~4 ore",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 transfer da Oaxaca; 10:00 sentiero Las Minas (12 km); 14:00 pranzo con trota; 17:00 sala dei codici e antichità; 19:00 cena; 20:00 prima notte in cabaña ad Amatlán."
                     },
                     {
-                        "day": "Lun 28 dic",
-                        "time": "~16 km · 5–6 ore",
-                        "from": "San Miguel Amatlán",
+                        "day": "Dom 27 dic · Giorno 2",
+                        "time": "08:00 → 20:00",
+                        "from": "Lachatao / zona Amatlán",
                         "to": "Santa Marta Latuvi",
-                        "operator": "Trekking sul Camino Real zapoteco",
-                        "duration": "Sentiero storico tra boschi e villaggi",
-                        "price": "Nel pacchetto, da riconfermare",
-                        "note": "Giornata più lunga del trekking lungo gli antichi collegamenti fra i Pueblos Mancomunados. Pernottamento in cabaña a Latuvi."
+                        "operator": "Sierra Norte · trekking Camino Real guidato",
+                        "duration": "09:00 trekking 16 km · 5–6 ore",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 colazione; 09:00 Camino Real da Lachatao a Latuvi (16 km); 15:00 pranzo; 16:00 laboratorio di pulque e tepache; 19:00 cena; 20:00 seconda notte in cabaña a Latuvi."
                     },
                     {
-                        "day": "Mar 29 dic",
-                        "time": "~12 km · ~4,5 ore",
+                        "day": "Lun 28 dic · Giorno 3",
+                        "time": "08:00 → rientro da 16:00",
                         "from": "Santa Marta Latuvi",
                         "to": "Benito Juárez → Oaxaca",
-                        "operator": "Trekking con guida + rientro organizzato",
-                        "duration": "Salita verso circa 2.900 m",
-                        "price": "Nel pacchetto, da riconfermare",
-                        "note": "Ultima tappa verso Benito Juárez, belvedere e ponte sospeso. Ritorno a Oaxaca con il gruppo/organizzatore; notte del 29 dicembre in città, fuori dalle 2 notti in cabaña."
+                        "operator": "Sierra Norte · camminata e ritorno inclusi",
+                        "duration": "09:00 trekking 12 km · ~4 h 30 min",
+                        "price": "Incluso nel totale PAGATO",
+                        "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
                     }
                 ],
-                "warning": "IMPORTANTE: il voucher pagato indica ARRIVO 26/12/2026, PARTENZA 28/12/2026; 1ª notte Amatlán 26/12 e 2ª notte Latuvi 27/12. Il programma sottostante è ancora il piano PRECEDENTE 27–29/12. Verificare immediatamente se modificare il viaggio oppure chiedere la rettifica a Sierra Norte: il 26 è già occupato da attività a Oaxaca. Importo totale già pagato: 12.917,70 MXN per due persone. Inclusi, secondo il voucher: trasporto Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas, pasti in Sierra Norte, guide locali per 3 trekking, sala dei codici, ponte sospeso, accessi comunitari e assicurazione del viaggiatore. Ritrovo previsto 08:00 a Oaxaca il primo giorno; rientro a Oaxaca dalle 16:00 il terzo giorno. Le guide parlano spagnolo. Attività soggette al meteo e condizioni locali; portare abbigliamento adatto ai 2.000–3.100 m di quota.",
+                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 è libero a Oaxaca.",
                 "sources": [
                     {
                         "text": "Pacchetto ufficiale Sierra Norte",
@@ -593,19 +591,19 @@ const tripData = {
                 ]
             },
             "basecamp": {
-                "zone": "27–28 dic: cabañas Sierra Norte · 29 dic: Oaxaca · 30 dic–2 gen: San Agustinillo",
-                "hotelIdea": "2 notti in cabañas comunitarie incluse nel programma; hotel a Oaxaca il 29; pousada a San Agustinillo per 4 notti",
-                "why": "Il 29 si torna a Oaxaca dopo il trekking, senza forzare un trasferimento serale fino al Pacifico. Il 30 si scende al mare per quattro notti di recupero e natura.",
+                "zone": "26–27 dic: cabañas Sierra Norte · 28–29 dic: Oaxaca · 30 dic–2 gen: San Agustinillo",
+                "hotelIdea": "Cabañas Amatlán e Latuvi incluse nel pacchetto; alloggio Oaxaca per la notte del 28 e del 29 secondo organizzazione; pousada San Agustinillo per quattro notti dal 30 dicembre",
+                "why": "Il pacchetto è prenotato per 26–28 dicembre, rientro a Oaxaca dal pomeriggio del 28. Il 29 resta libero per riposo o recupero di Hierve el Agua. Il 30 si scende al Pacifico.",
                 "tags": [
                     "🥾 40 km / 3 giorni",
-                    "🌲 Comunità zapoteche",
+                    "✅ Sierra pagata 26–28",
                     "🌊 4 notti Pacifico"
                 ],
                 "transports": [
                     {
                         "icon": "🚐",
-                        "title": "27–29 · trasporto Sierra Norte",
-                        "desc": "Partenza e ritorno a Oaxaca previsti dall'operatore: da confermare in preventivo."
+                        "title": "26–28 · trasferimenti inclusi",
+                        "desc": "Ritrovo Oaxaca il 26 alle 08:00, ritorno il 28 dal pomeriggio. Verificare punto di ritrovo."
                     },
                     {
                         "icon": "🚌",
@@ -629,8 +627,8 @@ const tripData = {
                         "cost": "12.917,70 MXN"
                     },
                     {
-                        "name": "Notte Oaxaca · 29 dic",
-                        "cost": "Da prenotare"
+                        "name": "Alloggio Oaxaca · 28 e 29 dic (2 notti)",
+                        "cost": "Da verificare / prenotare"
                     },
                     {
                         "name": "Oaxaca → San Agustinillo · 30 dic",
@@ -653,13 +651,8 @@ const tripData = {
                     "type": "success"
                 },
                 {
-                    "name": "Date voucher 26–28 vs itinerario 27–29",
-                    "status": "Da chiarire",
-                    "type": "warning"
-                },
-                {
-                    "name": "Notte a Oaxaca · 29 dic",
-                    "status": "Da prenotare",
+                    "name": "Alloggio Oaxaca · notti 28–29 dic",
+                    "status": "Da verificare",
                     "type": "warning"
                 },
                 {
@@ -675,23 +668,19 @@ const tripData = {
             ],
             "days": [
                 {
-                    "id": "6-dec27",
-                    "dayName": "Giorno 7 (27 Dic)",
-                    "title": "Caminos Reales I: miniere storiche e Amatlán",
+                    "id": "6-dec26",
+                    "dayName": "Giorno 6 (26 Dic)",
+                    "title": "Caminos Reales I: Las Minas e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
-                    "shortDesc": "Partenza da Oaxaca con l'organizzatore, circa 12 km di trekking fra le miniere e le antiche haciendas; notte in cabaña.",
-                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p><strong>Inizia Caminos Reales</strong>, il pacchetto <strong>3 giorni / 2 notti</strong> di Expediciones Sierra Norte nei Pueblos Mancomunados. Ritrovo a Oaxaca (luogo e ora da confermare) e trasferimento organizzato verso <strong>San Miguel Amatlán</strong>, indicativamente <strong>2 ore</strong>.</p><p><strong>Trekking del giorno: circa 12 km / 4 ore</strong>, fra antichi sentieri, miniere e resti delle haciendas. La proposta include la zona de <em>Las Minas</em>, pranzo con trota e visita alla sala dedicata ai codici e alla storia locale. Attività e sequenza vanno riconfermate con la guida.</p><p>Prima notte in <strong>cabaña a San Miguel Amatlán</strong>. Si dorme in montagna: portare indumenti caldi a strati, scarpe da trekking già collaudate, acqua e una piccola borsa per i tre giorni.</p><p><strong>Pacchetto già pagato: 12.917,70 MXN in due.</strong> Il voucher conferma la prenotazione per il 26–28 dicembre: date da chiarire prima di ripianificare il soggiorno a Oaxaca.</p>",
+                    "shortDesc": "08:00 partenza da Oaxaca; 10:00 Las Minas, 12 km in 4 ore, pranzo con trota, sala dei codici e prima notte in cabaña.",
+                    "fullDesc": "<p><strong>Primo giorno del pacchetto CAMINOS REALES già pagato</strong> (26–28 dicembre, 2 persone, <strong>12.917,70 MXN totali</strong>). <strong>08:00</strong> trasferimento da Oaxaca verso <strong>San Miguel Amatlán</strong>, con punto di incontro da confermare sul voucher/organizzatore.</p><p><strong>10:00</strong> inizio della camminata sul percorso <strong>Las Minas</strong>: <strong>12 km, circa 4 ore</strong>. Alle <strong>14:00</strong> pranzo con trota. <strong>17:00</strong> visita alla sala dei codici e delle antichità; <strong>19:00</strong> cena tipica; <strong>20:00</strong> pernottamento nella <strong>cabaña doppia di San Miguel Amatlán</strong>.</p><p><strong>Incluso nel pacchetto:</strong> transfer di andata e ritorno da Oaxaca, pasti nella Sierra Norte, guide locali, accessi alle comunità, attività indicate e assicurazione. La guida parla spagnolo. Portare scarpe adatte e strati caldi: le comunità si trovano fra 2.000 e 3.100 m.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
                     "links": [
                         {
-                            "text": "🥾 Programma ufficiale · Caminos Reales",
+                            "text": "🥾 Caminos Reales · pacchetto ufficiale",
                             "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                        },
-                        {
-                            "text": "🌲 Turismo Sierra Norte",
-                            "url": "https://www.sierranorte.org.mx/"
                         }
                     ],
                     "route": [
@@ -712,18 +701,18 @@ const tripData = {
                     ]
                 },
                 {
-                    "id": "6-dec28",
-                    "dayName": "Giorno 8 (28 Dic)",
-                    "title": "Caminos Reales II: sul Camino Real da Amatlán a Latuvi",
-                    "location": "San Miguel Amatlán → Santa Marta Latuvi",
-                    "shortDesc": "Tappa più lunga: circa 16 km / 5–6 ore lungo un antico Camino Real zapoteco; seconda notte in cabaña.",
-                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p>La giornata più lunga di <strong>Caminos Reales</strong>: lasciamo San Miguel Amatlán e percorriamo un antico <strong>Camino Real zapoteco</strong> in direzione di <strong>Santa Marta Latuvi</strong>, fra boschi, rilievi e percorsi utilizzati storicamente dalle comunità serrane.</p><p><strong>Circa 16 km / 5–6 ore di cammino</strong>, con guida del programma. Il dislivello e le condizioni del sentiero vanno confermati dall'organizzatore, considerando che siamo in zona montana.</p><p>Arrivo a <strong>Latuvi</strong>, riposo, cena comunitaria secondo il programma e <strong>seconda notte in cabaña</strong>. Questa è una tappa di trekking a tutti gli effetti: nessun trasferimento aggiuntivo al mare o a Oaxaca.</p>",
+                    "id": "6-dec27",
+                    "dayName": "Giorno 7 (27 Dic)",
+                    "title": "Caminos Reales II: Lachatao → Latuvi",
+                    "location": "Camino Real da Lachatao a Santa Marta Latuvi",
+                    "shortDesc": "08:00 colazione; 09:00 partenza trekking 16 km / 5–6 ore; pomeriggio con laboratorio di pulque e tepache e notte a Latuvi.",
+                    "fullDesc": "<p><strong>Secondo giorno del trekking, domenica 27 dicembre.</strong> <strong>08:00</strong> colazione e <strong>09:00</strong> inizio della camminata sul <strong>Camino Real da Lachatao a Santa Marta Latuvi</strong>, attraverso boschi e antichi sentieri zapotechi: <strong>16 km, 5–6 ore</strong> secondo il voucher.</p><p><strong>15:00</strong> pranzo; <strong>16:00</strong> laboratorio di <strong>pulque e tepache</strong>; <strong>19:00</strong> cena, poi <strong>20:00</strong> sistemazione nella <strong>cabaña doppia di Latuvi</strong> (seconda notte inclusa nel prezzo). Sequenza delle attività dipendente dalle condizioni meteo e dalle disposizioni della guida.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
                     "links": [
                         {
-                            "text": "🥾 Pacchetto Caminos Reales",
+                            "text": "🥾 Caminos Reales · programma",
                             "url": "https://www.sierranorte.org.mx/#/paquete/25"
                         }
                     ],
@@ -745,19 +734,19 @@ const tripData = {
                     ]
                 },
                 {
-                    "id": "6-dec29",
-                    "dayName": "Giorno 9 (29 Dic)",
-                    "title": "Caminos Reales III: Benito Juárez e rientro a Oaxaca",
+                    "id": "6-dec28",
+                    "dayName": "Giorno 8 (28 Dic)",
+                    "title": "Caminos Reales III: Benito Juárez e ritorno a Oaxaca",
                     "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
-                    "shortDesc": "Ultimi 12 km verso Benito Juárez (circa 4,5 ore), belvedere e ponte sospeso; rientro con l'organizzatore e notte a Oaxaca.",
-                    "fullDesc": "<p><strong>⚠️ ATTENZIONE: le date di questa giornata sono da riallineare.</strong> La prenotazione PAGATA è per il <strong>26–28 dicembre</strong>, mentre la sequenza sottostante riflette ancora il programma 27–29. Verificare le date prima di fare affidamento sul programma.</p><p>Terzo e ultimo giorno del trekking: <strong>Santa Marta Latuvi → Benito Juárez</strong>, lungo una tappa di circa <strong>12 km / 4 ore e mezza</strong>. Il percorso sale fino alla zona dei <strong>2.900 metri</strong> e termina con i panorami montani, il belvedere e il caratteristico <strong>ponte sospeso</strong>, secondo l'itinerario indicato dall'organizzatore.</p><p>Il trasporto previsto dal pacchetto ci riporta a <strong>Oaxaca de Juárez</strong>; confermare l'orario preciso di rientro al momento della prenotazione.</p><p><strong>Pernottamento a Oaxaca il 29 dicembre</strong> (hotel separato, da prenotare). Dopo circa <strong>40 km di trekking in tre giorni</strong>, evitiamo di aggiungere una lunga corsa fino alla costa la sera stessa: il trasferimento a San Agustinillo è previsto per il 30 dicembre.</p>",
+                    "shortDesc": "Tappa finale di 12 km / circa 4 ore e mezza via mirador e ponte sospeso; pranzo alle 14:30 e rientro a Oaxaca dalle 16:00.",
+                    "fullDesc": "<p><strong>Lunedì 28 dicembre:</strong> terzo e ultimo giorno del pacchetto <strong>già pagato</strong>. Alle <strong>08:00</strong> colazione; alle <strong>09:00</strong> partenza per la camminata <strong>Latuvi → Benito Juárez</strong> passando dal <strong>mirador</strong> e dal <strong>ponte sospeso</strong>: <strong>12 km, circa 4 ore e mezza</strong>.</p><p><strong>14:30</strong> pranzo; dalle <strong>16:00</strong> ritorno organizzato verso <strong>Oaxaca de Juárez</strong> (ora esatta di arrivo da verificare). La notte del <strong>28 dicembre si dorme a Oaxaca</strong>, non nella Sierra: le due notti in cabaña incluse nel voucher sono quelle del 26 e del 27.</p><p><strong>Totale trekking: 40 km in 3 giorni.</strong> Rientro, cena e riposo, senza ulteriori escursioni. Il 29 dicembre resta volutamente libero.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
                     "links": [
                         {
-                            "text": "🥾 Pacchetto Sierra Norte",
-                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                            "text": "🥾 Sierra Norte · sito operatore",
+                            "url": "https://www.sierranorte.org.mx/"
                         }
                     ],
                     "route": [
@@ -780,6 +769,54 @@ const tripData = {
                             "coords": [
                                 17.0605,
                                 -96.7251
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6-dec29",
+                    "dayName": "Giorno 9 (29 Dic)",
+                    "title": "Oaxaca jolly: recupero Hierve el Agua oppure riposo",
+                    "location": "Oaxaca · Hierve el Agua / Mitla (opzionali)",
+                    "shortDesc": "Giornata flessibile dopo 40 km di trekking: recupero dell'escursione di Natale, oppure mercati, cucina e riposo prima della costa.",
+                    "fullDesc": "<p><strong>Il 29 dicembre è una giornata libera a Oaxaca, subito dopo il trekking pagato 26–28.</strong> Se il tour di <strong>Hierve el Agua</strong> non fosse stato disponibile a Natale, questa è la <strong>prima alternativa</strong> per recuperarlo, eventualmente abbinandolo a <strong>Mitla</strong>, all'<strong>Árbol del Tule</strong> o a un palenque di mezcal, ma soltanto se orari e forze lo permettono.</p><p><strong>Alternativa relax:</strong> se siamo riusciti a vedere Hierve el Agua il 25, o siamo stanchi dopo <strong>40 km in tre giorni</strong>, passeggiata per Santo Domingo, mercati, Jalatlaco, pausa gastronomica e serata tranquilla. Nessuna escursione obbligatoria: la mattina del <strong>30 dicembre</strong> scendiamo verso San Agustinillo per quattro notti al Pacifico.</p><p><strong>Logistica:</strong> notte del 28 già a Oaxaca dopo il rientro dal tour; anche la notte del <strong>29</strong> è in città. Verificare/riservare entrambe le notti in una struttura adatta, soprattutto nel periodo festivo.</p>",
+                    "images": [
+                        "assets/img/Oaxaca_Ciudad.png"
+                    ],
+                    "links": [
+                        {
+                            "text": "💧 Hierve el Agua · informazioni di riferimento",
+                            "url": "https://www.hierveelaguashuttle.com/hierve.html"
+                        },
+                        {
+                            "text": "🏛️ Mitla · INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4350"
+                        },
+                        {
+                            "text": "🌲 Pacchetto Sierra Norte",
+                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Oaxaca centro",
+                            "coords": [
+                                17.0605,
+                                -96.7251
+                            ]
+                        },
+                        {
+                            "name": "Mitla · opzionale",
+                            "coords": [
+                                16.925,
+                                -96.358
+                            ]
+                        },
+                        {
+                            "name": "Hierve el Agua · opzionale",
+                            "coords": [
+                                16.8663,
+                                -96.2758
                             ]
                         }
                     ]
@@ -1644,7 +1681,7 @@ const tripData = {
                 17.0753,
                 -96.7237
             ],
-            "days": "24–26 Dic"
+            "days": "24–25 Dic; 29 Dic recupero"
         },
         {
             "areaId": 6,
@@ -1653,7 +1690,7 @@ const tripData = {
                 17.27556,
                 -96.47167
             ],
-            "days": "27 Dic"
+            "days": "26 Dic"
         },
         {
             "areaId": 6,
@@ -1662,7 +1699,7 @@ const tripData = {
                 17.2625,
                 -96.49306
             ],
-            "days": "28 Dic"
+            "days": "27 Dic"
         },
         {
             "areaId": 6,
@@ -1671,7 +1708,7 @@ const tripData = {
                 17.18667,
                 -96.51389
             ],
-            "days": "29 Dic"
+            "days": "28 Dic"
         },
         {
             "areaId": 6,
