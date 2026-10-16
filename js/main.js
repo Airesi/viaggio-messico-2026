@@ -553,11 +553,21 @@ function switchArea(areaId) {
         }
 
         if (topImage && selectedArea.images && selectedArea.images.length > 0) {
-            topImage.style.opacity = 0.5;
-            setTimeout(() => {
-                topImage.src = selectedArea.images[0];
-                topImage.style.opacity = 1;
-            }, 150);
+            topImage.src = selectedArea.images[0];
+            topImage.alt = 'Panorama di ' + selectedArea.navTitle;
+            topImage.style.opacity = 1;
+        }
+        const credit = document.getElementById('dynamic-area-credit');
+        if (credit) {
+            if (selectedArea.heroCredit?.url) {
+                credit.href = selectedArea.heroCredit.url;
+                credit.textContent = 'Foto: ' + selectedArea.heroCredit.author + ' · ' + selectedArea.heroCredit.license;
+                credit.classList.remove('hidden');
+            } else {
+                credit.classList.add('hidden');
+                credit.removeAttribute('href');
+                credit.textContent = '';
+            }
         }
     }
 }
