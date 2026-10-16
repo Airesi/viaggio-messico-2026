@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// Gli alloggi proposti non costituiscono prenotazioni. I prezzi indicativi restano da verificare.
+// Prenotazioni e importi Booking; prenotato non significa pagato.
 
 const tripData = {
     "general": {
@@ -8,11 +8,11 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Riepilogo Booking aggiornato al 16 ottobre 2026: 6 prenotazioni confermate per 2 adulti; quella di Cozumel ha un totale approssimativo da verificare.",
-            "totalEuro": 1420,
-            "paidStatus": "Le 5 prenotazioni precedenti non hanno prova di addebito; Coral Princess dichiarato confermato e non pagato.",
-            "validTotalEuro": 1089,
-            "warning": "Totale di circa €1420: include Coral Princess a circa €331 secondo schermata di conferma, contro €300 della tariffa selezionata. Verificare la differenza nel dettaglio Booking.",
+            "source": "Riepilogo Booking aggiornato al 16 ottobre 2026: 7 prenotazioni confermate per due adulti.",
+            "totalEuro": 1679,
+            "paidStatus": "Prenotazioni confermate, pagamenti distinti: Coral Princess non pagato; Hotel Aires e gli altri senza addebito verificato nelle schermate.",
+            "validTotalEuro": 1679,
+            "warning": "Hotel Aires Bacalar 7–10 gennaio confermato a €290; Coral Princess Cozumel 10–12 gennaio confermato a €300. Il check-in tardivo ad Aires rimane da confermare con la struttura.",
             "items": [
                 {
                     "name": "The PM at Condesa Arts & Boutique Experience",
@@ -65,15 +65,25 @@ const tripData = {
                     "areaId": 3
                 },
                 {
+                    "name": "Hotel Aires Bacalar",
+                    "city": "Bacalar",
+                    "checkin": "2027-01-07",
+                    "checkout": "2027-01-10",
+                    "totalEuro": 290,
+                    "cancellation": "Cancellazione gratuita (secondo Booking; scadenza visualizzata: prima del 5 gen 2027)",
+                    "status": "Confermato",
+                    "paymentStatus": "Pagamento non verificato",
+                    "roomType": "Camera Queen con Terrazza (tariffa scelta, verificare conferma)",
+                    "breakfast": "Inclusa",
+                    "areaId": 4
+                },
+                {
                     "name": "Coral Princess Hotel & Dive Resort",
                     "city": "Cozumel · Zona Hotelera Norte",
                     "checkin": "2027-01-10",
                     "checkout": "2027-01-12",
-                    "totalEuro": 331,
-                    "approximatePrice": true,
-                    "selectedOfferEuro": 300,
-                    "priceNote": "Tariffa scelta su Booking: €300 senza colazione, con cancellazione gratuita. Riepilogo dopo conferma: prezzo totale circa €331; differenza di circa €31 da verificare nel dettaglio della prenotazione.",
-                    "cancellation": "Cancellazione gratuita prima del 3 gen 2027 (secondo tariffa selezionata; verificare nella conferma)",
+                    "totalEuro": 300,
+                    "cancellation": "Cancellazione gratuita (secondo Booking; verificare la scadenza nella prenotazione)",
                     "status": "Confermato",
                     "paymentStatus": "Non pagato",
                     "roomType": "Camera King Deluxe Fronte Oceano",
@@ -1353,7 +1363,7 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "7–10 gennaio · 3 notti sulla Laguna dei Sette Colori, hotel ancora da scegliere. Il 10 partenza verso Playa del Carmen con Tren Maya (orari e coincidenze da verificare) e traghetto per Cozumel, dove l'hotel è confermato.",
+            "description": "7–10 gennaio · Hotel Aires Bacalar CONFERMATO su Booking, 3 notti per due adulti a €290, cancellazione gratuita. Colazione inclusa nella tariffa scelta. Arrivo il 7 con Tren Maya: check-in dopo le 23:30 e taxi dalla stazione ANCORA DA CONFERMARE. Il 10 partenza per Playa del Carmen e traghetto per Cozumel.",
             "images": [
                 "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
@@ -1422,19 +1432,20 @@ const tripData = {
                 ]
             },
             "basecamp": {
-                "zone": "Bacalar · 7–10 gen, 3 notti · nessun hotel prenotato",
-                "hotelIdea": "Preferenza: vero accesso diretto alla laguna con late check-in. Possibile split Hotel Tuparenda 7–8 + 7 Cielos 8–10; valutare prezzo totale, taxi e camera vista lago.",
-                "why": "Il 7 è giornata di viaggio; l'8 e il 9 sono giornate piene. Una foto del pontile non basta: verificare distanza reale della camera dall'acqua e servizi. Richiedere conferma scritta del check-in tardivo, anche in caso di ritardi del treno.",
+                "zone": "Bacalar · Hotel Aires Bacalar 7–10 gennaio · prenotato",
+                "hotelIdea": "Hotel Aires Bacalar, Avenida 3 angolo Calle 26 · €290 per 3 notti / 2 adulti · Booking confermato, pagamento da verificare. Colazione inclusa e Camera Queen con Terrazza nella tariffa selezionata.",
+                "why": "Un solo hotel per 3 notti, centrale e vicino ai ristoranti. Non è direttamente sulla laguna e non ha pontile privato. Importantissimo: chiedere conferma SCRITTA del check-in dopo le 23:30/mezzanotte anche in caso di ritardo del Tren Maya e del taxi dalla stazione.",
                 "tags": [
-                    "💧 Laguna e kayak",
-                    "🛌 Hotel ancora da cercare",
-                    "🚆 10 gen verso Playa del Carmen"
+                    "✅ Hotel Aires confermato",
+                    "🍳 Colazione inclusa",
+                    "⚠️ Check-in tardivo da confermare",
+                    "🚆 10 gen verso Cozumel"
                 ],
                 "transports": [
                     {
                         "icon": "🚆",
-                        "title": "7 gen · Tren Maya da Palenque",
-                        "desc": "Orario gennaio 2027 da verificare; taxi serale e check-in."
+                        "title": "7 gen · Tren Maya → Hotel Aires",
+                        "desc": "Orario del treno da verificare e check-in molto tardi da autorizzare; organizzare taxi dalla stazione."
                     },
                     {
                         "icon": "🚆",
@@ -1445,24 +1456,28 @@ const tripData = {
             },
             "food": "Colazione con vista sulla laguna, cucina del Quintana Roo e due cene senza fretta nel centro di Bacalar.",
             "budget": {
-                "total": "Bacalar 7–10 gen: alloggio, taxi e treni da quotare",
-                "spent": "€ 0 · alloggio non prenotato",
+                "total": "€290 · Hotel Aires Bacalar CONFERMATO, 3 notti / 2 adulti + trasporti",
+                "spent": "Pagamento Hotel Aires da verificare; prenotazione confermata",
                 "items": [
                     {
-                        "name": "Tren Maya Palenque → Bacalar (2 persone)",
-                        "cost": "Da quotare"
+                        "name": "Hotel Aires Bacalar · 7–10 gen · 3 notti / 2 adulti",
+                        "cost": "€290 · confermato, pagamento non verificato, colazione inclusa"
                     },
                     {
-                        "name": "Transfer stazione Bacalar → alloggio",
-                        "cost": "Da quotare"
+                        "name": "Tren Maya Palenque → Bacalar · 7 gen",
+                        "cost": "Da prenotare"
                     },
                     {
-                        "name": "Bacalar · 7–10 gen (3 notti), anche formula 1+2",
-                        "cost": "Da quotare"
+                        "name": "Taxi stazione Bacalar → Hotel Aires",
+                        "cost": "Da organizzare"
                     },
                     {
-                        "name": "Kayak / giro in laguna",
-                        "cost": "Facoltativo"
+                        "name": "Kayak / accesso alla laguna",
+                        "cost": "Facoltativi"
+                    },
+                    {
+                        "name": "Tren Maya Bacalar → Playa del Carmen e traghetto Cozumel · 10 gen",
+                        "cost": "Da verificare"
                     }
                 ]
             },
@@ -1473,13 +1488,13 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Bacalar · 7–10 gen · hotel da scegliere",
-                    "status": "Da prenotare",
-                    "type": "warning"
+                    "name": "Hotel Aires Bacalar · 7–10 gen, 3 notti",
+                    "status": "CONFERMATO · €290 · pagamento non verificato",
+                    "type": "success"
                 },
                 {
-                    "name": "Check-in tardivo / taxi dalla stazione",
-                    "status": "Conferma scritta necessaria",
+                    "name": "Hotel Aires · check-in tardivo e taxi stazione",
+                    "status": "In attesa di conferma scritta",
                     "type": "warning"
                 },
                 {
@@ -1494,8 +1509,8 @@ const tripData = {
                     "dayName": "Giorno 18 (7 Gen)",
                     "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
                     "location": "Palenque · Escárcega · Bacalar",
-                    "shortDesc": "Tren Maya da Palenque, taxi dalla stazione e check-in tardivo da confermare.",
-                    "fullDesc": "<p><strong>Palenque → Bacalar con Tren Maya</strong> il 7 gennaio 2027, treno da prenotare. Orario 2027, fermata Bacalar, eventuale cambio a Escárcega e fuso orario da verificare sul sito ufficiale. Possibile arrivo dopo le 22:00: richiedere <strong>conferma scritta di check-in dopo le 23:00 e tolleranza per eventuali ritardi</strong>, oltre a un taxi dalla stazione fuori paese.</p><p><strong>Hotel non prenotato.</strong> Due opzioni: <strong>un solo hotel per 7–10 gennaio</strong> che accolga la sera tardi e abbia accesso reale alla laguna; oppure <strong>Hotel Tuparenda 7–8 gennaio</strong> per la notte d'arrivo e <strong>7 Cielos Bacalar 8–10 gennaio</strong> per due notti davvero vicino all'acqua, se prezzi e spostamento sono convenienti.</p>",
+                    "shortDesc": "Arrivo da Palenque, check-in all'Hotel Aires prenotato a €290; late check-in da confermare.",
+                    "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong> il 7 gennaio, biglietti e orari gennaio 2027 da verificare. Taxi da organizzare dalla stazione fuori paese. <strong>Hotel Aires Bacalar CONFERMATO</strong> dal 7 al 10 gennaio, 3 notti per 2 adulti, <strong>€290</strong>, cancellazione gratuita. Tariffa selezionata con colazione inclusa e Camera Queen con Terrazza (verificare i dettagli definitivi in conferma).</p><p><strong>Nonostante la prenotazione confermata, l'arrivo dopo le 23:30/mezzanotte NON è ancora autorizzato:</strong> attendere risposta scritta dell'hotel e chiedere tolleranza per ritardi del Tren Maya. Stato pagamento non verificato.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1537,7 +1552,7 @@ const tripData = {
                     "title": "Bacalar: il primo giorno sulla laguna",
                     "location": "Bacalar · Laguna dei Sette Colori",
                     "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
-                    "fullDesc": "<p>Finalmente una giornata senza trasferimenti. Esploriamo la <strong>Laguna dei Sette Colori</strong> in <strong>kayak</strong>, preferibilmente al mattino se le condizioni del vento lo consentono, oppure partecipiamo a una breve escursione organizzata con un operatore rispettoso dell'ecosistema.</p><p>Pomeriggio sul pontile o in un <em>balneario</em> autorizzato, con tempo per il centro di Bacalar. L'obiettivo qui non è collezionare visite: è fermarsi, nuotare dove consentito e godersi i cambi di colore dell'acqua.</p><p><strong>Nota ambientale:</strong> evitare creme e prodotti in acqua dove vietati, rispettare le aree con stromatoliti e seguire le regole di balneazione locali.</p>",
+                    "fullDesc": "<p>Prima giornata sulla <strong>Laguna dei Sette Colori</strong>: kayak, tour ecocompatibile o balneazione nei punti autorizzati, evitando le zone protette degli stromatoliti. <strong>Hotel Aires è in centro, non direttamente sulla laguna</strong>: non dispone di un pontile privato da cui entrare in acqua.</p><p>Colazione inclusa nell'offerta selezionata. L'indicazione vista lago della camera non implica una terrazza proprio sopra l'acqua: verificare la tipologia finale nella prenotazione.</p>",
                     "images": [
                         "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
                     ],
@@ -1570,7 +1585,7 @@ const tripData = {
                     "title": "Bacalar senza orologio",
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
-                    "fullDesc": "<p>Seconda giornata lenta sulla <strong>laguna di Bacalar</strong>: kayak, balneazione dove consentita, relax sul pontile o un'uscita guidata rispettosa dell'ecosistema. Non aggiungere attività solo per riempire il programma.</p><p>Il <strong>10 gennaio</strong> check-out: trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya candidato, orari e coincidenze da confermare), poi taxi verso il porto e traghetto per <strong>Cozumel</strong>, dove è confermato il Coral Princess dal 10 al 12 gennaio. Pianificare un margine adeguato per ogni cambio di mezzo.</p>",
+                    "fullDesc": "<p>Seconda giornata intera di laguna e relax, senza cambiare hotel: colazione all'Hotel Aires, accessi autorizzati all'acqua e passeggiata nel centro del paese. L'Hotel Aires è già confermato per tutte e tre le notti.</p><p><strong>10 gennaio:</strong> check-out e trasferimento verso Playa del Carmen (Tren Maya candidato, orari da verificare), taxi al porto e traghetto per Cozumel, dove il Coral Princess è confermato 10–12 gennaio a €300.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1605,52 +1620,23 @@ const tripData = {
             },
             "researchNotes": [
                 {
-                    "title": "Villas Ecotucan · scartato",
-                    "body": "361 € per 3 notti nella ricerca effettuata. Camera vista giardino nel verde, non vista laguna; il pontile è una zona separata. Isolato e check-in ordinario incompatibile con il possibile arrivo tardivo: le foto della laguna non compensano."
+                    "title": "Hotel Aires Bacalar · CONFERMATO · €290",
+                    "body": "Tre notti, 7–10 gennaio 2027, due adulti, cancellazione gratuita. Colazione e Camera Queen con Terrazza nella tariffa scelta; Booking conferma prenotazione ma non documenta addebiti."
                 },
                 {
-                    "title": "Hotel Tuparenda · opzione prima notte",
-                    "body": "Possibile 7–8 gennaio per arrivo ferroviario. L'accoglienza tardiva non è garantita: chiedere espressamente check-in dopo le 23:00 e come gestire ritardi del treno."
+                    "title": "Late check-in: da confermare per iscritto",
+                    "body": "Il Tren Maya potrebbe arrivare dopo le 23:30/mezzanotte il 7 gennaio. Serve autorizzazione scritta ad entrare anche con ritardi, e un taxi dalla stazione. Booking confermato non equivale a late check-in approvato."
                 },
                 {
-                    "title": "7 Cielos Bacalar · candidato fronte laguna",
-                    "body": "Da controllare per l'8–10 gennaio dopo Tuparenda: piccolo alloggio a riva, ma verificare camera effettiva vista acqua, cucina/pasti disponibili, strada d'accesso e costo taxi."
+                    "title": "Accesso laguna",
+                    "body": "Hotel Aires si trova in centro a Bacalar, non direttamente sulla laguna; raggiungere balneari o punti di accesso autorizzati. Nessun pontile privato e vista lago della camera da verificare."
                 },
                 {
-                    "title": "Criterio generale",
-                    "body": "Priorità a stare davvero vicino alla laguna, non solo ad averne un pontile fotografato. Due giorni pieni bastano; confronto sul prezzo totale per due adulti, incluso il trasporto."
+                    "title": "Alternative scartate",
+                    "body": "Villas Ecotucan, Tuparenda e 7 Cielos erano alternative considerate prima della prenotazione di Hotel Aires, ora non più necessarie."
                 }
             ],
-            "hotelSearches": [
-                {
-                    "label": "Bacalar · un solo hotel per 3 notti",
-                    "ss": "Bacalar, Quintana Roo, Messico",
-                    "checkin": "2027-01-07",
-                    "checkout": "2027-01-10",
-                    "note": "Controllare mappa, vista/acceso laguna e check-in dopo le 23:00."
-                },
-                {
-                    "label": "Hotel Tuparenda · notte di arrivo",
-                    "ss": "Hotel Tuparenda, Bacalar",
-                    "checkin": "2027-01-07",
-                    "checkout": "2027-01-08",
-                    "note": "Solo se conferma scritta di arrivo notturno e taxi da stazione."
-                },
-                {
-                    "label": "7 Cielos · 2 notti fronte laguna",
-                    "ss": "7 Cielos Bacalar",
-                    "checkin": "2027-01-08",
-                    "checkout": "2027-01-10",
-                    "note": "Preferire la camera con vera vista lago; verificare cena, taxi e costo."
-                },
-                {
-                    "label": "Bacalar · altre cabañas sul lago",
-                    "ss": "Bacalar, Quintana Roo, Messico",
-                    "checkin": "2027-01-08",
-                    "checkout": "2027-01-10",
-                    "note": "Da abbinare alla prima notte a Tuparenda, filtri fronte acqua e piccole strutture."
-                }
-            ]
+            "hotelSearches": []
         },
         {
             "id": 5,
@@ -1659,7 +1645,7 @@ const tripData = {
             "badge": "10–16 Gen • Cozumel confermato, Akumal da scegliere",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO, 2 notti in King Deluxe Fronte Oceano, NON PAGATO. Riepilogo Booking circa €331, tariffa selezionata €300: verificare differenza. Dal 12 al 16 gennaio quattro notti ad Akumal DA PRENOTARE; Muyil/Sian Ka'an e Isla Contoy ancora facoltative, poi trasferimento diretto all'aeroporto di Cancún il 16.",
+            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO, €300 per due adulti, King Deluxe Fronte Oceano, cancellazione gratuita e NON PAGATO. Dal 12 al 16 gennaio quattro notti ad Akumal ANCORA DA PRENOTARE. Night Snorkel l'11 possibile; Muyil 13; Isla Contoy facoltativa 14/15; volo da Cancún il 16.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1687,8 +1673,8 @@ const tripData = {
             ],
             "basecamp": {
                 "zone": "Cozumel 10–12 gen (2 notti confermate) · Akumal 12–16 gen (4 notti da cercare)",
-                "hotelIdea": "Coral Princess Hotel & Dive Resort · 10–12 gen, Camera King Deluxe Fronte Oceano: prenotazione CONFERMATA, NON PAGATA, senza colazione. Totale indicativo circa €331 (tariffa scelta €300), differenza da verificare. Akumal 12–16 gen ancora da prenotare.",
-                "why": "Il 10 si arriva da Bacalar via Playa del Carmen + traghetto; prenotazione hotel Cozumel già confermata. La sera dell'11 possibile Night Snorkel Cozumel (tour NON prenotato). Il 12 traghetto verso Playa del Carmen e trasferimento Akumal. Il 16 aeroporto Cancún via strada senza traghetto. Verificare il prezzo finale in Booking e la tariffa con cancellazione gratuita prima del 3 gennaio.",
+                "hotelIdea": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano · €300 CONFERMATO, NON PAGATO, cancellazione gratuita, senza colazione. Akumal 12–16 gen ancora da prenotare.",
+                "why": "Il 10 arrivo da Bacalar via Playa del Carmen + traghetto, orari da verificare. Coral Princess confermato a €300. Night Snorkel l'11 ancora da prenotare; 12 traghetto e transfer verso Akumal; 16 transfer su strada verso CUN.",
                 "tags": [
                     "✅ Coral Princess confermato",
                     "💳 Hotel Cozumel NON pagato",
@@ -1715,12 +1701,12 @@ const tripData = {
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "Coral Princess confermato, non pagato · circa €331; Akumal 12–16 gen da quotare",
+                "total": "€300 · Coral Princess confermato e NON pagato; Akumal 12–16 da quotare",
                 "spent": "€0 pagati per Coral Princess (secondo quanto indicato); prenotazione confermata",
                 "items": [
                     {
                         "name": "Coral Princess · 10–12 gen · King Deluxe Fronte Oceano",
-                        "cost": "circa €331 · confermato, NON pagato; tariffa selezionata €300"
+                        "cost": "€300 · CONFERMATO, NON pagato, cancellazione gratuita"
                     },
                     {
                         "name": "Akumal · alloggio 12–16 gen, 4 notti per due",
@@ -1755,13 +1741,8 @@ const tripData = {
             "reservations": [
                 {
                     "name": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano",
-                    "status": "CONFERMATO · NON PAGATO · ~€331",
+                    "status": "CONFERMATO · NON PAGATO · €300",
                     "type": "success"
-                },
-                {
-                    "name": "Dettaglio prezzo Coral Princess · tariffa scelta €300 vs totale ~€331",
-                    "status": "Da verificare in Booking",
-                    "type": "warning"
                 },
                 {
                     "name": "Treno Bacalar → Playa + traghetto per Cozumel · 10 gen",
@@ -1806,7 +1787,7 @@ const tripData = {
                     "title": "Da Bacalar a Cozumel: hotel sul mare confermato",
                     "location": "Bacalar → Playa del Carmen → Cozumel",
                     "shortDesc": "Tren Maya/trasferimento e traghetto da verificare; check-in al Coral Princess prenotato.",
-                    "fullDesc": "<p>Lasciamo <strong>Bacalar</strong> e raggiungiamo <strong>Playa del Carmen</strong> (Tren Maya possibile, orari e coincidenze del 10/1/2027 ancora da verificare). Taxi dalla stazione al porto, quindi <strong>traghetto per Cozumel</strong> e taxi per il Coral Princess in Zona Hotelera Norte. Non considerare garantito il traghetto in caso di forte vento.</p><p><strong>Prenotazione CONFERMATA, NON PAGATA:</strong> <strong>Coral Princess Hotel & Dive Resort</strong>, 10–12 gennaio, due adulti, <strong>Camera King Deluxe Fronte Oceano</strong>, senza colazione. La tariffa selezionata era €300 con cancellazione gratuita prima del 3 gennaio; dopo la conferma Booking mostra <strong>circa €331</strong>. Verificare nel dettaglio prenotazione l'importo effettivo e l'eventuale differenza. Non confondere la prenotazione con il pagamento.</p>"
+                    "fullDesc": "<p>Partenza da Bacalar con trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya candidato, orari del 10 gennaio da verificare), taxi al porto e traghetto per <strong>Cozumel</strong>; taxi per l'hotel nella Zona Hotelera Norte. Le traversate dipendono dalle condizioni del mare.</p><p><strong>Coral Princess Hotel & Dive Resort CONFERMATO, NON PAGATO</strong>, 10–12 gennaio 2027, due notti per due adulti in <strong>Camera King Deluxe Fronte Oceano</strong>, <strong>€300</strong>, cancellazione gratuita, senza colazione nella tariffa selezionata. Verificare le condizioni specifiche di cancellazione nella conferma.</p>"
                 },
                 {
                     "id": "5-jan11",
@@ -1866,8 +1847,8 @@ const tripData = {
             },
             "researchNotes": [
                 {
-                    "title": "Coral Princess · CONFERMATO, NON PAGATO",
-                    "body": "Booking conferma 10–12 gennaio 2027, due notti, King Deluxe Fronte Oceano, senza colazione. Scelta iniziale €300 con cancellazione gratuita prima del 3/1/2027, mentre il riepilogo mostra circa €331. Il totale definitivo è da verificare: non registrare come pagato."
+                    "title": "Coral Princess · CONFERMATO, NON PAGATO, €300",
+                    "body": "Booking conferma 10–12 gennaio 2027 in Camera King Deluxe Fronte Oceano, cancellazione gratuita, importo totale €300; non è un pagamento. Il vecchio dubbio sul prezzo è superato dall'elenco delle prenotazioni. Da prenotare ancora il Night Snorkel Cozumel."
                 },
                 {
                     "title": "Attività principale a Cozumel",
