@@ -38,9 +38,14 @@ function generateNavigation() {
         // Stile base del bottone inattivo
         btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition text-center border border-gray-200 border-b-4 border-transparent flex flex-col items-center h-full justify-center";
         
+        const dateLabel = iso => {
+            const [yy,mm,dd]=iso.split('-');
+            return `${Number(dd)} ${['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'][Number(mm)-1]} '${yy.slice(2)}`;
+        };
         btn.innerHTML = `
-            <span>${area.navTitle}</span>
-            <span class="text-[10px] font-normal opacity-70 mt-1">${area.navSubtitle}</span>
+            <span class="text-[9px] sm:text-[10px] font-black leading-snug mb-1" aria-label="Dal ${area.startDate} al ${area.endDate}">${dateLabel(area.startDate)} → ${dateLabel(area.endDate)}</span>
+            <span class="region-nav-title leading-tight">${area.navTitle}</span>
+            <span class="region-nav-subtitle text-[10px] font-normal opacity-70 mt-1 leading-snug">${area.navSubtitle}</span>
         `;
         navContainer.appendChild(btn);
     });
@@ -294,6 +299,33 @@ function generateContent() {
             </section>
         ` : '';
 
+
+        // Locali raccolti da fonti online in ottobre 2026, solo suggerimenti.
+        const venuesHtml = (area.venues || []).length ? `
+            <section class="mb-6 rounded-[1.5rem] overflow-hidden border border-amber-200/70 bg-white shadow-sm">
+                <div class="px-5 sm:px-6 pt-5 pb-4 border-b border-amber-100">
+                    <span class="text-[10px] uppercase font-black tracking-[.14em] text-amber-800">🍽️ Mangiare, bere, stare bene</span>
+                    <h3 class="mt-1 text-lg font-extrabold text-emerald-950">Locali che potrebbero piacervi</h3>
+                    <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">Cucina del posto, locali con carattere e serate da ricordare. <strong>Suggerimenti, non prenotazioni.</strong></p>
+                </div>
+                <div class="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    ${area.venues.map(v => `
+                        <article class="flex flex-col rounded-xl border border-gray-200 bg-stone-50/50 px-4 py-3.5 hover:border-amber-300 transition">
+                            <div class="flex justify-between items-start gap-2">
+                                <h4 class="text-sm font-extrabold text-slate-900 leading-snug">${v.name}</h4>
+                                <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] shrink-0 font-black text-emerald-800 underline hover:text-emerald-950" aria-label="Scheda online ${v.name}">Scheda ↗</a>
+                            </div>
+                            <p class="mt-1 text-[10px] font-extrabold text-amber-800">${v.kind}</p>
+                            <p class="mt-1 text-[10px] text-gray-500">📍 ${v.where}</p>
+                            <p class="mt-2 text-[11px] leading-relaxed text-slate-700">${v.description}</p>
+                            <p class="mt-2 text-[10px] leading-relaxed text-amber-900 border-t border-amber-100 pt-2">💡 ${v.tip}</p>
+                        </article>
+                    `).join('')}
+                </div>
+                <p class="px-5 sm:px-6 pb-4 text-[10px] leading-relaxed text-gray-500">Ricerca online: ottobre 2026. Orari, prezzi e apertura nei festivi da verificare; nessuna prenotazione aggiunta. Le spese per i pasti sono già stimate nel budget.</p>
+            </section>
+        ` : '';
+
         // 2. ITINERARIO (Ora sta sotto, con il suo nuovo titoletto)
         let daysHtml = '';
         if (area.days && area.days.length > 0) {
@@ -334,6 +366,7 @@ function generateContent() {
         contentDiv.innerHTML = `
             ${overviewHtml}
             ${daysHtml}
+            ${venuesHtml}
             ${sierraGuideHtml}
             ${tourContactsHtml}
             ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
@@ -436,15 +469,15 @@ function switchArea(areaId) {
     tripData.areas.forEach((area, index) => {
         const btn = document.getElementById(`nav-btn-${area.id}`);
         if(btn) {
-            const subtitle = btn.querySelector('span:nth-child(2)');
+            const subtitle = btn.querySelector('.region-nav-subtitle');
             const theme = mexThemes[index % mexThemes.length];
             
             if(area.id === areaId) {
                 btn.className = `py-3 px-2 text-xs sm:text-sm font-extrabold rounded-xl transition text-center flex flex-col items-center h-full justify-center border-b-4 ${theme.activeBg}`;
-                subtitle.className = `text-[10px] font-medium mt-1 ${theme.subText}`;
+                subtitle.className = `region-nav-subtitle text-[10px] font-medium mt-1 leading-snug ${theme.subText}`;
             } else {
                 btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white/80 text-gray-600 hover:bg-amber-50 hover:text-amber-900 transition text-center border border-amber-200/60 border-b-4 border-transparent flex flex-col items-center h-full justify-center shadow-sm";
-                subtitle.className = "text-[10px] font-normal opacity-70 mt-1 text-gray-500";
+                subtitle.className = "region-nav-subtitle text-[10px] font-normal opacity-70 mt-1 leading-snug text-gray-500";
             }
         }
     });
