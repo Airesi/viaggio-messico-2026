@@ -18,6 +18,9 @@ function initApp() {
     const savedArea = localStorage.getItem('activeTripArea');
     const initialArea = savedArea ? parseInt(savedArea) : 1;
     switchArea(initialArea);
+    // Leaflet needs a refresh when the mobile/desktop layout changes.
+    window.addEventListener('resize', refreshMapLayout, {passive: true});
+    window.addEventListener('orientationchange', () => setTimeout(refreshMapLayout, 180));
 }
 
 function populateHeaderFooter() {
@@ -487,6 +490,7 @@ function switchArea(areaId) {
     const selectedArea = tripData.areas.find(a => a.id === areaId);
     if(selectedArea) {
         if(selectedArea.mapFocus && map) {
+            refreshMapLayout();
             map.setView(selectedArea.mapFocus.coords, selectedArea.mapFocus.zoom, {animate: true});
         }
         
@@ -553,8 +557,15 @@ function switchArea(areaId) {
         }
 
         if (topImage && selectedArea.images && selectedArea.images.length > 0) {
-            topImage.src = selectedArea.images[0];
+            // Un servizio esterno potrebbe non rispondere: lascia il titolo su uno sfondo gradevole.
+            topImage.onerror = () => {
+                topImage.classList.add('hidden');
+                const credit = document.getElementById('dynamic-area-credit');
+                if (credit) credit.classList.add('hidden');
+            };
+            topImage.onload = () => topImage.classList.remove('hidden');
             topImage.alt = 'Panorama di ' + selectedArea.navTitle;
+            topImage.src = selectedArea.images[0];
             topImage.style.opacity = 1;
         }
         const credit = document.getElementById('dynamic-area-credit');
@@ -579,6 +590,12 @@ function toggleCollapse(containerId, btn) {
     container.classList.toggle('hidden', !opening);
     btn?.setAttribute('aria-expanded', String(opening));
     btn?.querySelector('.toggle-icon svg')?.classList.toggle('rotate-180', opening);
+}
+
+function refreshMapLayout() {
+    if (map && typeof map.invalidateSize === 'function') {
+        map.invalidateSize({pan: false});
+    }
 }
 
 function initMap() {
