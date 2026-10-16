@@ -286,7 +286,7 @@ function generateContent() {
                     `).join('')}
                 </div>
                 <div class="bg-amber-50/55 border-t border-amber-100 px-5 sm:px-6 py-3.5">
-                    <p class="text-[10px] uppercase tracking-wider font-black text-amber-800 mb-2">💡 Due dritte utili</p>
+                    <p class="text-[10px] uppercase tracking-wider font-black text-amber-800 mb-2">💡 Consigli pratici</p>
                     <ul class="space-y-1.5">
                         ${area.overview.tips.map(tip => `<li class="text-[11px] text-amber-950 leading-relaxed flex gap-2"><span aria-hidden="true" class="text-amber-600 shrink-0">•</span><span>${tip}</span></li>`).join('')}
                     </ul>
