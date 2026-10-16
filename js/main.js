@@ -218,12 +218,12 @@ function generateContent() {
         // Contatti verificati per le escursioni da Akumal: proposte, NON prenotazioni.
         // Il prezzo pubblicato è indicativo e il pickup al singolo hotel va sempre confermato.
         const tourContactsHtml = (area.tourContacts || []).length ? `
-            <section id="tour-contacts-area-${area.id}" class="mb-8 rounded-[1.5rem] overflow-hidden border border-emerald-200 bg-white shadow-sm">
-                <div class="px-5 py-5 bg-gradient-to-r from-emerald-950 to-teal-900 text-white">
+            <details id="tour-contacts-area-${area.id}" class="mb-8 rounded-[1.5rem] overflow-hidden border border-emerald-200 bg-white shadow-sm">
+                <summary class="cursor-pointer px-5 py-4 bg-gradient-to-r from-emerald-950 to-teal-900 text-white">
                     <span class="block text-[10px] uppercase tracking-widest text-emerald-200 font-black">🧭 Esperienze da organizzare · 2 adulti</span>
                     <h3 class="text-lg font-extrabold mt-1">Tour da contattare: Chichén Itzá e Muyil</h3>
-                    <p class="text-xs text-emerald-100 mt-2 leading-relaxed">Entrambi NON prenotati · richiesta preventivo con prelievo e rientro all'hotel di Akumal · prezzi indicativi da riconfermare.</p>
-                </div>
+                    <p class="text-xs text-emerald-100 mt-2 leading-relaxed">Non prenotati · operatori, prezzi indicativi e domande per il pickup da Akumal. <strong>Apri per confrontare le proposte ↓</strong></p>
+                </summary>
                 <div class="p-4 sm:p-5 space-y-5">
                     ${(area.tourContacts || []).map(tour => `
                         <article class="rounded-2xl border border-emerald-100 bg-emerald-50/30 overflow-hidden">
@@ -257,6 +257,40 @@ function generateContent() {
                     `).join('')}
                     <p class="text-[11px] text-gray-500">I prezzi sono quelli pubblicizzati dagli operatori nel 2026 e non garantiscono disponibilità né tariffa per gennaio 2027. Nessuna escursione è prenotata finché non lo confermiamo.</p>
                 </div>
+            </details>
+        ` : '';
+
+
+        // Sintesi editoriale della macro-tappa: pochi punti forti e suggerimenti,
+        // senza ripetere il contenuto dettagliato delle schede giornaliere.
+        const overviewHtml = area.overview ? `
+            <section class="mb-6 rounded-[1.5rem] border border-emerald-100 bg-white shadow-sm overflow-hidden">
+                <div class="px-5 pt-5 pb-3 sm:px-6">
+                    <span class="text-[10px] uppercase tracking-[.16em] text-amber-800 font-black">✨ Da non perdere</span>
+                    <h3 class="text-lg font-extrabold text-emerald-950 mt-1">Il meglio di questa tappa</h3>
+                    <p class="text-xs leading-relaxed text-gray-600 mt-1">${area.overview.intro}</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 px-4 sm:px-5 pb-4">
+                    ${area.overview.highlights.map(item => `
+                        <a href="dettaglio.html?day=${encodeURIComponent(item.dayId)}"
+                            class="group block rounded-xl border border-gray-200 bg-gray-50/65 hover:border-emerald-300 hover:bg-emerald-50/60 transition p-3.5">
+                            <div class="flex items-start gap-2.5">
+                                <span class="shrink-0 text-xl leading-none mt-0.5">${item.icon}</span>
+                                <div class="min-w-0">
+                                    <h4 class="text-xs font-extrabold text-slate-900 group-hover:text-emerald-900 leading-snug">${item.title} <span aria-hidden="true" class="text-emerald-700">↗</span></h4>
+                                    <p class="text-[11px] text-gray-600 mt-1 leading-snug">${item.detail}</p>
+                                    <p class="text-[10px] font-bold text-emerald-800 mt-2">${item.state}</p>
+                                </div>
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+                <div class="bg-amber-50/55 border-t border-amber-100 px-5 sm:px-6 py-3.5">
+                    <p class="text-[10px] uppercase tracking-wider font-black text-amber-800 mb-2">💡 Due dritte utili</p>
+                    <ul class="space-y-1.5">
+                        ${area.overview.tips.map(tip => `<li class="text-[11px] text-amber-950 leading-relaxed flex gap-2"><span aria-hidden="true" class="text-amber-600 shrink-0">•</span><span>${tip}</span></li>`).join('')}
+                    </ul>
+                </div>
             </section>
         ` : '';
 
@@ -267,19 +301,19 @@ function generateContent() {
             <div class="mb-6">
                 <span class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">🗺️ Programma</span>
                 <div class="border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all">
-                    <button onclick="toggleCollapse('days-area-${area.id}', this)" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
+                    <button type="button" onclick="toggleCollapse('days-area-${area.id}', this)" aria-expanded="true" aria-controls="days-area-${area.id}" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">📅</div>
                             <div class="text-left">
                                 <h3 class="text-sm font-extrabold text-gray-900">Itinerario Giornaliero</h3>
-                                <p class="text-[11px] text-gray-500 font-medium">Esplora i ${area.days.length} giorni nel dettaglio</p>
+                                <p class="text-[11px] text-gray-500 font-medium">Consulta le ${area.days.length} schede giorno per giorno</p>
                             </div>
                         </div>
                         <div class="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 toggle-icon transition-transform">
-                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-4 h-4 transform rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                     </button>
-                    <div id="days-area-${area.id}" class="hidden border-t border-gray-100 bg-gray-50/30 p-5">
+                    <div id="days-area-${area.id}" class="border-t border-gray-100 bg-gray-50/30 p-5">
                         <div class="space-y-3">
             `;
             area.days.forEach(day => {
@@ -298,9 +332,10 @@ function generateContent() {
         }
 
         contentDiv.innerHTML = `
+            ${overviewHtml}
+            ${daysHtml}
             ${sierraGuideHtml}
             ${tourContactsHtml}
-            ${daysHtml}
             ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
                 <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Altre risorse:</span>
                 ${linksHtml}
