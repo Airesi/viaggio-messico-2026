@@ -178,9 +178,7 @@ function generateContent() {
                         </div>
                     `).join('')}
                 </div>
-                <div class="px-5 pb-4 pt-1 border-t border-gray-100 bg-gray-50/60">
-                    <p class="text-[11px] text-gray-500">Tutti gli hotel confermati del viaggio: <strong class="text-gray-800">€ ${allHotelBookings.totalEuro}</strong>. Per l'elenco completo, importi e pagamento usa il pulsante <strong>«Hotel & costi»</strong> in alto. Il trekking Sierra Norte è escluso.</p>
-                </div>
+
             </section>
         ` : '';
         // Ricerche Booking: date precompilate, sempre NON prenotate.
@@ -595,7 +593,7 @@ function generateHotelCosts(){
                 box("Notti in hotel",String(nTotal),"Escluso trekking",false),
                 box("Media per notte",money2(nTotal?eurosTotal/nTotal:0),"2 persone",false),
               "</div>",
-              "<p class='mb-5 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Il riepilogo Booking conferma gli hotel, ma non tutti gli addebiti. Importo esclusivo degli hotel elencati: NON include il trekking Sierra Norte, eventuali altre notti, trasferimenti, tour o spese extra.</p>",
+              "<p class='mb-5 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Il riepilogo Booking conferma gli hotel, ma non tutti gli addebiti. <strong>Il tetto per l'intero viaggio è " + euro(tripData.general.budget.capEuro) + "</strong>, inclusi voli, trasferimenti, trekking, tour, pasti, attrezzatura, souvenir, valigia e imprevisti. Il totale qui sopra riguarda SOLO le notti negli hotel Booking elencati: il prezzo dei voli non è ancora registrato nel sito.</p>",
               "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
               "<div class='grid grid-cols-1 lg:grid-cols-2 gap-3'>"+cards+"</div>",
               "<div class='mt-5 p-4 rounded-xl bg-white border border-gray-200 flex items-center justify-between gap-3'><strong class='text-sm text-slate-800'>Totale "+stays.length+" soggiorni</strong><strong class='text-2xl font-black text-blue-950 tabular-nums'>"+euro(eurosTotal)+"</strong></div>",
