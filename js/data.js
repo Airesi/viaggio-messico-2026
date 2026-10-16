@@ -1642,10 +1642,10 @@ const tripData = {
             "id": 5,
             "navTitle": "Caribe",
             "navSubtitle": "Cozumel e Akumal",
-            "badge": "10–16 Gen • Cozumel confermato, Akumal da scegliere",
+            "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO, €300 per due adulti, King Deluxe Fronte Oceano, cancellazione gratuita e NON PAGATO. Dal 12 al 16 gennaio quattro notti ad Akumal ANCORA DA PRENOTARE. Night Snorkel l'11 possibile; Muyil 13; Isla Contoy facoltativa 14/15; volo da Cancún il 16.",
+            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO (€300, NON PAGATO). 12–16 gennaio: Akumal, quattro notti DA PRENOTARE. Da Akumal: 13 gennaio tour collettivo a Chichén Itzá, 14 gennaio canali di Muyil/Sian Ka’an, entrambi ANCORA DA CONTATTARE E PRENOTARE; 15 gennaio completamente libero per il mare. Il 16 transfer diretto all’aeroporto di Cancún.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1653,10 +1653,6 @@ const tripData = {
                 {
                     "text": "🔗 Zona archeologica Muyil (INAH)",
                     "url": "https://lugares.inah.gob.mx/es/node/4440"
-                },
-                {
-                    "text": "🔗 Parco Nazionale Isla Contoy (CONANP)",
-                    "url": "https://descubreanp.conanp.gob.mx/en/conanp/ANP?suri=72"
                 },
                 {
                     "text": "🚆 Orari ufficiali Tren Maya",
@@ -1669,17 +1665,34 @@ const tripData = {
                 {
                     "text": "⛴️ Traghetti · Winjet",
                     "url": "https://winjet.mx/"
+                },
+                {
+                    "text": "🏛️ Chichen Itza Tours · Classic Riviera Maya",
+                    "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
+                },
+                {
+                    "text": "🏛️ Vive Cancún · Chichén económico",
+                    "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
+                },
+                {
+                    "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
+                    "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
+                },
+                {
+                    "text": "🌿 Paseo Tours · Canali di Muyil",
+                    "url": "https://www.paseotours.com/en/tour-muyil-canals/"
                 }
             ],
             "basecamp": {
                 "zone": "Cozumel 10–12 gen (2 notti confermate) · Akumal 12–16 gen (4 notti da cercare)",
                 "hotelIdea": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano · €300 CONFERMATO, NON PAGATO, cancellazione gratuita, senza colazione. Akumal 12–16 gen ancora da prenotare.",
-                "why": "Il 10 arrivo da Bacalar via Playa del Carmen + traghetto, orari da verificare. Coral Princess confermato a €300. Night Snorkel l'11 ancora da prenotare; 12 traghetto e transfer verso Akumal; 16 transfer su strada verso CUN.",
+                "why": "Il 10 arrivo a Cozumel via Playa del Carmen e traghetto; Coral Princess prenotato a €300. 11 possibile snorkeling notturno; 12 Akumal (hotel da cercare). 13 Chichén Itzá con tour collettivo A/R; 14 Muyil e flottazione canali; 15 GIORNO LIBERO senza altri tour; 16 transfer diretto a Cancún Aeroporto. I tour 13/14 non sono prenotati, attendere preventivi pickup Akumal.",
                 "tags": [
-                    "✅ Coral Princess confermato",
-                    "💳 Hotel Cozumel NON pagato",
-                    "🌊 Night snorkeling da prenotare",
-                    "🔎 Akumal 12–16 gen da cercare"
+                    "✅ Coral Princess prenotato",
+                    "🌙 Night snorkeling da prenotare",
+                    "🏛️ Chichén Itzá 13 gen · contatti pronti",
+                    "🌿 Muyil 14 gen · contatti pronti",
+                    "🏖️ 15 gen · mare senza programmi"
                 ],
                 "transports": [
                     {
@@ -1725,12 +1738,12 @@ const tripData = {
                         "cost": "Da quotare"
                     },
                     {
-                        "name": "Muyil / Sian Ka'an · 13 gen",
-                        "cost": "Non prenotato"
+                        "name": "Chichén Itzá tour collettivo da Akumal · 13 gen",
+                        "cost": "Da quotare per 2: pubblicizzati 1.300 MXN o 75 USD a persona, ingresso incluso, pickup da confermare"
                     },
                     {
-                        "name": "Isla Contoy · eventuale 14 o 15 gen",
-                        "cost": "Opzionale · meteo"
+                        "name": "Tour comunitario Muyil / Sian Ka’an · 14 gen",
+                        "cost": "Da quotare per 2 persone: indicati 3.380 MXN a persona + ingresso; verificare alternativa €100/persona e pickup"
                     },
                     {
                         "name": "Akumal → aeroporto CUN · 16 gen",
@@ -1765,19 +1778,24 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Tour Muyil / Sian Ka'an · 13 gen",
-                    "status": "Da organizzare",
+                    "name": "Tour collettivo Chichén Itzá · 13 gen · 2 operatori da contattare",
+                    "status": "Da richiedere prezzo finale e pickup ad Akumal",
                     "type": "warning"
                 },
                 {
-                    "name": "Isla Contoy · eventuale 14/15 gen",
-                    "status": "Facoltativo · dipende dal meteo",
+                    "name": "Tour Muyil / Sian Ka’an · 14 gen · 2 operatori da contattare",
+                    "status": "Da richiedere preventivo con pickup ad Akumal",
                     "type": "warning"
                 },
                 {
                     "name": "Transfer Akumal → CUN · 16 gen",
                     "status": "Da organizzare",
                     "type": "warning"
+                },
+                {
+                    "name": "15 gennaio · Akumal",
+                    "status": "Giornata libera / riposo",
+                    "type": "info"
                 }
             ],
             "days": [
@@ -1808,18 +1826,54 @@ const tripData = {
                 {
                     "id": "5-jan13",
                     "dayName": "Giorno 24 (13 Gen)",
-                    "title": "Muyil e canali di Sian Ka'an da Akumal",
-                    "location": "Akumal → Muyil / Sian Ka'an",
-                    "shortDesc": "Escursione nella foresta e flottazione nei canali, senza cambiare hotel.",
-                    "fullDesc": "<p>Dalla base di <strong>Akumal</strong> possibile giornata a <strong>Muyil</strong>: zona archeologica e tour guidato in barca con <strong>flottazione nei canali di Sian Ka'an</strong>, se consentito dalle condizioni del giorno. Il tour non è prenotato: verificare operatore autorizzato e <strong>pickup proprio all'hotel scelto</strong> o costo del transfer. Rientro in serata nello stesso albergo ad Akumal.</p>"
+                    "title": "Chichén Itzá: tour collettivo da Akumal",
+                    "location": "Akumal → Chichén Itzá → Akumal",
+                    "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
+                    "fullDesc": "<p><strong>13 gennaio · Chichén Itzá</strong>: escursione collettiva A/R da Akumal, con trasporto e guida; hotel ad Akumal ancora da scegliere. <strong>NON PRENOTATO</strong>. Chiedere ai due operatori indicati nel riquadro «Tour da contattare» in Caribe un preventivo scritto per <strong>due adulti</strong> che comprenda <strong>pickup presso l'hotel</strong>, ingresso INAH e imposte per stranieri, guida, programma e prezzo finale. Le offerte pubblicizzate partono da circa <strong>1.300 MXN / 75 USD a persona</strong>, ma non sono preventivi per il 13/01/2027.</p><p>Controllare durata effettiva della visita a Chichén Itzá, eventuali soste commerciali e costi esclusi (bevande o giubbotto al cenote). Niente guida privata né auto a noleggio. Dopo la giornata, ritorno alla stessa base ad Akumal. Il <strong>15 gennaio</strong> resta libero.</p>",
+                    "links": [
+                        {
+                            "text": "🏛️ Chichen Itza Tours · Riviera Maya",
+                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
+                        },
+                        {
+                            "text": "🏛️ Vive Cancún · Chichén económico",
+                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
+                        },
+                        {
+                            "text": "💬 WhatsApp preventivo Vive Cancún",
+                            "url": "https://wa.me/529983531352"
+                        }
+                    ]
                 },
                 {
-                    "id": "5-jan14-15",
-                    "dayName": "Giorni 25–26 (14–15 Gen)",
-                    "title": "Akumal e, forse, Isla Contoy",
-                    "location": "Akumal / Isla Contoy",
-                    "shortDesc": "Una giornata di mare e possibile tour Isla Contoy da Akumal, meteo permettendo.",
-                    "fullDesc": "<p><strong>14 gennaio:</strong> eventuale escursione autorizzata a <strong>Isla Contoy</strong> con partenza molto presto da Akumal, verificando il pickup effettivo all'hotel. <strong>15 gennaio:</strong> mare e relax, oppure seconda possibilità per Contoy se il 14 salta.</p><p><strong>Isla Contoy non è prenotata e non è garantita:</strong> i venti di gennaio possono portare a chiusure dei porti. Se il tour non è fattibile, meglio godersi Akumal e non aggiungere ulteriori trasferimenti.</p>"
+                    "id": "5-jan14",
+                    "dayName": "Giorno 25 (14 Gen)",
+                    "title": "Muyil e flottazione nei canali di Sian Ka’an",
+                    "location": "Akumal → Muyil / Sian Ka’an → Akumal",
+                    "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
+                    "fullDesc": "<p><strong>14 gennaio · Muyil e canali di Sian Ka’an</strong> da Akumal: barca sulle lagune e <strong>flottazione nel canale maya</strong> con guida autorizzata. Tour <strong>NON PRENOTATO</strong>. Contattare la <strong>Community Tours Sian Ka’an</strong>, cooperativa locale: il tour Ancient Canal Midday dichiara transfer incluso da Akumal, tariffa 2026 pubblicata <strong>3.380 MXN/persona</strong> più tassa di conservazione (~225 MXN/persona) ed eventuali commissioni. Chiedere costo finale e se comprende il <strong>sito archeologico di Muyil</strong>.</p><p><strong>Alternativa economica da verificare:</strong> Paseo Tours pubblicizza 100 €/persona per i canali, ma non indica pickup da Akumal: chiedere supplemento e disponibilità prima di scegliere. Sul sito principale del viaggio sono salvati entrambi i contatti e le domande da inviare.</p>",
+                    "links": [
+                        {
+                            "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
+                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
+                        },
+                        {
+                            "text": "💬 WhatsApp cooperativa Muyil",
+                            "url": "https://wa.me/529841140750"
+                        },
+                        {
+                            "text": "🌿 Paseo Tours · Muyil Canals",
+                            "url": "https://www.paseotours.com/en/tour-muyil-canals/"
+                        }
+                    ]
+                },
+                {
+                    "id": "5-jan15",
+                    "dayName": "Giorno 26 (15 Gen)",
+                    "title": "Akumal: giornata interamente libera",
+                    "location": "Akumal · mare e relax",
+                    "shortDesc": "Niente tour, niente trasferimenti: giornata di mare e riposo.",
+                    "fullDesc": "<p><strong>15 gennaio:</strong> giornata da difendere come <strong>relax totale</strong> ad Akumal, senza spostamenti programmati. Dopo Chichén Itzá e Muyil, niente Isla Contoy né nuove escursioni. Spiaggia, snorkeling semplice vicino all'hotel se lo desiderate, e nessuna sveglia.</p>"
                 },
                 {
                     "id": "5-jan16",
@@ -1863,12 +1917,20 @@ const tripData = {
                     "body": "10 gen Bacalar → Playa del Carmen (treno da verificare) + porto + traghetto → Cozumel. 12 gen Cozumel → Playa del Carmen in traghetto + transfer Akumal. 16 gen Akumal → Cancún Aeroporto via strada, senza traghetto."
                 },
                 {
-                    "title": "Muyil e Isla Contoy",
-                    "body": "Muyil/Sian Ka'an spostato indicativamente al 13 gennaio come escursione da Akumal. Isla Contoy solo opportunità il 14 o 15, se le condizioni meteo consentono le uscite: non sacrificare tutte le giornate di riposo."
-                },
-                {
                     "title": "Alternative precedentemente considerate",
                     "body": "Il precedente piano Tulum 10–13 + zona Cancún 13–16 non è più quello attuale; Villas DeRosa non prenotato; La Villa Mexicana a Xpu-Há scartata per costo e lontananza dalla spiaggia."
+                },
+                {
+                    "title": "13 gennaio · Chichén Itzá da Akumal (non prenotato)",
+                    "body": "Chichen Itza Tours Classic Riviera Maya pubblicizza da 75 USD/persona; Vive Cancún Económico da 1.300 MXN/persona. Entrambi da contattare: non è ancora confermato il prelievo al futuro hotel Akumal né il prezzo definitivo 2027. Chiedere ingresso INAH, tasse per stranieri, eventuali soste commerciali."
+                },
+                {
+                    "title": "14 gennaio · Muyil Sian Ka’an (non prenotato)",
+                    "body": "Community Tours Sian Ka’an Ancient Canal Midday: pickup area Akumal incluso, costo indicato 3.380 MXN/persona + ~225 MXN/persona tassa federale e commissioni; alternativa Paseo Tours da €100/persona con pickup Akumal NON pubblicizzato, quindi supplemento da chiedere. In entrambi: assicurarsi che flottazione, barca e rovine Muyil siano incluse come desiderato."
+                },
+                {
+                    "title": "15 gennaio · giornata libera protetta",
+                    "body": "Isla Contoy eliminata dal programma: giornata di riposo e spiaggia ad Akumal senza escursioni o sveglie. Possibili cambi solo su richiesta."
                 }
             ],
             "hotelSearches": [
@@ -1892,6 +1954,98 @@ const tripData = {
                     "checkin": "2027-01-12",
                     "checkout": "2027-01-16",
                     "note": "Confrontare accesso diretto spiaggia, servizi, cancellazione gratuita."
+                }
+            ],
+            "tourContacts": [
+                {
+                    "date": "13 gennaio 2027",
+                    "destination": "Chichén Itzá",
+                    "kind": "Intera giornata · senza auto",
+                    "intro": "Da Akumal con tour collettivo: privilegiare trasporto A/R, guida e imposte INAH incluse. Prezzi indicativi dei siti, NON preventivi confermati per la data.",
+                    "providers": [
+                        {
+                            "name": "Chichen Itza Tours · Classic Riviera Maya",
+                            "price": "Pubblicizza 75 USD per adulto, ingresso e imposte inclusi (circa 150 USD per due). Tariffe in diverse sezioni del sito non perfettamente coerenti: chiedere preventivo scritto.",
+                            "pickup": "Pickup negli hotel della Riviera Maya soggetto a restrizioni: per piccole strutture/appartamenti potrebbe essere un punto di incontro esterno. Chiedere specificamente per il futuro hotel ad Akumal.",
+                            "includes": "Autobus A/R, guida certificata, Chichén Itzá, pranzo buffet, cenote e breve Valladolid.",
+                            "caution": "Verificare prezzo finale in MXN per 2 adulti, durata sul sito archeologico, eventuali soste commerciali e costi aggiuntivi (bevande, giubbotto cenote).",
+                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html",
+                            "contacts": [
+                                {
+                                    "label": "Apri tour e richiesta",
+                                    "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
+                                },
+                                {
+                                    "label": "Telefono +52 987 112 9491",
+                                    "url": "tel:+529871129491"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Vive Cancún · Chichén económico Riviera Maya",
+                            "price": "1.300 MXN per adulto pubblicizzati, 2.600 MXN per due, con ingresso e tasse dichiarati inclusi: confermare validità il 13/01/2027.",
+                            "pickup": "Annuncia partenza dai punti/hotel della Riviera Maya, ma serve conferma ESPLICITA per l'alloggio ad Akumal e dell'eventuale supplemento.",
+                            "includes": "Trasporto A/R, guida bilingue, ingresso Chichén, buffet, cenote e breve Valladolid.",
+                            "caution": "Prevede anche rituale maya e tempo per acquisti/artigianato: chiedere se le soste commerciali sono obbligatorie. Bevande e noleggio giubbotto al cenote esclusi.",
+                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar",
+                            "contacts": [
+                                {
+                                    "label": "Apri offerta",
+                                    "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
+                                },
+                                {
+                                    "label": "WhatsApp +52 998 353 1352",
+                                    "url": "https://wa.me/529983531352"
+                                }
+                            ]
+                        }
+                    ],
+                    "questions": "Per 2 adulti il 13/01/2027: pickup e ritorno esattamente al nostro alloggio ad Akumal (nome da comunicare), prezzo finale con biglietti e tutte le imposte per stranieri, orari reali, durata della visita guidata, sosta cenote/Valladolid e eventuali soste commerciali."
+                },
+                {
+                    "date": "14 gennaio 2027",
+                    "destination": "Muyil / Sian Ka’an",
+                    "kind": "Canali maya e flottazione · transfer da Akumal",
+                    "intro": "Punto centrale: tour che includa DAVVERO il giro in barca nei canali e la flottazione, con prelievo ad Akumal. Verificare se include la visita al sito archeologico Muyil.",
+                    "providers": [
+                        {
+                            "name": "Community Tours Sian Ka’an · Ancient Canal",
+                            "price": "Midday pubblicizzato a 3.380 MXN per adulto (6.760 MXN in due) con transfer Akumal incluso; tassa federale riserva extra circa 225 MXN/persona, oltre a eventuali commissioni.",
+                            "pickup": "Il tour Midday delle 10:00 include il transfer A/R da Akumal e Aventuras Akumal; per l'Early 06:00 è previsto un supplemento di 320 MXN/persona. Concordare il punto esatto dell'hotel.",
+                            "includes": "Cooperativa maya locale, barca sulle lagune, flottazione nel canale antico, guida e pranzo tradizionale.",
+                            "caution": "Verificare visita alle rovine di Muyil inclusa o meno, tassa federale aggiornata, eventuali commissioni e prezzo 2027. Il tour Midday occupa buona parte della giornata.",
+                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/",
+                            "contacts": [
+                                {
+                                    "label": "Tour della cooperativa",
+                                    "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
+                                },
+                                {
+                                    "label": "WhatsApp +52 984 114 0750",
+                                    "url": "https://wa.me/529841140750"
+                                },
+                                {
+                                    "label": "Email prenotazioni",
+                                    "url": "mailto:reservacionesctsk@siankaantours.com.mx"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Paseo Tours · Muyil Canals",
+                            "price": "100 € per adulto pubblicizzati (200 € per due) per un tour di mezza giornata; prezzo e supplementi per Akumal da confermare.",
+                            "pickup": "Il sito elenca hotel a Playa del Carmen, Tulum e Puerto Morelos, NON Akumal: chiedere preventivo di pickup diretto o punto d'incontro alternativo prima di scegliere.",
+                            "includes": "Tour canali di Muyil con barca/flottazione secondo il programma del fornitore, guida e rientro tipicamente nel primo pomeriggio.",
+                            "caution": "Non considerare incluso il trasporto da Akumal: eventuale taxi può annullare il vantaggio economico. Chiedere se il sito archeologico e le tasse siano inclusi.",
+                            "url": "https://www.paseotours.com/en/tour-muyil-canals/",
+                            "contacts": [
+                                {
+                                    "label": "Tour e modulo contatti",
+                                    "url": "https://www.paseotours.com/en/tour-muyil-canals/"
+                                }
+                            ]
+                        }
+                    ],
+                    "questions": "Per 2 adulti il 14/01/2027: pickup e rientro ad Akumal o Aventuras Akumal (hotel da comunicare), prezzo totale per due CON trasporto, ingressi INAH/CONANP, barca, giubbotti e flottazione; confermare se sono comprese le rovine di Muyil, durata e politiche per maltempo."
                 }
             ]
         }
@@ -2003,7 +2157,7 @@ const tripData = {
                 20.078,
                 -87.615
             ],
-            "days": "13 Gen"
+            "days": "14 Gen"
         },
         {
             "areaId": 5,
