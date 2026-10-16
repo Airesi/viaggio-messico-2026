@@ -10,6 +10,7 @@ function initApp() {
     generateNavigation();
     generateContent();
     generateFlights();
+    generateHotelCosts();
     initMap();
     // initOrganicMosaic(); // Animazione disattivata per performance.
 
@@ -537,6 +538,87 @@ function initMap() {
     });
 }
 
+
+
+// Sintesi costi hotel: stessi comportamenti della modale voli, importi dinamici.
+function generateHotelCosts(){
+    const container=document.getElementById("hotel-costs-modal-container");
+    if(!container)return;
+    const stays=[...tripData.general.hotelBookings.items].sort((a,b)=>a.checkin.localeCompare(b.checkin));
+    const euro=n=>"€ "+new Intl.NumberFormat("it-IT",{maximumFractionDigits:0,useGrouping:true}).format(n);
+    const money2=n=>"€ "+new Intl.NumberFormat("it-IT",{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+    const safe=x=>String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const short=x=>x.slice(8,10)+"/"+x.slice(5,7);
+    const nights=x=>Math.round((Date.parse(x.checkout+"T00:00:00Z")-Date.parse(x.checkin+"T00:00:00Z"))/86400000);
+    const nTotal=stays.reduce((s,x)=>s+nights(x),0);
+    const eurosTotal=stays.reduce((s,x)=>s+Number(x.totalEuro),0);
+    const high=Math.max(1,...stays.map(x=>x.totalEuro));
+    const cards=stays.map((x,i)=>[
+        "<article class='rounded-2xl border border-slate-200 bg-white p-4 shadow-sm'>",
+          "<div class='flex items-start gap-3'>",
+          "<span class='w-9 h-9 shrink-0 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center text-xs font-black'>"+(i+1)+"</span>",
+          "<div class='flex-1 min-w-0'>",
+            "<div class='flex justify-between items-start gap-3'>",
+              "<div><h4 class='text-sm font-black text-gray-900 leading-snug'>"+safe(x.name)+"</h4>",
+              "<p class='text-[11px] text-gray-500 mt-1'>"+safe(x.city)+" · "+short(x.checkin)+"–"+short(x.checkout)+" · "+nights(x)+" notti</p></div>",
+              "<strong class='shrink-0 text-lg font-black text-gray-900 tabular-nums'>"+euro(x.totalEuro)+"</strong>",
+            "</div>",
+            "<div class='h-1.5 mt-3 rounded-full bg-amber-50 overflow-hidden'><div class='h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full' style='width:"+Math.round(x.totalEuro/high*100)+"%'></div></div>",
+            "<div class='flex flex-wrap gap-1.5 mt-3'>",
+              "<span class='rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-extrabold text-emerald-800'>✓ "+safe(x.status)+"</span>",
+              "<span class='rounded-full bg-slate-100 px-2.5 py-1 text-[10px] text-gray-600 font-semibold'>"+safe(x.cancellation)+"</span>",
+              "<span class='rounded-full bg-amber-50 px-2.5 py-1 text-[10px] text-amber-900 font-semibold'>"+safe(x.paymentStatus||"Pagamento non verificato")+"</span>",
+            "</div>",
+          "</div></div>",
+        "</article>"
+    ].join("")).join("");
+    const box=(label,value,note,accent)=>[
+        "<div class='rounded-2xl p-4 border "+(accent?"bg-blue-950 text-white border-blue-950":"bg-white border-gray-200 text-gray-900")+"'>",
+          "<span class='block text-[10px] uppercase tracking-widest font-black "+(accent?"text-blue-200":"text-gray-500")+"'>"+label+"</span>",
+          "<strong class='block text-2xl sm:text-3xl font-black mt-2 tabular-nums'>"+value+"</strong>",
+          note?"<span class='block text-[10px] mt-1 "+(accent?"text-blue-200":"text-gray-500")+"'>"+note+"</span>":"",
+        "</div>"
+    ].join("");
+    container.innerHTML=[
+        "<div id='hotel-costs-modal' role='dialog' aria-modal='true' aria-labelledby='hotel-costs-heading' class='fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-slate-900/50 backdrop-blur-md'>",
+          "<div class='bg-gray-50 w-full max-w-5xl rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[94vh] border border-white/40'>",
+            "<div class='bg-white border-b border-gray-100 px-5 sm:px-8 py-5 flex items-center justify-between gap-4'>",
+              "<div class='flex items-center gap-3'><span class='text-2xl'>🏨</span><div>",
+              "<h2 id='hotel-costs-heading' class='text-lg font-black uppercase text-slate-800 tracking-wide'>Hotel & costi</h2>",
+              "<p class='text-xs text-slate-500'>Panoramica prenotazioni Booking · 2 adulti</p></div></div>",
+              "<button type='button' onclick='toggleHotelCostsModal()' aria-label='Chiudi il riepilogo hotel' class='h-10 w-10 shrink-0 rounded-full bg-slate-100 hover:bg-rose-100 font-bold text-slate-600'>✕</button>",
+            "</div>",
+            "<div class='p-4 sm:p-7 overflow-y-auto'>",
+              "<div class='grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5'>",
+                box("Totale hotel confermati",euro(eurosTotal),"Escluse altre spese",true),
+                box("Prenotazioni",String(stays.length),"Confermate",false),
+                box("Notti in hotel",String(nTotal),"Escluso trekking",false),
+                box("Media per notte",money2(nTotal?eurosTotal/nTotal:0),"2 persone",false),
+              "</div>",
+              "<p class='mb-5 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Il riepilogo Booking conferma gli hotel, ma non tutti gli addebiti. Importo esclusivo degli hotel elencati: NON include il trekking Sierra Norte, eventuali altre notti, trasferimenti, tour o spese extra.</p>",
+              "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
+              "<div class='grid grid-cols-1 lg:grid-cols-2 gap-3'>"+cards+"</div>",
+              "<div class='mt-5 p-4 rounded-xl bg-white border border-gray-200 flex items-center justify-between gap-3'><strong class='text-sm text-slate-800'>Totale "+stays.length+" soggiorni</strong><strong class='text-2xl font-black text-blue-950 tabular-nums'>"+euro(eurosTotal)+"</strong></div>",
+              "<p class='text-[11px] text-gray-500 mt-3'>Le condizioni di pagamento e cancellazione vanno verificate sulle singole conferme.</p>",
+            "</div>",
+          "</div>",
+        "</div>"
+    ].join("");
+    const modal=document.getElementById("hotel-costs-modal");
+    if(modal)modal.addEventListener("click",e=>{if(e.target===modal)toggleHotelCostsModal();});
+}
+function toggleHotelCostsModal(){
+    const modal=document.getElementById("hotel-costs-modal");
+    if(!modal)return;
+    const opening=modal.classList.contains("hidden");
+    modal.classList.toggle("hidden",!opening);
+    modal.classList.toggle("flex",opening);
+    document.body.classList.toggle("overflow-hidden",opening);
+}
+document.addEventListener("keydown",e=>{
+    const modal=document.getElementById("hotel-costs-modal");
+    if(e.key==="Escape"&&modal&&!modal.classList.contains("hidden"))toggleHotelCostsModal();
+});
 
 function generateFlights() {
     const container = document.getElementById('flight-modal-container');
