@@ -970,7 +970,7 @@ const tripData = {
             "title": "Il Pacifico: quattro notti senza fretta",
             "description": "Quattro notti a San Agustinillo, con Mazunte e Punta Cometa liberi e La Ventanilla facoltativa. Il 3 gennaio inizia il trasferimento al Chiapas.",
             "images": [
-                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20San%20Agustinillo.jpg?width=960"
             ],
             "links": [],
             "basecamp": {
@@ -1032,7 +1032,7 @@ const tripData = {
                     "shortDesc": "Partenza da Oaxaca, trasferimento a San Agustinillo e inizio del soggiorno al mare.",
                     "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
-                        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20San%20Agustinillo.jpg?width=960"
                     ],
                     "links": [
                         {
@@ -1065,6 +1065,14 @@ const tripData = {
                                 15.6659,
                                 -96.5438
                             ]
+                        }
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Sgroey",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Playa%20San%20Agustinillo.jpg",
+                            "caption": "Playa San Agustinillo"
                         }
                     ]
                 },
@@ -1165,7 +1173,12 @@ const tripData = {
                     "tip": "Per il 31 dicembre verificare disponibilità e possibili menu speciali.",
                     "url": "https://www.google.com/maps/search/?api=1&query=RestoBar%20del%20Fondo%20San%20Agustinillo%20Oaxaca"
                 }
-            ]
+            ],
+            "heroCredit": {
+                "author": "Sgroey",
+                "license": "CC BY-SA 4.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Playa%20San%20Agustinillo.jpg"
+            }
         },
         {
             "id": 3,
@@ -1176,8 +1189,7 @@ const tripData = {
             "title": "Palenque: giungla, città maya e cascate",
             "description": "Palenque e Roberto Barrios il 5–6 gennaio; autobus dalla costa ancora da verificare. Toniná resta una possibilità alternativa, non programmata.",
             "images": [
-                "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
-                "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20inscription%20in%20Palenque%20Chiapas%2002.jpg?width=960"
             ],
             "links": [
                 {
@@ -1320,7 +1332,9 @@ const tripData = {
                     "location": "Zona archeologica di Palenque",
                     "shortDesc": "Giornata dedicata al sito UNESCO: Tempio delle Iscrizioni, Palazzo, complessi cerimoniali e sentieri nella foresta.",
                     "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p><p>Controllare con la struttura il tragitto fino all'ingresso, senza dare per scontato che sia raggiungibile a piedi.</p>",
-                    "images": [],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20inscription%20in%20Palenque%20Chiapas%2002.jpg?width=960"
+                    ],
                     "links": [
                         {
                             "text": "🏛️ Sito ufficiale INAH · Palenque",
@@ -1346,6 +1360,14 @@ const tripData = {
                                 -92.047
                             ]
                         }
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Patytc",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Temple%20of%20inscription%20in%20Palenque%20Chiapas%2002.jpg",
+                            "caption": "Tempio delle Iscrizioni, Palenque"
+                        }
                     ]
                 },
                 {
@@ -1355,7 +1377,9 @@ const tripData = {
                     "location": "Roberto Barrios · Palenque",
                     "shortDesc": "Escursione alle cascate e alle piscine naturali nella giungla, con tempo per fermarsi e fare il bagno dove consentito.",
                     "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p><p>Organizzare con la struttura il taxi verso la stazione Tren Maya per il 7 gennaio.</p>",
-                    "images": [],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Cascada%20Roberto%20Barrios%2013.jpg?width=960"
+                    ],
                     "links": [
                         {
                             "text": "🗺️ Roberto Barrios · posizione su OpenStreetMap",
@@ -1376,6 +1400,14 @@ const tripData = {
                                 17.318,
                                 -92.142
                             ]
+                        }
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "ZoRrO0880",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Cascada%20Roberto%20Barrios%2013.jpg",
+                            "caption": "Cascadas Roberto Barrios, Chiapas"
                         }
                     ]
                 }
@@ -1517,7 +1549,12 @@ const tripData = {
                     "tip": "Più costoso; recensioni contrastanti sul valore: chiedere menu e prezzo totale.",
                     "url": "https://www.tripadvisor.com/Restaurant_Review-g249851-d7136276-Reviews-Restaurante_Bajlum-Palenque_Southern_Mexico.html"
                 }
-            ]
+            ],
+            "heroCredit": {
+                "author": "Patytc",
+                "license": "CC BY-SA 4.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Temple%20of%20inscription%20in%20Palenque%20Chiapas%2002.jpg"
+            }
         },
         {
             "id": 4,
@@ -1528,7 +1565,7 @@ const tripData = {
             "title": "Il Tren Maya e la laguna dai sette colori",
             "description": "Due giornate per la laguna (8–9 gennaio). Il 7 gennaio Tren Maya, collegamenti e check-in tardivo sono ancora da confermare.",
             "images": [
-                "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Bacalar%20lagoon.jpg?width=960"
             ],
             "links": [
                 {
@@ -1696,7 +1733,7 @@ const tripData = {
                     "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
                     "fullDesc": "<p>Giornata completa sulla <strong>Laguna dei Sette Colori</strong>: kayak o breve uscita guidata a basso impatto e balneazione dove consentita. Proteggere gli stromatoliti e rispettare le eventuali chiusure ambientali.</p><p>La base si trova in paese: scegliere un accesso pubblico o un balneario sulla laguna. Il pernottamento non comprende un pontile privato.</p>",
                     "images": [
-                        "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Bacalar%20lagoon.jpg?width=960"
                     ],
                     "links": [
                         {
@@ -1719,6 +1756,14 @@ const tripData = {
                                 -88.38
                             ]
                         }
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Yosef Ben Melamed",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Bacalar%20lagoon.jpg",
+                            "caption": "Laguna di Bacalar"
+                        }
                     ]
                 },
                 {
@@ -1728,7 +1773,9 @@ const tripData = {
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
                     "fullDesc": "<p>Seconda giornata senza orologio: nuoto, fotografie, kayak o una breve uscita in barca, soltanto se ne avete voglia. Il <strong>10 gennaio</strong> partire verso Playa del Carmen, poi traghetto per Cozumel; orari e coincidenze da verificare nella tappa Caribe.</p>",
-                    "images": [],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Bacalar%20lagoon.jpg?width=960"
+                    ],
                     "links": [
                         {
                             "text": "🗺️ Laguna Bacalar su OpenStreetMap",
@@ -1749,6 +1796,14 @@ const tripData = {
                                 18.68,
                                 -88.38
                             ]
+                        }
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Yosef Ben Melamed",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Bacalar%20lagoon.jpg",
+                            "caption": "Laguna di Bacalar"
                         }
                     ]
                 }
@@ -1820,7 +1875,12 @@ const tripData = {
                     "tip": "Locale conosciuto e talvolta vivace: andarci di giorno per la vista.",
                     "url": "https://www.laplayitabacalar.com/"
                 }
-            ]
+            ],
+            "heroCredit": {
+                "author": "Yosef Ben Melamed",
+                "license": "CC BY-SA 4.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Bacalar%20lagoon.jpg"
+            }
         },
         {
             "id": 5,
@@ -1831,7 +1891,7 @@ const tripData = {
             "title": "Snorkeling a Cozumel e relax ad Akumal",
             "description": "Cozumel e Akumal dal 10 al 16 gennaio: snorkeling notturno, Chichén Itzá e Muyil da prenotare, giornata libera il 15. Il 17 gennaio è il rientro in Italia.",
             "images": [
-                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Cozumel%20Beach.jpg?width=960"
             ],
             "links": [
                 {
@@ -1947,7 +2007,42 @@ const tripData = {
                             "text": "🚆 Tren Maya · verifica corse",
                             "url": "https://www.trenmaya.gob.mx/horarios.php"
                         }
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Cozumel%20Beach.jpg?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Kushboy",
+                            "license": "CC BY-SA 3.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Cozumel%20Beach.jpg",
+                            "caption": "Spiaggia sull'isola di Cozumel"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Bacalar · partenza indicativa",
+                            "coords": [
+                                18.677,
+                                -88.393
+                            ]
+                        },
+                        {
+                            "name": "Playa del Carmen · porto",
+                            "coords": [
+                                20.62595,
+                                -87.0714
+                            ]
+                        },
+                        {
+                            "name": "Cozumel · molo traghetti",
+                            "coords": [
+                                20.51255,
+                                -86.95142
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan11",
@@ -1965,7 +2060,35 @@ const tripData = {
                             "text": "🌙 Night Snorkel Cozumel · operatore",
                             "url": "https://nightsnorkelcozumel.com/"
                         }
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Palancar%20reef.jpg?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Johnnie Flashlite",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Palancar%20reef.jpg",
+                            "caption": "Fondali del reef Palancar, Cozumel: fotografia diurna, non del tour notturno"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Cozumel · zona hotelera norte (indicativo)",
+                            "coords": [
+                                20.52,
+                                -86.93
+                            ]
+                        },
+                        {
+                            "name": "The Money Bar · punto di riferimento da riconfermare",
+                            "coords": [
+                                20.45839,
+                                -86.98628
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan12",
@@ -1983,7 +2106,42 @@ const tripData = {
                             "text": "⛴️ Winjet · orari traghetto",
                             "url": "https://winjet.mx/horarios/"
                         }
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Akumal%20Beach%20-%20Mexico%20(4303205262).jpg?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Serge Melki",
+                            "license": "CC BY 2.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Akumal%20Beach%20-%20Mexico%20(4303205262).jpg",
+                            "caption": "Baia e spiaggia di Akumal"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Cozumel · molo traghetti",
+                            "coords": [
+                                20.51255,
+                                -86.95142
+                            ]
+                        },
+                        {
+                            "name": "Playa del Carmen · porto",
+                            "coords": [
+                                20.62595,
+                                -87.0714
+                            ]
+                        },
+                        {
+                            "name": "Akumal · località (non pin dell'hotel)",
+                            "coords": [
+                                20.3988,
+                                -87.3173
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan13",
@@ -2001,7 +2159,35 @@ const tripData = {
                     "operationalNotes": [
                         "Tour Chichén Itzá NON prenotato: confermare pickup e rientro realmente praticabili a El Ultimo Maya, Akumal Pueblo.",
                         "Richiedere un prezzo per due che specifichi biglietto INAH, quota aggiuntiva statale e tempo reale nel sito; gli orari ordinari INAH sono 08:00–16:00, ultimo accesso alle 15:00."
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/El%20Castillo%2C%20Chichen%20Itza.jpg?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "ZuyuaT",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:El%20Castillo%2C%20Chichen%20Itza.jpg",
+                            "caption": "El Castillo, Chichén Itzá"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Akumal · località di partenza",
+                            "coords": [
+                                20.3988,
+                                -87.3173
+                            ]
+                        },
+                        {
+                            "name": "Chichén Itzá · zona archeologica",
+                            "coords": [
+                                20.68274,
+                                -88.56865
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan14",
@@ -2019,7 +2205,35 @@ const tripData = {
                     "operationalNotes": [
                         "Tour Muyil/Sian Ka'an NON prenotato: verificare prelievo ad Akumal Pueblo, luogo d'imbarco, barca e flottazione comprese.",
                         "Verificare eventuali quote parco separate: l'ingresso alla zona archeologica e la navigazione sono servizi distinti."
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Sitio%20arqueol%C3%B3gico%20de%20Muyil.JPG?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Pedro Montes Campos",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Sitio%20arqueol%C3%B3gico%20de%20Muyil.JPG",
+                            "caption": "Sito archeologico di Muyil"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Akumal · località di partenza",
+                            "coords": [
+                                20.3988,
+                                -87.3173
+                            ]
+                        },
+                        {
+                            "name": "Muyil · sito archeologico",
+                            "coords": [
+                                20.075913,
+                                -87.614022
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan15",
@@ -2037,7 +2251,35 @@ const tripData = {
                             "text": "🗺️ Akumal Pueblo · mappa indicativa",
                             "url": "https://www.openstreetmap.org/search?query=Akumal%20Pueblo"
                         }
-                    ]
+                    ],
+                    "images": [
+                        "https://commons.wikimedia.org/wiki/Special:FilePath/Akumal%20Beach%20-%20Mexico%20(4303205262).jpg?width=960"
+                    ],
+                    "imageCredits": [
+                        {
+                            "author": "Serge Melki",
+                            "license": "CC BY 2.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Akumal%20Beach%20-%20Mexico%20(4303205262).jpg",
+                            "caption": "Baia e spiaggia di Akumal"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Akumal Pueblo · riferimento orientativo",
+                            "coords": [
+                                20.3988,
+                                -87.3173
+                            ]
+                        },
+                        {
+                            "name": "Baia di Akumal",
+                            "coords": [
+                                20.39449,
+                                -87.3153
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan16",
@@ -2049,7 +2291,24 @@ const tripData = {
                     "operationalNotes": [
                         "Volo AF651 da Cancún Terminal 4 alle 21:00, come da itinerario voli: controllare eventuali cambi di operativo.",
                         "Prenotare il trasferimento per l'aeroporto con margine ampio e senza affidarsi a coincidenze con traghetti."
-                    ]
+                    ],
+                    "route": [
+                        {
+                            "name": "Akumal · località di partenza",
+                            "coords": [
+                                20.3988,
+                                -87.3173
+                            ]
+                        },
+                        {
+                            "name": "Aeroporto di Cancún",
+                            "coords": [
+                                21.0365,
+                                -86.8771
+                            ]
+                        }
+                    ],
+                    "routeNote": "Punti geografici orientativi: collegamento schematico, non un percorso stradale o il luogo esatto di pickup. Trasporti e fermate sono da verificare."
                 },
                 {
                     "id": "5-jan17",
@@ -2235,7 +2494,12 @@ const tripData = {
                     "tip": "Non è nel Pueblo: controllare orari, accesso e taxi.",
                     "url": "https://www.akumalmx.com/dining-and-entertainment/2026-eating-guide-the-best-restaurants-in-akumal/"
                 }
-            ]
+            ],
+            "heroCredit": {
+                "author": "Kushboy",
+                "license": "CC BY-SA 3.0",
+                "url": "https://commons.wikimedia.org/wiki/File:Cozumel%20Beach.jpg"
+            }
         }
     ],
     "locations": [
