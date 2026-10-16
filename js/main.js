@@ -210,10 +210,28 @@ function generateContent() {
                             </div>
                         </details>
                     ` : ''}
-                    ${area.food ? `
+                    ${(area.food || (area.venues || []).length) ? `
                         <details class="rounded-xl bg-white border border-gray-200 p-3">
-                            <summary class="cursor-pointer text-xs font-bold text-slate-900">🌮 Pasti e consigli sul posto</summary>
-                            <p class="mt-2 text-[11px] leading-relaxed text-gray-600">${area.food}</p>
+                            <summary class="cursor-pointer text-xs font-bold text-slate-900">🌮 Pasti e consigli sul posto ${(area.venues || []).length ? '· ' + area.venues.length + ' locali' : ''}</summary>
+                            ${area.food ? `<p class="mt-2 text-[11px] leading-relaxed text-gray-600">${area.food}</p>` : ''}
+                            ${(area.venues || []).length ? `
+                                <div class="mt-3 space-y-2">
+                                    <span class="block text-[10px] uppercase tracking-wide font-extrabold text-amber-800">Locali consigliati · non prenotati</span>
+                                    ${area.venues.map(v => `
+                                        <div class="rounded-lg border border-amber-100 bg-amber-50/45 p-3">
+                                            <div class="flex items-start justify-between gap-2">
+                                                <strong class="text-[11px] font-extrabold text-slate-900 leading-snug">${v.name}</strong>
+                                                <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="shrink-0 text-[10px] font-extrabold text-emerald-800 underline" aria-label="Scheda online ${v.name}">Scheda ↗</a>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-amber-800 mt-1">${v.kind}</p>
+                                            <p class="text-[10px] text-gray-500 mt-1">📍 ${v.where}</p>
+                                            <p class="text-[11px] text-gray-700 leading-relaxed mt-2">${v.description}</p>
+                                            <p class="text-[10px] text-amber-900 leading-relaxed mt-2 pt-2 border-t border-amber-100">💡 ${v.tip}</p>
+                                        </div>
+                                    `).join('')}
+                                    <p class="text-[10px] leading-relaxed text-gray-500">Verificare orari e aperture festive; pasti già inclusi nelle stime del budget.</p>
+                                </div>
+                            ` : ''}
                         </details>
                     ` : ''}
                 </div>
@@ -300,32 +318,6 @@ function generateContent() {
         ` : '';
 
 
-        // Locali raccolti da fonti online in ottobre 2026, solo suggerimenti.
-        const venuesHtml = (area.venues || []).length ? `
-            <section class="mb-6 rounded-[1.5rem] overflow-hidden border border-amber-200/70 bg-white shadow-sm">
-                <div class="px-5 sm:px-6 pt-5 pb-4 border-b border-amber-100">
-                    <span class="text-[10px] uppercase font-black tracking-[.14em] text-amber-800">🍽️ Mangiare, bere, stare bene</span>
-                    <h3 class="mt-1 text-lg font-extrabold text-emerald-950">Locali che potrebbero piacervi</h3>
-                    <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">Cucina del posto, locali con carattere e serate da ricordare. <strong>Suggerimenti, non prenotazioni.</strong></p>
-                </div>
-                <div class="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    ${area.venues.map(v => `
-                        <article class="flex flex-col rounded-xl border border-gray-200 bg-stone-50/50 px-4 py-3.5 hover:border-amber-300 transition">
-                            <div class="flex justify-between items-start gap-2">
-                                <h4 class="text-sm font-extrabold text-slate-900 leading-snug">${v.name}</h4>
-                                <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] shrink-0 font-black text-emerald-800 underline hover:text-emerald-950" aria-label="Scheda online ${v.name}">Scheda ↗</a>
-                            </div>
-                            <p class="mt-1 text-[10px] font-extrabold text-amber-800">${v.kind}</p>
-                            <p class="mt-1 text-[10px] text-gray-500">📍 ${v.where}</p>
-                            <p class="mt-2 text-[11px] leading-relaxed text-slate-700">${v.description}</p>
-                            <p class="mt-2 text-[10px] leading-relaxed text-amber-900 border-t border-amber-100 pt-2">💡 ${v.tip}</p>
-                        </article>
-                    `).join('')}
-                </div>
-                <p class="px-5 sm:px-6 pb-4 text-[10px] leading-relaxed text-gray-500">Ricerca online: ottobre 2026. Orari, prezzi e apertura nei festivi da verificare; nessuna prenotazione aggiunta. Le spese per i pasti sono già stimate nel budget.</p>
-            </section>
-        ` : '';
-
         // 2. ITINERARIO (Ora sta sotto, con il suo nuovo titoletto)
         let daysHtml = '';
         if (area.days && area.days.length > 0) {
@@ -366,7 +358,6 @@ function generateContent() {
         contentDiv.innerHTML = `
             ${overviewHtml}
             ${daysHtml}
-            ${venuesHtml}
             ${sierraGuideHtml}
             ${tourContactsHtml}
             ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
