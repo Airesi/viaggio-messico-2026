@@ -218,6 +218,19 @@ const tripData = {
             "links": [],
             "days": [
                 {
+                    "id": "1-arrival-dec20",
+                    "dayName": "Arrivo (20 Dic)",
+                    "title": "Arrivo a Città del Messico e trasferimento a Condesa",
+                    "location": "Aeroporto MEX · Condesa",
+                    "fullDesc": "<p><strong>20 dicembre · arrivo in Messico.</strong> Volo Air France via Parigi; l'operativo riportato nei dettagli voli prevede l'arrivo all'aeroporto MEX, Terminal 1, alle <strong>20:55 locali</strong>. Dopo controlli d'ingresso e ritiro bagagli, transfer autorizzato o taxi/app verso <strong>The PM at Condesa Arts & Boutique Experience</strong>, con prenotazione dal 20 al 23 dicembre.</p><p><strong>Nessuna visita programmata per la sera:</strong> tenere conto dei tempi dell'aeroporto e avvisare l'hotel dell'arrivo serale. Le visite iniziano il 21 dicembre con Teotihuacán e pranzo prenotato a La Gruta.</p>",
+                    "operationalNotes": [
+                        "Confermare con The PM le modalità di accesso e il check-in in tarda serata.",
+                        "Verificare eventuali variazioni dell'operativo del volo e usare un mezzo affidabile dall'aeroporto."
+                    ],
+                    "images": [],
+                    "links": []
+                },
+                {
                     "id": "1-1",
                     "dayName": "Giorno 1 (21 Dic)",
                     "title": "La Città degli Dei: Teotihuacán",
@@ -274,7 +287,7 @@ const tripData = {
                     "title": "Zócalo, Storia Azteca e il Polmone Verde",
                     "location": "CDMX (Centro e Ovest)",
                     "shortDesc": "Dai resti dell'impero azteco al grande parco cittadino di Chapultepec",
-                    "fullDesc": "Partenza al mattino presto per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.",
+                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p>",
                     "images": [
                         "assets/img/Centro_Historico.png"
                     ],
@@ -345,6 +358,10 @@ const tripData = {
                             ],
                             "image": "assets/img/Bosque_Chapultepec.png"
                         }
+                    ],
+                    "operationalNotes": [
+                        "Prima della giornata verificare giorni e orari di apertura dei musei previsti.",
+                        "Lasciare almeno qualche ora al Museo Nacional de Antropología, evitando di sovraccaricare il centro storico."
                     ]
                 },
                 {
@@ -353,7 +370,7 @@ const tripData = {
                     "title": "Borghi Colorati, Canali e... Partenza Notturna!",
                     "location": "Coyoacán, Xochimilco & Bus Notturno",
                     "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno ADO per Oaxaca.",
-                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e la <em>Casa Azul</em> di Frida Kahlo. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui prenderemo il comodo pullman notturno della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
+                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e visitando, <strong>solo con biglietto acquistato</strong>, la <em>Casa Azul</em> di Frida Kahlo. <strong>Mercoledì 23 dicembre</strong> l'orario ordinario pubblicato dal museo inizia alle <strong>11:00</strong>: la visita va prenotata in una fascia compatibile con il pomeriggio a Xochimilco. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui vorremmo prendere il pullman notturno <strong>non ancora prenotato</strong> della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
@@ -365,6 +382,14 @@ const tripData = {
                         {
                             "text": "🔗 Biglietti Bus ADO (Notturno)",
                             "url": "https://www.ado.com.mx"
+                        },
+                        {
+                            "text": "🎟️ Biglietti ufficiali Casa Azul",
+                            "url": "https://boletos.museofridakahlo.org.mx/"
+                        },
+                        {
+                            "text": "🚌 ADO · orari e prenotazioni",
+                            "url": "https://www.ado.com.mx/"
                         }
                     ],
                     "route": [
@@ -400,6 +425,11 @@ const tripData = {
                             ],
                             "image": "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80"
                         }
+                    ],
+                    "operationalNotes": [
+                        "Casa Azul: acquistare online dal canale ufficiale per mercoledì 23 dicembre; orari soggetti a variazioni.",
+                        "Bus notturno CDMX → Oaxaca: confermare compagnia, classe, corsa, terminal di partenza e arrivo prima di acquistare.",
+                        "Conservare un margine per tornare in hotel, recuperare bagagli e arrivare al terminal."
                     ]
                 }
             ],
@@ -665,6 +695,10 @@ const tripData = {
                                 -96.7253
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "Confermare l'orario del 24 dicembre di Monte Albán e dei servizi turistici prima di organizzare il transfer.",
+                        "L'arrivo dal bus notturno può comprimere il programma: dare priorità a Monte Albán e poi scegliere quante soste fare in centro."
                     ]
                 },
                 {
@@ -716,6 +750,10 @@ const tripData = {
                                 -96.2758
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "Hierve el Agua il 25 dicembre NON è confermata: chiedere disponibilità scritta sia per l'accesso sia per il trasporto.",
+                        "Piano B: giornata tranquilla a Oaxaca, eventuale recupero il 29 dicembre; nessun acquisto senza conferma."
                     ]
                 },
                 {
@@ -992,7 +1030,7 @@ const tripData = {
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
                     "shortDesc": "Partenza da Oaxaca, trasferimento a San Agustinillo e inizio del soggiorno al mare.",
-                    "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nella scheda <strong>Alloggi prenotati</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
+                    "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
                     ],
@@ -1056,6 +1094,10 @@ const tripData = {
                                 -96.554
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "Le uscite a Mazunte, Punta Cometa e La Ventanilla sono facoltative e non prenotate.",
+                        "Il 3 gennaio inizia il trasferimento lungo per il Chiapas: verificare i bus con anticipo."
                     ]
                 }
             ],
@@ -1191,7 +1233,7 @@ const tripData = {
                         "note": "Arrivo alla Central de Autobuses ADO Palenque. Margine teorico dall'ADO notturno: 1 h 35 min. Potrebbe essere necessario spostarsi tra due terminal a Villahermosa."
                     }
                 ],
-                "warning": "Corsa AltaMar delle 16:15 e collegamento Villahermosa–Palenque delle 10:30: orari indicativi Rome2Rio, da confermare per il 3–4 gennaio 2027. Verificare la fermata AltaMar a Salina Cruz, il terminal ADO di partenza e l'eventuale spostamento tra terminal a Villahermosa. Coincidenze NON garantite su biglietti separati; nessun biglietto ancora acquistato.",
+                "warning": "Corsa AltaMar delle 16:15 e collegamento Villahermosa–Palenque delle 10:30: orari indicativi Rome2Rio, da confermare per il 3–4 gennaio 2027. Verificare la fermata AltaMar a Salina Cruz, il terminal ADO di partenza e l'eventuale spostamento tra terminal a Villahermosa. Coincidenze NON garantite su biglietti separati; nessun biglietto ancora acquistato. <strong>Piano B, se una corsa manca o gli orari non coincidono:</strong> prima di pagare cercare un itinerario con meno cambi o una diversa combinazione di orari, confrontando i terminal; se necessario rivedere con anticipo il giorno di trasferimento senza spostare automaticamente le notti già prenotate. Il piano candidato non è una coincidenza garantita.",
                 "sources": [
                     {
                         "text": "Controlla gli autobus ADO",
@@ -1235,6 +1277,10 @@ const tripData = {
                                 -95.199
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "I trasferimenti AltaMar e ADO sono ancora proposte: verificare corse del 3 gennaio, terminal e disponibilità.",
+                        "Le coincidenze su biglietti separati non sono garantite. Se non funzionano, valutare un'alternativa con meno cambi prima di acquistare, tenendo conto del check-in a Palenque il 4 gennaio."
                     ]
                 },
                 {
@@ -1261,6 +1307,10 @@ const tripData = {
                                 -92.045
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "Verificare se a Villahermosa serve cambiare terminal e quanto tempo occorre.",
+                        "Confermare l'ultimo autobus per Palenque e concordare taxi dall'arrivo al Los Susurros."
                     ]
                 },
                 {
@@ -1524,7 +1574,7 @@ const tripData = {
                         "note": "La stazione ferroviaria è fuori dal centro: concordare il pickup in anticipo e verificare che l'alloggio consenta il check-in serale."
                     }
                 ],
-                "warning": "Orari e coincidenze del <strong>Tren Maya NON confermati per il 7 gennaio 2027</strong>: verificare Palenque → Escárcega → Bacalar, fusi orari e taxi dalla stazione. <strong>Check-in tardivo all'Hotel Aires NON ancora autorizzato:</strong> chiedere risposta scritta per l'arrivo dopo le 23:30/mezzanotte anche in caso di ritardi. Se le corse non coincidono, rivedere lo spostamento prima di comprare i biglietti.",
+                "warning": "Orari e coincidenze del <strong>Tren Maya NON confermati per il 7 gennaio 2027</strong>: verificare Palenque → Escárcega → Bacalar, fusi orari e taxi dalla stazione. <strong>Check-in tardivo all'Hotel Aires NON ancora autorizzato:</strong> chiedere risposta scritta per l'arrivo dopo le 23:30/mezzanotte anche in caso di ritardi. Se le corse non coincidono, rivedere lo spostamento prima di comprare i biglietti. <strong>Criticità specifica:</strong> l'orario ufficiale oggi pubblicato per la corsa 703 (Palenque 14:00 → Escárcega 16:49) e per la 704 (Escárcega 17:09 → Chetumal, passando da Bacalar) lascia <strong>20 minuti teorici</strong> a Escárcega. Non è una coincidenza garantita né una conferma per il 7 gennaio 2027. Chiedere esplicitamente al gestore se la prosecuzione è vendibile come collegamento unico; altrimenti prevedere un piano alternativo prima dell'acquisto.",
                 "sources": [
                     {
                         "text": "Orari ufficiali Tren Maya",
@@ -1603,7 +1653,12 @@ const tripData = {
                     "shortDesc": "Tren Maya Palenque → Bacalar e taxi serale. Late check-in da confermare con la struttura.",
                     "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong>, biglietti ancora da acquistare. Gli orari attuali indicano un percorso candidato via Escárcega, ma non garantito per il <strong>7 gennaio 2027</strong>.</p><p>Per coincidenze, taxi dalla stazione e ingresso tardivo all'Hotel Aires consulta la scheda del trasferimento: <strong>non considerare confermato il check-in dopo le 23:30</strong> fino a risposta scritta dell'hotel.</p>",
                     "images": [],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🚆 Tren Maya · orari ufficiali (da riconfermare)",
+                            "url": "https://www.trenmaya.gob.mx/horarios.php"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "Stazione Tren Maya Palenque",
@@ -1626,6 +1681,11 @@ const tripData = {
                                 -88.392
                             ]
                         }
+                    ],
+                    "operationalNotes": [
+                        "Tren Maya 703/704: coincidenza indicativa di 20 minuti a Escárcega, non confermata per il 7 gennaio.",
+                        "Richiedere all'Hotel Aires conferma scritta del check-in tardivo, anche in caso di ritardo del treno.",
+                        "Concordare taxi dalla stazione di Bacalar, fuori dal centro; valutare un collegamento alternativo prima di pagare biglietti non modificabili."
                     ]
                 },
                 {
@@ -1766,10 +1826,10 @@ const tripData = {
             "id": 5,
             "navTitle": "Caribe",
             "navSubtitle": "Cozumel e Akumal",
-            "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
+            "badge": "10–16 Gen · Cozumel e Akumal · 17 Gen rientro",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "Cozumel e Akumal: snorkeling notturno, Chichén Itzá e Muyil da prenotare. Il 15 gennaio rimane totalmente libero per il mare.",
+            "description": "Cozumel e Akumal dal 10 al 16 gennaio: snorkeling notturno, Chichén Itzá e Muyil da prenotare, giornata libera il 15. Il 17 gennaio è il rientro in Italia.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1873,7 +1933,21 @@ const tripData = {
                     "title": "Bacalar → Cozumel: traghetto e arrivo sull'isola",
                     "location": "Bacalar → Playa del Carmen → Cozumel",
                     "shortDesc": "Trasferimento via Playa del Carmen e traghetto per Cozumel; orari e biglietti da verificare.",
-                    "fullDesc": "<p>Partenza da Bacalar e trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya come opzione, orari del 10/1/2027 da verificare); taxi al porto, traghetto per Cozumel e taxi per la <strong>Zona Hotelera Norte</strong>. I traghetti possono essere influenzati dal vento.</p><p>La prenotazione dell'alloggio sull'isola è già confermata: dettagli della camera e dell'importo nel riquadro <strong>Alloggi prenotati</strong>.</p>"
+                    "fullDesc": "<p>Partenza da Bacalar e trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya come opzione, orari del 10/1/2027 da verificare); taxi al porto, traghetto per Cozumel e taxi per la <strong>Zona Hotelera Norte</strong>. I traghetti possono essere influenzati dal vento.</p><p>La prenotazione dell'alloggio sull'isola è già confermata: dettagli della camera e dell'importo nel pannello <strong>Logistica e spostamenti</strong> sotto la mappa o nel riepilogo <strong>Hotel & costi</strong>..</p>",
+                    "operationalNotes": [
+                        "Tren Maya o bus Bacalar → Playa del Carmen: verificare corse e terminal reali del 10 gennaio.",
+                        "Verificare orari e operatività del traghetto; dal porto di Cozumel serve un taxi fino al Coral Princess."
+                    ],
+                    "links": [
+                        {
+                            "text": "⛴️ Winjet · orari traghetto aggiornati",
+                            "url": "https://winjet.mx/horarios/"
+                        },
+                        {
+                            "text": "🚆 Tren Maya · verifica corse",
+                            "url": "https://www.trenmaya.gob.mx/horarios.php"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan11",
@@ -1881,7 +1955,17 @@ const tripData = {
                     "title": "Cozumel: mare e snorkeling notturno",
                     "location": "Cozumel · Money Bar",
                     "shortDesc": "Giornata sul mare e Night Snorkel Cozumel in serata, ancora da prenotare.",
-                    "fullDesc": "<p>Giornata di mare e snorkeling dall'hotel, se condizioni e correnti lo consentono. Al tramonto possibile esperienza di <strong>snorkeling notturno guidato</strong> con <a href='https://nightsnorkelcozumel.com/' target='_blank' rel='noopener noreferrer'>Night Snorkel Cozumel</a>, con ritrovo da verificare al <strong>Money Bar</strong>. Si tratta di un'attività <strong>non ancora prenotata</strong>: verificare disponibilità l'11 gennaio, livello richiesto, meteo e trasporto serale in taxi dal Coral Princess.</p><p>Avvistamenti di fauna notturna non garantiti; programmare il ritorno all'hotel in sicurezza. Se disponibile il 10 e compatibile con il trasferimento, il tour potrebbe essere anticipato, ma non basare il piano su questa ipotesi.</p>"
+                    "fullDesc": "<p>Giornata di mare e snorkeling dall'hotel, se condizioni e correnti lo consentono. Al tramonto possibile esperienza di <strong>snorkeling notturno guidato</strong> con <a href='https://nightsnorkelcozumel.com/' target='_blank' rel='noopener noreferrer'>Night Snorkel Cozumel</a>, con ritrovo da verificare al <strong>Money Bar</strong>. Si tratta di un'attività <strong>non ancora prenotata</strong>: verificare disponibilità l'11 gennaio, livello richiesto, meteo e trasporto serale in taxi dal Coral Princess.</p><p>Avvistamenti di fauna notturna non garantiti; programmare il ritorno all'hotel in sicurezza. Se disponibile il 10 e compatibile con il trasferimento, il tour potrebbe essere anticipato, ma non basare il piano su questa ipotesi.</p>",
+                    "operationalNotes": [
+                        "Snorkeling notturno NON prenotato: chiedere all'operatore disponibilità, livello richiesto, luogo/ora d'incontro e politica meteo.",
+                        "Organizzare il taxi serale di andata e ritorno dal Coral Princess; nessun avvistamento garantito."
+                    ],
+                    "links": [
+                        {
+                            "text": "🌙 Night Snorkel Cozumel · operatore",
+                            "url": "https://nightsnorkelcozumel.com/"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan12",
@@ -1889,7 +1973,17 @@ const tripData = {
                     "title": "Cozumel → Akumal Pueblo: trasferimento alla base finale",
                     "location": "Cozumel → Playa del Carmen → Akumal",
                     "shortDesc": "Traghetto Cozumel–Playa del Carmen e transfer ad Akumal Pueblo; hotel già confermato.",
-                    "fullDesc": "<p>Check-out sull'isola e <strong>traghetto per Playa del Carmen</strong>. Poi taxi o transfer per <strong>Akumal Pueblo</strong>, non sulla spiaggia. La sistemazione per le ultime quattro notti è già confermata; si trova vicino ai servizi del pueblo. Organizzare il mezzo dalla fermata o dal porto, senza contare su un pickup automatico.</p>"
+                    "fullDesc": "<p>Check-out sull'isola e <strong>traghetto per Playa del Carmen</strong>. Poi taxi o transfer per <strong>Akumal Pueblo</strong>, non sulla spiaggia. La sistemazione per le ultime quattro notti è già confermata; si trova vicino ai servizi del pueblo. Organizzare il mezzo dalla fermata o dal porto, senza contare su un pickup automatico.</p>",
+                    "operationalNotes": [
+                        "Acquistare il traghetto Cozumel → Playa del Carmen solo dopo aver verificato gli orari del giorno e il meteo.",
+                        "L'hotel El Ultimo Maya è ad Akumal Pueblo, non sulla spiaggia: prenotare o concordare l'ultimo trasferimento."
+                    ],
+                    "links": [
+                        {
+                            "text": "⛴️ Winjet · orari traghetto",
+                            "url": "https://winjet.mx/horarios/"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan13",
@@ -1898,7 +1992,16 @@ const tripData = {
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
                     "fullDesc": "<p><strong>13 gennaio: Chichén Itzá.</strong> Escursione guidata collettiva da Akumal <strong>NON prenotata</strong>. Dare priorità ad almeno due ore effettive nel sito archeologico, ingresso e tasse per stranieri inclusi e pickup da <strong>El Ultimo Maya</strong> o punto praticabile. I due operatori, i costi e le domande da inviare sono nel riquadro <strong>«Tour da contattare»</strong>.</p>",
-                    "links": []
+                    "links": [
+                        {
+                            "text": "🏛️ Chichén Itzá · informazioni INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4335"
+                        }
+                    ],
+                    "operationalNotes": [
+                        "Tour Chichén Itzá NON prenotato: confermare pickup e rientro realmente praticabili a El Ultimo Maya, Akumal Pueblo.",
+                        "Richiedere un prezzo per due che specifichi biglietto INAH, quota aggiuntiva statale e tempo reale nel sito; gli orari ordinari INAH sono 08:00–16:00, ultimo accesso alle 15:00."
+                    ]
                 },
                 {
                     "id": "5-jan14",
@@ -1907,7 +2010,16 @@ const tripData = {
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
                     "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an.</strong> Escursione <strong>NON prenotata</strong>: sito maya, barca nelle lagune e flottazione nei canali storici, se tutti inclusi nella formula scelta. Chiedere un transfer fino a <strong>El Ultimo Maya ad Akumal Pueblo</strong>. Costi indicativi e contatti nel riquadro <strong>«Tour da contattare»</strong>. Il 15 resta libero per mare e riposo.</p>",
-                    "links": []
+                    "links": [
+                        {
+                            "text": "🏛️ Muyil · informazioni INAH",
+                            "url": "https://lugares.inah.gob.mx/es/node/4440"
+                        }
+                    ],
+                    "operationalNotes": [
+                        "Tour Muyil/Sian Ka'an NON prenotato: verificare prelievo ad Akumal Pueblo, luogo d'imbarco, barca e flottazione comprese.",
+                        "Verificare eventuali quote parco separate: l'ingresso alla zona archeologica e la navigazione sono servizi distinti."
+                    ]
                 },
                 {
                     "id": "5-jan15",
@@ -1915,7 +2027,17 @@ const tripData = {
                     "title": "Akumal: giornata interamente libera",
                     "location": "Akumal · mare e relax",
                     "shortDesc": "Niente tour, niente trasferimenti: giornata di mare e riposo.",
-                    "fullDesc": "<p><strong>15 gennaio:</strong> un giorno intero senza escursioni. Da <strong>Akumal Pueblo</strong> raggiungere la baia a piedi lungo il percorso sicuro, oppure con un breve taxi, e godersi la spiaggia. Nessuna nuova attività programmata.</p>"
+                    "fullDesc": "<p><strong>15 gennaio:</strong> un giorno intero senza escursioni. Da <strong>Akumal Pueblo</strong> raggiungere la baia a piedi lungo il percorso sicuro, oppure con un breve taxi, e godersi la spiaggia. Nessuna nuova attività programmata.</p>",
+                    "operationalNotes": [
+                        "Giornata totalmente libera, senza escursioni obbligatorie.",
+                        "L'alloggio è ad Akumal Pueblo: scegliere sul momento se raggiungere la spiaggia a piedi per un percorso praticabile o in taxi."
+                    ],
+                    "links": [
+                        {
+                            "text": "🗺️ Akumal Pueblo · mappa indicativa",
+                            "url": "https://www.openstreetmap.org/search?query=Akumal%20Pueblo"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan16",
@@ -1923,7 +2045,11 @@ const tripData = {
                     "title": "Ultime ore ad Akumal e volo da Cancún",
                     "location": "Akumal → Cancún Aeroporto",
                     "shortDesc": "Transfer via strada all'aeroporto CUN, volo AF651 delle 21:00.",
-                    "fullDesc": "<p>Check-out da El Ultimo Maya ad Akumal Pueblo, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
+                    "fullDesc": "<p>Check-out da El Ultimo Maya ad Akumal Pueblo, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>",
+                    "operationalNotes": [
+                        "Volo AF651 da Cancún Terminal 4 alle 21:00, come da itinerario voli: controllare eventuali cambi di operativo.",
+                        "Prenotare il trasferimento per l'aeroporto con margine ampio e senza affidarsi a coincidenze con traghetti."
+                    ]
                 },
                 {
                     "id": "5-jan17",
@@ -1931,7 +2057,11 @@ const tripData = {
                     "title": "Rientro a Milano Malpensa",
                     "location": "Parigi → Milano",
                     "shortDesc": "Scalo Air France a Parigi e arrivo a MXP.",
-                    "fullDesc": "<p>Arrivo indicativo a Parigi CDG alle <strong>12:30</strong>, proseguimento con <strong>AF1730 alle 15:55</strong>, arrivo a <strong>Milano Malpensa alle 17:25</strong> del 17 gennaio. Ricontrollare gli operativi prima della partenza.</p>"
+                    "fullDesc": "<p>Arrivo indicativo a Parigi CDG alle <strong>12:30</strong>, proseguimento con <strong>AF1730 alle 15:55</strong>, arrivo a <strong>Milano Malpensa alle 17:25</strong> del 17 gennaio. Ricontrollare gli operativi prima della partenza.</p>",
+                    "operationalNotes": [
+                        "Giornata di viaggio Parigi → Milano, non soggiorno ai Caraibi.",
+                        "Ricontrollare voli AF651 e AF1730 e le indicazioni per il transito a CDG."
+                    ]
                 }
             ],
             "mapFocus": {
@@ -2032,7 +2162,7 @@ const tripData = {
                 }
             ],
             "overview": {
-                "intro": "Dall'isola di Cozumel alle ultime giornate ad Akumal: mare, archeologia e natura.",
+                "intro": "Cozumel e Akumal dal 10 al 16 gennaio per mare, archeologia e natura; rientro a Milano il 17.",
                 "highlights": [
                     {
                         "icon": "🌙",
@@ -2066,11 +2196,12 @@ const tripData = {
                 "tips": [
                     "Per i tour del 13 e 14 verificare il pickup da El Ultimo Maya, ad Akumal Pueblo.",
                     "Traghetti per Cozumel soggetti al meteo: lasciare margine negli spostamenti.",
-                    "Il 15 gennaio resta libero: niente nuove escursioni."
+                    "Il 15 gennaio resta libero: niente nuove escursioni.",
+                    "Il 17 gennaio è solo viaggio di rientro, non una giornata aggiuntiva nei Caraibi."
                 ]
             },
             "startDate": "2027-01-10",
-            "endDate": "2027-01-16",
+            "endDate": "2027-01-17",
             "venues": [
                 {
                     "name": "La Choza",
