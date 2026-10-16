@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// Fonte unica alloggi: general.hotelBookings. Attività e trasferimenti sono separati.
+// Fonte unica alloggi: general.hotelBookings; esperienze e trasporti separati.
 
 const tripData = {
     "general": {
@@ -577,7 +577,12 @@ const tripData = {
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🎒 Guida e checklist Sierra Norte",
+                            "url": "sierra-norte.html"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "Oaxaca de Juárez · punto d'incontro da confermare",
@@ -605,7 +610,12 @@ const tripData = {
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🎒 Guida e checklist Sierra Norte",
+                            "url": "sierra-norte.html"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "San Miguel Amatlán · Pueblos Mancomunados",
@@ -633,7 +643,12 @@ const tripData = {
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🎒 Guida e checklist Sierra Norte",
+                            "url": "sierra-norte.html"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "Santa Marta Latuvi",
@@ -1560,7 +1575,16 @@ const tripData = {
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
                     "fullDesc": "<p><strong>13 gennaio: Chichén Itzá</strong>, escursione collettiva di un giorno <strong>NON prenotata</strong> dalla base di Akumal. Le due alternative con prezzi, contatti, tasse e domande da porre si trovano nelle schede <strong>«Tour da contattare»</strong>.</p><p>Importante ottenere un preventivo per <strong>2 adulti con tutte le tasse incluse</strong> e il prelievo a El Ultimo Maya (o un punto di raccolta praticabile). Il tour dovrebbe permettere almeno un paio d'ore alle rovine, senza troppe soste commerciali; ritorno nello stesso hotel.</p>",
-                    "links": []
+                    "links": [
+                        {
+                            "text": "🏛️ Chichen Itza Tours · preventivo",
+                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
+                        },
+                        {
+                            "text": "🏛️ Vive Cancún · Chichén económico",
+                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan14",
@@ -1569,7 +1593,16 @@ const tripData = {
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
                     "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an</strong>. Obiettivo: visita alle rovine maya, <strong>barca nelle lagune e flottazione nel canale storico</strong>, confermando prima quali elementi siano effettivamente inclusi nella formula scelta. Tour <strong>NON prenotato</strong>.</p><p>Due operatori, costi pubblicizzati, tasse della riserva e condizioni di pickup ad Akumal Pueblo sono riuniti nel riquadro <strong>«Tour da contattare»</strong>, senza duplicare qui le offerte. Il <strong>15 gennaio</strong> resta libero per mare e riposo.</p>",
-                    "links": []
+                    "links": [
+                        {
+                            "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
+                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
+                        },
+                        {
+                            "text": "🌿 Paseo Tours · Canali Muyil",
+                            "url": "https://www.paseotours.com/en/tour-muyil-canals/"
+                        }
+                    ]
                 },
                 {
                     "id": "5-jan15",
