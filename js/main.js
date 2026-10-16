@@ -151,34 +151,18 @@ function generateContent() {
             </a>
         ` : '';
 
+        // Soggiorni in tappa: elenco compatto; dettagli e pagamenti nel riepilogo centrale.
         const hotelSummaryHtml = areaBookings.length ? `
-            <section class="mb-8 rounded-[1.5rem] border border-gray-200 bg-white shadow-sm overflow-hidden">
-                <div class="flex flex-wrap items-center justify-between gap-3 bg-gray-50 px-5 py-4 border-b border-gray-200">
-                    <div>
-                        <span class="block text-[10px] font-black uppercase tracking-widest text-amber-700 mb-1">🏨 Alloggi prenotati · 2 adulti</span>
-                        <h3 class="text-sm font-extrabold text-gray-900">${areaBookings.length} ${areaBookings.length === 1 ? 'prenotazione confermata' : 'prenotazioni confermate'}</h3>
-                        <p class="text-[11px] text-gray-500 mt-1">Importi delle prenotazioni, pagamento verificato soltanto se indicato</p>
+            <section class="mb-6 rounded-2xl border border-gray-200 bg-gray-50/80 px-5 py-4">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <span class="block text-[10px] uppercase tracking-widest font-black text-amber-800">🏨 Alloggi confermati in questa tappa</span>
+                        <p class="text-xs text-gray-700 mt-2 leading-relaxed">${areaBookings.map(stay =>
+                            `${stay.name} (${dateShort(stay.checkin)}–${dateShort(stay.checkout)})`
+                        ).join(" · ")}</p>
                     </div>
-                    <div class="text-right">
-                        <p class="text-xl font-black text-gray-900">${areaBookings.some(stay => stay.approximatePrice) ? '≈ € ' : '€ '}${areaBookings.reduce((sum, stay) => sum + stay.totalEuro, 0)}</p>
-                        <p class="text-[10px] text-gray-500">Totale alloggi di questa tappa</p>
-                    </div>
+                    <button type="button" onclick="toggleHotelCostsModal()" class="shrink-0 text-xs font-black text-emerald-800 underline hover:text-emerald-950">Dettagli, costi e pagamenti ↗</button>
                 </div>
-                <div class="px-5 py-3">
-                    ${areaBookings.map(stay => `
-                        <div class="py-3 border-b border-gray-100 last:border-0 flex flex-wrap items-start justify-between gap-2">
-                            <div class="flex-1 min-w-0">
-                                <p class="text-xs font-bold text-gray-800">${stay.name}</p>
-                                <p class="text-[11px] text-gray-500">${stay.city} · ${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · ${stay.cancellation}${stay.roomType ? ' · ' + stay.roomType : ''}${stay.breakfast ? ' · Colazione ' + stay.breakfast.toLowerCase() : ''}</p>${stay.priceNote ? '<p class="text-[11px] text-amber-800 mt-2">⚠️ ' + stay.priceNote + '</p>' : ''}
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-sm font-black text-gray-900">${stay.approximatePrice ? '≈ ' : ''}€ ${stay.totalEuro}</span>
-                                <span class="text-[10px] font-bold text-emerald-700">${stay.status || 'Confermato'}</span>${stay.paymentStatus ? '<span class="block text-[10px] font-bold text-amber-700">' + stay.paymentStatus + '</span>' : ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-
             </section>
         ` : '';
         // Ricerche Booking: date precompilate, sempre NON prenotate.
@@ -595,13 +579,18 @@ function generateHotelCosts(){
                 box("Media per notte",money2(nTotal?eurosTotal/nTotal:0),"2 persone",false),
               "</div>",
               "<p class='mb-4 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Booking conferma gli hotel, ma non tutti gli addebiti. Il totale sopra comprende solo gli otto soggiorni in hotel; il trekking è pagato a parte.</p>",
+
               "<div class='mb-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-4 sm:p-5'>",
-                "<div class='flex flex-wrap justify-between gap-2 items-start'><div><span class='block text-[10px] uppercase tracking-widest font-black text-emerald-800'>Budget complessivo · 2 persone</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.capEuro)+"</strong></div><div class='text-right'><span class='block text-[10px] font-black text-emerald-800'>Stima totale viaggio</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.forecastEuro)+"</strong></div></div>",
-                "<p class='text-[11px] text-emerald-950 mt-2'>Voli: <strong>"+euro(budget.estimatedRoundtripFlightsEuro)+"</strong> (ipotesi 2 biglietti da € 1.073,68, non pagamento verificato) · Hotel: <strong>"+euro(eurosTotal)+"</strong> · Trekking già pagato: <strong>~"+euro(budget.trekkingApproxEuro)+"</strong>.</p>",
-                "<p class='text-[11px] text-emerald-900 mt-2'>Costo stimato tutto incluso, con tour, trasferimenti, pasti, attrezzatura, souvenir, valigia e fondo imprevisti. Margine indicativo sul tetto: <strong>"+euro(budget.forecastRemainingEuro)+"</strong>. Non è denaro già disponibile: le spese non prenotate possono variare.</p>",
-                "<details class='mt-3 border-t border-emerald-200 pt-3'><summary class='text-[11px] cursor-pointer font-black text-emerald-900'>Come si compone la stima delle spese ancora aperte</summary>",
-                  "<div class='mt-3 space-y-2'>"+budget.pendingEstimates.map(item=>"<div class='flex justify-between gap-3 text-[11px]'><span class='text-emerald-950'>"+safe(item.label)+"</span><strong class='text-emerald-950 whitespace-nowrap'>"+euro(item.estimateEuro)+"</strong></div>").join("")+"</div>",
-                  "<p class='mt-3 text-[10px] text-emerald-900'>Valori orientativi per due, non preventivi confermati. Variazioni del cambio MXN/EUR e del prezzo dei tour possono modificare il saldo.</p>",
+                "<div class='flex flex-wrap justify-between items-center gap-3'><div><span class='block text-[10px] uppercase tracking-widest font-black text-emerald-800'>Budget complessivo · 2 persone</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.capEuro)+"</strong></div><p class='text-[11px] text-emerald-950'>Voli ipotizzati "+euro(budget.estimatedRoundtripFlightsEuro)+" · Hotel prenotati "+euro(eurosTotal)+" · Trekking pagato ~"+euro(budget.trekkingApproxEuro)+"</p></div>",
+                "<div class='grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4'>",
+                  box("Economico realistico",euro(budget.forecastLowEuro),"Totale stimato, non prenotato",false),
+                  box("Scenario centrale",euro(budget.forecastEuro),"Residuo "+euro(budget.forecastRemainingEuro),true),
+                  box("Scenario prudente",euro(budget.forecastHighEuro),"Rispetto al tetto: "+euro(budget.capEuro-budget.forecastHighEuro),false),
+                "</div>",
+                "<p class='text-[11px] text-emerald-900 mt-3 leading-relaxed'>I totali includono voli, hotel, trekking, escursioni, trasporti, pasti, acquisti prima della partenza, souvenir, valigia extra, assicurazione e imprevisti. La tariffa voli per due e tutte le voci non prenotate sono <strong>ipotesi, non pagamenti documentati</strong>. Coral Princess è confermato ma non pagato; gli altri pagamenti hotel vanno verificati.</p>",
+                "<details class='mt-3 border-t border-emerald-200 pt-3'><summary class='text-[11px] cursor-pointer font-black text-emerald-900'>Dettaglio delle voci stimate (economico / centrale / prudente)</summary>",
+                  "<div class='mt-3 space-y-2'>"+budget.pendingEstimates.map(item=>"<div class='grid grid-cols-[minmax(0,1fr)_repeat(3,auto)] gap-x-3 items-baseline text-[10px] sm:text-[11px] border-b border-emerald-100 pb-2'><span class='text-emerald-950'>"+safe(item.label)+"</span><span class='text-emerald-900 tabular-nums'>"+euro(item.minEuro)+"</span><strong class='text-emerald-950 tabular-nums'>"+euro(item.estimateEuro)+"</strong><span class='text-emerald-900 tabular-nums'>"+euro(item.maxEuro)+"</span></div>").join("")+"</div>",
+                  "<p class='mt-3 text-[10px] text-emerald-900'>Trekking: 12.917,70 MXN già pagati · riferimento BCE 15/10/2026: 1 € = 20,7596 MXN. Il costo in euro è indicativo, non l'addebito bancario effettivo. Cambi, spese e prenotazioni possono variare.</p>",
                 "</details>",
               "</div>",
               "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
