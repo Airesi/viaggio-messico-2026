@@ -357,6 +357,10 @@ const tripData = {
             ],
             "links": [
                 {
+                    "text": "🎒 Sierra Norte · guida al trekking e checklist",
+                    "url": "sierra-norte.html"
+                },
+                {
                     "text": "🏛️ Monte Albán · orari ufficiali INAH",
                     "url": "https://lugares.inah.gob.mx/es/node/4351"
                 },
@@ -605,6 +609,10 @@ const tripData = {
                     ],
                     "links": [
                         {
+                            "text": "🎒 Preparazione al trekking · consigli e regole",
+                            "url": "sierra-norte.html"
+                        },
+                        {
                             "text": "🥾 Caminos Reales · pacchetto ufficiale",
                             "url": "https://www.sierranorte.org.mx/#/paquete/25"
                         }
@@ -638,6 +646,10 @@ const tripData = {
                     ],
                     "links": [
                         {
+                            "text": "🎒 Preparazione al trekking · consigli e regole",
+                            "url": "sierra-norte.html"
+                        },
+                        {
                             "text": "🥾 Caminos Reales · programma",
                             "url": "https://www.sierranorte.org.mx/#/paquete/25"
                         }
@@ -670,6 +682,10 @@ const tripData = {
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
                     "links": [
+                        {
+                            "text": "🎒 Preparazione al trekking · consigli e regole",
+                            "url": "sierra-norte.html"
+                        },
                         {
                             "text": "🥾 Sierra Norte · sito operatore",
                             "url": "https://www.sierranorte.org.mx/"
