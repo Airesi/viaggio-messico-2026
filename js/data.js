@@ -1765,7 +1765,7 @@ const tripData = {
         {
             "id": 5,
             "navTitle": "Caribe",
-            "navSubtitle": "Cozumel e Akumal · hotel prenotati",
+            "navSubtitle": "Cozumel e Akumal",
             "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
