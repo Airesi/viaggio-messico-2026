@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// I consigli di hotel non costituiscono prenotazioni.
+// Gli alloggi proposti non costituiscono prenotazioni. I prezzi indicativi restano da verificare.
 
 const tripData = {
     "general": {
@@ -8,11 +8,11 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Riepilogo Booking aggiornato al 15 ottobre 2026: 5 prenotazioni confermate, 2 adulti",
-            "totalEuro": 1089,
-            "paidStatus": "Importi delle 5 prenotazioni confermate, non prova di pagamento o addebito",
+            "source": "Riepilogo Booking aggiornato al 16 ottobre 2026: 6 prenotazioni confermate per 2 adulti; quella di Cozumel ha un totale approssimativo da verificare.",
+            "totalEuro": 1420,
+            "paidStatus": "Le 5 prenotazioni precedenti non hanno prova di addebito; Coral Princess dichiarato confermato e non pagato.",
             "validTotalEuro": 1089,
-            "warning": "",
+            "warning": "Totale di circa €1420: include Coral Princess a circa €331 secondo schermata di conferma, contro €300 della tariffa selezionata. Verificare la differenza nel dettaglio Booking.",
             "items": [
                 {
                     "name": "The PM at Condesa Arts & Boutique Experience",
@@ -63,6 +63,22 @@ const tripData = {
                     "cancellation": "Cancellazione gratuita",
                     "status": "Confermato",
                     "areaId": 3
+                },
+                {
+                    "name": "Coral Princess Hotel & Dive Resort",
+                    "city": "Cozumel · Zona Hotelera Norte",
+                    "checkin": "2027-01-10",
+                    "checkout": "2027-01-12",
+                    "totalEuro": 331,
+                    "approximatePrice": true,
+                    "selectedOfferEuro": 300,
+                    "priceNote": "Tariffa scelta su Booking: €300 senza colazione, con cancellazione gratuita. Riepilogo dopo conferma: prezzo totale circa €331; differenza di circa €31 da verificare nel dettaglio della prenotazione.",
+                    "cancellation": "Cancellazione gratuita prima del 3 gen 2027 (secondo tariffa selezionata; verificare nella conferma)",
+                    "status": "Confermato",
+                    "paymentStatus": "Non pagato",
+                    "roomType": "Camera King Deluxe Fronte Oceano",
+                    "breakfast": "Non inclusa",
+                    "areaId": 5
                 }
             ]
         }
@@ -1337,7 +1353,7 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "7–10 gennaio · 3 notti sulla Laguna dei Sette Colori. Il 7 Tren Maya da Palenque con arrivo potenzialmente tardo; l'8 e il 9 giorni interi di laguna. Il 10 proseguimento in Tren Maya verso Tulum. Hotel ancora da scegliere.",
+            "description": "7–10 gennaio · 3 notti sulla Laguna dei Sette Colori, hotel ancora da scegliere. Il 10 partenza verso Playa del Carmen con Tren Maya (orari e coincidenze da verificare) e traghetto per Cozumel, dove l'hotel è confermato.",
             "images": [
                 "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
@@ -1412,7 +1428,7 @@ const tripData = {
                 "tags": [
                     "💧 Laguna e kayak",
                     "🛌 Hotel ancora da cercare",
-                    "🚆 10 gen verso Tulum"
+                    "🚆 10 gen verso Playa del Carmen"
                 ],
                 "transports": [
                     {
@@ -1422,8 +1438,8 @@ const tripData = {
                     },
                     {
                         "icon": "🚆",
-                        "title": "10 gen · Tren Maya per Tulum",
-                        "desc": "Confermare stazione d'arrivo e trasferimento al nuovo hotel."
+                        "title": "10 gen · Bacalar → Playa del Carmen",
+                        "desc": "Tren Maya da verificare per il 10/1/2027; taxi al porto, poi traghetto per Cozumel."
                     }
                 ]
             },
@@ -1467,8 +1483,8 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Tren Maya Bacalar → Tulum · 10 gen",
-                    "status": "Da verificare/prenotare",
+                    "name": "Bacalar → Playa del Carmen + traghetto Cozumel · 10 gen",
+                    "status": "Orari e biglietti da verificare",
                     "type": "warning"
                 }
             ],
@@ -1554,7 +1570,7 @@ const tripData = {
                     "title": "Bacalar senza orologio",
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
-                    "fullDesc": "<p>Seconda giornata lenta sulla <strong>laguna di Bacalar</strong>: kayak, balneazione dove consentita, riposo sul pontile o un'uscita guidata rispettosa dell'ecosistema. Non aggiungere tour solo per riempire il programma.</p><p>La mattina del <strong>10 gennaio</strong> check-out e proseguimento con <strong>Tren Maya verso Tulum</strong>, senza pernottamento separato a Muyil: la visita ai canali avverrà l'11 come escursione dalla base Tulum.</p>",
+                    "fullDesc": "<p>Seconda giornata lenta sulla <strong>laguna di Bacalar</strong>: kayak, balneazione dove consentita, relax sul pontile o un'uscita guidata rispettosa dell'ecosistema. Non aggiungere attività solo per riempire il programma.</p><p>Il <strong>10 gennaio</strong> check-out: trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya candidato, orari e coincidenze da confermare), poi taxi verso il porto e traghetto per <strong>Cozumel</strong>, dove è confermato il Coral Princess dal 10 al 12 gennaio. Pianificare un margine adeguato per ogni cambio di mezzo.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1639,11 +1655,11 @@ const tripData = {
         {
             "id": 5,
             "navTitle": "Caribe",
-            "navSubtitle": "Tulum, Muyil e Cancún",
-            "badge": "11–16 Gen • Si rallenta davvero",
-            "locationText": "Muyil / Sian Ka'an → costa caraibica → Cancún",
-            "title": "Sian Ka'an, Isla Contoy e gli ultimi giorni caraibici",
-            "description": "Finale con due basi distinte: 10–13 gennaio 3 notti nella zona di Tulum (Muyil l'11), poi Tren Maya Tulum → Cancún il 13 e 3 notti nella zona nord di Cancún fino al 16. Isla Contoy il 14, con il 15 come seconda possibilità meteo. Hotel tutti da cercare.",
+            "navSubtitle": "Cozumel e Akumal",
+            "badge": "10–16 Gen • Cozumel confermato, Akumal da scegliere",
+            "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
+            "title": "Snorkeling a Cozumel e relax ad Akumal",
+            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO, 2 notti in King Deluxe Fronte Oceano, NON PAGATO. Riepilogo Booking circa €331, tariffa selezionata €300: verificare differenza. Dal 12 al 16 gennaio quattro notti ad Akumal DA PRENOTARE; Muyil/Sian Ka'an e Isla Contoy ancora facoltative, poi trasferimento diretto all'aeroporto di Cancún il 16.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1661,101 +1677,124 @@ const tripData = {
                     "url": "https://www.trenmaya.gob.mx/horarios.php"
                 },
                 {
-                    "text": "🚆 Biglietti Tren Maya",
-                    "url": "https://reservas.ventaboletostrenmaya.com.mx/"
+                    "text": "🌙 Night Snorkel Cozumel",
+                    "url": "https://nightsnorkelcozumel.com/"
+                },
+                {
+                    "text": "⛴️ Traghetti · Winjet",
+                    "url": "https://winjet.mx/"
                 }
             ],
             "basecamp": {
-                "zone": "Tulum 10–13 gen (3 notti) · Cancún 13–16 gen (3 notti)",
-                "hotelIdea": "Due hotel ancora da cercare: Tulum pueblo/sud per Muyil; Punta Sam, Costa Mujeres o Puerto Juárez per Contoy e volo. Alternativa Puerto Morelos.",
-                "why": "Si torna al piano con due basi e un cambio d'hotel il 13. In cambio il tour di Contoy è più vicino e il 16 siete già nella zona di Cancún. Tren Maya il 10 (da Bacalar) e il 13 (verso Cancún), da confermare per le date.",
+                "zone": "Cozumel 10–12 gen (2 notti confermate) · Akumal 12–16 gen (4 notti da cercare)",
+                "hotelIdea": "Coral Princess Hotel & Dive Resort · 10–12 gen, Camera King Deluxe Fronte Oceano: prenotazione CONFERMATA, NON PAGATA, senza colazione. Totale indicativo circa €331 (tariffa scelta €300), differenza da verificare. Akumal 12–16 gen ancora da prenotare.",
+                "why": "Il 10 si arriva da Bacalar via Playa del Carmen + traghetto; prenotazione hotel Cozumel già confermata. La sera dell'11 possibile Night Snorkel Cozumel (tour NON prenotato). Il 12 traghetto verso Playa del Carmen e trasferimento Akumal. Il 16 aeroporto Cancún via strada senza traghetto. Verificare il prezzo finale in Booking e la tariffa con cancellazione gratuita prima del 3 gennaio.",
                 "tags": [
-                    "🌿 11 gen · Muyil",
-                    "🚆 13 gen · Tren Maya",
-                    "🏝️ 14/15 gen · Contoy facoltativa"
+                    "✅ Coral Princess confermato",
+                    "💳 Hotel Cozumel NON pagato",
+                    "🌊 Night snorkeling da prenotare",
+                    "🔎 Akumal 12–16 gen da cercare"
                 ],
                 "transports": [
                     {
                         "icon": "🚆",
-                        "title": "10 e 13 gen · Tren Maya",
-                        "desc": "Bacalar → Tulum → Cancún Aeroporto; verificare gli orari del 2027."
+                        "title": "10 gen · Bacalar → Cozumel",
+                        "desc": "Tren Maya verso Playa del Carmen (se compatibile) + taxi porto + traghetto; orari non confermati."
                     },
                     {
-                        "icon": "🚕",
-                        "title": "11 / 14–15 · escursioni",
-                        "desc": "Muyil da Tulum; Isla Contoy dalla zona di Cancún con tour autorizzato."
+                        "icon": "⛴️",
+                        "title": "12 gen · Cozumel → Akumal",
+                        "desc": "Traghetto Cozumel → Playa del Carmen, taxi/transfer per Akumal."
                     },
                     {
                         "icon": "✈️",
-                        "title": "16 gen · aeroporto CUN",
-                        "desc": "Volo AF651 ore 21:00, organizzare transfer con margine."
+                        "title": "16 gen · Akumal → CUN",
+                        "desc": "Transfer privato via strada per volo AF651 ore 21:00."
                     }
                 ]
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "Da quotare · due hotel (3+3 notti), due treni e tour",
-                "spent": "€ 0 · hotel non prenotati",
+                "total": "Coral Princess confermato, non pagato · circa €331; Akumal 12–16 gen da quotare",
+                "spent": "€0 pagati per Coral Princess (secondo quanto indicato); prenotazione confermata",
                 "items": [
                     {
-                        "name": "Tulum · hotel 10–13 gen, 3 notti per due",
-                        "cost": "Da cercare Booking"
+                        "name": "Coral Princess · 10–12 gen · King Deluxe Fronte Oceano",
+                        "cost": "circa €331 · confermato, NON pagato; tariffa selezionata €300"
                     },
                     {
-                        "name": "Zona Cancún · hotel 13–16 gen, 3 notti per due",
-                        "cost": "Da cercare Booking"
+                        "name": "Akumal · alloggio 12–16 gen, 4 notti per due",
+                        "cost": "Da prenotare / quotare"
                     },
                     {
-                        "name": "Tren Maya Bacalar → Tulum e Tulum → Cancún",
+                        "name": "Tren Maya Bacalar → Playa del Carmen + traghetto · 10 gen",
+                        "cost": "Da verificare"
+                    },
+                    {
+                        "name": "Night Snorkel Cozumel · 10 o 11 gen",
+                        "cost": "Da verificare/prenotare"
+                    },
+                    {
+                        "name": "Traghetto Cozumel → Playa + transfer Akumal · 12 gen",
                         "cost": "Da quotare"
                     },
                     {
-                        "name": "Tour Muyil / Sian Ka'an",
-                        "cost": "Da quotare"
+                        "name": "Muyil / Sian Ka'an · 13 gen",
+                        "cost": "Non prenotato"
                     },
                     {
-                        "name": "Isla Contoy (14 o 15 gen, se meteo consente)",
-                        "cost": "Facoltativo"
+                        "name": "Isla Contoy · eventuale 14 o 15 gen",
+                        "cost": "Opzionale · meteo"
                     },
                     {
-                        "name": "Taxi per hotel/stazioni/aeroporto",
-                        "cost": "Da quotare"
+                        "name": "Akumal → aeroporto CUN · 16 gen",
+                        "cost": "Da prenotare"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Hotel Tulum · 10–13 gen",
-                    "status": "Da prenotare",
+                    "name": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano",
+                    "status": "CONFERMATO · NON PAGATO · ~€331",
+                    "type": "success"
+                },
+                {
+                    "name": "Dettaglio prezzo Coral Princess · tariffa scelta €300 vs totale ~€331",
+                    "status": "Da verificare in Booking",
                     "type": "warning"
                 },
                 {
-                    "name": "Tren Maya Bacalar → Tulum · 10 gen",
-                    "status": "Da verificare",
+                    "name": "Treno Bacalar → Playa + traghetto per Cozumel · 10 gen",
+                    "status": "Da verificare/prenotare",
                     "type": "warning"
                 },
                 {
-                    "name": "Escursione Muyil / Sian Ka'an · 11 gen",
+                    "name": "Night Snorkel Cozumel · preferibilmente 11 gen",
+                    "status": "Da verificare/prenotare",
+                    "type": "warning"
+                },
+                {
+                    "name": "Traghetto Cozumel → Playa e transfer Akumal · 12 gen",
                     "status": "Da organizzare",
                     "type": "warning"
                 },
                 {
-                    "name": "Tren Maya Tulum → Cancún · 13 gen",
-                    "status": "Da verificare",
+                    "name": "Hotel Akumal · 12–16 gen, 4 notti",
+                    "status": "DA PRENOTARE",
                     "type": "warning"
                 },
                 {
-                    "name": "Hotel zona Cancún · 13–16 gen",
-                    "status": "Da prenotare",
+                    "name": "Tour Muyil / Sian Ka'an · 13 gen",
+                    "status": "Da organizzare",
                     "type": "warning"
                 },
                 {
-                    "name": "Tour Isla Contoy · 14 / 15 gen",
-                    "status": "Opzionale · vincolato al meteo",
+                    "name": "Isla Contoy · eventuale 14/15 gen",
+                    "status": "Facoltativo · dipende dal meteo",
                     "type": "warning"
                 },
                 {
-                    "name": "Transfer aeroporto Cancún · 16 gen",
+                    "name": "Transfer Akumal → CUN · 16 gen",
                     "status": "Da organizzare",
                     "type": "warning"
                 }
@@ -1764,50 +1803,50 @@ const tripData = {
                 {
                     "id": "5-jan10",
                     "dayName": "Giorno 21 (10 Gen)",
-                    "title": "Con il Tren Maya a Tulum: prima base sul Caribe",
-                    "location": "Bacalar → Tulum",
-                    "shortDesc": "Tren Maya, taxi alla struttura, check-in per 3 notti.",
-                    "fullDesc": "<p>Check-out a Bacalar e viaggio <strong>Tren Maya Bacalar → Tulum</strong>. Confermare per domenica 10 gennaio 2027 stazione, orari, biglietti e trasferimento stradale dalla stazione al pernottamento.</p><p><strong>Da cercare: 10–13 gennaio, 3 notti a Tulum.</strong> Preferire piccolo hotel a Tulum pueblo o nel settore sud ben collegato alla strada per Muyil. Ristoranti possibilmente raggiungibili a piedi; il pernottamento separato a Muyil non serve.</p>"
+                    "title": "Da Bacalar a Cozumel: hotel sul mare confermato",
+                    "location": "Bacalar → Playa del Carmen → Cozumel",
+                    "shortDesc": "Tren Maya/trasferimento e traghetto da verificare; check-in al Coral Princess prenotato.",
+                    "fullDesc": "<p>Lasciamo <strong>Bacalar</strong> e raggiungiamo <strong>Playa del Carmen</strong> (Tren Maya possibile, orari e coincidenze del 10/1/2027 ancora da verificare). Taxi dalla stazione al porto, quindi <strong>traghetto per Cozumel</strong> e taxi per il Coral Princess in Zona Hotelera Norte. Non considerare garantito il traghetto in caso di forte vento.</p><p><strong>Prenotazione CONFERMATA, NON PAGATA:</strong> <strong>Coral Princess Hotel & Dive Resort</strong>, 10–12 gennaio, due adulti, <strong>Camera King Deluxe Fronte Oceano</strong>, senza colazione. La tariffa selezionata era €300 con cancellazione gratuita prima del 3 gennaio; dopo la conferma Booking mostra <strong>circa €331</strong>. Verificare nel dettaglio prenotazione l'importo effettivo e l'eventuale differenza. Non confondere la prenotazione con il pagamento.</p>"
                 },
                 {
                     "id": "5-jan11",
                     "dayName": "Giorno 22 (11 Gen)",
-                    "title": "Muyil e flottazione nei canali di Sian Ka'an",
-                    "location": "Muyil / Sian Ka'an",
-                    "shortDesc": "Rovine e canali di Sian Ka'an in giornata dalla base Tulum.",
-                    "fullDesc": "<p><strong>Escursione a Muyil</strong> dalla base Tulum: visita del sito archeologico nella foresta e tour in barca con <strong>flottazione nei canali di Sian Ka'an</strong>, condizioni e autorizzazioni permettendo. Controllare guida locale, orario, trasporto da Tulum e prenotazione.</p><p>Rientro <strong>nello stesso hotel di Tulum</strong>; è una delle esperienze da preservare anche se si riducono gli spostamenti.</p>"
+                    "title": "Cozumel: mare e snorkeling notturno",
+                    "location": "Cozumel · Money Bar",
+                    "shortDesc": "Giornata sul mare e Night Snorkel Cozumel in serata, ancora da prenotare.",
+                    "fullDesc": "<p>Giornata di mare e snorkeling dall'hotel, se condizioni e correnti lo consentono. Al tramonto possibile esperienza di <strong>snorkeling notturno guidato</strong> con <a href='https://nightsnorkelcozumel.com/' target='_blank' rel='noopener noreferrer'>Night Snorkel Cozumel</a>, con ritrovo da verificare al <strong>Money Bar</strong>. Si tratta di un'attività <strong>non ancora prenotata</strong>: verificare disponibilità l'11 gennaio, livello richiesto, meteo e trasporto serale in taxi dal Coral Princess.</p><p>Avvistamenti di fauna notturna non garantiti; programmare il ritorno all'hotel in sicurezza. Se disponibile il 10 e compatibile con il trasferimento, il tour potrebbe essere anticipato, ma non basare il piano su questa ipotesi.</p>"
                 },
                 {
                     "id": "5-jan12",
                     "dayName": "Giorno 23 (12 Gen)",
-                    "title": "Mare e cenote: giornata flessibile",
-                    "location": "Tulum e dintorni",
-                    "shortDesc": "Una giornata senza valigie: spiaggia, cenote o riposo.",
-                    "fullDesc": "<p>Giornata di mare o cenote, senza attività obbligatorie. La zona di Tulum può essere costosa e dispersiva, quindi scegliere l'hotel con attenzione alla mobilità senza auto.</p><p>Controllare treno per Cancún del giorno successivo e organizzare il taxi fino alla stazione.</p>"
+                    "title": "Da Cozumel ad Akumal: quattro notti da cercare",
+                    "location": "Cozumel → Playa del Carmen → Akumal",
+                    "shortDesc": "Traghetto verso Playa del Carmen e transfer ad Akumal; hotel 12–16 ancora da scegliere.",
+                    "fullDesc": "<p>Check-out dal Coral Princess e traghetto Cozumel → <strong>Playa del Carmen</strong>. Transfer via strada fino alla località di <strong>Akumal / Aventuras Akumal</strong> e check-in per <strong>quattro notti dal 12 al 16 gennaio</strong>, ancora da prenotare. Attenzione all'eventuale vento che potrebbe modificare la navigazione.</p><p><strong>Candidato non confermato:</strong> Aquatech Villas DeRosa Resort. Verificare se l'unità proposta è davvero fronte mare, se il ristorante è operativo, il costo dei taxi e il trasferimento per l'aeroporto.</p>"
                 },
                 {
                     "id": "5-jan13",
                     "dayName": "Giorno 24 (13 Gen)",
-                    "title": "Tren Maya Tulum → Cancún: ultima base",
-                    "location": "Tulum → Cancún",
-                    "shortDesc": "Tren Maya, transfer dalla stazione aeroportuale, check-in per 3 notti.",
-                    "fullDesc": "<p><strong>Tren Maya Tulum → Cancún Aeropuerto</strong>, da confermare per il 13 gennaio. La stazione è <strong>nell'area aeroportuale, non nel centro di Cancún</strong>, quindi serve un trasferimento fino all'hotel.</p><p><strong>Da cercare: 13–16 gennaio, 3 notti.</strong> Priorità a Punta Sam / Costa Mujeres (piccoli hotel e spiaggia) oppure Puerto Juárez (più pratico per il porto dei tour). Alternativa Puerto Morelos per atmosfera di paese, ma i transfer a Isla Contoy diventano più lunghi. Evitare grandi resort troppo cari e hotel senza una vera spiaggia vicina.</p>"
+                    "title": "Muyil e canali di Sian Ka'an da Akumal",
+                    "location": "Akumal → Muyil / Sian Ka'an",
+                    "shortDesc": "Escursione nella foresta e flottazione nei canali, senza cambiare hotel.",
+                    "fullDesc": "<p>Dalla base di <strong>Akumal</strong> possibile giornata a <strong>Muyil</strong>: zona archeologica e tour guidato in barca con <strong>flottazione nei canali di Sian Ka'an</strong>, se consentito dalle condizioni del giorno. Il tour non è prenotato: verificare operatore autorizzato e <strong>pickup proprio all'hotel scelto</strong> o costo del transfer. Rientro in serata nello stesso albergo ad Akumal.</p>"
                 },
                 {
                     "id": "5-jan14-15",
                     "dayName": "Giorni 25–26 (14–15 Gen)",
-                    "title": "Isla Contoy, vento permettendo",
-                    "location": "Isla Contoy / zona Cancún",
-                    "shortDesc": "Tour autorizzato il 14, 15 come possibile data di riserva; altrimenti mare.",
-                    "fullDesc": "<p><strong>14 gennaio:</strong> tentativo di escursione autorizzata a <strong>Isla Contoy</strong>, parco naturale contingentato. Controllare operatore autorizzato, imbarco (Punta Sam/Puerto Juárez secondo il tour), eventuale pickup e rimborsi meteo.</p><p><strong>15 gennaio:</strong> secondo tentativo solo se la prima uscita viene cancellata e il mare lo permette; altrimenti giornata di relax in spiaggia. <strong>A gennaio i venti da nord possono chiudere i porti</strong>: Contoy è opzionale e non garantita. Notti entrambe nella stessa base zona Cancún.</p>"
+                    "title": "Akumal e, forse, Isla Contoy",
+                    "location": "Akumal / Isla Contoy",
+                    "shortDesc": "Una giornata di mare e possibile tour Isla Contoy da Akumal, meteo permettendo.",
+                    "fullDesc": "<p><strong>14 gennaio:</strong> eventuale escursione autorizzata a <strong>Isla Contoy</strong> con partenza molto presto da Akumal, verificando il pickup effettivo all'hotel. <strong>15 gennaio:</strong> mare e relax, oppure seconda possibilità per Contoy se il 14 salta.</p><p><strong>Isla Contoy non è prenotata e non è garantita:</strong> i venti di gennaio possono portare a chiusure dei porti. Se il tour non è fattibile, meglio godersi Akumal e non aggiungere ulteriori trasferimenti.</p>"
                 },
                 {
                     "id": "5-jan16",
                     "dayName": "Giorno 27 (16 Gen)",
-                    "title": "Ultimo mare, aeroporto e volo delle 21:00",
-                    "location": "Cancún Aeroporto",
-                    "shortDesc": "Trasferimento verso CUN con margine, volo Air France AF651.",
-                    "fullDesc": "<p>Ultima colazione e, se c'è tempo, spiaggia; poi trasferimento all'<strong>aeroporto Cancún Terminal 4</strong> con adeguato anticipo per il volo <strong>AF651 del 16 gennaio alle 21:00</strong>. Nessuna escursione lontana oggi.</p>"
+                    "title": "Ultime ore ad Akumal e volo da Cancún",
+                    "location": "Akumal → Cancún Aeroporto",
+                    "shortDesc": "Transfer via strada all'aeroporto CUN, volo AF651 delle 21:00.",
+                    "fullDesc": "<p>Check-out dal futuro hotel ad Akumal, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
                 },
                 {
                     "id": "5-jan17",
@@ -1815,80 +1854,63 @@ const tripData = {
                     "title": "Rientro a Milano Malpensa",
                     "location": "Parigi → Milano",
                     "shortDesc": "Scalo Air France a Parigi e arrivo a MXP.",
-                    "fullDesc": "<p>Arrivo Parigi CDG indicato alle 12:30; proseguimento con <strong>AF1730 alle 15:55</strong>, arrivo Milano Malpensa alle <strong>17:25</strong> del 17 gennaio. Ricontrollare gli operativi prima della partenza.</p>"
+                    "fullDesc": "<p>Arrivo indicativo a Parigi CDG alle <strong>12:30</strong>, proseguimento con <strong>AF1730 alle 15:55</strong>, arrivo a <strong>Milano Malpensa alle 17:25</strong> del 17 gennaio. Ricontrollare gli operativi prima della partenza.</p>"
                 }
             ],
             "mapFocus": {
                 "coords": [
-                    20.25,
-                    -87.4
+                    20.52,
+                    -86.93
                 ],
                 "zoom": 9
             },
             "researchNotes": [
                 {
-                    "title": "Piano originario ripristinato",
-                    "body": "Tre notti nella zona di Tulum (10–13 gennaio), poi tre notti nella zona di Cancún (13–16); più cambi rispetto a sei notti a Xpu-Há, ma Contoy e l'aeroporto sono più comodi."
+                    "title": "Coral Princess · CONFERMATO, NON PAGATO",
+                    "body": "Booking conferma 10–12 gennaio 2027, due notti, King Deluxe Fronte Oceano, senza colazione. Scelta iniziale €300 con cancellazione gratuita prima del 3/1/2027, mentre il riepilogo mostra circa €331. Il totale definitivo è da verificare: non registrare come pagato."
                 },
                 {
-                    "title": "La Villa Mexicana by Diving Prestige · scartata",
-                    "body": "Troppo costosa per 6 notti, immersa nel verde e non direttamente sulla spiaggia: senza auto richiederebbe taxi/navetta per il mare ogni giorno."
+                    "title": "Attività principale a Cozumel",
+                    "body": "Night Snorkel Cozumel da prenotare, preferibilmente la sera dell'11 gennaio; partenza locale e condizioni marine da confermare. Coral Princess è sul lato nord, Money Bar è a sud: taxi serale da organizzare."
                 },
                 {
-                    "title": "Hotel Tulum · obiettivi",
-                    "body": "Piccolo alloggio vicino ai ristoranti, facile accesso a Muyil e alla stazione Tren Maya; niente notte aggiuntiva a Muyil. Controllare eventuale costo dei taxi."
+                    "title": "Akumal · prossima prenotazione",
+                    "body": "Ricerca 12–16 gennaio 2027 (4 notti, 2 adulti). Aquatech Villas DeRosa è un candidato, non una prenotazione: controllare camera fronte mare, accesso acqua, colazione/ristorante, taxi per le escursioni e transfer CUN."
                 },
                 {
-                    "title": "Hotel zona Cancún · obiettivi",
-                    "body": "Punta Sam / Costa Mujeres se troviamo piccola struttura vicino a una spiaggia bella; Puerto Juárez per praticità del porto ma verificare qualità spiaggia. Puerto Morelos più vivibile, ma con transfer più lungo per Contoy."
+                    "title": "Spostamenti reali",
+                    "body": "10 gen Bacalar → Playa del Carmen (treno da verificare) + porto + traghetto → Cozumel. 12 gen Cozumel → Playa del Carmen in traghetto + transfer Akumal. 16 gen Akumal → Cancún Aeroporto via strada, senza traghetto."
                 },
                 {
-                    "title": "Isla Contoy · attenzione gennaio",
-                    "body": "Prima opportunità 14 gennaio, 15 di riserva. Il vento da nord può causare chiusure del porto: non scegliere la sistemazione solo per questo tour e prenotare escursione con termini di rimborso espliciti."
+                    "title": "Muyil e Isla Contoy",
+                    "body": "Muyil/Sian Ka'an spostato indicativamente al 13 gennaio come escursione da Akumal. Isla Contoy solo opportunità il 14 o 15, se le condizioni meteo consentono le uscite: non sacrificare tutte le giornate di riposo."
+                },
+                {
+                    "title": "Alternative precedentemente considerate",
+                    "body": "Il precedente piano Tulum 10–13 + zona Cancún 13–16 non è più quello attuale; Villas DeRosa non prenotato; La Villa Mexicana a Xpu-Há scartata per costo e lontananza dalla spiaggia."
                 }
             ],
             "hotelSearches": [
                 {
-                    "label": "Tulum pueblo · 3 notti",
-                    "ss": "Tulum, Quintana Roo, Messico",
-                    "checkin": "2027-01-10",
-                    "checkout": "2027-01-13",
-                    "note": "Piccolo hotel, ristoranti a piedi, transfer per Muyil, cancellazione gratuita."
-                },
-                {
-                    "label": "Tulum sud · comodo per Muyil",
-                    "ss": "Tulum, Quintana Roo, Messico",
-                    "checkin": "2027-01-10",
-                    "checkout": "2027-01-13",
-                    "note": "Usare la mappa per valutare strada verso Muyil e taxi/stazione."
-                },
-                {
-                    "label": "Punta Sam · 3 notti",
-                    "ss": "Punta Sam, Quintana Roo, Messico",
-                    "checkin": "2027-01-13",
+                    "label": "Akumal · 12–16 gennaio (4 notti)",
+                    "ss": "Akumal, Quintana Roo, Messico",
+                    "checkin": "2027-01-12",
                     "checkout": "2027-01-16",
-                    "note": "Spiaggia e porti Contoy: verificare posizione effettiva hotel."
+                    "note": "Cercare piccoli hotel fronte spiaggia, vera vista mare e transfer per CUN."
                 },
                 {
-                    "label": "Costa Mujeres · 3 notti",
-                    "ss": "Costa Mujeres, Quintana Roo, Messico",
-                    "checkin": "2027-01-13",
+                    "label": "Aquatech Villas DeRosa · 4 notti",
+                    "ss": "Aquatech Villas DeRosa Resort, Aventuras Akumal",
+                    "checkin": "2027-01-12",
                     "checkout": "2027-01-16",
-                    "note": "Escludere resort fuori budget; controllare spiaggia raggiungibile a piedi."
+                    "note": "Controllare categoria della camera, cucina, ristorante e costi taxi."
                 },
                 {
-                    "label": "Puerto Juárez · 3 notti",
-                    "ss": "Puerto Juárez, Cancún, Messico",
-                    "checkin": "2027-01-13",
+                    "label": "Aventuras Akumal · piccoli alloggi sul mare",
+                    "ss": "Aventuras Akumal, Quintana Roo, Messico",
+                    "checkin": "2027-01-12",
                     "checkout": "2027-01-16",
-                    "note": "Logistica tour comoda, ma verificare qualità del mare proprio davanti all'hotel."
-                },
-                {
-                    "label": "Puerto Morelos · alternativa",
-                    "ss": "Puerto Morelos, Quintana Roo, Messico",
-                    "checkin": "2027-01-13",
-                    "checkout": "2027-01-16",
-                    "note": "Più atmosfera da paese; chiedere costo pickup per Contoy."
+                    "note": "Confrontare accesso diretto spiaggia, servizi, cancellazione gratuita."
                 }
             ]
         }
@@ -2000,16 +2022,7 @@ const tripData = {
                 20.078,
                 -87.615
             ],
-            "days": "11 Gen"
-        },
-        {
-            "areaId": 5,
-            "name": "Tulum · base indicativa da cercare",
-            "coords": [
-                20.211,
-                -87.465
-            ],
-            "days": "10–13 Gen"
+            "days": "13 Gen"
         },
         {
             "areaId": 5,
@@ -2022,12 +2035,21 @@ const tripData = {
         },
         {
             "areaId": 5,
-            "name": "Cancún nord · base indicativa da cercare",
+            "name": "Cozumel · Coral Princess prenotato (pin indicativo)",
             "coords": [
-                21.23,
-                -86.8
+                20.52,
+                -86.93
             ],
-            "days": "13–16 Gen"
+            "days": "10–12 Gen"
+        },
+        {
+            "areaId": 5,
+            "name": "Akumal · alloggio ancora da scegliere (pin indicativo)",
+            "coords": [
+                20.398,
+                -87.32
+            ],
+            "days": "12–16 Gen"
         }
     ]
 };
