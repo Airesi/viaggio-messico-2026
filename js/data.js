@@ -1,5 +1,6 @@
-// Dati del Viaggio - js/data.js
-// Soggiorni Booking confermati; obiettivo viaggio all-inclusive €10.000 per 2 adulti.
+// Dati viaggio - js/data.js
+// Riepiloghi non duplicano i dettagli: hotel in hotelBookings, esperienze nei giorni e operatori in tourContacts.
+// Il tetto €10.000 include ogni costo della vacanza; le stime non equivalgono a prenotazioni/pagamenti.
 
 const tripData = {
     "general": {
@@ -120,7 +121,72 @@ const tripData = {
                 "imprevisti"
             ],
             "confirmedFlightsEuro": null,
-            "note": "Il prezzo effettivo dei voli Air France per due persone non è presente nel sito: non calcolare un saldo certo finché manca."
+            "note": "Budget per 2 persone INCLUSI voli, hotel, trekking, trasporti, ingressi, pasti, attrezzatura prima della partenza, souvenir, valigia aggiuntiva e fondo imprevisti. Voli stimati come 2 biglietti da €1.073,68 ciascuno (screen prezzo biglietto, non prova acquisto), hotel prenotati €1.845 (non necessariamente pagati), trekking pagato 12.917,70 MXN. Tutti gli altri importi sono PREVISIONI, non preventivi o addebiti.",
+            "flightTicketPriceEuro": 1073.68,
+            "flightPassengersAssumed": 2,
+            "estimatedRoundtripFlightsEuro": 2147.36,
+            "flightPriceStatus": "Preventivo/scomposizione del prezzo: lo screenshot mostra €1.073,68 come prezzo totale DEL BIGLIETTO, ma non dimostra che sia già pagato né che il totale per due sia €2.147,36. Il budget usa l'ipotesi di due biglietti allo stesso prezzo.",
+            "trekkingPaidMxn": 12917.7,
+            "trekkingApproxEuro": 622.25,
+            "trekkingStatus": "PAGATO · Cammini Reali Sierra Norte, 26–28 dicembre, 2 persone, con 2 notti in cabañas e pasti inclusi",
+            "fxEuroMxn": 20.7596,
+            "fxDate": "2026-10-15",
+            "fxSource": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-mxn.en.html",
+            "hotelBookingsEuro": 1845,
+            "knownExpensesApproxEuro": 4614.61,
+            "pendingEstimates": [
+                {
+                    "key": "esperienze",
+                    "label": "Esperienze, tour e ingressi non compresi nel trekking",
+                    "estimateEuro": 1000,
+                    "minEuro": 750,
+                    "maxEuro": 1350
+                },
+                {
+                    "key": "trasporti",
+                    "label": "Treni, autobus, traghetti, taxi e transfer",
+                    "estimateEuro": 950,
+                    "minEuro": 650,
+                    "maxEuro": 1300
+                },
+                {
+                    "key": "pasti",
+                    "label": "Pasti e bevande per due",
+                    "estimateEuro": 1350,
+                    "minEuro": 1050,
+                    "maxEuro": 1750
+                },
+                {
+                    "key": "attrezzatura",
+                    "label": "Attrezzatura da acquistare prima di partire",
+                    "estimateEuro": 300,
+                    "minEuro": 150,
+                    "maxEuro": 500
+                },
+                {
+                    "key": "souvenir",
+                    "label": "Souvenir e acquisti personali",
+                    "estimateEuro": 350,
+                    "minEuro": 150,
+                    "maxEuro": 550
+                },
+                {
+                    "key": "valigia",
+                    "label": "Valigia aggiuntiva e possibile bagaglio extra",
+                    "estimateEuro": 130,
+                    "minEuro": 70,
+                    "maxEuro": 220
+                },
+                {
+                    "key": "imprevisti",
+                    "label": "Fondo imprevisti",
+                    "estimateEuro": 600,
+                    "minEuro": 500,
+                    "maxEuro": 900
+                }
+            ],
+            "forecastEuro": 9294.61,
+            "forecastRemainingEuro": 705.39
         }
     },
     "areas": [
@@ -329,14 +395,14 @@ const tripData = {
                 "why": "Arrivo la sera del 20 dicembre: verificare con la struttura l'orario di accesso. Il 23 recuperare i bagagli e raggiungere il bus notturno per Oaxaca; il pernottamento 23–24 è sul bus, non in un altro hotel.",
                 "tags": [
                     "🌳 Condesa e Roma",
-                    "🏛️ Musei e siti maya",
+                    "🏛️ Musei e civiltà preispaniche",
                     "🌮 Cucina messicana"
                 ],
                 "transports": [
                     {
                         "icon": "🚕",
                         "title": "Uber / DiDi",
-                        "desc": "Economico e sicuro per Teotihuacán, Aeroporto e Xochimilco."
+                        "desc": "Comodi per le tratte urbane e aeroporto. Per Teotihuacán valutare autobus o tour e pianificare il ritorno; la tariffa taxi varia."
                     },
                     {
                         "icon": "👟",
@@ -1430,12 +1496,7 @@ const tripData = {
                 ],
                 "zoom": 9
             },
-            "researchNotes": [
-                {
-                    "title": "Accesso alla laguna",
-                    "body": "L'hotel è comodo per il centro, ma non ha accesso diretto/pontile privato. Raggiungere balneari e accessi consentiti; la vista lago dalla terrazza non è garantita."
-                }
-            ],
+            "researchNotes": [],
             "hotelSearches": []
         },
         {
@@ -1457,10 +1518,6 @@ const tripData = {
                 {
                     "text": "🚆 Orari ufficiali Tren Maya",
                     "url": "https://www.trenmaya.gob.mx/horarios.php"
-                },
-                {
-                    "text": "🌙 Night Snorkel Cozumel",
-                    "url": "https://nightsnorkelcozumel.com/"
                 },
                 {
                     "text": "⛴️ Traghetti · Winjet",
