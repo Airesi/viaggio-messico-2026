@@ -179,7 +179,7 @@ function generateContent() {
                     `).join('')}
                 </div>
                 <div class="px-5 pb-4 pt-1 border-t border-gray-100 bg-gray-50/60">
-                    <p class="text-[11px] text-gray-500">Totale hotel prenotati per il viaggio: <strong class="text-gray-800">${allHotelBookings.items.some(stay => stay.approximatePrice) ? '≈ ' : ''}€ ${allHotelBookings.totalEuro}</strong> · comprende importi indicativi, non include il pacchetto Sierra Norte${allHotelBookings.warning ? '<br>⚠️ ' + allHotelBookings.warning : ''}</p>
+                    <p class="text-[11px] text-gray-500">Tutti gli hotel confermati del viaggio: <strong class="text-gray-800">€ ${allHotelBookings.totalEuro}</strong>. Per l'elenco completo, importi e pagamento usa il pulsante <strong>«Hotel & costi»</strong> in alto. Il trekking Sierra Norte è escluso.</p>
                 </div>
             </section>
         ` : '';
@@ -206,7 +206,7 @@ function generateContent() {
                     ` : ''}
                     ${(area.researchNotes || []).length ? `
                         <details class="bg-white border border-gray-200 rounded-xl p-4" open>
-                            <summary class="text-xs font-extrabold text-gray-800 cursor-pointer">📝 Hotel valutati e criteri decisionali</summary>
+                            <summary class="text-xs font-extrabold text-gray-800 cursor-pointer">📌 Verifiche operative da completare</summary>
                             <div class="mt-3 space-y-3">
                                 ${area.researchNotes.map(n => `<div class="border-l-2 border-amber-400 pl-3"><strong class="block text-xs text-gray-800">${n.title}</strong><p class="text-[11px] text-gray-600 mt-1 leading-relaxed">${n.body}</p></div>`).join('')}
                             </div>
@@ -306,10 +306,10 @@ function generateContent() {
             ${tourContactsHtml}
             ${transferHtml}
             ${daysHtml}
-            <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
-                <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Risorse Utili:</span>
+            ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Altre risorse:</span>
                 ${linksHtml}
-            </div>
+            </div>` : ''}
         `;
         contentContainer.appendChild(contentDiv);
 
@@ -347,8 +347,8 @@ function generateContent() {
                     <div class="flex items-center gap-4">
                         <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 border border-gray-200">💼</div>
                         <div class="text-left">
-                            <h3 class="text-sm font-extrabold text-gray-900">Wallet & Bookings</h3>
-                            <p class="text-[11px] text-gray-500 font-medium">Budget e stato prenotazioni</p>
+                            <h3 class="text-sm font-extrabold text-gray-900">Attività & spese</h3>
+                            <p class="text-[11px] text-gray-500 font-medium">Costi extra e cose da organizzare</p>
                         </div>
                     </div>
                     <div class="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 toggle-icon transition-transform">
@@ -361,11 +361,11 @@ function generateContent() {
                         <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
                             <div class="flex justify-between items-end mb-4">
                                 <div>
-                                    <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block">Budget Previsto</span>
+                                    <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block">Costi di attività e trasporti</span>
                                     <span class="text-xl font-black text-gray-900">${area.budget ? area.budget.total : '€ 0'}</span>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-[9px] uppercase tracking-widest text-rose-400 font-bold block">Speso</span>
+                                    <span class="text-[9px] uppercase tracking-widest text-rose-400 font-bold block">Stato</span>
                                     <span class="text-sm font-bold text-rose-600">${area.budget ? area.budget.spent : '€ 0'}</span>
                                 </div>
                             </div>
@@ -375,7 +375,7 @@ function generateContent() {
                         </div>
 
                         <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm flex flex-col">
-                            <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-2">Stato Prenotazioni</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-2">Conferme e azioni aperte</span>
                             <div class="flex-grow flex flex-col justify-center">
                                 ${resList || '<p class="text-xs text-gray-400 italic">Nessuna prenotazione inserita.</p>'}
                             </div>
