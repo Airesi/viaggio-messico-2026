@@ -511,13 +511,9 @@ const tripData = {
             },
             "food": "Mercati e cucina oaxaqueña il 24–25 e il 29; pasti comunitari inclusi nel pacchetto Sierra Norte, con trota, pulque e tepache.",
             "budget": {
-                "total": "Trekking Caminos Reales · 12.917,70 MXN PAGATO; altre esperienze da quotare",
-                "spent": "12.917,70 MXN pagati · pacchetto Sierra Norte per 2 persone",
+                "total": "12.917,70 MXN · trekking già pagato",
+                "spent": "Transfer, guide, pasti e 2 cabañas inclusi",
                 "items": [
-                    {
-                        "name": "Caminos Reales 26–28 dic · 3 giorni / 2 persone",
-                        "cost": "12.917,70 MXN · PAGATO, transfer/guide/pasti/cabañas inclusi"
-                    },
                     {
                         "name": "Monte Albán · 24 dic, 2 ingressi stranieri",
                         "cost": "420 MXN tariffa INAH 2026, trasporto escluso"
@@ -530,7 +526,7 @@ const tripData = {
             },
             "reservations": [
                 {
-                    "name": "Caminos Reales · 26–28 dic · 12.917,70 MXN",
+                    "name": "Caminos Reales · 26–28 dicembre",
                     "status": "Pagato",
                     "type": "success"
                 },
@@ -670,7 +666,7 @@ const tripData = {
                     "title": "Caminos Reales I: Las Minas e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
                     "shortDesc": "08:00 partenza da Oaxaca; 10:00 Las Minas, 12 km in 4 ore, pranzo con trota, sala dei codici e prima notte in cabaña.",
-                    "fullDesc": "<p><strong>26 dicembre · Las Minas e San Miguel Amatlán.</strong> Transfer da Oaxaca alle <strong>08:00</strong> (punto di ritrovo da verificare sul voucher), poi trekking di <strong>12 km / circa 4 ore</strong>. Pranzo con trota, visita alla sala dei codici e prima notte nella cabaña doppia di Amatlán.</p><p>Orari e attività completi sono già nella scheda <strong>«Caminos Reales»</strong> in questa sezione; per abbigliamento, checklist e condizioni consulta la <a href='sierra-norte.html'>guida Sierra Norte</a>. Il pacchetto è già pagato.</p>",
+                    "fullDesc": "<p><strong>26 dicembre · Las Minas e San Miguel Amatlán (12 km, circa 4 ore).</strong> Alle <strong>08:00</strong> transfer incluso da Oaxaca; alle <strong>10:00</strong> inizio del sentiero Las Minas. <strong>14:00</strong> pranzo con trota, <strong>17:00</strong> visita alla sala dei codici e antichità, <strong>19:00</strong> cena e <strong>20:00</strong> prima notte nella cabaña ad Amatlán.</p><p>La guida e la cabaña sono comprese nel pacchetto già pagato. <strong>Da confermare:</strong> punto di ritrovo del transfer sul voucher e possibili variazioni degli orari. Per cosa portare e condizioni dell'operatore consulta la <a href='sierra-norte.html'>guida Sierra Norte</a>.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -703,7 +699,7 @@ const tripData = {
                     "title": "Caminos Reales II: Lachatao → Latuvi",
                     "location": "Camino Real da Lachatao a Santa Marta Latuvi",
                     "shortDesc": "08:00 colazione; 09:00 partenza trekking 16 km / 5–6 ore; pomeriggio con laboratorio di pulque e tepache e notte a Latuvi.",
-                    "fullDesc": "<p><strong>27 dicembre · Lachatao → Santa Marta Latuvi.</strong> È la tappa più lunga, <strong>16 km / 5–6 ore</strong> secondo il voucher. Nel pomeriggio laboratorio di <strong>pulque e tepache</strong>, cena e seconda notte nella cabaña di Latuvi.</p><p>Orari dettagliati e inclusioni nella scheda <strong>«Caminos Reales»</strong>. Il programma può variare per meteo e indicazioni della guida locale.</p>",
+                    "fullDesc": "<p><strong>27 dicembre · Lachatao → Santa Marta Latuvi (16 km, circa 5–6 ore).</strong> <strong>08:00</strong> colazione, <strong>09:00</strong> partenza per il Camino Real guidato, <strong>15:00</strong> pranzo e <strong>16:00</strong> laboratorio di pulque e tepache. <strong>19:00</strong> cena e <strong>20:00</strong> seconda notte nella cabaña a Latuvi.</p><p>È la tappa più lunga dei tre giorni. Orari e attività seguono il programma dell'operatore e possono variare per meteo e indicazioni della guida locale; pernottamento e pasti previsti sono già inclusi.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -731,7 +727,7 @@ const tripData = {
                     "title": "Caminos Reales III: Benito Juárez e ritorno a Oaxaca",
                     "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
                     "shortDesc": "Tappa finale di 12 km / circa 4 ore e mezza via mirador e ponte sospeso; pranzo alle 14:30 e rientro a Oaxaca dalle 16:00.",
-                    "fullDesc": "<p><strong>28 dicembre · Latuvi → Benito Juárez.</strong> Ultima camminata di <strong>12 km</strong> via mirador e ponte sospeso; dopo pranzo, trasferimento organizzato di ritorno a Oaxaca <strong>dalle 16:00</strong>, orario d'arrivo da confermare.</p><p>Totale: <strong>40 km in 3 giorni e 2 notti in cabañas</strong>. La notte del 28 si dorme già all'Hotel Cazomalli, prenotato; il 29 resta libero. Orari completi nella scheda <strong>«Caminos Reales»</strong>.</p>",
+                    "fullDesc": "<p><strong>28 dicembre · Santa Marta Latuvi → Benito Juárez → Oaxaca (12 km, circa 4 ore e mezza).</strong> <strong>08:00</strong> colazione, <strong>09:00</strong> partenza via mirador e ponte sospeso, <strong>14:30</strong> pranzo; <strong>dalle 16:00</strong> transfer incluso di rientro a Oaxaca. <strong>Orario esatto dell'arrivo in città da confermare.</strong></p><p>Si conclude così il trekking di 40 km in tre giorni. La notte del 28 è già prenotata all'Hotel Cazomalli, mentre il 29 rimane libero per recupero e riposo.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -802,56 +798,6 @@ const tripData = {
                     -96.61
                 ],
                 "zoom": 10
-            },
-            "transferPlan": {
-                "eyebrow": "CONFERMATO E PAGATO · 26–28 dicembre 2026 · 2 persone",
-                "title": "Caminos Reales · 3 giorni / 2 notti · 40 km",
-                "subtitle": "San Miguel Amatlán → Santa Marta Latuvi → Benito Juárez · rientro Oaxaca il 28 dicembre",
-                "cost": "12.917,70 MXN per 2 persone · già pagato",
-                "duration": "26–28 dicembre · 12 + 16 + 12 km · 2 notti in cabañas",
-                "legs": [
-                    {
-                        "day": "Sab 26 dic · Giorno 1",
-                        "time": "08:00 → 20:00",
-                        "from": "Oaxaca → San Miguel Amatlán",
-                        "to": "Las Minas · cabaña Amatlán",
-                        "operator": "Sierra Norte · transfer e guida inclusi",
-                        "duration": "10:00 trekking 12 km · ~4 ore",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 transfer da Oaxaca; 10:00 sentiero Las Minas (12 km); 14:00 pranzo con trota; 17:00 sala dei codici e antichità; 19:00 cena; 20:00 prima notte in cabaña ad Amatlán."
-                    },
-                    {
-                        "day": "Dom 27 dic · Giorno 2",
-                        "time": "08:00 → 20:00",
-                        "from": "Lachatao / zona Amatlán",
-                        "to": "Santa Marta Latuvi",
-                        "operator": "Sierra Norte · trekking Camino Real guidato",
-                        "duration": "09:00 trekking 16 km · 5–6 ore",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 colazione; 09:00 Camino Real da Lachatao a Latuvi (16 km); 15:00 pranzo; 16:00 laboratorio di pulque e tepache; 19:00 cena; 20:00 seconda notte in cabaña a Latuvi."
-                    },
-                    {
-                        "day": "Lun 28 dic · Giorno 3",
-                        "time": "08:00 → rientro da 16:00",
-                        "from": "Santa Marta Latuvi",
-                        "to": "Benito Juárez → Oaxaca",
-                        "operator": "Sierra Norte · camminata e ritorno inclusi",
-                        "duration": "09:00 trekking 12 km · ~4 h 30 min",
-                        "price": "Incluso nel totale PAGATO",
-                        "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
-                    }
-                ],
-                "warning": "Pacchetto per 2 persone <strong>GIÀ PAGATO: 12.917,70 MXN</strong>. Comprende transfer Oaxaca–Sierra–Oaxaca, guide locali in spagnolo, pasti del trekking, due notti in cabañas, attività previste e assicurazione. Verificare <strong>punto di ritrovo, voucher e condizioni meteo</strong> con l'operatore. In quota (2.000–3.100 m) servono scarpe adatte e strati caldi; checklist e condizioni complete nella guida Sierra Norte.",
-                "sources": [
-                    {
-                        "text": "Pacchetto ufficiale Sierra Norte",
-                        "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                    },
-                    {
-                        "text": "Contatti e informazioni Expediciones Sierra Norte",
-                        "url": "https://www.sierranorte.org.mx/"
-                    }
-                ]
             }
         },
         {
