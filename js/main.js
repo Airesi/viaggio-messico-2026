@@ -543,6 +543,7 @@ function generateHotelCosts(){
     const container=document.getElementById("hotel-costs-modal-container");
     if(!container)return;
     const stays=[...tripData.general.hotelBookings.items].sort((a,b)=>a.checkin.localeCompare(b.checkin));
+    const budget=tripData.general.budget;
     const euro=n=>"€ "+new Intl.NumberFormat("it-IT",{maximumFractionDigits:0,useGrouping:true}).format(n);
     const money2=n=>"€ "+new Intl.NumberFormat("it-IT",{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
     const safe=x=>String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -593,7 +594,16 @@ function generateHotelCosts(){
                 box("Notti in hotel",String(nTotal),"Escluso trekking",false),
                 box("Media per notte",money2(nTotal?eurosTotal/nTotal:0),"2 persone",false),
               "</div>",
-              "<p class='mb-5 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Il riepilogo Booking conferma gli hotel, ma non tutti gli addebiti. <strong>Il tetto per l'intero viaggio è " + euro(tripData.general.budget.capEuro) + "</strong>, inclusi voli, trasferimenti, trekking, tour, pasti, attrezzatura, souvenir, valigia e imprevisti. Il totale qui sopra riguarda SOLO le notti negli hotel Booking elencati: il prezzo dei voli non è ancora registrato nel sito.</p>",
+              "<p class='mb-4 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Booking conferma gli hotel, ma non tutti gli addebiti. Il totale sopra comprende solo gli otto soggiorni in hotel; il trekking è pagato a parte.</p>",
+              "<div class='mb-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-4 sm:p-5'>",
+                "<div class='flex flex-wrap justify-between gap-2 items-start'><div><span class='block text-[10px] uppercase tracking-widest font-black text-emerald-800'>Budget complessivo · 2 persone</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.capEuro)+"</strong></div><div class='text-right'><span class='block text-[10px] font-black text-emerald-800'>Stima totale viaggio</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.forecastEuro)+"</strong></div></div>",
+                "<p class='text-[11px] text-emerald-950 mt-2'>Voli: <strong>"+euro(budget.estimatedRoundtripFlightsEuro)+"</strong> (ipotesi 2 biglietti da € 1.073,68, non pagamento verificato) · Hotel: <strong>"+euro(eurosTotal)+"</strong> · Trekking già pagato: <strong>~"+euro(budget.trekkingApproxEuro)+"</strong>.</p>",
+                "<p class='text-[11px] text-emerald-900 mt-2'>Costo stimato tutto incluso, con tour, trasferimenti, pasti, attrezzatura, souvenir, valigia e fondo imprevisti. Margine indicativo sul tetto: <strong>"+euro(budget.forecastRemainingEuro)+"</strong>. Non è denaro già disponibile: le spese non prenotate possono variare.</p>",
+                "<details class='mt-3 border-t border-emerald-200 pt-3'><summary class='text-[11px] cursor-pointer font-black text-emerald-900'>Come si compone la stima delle spese ancora aperte</summary>",
+                  "<div class='mt-3 space-y-2'>"+budget.pendingEstimates.map(item=>"<div class='flex justify-between gap-3 text-[11px]'><span class='text-emerald-950'>"+safe(item.label)+"</span><strong class='text-emerald-950 whitespace-nowrap'>"+euro(item.estimateEuro)+"</strong></div>").join("")+"</div>",
+                  "<p class='mt-3 text-[10px] text-emerald-900'>Valori orientativi per due, non preventivi confermati. Variazioni del cambio MXN/EUR e del prezzo dei tour possono modificare il saldo.</p>",
+                "</details>",
+              "</div>",
               "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
               "<div class='grid grid-cols-1 lg:grid-cols-2 gap-3'>"+cards+"</div>",
               "<div class='mt-5 p-4 rounded-xl bg-white border border-gray-200 flex items-center justify-between gap-3'><strong class='text-sm text-slate-800'>Totale "+stays.length+" soggiorni</strong><strong class='text-2xl font-black text-blue-950 tabular-nums'>"+euro(eurosTotal)+"</strong></div>",
