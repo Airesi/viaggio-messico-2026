@@ -588,9 +588,33 @@ function generateHotelCosts(){
                   box("Scenario prudente",euro(budget.forecastHighEuro),"Rispetto al tetto: "+euro(budget.capEuro-budget.forecastHighEuro),false),
                 "</div>",
                 "<p class='text-[11px] text-emerald-900 mt-3 leading-relaxed'>I totali includono voli per due (assicurazione di viaggio già inclusa, senza doppio conteggio), hotel, trekking, escursioni, trasporti, pasti, acquisti prima della partenza, souvenir, valigia extra e imprevisti. Il prezzo dei voli è confermato per due persone ma il <strong>pagamento non è verificato</strong>; le altre voci non prenotate sono stime. Coral Princess è confermato ma non pagato; gli altri pagamenti hotel vanno verificati.</p>",
-                "<details class='mt-3 border-t border-emerald-200 pt-3'><summary class='text-[11px] cursor-pointer font-black text-emerald-900'>Dettaglio delle spese ancora da sostenere (economico / centrale / prudente)</summary>",
-                  "<div class='mt-3 space-y-2'>"+budget.pendingEstimates.map(item=>"<div class='grid grid-cols-[minmax(0,1fr)_repeat(3,auto)] gap-x-3 items-baseline text-[10px] sm:text-[11px] border-b border-emerald-100 pb-2'><span class='text-emerald-950'>"+safe(item.label)+"</span><span class='text-emerald-900 tabular-nums'>"+euro(item.minEuro)+"</span><strong class='text-emerald-950 tabular-nums'>"+euro(item.estimateEuro)+"</strong><span class='text-emerald-900 tabular-nums'>"+euro(item.maxEuro)+"</span></div>").join("")+"</div>",
-                  "<p class='mt-3 text-[10px] text-emerald-900'>Trekking: 12.917,70 MXN già pagati · riferimento BCE 15/10/2026: 1 € = 20,7596 MXN. Il costo in euro è indicativo, non l'addebito bancario effettivo. Cambi, spese e prenotazioni possono variare.</p>",
+                "<details class='mt-4 border-t border-emerald-200 pt-3'>",
+                  "<summary class='cursor-pointer text-[11px] font-black text-emerald-950'>Voci ancora da stimare · confronto dei tre scenari</summary>",
+                  "<p class='mt-2 text-[11px] leading-relaxed text-emerald-950'>Importi indicativi per <strong>due persone</strong>. Le tre colonne rappresentano scenari di spesa e non pagamenti già effettuati.</p>",
+                  "<div class='mt-3 overflow-x-auto rounded-xl border border-emerald-200 bg-white'>",
+                    "<table class='w-full min-w-[560px] border-collapse text-[11px] text-gray-800'>",
+                      "<thead class='bg-emerald-50 text-emerald-950'><tr>",
+                        "<th scope='col' class='py-3 px-3 text-left font-extrabold'>Categoria</th>",
+                        "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Economico</th>",
+                        "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Centrale</th>",
+                        "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Prudente</th>",
+                      "</tr></thead>",
+                      "<tbody class='divide-y divide-gray-100'>"+budget.pendingEstimates.map(item=>
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-medium leading-snug'>"+safe(item.label)+"</th>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.minEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+euro(item.estimateEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.maxEuro)+"</td></tr>"
+                      ).join("")+"</tbody>",
+                      "<tfoot class='border-t-2 border-emerald-200 bg-emerald-50'>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-extrabold text-emerald-950'>Totale spese variabili</th>"+
+                        "<td class='py-3 px-3 text-right font-extrabold tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.minEuro,0))+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.estimateEuro,0))+"</td>"+
+                        "<td class='py-3 px-3 text-right font-extrabold tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.maxEuro,0))+"</td></tr>",
+                      "</tfoot>",
+                    "</table>",
+                  "</div>",
+                  "<p class='mt-3 text-[11px] leading-relaxed text-emerald-950'><strong>Assicurazione viaggio:</strong> già inclusa nei voli (totale confermato per due: "+euro(budget.confirmedFlightsEuro)+"), quindi non compare tra le spese extra.</p>",
+                  "<p class='mt-2 text-[10px] leading-relaxed text-emerald-900'><strong>Trekking Sierra Norte:</strong> 12.917,70 MXN già pagati, circa "+money2(budget.trekkingApproxEuro)+" al cambio BCE del 15/10/2026 (1 € = 20,7596 MXN). Il controvalore stimato non sostituisce l'addebito effettivo.</p>",
                 "</details>",
               "</div>",
               "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
