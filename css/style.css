@@ -41,11 +41,11 @@
 
 /* Legibility: scoped; modals and boarding passes do not change. */
 .trip-main-content [class~="text-[11px]"],
-.trip-sidebar-column [class~="text-[11px]"] { font-size: .81rem; line-height: 1.5; }
+.trip-sidebar-column [class~="text-[11px]"] { font-size: .85rem; line-height: 1.52; }
 .trip-main-content [class~="text-[10px]"],
-.trip-sidebar-column [class~="text-[10px]"] { font-size: .73rem; line-height: 1.45; }
+.trip-sidebar-column [class~="text-[10px]"] { font-size: .78rem; line-height: 1.48; }
 .trip-main-content [class~="text-[9px]"],
-.trip-sidebar-column [class~="text-[9px]"] { font-size: .675rem; line-height: 1.4; }
+.trip-sidebar-column [class~="text-[9px]"] { font-size: .73rem; line-height: 1.45; }
 .trip-main-content .text-gray-400,
 .trip-sidebar-column .text-gray-400 { color: #64748b; }
 .trip-main-content .text-gray-500,
