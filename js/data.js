@@ -970,7 +970,7 @@ const tripData = {
             "title": "Il Pacifico: quattro notti senza fretta",
             "description": "Quattro notti a San Agustinillo, con Mazunte e Punta Cometa liberi e La Ventanilla facoltativa. Il 3 gennaio inizia il trasferimento al Chiapas.",
             "images": [
-                "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/960px-Playa_San_Agustinillo.jpg"
+                "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
             ],
             "links": [],
             "basecamp": {
@@ -1032,7 +1032,7 @@ const tripData = {
                     "shortDesc": "Partenza da Oaxaca, trasferimento a San Agustinillo e inizio del soggiorno al mare.",
                     "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/960px-Playa_San_Agustinillo.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
                     "links": [
                         {
@@ -1189,7 +1189,7 @@ const tripData = {
             "title": "Palenque: giungla, città maya e cascate",
             "description": "Palenque e Roberto Barrios il 5–6 gennaio; autobus dalla costa ancora da verificare. Toniná resta una possibilità alternativa, non programmata.",
             "images": [
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/960px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/640px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
             ],
             "links": [
                 {
@@ -1333,7 +1333,7 @@ const tripData = {
                     "shortDesc": "Giornata dedicata al sito UNESCO: Tempio delle Iscrizioni, Palazzo, complessi cerimoniali e sentieri nella foresta.",
                     "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p><p>Controllare con la struttura il tragitto fino all'ingresso, senza dare per scontato che sia raggiungibile a piedi.</p>",
                     "images": [
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/960px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/640px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
                     ],
                     "links": [
                         {
@@ -1378,7 +1378,7 @@ const tripData = {
                     "shortDesc": "Escursione alle cascate e alle piscine naturali nella giungla, con tempo per fermarsi e fare il bagno dove consentito.",
                     "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p><p>Organizzare con la struttura il taxi verso la stazione Tren Maya per il 7 gennaio.</p>",
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cascada_Roberto_Barrios_13.jpg/960px-Cascada_Roberto_Barrios_13.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cascada_Roberto_Barrios_13.jpg/640px-Cascada_Roberto_Barrios_13.jpg"
                     ],
                     "links": [
                         {
@@ -1565,7 +1565,7 @@ const tripData = {
             "title": "Il Tren Maya e la laguna dai sette colori",
             "description": "Due giornate per la laguna (8–9 gennaio). Il 7 gennaio Tren Maya, collegamenti e check-in tardivo sono ancora da confermare.",
             "images": [
-                "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/960px-Bacalar_lagoon.jpg"
+                "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/640px-Bacalar_lagoon.jpg"
             ],
             "links": [
                 {
@@ -1733,7 +1733,7 @@ const tripData = {
                     "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
                     "fullDesc": "<p>Giornata completa sulla <strong>Laguna dei Sette Colori</strong>: kayak o breve uscita guidata a basso impatto e balneazione dove consentita. Proteggere gli stromatoliti e rispettare le eventuali chiusure ambientali.</p><p>La base si trova in paese: scegliere un accesso pubblico o un balneario sulla laguna. Il pernottamento non comprende un pontile privato.</p>",
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/960px-Bacalar_lagoon.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/640px-Bacalar_lagoon.jpg"
                     ],
                     "links": [
                         {
@@ -1774,7 +1774,7 @@ const tripData = {
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
                     "fullDesc": "<p>Seconda giornata senza orologio: nuoto, fotografie, kayak o una breve uscita in barca, soltanto se ne avete voglia. Il <strong>10 gennaio</strong> partire verso Playa del Carmen, poi traghetto per Cozumel; orari e coincidenze da verificare nella tappa Caribe.</p>",
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/960px-Bacalar_lagoon.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/640px-Bacalar_lagoon.jpg"
                     ],
                     "links": [
                         {
@@ -1891,7 +1891,7 @@ const tripData = {
             "title": "Snorkeling a Cozumel e relax ad Akumal",
             "description": "Cozumel e Akumal dal 10 al 16 gennaio: snorkeling notturno, Chichén Itzá e Muyil da prenotare, giornata libera il 15. Il 17 gennaio è il rientro in Italia.",
             "images": [
-                "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cozumel_Beach.jpg/960px-Cozumel_Beach.jpg"
+                "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cozumel_Beach.jpg/640px-Cozumel_Beach.jpg"
             ],
             "links": [
                 {
@@ -2009,7 +2009,7 @@ const tripData = {
                         }
                     ],
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cozumel_Beach.jpg/960px-Cozumel_Beach.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cozumel_Beach.jpg/640px-Cozumel_Beach.jpg"
                     ],
                     "imageCredits": [
                         {
@@ -2062,7 +2062,7 @@ const tripData = {
                         }
                     ],
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Palancar_reef.jpg/960px-Palancar_reef.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Palancar_reef.jpg/640px-Palancar_reef.jpg"
                     ],
                     "imageCredits": [
                         {
@@ -2108,7 +2108,7 @@ const tripData = {
                         }
                     ],
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Akumal_Beach_-_Mexico_%284303205262%29.jpg/960px-Akumal_Beach_-_Mexico_%284303205262%29.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Akumal_Beach_-_Mexico_%284303205262%29.jpg/640px-Akumal_Beach_-_Mexico_%284303205262%29.jpg"
                     ],
                     "imageCredits": [
                         {
@@ -2161,7 +2161,7 @@ const tripData = {
                         "Richiedere un prezzo per due che specifichi biglietto INAH, quota aggiuntiva statale e tempo reale nel sito; gli orari ordinari INAH sono 08:00–16:00, ultimo accesso alle 15:00."
                     ],
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/El_Castillo%2C_Chichen_Itza.jpg/960px-El_Castillo%2C_Chichen_Itza.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/El_Castillo%2C_Chichen_Itza.jpg/640px-El_Castillo%2C_Chichen_Itza.jpg"
                     ],
                     "imageCredits": [
                         {
@@ -2253,7 +2253,7 @@ const tripData = {
                         }
                     ],
                     "images": [
-                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Akumal_Beach_-_Mexico_%284303205262%29.jpg/960px-Akumal_Beach_-_Mexico_%284303205262%29.jpg"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Akumal_Beach_-_Mexico_%284303205262%29.jpg/640px-Akumal_Beach_-_Mexico_%284303205262%29.jpg"
                     ],
                     "imageCredits": [
                         {
