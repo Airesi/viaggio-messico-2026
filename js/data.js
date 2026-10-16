@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// Importi alloggi da riepilogo Booking 16/10/2026; confermato non significa pagato.
+// Fonte unica alloggi: general.hotelBookings. Attività e trasferimenti sono separati.
 
 const tripData = {
     "general": {
@@ -118,12 +118,7 @@ const tripData = {
             "images": [
                 "assets/img/Citta_Del_Messico.png"
             ],
-            "links": [
-                {
-                    "text": "🔗 Prenotazione Bus ADO",
-                    "url": "https://www.ado.com.mx"
-                }
-            ],
+            "links": [],
             "days": [
                 {
                     "id": "1-1",
@@ -131,7 +126,7 @@ const tripData = {
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
                     "shortDesc": "Colossali piramidi precolombiane e pranzo all'interno di una grotta vulcanica.",
-                    "fullDesc": "<p>Iniziamo la nostra avventura facendo un salto indietro nel tempo di duemila anni. L'esplorazione inizia percorrendo la maestosa <strong>Calzada de los Muertos</strong> di Teotihuacán. Saliremo verso la <strong>Piramide del Sole</strong> per assorbirne l'energia e godremo del miglior panorama dal piazzale della <strong>Piramide della Luna</strong>. Per chiudere in bellezza, il nostro primo pranzo messicano si terrà al <em>Restaurante La Gruta</em>, situato all'interno di una spettacolare caverna vulcanica naturale. Pranzo prenotato alle 13 a La Gruta, consigliato Uber per andare e tornare accordandosi con l'autista per il ritorno dato che c'è poca copertura di rete. Costo indicativo dell'uber 75 euro, costo medio del ristorante 30-40 euro, costo dell'ingresso per gli stranieri 10 euro </p>",
+                    "fullDesc": "<p><strong>Teotihuacán</strong>: percorrere la Calzada de los Muertos, esplorare i complessi della Piramide del Sole e della Piramide della Luna, senza contare sulla possibilità di salire sulle piramidi, soggetta a restrizioni di accesso. Calcolare diverse ore sul sito.</p><p><strong>La Gruta: tavolo prenotato per il 21 dicembre alle 13:00.</strong> Il conto è ancora da pagare. Valutare Uber o un bus per il trasferimento da Città del Messico; la precedente stima Uber di circa €75 non è un preventivo e va confermata (specie per il ritorno). Il biglietto INAH 2026 per visitatori stranieri è <strong>210 MXN a persona</strong>; verificare la tariffa di dicembre 2026.</p>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -312,13 +307,13 @@ const tripData = {
                 }
             ],
             "basecamp": {
-                "zone": "Condesa · The PM at Condesa Arts & Boutique Experience",
-                "hotelIdea": "The PM at Condesa Arts & Boutique Experience · 20–23 dicembre (3 notti) · Booking confermato, 223 € · non rimborsabile",
-                "why": "Arrivo a Città del Messico la sera del 20 dicembre; avvisare l'hotel del possibile check-in tardi dopo il volo. Check-out il 23, poi bus ADO notturno verso Oaxaca: la notte 23–24 si trascorre in autobus.",
+                "zone": "Condesa · base per Città del Messico",
+                "hotelIdea": "Quartiere comodo per Roma/Condesa; per nome, date e importo dell'alloggio vedi «Alloggi confermati» qui sotto.",
+                "why": "Arrivo la sera del 20 dicembre: verificare con la struttura l'orario di accesso. Il 23 recuperare i bagagli e raggiungere il bus notturno per Oaxaca; il pernottamento 23–24 è sul bus, non in un altro hotel.",
                 "tags": [
-                    "🌳 Verde",
-                    "🛡️ Super Sicuro",
-                    "🌮 Foodie"
+                    "🌳 Condesa e Roma",
+                    "🏛️ Musei e siti maya",
+                    "🌮 Cucina messicana"
                 ],
                 "transports": [
                     {
@@ -340,29 +335,24 @@ const tripData = {
             },
             "food": "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
             "budget": {
-                "total": "€ 223 hotel confermato + attività e trasporti",
-                "spent": "Pagamento hotel non verificato",
+                "total": "Ingressi, trasporti e pasti da definire (albergo nel riepilogo dedicato)",
+                "spent": "Pranzo La Gruta prenotato, da pagare",
                 "items": [
                     {
-                        "name": "The PM at Condesa · 20–23 dic · 3 notti · 2 ospiti",
-                        "cost": "€ 223 · prenotato"
+                        "name": "Teotihuacán · ingressi 2 stranieri",
+                        "cost": "420 MXN tariffa INAH 2026, trasporti esclusi"
                     },
                     {
-                        "name": "La Gruta · pranzo 21 dic (prenotato)",
-                        "cost": "Da pagare"
+                        "name": "La Gruta · pranzo del 21 dicembre",
+                        "cost": "Prenotato ore 13:00 · conto da pagare"
                     },
                     {
-                        "name": "Trasporti/ingressi in CDMX",
-                        "cost": "Da definire"
+                        "name": "Museo Nacional de Antropología · 2 stranieri",
+                        "cost": "420 MXN tariffa INAH 2026"
                     }
                 ]
             },
             "reservations": [
-                {
-                    "name": "The PM at Condesa · 20–23 dic · non rimborsabile",
-                    "status": "Confermato",
-                    "type": "success"
-                },
                 {
                     "name": "Restaurante La Gruta · 21 dic",
                     "status": "Confermato",
@@ -389,49 +379,16 @@ const tripData = {
             "badge": "24–29 Dic • Oaxaca, Pueblos Mancomunados e Caminos Reales",
             "locationText": "Oaxaca · Monte Albán · Sierra Norte · Oaxaca",
             "title": "Tradizioni zapoteche e trekking nella Sierra Norte",
-            "description": "Due notti all'Hotel Cazomalli (24–26 dic), trekking Caminos Reales PAGATO (26–28 dic, 40 km e due notti in cabañas) e altre due notti al Cazomalli (28–30 dic). Il 29 resta libero per esplorare Oaxaca o recuperare Hierve el Agua.",
+            "description": "Oaxaca e Jalatlaco prima e dopo il trekking comunitario Caminos Reales (26–28 dicembre, confermato e pagato). Natale dedicato a Hierve el Agua solo se l'apertura viene confermata; il 29 rimane jolly o riposo.",
             "images": [
                 "assets/img/Oaxaca_Ciudad.png",
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
             ],
-            "links": [
-                {
-                    "text": "🎒 Sierra Norte · guida al trekking e checklist",
-                    "url": "sierra-norte.html"
-                },
-                {
-                    "text": "🏛️ Monte Albán · orari ufficiali INAH",
-                    "url": "https://lugares.inah.gob.mx/es/node/4351"
-                },
-                {
-                    "text": "🏛️ Mitla · orari INAH",
-                    "url": "https://lugares.inah.gob.mx/es/node/4350"
-                },
-                {
-                    "text": "💧 Hierve el Agua · orari indicativi (non festivi)",
-                    "url": "https://www.hierveelaguashuttle.com/hierve.html"
-                },
-                {
-                    "text": "🌲 Caminos Reales · prenotazione del 26 dicembre",
-                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                },
-                {
-                    "text": "🥾 Pacchetto Caminos Reales · Sierra Norte",
-                    "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                },
-                {
-                    "text": "🌲 Operatore Expediciones Sierra Norte",
-                    "url": "https://www.sierranorte.org.mx/"
-                },
-                {
-                    "text": "🚌 Autobus ADO",
-                    "url": "https://www.ado.com.mx/"
-                }
-            ],
+            "links": [],
             "basecamp": {
-                "zone": "Jalatlaco · Cazomalli (24–26 e 28–30 dic) · Sierra Norte (26–28 dic)",
-                "hotelIdea": "Hotel Cazomalli Oaxaca: 24–26 dic (€199) e 28–30 dic (€232), entrambi confermati per 2 persone. Caminos Reales: cabañas ad Amatlán e Latuvi incluse nel pacchetto pagato.",
-                "why": "La stessa struttura prima e dopo il trekking facilita la logistica dei bagagli: chiedere al Cazomalli se può custodirli mentre sarete in Sierra Norte. Il trasferimento Sierra Norte parte da Oaxaca il 26 alle 08:00, con rientro dal pomeriggio del 28. Il 29 è flessibile.",
+                "zone": "Jalatlaco / Oaxaca · Sierra Norte 26–28 dicembre",
+                "hotelIdea": "La stessa base a Jalatlaco prima e dopo il trekking: chiedere deposito bagagli per le due notti in cabaña già incluse nel pacchetto Sierra Norte.",
+                "why": "Il trekking parte da Oaxaca il 26 alle 08:00, con rientro il 28 nel pomeriggio. Verificare il punto d'incontro del pacchetto; tenere flessibile il 29 dopo 40 km di cammino.",
                 "tags": [
                     "🏛️ Oaxaca 24–25 e 29",
                     "🥾 Sierra 26–28",
@@ -457,49 +414,27 @@ const tripData = {
             },
             "food": "Mercati e cucina oaxaqueña il 24–25 e il 29; pasti comunitari inclusi nel pacchetto Sierra Norte, con trota, pulque e tepache.",
             "budget": {
-                "total": "€ 431 alloggi Booking confermati + 12.917,70 MXN trekking pagato",
-                "spent": "12.917,70 MXN · trekking PAGATO; pagamento hotel non verificato",
+                "total": "Trekking Caminos Reales · 12.917,70 MXN PAGATO; altre esperienze da quotare",
+                "spent": "12.917,70 MXN pagati · pacchetto Sierra Norte per 2 persone",
                 "items": [
                     {
-                        "name": "Cazomalli Oaxaca · 24–26 dic · 2 notti",
-                        "cost": "€ 199 · confermato"
+                        "name": "Caminos Reales 26–28 dic · 3 giorni / 2 persone",
+                        "cost": "12.917,70 MXN · PAGATO, transfer/guide/pasti/cabañas inclusi"
                     },
                     {
-                        "name": "Caminos Reales 26–28 dic · 2 persone",
-                        "cost": "12.917,70 MXN · PAGATO"
-                    },
-                    {
-                        "name": "Cazomalli Oaxaca · 28–30 dic · 2 notti",
-                        "cost": "€ 232 · confermato"
-                    },
-                    {
-                        "name": "ADO da CDMX · 23/24 dic",
-                        "cost": "Da prenotare"
-                    },
-                    {
-                        "name": "Monte Albán · 24 dic",
-                        "cost": "Ingresso da confermare"
+                        "name": "Monte Albán · 24 dic, 2 ingressi stranieri",
+                        "cost": "420 MXN tariffa INAH 2026, trasporto escluso"
                     },
                     {
                         "name": "Hierve el Agua · 25 oppure 29 dic",
-                        "cost": "Apertura e tour da verificare"
+                        "cost": "Tour/apertura ancora da verificare"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Cazomalli Oaxaca · 24–26 dic · 199 €",
-                    "status": "Confermato",
-                    "type": "success"
-                },
-                {
                     "name": "Caminos Reales · 26–28 dic · 12.917,70 MXN",
                     "status": "Pagato",
-                    "type": "success"
-                },
-                {
-                    "name": "Cazomalli Oaxaca · 28–30 dic · 232 €",
-                    "status": "Confermato",
                     "type": "success"
                 },
                 {
@@ -525,7 +460,7 @@ const tripData = {
                     "title": "Monte Albán nella Vigilia, poi Oaxaca centro",
                     "location": "Monte Albán → Santo Domingo · mercati · centro",
                     "shortDesc": "Visita alla città zapoteca di Monte Albán se l'orario d'arrivo da CDMX lo consente; mercati e centro storico nel pomeriggio, Vigilia in città.",
-                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo in città dal <strong>bus notturno ADO da Città del Messico</strong>. L'alloggio è <strong>Hotel Cazomalli Oaxaca, a Jalatlaco, prenotato dal 24 al 26 dicembre per due persone (€ 199)</strong>: chiedere deposito bagagli al mattino, poiché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; se l'ADO arriva tardi, accorciamo le visite in centro invece di correre.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
+                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo in città dal <strong>bus notturno ADO da Città del Messico</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; se l'ADO arriva tardi, accorciamo le visite in centro invece di correre.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
@@ -599,10 +534,6 @@ const tripData = {
                         {
                             "text": "🏛️ Zona archeologica di Mitla · INAH",
                             "url": "https://lugares.inah.gob.mx/es/node/4350"
-                        },
-                        {
-                            "text": "🏛️ Monte Albán · piano 24 dicembre",
-                            "url": "https://lugares.inah.gob.mx/es/node/4351"
                         }
                     ],
                     "route": [
@@ -642,20 +573,11 @@ const tripData = {
                     "title": "Caminos Reales I: Las Minas e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
                     "shortDesc": "08:00 partenza da Oaxaca; 10:00 Las Minas, 12 km in 4 ore, pranzo con trota, sala dei codici e prima notte in cabaña.",
-                    "fullDesc": "<p><strong>Primo giorno del pacchetto CAMINOS REALES già pagato</strong> (26–28 dicembre, 2 persone, <strong>12.917,70 MXN totali</strong>). <strong>08:00</strong> trasferimento da Oaxaca verso <strong>San Miguel Amatlán</strong>, con punto di incontro da confermare sul voucher/organizzatore.</p><p><strong>10:00</strong> inizio della camminata sul percorso <strong>Las Minas</strong>: <strong>12 km, circa 4 ore</strong>. Alle <strong>14:00</strong> pranzo con trota. <strong>17:00</strong> visita alla sala dei codici e delle antichità; <strong>19:00</strong> cena tipica; <strong>20:00</strong> pernottamento nella <strong>cabaña doppia di San Miguel Amatlán</strong>.</p><p><strong>Incluso nel pacchetto:</strong> transfer di andata e ritorno da Oaxaca, pasti nella Sierra Norte, guide locali, accessi alle comunità, attività indicate e assicurazione. La guida parla spagnolo. Portare scarpe adatte e strati caldi: le comunità si trovano fra 2.000 e 3.100 m.</p>",
+                    "fullDesc": "<p><strong>Primo giorno del trekking Caminos Reales, già pagato</strong> (programma ufficiale e preparazione nella guida dedicata). <strong>08:00</strong> trasferimento da Oaxaca verso <strong>San Miguel Amatlán</strong>, con punto di incontro da confermare sul voucher/organizzatore.</p><p><strong>10:00</strong> inizio della camminata sul percorso <strong>Las Minas</strong>: <strong>12 km, circa 4 ore</strong>. Alle <strong>14:00</strong> pranzo con trota. <strong>17:00</strong> visita alla sala dei codici e delle antichità; <strong>19:00</strong> cena tipica; <strong>20:00</strong> pernottamento nella <strong>cabaña doppia di San Miguel Amatlán</strong>.</p><p><strong>Incluso nel pacchetto:</strong> transfer di andata e ritorno da Oaxaca, pasti nella Sierra Norte, guide locali, accessi alle comunità, attività indicate e assicurazione. La guida parla spagnolo. Portare scarpe adatte e strati caldi: le comunità si trovano fra 2.000 e 3.100 m.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🎒 Preparazione al trekking · consigli e regole",
-                            "url": "sierra-norte.html"
-                        },
-                        {
-                            "text": "🥾 Caminos Reales · pacchetto ufficiale",
-                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Oaxaca de Juárez · punto d'incontro da confermare",
@@ -683,16 +605,7 @@ const tripData = {
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🎒 Preparazione al trekking · consigli e regole",
-                            "url": "sierra-norte.html"
-                        },
-                        {
-                            "text": "🥾 Caminos Reales · programma",
-                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "San Miguel Amatlán · Pueblos Mancomunados",
@@ -720,16 +633,7 @@ const tripData = {
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🎒 Preparazione al trekking · consigli e regole",
-                            "url": "sierra-norte.html"
-                        },
-                        {
-                            "text": "🥾 Sierra Norte · sito operatore",
-                            "url": "https://www.sierranorte.org.mx/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Santa Marta Latuvi",
@@ -764,20 +668,7 @@ const tripData = {
                     "images": [
                         "assets/img/Oaxaca_Ciudad.png"
                     ],
-                    "links": [
-                        {
-                            "text": "💧 Hierve el Agua · informazioni di riferimento",
-                            "url": "https://www.hierveelaguashuttle.com/hierve.html"
-                        },
-                        {
-                            "text": "🏛️ Mitla · INAH",
-                            "url": "https://lugares.inah.gob.mx/es/node/4350"
-                        },
-                        {
-                            "text": "🌲 Pacchetto Sierra Norte",
-                            "url": "https://www.sierranorte.org.mx/#/paquete/25"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Oaxaca centro",
@@ -848,7 +739,7 @@ const tripData = {
                         "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
                     }
                 ],
-                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 è libero a Oaxaca. LOGISTICA ALLOGGI: Hotel Cazomalli già confermato per 24–26 dicembre (€199) e 28–30 dicembre (€232); Posada Paloma confermata per 30 dicembre–3 gennaio (€266). Le date Booking ora coincidono con l'itinerario. Stato dei pagamenti degli hotel non verificato.",
+                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 resta libero a Oaxaca.",
                 "sources": [
                     {
                         "text": "Pacchetto ufficiale Sierra Norte",
@@ -868,28 +759,19 @@ const tripData = {
             "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
             "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
             "title": "Il Pacifico: quattro notti senza fretta",
-            "description": "Dal 30 dicembre al 3 gennaio soggiorno CONFERMATO a Posada Paloma a San Agustinillo (€266, 4 notti, 2 persone). Riposo dopo la Sierra Norte, Capodanno sul mare e partenza per Pochutla il 3 gennaio per il trasferimento verso Palenque.",
+            "description": "30 dicembre–3 gennaio: Capodanno e relax a San Agustinillo, con Mazunte, Punta Cometa e La Ventanilla facoltativi. Il 3 gennaio prosegue il viaggio verso il Chiapas, con collegamenti ancora da confermare.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
-            "links": [
-                {
-                    "text": "🏖️ San Agustinillo · informazioni locali",
-                    "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
-                },
-                {
-                    "text": "🚌 ADO · spostamento verso la costa",
-                    "url": "https://www.ado.com.mx/"
-                }
-            ],
+            "links": [],
             "basecamp": {
-                "zone": "San Agustinillo · Posada Paloma · 30 dic–3 gen",
-                "hotelIdea": "Posada Paloma · 4 notti per 2 adulti · 266 € su Booking · confermata, cancellazione gratuita",
-                "why": "Le date Booking ora coincidono con il programma: check-in il 30 dicembre, check-out il 3 gennaio. Il 3 trasferimento verso Pochutla per AltaMar e ADO notturno (scheda Chiapas).",
+                "zone": "San Agustinillo · costa del Pacifico",
+                "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
+                "why": "Il 30 dicembre arrivo da Oaxaca. Il 3 gennaio raggiungere Pochutla con margine per l'eventuale AltaMar verso Salina Cruz; la coincidenza non è prenotata.",
                 "tags": [
                     "🌊 Pacifico",
-                    "✅ Posada Paloma confermata",
-                    "🌅 Capodanno sulla costa"
+                    "🌅 Capodanno sul mare",
+                    "🌿 La Ventanilla facoltativa"
                 ],
                 "transports": [
                     {
@@ -911,33 +793,16 @@ const tripData = {
             },
             "food": "Pesce fresco, frutta e specialità locali sul Pacifico. Dopo il trekking priorità a mare, riposo e Capodanno tranquillo a San Agustinillo.",
             "budget": {
-                "total": "€ 266 · Posada Paloma confermata (4 notti), più trasferimenti",
-                "spent": "Pagamento Posada Paloma non verificato",
+                "total": "Trasferimenti e attività costiere da quotare",
+                "spent": "Nessuna escursione costiera confermata",
                 "items": [
                     {
-                        "name": "Posada Paloma · 30 dic–3 gen · 4 notti / 2 persone",
-                        "cost": "€ 266 · confermato"
-                    },
-                    {
-                        "name": "Oaxaca → San Agustinillo · 30 dic",
-                        "cost": "Da quotare"
-                    },
-                    {
-                        "name": "Tour La Ventanilla / attività costiere",
-                        "cost": "Facoltativi"
-                    },
-                    {
-                        "name": "Pochutla → Palenque · dal 3 gen",
-                        "cost": "Vedi sezione Chiapas"
+                        "name": "La Ventanilla · tour comunitario",
+                        "cost": "Facoltativo, costo da chiedere"
                     }
                 ]
             },
             "reservations": [
-                {
-                    "name": "Posada Paloma · 30 dic–3 gen · € 266",
-                    "status": "Confermato",
-                    "type": "success"
-                },
                 {
                     "name": "Trasferimento Oaxaca → costa · 30 dic",
                     "status": "Da organizzare",
@@ -955,8 +820,8 @@ const tripData = {
                     "dayName": "Giorno 10 (30 Dic)",
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Partenza da Oaxaca, arrivo a San Agustinillo e check-in a Posada Paloma, confermata 30 dic–3 gen per €266 (2 persone).",
-                    "fullDesc": "<p>Il <strong>30 dicembre</strong> lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico. Per il viaggio verifichiamo un autobus verso la zona di San Pedro Pochutla e l'ultimo tratto in taxi/colectivo, oppure un trasferimento diretto; gli orari del 30 dicembre sono ancora da controllare.</p><p><strong>Posada Paloma è confermata su Booking dal 30 dicembre 2026 al 3 gennaio 2027, quattro notti per due adulti, totale €266, cancellazione gratuita.</strong> La prenotazione coincide adesso con le date del programma: nessuna modifica ulteriore richiesta.</p><p>Dopo i 40 km di Sierra Norte, pomeriggio tranquillo e primo tramonto sul mare. La mattina del <strong>3 gennaio</strong> avremo ancora tempo a San Agustinillo prima di partire verso Pochutla per il trasferimento notturno in direzione Palenque.</p>",
+                    "shortDesc": "Partenza da Oaxaca, trasferimento a San Agustinillo e inizio del soggiorno al mare.",
+                    "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nella scheda <strong>Alloggi prenotati</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
                     ],
@@ -999,21 +864,12 @@ const tripData = {
                     "dayName": "Giorni 11–13 (31 Dic – 2 Gen)",
                     "title": "San Agustinillo: Capodanno e tre giorni sul Pacifico",
                     "location": "San Agustinillo · Mazunte · Punta Cometa",
-                    "shortDesc": "Capodanno sul Pacifico con base a Posada Paloma già confermata; Mazunte, Punta Cometa e La Ventanilla facoltativi.",
-                    "fullDesc": "<p><strong>31 dicembre, 1 e 2 gennaio</strong>: tre giornate sulla costa, con base sempre a <strong>Posada Paloma, San Agustinillo</strong> (prenotazione confermata <strong>30 dicembre–3 gennaio, €266 totali in due</strong>). Nessun cambio di alloggio e nessuna escursione obbligatoria.</p><p>Se ne abbiamo voglia possiamo visitare <strong>Mazunte</strong>, vedere il tramonto da <strong>Punta Cometa</strong> se il sentiero è praticabile, oppure partecipare a un'escursione locale fra mangrovie e fauna a <strong>La Ventanilla</strong>. Per Capodanno niente spostamenti lunghi: restiamo sul Pacifico.</p><p><strong>2 gennaio:</strong> ultimo giorno pieno al mare e preparazione dei bagagli. Il <strong>3 gennaio</strong>, dopo check-out, taxi o colectivo per <strong>San Pedro Pochutla</strong> in tempo per il collegamento AltaMar indicativo delle <strong>16:15</strong> e la successiva corsa ADO notturna: confermare orari e terminal come spiegato nella scheda Chiapas.</p>",
+                    "shortDesc": "Tre giorni al Pacifico: relax e Capodanno; facoltative Mazunte, Punta Cometa e La Ventanilla.",
+                    "fullDesc": "<p><strong>31 dicembre–2 gennaio:</strong> giornate libere per il mare, Capodanno tranquillo e piccole uscite facoltative a <strong>Mazunte</strong>, al tramonto di <strong>Punta Cometa</strong> (se il sentiero è percorribile) o alle mangrovie di <strong>La Ventanilla</strong> con guida comunitaria.</p><p><strong>2 gennaio:</strong> ultima giornata completa di relax, prima del lungo trasferimento del 3–4 gennaio. Nessuna escursione né ulteriore alloggio prenotati per queste attività.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🏖️ San Agustinillo · informazioni",
-                            "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
-                        },
-                        {
-                            "text": "🚌 ADO · trasferimento 3 gennaio",
-                            "url": "https://www.ado.com.mx/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Playa San Agustinillo",
@@ -1047,25 +903,12 @@ const tripData = {
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
             "title": "Palenque: giungla, città maya e cascate",
-            "description": "Il 4 gennaio arrivo dalla costa del Pacifico e check-in al Los Susurros (4–7 gennaio, 3 notti, €166 per due, prenotazione confermata). Il 5 visitiamo le rovine maya e il 6 le Cascadas Roberto Barrios; il 7 partiamo per Bacalar con il Tren Maya.",
+            "description": "Palenque come base per la visita alle rovine maya del 5 gennaio e alle Cascadas Roberto Barrios del 6. Il 3–4 gennaio trasferimento dalla costa in più autobus non ancora prenotati; il 7 Tren Maya verso Bacalar.",
             "images": [
                 "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
             ],
-            "links": [
-                {
-                    "text": "🔗 Bus ADO · biglietti",
-                    "url": "https://www.ado.com.mx/"
-                },
-                {
-                    "text": "🔗 Rome2Rio · orari di riferimento",
-                    "url": "https://www.rome2rio.com/it/"
-                },
-                {
-                    "text": "🔗 Orari e accesso Palenque (INAH)",
-                    "url": "https://lugares.inah.gob.mx/es/node/4853"
-                }
-            ],
+            "links": [],
             "transferPlan": {
                 "eyebrow": "3–4 gennaio 2027 · Itinerario candidato, da prenotare",
                 "title": "Dal Pacifico alla giungla, seguendo la costa",
@@ -1132,19 +975,10 @@ const tripData = {
                     "dayName": "Giorno 14 (3 Gen)",
                     "title": "Da San Agustinillo verso Salina Cruz: la costa di Oaxaca",
                     "location": "San Agustinillo · Pochutla · Salina Cruz",
-                    "shortDesc": "AltaMar Pochutla 16:15–20:10; ADO notturno delle 23:00 per Villahermosa.",
-                    "fullDesc": "<p>Ultime ore sul Pacifico a <strong>San Agustinillo</strong>. Con taxi o colectivo raggiungiamo <strong>San Pedro Pochutla</strong> (circa 30–45 minuti indicativi), con margine per individuare la fermata dell'autobus.</p><p><strong>16:15–20:10</strong> · <strong>AltaMar diretto Pochutla → Salina Cruz</strong>, 3 h 55 min, circa <strong>13–20 € a persona</strong> secondo Rome2Rio. La strada segue la costa in buona parte: niente ritorno a Oaxaca. <strong>Da verificare</strong> disponibilità effettiva per il 3 gennaio e fermata di arrivo a Salina Cruz.</p><p><strong>23:00</strong> · Partenza <strong>ADO Salina Cruz → Villahermosa</strong>, bus notturno di 9 h 55 min con arrivo alle <strong>08:55 del 4 gennaio</strong>. Tariffa visualizzata su ADO: <strong>964 MXN a persona</strong> (1.928 MXN in due). Punto di partenza indicato: <strong>Calle Primero de Mayo 32, colonia Espinal, Salina Cruz</strong>. Tra gli autobus abbiamo 2 h 50 min sulla carta, ma sono biglietti separati e un ritardo può far perdere la coincidenza.</p><p><strong>Stato: non prenotato.</strong> Confermare orari e terminal prima di acquistare.</p>",
+                    "shortDesc": "Collegamenti indicativi Pochutla → Salina Cruz → Villahermosa; biglietti separati e non prenotati.",
+                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>, poi taxi/colectivo per <strong>San Pedro Pochutla</strong>. Da qui è candidato l'autobus <strong>AltaMar</strong> verso <strong>Salina Cruz</strong>, seguito da un <strong>ADO notturno</strong> per Villahermosa. <strong>Nessun biglietto prenotato.</strong></p><p>Gli orari indicativi, gli indirizzi dei terminal, i prezzi e gli avvisi sulle coincidenze a biglietti separati sono nella scheda <strong>«Dal Pacifico alla giungla»</strong> appena sopra l'itinerario; verificarli prima di acquistare, senza basarsi su una coincidenza non garantita.</p>",
                     "images": [],
-                    "links": [
-                        {
-                            "text": "🚌 Prenota ADO",
-                            "url": "https://www.ado.com.mx/"
-                        },
-                        {
-                            "text": "🗺️ Cerca AltaMar su Rome2Rio",
-                            "url": "https://www.rome2rio.com/it/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "San Agustinillo",
@@ -1174,19 +1008,10 @@ const tripData = {
                     "dayName": "Giorno 15 (4 Gen)",
                     "title": "Da Villahermosa a Palenque: arrivo nella giungla",
                     "location": "Villahermosa · Palenque",
-                    "shortDesc": "ADO arriva alle 08:55, bus verso Palenque alle 10:30 e arrivo previsto alle 13:00.",
-                    "fullDesc": "<p><strong>08:55</strong> · Arrivo del bus ADO a <strong>Villahermosa</strong> presso <strong>Av. Francisco Javier Mina 297</strong>, angolo Lino Merino e Lamberto Castellanos Rivera.</p><p><strong>10:30–13:00</strong> · Collegamento diretto <strong>Villahermosa Tabasco Central → Central de Autobuses ADO Palenque</strong> mostrato da Rome2Rio, durata <strong>2 h 30 min</strong> e prezzo indicativo <strong>7 € a persona</strong>. La coincidenza teorica è di <strong>1 h 35 min</strong>, ma <strong>i terminal potrebbero essere differenti</strong>: verificare gli indirizzi e prevedere l'eventuale breve trasferimento.</p><p><strong>13:00</strong> · Arrivo previsto a <strong>Palenque</strong> e trasferimento in taxi o altro mezzo da organizzare al <strong>Los Susurros Casa Monkey Rescue and Rehabilitation Sanctuary, sulla Carretera Palenque-Ruinas</strong>. Booking conferma <strong>4–7 gennaio, 3 notti per due persone, €166 e cancellazione gratuita</strong>. Chiedere alla struttura check-in e indicazioni per il transfer; pomeriggio tranquillo dopo il lungo viaggio. <strong>5 gennaio</strong>: rovine di Palenque; <strong>6 gennaio</strong>: Cascadas Roberto Barrios. Successivo collegamento verso il Tren Maya da confermare.</p><p><strong>Budget stimato per due:</strong> circa <strong>135–150 €</strong> per i tre autobus principali, esclusi San Agustinillo–Pochutla e eventuali taxi tra terminal. Prezzi non bloccati e orari da riconfermare.</p>",
+                    "shortDesc": "Arrivo indicativo in autobus a Villahermosa, prosecuzione per Palenque e trasferimento alla struttura.",
+                    "fullDesc": "<p>Arrivo a <strong>Villahermosa</strong> e prosecuzione in autobus per <strong>Palenque</strong>, secondo l'itinerario candidato descritto in <strong>«Dal Pacifico alla giungla»</strong>. Il percorso include potenzialmente un cambio di terminal e non è ancora prenotato.</p><p>All'arrivo a Palenque, raggiungere la struttura confermata lungo la <strong>Carretera Palenque–Ruinas</strong> con un taxi: chiedere deposito bagagli e check-in. Pomeriggio di riposo dopo il viaggio; il 5 gennaio sito archeologico, il 6 cascate.</p>",
                     "images": [],
-                    "links": [
-                        {
-                            "text": "🚌 Autobus ADO",
-                            "url": "https://www.ado.com.mx/"
-                        },
-                        {
-                            "text": "🗺️ Rome2Rio",
-                            "url": "https://www.rome2rio.com/it/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Villahermosa",
@@ -1210,7 +1035,7 @@ const tripData = {
                     "title": "Palenque: la città maya nascosta nella giungla",
                     "location": "Zona archeologica di Palenque",
                     "shortDesc": "Giornata dedicata al sito UNESCO: Tempio delle Iscrizioni, Palazzo, complessi cerimoniali e sentieri nella foresta.",
-                    "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p><p><strong>Base:</strong> Los Susurros, confermato fino al 7 gennaio. Verificare con la struttura il modo più semplice di raggiungere l'ingresso del sito archeologico, senza dare per scontato che sia raggiungibile a piedi.</p>",
+                    "fullDesc": "<p>Dopo il lungo trasferimento dei giorni precedenti, dedichiamo la giornata alla <strong>zona archeologica di Palenque</strong>: un'antica città maya avvolta dalla vegetazione del Chiapas. Partiamo presto per evitare le ore più calde e prendiamo tempo per il <strong>Tempio delle Iscrizioni</strong>, il <strong>Palazzo</strong> e gli altri complessi aperti alla visita.</p><p><strong>Orario di riferimento INAH:</strong> 08:00–17:00, ultimo accesso alle 16:00; biglietti presso il Centro de Atención a Visitantes. Verificare tariffe INAH e gli eventuali ingressi aggiuntivi del parco prima della visita. Una guida locale è consigliata se vogliamo approfondire la storia della città.</p><p>Pomeriggio senza corse: possibile museo di sito, se aperto, oppure riposo a Palenque. <strong>Il 6 gennaio è riservato alle Cascadas Roberto Barrios.</strong></p><p>Controllare con la struttura il tragitto fino all'ingresso, senza dare per scontato che sia raggiungibile a piedi.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1245,7 +1070,7 @@ const tripData = {
                     "title": "Cascadas Roberto Barrios: acqua turchese e foresta",
                     "location": "Roberto Barrios · Palenque",
                     "shortDesc": "Escursione alle cascate e alle piscine naturali nella giungla, con tempo per fermarsi e fare il bagno dove consentito.",
-                    "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p><p><strong>Pernottamento:</strong> ultima notte al Los Susurros. Verificare con l'alloggio un taxi per la partenza del Tren Maya il 7 gennaio e le tempistiche per raggiungere la stazione.</p>",
+                    "fullDesc": "<p>Intera giornata alle <strong>Cascadas Roberto Barrios</strong>, un sistema di salti d'acqua e piscine naturali immerso nella vegetazione. È la giornata più acquatica del Chiapas: prendiamoci il tempo per esplorare i diversi livelli, fermarci nelle zone consentite e goderci il paesaggio.</p><p><strong>Trasporto:</strong> minivan/colectivo locale o escursione da Palenque, da organizzare sul posto; calcolare indicativamente circa un'ora per tratta, variabile in base al mezzo e alla strada. Chiedere sempre l'orario dell'ultima corsa di ritorno prima di partire.</p><p>Portare scarpe con buona aderenza, costume, acqua e una sacca impermeabile. Le rocce possono essere scivolose e la balneazione va valutata in base alle condizioni del giorno. Rientro a Palenque in serata e preparazione dei bagagli per il <strong>Tren Maya del 7 gennaio</strong>.</p><p>Organizzare con la struttura il taxi verso la stazione Tren Maya per il 7 gennaio.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1272,41 +1097,24 @@ const tripData = {
                 }
             ],
             "budget": {
-                "total": "€ 166 hotel confermato + ~135–150 € autobus indicativi + attività",
-                "spent": "Pagamento hotel non verificato; bus ancora non prenotati",
+                "total": "Autobus 3–4 gennaio ~135–150 € in due + ingressi e taxi da quotare",
+                "spent": "Nessun autobus o tour in Chiapas confermato",
                 "items": [
                     {
-                        "name": "Los Susurros · 4–7 gen · 3 notti / 2 persone",
-                        "cost": "€ 166 · confermato"
+                        "name": "3–4 gen · tre autobus Pochutla → Palenque",
+                        "cost": "~135–150 € in due, tariffe e coincidenze da verificare"
                     },
                     {
-                        "name": "Pochutla → Salina Cruz (AltaMar)",
-                        "cost": "26–40 € / 2 · indicativi"
+                        "name": "Palenque · ingresso sito e CONANP, 2 stranieri",
+                        "cost": "850 MXN tariffe 2026, trasporti/guida esclusi"
                     },
                     {
-                        "name": "Salina Cruz → Villahermosa (ADO)",
-                        "cost": "1.928 MXN / 2 · da prenotare"
-                    },
-                    {
-                        "name": "Villahermosa → Palenque",
-                        "cost": "~14 € / 2 · indicativi"
-                    },
-                    {
-                        "name": "Taxi/colectivo + trasferimenti hotel",
-                        "cost": "Da quotare"
-                    },
-                    {
-                        "name": "Palenque sito archeologico / Roberto Barrios",
-                        "cost": "Da quotare"
+                        "name": "Roberto Barrios · 6 gen",
+                        "cost": "Ingresso 40 MXN/persona, trasporto da quotare"
                     }
                 ]
             },
             "reservations": [
-                {
-                    "name": "Los Susurros · Palenque · 4–7 gen · € 166",
-                    "status": "Confermato",
-                    "type": "success"
-                },
                 {
                     "name": "AltaMar · 3 gen 16:15",
                     "status": "Da verificare",
@@ -1341,13 +1149,13 @@ const tripData = {
                 "zoom": 9
             },
             "basecamp": {
-                "zone": "Palenque · strada Palenque-Ruinas",
-                "hotelIdea": "Los Susurros Casa Monkey Rescue and Rehabilitation Sanctuary · 4–7 gennaio 2027 · 3 notti per 2 adulti · € 166 su Booking · cancellazione gratuita",
-                "why": "Alloggio immerso nella natura lungo la strada per il sito archeologico. Organizzare taxi/transfer dall'arrivo in autobus a Palenque il 4, verso Roberto Barrios il 6 e per la stazione Tren Maya il 7. L'accesso potrebbe richiedere un mezzo: verificare con la struttura.",
+                "zone": "Palenque · area strada per le rovine",
+                "hotelIdea": "Sistemazione immersa nel verde, non in centro: prevedere taxi per stazione bus, cascate e fermata del Tren Maya.",
+                "why": "L'arrivo il 4 gennaio e il trasferimento per il Tren Maya del 7 richiedono taxi da concordare. Riferimenti dell'alloggio nel riepilogo hotel, autobus nella scheda trasferimento.",
                 "tags": [
-                    "🐒 Santuario di recupero primati",
-                    "🌿 Foresta tropicale",
-                    "✅ 3 notti confermate"
+                    "🐒 Natura e primati",
+                    "🏛️ Sito maya di Palenque",
+                    "💧 Roberto Barrios"
                 ],
                 "transports": [
                     {
@@ -1376,19 +1184,11 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "7–10 gennaio · Hotel Aires Bacalar CONFERMATO su Booking, 3 notti per due adulti a €290, cancellazione gratuita. Colazione inclusa nella tariffa scelta. Arrivo il 7 con Tren Maya: check-in dopo le 23:30 e taxi dalla stazione ANCORA DA CONFERMARE. Il 10 partenza per Playa del Carmen e traghetto per Cozumel.",
+            "description": "Due giornate piene (8–9 gennaio) sulla Laguna dei Sette Colori: kayak, nuoto nei punti consentiti e riposo. Il 7 arrivo da Palenque con Tren Maya, coincidenze/trasferimento da verificare.",
             "images": [
                 "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
             "links": [
-                {
-                    "text": "🔗 Tren Maya · orari ufficiali",
-                    "url": "https://www.trenmaya.gob.mx/horarios.php"
-                },
-                {
-                    "text": "🔗 Tren Maya · sito e biglietti",
-                    "url": "https://www.trenmaya.gob.mx/"
-                },
                 {
                     "text": "🔗 Foto Bacalar CC BY 2.0 · Roberto Bolaños",
                     "url": "https://commons.wikimedia.org/wiki/File:Bacalar_-_Lagoon_of_Colors.jpg"
@@ -1445,14 +1245,13 @@ const tripData = {
                 ]
             },
             "basecamp": {
-                "zone": "Bacalar · Hotel Aires Bacalar 7–10 gennaio · prenotato",
-                "hotelIdea": "Hotel Aires Bacalar, Avenida 3 angolo Calle 26 · €290 per 3 notti / 2 adulti · Booking confermato, pagamento da verificare. Colazione inclusa e Camera Queen con Terrazza nella tariffa selezionata.",
-                "why": "Un solo hotel per 3 notti, centrale e vicino ai ristoranti. Non è direttamente sulla laguna e non ha pontile privato. Importantissimo: chiedere conferma SCRITTA del check-in dopo le 23:30/mezzanotte anche in caso di ritardo del Tren Maya e del taxi dalla stazione.",
+                "zone": "Bacalar · centro",
+                "hotelIdea": "La base è in paese, non direttamente sulla laguna. Colazione inclusa nell'offerta; check-in dopo le 23:30 ancora da autorizzare per iscritto.",
+                "why": "Per il 7 gennaio serve conferma scritta di late check-in anche in caso di ritardo Tren Maya, oltre a taxi dalla stazione. Laguna e pontili privati non sono direttamente accessibili dall'hotel.",
                 "tags": [
-                    "✅ Hotel Aires confermato",
+                    "💧 Laguna e kayak",
                     "🍳 Colazione inclusa",
-                    "⚠️ Check-in tardivo da confermare",
-                    "🚆 10 gen verso Cozumel"
+                    "⚠️ Arrivo notturno da confermare"
                 ],
                 "transports": [
                     {
@@ -1469,28 +1268,20 @@ const tripData = {
             },
             "food": "Colazione con vista sulla laguna, cucina del Quintana Roo e due cene senza fretta nel centro di Bacalar.",
             "budget": {
-                "total": "€290 · Hotel Aires Bacalar CONFERMATO, 3 notti / 2 adulti + trasporti",
-                "spent": "Pagamento Hotel Aires da verificare; prenotazione confermata",
+                "total": "Tren Maya, taxi e attività in laguna da quotare",
+                "spent": "Nessun biglietto ferroviario o tour in laguna confermato",
                 "items": [
                     {
-                        "name": "Hotel Aires Bacalar · 7–10 gen · 3 notti / 2 adulti",
-                        "cost": "€290 · confermato, pagamento non verificato, colazione inclusa"
+                        "name": "Tour collettivo laguna o kayak · 8/9 gennaio",
+                        "cost": "Attività facoltativa, preventivo da chiedere"
                     },
                     {
-                        "name": "Tren Maya Palenque → Bacalar · 7 gen",
-                        "cost": "Da prenotare"
+                        "name": "Tren Maya Palenque → Bacalar · 7 gennaio",
+                        "cost": "Biglietto da acquistare"
                     },
                     {
-                        "name": "Taxi stazione Bacalar → Hotel Aires",
-                        "cost": "Da organizzare"
-                    },
-                    {
-                        "name": "Kayak / accesso alla laguna",
-                        "cost": "Facoltativi"
-                    },
-                    {
-                        "name": "Tren Maya Bacalar → Playa del Carmen e traghetto Cozumel · 10 gen",
-                        "cost": "Da verificare"
+                        "name": "Bacalar → Playa del Carmen · 10 gennaio",
+                        "cost": "Trasporto da scegliere"
                     }
                 ]
             },
@@ -1499,11 +1290,6 @@ const tripData = {
                     "name": "Tren Maya Palenque → Bacalar · 7 gen",
                     "status": "Orario 2027 da confermare",
                     "type": "warning"
-                },
-                {
-                    "name": "Hotel Aires Bacalar · 7–10 gen, 3 notti",
-                    "status": "CONFERMATO · €290 · pagamento non verificato",
-                    "type": "success"
                 },
                 {
                     "name": "Hotel Aires · check-in tardivo e taxi stazione",
@@ -1522,19 +1308,10 @@ const tripData = {
                     "dayName": "Giorno 18 (7 Gen)",
                     "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
                     "location": "Palenque · Escárcega · Bacalar",
-                    "shortDesc": "Arrivo da Palenque, check-in all'Hotel Aires prenotato a €290; late check-in da confermare.",
-                    "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong> il 7 gennaio, biglietti e orari gennaio 2027 da verificare. Taxi da organizzare dalla stazione fuori paese. <strong>Hotel Aires Bacalar CONFERMATO</strong> dal 7 al 10 gennaio, 3 notti per 2 adulti, <strong>€290</strong>, cancellazione gratuita. Tariffa selezionata con colazione inclusa e Camera Queen con Terrazza (verificare i dettagli definitivi in conferma).</p><p><strong>Nonostante la prenotazione confermata, l'arrivo dopo le 23:30/mezzanotte NON è ancora autorizzato:</strong> attendere risposta scritta dell'hotel e chiedere tolleranza per ritardi del Tren Maya. Stato pagamento non verificato.</p>",
+                    "shortDesc": "Tren Maya Palenque → Bacalar e taxi serale. Late check-in da confermare con la struttura.",
+                    "fullDesc": "<p><strong>Tren Maya Palenque → Bacalar</strong>, biglietti/orari di gennaio 2027 da verificare. La scheda trasferimento riporta le coincidenze oggi pubblicate via Escárcega, <strong>non confermate per il 7 gennaio</strong>. La stazione di Bacalar è fuori dal centro: organizzare il taxi.</p><p><strong>Punto aperto fondamentale:</strong> l'hotel è confermato, ma l'ingresso dopo le 23:30 o mezzanotte non lo è. Attendere la <strong>risposta scritta</strong> della struttura per late check-in e ritardi del treno.</p>",
                     "images": [],
-                    "links": [
-                        {
-                            "text": "🚆 Orario ufficiale Tren Maya",
-                            "url": "https://www.trenmaya.gob.mx/horarios.php"
-                        },
-                        {
-                            "text": "🚆 Sito Tren Maya",
-                            "url": "https://www.trenmaya.gob.mx/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Stazione Tren Maya Palenque",
@@ -1565,7 +1342,7 @@ const tripData = {
                     "title": "Bacalar: il primo giorno sulla laguna",
                     "location": "Bacalar · Laguna dei Sette Colori",
                     "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
-                    "fullDesc": "<p>Prima giornata sulla <strong>Laguna dei Sette Colori</strong>: kayak, tour ecocompatibile o balneazione nei punti autorizzati, evitando le zone protette degli stromatoliti. <strong>Hotel Aires è in centro, non direttamente sulla laguna</strong>: non dispone di un pontile privato da cui entrare in acqua.</p><p>Colazione inclusa nell'offerta selezionata. L'indicazione vista lago della camera non implica una terrazza proprio sopra l'acqua: verificare la tipologia finale nella prenotazione.</p>",
+                    "fullDesc": "<p>Prima giornata piena sulla <strong>Laguna dei Sette Colori</strong>: kayak o breve uscita guidata rispettosa dell'ecosistema, balneazione negli accessi autorizzati e relax. Evitare le zone protette degli stromatoliti e rispettare le restrizioni ambientali.</p><p>La base è nel centro di Bacalar, quindi per raggiungere la laguna bisogna scegliere un accesso pubblico o un balneario. Nessun pontile privato incluso nel pernottamento.</p>",
                     "images": [
                         "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
                     ],
@@ -1598,7 +1375,7 @@ const tripData = {
                     "title": "Bacalar senza orologio",
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
-                    "fullDesc": "<p>Seconda giornata intera di laguna e relax, senza cambiare hotel: colazione all'Hotel Aires, accessi autorizzati all'acqua e passeggiata nel centro del paese. L'Hotel Aires è già confermato per tutte e tre le notti.</p><p><strong>10 gennaio:</strong> check-out e trasferimento verso Playa del Carmen (Tren Maya candidato, orari da verificare), taxi al porto e traghetto per Cozumel, dove il Coral Princess è confermato 10–12 gennaio a €300.</p>",
+                    "fullDesc": "<p>Seconda giornata senza orologio: nuoto, fotografie, kayak o una breve uscita in barca, soltanto se ne avete voglia. Il <strong>10 gennaio</strong> partire verso Playa del Carmen, poi traghetto per Cozumel; orari e coincidenze da verificare nella tappa Caribe.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1633,20 +1410,12 @@ const tripData = {
             },
             "researchNotes": [
                 {
-                    "title": "Hotel Aires Bacalar · CONFERMATO · €290",
-                    "body": "Tre notti, 7–10 gennaio 2027, due adulti, cancellazione gratuita. Colazione e Camera Queen con Terrazza nella tariffa scelta; Booking conferma prenotazione ma non documenta addebiti."
+                    "title": "Arrivo a Bacalar · late check-in NON confermato",
+                    "body": "Per il 7 gennaio chiedere alla struttura per iscritto se potete entrare dopo le 23:30/mezzanotte anche con ritardi ferroviari; chiedere anche come raggiungerla dalla stazione Tren Maya fuori dal centro."
                 },
                 {
-                    "title": "Late check-in: da confermare per iscritto",
-                    "body": "Il Tren Maya potrebbe arrivare dopo le 23:30/mezzanotte il 7 gennaio. Serve autorizzazione scritta ad entrare anche con ritardi, e un taxi dalla stazione. Booking confermato non equivale a late check-in approvato."
-                },
-                {
-                    "title": "Accesso laguna",
-                    "body": "Hotel Aires si trova in centro a Bacalar, non direttamente sulla laguna; raggiungere balneari o punti di accesso autorizzati. Nessun pontile privato e vista lago della camera da verificare."
-                },
-                {
-                    "title": "Alternative scartate",
-                    "body": "Villas Ecotucan, Tuparenda e 7 Cielos erano alternative considerate prima della prenotazione di Hotel Aires, ora non più necessarie."
+                    "title": "Accesso alla laguna",
+                    "body": "L'hotel è comodo per il centro, ma non ha accesso diretto/pontile privato. Raggiungere balneari e accessi consentiti; la vista lago dalla terrazza non è garantita."
                 }
             ],
             "hotelSearches": []
@@ -1658,7 +1427,7 @@ const tripData = {
             "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "Coral Princess a Cozumel CONFERMATO 10–12 gen (€300, non pagato) ed El Ultimo Maya ad Akumal Pueblo CONFERMATO 12–16 gen (€169, pagamento da verificare). Chichén Itzá 13 gen e Muyil/Sian Ka’an 14 gen sono tour NON prenotati. Il 15 giornata di mare senza escursioni, il 16 volo da Cancún.",
+            "description": "Cozumel 10–12 gennaio, poi Akumal Pueblo 12–16. Possibile snorkeling notturno l'11, Chichén Itzá il 13 e canali di Muyil/Sian Ka’an il 14 (tutti NON prenotati). Il 15 gennaio resta libero per la spiaggia.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1678,34 +1447,17 @@ const tripData = {
                 {
                     "text": "⛴️ Traghetti · Winjet",
                     "url": "https://winjet.mx/"
-                },
-                {
-                    "text": "🏛️ Chichen Itza Tours · Classic Riviera Maya",
-                    "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
-                },
-                {
-                    "text": "🏛️ Vive Cancún · Chichén económico",
-                    "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
-                },
-                {
-                    "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
-                    "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
-                },
-                {
-                    "text": "🌿 Paseo Tours · Canali di Muyil",
-                    "url": "https://www.paseotours.com/en/tour-muyil-canals/"
                 }
             ],
             "basecamp": {
-                "zone": "Cozumel 10–12 gen · Coral Princess CONFERMATO | Akumal 12–16 gen · El Ultimo Maya CONFERMATO",
-                "hotelIdea": "Coral Princess · 2 notti, 10–12 gen, King Deluxe Fronte Oceano, €300, CONFERMATO NON PAGATO. El Ultimo Maya · 4 notti, 12–16 gen, Camera Deluxe con letti singoli (da verificare nella conferma), €169, CONFERMATO, pagamento non verificato.",
-                "why": "10 gen arrivo a Cozumel via Playa del Carmen; 11 snorkeling notturno proposto (non prenotato); 12 traghetto e transfer fino a El Ultimo Maya ad Akumal Pueblo (prenotato). 13 Chichén Itzá e 14 Muyil: chiedere pickup specifico presso El Ultimo Maya. Il 15 mare e relax; 16 transfer aeroportuale. Non cambiare hotel per le escursioni.",
+                "zone": "Cozumel → Akumal Pueblo",
+                "hotelIdea": "Prima notte sul mare a Cozumel, poi base nel pueblo di Akumal (non fronte spiaggia); tariffe, camere e pagamenti nel prospetto degli alloggi.",
+                "why": "10 gen Cozumel via traghetto, 12 gen trasferimento ad Akumal. I tour del 13 e 14 richiedono conferma del punto di raccolta presso El Ultimo Maya. Il 15 senza escursioni, il 16 aeroporto di Cancún via strada.",
                 "tags": [
-                    "✅ Coral Princess · 10–12 gen",
-                    "✅ El Ultimo Maya · 12–16 gen",
-                    "🏛️ Chichén Itzá · tour 13 gen",
-                    "🌿 Muyil · tour 14 gen",
-                    "🏖️ 15 gen · giornata libera"
+                    "🌙 Snorkeling notturno proposto",
+                    "🏛️ Chichén Itzá · preventivo",
+                    "🌿 Muyil · preventivo",
+                    "🏖️ 15 gen · riposo"
                 ],
                 "transports": [
                     {
@@ -1727,49 +1479,24 @@ const tripData = {
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "€469 · hotel Caribe confermati (Coral Princess €300 + El Ultimo Maya €169) · tour e trasferimenti esclusi",
-                "spent": "Stato pagamenti: Coral Princess non pagato; El Ultimo Maya non verificato",
+                "total": "Tour Cozumel / Chichén Itzá / Muyil + trasferimenti da prenotare (hotel esclusi)",
+                "spent": "Nessun tour o trasferimento della tappa confermato",
                 "items": [
                     {
-                        "name": "Coral Princess · 10–12 gen · King Deluxe Fronte Oceano",
-                        "cost": "€300 · CONFERMATO, NON pagato, cancellazione gratuita"
+                        "name": "Night Snorkel Cozumel · 11 gen · 2 adulti",
+                        "cost": "65 USD/persona pubblicizzati; taxi escluso"
                     },
                     {
-                        "name": "El Ultimo Maya · Akumal · 12–16 gen · 4 notti",
-                        "cost": "€169 · CONFERMATO · cancellazione gratuita · pagamento non verificato"
+                        "name": "Chichén Itzá · 13 gen · tour da Akumal",
+                        "cost": "1.300 MXN/persona oppure 75 USD/persona pubblicizzati"
                     },
                     {
-                        "name": "Tren Maya Bacalar → Playa del Carmen + traghetto · 10 gen",
-                        "cost": "Da verificare"
-                    },
-                    {
-                        "name": "Night Snorkel Cozumel · 10 o 11 gen",
-                        "cost": "Da verificare/prenotare"
-                    },
-                    {
-                        "name": "Traghetto Cozumel → Playa + transfer Akumal · 12 gen",
-                        "cost": "Da quotare"
-                    },
-                    {
-                        "name": "Chichén Itzá tour collettivo da Akumal · 13 gen",
-                        "cost": "Da quotare per 2: pubblicizzati 1.300 MXN o 75 USD a persona, ingresso incluso, pickup da confermare"
-                    },
-                    {
-                        "name": "Tour comunitario Muyil / Sian Ka’an · 14 gen",
-                        "cost": "Da quotare per 2 persone: indicati 3.380 MXN a persona + ingresso; verificare alternativa €100/persona e pickup"
-                    },
-                    {
-                        "name": "Akumal → aeroporto CUN · 16 gen",
-                        "cost": "Da prenotare"
+                        "name": "Muyil / Sian Ka’an · 14 gen · 2 adulti",
+                        "cost": "3.380 MXN/persona Midday + ~225 MXN tassa federale (cooperativa); alternativa da quotare"
                     }
                 ]
             },
             "reservations": [
-                {
-                    "name": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano",
-                    "status": "CONFERMATO · NON PAGATO · €300",
-                    "type": "success"
-                },
                 {
                     "name": "Treno Bacalar → Playa + traghetto per Cozumel · 10 gen",
                     "status": "Da verificare/prenotare",
@@ -1786,11 +1513,6 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "El Ultimo Maya · Akumal · 12–16 gen, 4 notti",
-                    "status": "CONFERMATO · €169 · pagamento da verificare",
-                    "type": "success"
-                },
-                {
                     "name": "Tour collettivo Chichén Itzá · 13 gen · 2 operatori da contattare",
                     "status": "Da richiedere prezzo finale e pickup ad Akumal",
                     "type": "warning"
@@ -1804,21 +1526,16 @@ const tripData = {
                     "name": "Transfer Akumal → CUN · 16 gen",
                     "status": "Da organizzare",
                     "type": "warning"
-                },
-                {
-                    "name": "15 gennaio · Akumal",
-                    "status": "Giornata libera / riposo",
-                    "type": "info"
                 }
             ],
             "days": [
                 {
                     "id": "5-jan10",
                     "dayName": "Giorno 21 (10 Gen)",
-                    "title": "Da Bacalar a Cozumel: hotel sul mare confermato",
+                    "title": "Bacalar → Cozumel: traghetto e arrivo sull'isola",
                     "location": "Bacalar → Playa del Carmen → Cozumel",
-                    "shortDesc": "Tren Maya/trasferimento e traghetto da verificare; check-in al Coral Princess prenotato.",
-                    "fullDesc": "<p>Partenza da Bacalar con trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya candidato, orari del 10 gennaio da verificare), taxi al porto e traghetto per <strong>Cozumel</strong>; taxi per l'hotel nella Zona Hotelera Norte. Le traversate dipendono dalle condizioni del mare.</p><p><strong>Coral Princess Hotel & Dive Resort CONFERMATO, NON PAGATO</strong>, 10–12 gennaio 2027, due notti per due adulti in <strong>Camera King Deluxe Fronte Oceano</strong>, <strong>€300</strong>, cancellazione gratuita, senza colazione nella tariffa selezionata. Verificare le condizioni specifiche di cancellazione nella conferma.</p>"
+                    "shortDesc": "Trasferimento via Playa del Carmen e traghetto per Cozumel; orari e biglietti da verificare.",
+                    "fullDesc": "<p>Partenza da Bacalar e trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya come opzione, orari del 10/1/2027 da verificare); taxi al porto, traghetto per Cozumel e taxi per la <strong>Zona Hotelera Norte</strong>. I traghetti possono essere influenzati dal vento.</p><p>La prenotazione dell'alloggio sull'isola è già confermata: dettagli della camera e dell'importo nel riquadro <strong>Alloggi prenotati</strong>.</p>"
                 },
                 {
                     "id": "5-jan11",
@@ -1831,10 +1548,10 @@ const tripData = {
                 {
                     "id": "5-jan12",
                     "dayName": "Giorno 23 (12 Gen)",
-                    "title": "Da Cozumel ad Akumal: El Ultimo Maya confermato",
+                    "title": "Cozumel → Akumal Pueblo: trasferimento alla base finale",
                     "location": "Cozumel → Playa del Carmen → Akumal",
-                    "shortDesc": "Traghetto per Playa del Carmen e transfer ad Akumal Pueblo; check-in El Ultimo Maya 12–16 gennaio già confermato.",
-                    "fullDesc": "<p>Check-out dal Coral Princess, traghetto Cozumel → <strong>Playa del Carmen</strong>, poi trasferimento ad <strong>Akumal Pueblo</strong>. Orari dei traghetti e taxi da verificare.</p><p><strong>El Ultimo Maya CONFERMATO su Booking</strong> per il <strong>12–16 gennaio 2027, 4 notti, 2 adulti, €169</strong>, cancellazione gratuita. L'offerta selezionata mostrava <strong>Camera Deluxe con 2 letti singoli</strong>, aria condizionata, balcone e bagno privato: verificare la categoria nel dettaglio della conferma. <strong>Pagamento non verificato.</strong> La struttura è ad Akumal Pueblo, non direttamente sulla spiaggia; raggiungere la baia mediante percorso pedonale sicuro oppure taxi.</p>"
+                    "shortDesc": "Traghetto Cozumel–Playa del Carmen e transfer ad Akumal Pueblo; hotel già confermato.",
+                    "fullDesc": "<p>Check-out sull'isola e <strong>traghetto per Playa del Carmen</strong>. Poi taxi o transfer per <strong>Akumal Pueblo</strong>, non sulla spiaggia. La sistemazione per le ultime quattro notti è già confermata; si trova vicino ai servizi del pueblo. Organizzare il mezzo dalla fermata o dal porto, senza contare su un pickup automatico.</p>"
                 },
                 {
                     "id": "5-jan13",
@@ -1842,21 +1559,8 @@ const tripData = {
                     "title": "Chichén Itzá: tour collettivo da Akumal",
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
-                    "fullDesc": "<p><strong>13 gennaio · Chichén Itzá</strong>: escursione collettiva A/R da Akumal, con trasporto e guida; El Ultimo Maya ad Akumal Pueblo già prenotato. <strong>NON PRENOTATO</strong>. Chiedere ai due operatori indicati nel riquadro «Tour da contattare» in Caribe un preventivo scritto per <strong>due adulti</strong> che comprenda <strong>pickup presso El Ultimo Maya (o punto di incontro concordato)</strong>, ingresso INAH e imposte per stranieri, guida, programma e prezzo finale. Le offerte pubblicizzate partono da circa <strong>1.300 MXN / 75 USD a persona</strong>, ma non sono preventivi per il 13/01/2027.</p><p>Controllare durata effettiva della visita a Chichén Itzá, eventuali soste commerciali e costi esclusi (bevande o giubbotto al cenote). Niente guida privata né auto a noleggio. Dopo la giornata, ritorno alla stessa base ad Akumal. Il <strong>15 gennaio</strong> resta libero.</p>",
-                    "links": [
-                        {
-                            "text": "🏛️ Chichen Itza Tours · Riviera Maya",
-                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
-                        },
-                        {
-                            "text": "🏛️ Vive Cancún · Chichén económico",
-                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
-                        },
-                        {
-                            "text": "💬 WhatsApp preventivo Vive Cancún",
-                            "url": "https://wa.me/529983531352"
-                        }
-                    ]
+                    "fullDesc": "<p><strong>13 gennaio: Chichén Itzá</strong>, escursione collettiva di un giorno <strong>NON prenotata</strong> dalla base di Akumal. Le due alternative con prezzi, contatti, tasse e domande da porre si trovano nelle schede <strong>«Tour da contattare»</strong>.</p><p>Importante ottenere un preventivo per <strong>2 adulti con tutte le tasse incluse</strong> e il prelievo a El Ultimo Maya (o un punto di raccolta praticabile). Il tour dovrebbe permettere almeno un paio d'ore alle rovine, senza troppe soste commerciali; ritorno nello stesso hotel.</p>",
+                    "links": []
                 },
                 {
                     "id": "5-jan14",
@@ -1864,21 +1568,8 @@ const tripData = {
                     "title": "Muyil e flottazione nei canali di Sian Ka’an",
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
-                    "fullDesc": "<p><strong>14 gennaio · Muyil e canali di Sian Ka’an</strong> da El Ultimo Maya ad Akumal Pueblo: barca sulle lagune e <strong>flottazione nel canale maya</strong> con guida autorizzata. Tour <strong>NON PRENOTATO</strong>. Contattare la <strong>Community Tours Sian Ka’an</strong>, cooperativa locale: il tour Ancient Canal Midday dichiara transfer incluso da Akumal, tariffa 2026 pubblicata <strong>3.380 MXN/persona</strong> più tassa di conservazione (~225 MXN/persona) ed eventuali commissioni. Chiedere costo finale e se comprende il <strong>sito archeologico di Muyil</strong>.</p><p><strong>Alternativa economica da verificare:</strong> Paseo Tours pubblicizza 100 €/persona per i canali, ma non indica pickup da Akumal: chiedere supplemento e disponibilità prima di scegliere. Sul sito principale del viaggio sono salvati entrambi i contatti e le domande da inviare.</p>",
-                    "links": [
-                        {
-                            "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
-                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
-                        },
-                        {
-                            "text": "💬 WhatsApp cooperativa Muyil",
-                            "url": "https://wa.me/529841140750"
-                        },
-                        {
-                            "text": "🌿 Paseo Tours · Muyil Canals",
-                            "url": "https://www.paseotours.com/en/tour-muyil-canals/"
-                        }
-                    ]
+                    "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an</strong>. Obiettivo: visita alle rovine maya, <strong>barca nelle lagune e flottazione nel canale storico</strong>, confermando prima quali elementi siano effettivamente inclusi nella formula scelta. Tour <strong>NON prenotato</strong>.</p><p>Due operatori, costi pubblicizzati, tasse della riserva e condizioni di pickup ad Akumal Pueblo sono riuniti nel riquadro <strong>«Tour da contattare»</strong>, senza duplicare qui le offerte. Il <strong>15 gennaio</strong> resta libero per mare e riposo.</p>",
+                    "links": []
                 },
                 {
                     "id": "5-jan15",
@@ -1886,7 +1577,7 @@ const tripData = {
                     "title": "Akumal: giornata interamente libera",
                     "location": "Akumal · mare e relax",
                     "shortDesc": "Niente tour, niente trasferimenti: giornata di mare e riposo.",
-                    "fullDesc": "<p><strong>15 gennaio:</strong> giornata libera da difendere come <strong>relax totale</strong>. Partenza dall'El Ultimo Maya, ad Akumal Pueblo (non direttamente sul mare): raggiungere la baia con percorso pedonale sicuro o breve taxi e godersi la spiaggia. Dopo Chichén Itzá e Muyil, nessuna altra escursione e nessuna sveglia.</p>"
+                    "fullDesc": "<p><strong>15 gennaio:</strong> un giorno intero senza escursioni. Da <strong>Akumal Pueblo</strong> raggiungere la baia a piedi lungo il percorso sicuro, oppure con un breve taxi, e godersi la spiaggia. Nessuna nuova attività programmata.</p>"
                 },
                 {
                     "id": "5-jan16",
@@ -1894,7 +1585,7 @@ const tripData = {
                     "title": "Ultime ore ad Akumal e volo da Cancún",
                     "location": "Akumal → Cancún Aeroporto",
                     "shortDesc": "Transfer via strada all'aeroporto CUN, volo AF651 delle 21:00.",
-                    "fullDesc": "<p>Check-out dal El Ultimo Maya ad Akumal Pueblo, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
+                    "fullDesc": "<p>Check-out da El Ultimo Maya ad Akumal Pueblo, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
                 },
                 {
                     "id": "5-jan17",
@@ -1914,36 +1605,12 @@ const tripData = {
             },
             "researchNotes": [
                 {
-                    "title": "Coral Princess · CONFERMATO, NON PAGATO, €300",
-                    "body": "Booking conferma 10–12 gennaio 2027 in Camera King Deluxe Fronte Oceano, cancellazione gratuita, importo totale €300; non è un pagamento. Il vecchio dubbio sul prezzo è superato dall'elenco delle prenotazioni. Da prenotare ancora il Night Snorkel Cozumel."
+                    "title": "Spostamento serale per lo snorkeling a Cozumel",
+                    "body": "Night Snorkel Cozumel parte nei pressi di Money Bar, lontano dalla costa nord dove alloggiate. Il tour non comprende il taxi: organizzare andata e ritorno, soprattutto dopo il tramonto."
                 },
                 {
-                    "title": "Attività principale a Cozumel",
-                    "body": "Night Snorkel Cozumel da prenotare, preferibilmente la sera dell'11 gennaio; partenza locale e condizioni marine da confermare. Coral Princess è sul lato nord, Money Bar è a sud: taxi serale da organizzare."
-                },
-                {
-                    "title": "El Ultimo Maya · CONFERMATO 12–16 gennaio · €169",
-                    "body": "El Ultimo Maya ad Akumal Pueblo, 4 notti per 2 adulti, Booking confermato €169 e cancellazione gratuita. L'offerta visualizzata era Camera Deluxe con 2 letti singoli e bagno privato: controllare categoria definitiva nella conferma. L'hotel non è sul mare; verificare strada pedonale fino ad Akumal Bay e il pickup dei tour. Pagamento non verificato."
-                },
-                {
-                    "title": "Spostamenti reali",
-                    "body": "10 gen Bacalar → Playa del Carmen (treno da verificare) + porto + traghetto → Cozumel. 12 gen Cozumel → Playa del Carmen in traghetto + transfer Akumal. 16 gen Akumal → Cancún Aeroporto via strada, senza traghetto."
-                },
-                {
-                    "title": "13 gennaio · Chichén Itzá da Akumal (non prenotato)",
-                    "body": "Chichen Itza Tours Classic Riviera Maya pubblicizza da 75 USD/persona; Vive Cancún Económico da 1.300 MXN/persona. Entrambi da contattare: non è ancora confermato il prelievo al El Ultimo Maya ad Akumal Pueblo né il prezzo definitivo 2027. Chiedere ingresso INAH, tasse per stranieri, eventuali soste commerciali."
-                },
-                {
-                    "title": "14 gennaio · Muyil Sian Ka’an (non prenotato)",
-                    "body": "Community Tours Sian Ka’an Ancient Canal Midday: pickup area Akumal incluso, costo indicato 3.380 MXN/persona + ~225 MXN/persona tassa federale e commissioni; alternativa Paseo Tours da €100/persona con pickup Akumal NON pubblicizzato, quindi supplemento da chiedere. In entrambi: assicurarsi che flottazione, barca e rovine Muyil siano incluse come desiderato."
-                },
-                {
-                    "title": "15 gennaio · giornata libera protetta",
-                    "body": "Isla Contoy eliminata dal programma: giornata di riposo e spiaggia ad Akumal senza escursioni o sveglie. Possibili cambi solo su richiesta."
-                },
-                {
-                    "title": "Altre sistemazioni valutate (non prenotate)",
-                    "body": "Aquatech Villas DeRosa, Las Villas Akumal, Natura Glamping, Camp Akumal, Magic Xcacel e Botånica Tulum erano alternative esaminate. Per il 12–16 gennaio l'hotel confermato è El Ultimo Maya."
+                    "title": "Pickup escursioni ad Akumal Pueblo",
+                    "body": "I tour Chichén Itzá (13/1) e Muyil/Sian Ka’an (14/1) non sono prenotati. Chiedere se il pickup raggiunge El Ultimo Maya o se è previsto un punto di raccolta; prezzi e link dettagliati nelle schede «Tour da contattare»."
                 }
             ],
             "hotelSearches": [],
