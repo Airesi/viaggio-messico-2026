@@ -467,6 +467,36 @@ const tripData = {
                     -99.13
                 ],
                 "zoom": 10
+            },
+            "overview": {
+                "intro": "Tre giornate tra grandi civiltà, quartieri vivaci e canali della capitale.",
+                "highlights": [
+                    {
+                        "icon": "🏛️",
+                        "title": "Teotihuacán e La Gruta",
+                        "detail": "21 dic · città archeologica e pranzo alle 13:00.",
+                        "state": "Pranzo prenotato",
+                        "dayId": "1-1"
+                    },
+                    {
+                        "icon": "🎨",
+                        "title": "Centro e grandi musei",
+                        "detail": "22 dic · Zócalo, Templo Mayor e Antropologia.",
+                        "state": "In programma",
+                        "dayId": "1-2"
+                    },
+                    {
+                        "icon": "🚤",
+                        "title": "Coyoacán e Xochimilco",
+                        "detail": "23 dic · Casa Azul e canali in trajinera.",
+                        "state": "In programma",
+                        "dayId": "1-3"
+                    }
+                ],
+                "tips": [
+                    "Bloccare per tempo l'ingresso alla Casa Azul e verificare gli orari dei musei.",
+                    "La sera del 23 c'è il bus notturno per Oaxaca: prevedere margine per bagagli e terminal."
+                ]
             }
         },
         {
@@ -798,6 +828,43 @@ const tripData = {
                     -96.61
                 ],
                 "zoom": 10
+            },
+            "overview": {
+                "intro": "Archeologia zapoteca, tradizioni oaxaqueñe e tre giorni di trekking comunitario.",
+                "highlights": [
+                    {
+                        "icon": "🏺",
+                        "title": "Monte Albán e Oaxaca",
+                        "detail": "24 dic · rovine zapoteche, centro e mercati.",
+                        "state": "Da organizzare",
+                        "dayId": "2-1"
+                    },
+                    {
+                        "icon": "💧",
+                        "title": "Hierve el Agua",
+                        "detail": "25 dic se aperto, altrimenti recupero il 29.",
+                        "state": "Apertura da verificare",
+                        "dayId": "2-2"
+                    },
+                    {
+                        "icon": "🥾",
+                        "title": "Caminos Reales · Sierra Norte",
+                        "detail": "26–28 dic · 40 km guidati, 2 notti in cabañas.",
+                        "state": "Già pagato",
+                        "dayId": "6-dec26"
+                    },
+                    {
+                        "icon": "🌮",
+                        "title": "Oaxaca con calma",
+                        "detail": "29 dic · mercati, cucina locale o giornata jolly.",
+                        "state": "Flessibile",
+                        "dayId": "6-dec29"
+                    }
+                ],
+                "tips": [
+                    "Confermare l'apertura di Hierve el Agua il 25 dicembre prima di prenotare.",
+                    "Chiedere al Cazomalli il deposito bagagli durante il trekking; il 29 resta flessibile."
+                ]
             }
         },
         {
@@ -942,6 +1009,36 @@ const tripData = {
                     -96.5438
                 ],
                 "zoom": 12
+            },
+            "overview": {
+                "intro": "Quattro notti a ritmo lento tra oceano, tramonti e piccoli villaggi costieri.",
+                "highlights": [
+                    {
+                        "icon": "🌊",
+                        "title": "San Agustinillo e Capodanno",
+                        "detail": "Spiaggia e riposo dopo la Sierra Norte.",
+                        "state": "Soggiorno confermato",
+                        "dayId": "6-dec31-jan02"
+                    },
+                    {
+                        "icon": "🌅",
+                        "title": "Mazunte e Punta Cometa",
+                        "detail": "Passeggiata e tramonto, se il sentiero è praticabile.",
+                        "state": "Facoltativo",
+                        "dayId": "6-dec31-jan02"
+                    },
+                    {
+                        "icon": "🌿",
+                        "title": "La Ventanilla",
+                        "detail": "Mangrovie e natura con guida comunitaria.",
+                        "state": "Facoltativo",
+                        "dayId": "6-dec31-jan02"
+                    }
+                ],
+                "tips": [
+                    "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
+                    "Il 3 gennaio partire verso Pochutla con margine: autobus e coincidenze non sono ancora prenotati."
+                ]
             }
         },
         {
@@ -1029,7 +1126,7 @@ const tripData = {
                     "title": "Da San Agustinillo verso Salina Cruz: la costa di Oaxaca",
                     "location": "San Agustinillo · Pochutla · Salina Cruz",
                     "shortDesc": "Collegamenti indicativi Pochutla → Salina Cruz → Villahermosa; biglietti separati e non prenotati.",
-                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>, poi taxi/colectivo per <strong>San Pedro Pochutla</strong>. Da qui è candidato l'autobus <strong>AltaMar</strong> verso <strong>Salina Cruz</strong>, seguito da un <strong>ADO notturno</strong> per Villahermosa. <strong>Nessun biglietto prenotato.</strong></p><p>Gli orari indicativi, gli indirizzi dei terminal, i prezzi e gli avvisi sulle coincidenze a biglietti separati sono nella scheda <strong>«Dal Pacifico alla giungla»</strong> appena sopra l'itinerario; verificarli prima di acquistare, senza basarsi su una coincidenza non garantita.</p>",
+                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>, poi taxi/colectivo per <strong>San Pedro Pochutla</strong>. Da qui è candidato l'autobus <strong>AltaMar</strong> verso <strong>Salina Cruz</strong>, seguito da un <strong>ADO notturno</strong> per Villahermosa. <strong>Nessun biglietto prenotato.</strong></p><p>Gli orari indicativi, gli indirizzi dei terminal, i prezzi e gli avvisi sulle coincidenze a biglietti separati sono nella scheda <strong>«Dal Pacifico alla giungla»</strong>, dentro <strong>Logistica e spostamenti</strong> nella colonna sotto la mappa; verificarli prima di acquistare, senza basarsi su una coincidenza non garantita.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1062,7 +1159,7 @@ const tripData = {
                     "title": "Da Villahermosa a Palenque: arrivo nella giungla",
                     "location": "Villahermosa · Palenque",
                     "shortDesc": "Arrivo indicativo in autobus a Villahermosa, prosecuzione per Palenque e trasferimento alla struttura.",
-                    "fullDesc": "<p>Arrivo a <strong>Villahermosa</strong> e prosecuzione in autobus per <strong>Palenque</strong>, secondo l'itinerario candidato descritto in <strong>«Dal Pacifico alla giungla»</strong>. Il percorso include potenzialmente un cambio di terminal e non è ancora prenotato.</p><p>All'arrivo a Palenque, raggiungere la struttura confermata lungo la <strong>Carretera Palenque–Ruinas</strong> con un taxi: chiedere deposito bagagli e check-in. Pomeriggio di riposo dopo il viaggio; il 5 gennaio sito archeologico, il 6 cascate.</p>",
+                    "fullDesc": "<p>Arrivo a <strong>Villahermosa</strong> e prosecuzione in autobus per <strong>Palenque</strong>, secondo l'itinerario candidato descritto in <strong>«Dal Pacifico alla giungla»</strong>, nella sezione <strong>Logistica e spostamenti</strong> sotto la mappa. Il percorso include potenzialmente un cambio di terminal e non è ancora prenotato.</p><p>All'arrivo a Palenque, raggiungere la struttura confermata lungo la <strong>Carretera Palenque–Ruinas</strong> con un taxi: chiedere deposito bagagli e check-in. Pomeriggio di riposo dopo il viaggio; il 5 gennaio sito archeologico, il 6 cascate.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1234,7 +1331,31 @@ const tripData = {
                     "title": "Toniná · possibilità da valutare, non inserita nel programma",
                     "body": "Il sito archeologico è stato riaperto a marzo 2026, ma dista circa 118 km da Palenque per tratta. Una visita il 6 gennaio sostituirebbe Roberto Barrios: non aggiungerla senza una decisione. Prima verificare condizioni della strada 199, situazione locale, guida/transfer A/R, tempi e costo; nessuna prenotazione."
                 }
-            ]
+            ],
+            "overview": {
+                "intro": "Due esperienze forti: il sito maya nella foresta e le cascate del Chiapas.",
+                "highlights": [
+                    {
+                        "icon": "🏛️",
+                        "title": "Zona archeologica di Palenque",
+                        "detail": "5 gen · templi maya immersi nella giungla.",
+                        "state": "Da visitare",
+                        "dayId": "3-jan05"
+                    },
+                    {
+                        "icon": "💦",
+                        "title": "Cascadas Roberto Barrios",
+                        "detail": "6 gen · piscine naturali e salti d'acqua.",
+                        "state": "Da organizzare",
+                        "dayId": "3-jan06"
+                    }
+                ],
+                "tips": [
+                    "Arrivare presto al sito archeologico e verificare le aree visitabili.",
+                    "Toniná resta un'alternativa da valutare, non una tappa aggiunta al 6 gennaio.",
+                    "Lungo trasferimento il 3–4 gennaio: controllare orari e terminal prima di acquistare i bus."
+                ]
+            }
         },
         {
             "id": 4,
@@ -1468,7 +1589,38 @@ const tripData = {
                 "zoom": 9
             },
             "researchNotes": [],
-            "hotelSearches": []
+            "hotelSearches": [],
+            "overview": {
+                "intro": "Due giornate senza fretta sulla Laguna dei Sette Colori, tra acqua e natura.",
+                "highlights": [
+                    {
+                        "icon": "💧",
+                        "title": "Laguna dei Sette Colori",
+                        "detail": "8 gen · panorama e accessi alla laguna.",
+                        "state": "In programma",
+                        "dayId": "4-jan08"
+                    },
+                    {
+                        "icon": "🛶",
+                        "title": "Kayak o uscita guidata",
+                        "detail": "Esperienza sull'acqua a basso impatto.",
+                        "state": "Da scegliere",
+                        "dayId": "4-jan08"
+                    },
+                    {
+                        "icon": "🌿",
+                        "title": "Bacalar senza orologio",
+                        "detail": "9 gen · nuoto, riposo o breve giro in barca.",
+                        "state": "Giornata flessibile",
+                        "dayId": "4-jan09"
+                    }
+                ],
+                "tips": [
+                    "L'hotel è in centro, non direttamente sulla laguna: scegliere un accesso consentito.",
+                    "Proteggere gli stromatoliti e verificare chiusure ambientali.",
+                    "Per il 7 gennaio sono ancora da confermare Tren Maya e check-in tardivo."
+                ]
+            }
         },
         {
             "id": 5,
@@ -1738,7 +1890,45 @@ const tripData = {
                     ],
                     "questions": "Per 2 adulti il 14/01/2027: pickup e rientro a El Ultimo Maya, Avenida Gonzalo Guerrero Manzana 6 Lote 3, Akumal Pueblo, prezzo totale per due CON trasporto, ingressi INAH/CONANP, barca, giubbotti e flottazione; confermare se sono comprese le rovine di Muyil, durata e politiche per maltempo."
                 }
-            ]
+            ],
+            "overview": {
+                "intro": "Dall'isola di Cozumel alle ultime giornate ad Akumal: mare, archeologia e natura.",
+                "highlights": [
+                    {
+                        "icon": "🌙",
+                        "title": "Snorkeling notturno a Cozumel",
+                        "detail": "11 gen · uscita guidata proposta al Money Bar.",
+                        "state": "Non prenotato",
+                        "dayId": "5-jan11"
+                    },
+                    {
+                        "icon": "🏛️",
+                        "title": "Chichén Itzá",
+                        "detail": "13 gen · tour collettivo da Akumal.",
+                        "state": "Da prenotare",
+                        "dayId": "5-jan13"
+                    },
+                    {
+                        "icon": "🌿",
+                        "title": "Muyil e Sian Ka’an",
+                        "detail": "14 gen · lagune e flottazione nei canali.",
+                        "state": "Da prenotare",
+                        "dayId": "5-jan14"
+                    },
+                    {
+                        "icon": "🏖️",
+                        "title": "Akumal senza programmi",
+                        "detail": "15 gen · giornata interamente libera al mare.",
+                        "state": "Relax",
+                        "dayId": "5-jan15"
+                    }
+                ],
+                "tips": [
+                    "Per i tour del 13 e 14 verificare il pickup da El Ultimo Maya, ad Akumal Pueblo.",
+                    "Traghetti per Cozumel soggetti al meteo: lasciare margine negli spostamenti.",
+                    "Il 15 gennaio resta libero: niente nuove escursioni."
+                ]
+            }
         }
     ],
     "locations": [
