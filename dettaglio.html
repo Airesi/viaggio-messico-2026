@@ -54,7 +54,7 @@
 
             // Genera Link
             const linksHtml = (selectedDay.links || []).map(link => 
-                `<a href="${link.url}" target="_blank" class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-lg text-sm font-bold hover:bg-emerald-200 transition mb-2 mr-2">${link.text}</a>`
+                `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-lg text-sm font-bold hover:bg-emerald-200 transition mb-2 mr-2">${link.text}</a>`
             ).join('');
 
             // Struttura Base HTML
@@ -68,16 +68,14 @@
                 ${imagesHtml}
 
                 <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Programma della giornata</h3>
-                <p class="text-gray-600 leading-relaxed mb-8">${selectedDay.fullDesc}</p>
+                <div class="text-gray-600 leading-relaxed mb-8 space-y-4">${selectedDay.fullDesc}</div>
                 
                 <!-- MAPPA -->
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Itinerario su Mappa</h3>
                 <div id="map-detail" class="mb-8 border border-gray-200 shadow-inner"></div>
                 
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Risorse Utili</h3>
-                <div class="flex flex-wrap">
-                    ${linksHtml}
-                </div>
+                ${linksHtml ? `<h3 class="text-xl font-bold text-gray-800 mb-3">Risorse utili</h3>
+                <div class="flex flex-wrap">${linksHtml}</div>` : ''}
             `;
 
             // INIZIALIZZAZIONE MAPPA DETTAGLIO
