@@ -52,7 +52,7 @@ function generateContent() {
     
     tripData.areas.forEach(area => {
         
-        // --- COLONNA DESTRA (Logistica + Itinerario) ---
+        // --- COLONNA DESTRA: itinerario e contenuti esperienziali ---
         const contentDiv = document.createElement('div');
         contentDiv.id = `content-area-${area.id}`;
         contentDiv.className = "tab-content p-6 sm:p-8"; // Tolto lo space-y per gestire meglio i margini
@@ -63,76 +63,10 @@ function generateContent() {
             </a>`
         ).join('');
 
-        // 1. LOGISTICA 
-        const basecampHtml = area.basecamp ? `
-            <div class="mb-8">
-                <span class="block text-[11px] font-black text-amber-800 uppercase tracking-widest mb-4">⛺ Logistica Base</span>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Box Dove Dormire: Stile Notte Messicana / Blu Cobalto -->
-                    <div class="bg-blue-950 text-white rounded-2xl p-4 shadow-md relative overflow-hidden border border-blue-900">
-                        <div class="absolute -right-4 -top-4 w-20 h-20 bg-amber-500/20 rounded-full blur-xl"></div>
-                        <span class="text-[9px] uppercase tracking-widest text-amber-400 font-bold block mb-1">Dove Dormire</span>
-                        <h4 class="text-sm font-bold mb-2 relative z-10">${area.basecamp.zone || ''}</h4>
-                        <div class="flex items-center gap-2 mt-3 pt-3 border-t border-white/10 relative z-10">
-                            <span class="text-lg">🛖</span>
-                            <span class="text-[10px] text-blue-100 font-medium leading-tight">${area.basecamp.hotelIdea || ''}</span>
-                        </div>
-                    </div>
-                    <!-- Box Spostamenti -->
-                    <div class="bg-white rounded-2xl p-4 border border-amber-100 shadow-sm">
-                        <span class="text-[9px] uppercase tracking-widest text-amber-700 font-bold block mb-3">Spostamenti</span>
-                        <div class="space-y-3">
-                            ${(area.basecamp.transports || []).slice(0,2).map(t => `
-                                <div class="flex items-center gap-2">
-                                    <div class="w-6 h-6 rounded-md bg-amber-50 flex items-center justify-center text-xs shrink-0">${t.icon}</div>
-                                    <h5 class="text-[11px] font-bold text-gray-700">${t.title}</h5>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    <!-- Box Food: Colore Terracotta / Speziato -->
-                    <div class="bg-orange-50 rounded-2xl p-4 border border-orange-200 shadow-sm flex flex-col justify-center">
-                        <span class="text-[9px] uppercase tracking-widest text-orange-600 font-bold block mb-2">🌮 Food & Sapori</span>
-                        <p class="text-[11px] text-orange-950 font-medium leading-snug line-clamp-3">${area.food || ''}</p>
-                    </div>
-                </div>
-            </div>
-        ` : '';
 
-
-        // Timeline del trasferimento (solo per le tappe con transferPlan)
-        const transferHtml = area.transferPlan ? `
-            <section class="mb-8 rounded-[1.5rem] border border-amber-200/80 overflow-hidden bg-amber-50/40 shadow-sm">
-                <div class="bg-blue-950 text-white px-5 py-4">
-                    <span class="text-[10px] uppercase tracking-widest text-amber-300 font-black">${area.transferPlan.eyebrow}</span>
-                    <h3 class="text-base font-extrabold mt-1">${area.transferPlan.title}</h3>
-                    <p class="text-xs text-blue-100 mt-1">${area.transferPlan.subtitle}</p>
-                </div>
-                <div class="p-5">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">${area.transferPlan.cost.toLowerCase().includes('già pagato') ? '✅ Già pagato' : '💸 Budget stimato'}</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.cost}</p></div>
-                        <div class="bg-white rounded-xl border border-amber-100 p-3"><span class="block text-[10px] uppercase text-amber-700 font-extrabold mb-1">🕒 Durata</span><p class="text-xs font-bold text-gray-800">${area.transferPlan.duration}</p></div>
-                    </div>
-                    <div class="space-y-3">
-                        ${area.transferPlan.legs.map((leg, i) => `
-                            <div class="bg-white border border-gray-200 rounded-xl p-3">
-                                <div class="flex items-center justify-between gap-2 mb-1"><span class="text-[10px] font-black text-emerald-700 uppercase">${i+1}. ${leg.day}</span><span class="text-xs font-black text-gray-800">${leg.time}</span></div>
-                                <div class="text-sm font-extrabold text-gray-900">${leg.from} <span class="text-amber-700">→</span> ${leg.to}</div>
-                                <div class="flex justify-between flex-wrap gap-1 mt-1 text-[11px] text-gray-600"><span>${leg.operator} · ${leg.duration}</span><strong>${leg.price}</strong></div>
-                                <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">${leg.note}</p>
-                            </div>
-                        `).join("")}
-                    </div>
-                    <p class="text-xs text-amber-950 bg-amber-100/70 rounded-xl p-3 mt-4 leading-relaxed"><strong>⚠️ Prima di prenotare:</strong> ${area.transferPlan.warning}</p>
-                    <div class="flex flex-wrap gap-3 mt-4">${area.transferPlan.sources.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-emerald-800 underline">${link.text} ↗</a>`).join("")}</div>
-                </div>
-            </section>
-        ` : '';
-
-
-        // Booking confermati in questa macro-tappa (hotel confermati non significa hotel già pagati).
-        const allHotelBookings = tripData.general.hotelBookings;
-        const areaBookings = (allHotelBookings?.items || []).filter(stay => stay.areaId === area.id);
+        // Schede della logistica concentrate nel pannello della colonna sinistra:
+        // panoramica compatta, collegamenti e dettagli disponibili soltanto su richiesta.
+        const areaBookings = (tripData.general.hotelBookings?.items || []).filter(stay => stay.areaId === area.id);
         const dateShort = iso => iso.slice(8, 10) + '/' + iso.slice(5, 7);
         // Risorsa dedicata al trekking pagato 26–28 dicembre nella Sierra Norte.
         // Compare solo nella scheda Oaxaca e Sierra: la pagina è separata dalle giornate.
@@ -151,47 +85,130 @@ function generateContent() {
             </a>
         ` : '';
 
-        // Soggiorni in tappa: elenco compatto; dettagli e pagamenti nel riepilogo centrale.
-        const hotelSummaryHtml = areaBookings.length ? `
-            <section class="mb-6 rounded-2xl border border-gray-200 bg-gray-50/80 px-5 py-4">
-                <div class="flex flex-wrap items-center justify-between gap-3">
-                    <div class="min-w-0">
-                        <span class="block text-[10px] uppercase tracking-widest font-black text-amber-800">🏨 Alloggi confermati in questa tappa</span>
-                        <p class="text-xs text-gray-700 mt-2 leading-relaxed">${areaBookings.map(stay =>
-                            `${stay.name} (${dateShort(stay.checkin)}–${dateShort(stay.checkout)})`
-                        ).join(" · ")}</p>
-                    </div>
-                    <button type="button" onclick="toggleHotelCostsModal()" class="shrink-0 text-xs font-black text-emerald-800 underline hover:text-emerald-950">Dettagli, costi e pagamenti ↗</button>
-                </div>
-            </section>
-        ` : '';
-        // Ricerche Booking: date precompilate, sempre NON prenotate.
-        const hotelResearchHtml = ((area.hotelSearches || []).length || (area.researchNotes || []).length) ? `
-            <section class="mb-8 rounded-[1.5rem] overflow-hidden border border-teal-200 bg-teal-50/40 shadow-sm">
-                <div class="px-5 py-4 bg-teal-900 text-white">
-                    <span class="block text-[10px] uppercase tracking-widest font-black text-teal-200">${(area.hotelSearches || []).length ? "🔎 Alloggi da ricercare" : "📌 Promemoria logistici"}</span>
-                    <h3 class="text-base font-extrabold mt-1">${(area.hotelSearches || []).length ? "Ricerche Booking e considerazioni salvate" : "Considerazioni e verifiche da completare"}</h3>
-                    <p class="text-[11px] text-teal-100 mt-1">${(area.hotelSearches || []).length ? "2 adulti · ricerche con date precompilate · strutture NON prenotate" : "Alloggio confermato · promemoria e questioni ancora aperte"}</p>
-                </div>
-                <div class="p-4 sm:p-5 space-y-4">
-                    ${(area.hotelSearches || []).length ? `
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            ${area.hotelSearches.map(s => {
-                                const p = new URLSearchParams({ss:s.ss,checkin:s.checkin,checkout:s.checkout,group_adults:'2',no_rooms:'1',group_children:'0'});
-                                return `<a href="https://www.booking.com/searchresults.it.html?${p.toString()}" target="_blank" rel="noopener noreferrer" class="block p-3 rounded-xl border border-teal-200 bg-white hover:border-teal-500 hover:shadow-sm transition">
-                                    <strong class="block text-xs text-teal-950">↗ ${s.label}</strong>
-                                    <span class="block text-[10px] font-bold text-teal-700 mt-1">${s.checkin.slice(8,10)}/${s.checkin.slice(5,7)} → ${s.checkout.slice(8,10)}/${s.checkout.slice(5,7)}</span>
-                                    <span class="block mt-1.5 text-[11px] leading-relaxed text-gray-600">${s.note}</span>
-                                </a>`;
-                            }).join('')}
+
+        const hasLogistics = !!(area.basecamp || area.transferPlan || areaBookings.length ||
+            (area.researchNotes || []).length || (area.hotelSearches || []).length || area.food);
+        const sidebarLogisticsHtml = hasLogistics ? `
+            <section class="rounded-[1.5rem] border border-amber-200/70 bg-white shadow-sm overflow-hidden">
+                <button type="button" onclick="toggleCollapse('logistics-collapse-${area.id}', this)"
+                    aria-controls="logistics-collapse-${area.id}" aria-expanded="false"
+                    class="w-full p-4 text-left flex items-center gap-3 group hover:bg-amber-50/60 transition-colors">
+                    <span class="w-10 h-10 shrink-0 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-xl">🧭</span>
+                    <span class="min-w-0 flex-1">
+                        <strong class="block text-sm font-extrabold text-slate-900">Logistica e spostamenti</strong>
+                        <span class="block text-[11px] text-gray-600 mt-1 leading-snug line-clamp-2">
+                            ${area.transferPlan ? area.transferPlan.title : (area.basecamp?.zone || 'Alloggi, trasporti e note utili')}
+                        </span>
+                        <span class="block text-[10px] font-bold mt-1.5 ${area.transferPlan ? 'text-amber-700' : 'text-emerald-700'}">
+                            ${area.transferPlan ? '⚠️ Collegamenti da verificare' : '📍 Promemoria della tappa'}
+                            ${areaBookings.length ? ' · 🏨 ' + areaBookings.length + (areaBookings.length === 1 ? ' soggiorno' : ' soggiorni') : ''}
+                        </span>
+                    </span>
+                    <span class="toggle-icon shrink-0 text-slate-500 flex items-center justify-center w-7 h-7 rounded-full bg-gray-50 border border-gray-200">
+                        <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m6 9 6 6 6-6"></path></svg>
+                    </span>
+                </button>
+                <div id="logistics-collapse-${area.id}" class="hidden border-t border-amber-100 bg-amber-50/20 p-3 sm:p-4 space-y-3">
+                    ${areaBookings.length ? `
+                        <div class="rounded-xl bg-white border border-gray-200 p-3">
+                            <span class="block text-[10px] font-black text-blue-900 uppercase tracking-wide mb-2">🏨 Alloggio confermato</span>
+                            ${areaBookings.map(stay => `
+                                <p class="text-xs leading-snug text-slate-900 font-semibold mb-1">${stay.name}</p>
+                                <p class="text-[10px] text-gray-500 mb-2">${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · pagamento da verificare</p>
+                            `).join('')}
+                            <button type="button" onclick="toggleHotelCostsModal()" class="text-[11px] text-emerald-800 font-black underline hover:text-emerald-950">Hotel & costi ↗</button>
                         </div>
                     ` : ''}
-                    ${(area.researchNotes || []).length ? `
-                        <details class="bg-white border border-gray-200 rounded-xl p-4" open>
-                            <summary class="text-xs font-extrabold text-gray-800 cursor-pointer">📌 Verifiche operative da completare</summary>
-                            <div class="mt-3 space-y-3">
-                                ${area.researchNotes.map(n => `<div class="border-l-2 border-amber-400 pl-3"><strong class="block text-xs text-gray-800">${n.title}</strong><p class="text-[11px] text-gray-600 mt-1 leading-relaxed">${n.body}</p></div>`).join('')}
+                    ${area.basecamp ? `
+                        <div class="rounded-xl bg-white border border-gray-200 p-3 space-y-1">
+                            <p class="text-[11px] font-black text-slate-800">📍 ${area.basecamp.zone || 'Base della tappa'}</p>
+                            <p class="text-[11px] leading-relaxed text-slate-600">${area.basecamp.hotelIdea || area.basecamp.why || ''}</p>
+                            ${area.basecamp.why ? `<details class="pt-1"><summary class="text-[10px] text-emerald-800 font-semibold cursor-pointer">Indicazioni pratiche</summary><p class="text-[11px] leading-relaxed text-slate-600 mt-2">${area.basecamp.why}</p></details>` : ''}
+                        </div>
+                    ` : ''}
+                    ${area.transferPlan ? `
+                        <details class="rounded-xl bg-white border border-amber-200 overflow-hidden">
+                            <summary class="cursor-pointer p-3 hover:bg-amber-50/70">
+                                <span class="block text-xs font-extrabold text-slate-900">🚌 ${area.transferPlan.title}</span>
+                                <span class="block text-[10px] text-amber-800 mt-1">${area.transferPlan.eyebrow} · ${area.transferPlan.legs.length} tratte</span>
+                                <span class="block text-[11px] text-gray-600 leading-snug mt-1">${area.transferPlan.subtitle}</span>
+                            </summary>
+                            <div class="border-t border-amber-100 p-3 space-y-3">
+                                <div class="text-[11px] leading-relaxed bg-amber-50 rounded-lg px-3 py-2">
+                                    <strong class="text-amber-950">💶 ${area.transferPlan.cost}</strong>
+                                    <span class="block text-gray-600 mt-1">🕒 ${area.transferPlan.duration}</span>
+                                </div>
+                                <ol class="space-y-2">
+                                    ${area.transferPlan.legs.map((leg, i) => `
+                                        <li>
+                                            <details class="rounded-lg border border-gray-200 bg-white overflow-hidden">
+                                                <summary class="cursor-pointer p-3 hover:bg-gray-50">
+                                                    <span class="flex flex-wrap items-baseline justify-between gap-1">
+                                                        <strong class="text-[11px] text-emerald-900">${i+1}. ${leg.day}</strong>
+                                                        <span class="text-[10px] text-gray-500">${leg.time}</span>
+                                                    </span>
+                                                    <span class="block mt-1 text-xs font-semibold leading-snug text-gray-800">${leg.from} → ${leg.to}</span>
+                                                    <span class="block text-[10px] leading-snug text-gray-500 mt-1">${leg.operator} · ${leg.duration}</span>
+                                                </summary>
+                                                <div class="px-3 pb-3 border-t border-gray-100 pt-2">
+                                                    <p class="text-[11px] font-bold text-amber-900">${leg.price}</p>
+                                                    <p class="text-[11px] mt-2 leading-relaxed text-gray-600">${leg.note}</p>
+                                                </div>
+                                            </details>
+                                        </li>
+                                    `).join('')}
+                                </ol>
+                                <div class="bg-amber-50 border border-amber-100 rounded-lg p-3 text-[11px] leading-relaxed text-amber-950">
+                                    <strong>⚠️ Prima di prenotare:</strong> ${area.transferPlan.warning}
+                                </div>
+                                <div class="flex flex-wrap gap-x-3 gap-y-2">
+                                    ${(area.transferPlan.sources || []).map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-emerald-900 underline">↗ ${link.text}</a>`).join('')}
+                                </div>
                             </div>
+                        </details>
+                    ` : ''}
+                    ${(area.basecamp?.transports || []).length ? `
+                        <details class="rounded-xl bg-white border border-gray-200 p-3">
+                            <summary class="cursor-pointer text-xs font-bold text-slate-900">🚕 Spostamenti locali e suggerimenti</summary>
+                            <div class="mt-3 space-y-3">
+                                ${area.basecamp.transports.map(t => `
+                                    <div class="text-[11px] leading-relaxed border-l-2 border-amber-300 pl-3">
+                                        <strong class="block text-slate-800">${t.icon} ${t.title}</strong>
+                                        <p class="text-gray-600 mt-1">${t.desc || ''}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </details>
+                    ` : ''}
+                    ${(area.researchNotes || []).length ? `
+                        <details class="rounded-xl bg-white border border-gray-200 p-3">
+                            <summary class="cursor-pointer text-xs font-bold text-slate-900">📌 Promemoria e possibilità da valutare (${area.researchNotes.length})</summary>
+                            <div class="mt-3 space-y-3">
+                                ${area.researchNotes.map(n => `
+                                    <div class="text-[11px] leading-relaxed border-l-2 border-amber-300 pl-3">
+                                        <strong class="block text-gray-900">${n.title}</strong>
+                                        <p class="mt-1 text-gray-600">${n.body}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </details>
+                    ` : ''}
+                    ${(area.hotelSearches || []).length ? `
+                        <details class="rounded-xl bg-white border border-gray-200 p-3">
+                            <summary class="cursor-pointer text-xs font-bold text-slate-900">🔎 Ricerche alloggi non prenotati</summary>
+                            <div class="mt-3 space-y-2">
+                                ${area.hotelSearches.map(s => `
+                                    <a href="https://www.booking.com/searchresults.it.html?${new URLSearchParams({ss:s.ss,checkin:s.checkin,checkout:s.checkout,group_adults:'2',no_rooms:'1',group_children:'0'}).toString()}" target="_blank" rel="noopener noreferrer" class="block rounded-lg bg-amber-50 p-3 text-[11px] text-emerald-900">
+                                        <strong class="block">${s.label} ↗</strong><span class="block mt-1 text-gray-600">${s.note}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        </details>
+                    ` : ''}
+                    ${area.food ? `
+                        <details class="rounded-xl bg-white border border-gray-200 p-3">
+                            <summary class="cursor-pointer text-xs font-bold text-slate-900">🌮 Pasti e consigli sul posto</summary>
+                            <p class="mt-2 text-[11px] leading-relaxed text-gray-600">${area.food}</p>
                         </details>
                     ` : ''}
                 </div>
@@ -281,12 +298,8 @@ function generateContent() {
         }
 
         contentDiv.innerHTML = `
-            ${basecampHtml}
             ${sierraGuideHtml}
-            ${hotelSummaryHtml}
-            ${hotelResearchHtml}
             ${tourContactsHtml}
-            ${transferHtml}
             ${daysHtml}
             ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
                 <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Altre risorse:</span>
@@ -295,10 +308,11 @@ function generateContent() {
         `;
         contentContainer.appendChild(contentDiv);
 
-        // --- COLONNA SINISTRA (Wallet Collapsable sotto la mappa) ---
+        // --- COLONNA SINISTRA: logistica compatta e wallet sotto la mappa ---
         const walletDiv = document.createElement('div');
         walletDiv.id = `wallet-area-${area.id}`;
-        walletDiv.className = "wallet-content hidden"; // Nascosto di base per il routing
+        walletDiv.className = "wallet-content hidden space-y-3"; // Nascosto di base per il routing
+        walletDiv.innerHTML = sidebarLogisticsHtml; // Logistica discreta, prima del wallet
 
         if (area.budget || (area.reservations && area.reservations.length > 0)) {
             let resList = '';
@@ -323,7 +337,7 @@ function generateContent() {
                 `).join('');
             }
 
-            walletDiv.innerHTML = `
+            walletDiv.innerHTML += `
             <div class="border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all">
                 <button onclick="toggleCollapse('wallet-collapse-${area.id}', this)" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
                     <div class="flex items-center gap-4">
@@ -490,15 +504,11 @@ function switchArea(areaId) {
 
 function toggleCollapse(containerId, btn) {
     const container = document.getElementById(containerId);
-    const icon = btn.querySelector('.toggle-icon svg');
-    
-    if (container.classList.contains('hidden')) {
-        container.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-    } else {
-        container.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-    }
+    if (!container) return;
+    const opening = container.classList.contains('hidden');
+    container.classList.toggle('hidden', !opening);
+    btn?.setAttribute('aria-expanded', String(opening));
+    btn?.querySelector('.toggle-icon svg')?.classList.toggle('rotate-180', opening);
 }
 
 function initMap() {
