@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261016-design-phase2-1">
 </head>
-<body class="bg-gradient-to-br from-amber-50 via-orange-50/40 to-rose-50/50 min-h-screen text-gray-800 font-sans p-4 sm:p-6 relative overflow-x-hidden">
+<body class="trip-site bg-gradient-to-br from-amber-50 via-orange-50/40 to-rose-50/50 min-h-screen text-gray-800 font-sans p-3 sm:p-6 relative overflow-x-hidden">
 
     <!-- CANVAS DISABILITATO: animazione commentata in js/main.js.
     <canvas id="cempasuchil-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
@@ -143,12 +143,12 @@
 </header>
 
         <!-- Navigazione Dinamica -->
-        <div id="nav-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+        <div id="nav-container" class="trip-nav grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
             <!-- I bottoni verranno generati dal JS -->
         </div>
 
         <!-- HERO FOTOGRAFICA EDITORIALE -->
-        <div class="mb-8 relative w-full group">
+        <div class="trip-hero mb-6 sm:mb-8 relative w-full group">
 
             <div class="
                 relative overflow-hidden
@@ -229,14 +229,14 @@
         </div>
 
         <!-- Layout Principale a due colonne -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="trip-region-layout grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-start">
             
-            <!-- COLONNA SINISTRA: Mappa + Wallet (Unificati in una sola Card Glass) -->
-            <div class="lg:col-span-5 h-fit">
-                <div class="bg-white/80 backdrop-blur-md rounded-[2.5rem] shadow-xl border border-white/60 p-6 flex flex-col gap-6">
+            <!-- Colonna secondaria: mappa, logistica e spese (seconda su mobile) -->
+            <div class="trip-sidebar-column order-2 lg:order-1 lg:col-span-4 h-fit">
+                <div class="trip-side-shell bg-white/80 backdrop-blur-md rounded-[1.75rem] shadow-md border border-white/60 p-4 sm:p-5 flex flex-col gap-4 sm:gap-5">
                     
                     <!-- Sezione Mappa -->
-                    <div class="flex flex-col h-[350px]">
+                    <div class="trip-map-block flex flex-col h-[305px]">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 border border-teal-100 shadow-sm">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
@@ -246,7 +246,7 @@
                                 <p class="text-[10px] text-gray-500 font-medium mt-0.5">Sincronizzata con l'area</p>
                             </div>
                         </div>
-                        <div id="map" class="w-full flex-grow rounded-2xl shadow-inner border border-gray-200/80 z-10"></div>
+                        <div id="map" class="trip-map w-full flex-grow rounded-xl border border-gray-200/80 z-10"></div>
                     </div>
 
                     <hr class="border-gray-200/60">
@@ -259,12 +259,12 @@
                 </div>
             </div>
 
-            <!-- COLONNA DESTRA: Itinerario e Logistica -->
-            <div class="lg:col-span-7 bg-white/90 backdrop-blur-sm rounded-[2.5rem] shadow-xl overflow-hidden border border-white/60 flex flex-col justify-between">
-                <div id="content-container">
+            <!-- Esperienze e itinerario (prima su mobile) -->
+            <div class="trip-main-column order-1 lg:order-2 lg:col-span-8 bg-transparent rounded-[1.75rem] flex flex-col min-w-0">
+                <div id="content-container" class="trip-main-content">
                     <!-- Il contenuto verrà generato dal JS -->
                 </div>
-                <div class="px-8 py-5 bg-white/50 border-t border-gray-100/60 flex justify-between items-center text-xs text-gray-500 mt-auto">
+                <div class="trip-region-footer px-3 sm:px-5 py-4 flex justify-between items-center text-xs text-gray-500">
                     <span id="footer-trip-name"></span>
                     <span id="footer-trip-season" class="font-bold text-amber-600"></span>
                 </div>
@@ -274,7 +274,7 @@
     </div>
 
     <script src="js/data.js?v=20261016-content-review-1"></script>
-    <script src="js/main.js?v=20261016-nav-collapse-1"></script>
+    <script src="js/main.js?v=20261016-design-phase2-1"></script>
 
     <!-- Modale Voli -->
     <div id="flight-modal-container"></div>
