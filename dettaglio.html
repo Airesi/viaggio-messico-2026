@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettaglio Giorno</title>
+    <title>Messico · Dettaglio giornata</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css?v=20261016-design-phase2-1">
     <!-- Leaflet CSS & JS per la Mappa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <style>
         /* Stile specifico per la mappa del dettaglio */
-        #map-detail { height: 350px; width: 100%; border-radius: 0.75rem; z-index: 10; }
+        #map-detail { height: 310px; width: 100%; border-radius: 1rem; z-index: 10; }
+        @media (max-width: 640px) { #map-detail { height: 250px; } }
     </style>
 </head>
-<body class="bg-gray-50 font-sans p-4 sm:p-8">
+<body class="trip-day-page font-sans p-3 sm:p-8">
 
-    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+    <main class="trip-day-shell max-w-4xl mx-auto bg-white rounded-[1.75rem] shadow-lg overflow-hidden border border-amber-100">
         <!-- Bottone Indietro -->
-        <div class="p-4 border-b border-gray-100 bg-emerald-50">
+        <div class="trip-day-topbar p-4 sm:px-8 border-b border-amber-100 bg-amber-50/60">
             <a href="index.html" class="text-emerald-700 text-sm font-bold hover:underline flex items-center gap-1">
                 <span>←</span> Torna all'Itinerario
             </a>
         </div>
 
-        <div class="p-6 sm:p-8" id="day-content">
+        <div class="trip-day-content p-5 sm:p-9" id="day-content">
             <!-- Contenuto in attesa di JS -->
             <p class="text-gray-500">Caricamento dettagli...</p>
         </div>
-    </div>
+    </main>
 
     <!-- Dati e Logica -->
     <script src="js/data.js?v=20261016-content-review-1"></script>
@@ -49,7 +51,7 @@
             
             // Genera Immagini
             const imagesHtml = (selectedDay.images || []).map(img => 
-                `<img src="${img}" class="w-full h-48 sm:h-64 object-cover rounded-xl shadow-sm mb-4">`
+                `<img src="${img}" alt="Luogo della tappa: ${selectedDay.title}" loading="lazy" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-4">`
             ).join('');
 
             // Genera Link
@@ -63,12 +65,12 @@
                     <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase">${selectedDay.dayName}</span>
                     <span class="text-gray-400 text-sm font-medium">📍 ${selectedDay.location}</span>
                 </div>
-                <h1 class="text-3xl font-extrabold text-gray-900 mb-6">${selectedDay.title}</h1>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-emerald-950 leading-tight mb-6">${selectedDay.title}</h1>
                 
                 ${imagesHtml}
 
-                <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Programma della giornata</h3>
-                <div class="text-gray-600 leading-relaxed mb-8 space-y-4">${selectedDay.fullDesc}</div>
+                <h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mt-6 mb-3">Programma della giornata</h2>
+                <div class="trip-day-prose text-gray-700 leading-relaxed mb-8 space-y-4">${selectedDay.fullDesc}</div>
 
                 ${(selectedDay.operationalNotes || []).length ? `
                     <section class="mb-8 border-l-4 border-amber-400 rounded-r-xl bg-amber-50 p-4 sm:p-5">
@@ -80,10 +82,10 @@
                 ` : ''}
                 
                 <!-- MAPPA -->
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Itinerario su Mappa</h3>
+                <h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mb-3">Itinerario su mappa</h2>
                 <div id="map-detail" class="mb-8 border border-gray-200 shadow-inner"></div>
                 
-                ${linksHtml ? `<h3 class="text-xl font-bold text-gray-800 mb-3">Risorse utili</h3>
+                ${linksHtml ? `<h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mb-3">Risorse utili</h2>
                 <div class="flex flex-wrap">${linksHtml}</div>` : ''}
             `;
 
