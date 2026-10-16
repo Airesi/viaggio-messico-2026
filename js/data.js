@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// Fonte unica alloggi: general.hotelBookings; esperienze e trasporti separati.
+// Soggiorni Booking confermati; obiettivo viaggio all-inclusive €10.000 per 2 adulti.
 
 const tripData = {
     "general": {
@@ -104,6 +104,23 @@ const tripData = {
                     "areaId": 5
                 }
             ]
+        },
+        "budget": {
+            "capEuro": 10000,
+            "people": 2,
+            "includes": [
+                "voli internazionali",
+                "hotel e trekking",
+                "spostamenti interni",
+                "tour e ingressi",
+                "pasti",
+                "attrezzatura",
+                "souvenir",
+                "valigia e bagagli extra",
+                "imprevisti"
+            ],
+            "confirmedFlightsEuro": null,
+            "note": "Il prezzo effettivo dei voli Air France per due persone non è presente nel sito: non calcolare un saldo certo finché manca."
         }
     },
     "areas": [
@@ -573,7 +590,7 @@ const tripData = {
                     "title": "Caminos Reales I: Las Minas e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
                     "shortDesc": "08:00 partenza da Oaxaca; 10:00 Las Minas, 12 km in 4 ore, pranzo con trota, sala dei codici e prima notte in cabaña.",
-                    "fullDesc": "<p><strong>Primo giorno del trekking Caminos Reales, già pagato</strong> (programma ufficiale e preparazione nella guida dedicata). <strong>08:00</strong> trasferimento da Oaxaca verso <strong>San Miguel Amatlán</strong>, con punto di incontro da confermare sul voucher/organizzatore.</p><p><strong>10:00</strong> inizio della camminata sul percorso <strong>Las Minas</strong>: <strong>12 km, circa 4 ore</strong>. Alle <strong>14:00</strong> pranzo con trota. <strong>17:00</strong> visita alla sala dei codici e delle antichità; <strong>19:00</strong> cena tipica; <strong>20:00</strong> pernottamento nella <strong>cabaña doppia di San Miguel Amatlán</strong>.</p><p><strong>Incluso nel pacchetto:</strong> transfer di andata e ritorno da Oaxaca, pasti nella Sierra Norte, guide locali, accessi alle comunità, attività indicate e assicurazione. La guida parla spagnolo. Portare scarpe adatte e strati caldi: le comunità si trovano fra 2.000 e 3.100 m.</p>",
+                    "fullDesc": "<p><strong>26 dicembre · Las Minas e San Miguel Amatlán.</strong> Transfer da Oaxaca alle <strong>08:00</strong> (punto di ritrovo da verificare sul voucher), poi trekking di <strong>12 km / circa 4 ore</strong>. Pranzo con trota, visita alla sala dei codici e prima notte nella cabaña doppia di Amatlán.</p><p>Orari e attività completi sono già nella scheda <strong>«Caminos Reales»</strong> in questa sezione; per abbigliamento, checklist e condizioni consulta la <a href='sierra-norte.html'>guida Sierra Norte</a>. Il pacchetto è già pagato.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -606,16 +623,11 @@ const tripData = {
                     "title": "Caminos Reales II: Lachatao → Latuvi",
                     "location": "Camino Real da Lachatao a Santa Marta Latuvi",
                     "shortDesc": "08:00 colazione; 09:00 partenza trekking 16 km / 5–6 ore; pomeriggio con laboratorio di pulque e tepache e notte a Latuvi.",
-                    "fullDesc": "<p><strong>Secondo giorno del trekking, domenica 27 dicembre.</strong> <strong>08:00</strong> colazione e <strong>09:00</strong> inizio della camminata sul <strong>Camino Real da Lachatao a Santa Marta Latuvi</strong>, attraverso boschi e antichi sentieri zapotechi: <strong>16 km, 5–6 ore</strong> secondo il voucher.</p><p><strong>15:00</strong> pranzo; <strong>16:00</strong> laboratorio di <strong>pulque e tepache</strong>; <strong>19:00</strong> cena, poi <strong>20:00</strong> sistemazione nella <strong>cabaña doppia di Latuvi</strong> (seconda notte inclusa nel prezzo). Sequenza delle attività dipendente dalle condizioni meteo e dalle disposizioni della guida.</p>",
+                    "fullDesc": "<p><strong>27 dicembre · Lachatao → Santa Marta Latuvi.</strong> È la tappa più lunga, <strong>16 km / 5–6 ore</strong> secondo il voucher. Nel pomeriggio laboratorio di <strong>pulque e tepache</strong>, cena e seconda notte nella cabaña di Latuvi.</p><p>Orari dettagliati e inclusioni nella scheda <strong>«Caminos Reales»</strong>. Il programma può variare per meteo e indicazioni della guida locale.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🎒 Guida e checklist Sierra Norte",
-                            "url": "sierra-norte.html"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "San Miguel Amatlán · Pueblos Mancomunados",
@@ -639,16 +651,11 @@ const tripData = {
                     "title": "Caminos Reales III: Benito Juárez e ritorno a Oaxaca",
                     "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
                     "shortDesc": "Tappa finale di 12 km / circa 4 ore e mezza via mirador e ponte sospeso; pranzo alle 14:30 e rientro a Oaxaca dalle 16:00.",
-                    "fullDesc": "<p><strong>Lunedì 28 dicembre:</strong> terzo e ultimo giorno del pacchetto <strong>già pagato</strong>. Alle <strong>08:00</strong> colazione; alle <strong>09:00</strong> partenza per la camminata <strong>Latuvi → Benito Juárez</strong> passando dal <strong>mirador</strong> e dal <strong>ponte sospeso</strong>: <strong>12 km, circa 4 ore e mezza</strong>.</p><p><strong>14:30</strong> pranzo; dalle <strong>16:00</strong> ritorno organizzato verso <strong>Oaxaca de Juárez</strong> (ora esatta di arrivo da verificare). La notte del <strong>28 dicembre si dorme a Oaxaca nell'Hotel Cazomalli, già prenotato dal 28 al 30 dicembre per due persone (€ 232, cancellazione gratuita)</strong>, non nella Sierra: le due notti in cabaña incluse nel voucher sono quelle del 26 e del 27.</p><p><strong>Totale trekking: 40 km in 3 giorni.</strong> Rientro, cena e riposo, senza ulteriori escursioni. Il 29 dicembre resta volutamente libero.</p>",
+                    "fullDesc": "<p><strong>28 dicembre · Latuvi → Benito Juárez.</strong> Ultima camminata di <strong>12 km</strong> via mirador e ponte sospeso; dopo pranzo, trasferimento organizzato di ritorno a Oaxaca <strong>dalle 16:00</strong>, orario d'arrivo da confermare.</p><p>Totale: <strong>40 km in 3 giorni e 2 notti in cabañas</strong>. La notte del 28 si dorme già all'Hotel Cazomalli, prenotato; il 29 resta libero. Orari completi nella scheda <strong>«Caminos Reales»</strong>.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
-                    "links": [
-                        {
-                            "text": "🎒 Guida e checklist Sierra Norte",
-                            "url": "sierra-norte.html"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Santa Marta Latuvi",
@@ -679,7 +686,7 @@ const tripData = {
                     "title": "Oaxaca jolly: recupero Hierve el Agua oppure riposo",
                     "location": "Oaxaca · Hierve el Agua / Mitla (opzionali)",
                     "shortDesc": "Giornata flessibile dopo 40 km di trekking: recupero dell'escursione di Natale, oppure mercati, cucina e riposo prima della costa.",
-                    "fullDesc": "<p><strong>Il 29 dicembre è una giornata libera a Oaxaca, subito dopo il trekking pagato 26–28.</strong> Se il tour di <strong>Hierve el Agua</strong> non fosse stato disponibile a Natale, questa è la <strong>prima alternativa</strong> per recuperarlo, eventualmente abbinandolo a <strong>Mitla</strong>, all'<strong>Árbol del Tule</strong> o a un palenque di mezcal, ma soltanto se orari e forze lo permettono.</p><p><strong>Alternativa relax:</strong> se siamo riusciti a vedere Hierve el Agua il 25, o siamo stanchi dopo <strong>40 km in tre giorni</strong>, passeggiata per Santo Domingo, mercati, Jalatlaco, pausa gastronomica e serata tranquilla. Nessuna escursione obbligatoria: la mattina del <strong>30 dicembre</strong> scendiamo verso San Agustinillo per quattro notti al Pacifico.</p><p><strong>Logistica:</strong> notte del 28 già a Oaxaca dopo il rientro dal tour; anche la notte del <strong>29</strong> è in città. <strong>Le notti del 28 e 29 dicembre sono già prenotate presso Hotel Cazomalli Oaxaca (€ 232 totali per due, cancellazione gratuita).</strong> Inoltre la prenotazione Booking di Posada Paloma parte per errore dal <strong>29 dicembre</strong>, sovrapponendosi a questa seconda notte a Oaxaca: <strong>richiedere cambio 30 dicembre – 3 gennaio</strong>, senza cambiare l'itinerario.</p>",
+                    "fullDesc": "<p>Il <strong>29 dicembre</strong> è libero dopo il trekking in Sierra Norte. Se <strong>Hierve el Agua</strong> non sarà visitabile a Natale, possiamo recuperarla oggi, eventualmente con <strong>Mitla</strong> o un palenque di mezcal se avremo energie e gli orari lo permetteranno.</p><p>Altrimenti giornata tranquilla a <strong>Oaxaca</strong> fra Jalatlaco, Santo Domingo, mercati e cucina locale. <strong>Non c'è alcun cambio di hotel da sistemare:</strong> il Cazomalli copre già la notte del 29 dicembre e Posada Paloma inizia correttamente il <strong>30 dicembre</strong>. Le prenotazioni non si sovrappongono.</p>",
                     "images": [
                         "assets/img/Oaxaca_Ciudad.png"
                     ],
@@ -754,7 +761,7 @@ const tripData = {
                         "note": "08:00 colazione; 09:00 Latuvi → Benito Juárez via mirador e ponte sospeso (12 km); 14:30 pranzo; dalle 16:00 transfer di ritorno a Oaxaca. Ora esatta d'arrivo in città da confermare."
                     }
                 ],
-                "warning": "Pacchetto già ACQUISTATO e PAGATO per 2 persone, 12.917,70 MXN, con arrivo 26 dicembre e partenza 28 dicembre. Il programma del voucher conferma: transfer Oaxaca–Sierra Norte–Oaxaca, 2 notti in cabañas (Amatlán 26/12, Latuvi 27/12), pasti in Sierra Norte, guide locali per 3 escursioni, sala dei codici, ponte sospeso, accessi comunitari e assicurazione. Partenza da Oaxaca il 26 alle 08:00; ritorno verso Oaxaca il 28 dalle 16:00. Verificare punto di incontro preciso e modalità di consegna del voucher. Guida solo in spagnolo; clima freddo in quota (2.000–3.100 m), abbigliamento caldo, scarpe da trekking e piccolo zaino. Tour condiviso; programma soggetto a meteo. Il 29 resta libero a Oaxaca.",
+                "warning": "Pacchetto per 2 persone <strong>GIÀ PAGATO: 12.917,70 MXN</strong>. Comprende transfer Oaxaca–Sierra–Oaxaca, guide locali in spagnolo, pasti del trekking, due notti in cabañas, attività previste e assicurazione. Verificare <strong>punto di ritrovo, voucher e condizioni meteo</strong> con l'operatore. In quota (2.000–3.100 m) servono scarpe adatte e strati caldi; checklist e condizioni complete nella guida Sierra Norte.",
                 "sources": [
                     {
                         "text": "Pacchetto ufficiale Sierra Norte",
@@ -1247,7 +1254,7 @@ const tripData = {
                         "note": "La stazione ferroviaria è fuori dal centro: concordare il pickup in anticipo e verificare che l'alloggio consenta il check-in serale."
                     }
                 ],
-                "warning": "Gli orari riportati sono quelli pubblicati oggi dal Tren Maya, NON confermati per il 7 gennaio 2027. Chiedere la fermata effettiva a Bacalar, l'eventuale cambio a Escárcega, i fusi orari regionali, disponibilità dei biglietti e taxi serale dalla stazione. In caso di corse diverse, potrebbe servire ripianificare il 7 gennaio.",
+                "warning": "Orari e coincidenze del <strong>Tren Maya NON confermati per il 7 gennaio 2027</strong>: verificare Palenque → Escárcega → Bacalar, fusi orari e taxi dalla stazione. <strong>Check-in tardivo all'Hotel Aires NON ancora autorizzato:</strong> chiedere risposta scritta per l'arrivo dopo le 23:30/mezzanotte anche in caso di ritardi. Se le corse non coincidono, rivedere lo spostamento prima di comprare i biglietti.",
                 "sources": [
                     {
                         "text": "Orari ufficiali Tren Maya",
@@ -1261,8 +1268,8 @@ const tripData = {
             },
             "basecamp": {
                 "zone": "Bacalar · centro",
-                "hotelIdea": "La base è in paese, non direttamente sulla laguna. Colazione inclusa nell'offerta; check-in dopo le 23:30 ancora da autorizzare per iscritto.",
-                "why": "Per il 7 gennaio serve conferma scritta di late check-in anche in caso di ritardo Tren Maya, oltre a taxi dalla stazione. Laguna e pontili privati non sono direttamente accessibili dall'hotel.",
+                "hotelIdea": "Hotel in centro con colazione inclusa; nome, date e tariffa nella scheda «Alloggi prenotati».",
+                "why": "Non è sul bordo della laguna: per nuotare scegliere punti d'accesso consentiti. L'arrivo in Tren Maya del 7 e il check-in tardivo sono da gestire nella scheda trasferimento.",
                 "tags": [
                     "💧 Laguna e kayak",
                     "🍳 Colazione inclusa",
@@ -1272,7 +1279,7 @@ const tripData = {
                     {
                         "icon": "🚆",
                         "title": "7 gen · Tren Maya → Hotel Aires",
-                        "desc": "Orario del treno da verificare e check-in molto tardi da autorizzare; organizzare taxi dalla stazione."
+                        "desc": "Orari, taxi e accesso serale da confermare nella scheda trasferimento."
                     },
                     {
                         "icon": "🚆",
@@ -1324,7 +1331,7 @@ const tripData = {
                     "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
                     "location": "Palenque · Escárcega · Bacalar",
                     "shortDesc": "Tren Maya Palenque → Bacalar e taxi serale. Late check-in da confermare con la struttura.",
-                    "fullDesc": "<p><strong>Tren Maya Palenque → Bacalar</strong>, biglietti/orari di gennaio 2027 da verificare. La scheda trasferimento riporta le coincidenze oggi pubblicate via Escárcega, <strong>non confermate per il 7 gennaio</strong>. La stazione di Bacalar è fuori dal centro: organizzare il taxi.</p><p><strong>Punto aperto fondamentale:</strong> l'hotel è confermato, ma l'ingresso dopo le 23:30 o mezzanotte non lo è. Attendere la <strong>risposta scritta</strong> della struttura per late check-in e ritardi del treno.</p>",
+                    "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong>, biglietti ancora da acquistare. Gli orari attuali indicano un percorso candidato via Escárcega, ma non garantito per il <strong>7 gennaio 2027</strong>.</p><p>Per coincidenze, taxi dalla stazione e ingresso tardivo all'Hotel Aires consulta la scheda del trasferimento: <strong>non considerare confermato il check-in dopo le 23:30</strong> fino a risposta scritta dell'hotel.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1357,7 +1364,7 @@ const tripData = {
                     "title": "Bacalar: il primo giorno sulla laguna",
                     "location": "Bacalar · Laguna dei Sette Colori",
                     "shortDesc": "Kayak nella laguna e pomeriggio di completo relax: acqua dolce, non mare.",
-                    "fullDesc": "<p>Prima giornata piena sulla <strong>Laguna dei Sette Colori</strong>: kayak o breve uscita guidata rispettosa dell'ecosistema, balneazione negli accessi autorizzati e relax. Evitare le zone protette degli stromatoliti e rispettare le restrizioni ambientali.</p><p>La base è nel centro di Bacalar, quindi per raggiungere la laguna bisogna scegliere un accesso pubblico o un balneario. Nessun pontile privato incluso nel pernottamento.</p>",
+                    "fullDesc": "<p>Giornata completa sulla <strong>Laguna dei Sette Colori</strong>: kayak o breve uscita guidata a basso impatto e balneazione dove consentita. Proteggere gli stromatoliti e rispettare le eventuali chiusure ambientali.</p><p>La base si trova in paese: scegliere un accesso pubblico o un balneario sulla laguna. Il pernottamento non comprende un pontile privato.</p>",
                     "images": [
                         "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
                     ],
@@ -1425,10 +1432,6 @@ const tripData = {
             },
             "researchNotes": [
                 {
-                    "title": "Arrivo a Bacalar · late check-in NON confermato",
-                    "body": "Per il 7 gennaio chiedere alla struttura per iscritto se potete entrare dopo le 23:30/mezzanotte anche con ritardi ferroviari; chiedere anche come raggiungerla dalla stazione Tren Maya fuori dal centro."
-                },
-                {
                     "title": "Accesso alla laguna",
                     "body": "L'hotel è comodo per il centro, ma non ha accesso diretto/pontile privato. Raggiungere balneari e accessi consentiti; la vista lago dalla terrazza non è garantita."
                 }
@@ -1466,7 +1469,7 @@ const tripData = {
             ],
             "basecamp": {
                 "zone": "Cozumel → Akumal Pueblo",
-                "hotelIdea": "Prima notte sul mare a Cozumel, poi base nel pueblo di Akumal (non fronte spiaggia); tariffe, camere e pagamenti nel prospetto degli alloggi.",
+                "hotelIdea": "Prima base sul mare a Cozumel, poi Akumal Pueblo (non fronte spiaggia). Nomi, date e tariffe sono già nella scheda «Alloggi prenotati».",
                 "why": "10 gen Cozumel via traghetto, 12 gen trasferimento ad Akumal. I tour del 13 e 14 richiedono conferma del punto di raccolta presso El Ultimo Maya. Il 15 senza escursioni, il 16 aeroporto di Cancún via strada.",
                 "tags": [
                     "🌙 Snorkeling notturno proposto",
@@ -1574,7 +1577,7 @@ const tripData = {
                     "title": "Chichén Itzá: tour collettivo da Akumal",
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
-                    "fullDesc": "<p><strong>13 gennaio: Chichén Itzá</strong>, escursione collettiva di un giorno <strong>NON prenotata</strong> dalla base di Akumal. Le due alternative con prezzi, contatti, tasse e domande da porre si trovano nelle schede <strong>«Tour da contattare»</strong>.</p><p>Importante ottenere un preventivo per <strong>2 adulti con tutte le tasse incluse</strong> e il prelievo a El Ultimo Maya (o un punto di raccolta praticabile). Il tour dovrebbe permettere almeno un paio d'ore alle rovine, senza troppe soste commerciali; ritorno nello stesso hotel.</p>",
+                    "fullDesc": "<p><strong>13 gennaio: Chichén Itzá.</strong> Escursione guidata collettiva da Akumal <strong>NON prenotata</strong>. Dare priorità ad almeno due ore effettive nel sito archeologico, ingresso e tasse per stranieri inclusi e pickup da <strong>El Ultimo Maya</strong> o punto praticabile. I due operatori, i costi e le domande da inviare sono nel riquadro <strong>«Tour da contattare»</strong>.</p>",
                     "links": [
                         {
                             "text": "🏛️ Chichen Itza Tours · preventivo",
@@ -1592,7 +1595,7 @@ const tripData = {
                     "title": "Muyil e flottazione nei canali di Sian Ka’an",
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
-                    "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an</strong>. Obiettivo: visita alle rovine maya, <strong>barca nelle lagune e flottazione nel canale storico</strong>, confermando prima quali elementi siano effettivamente inclusi nella formula scelta. Tour <strong>NON prenotato</strong>.</p><p>Due operatori, costi pubblicizzati, tasse della riserva e condizioni di pickup ad Akumal Pueblo sono riuniti nel riquadro <strong>«Tour da contattare»</strong>, senza duplicare qui le offerte. Il <strong>15 gennaio</strong> resta libero per mare e riposo.</p>",
+                    "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an.</strong> Escursione <strong>NON prenotata</strong>: sito maya, barca nelle lagune e flottazione nei canali storici, se tutti inclusi nella formula scelta. Chiedere un transfer fino a <strong>El Ultimo Maya ad Akumal Pueblo</strong>. Costi indicativi e contatti nel riquadro <strong>«Tour da contattare»</strong>. Il 15 resta libero per mare e riposo.</p>",
                     "links": [
                         {
                             "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
@@ -1636,16 +1639,7 @@ const tripData = {
                 ],
                 "zoom": 9
             },
-            "researchNotes": [
-                {
-                    "title": "Spostamento serale per lo snorkeling a Cozumel",
-                    "body": "Night Snorkel Cozumel parte nei pressi di Money Bar, lontano dalla costa nord dove alloggiate. Il tour non comprende il taxi: organizzare andata e ritorno, soprattutto dopo il tramonto."
-                },
-                {
-                    "title": "Pickup escursioni ad Akumal Pueblo",
-                    "body": "I tour Chichén Itzá (13/1) e Muyil/Sian Ka’an (14/1) non sono prenotati. Chiedere se il pickup raggiunge El Ultimo Maya o se è previsto un punto di raccolta; prezzi e link dettagliati nelle schede «Tour da contattare»."
-                }
-            ],
+            "researchNotes": [],
             "hotelSearches": [],
             "tourContacts": [
                 {
