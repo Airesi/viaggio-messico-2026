@@ -133,6 +133,23 @@ function generateContent() {
         const allHotelBookings = tripData.general.hotelBookings;
         const areaBookings = (allHotelBookings?.items || []).filter(stay => stay.areaId === area.id);
         const dateShort = iso => iso.slice(8, 10) + '/' + iso.slice(5, 7);
+        // Risorsa dedicata al trekking pagato 26–28 dicembre nella Sierra Norte.
+        // Compare solo nella scheda Oaxaca e Sierra: la pagina è separata dalle giornate.
+        const sierraGuideHtml = area.id === 2 ? `
+            <a href="sierra-norte.html"
+               class="mb-8 flex items-start gap-4 rounded-[1.5rem] border border-emerald-200 bg-gradient-to-r from-emerald-50 to-amber-50 p-5 shadow-sm hover:shadow-md hover:border-emerald-400 transition group">
+                <div class="shrink-0 w-12 h-12 rounded-2xl bg-emerald-900 text-white flex items-center justify-center text-2xl">🎒</div>
+                <div class="min-w-0 flex-1">
+                    <span class="block text-[10px] uppercase tracking-widest text-emerald-700 font-black">Preparazione · 26–28 dicembre</span>
+                    <h3 class="text-base font-extrabold text-emerald-950 mt-1">Guida al trekking della Sierra Norte ↗</h3>
+                    <p class="text-xs text-emerald-900/80 leading-relaxed mt-2">
+                        Checklist interattiva, consigli ufficiali, abbigliamento, regole delle comunità,
+                        cancellazioni e biosecurity da Expediciones Sierra Norte.
+                    </p>
+                </div>
+            </a>
+        ` : '';
+
         const hotelSummaryHtml = areaBookings.length ? `
             <section class="mb-8 rounded-[1.5rem] border border-gray-200 bg-white shadow-sm overflow-hidden">
                 <div class="flex flex-wrap items-center justify-between gap-3 bg-gray-50 px-5 py-4 border-b border-gray-200">
@@ -237,6 +254,7 @@ function generateContent() {
 
         contentDiv.innerHTML = `
             ${basecampHtml}
+            ${sierraGuideHtml}
             ${hotelSummaryHtml}
             ${hotelResearchHtml}
             ${transferHtml}
