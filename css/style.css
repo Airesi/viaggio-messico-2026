@@ -1,39 +1,91 @@
-/* Stili base del viaggio in Messico — definizioni uniche */
-
-/* Palette Messicana Tradizionale */
+/* Messico · stile condiviso. Fase 2: leggibilità, composizione, mobile. */
 :root {
-    --mex-pink: #E81D63;      /* Rosa Mexicano iconico */
-    --mex-marigold: #F59E0B;  /* Giallo Cempasúchil */
-    --mex-cobalt: #1E3A8A;    /* Blu Talavera */
-    --mex-terracotta: #C2410C;/* Terra / Mattone */
-    --mex-turquoise: #0D9488; /* Verde Acqua / Caraibi */
+    --mex-pink: #E81D63;
+    --mex-marigold: #F59E0B;
+    --mex-cobalt: #1E3A8A;
+    --mex-terracotta: #C2410C;
+    --mex-turquoise: #0D9488;
+    --mex-ink: #26372f;
+    --mex-line: #e9e6df;
 }
+#map { width: 100%; height: 100%; min-height: 0; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.img-card { height: 220px; object-fit: cover; }
+.gallery-img { height: 95px; width: 100%; object-fit: cover; transition: transform .2s; }
+.gallery-img:hover { transform: scale(1.03); }
 
-#map { 
-    height: 420px; 
-    width: 100%; 
+/* Navigation and main editorial hierarchy */
+.trip-nav .trip-nav-btn {
+    min-height: 94px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(42,58,43,.055);
+    line-height: 1.25;
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
+.trip-nav .trip-nav-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(42,58,43,.10); }
+.trip-nav .trip-nav-btn[aria-pressed="true"] { box-shadow: 0 8px 20px rgba(168,40,89,.22); }
+.trip-nav .region-nav-title { font-size: .875rem; font-weight: 800; }
+.trip-nav .region-nav-subtitle { font-size: .72rem; line-height: 1.3; }
+.trip-nav .trip-nav-btn > span:first-child { font-size: .71rem; letter-spacing: .005em; }
+.trip-hero { isolation: isolate; }
+.trip-side-shell { box-shadow: 0 6px 26px rgba(35,54,39,.075); }
+.trip-main-column, .trip-content, .trip-sidebar-column { min-width: 0; }
+.trip-overview, .trip-days-panel, .trip-sidebar-accordion { box-shadow: 0 3px 14px rgba(45,61,50,.055); }
+.trip-overview { border-color: #e4eee5; }
+.trip-experience-card { background: #faf9f5; border-color: #eae7df; }
+.trip-experience-card:hover { background: #f4faf2; }
+.trip-experience-card h4 { font-size: .875rem; line-height: 1.4; }
+.trip-region-footer { border-top: 1px solid rgba(163,163,163,.16); }
+.trip-map-block { height: 305px; min-height: 0; }
 
-.tab-content { 
-    display: none; 
+/* Legibility: scoped; modals and boarding passes do not change. */
+.trip-main-content [class~="text-[11px]"],
+.trip-sidebar-column [class~="text-[11px]"] { font-size: .81rem; line-height: 1.5; }
+.trip-main-content [class~="text-[10px]"],
+.trip-sidebar-column [class~="text-[10px]"] { font-size: .73rem; line-height: 1.45; }
+.trip-main-content [class~="text-[9px]"],
+.trip-sidebar-column [class~="text-[9px]"] { font-size: .675rem; line-height: 1.4; }
+.trip-main-content .text-gray-400,
+.trip-sidebar-column .text-gray-400 { color: #64748b; }
+.trip-main-content .text-gray-500,
+.trip-sidebar-column .text-gray-500 { color: #586778; }
+.trip-content .trip-days-panel a { line-height: 1.4; }
+.trip-content .trip-days-panel a h3 { font-size: .875rem; }
+.trip-content .trip-days-panel [class~="text-xs"] { line-height: 1.45; }
+
+/* Daily detail page shares the original Mexican palette. */
+.trip-day-page {
+    background: linear-gradient(125deg, #fffbeb 0%, #fffaf3 50%, #fdf3ed 100%);
+    color: var(--mex-ink);
 }
-
-.tab-content.active { 
-    display: block; 
+.trip-day-shell { box-shadow: 0 12px 35px rgba(58,55,43,.10); }
+.trip-day-content { overflow-wrap: anywhere; }
+.trip-day-content .trip-day-prose { font-size: 1rem; line-height: 1.8; }
+.trip-day-content .trip-day-prose p + p { margin-top: 1rem; }
+.trip-day-content a:focus-visible,
+.trip-nav button:focus-visible,
+.trip-content a:focus-visible,
+.trip-content button:focus-visible,
+.trip-sidebar-column a:focus-visible,
+.trip-sidebar-column button:focus-visible,
+.trip-sidebar-column summary:focus-visible {
+    outline: 3px solid #be5c2a; outline-offset: 3px;
 }
-
-.img-card { 
-    height: 220px; 
-    object-fit: cover; 
+@media (max-width: 1023px) {
+    .trip-main-column { order: 1; }
+    .trip-sidebar-column { order: 2; }
+    .trip-map-block { height: 248px; }
+    .trip-region-footer { display: none; }
 }
-
-.gallery-img { 
-    height: 95px; 
-    width: 100%;
-    object-fit: cover; 
-    transition: transform 0.2s; 
+@media (max-width: 640px) {
+    .trip-nav .trip-nav-btn { min-height: 90px; }
+    .trip-nav .region-nav-title { font-size: .85rem; }
+    .trip-overview .trip-experience-card { padding: .9rem; }
+    .trip-day-content .trip-day-prose { font-size: .96rem; line-height: 1.75; }
+    #map-detail { height: 250px; }
 }
-
-.gallery-img:hover { 
-    transform: scale(1.03); 
+@media (prefers-reduced-motion: reduce) {
+    .trip-nav .trip-nav-btn, .gallery-img { transition: none; }
+    .trip-nav .trip-nav-btn:hover { transform: none; }
 }
