@@ -588,33 +588,52 @@ function generateHotelCosts(){
                   box("Scenario prudente",euro(budget.forecastHighEuro),"Rispetto al tetto: "+euro(budget.capEuro-budget.forecastHighEuro),false),
                 "</div>",
                 "<p class='text-[11px] text-emerald-900 mt-3 leading-relaxed'>I totali includono voli per due (assicurazione di viaggio già inclusa, senza doppio conteggio), hotel, trekking, escursioni, trasporti, pasti, acquisti prima della partenza, souvenir, valigia extra e imprevisti. Il prezzo dei voli è confermato per due persone ma il <strong>pagamento non è verificato</strong>; le altre voci non prenotate sono stime. Coral Princess è confermato ma non pagato; gli altri pagamenti hotel vanno verificati.</p>",
-                "<details class='mt-4 border-t border-emerald-200 pt-3'>",
-                  "<summary class='cursor-pointer text-[11px] font-black text-emerald-950'>Voci ancora da stimare · confronto dei tre scenari</summary>",
-                  "<p class='mt-2 text-[11px] leading-relaxed text-emerald-950'>Importi indicativi per <strong>due persone</strong>. Le tre colonne rappresentano scenari di spesa e non pagamenti già effettuati.</p>",
+                "<details class='mt-4 border-t border-emerald-200 pt-3' open>",
+                  "<summary class='cursor-pointer text-[11px] font-black text-emerald-950'>Riepilogo completo delle spese · tre scenari</summary>",
+                  "<p class='mt-2 text-[11px] leading-relaxed text-emerald-950'>Budget totale per <strong>due persone</strong>: comprende le spese già pagate, quelle prenotate e quelle stimate. Il trekking pagato resta incluso nel totale, ma <strong>non viene sommato due volte</strong>.</p>",
                   "<div class='mt-3 overflow-x-auto rounded-xl border border-emerald-200 bg-white'>",
-                    "<table class='w-full min-w-[560px] border-collapse text-[11px] text-gray-800'>",
+                    "<table class='w-full min-w-[590px] border-collapse text-[11px] text-gray-800'>",
                       "<thead class='bg-emerald-50 text-emerald-950'><tr>",
-                        "<th scope='col' class='py-3 px-3 text-left font-extrabold'>Categoria</th>",
+                        "<th scope='col' class='py-3 px-3 text-left font-extrabold'>Categoria e stato</th>",
                         "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Economico</th>",
                         "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Centrale</th>",
                         "<th scope='col' class='py-3 px-3 text-right font-extrabold whitespace-nowrap'>Prudente</th>",
                       "</tr></thead>",
-                      "<tbody class='divide-y divide-gray-100'>"+budget.pendingEstimates.map(item=>
-                        "<tr><th scope='row' class='py-3 px-3 text-left font-medium leading-snug'>"+safe(item.label)+"</th>"+
-                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.minEuro)+"</td>"+
-                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+euro(item.estimateEuro)+"</td>"+
-                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.maxEuro)+"</td></tr>"
-                      ).join("")+"</tbody>",
+                      "<tbody class='divide-y divide-gray-100'>",
+                        "<tr class='bg-slate-50/80'><th colspan='4' class='py-2 px-3 text-left text-[10px] uppercase tracking-wide font-black text-slate-600'>Costi definiti (compresi nel totale)</th></tr>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-semibold leading-snug'>Voli internazionali per due <span class='block text-[10px] font-normal text-gray-500 mt-1'>Importo confermato · assicurazione inclusa · pagamento da verificare</span></th>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.confirmedFlightsEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.confirmedFlightsEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.confirmedFlightsEuro)+"</td></tr>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-semibold leading-snug'>Hotel · 23 notti <span class='block text-[10px] font-normal text-gray-500 mt-1'>8 prenotazioni confermate · pagamenti da verificare</span></th>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(eurosTotal)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(eurosTotal)+"</td>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(eurosTotal)+"</td></tr>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-semibold leading-snug'>Trekking Caminos Reales · Sierra Norte <span class='block text-[10px] font-black text-emerald-700 mt-1'>GIÀ PAGATO · "+new Intl.NumberFormat("it-IT",{minimumFractionDigits:2,maximumFractionDigits:2}).format(budget.trekkingPaidMxn)+" MXN · 2 notti e servizi inclusi</span></th>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td></tr>",
+                        "<tr class='bg-slate-50/80'><th colspan='4' class='py-2 px-3 text-left text-[10px] uppercase tracking-wide font-black text-slate-600'>Altre spese ancora da stimare (tre scenari)</th></tr>",
+                        budget.pendingEstimates.map(item=>
+                          "<tr><th scope='row' class='py-3 px-3 text-left font-medium leading-snug'>"+safe(item.label)+"</th>"+
+                          "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.minEuro)+"</td>"+
+                          "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+euro(item.estimateEuro)+"</td>"+
+                          "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+euro(item.maxEuro)+"</td></tr>"
+                        ).join(""),
+                      "</tbody>",
                       "<tfoot class='border-t-2 border-emerald-200 bg-emerald-50'>",
-                        "<tr><th scope='row' class='py-3 px-3 text-left font-extrabold text-emerald-950'>Totale spese variabili</th>"+
-                        "<td class='py-3 px-3 text-right font-extrabold tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.minEuro,0))+"</td>"+
-                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.estimateEuro,0))+"</td>"+
-                        "<td class='py-3 px-3 text-right font-extrabold tabular-nums whitespace-nowrap'>"+euro(budget.pendingEstimates.reduce((sum,item)=>sum+item.maxEuro,0))+"</td></tr>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-black text-emerald-950'>TOTALE VIAGGIO · 2 persone</th>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.forecastLowEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.forecastEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.forecastHighEuro)+"</td></tr>",
+                        "<tr><th scope='row' class='py-2 px-3 text-left font-extrabold text-emerald-950'>Rispetto al tetto di "+euro(budget.capEuro)+"</th>"+
+                        "<td class='py-2 px-3 text-right font-bold tabular-nums whitespace-nowrap'>"+money2(budget.capEuro-budget.forecastLowEuro)+" sotto</td>"+
+                        "<td class='py-2 px-3 text-right font-bold tabular-nums whitespace-nowrap'>"+money2(budget.capEuro-budget.forecastEuro)+" sotto</td>"+
+                        "<td class='py-2 px-3 text-right font-bold tabular-nums whitespace-nowrap'>"+money2(budget.forecastHighEuro-budget.capEuro)+" oltre</td></tr>",
                       "</tfoot>",
                     "</table>",
                   "</div>",
-                  "<p class='mt-3 text-[11px] leading-relaxed text-emerald-950'><strong>Assicurazione viaggio:</strong> già inclusa nei voli (totale confermato per due: "+euro(budget.confirmedFlightsEuro)+"), quindi non compare tra le spese extra.</p>",
-                  "<p class='mt-2 text-[10px] leading-relaxed text-emerald-900'><strong>Trekking Sierra Norte:</strong> 12.917,70 MXN già pagati, circa "+money2(budget.trekkingApproxEuro)+" al cambio BCE del 15/10/2026 (1 € = 20,7596 MXN). Il controvalore stimato non sostituisce l'addebito effettivo.</p>",
+                  "<p class='mt-3 text-[10px] leading-relaxed text-emerald-900'>Il trekking include guida, trasferimenti del pacchetto, pasti previsti e due notti in cabañas: <strong>non sono conteggiati negli hotel o nelle altre escursioni</strong>. Il controvalore di "+money2(budget.trekkingApproxEuro)+" usa il cambio BCE del 15/10/2026 (1 € = 20,7596 MXN); l'addebito bancario effettivo potrebbe differire.</p>",
                 "</details>",
               "</div>",
               "<h3 class='mb-3 text-[11px] uppercase tracking-widest font-black text-slate-500'>Soggiorni in ordine cronologico</h3>",
