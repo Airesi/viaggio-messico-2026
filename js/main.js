@@ -325,7 +325,7 @@ function generateContent() {
             <div class="mb-6">
                 <span class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">🗺️ Programma</span>
                 <div class="border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all">
-                    <button type="button" onclick="toggleCollapse('days-area-${area.id}', this)" aria-expanded="true" aria-controls="days-area-${area.id}" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
+                    <button type="button" onclick="toggleCollapse('days-area-${area.id}', this)" aria-expanded="false" aria-controls="days-area-${area.id}" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">📅</div>
                             <div class="text-left">
@@ -334,10 +334,10 @@ function generateContent() {
                             </div>
                         </div>
                         <div class="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 toggle-icon transition-transform">
-                            <svg class="w-4 h-4 transform rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                     </button>
-                    <div id="days-area-${area.id}" class="border-t border-gray-100 bg-gray-50/30 p-5">
+                    <div id="days-area-${area.id}" class="hidden border-t border-gray-100 bg-gray-50/30 p-5">
                         <div class="space-y-3">
             `;
             area.days.forEach(day => {
