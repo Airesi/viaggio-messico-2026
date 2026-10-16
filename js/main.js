@@ -159,7 +159,7 @@ function generateContent() {
                         <p class="text-[11px] text-gray-500 mt-1">Importi delle prenotazioni, pagamento verificato soltanto se indicato</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-xl font-black text-gray-900">€ ${areaBookings.some(stay => stay.approximatePrice) ? '≈ € ' : '€ '}${areaBookings.reduce((sum, stay) => sum + stay.totalEuro, 0)}</p>
+                        <p class="text-xl font-black text-gray-900">${areaBookings.some(stay => stay.approximatePrice) ? '≈ € ' : '€ '}${areaBookings.reduce((sum, stay) => sum + stay.totalEuro, 0)}</p>
                         <p class="text-[10px] text-gray-500">Totale alloggi di questa tappa</p>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ function generateContent() {
                         <div class="py-3 border-b border-gray-100 last:border-0 flex flex-wrap items-start justify-between gap-2">
                             <div class="flex-1 min-w-0">
                                 <p class="text-xs font-bold text-gray-800">${stay.name}</p>
-                                <p class="text-[11px] text-gray-500">${stay.city} · ${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · ${stay.cancellation}${stay.roomType ? ' · ' + stay.roomType : ''}${stay.breakfast ? ' · Colazione ' + stay.breakfast.toLowerCase() : ''}</p>${stay.priceNote ? '<p class="text-[11px] text-amber-800 mt-2">⚠️ ' + stay.priceNote + '</p><p class="text-[11px] text-gray-500 mt-1">' : '<p class="hidden">'}</p>
+                                <p class="text-[11px] text-gray-500">${stay.city} · ${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · ${stay.cancellation}${stay.roomType ? ' · ' + stay.roomType : ''}${stay.breakfast ? ' · Colazione ' + stay.breakfast.toLowerCase() : ''}</p>${stay.priceNote ? '<p class="text-[11px] text-amber-800 mt-2">⚠️ ' + stay.priceNote + '</p>' : ''}
                             </div>
                             <div class="text-right">
                                 <span class="block text-sm font-black text-gray-900">${stay.approximatePrice ? '≈ ' : ''}€ ${stay.totalEuro}</span>
