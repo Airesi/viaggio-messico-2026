@@ -186,9 +186,9 @@ function generateContent() {
         const hotelResearchHtml = ((area.hotelSearches || []).length || (area.researchNotes || []).length) ? `
             <section class="mb-8 rounded-[1.5rem] overflow-hidden border border-teal-200 bg-teal-50/40 shadow-sm">
                 <div class="px-5 py-4 bg-teal-900 text-white">
-                    <span class="block text-[10px] uppercase tracking-widest font-black text-teal-200">🔎 Alloggi da ricercare</span>
-                    <h3 class="text-base font-extrabold mt-1">Ricerche Booking e considerazioni salvate</h3>
-                    <p class="text-[11px] text-teal-100 mt-1">2 adulti · date precompilate · NON prenotati</p>
+                    <span class="block text-[10px] uppercase tracking-widest font-black text-teal-200">${(area.hotelSearches || []).length ? "🔎 Alloggi da ricercare" : "📌 Promemoria logistici"}</span>
+                    <h3 class="text-base font-extrabold mt-1">${(area.hotelSearches || []).length ? "Ricerche Booking e considerazioni salvate" : "Considerazioni e verifiche da completare"}</h3>
+                    <p class="text-[11px] text-teal-100 mt-1">${(area.hotelSearches || []).length ? "2 adulti · ricerche con date precompilate · strutture NON prenotate" : "Alloggio confermato · promemoria e questioni ancora aperte"}</p>
                 </div>
                 <div class="p-4 sm:p-5 space-y-4">
                     ${(area.hotelSearches || []).length ? `
