@@ -36,7 +36,7 @@ function generateNavigation() {
         btn.onclick = () => switchArea(area.id);
         
         // Stile base del bottone inattivo
-        btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition text-center border border-gray-200 border-b-4 border-transparent flex flex-col items-center h-full justify-center";
+        btn.className = "trip-nav-btn py-3 px-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-gray-600 hover:bg-gray-50 transition text-center border border-gray-200 border-b-4 border-transparent flex flex-col items-center h-full justify-center";
         
         const dateLabel = iso => {
             const [yy,mm,dd]=iso.split('-');
@@ -60,7 +60,7 @@ function generateContent() {
         // --- COLONNA DESTRA: itinerario e contenuti esperienziali ---
         const contentDiv = document.createElement('div');
         contentDiv.id = `content-area-${area.id}`;
-        contentDiv.className = "tab-content p-6 sm:p-8"; // Tolto lo space-y per gestire meglio i margini
+        contentDiv.className = "tab-content trip-content p-0"; // Card editoriali senza un doppio involucro
         
         const linksHtml = (area.links || []).map(link => 
             `<a href="${link.url}" target="_blank" class="inline-flex items-center gap-1.5 bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 px-3.5 py-2 rounded-xl font-bold transition text-[11px] shadow-sm hover:shadow">
@@ -94,7 +94,7 @@ function generateContent() {
         const hasLogistics = !!(area.basecamp || area.transferPlan || areaBookings.length ||
             (area.researchNotes || []).length || (area.hotelSearches || []).length || area.food);
         const sidebarLogisticsHtml = hasLogistics ? `
-            <section class="rounded-[1.5rem] border border-amber-200/70 bg-white shadow-sm overflow-hidden">
+            <section class="trip-sidebar-accordion rounded-[1.5rem] border border-amber-200/70 bg-white shadow-sm overflow-hidden">
                 <button type="button" onclick="toggleCollapse('logistics-collapse-${area.id}', this)"
                     aria-controls="logistics-collapse-${area.id}" aria-expanded="false"
                     class="w-full p-4 text-left flex items-center gap-3 group hover:bg-amber-50/60 transition-colors">
@@ -287,7 +287,7 @@ function generateContent() {
         // Sintesi editoriale della macro-tappa: pochi punti forti e suggerimenti,
         // senza ripetere il contenuto dettagliato delle schede giornaliere.
         const overviewHtml = area.overview ? `
-            <section class="mb-6 rounded-[1.5rem] border border-emerald-100 bg-white shadow-sm overflow-hidden">
+            <section class="trip-overview mb-5 sm:mb-6 rounded-[1.5rem] border border-emerald-100 bg-white shadow-sm overflow-hidden">
                 <div class="px-5 pt-5 pb-3 sm:px-6">
                     <span class="text-[10px] uppercase tracking-[.16em] text-amber-800 font-black">✨ Da non perdere</span>
                     <h3 class="text-lg font-extrabold text-emerald-950 mt-1">Il meglio di questa tappa</h3>
@@ -296,7 +296,7 @@ function generateContent() {
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 px-4 sm:px-5 pb-4">
                     ${area.overview.highlights.map(item => `
                         <a href="dettaglio.html?day=${encodeURIComponent(item.dayId)}"
-                            class="group block rounded-xl border border-gray-200 bg-gray-50/65 hover:border-emerald-300 hover:bg-emerald-50/60 transition p-3.5">
+                            class="trip-experience-card group block rounded-xl border border-gray-200 bg-gray-50/65 hover:border-emerald-300 hover:bg-emerald-50/60 transition p-3.5">
                             <div class="flex items-start gap-2.5">
                                 <span class="shrink-0 text-xl leading-none mt-0.5">${item.icon}</span>
                                 <div class="min-w-0">
@@ -324,7 +324,7 @@ function generateContent() {
             daysHtml = `
             <div class="mb-6">
                 <span class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">🗺️ Programma</span>
-                <div class="border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all">
+                <div class="trip-days-panel border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm transition-all">
                     <button type="button" onclick="toggleCollapse('days-area-${area.id}', this)" aria-expanded="false" aria-controls="days-area-${area.id}" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">📅</div>
@@ -397,8 +397,8 @@ function generateContent() {
             }
 
             walletDiv.innerHTML += `
-            <div class="border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all">
-                <button onclick="toggleCollapse('wallet-collapse-${area.id}', this)" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
+            <div class="trip-sidebar-accordion border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm transition-all">
+                <button type="button" aria-expanded="false" aria-controls="wallet-collapse-${area.id}" onclick="toggleCollapse('wallet-collapse-${area.id}', this)" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
                     <div class="flex items-center gap-4">
                         <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 border border-gray-200">💼</div>
                         <div class="text-left">
@@ -462,12 +462,13 @@ function switchArea(areaId) {
         if(btn) {
             const subtitle = btn.querySelector('.region-nav-subtitle');
             const theme = mexThemes[index % mexThemes.length];
+            btn.setAttribute("aria-pressed", String(area.id === areaId));
             
             if(area.id === areaId) {
-                btn.className = `py-3 px-2 text-xs sm:text-sm font-extrabold rounded-xl transition text-center flex flex-col items-center h-full justify-center border-b-4 ${theme.activeBg}`;
+                btn.className = `trip-nav-btn py-3 px-2.5 text-xs sm:text-sm font-extrabold rounded-xl transition text-center flex flex-col items-center h-full justify-center border-b-4 ${theme.activeBg}`;
                 subtitle.className = `region-nav-subtitle text-[10px] font-medium mt-1 leading-snug ${theme.subText}`;
             } else {
-                btn.className = "py-3 px-2 text-xs sm:text-sm font-bold rounded-xl bg-white/80 text-gray-600 hover:bg-amber-50 hover:text-amber-900 transition text-center border border-amber-200/60 border-b-4 border-transparent flex flex-col items-center h-full justify-center shadow-sm";
+                btn.className = "trip-nav-btn py-3 px-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white/90 text-gray-600 hover:bg-amber-50 hover:text-amber-900 transition text-center border border-amber-200/60 border-b-4 border-transparent flex flex-col items-center h-full justify-center";
                 subtitle.className = "region-nav-subtitle text-[10px] font-normal opacity-70 mt-1 leading-snug text-gray-500";
             }
         }
