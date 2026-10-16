@@ -156,10 +156,10 @@ function generateContent() {
                     <div>
                         <span class="block text-[10px] font-black uppercase tracking-widest text-amber-700 mb-1">🏨 Alloggi prenotati · 2 adulti</span>
                         <h3 class="text-sm font-extrabold text-gray-900">${areaBookings.length} ${areaBookings.length === 1 ? 'prenotazione confermata' : 'prenotazioni confermate'}</h3>
-                        <p class="text-[11px] text-gray-500 mt-1">Importi Booking confermati, addebito non verificato</p>
+                        <p class="text-[11px] text-gray-500 mt-1">Importi delle prenotazioni, pagamento verificato soltanto se indicato</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-xl font-black text-gray-900">€ ${areaBookings.reduce((sum, stay) => sum + stay.totalEuro, 0)}</p>
+                        <p class="text-xl font-black text-gray-900">€ ${areaBookings.some(stay => stay.approximatePrice) ? '≈ € ' : '€ '}${areaBookings.reduce((sum, stay) => sum + stay.totalEuro, 0)}</p>
                         <p class="text-[10px] text-gray-500">Totale alloggi di questa tappa</p>
                     </div>
                 </div>
@@ -168,17 +168,17 @@ function generateContent() {
                         <div class="py-3 border-b border-gray-100 last:border-0 flex flex-wrap items-start justify-between gap-2">
                             <div class="flex-1 min-w-0">
                                 <p class="text-xs font-bold text-gray-800">${stay.name}</p>
-                                <p class="text-[11px] text-gray-500">${stay.city} · ${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · ${stay.cancellation}</p>
+                                <p class="text-[11px] text-gray-500">${stay.city} · ${dateShort(stay.checkin)}–${dateShort(stay.checkout)} · ${stay.cancellation}${stay.roomType ? ' · ' + stay.roomType : ''}${stay.breakfast ? ' · Colazione ' + stay.breakfast.toLowerCase() : ''}</p>${stay.priceNote ? '<p class="text-[11px] text-amber-800 mt-2">⚠️ ' + stay.priceNote + '</p><p class="text-[11px] text-gray-500 mt-1">' : '<p class="hidden">'}</p>
                             </div>
                             <div class="text-right">
-                                <span class="block text-sm font-black text-gray-900">€ ${stay.totalEuro}</span>
-                                <span class="text-[10px] font-bold text-emerald-700">Confermato</span>
+                                <span class="block text-sm font-black text-gray-900">${stay.approximatePrice ? '≈ ' : ''}€ ${stay.totalEuro}</span>
+                                <span class="text-[10px] font-bold text-emerald-700">${stay.status || 'Confermato'}</span>${stay.paymentStatus ? '<span class="block text-[10px] font-bold text-amber-700">' + stay.paymentStatus + '</span>' : ''}
                             </div>
                         </div>
                     `).join('')}
                 </div>
                 <div class="px-5 pb-4 pt-1 border-t border-gray-100 bg-gray-50/60">
-                    <p class="text-[11px] text-gray-500">Totale hotel prenotati per il viaggio: <strong class="text-gray-800">€ ${allHotelBookings.totalEuro}</strong> · non include il pacchetto Sierra Norte</p>
+                    <p class="text-[11px] text-gray-500">Totale hotel prenotati per il viaggio: <strong class="text-gray-800">${allHotelBookings.items.some(stay => stay.approximatePrice) ? '≈ ' : ''}€ ${allHotelBookings.totalEuro}</strong> · comprende importi indicativi, non include il pacchetto Sierra Norte${allHotelBookings.warning ? '<br>⚠️ ' + allHotelBookings.warning : ''}</p>
                 </div>
             </section>
         ` : '';
