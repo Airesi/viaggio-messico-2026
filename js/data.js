@@ -119,14 +119,14 @@ const tripData = {
                 "souvenir",
                 "valigia e bagagli extra",
                 "imprevisti",
-                "assicurazione di viaggio"
+                "assicurazione di viaggio (già compresa nei voli)"
             ],
-            "confirmedFlightsEuro": null,
-            "note": "Scenari per 2 persone, tetto massimo 10.000 € inclusi tutti i costi. Base: 2 biglietti ipotizzati da 1.073,68 € (non pagamento dimostrato), 8 hotel prenotati 1.845 €, trekking pagato 12.917,70 MXN (BCE 15/10/2026). Le altre voci sono stime, inclusa assicurazione; non sottrarre i pagamenti già effettuati dal costo totale.",
+            "confirmedFlightsEuro": 2147.36,
+            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Spese rimanenti stimate: escursioni, trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
-            "flightPriceStatus": "Preventivo/scomposizione del prezzo: lo screenshot mostra €1.073,68 come prezzo totale DEL BIGLIETTO, ma non dimostra che sia già pagato né che il totale per due sia €2.147,36. Il budget usa l'ipotesi di due biglietti allo stesso prezzo.",
+            "flightPriceStatus": "Totale confermato dall'utente: €2.147,36 per entrambi i viaggiatori, assicurazione di viaggio inclusa. Nessun secondo addebito per l'assicurazione nel budget. Pagamento dei voli non verificato.",
             "trekkingPaidMxn": 12917.7,
             "trekkingApproxEuro": 622.25,
             "trekkingStatus": "PAGATO · Cammini Reali Sierra Norte, 26–28 dicembre, 2 persone, con 2 notti in cabañas e pasti inclusi",
@@ -186,13 +186,6 @@ const tripData = {
                     "maxEuro": 220
                 },
                 {
-                    "key": "assicurazione",
-                    "label": "Assicurazione viaggio per due (non verificata)",
-                    "estimateEuro": 170,
-                    "minEuro": 100,
-                    "maxEuro": 240
-                },
-                {
                     "key": "imprevisti",
                     "label": "Fondo imprevisti",
                     "estimateEuro": 600,
@@ -200,13 +193,13 @@ const tripData = {
                     "maxEuro": 900
                 }
             ],
-            "forecastEuro": 9464.61,
-            "forecastRemainingEuro": 535.39,
+            "forecastEuro": 9294.61,
+            "forecastRemainingEuro": 705.39,
             "documentedReservationsEuro": 1845,
             "documentedPaidEuroApprox": 622.25,
-            "forecastLowEuro": 8034.61,
-            "forecastHighEuro": 11424.61,
-            "experiencesAllowanceCentralEuro": 1535.39
+            "forecastLowEuro": 7934.61,
+            "forecastHighEuro": 11184.61,
+            "experiencesAllowanceCentralEuro": 1705.39
         },
         "subtitle": "29 giorni tra cultura, foreste, montagne e due oceani"
     },
