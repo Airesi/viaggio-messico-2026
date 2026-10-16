@@ -9,11 +9,11 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Riepilogo Booking 16 ottobre 2026, 8 prenotazioni confermate per 2 adulti. Verificati anche i primi quattro importi: The PM €223, Cazomalli 24–26 dic €199 e 28–30 dic €232, Posada Paloma €266.",
+            "source": "Booking, 16 ottobre 2026 · 8 soggiorni confermati per 2 adulti.",
             "totalEuro": 1845,
-            "paidStatus": "Prenotazioni confermate NON equivalgono a pagamenti: Coral Princess dichiarato non pagato; El Ultimo Maya e gli altri pagamenti non verificati.",
+            "paidStatus": "Prenotazione ≠ pagamento. Coral Princess: non pagato; per gli altri hotel pagamento da verificare.",
             "validTotalEuro": 1845,
-            "warning": "Totale hotel €1.845 per 8 prenotazioni (23 notti). Escluse le cabañas del trekking Sierra Norte, i trasferimenti, i tour, eventuali altre notti e spese extra. Check-in tardivo all'Hotel Aires ancora da confermare.",
+            "warning": "1.845 € per 23 notti in hotel; le 2 notti Sierra Norte sono incluse nel trekking già pagato. Restano fuori le notti di viaggio e le altre spese.",
             "items": [
                 {
                     "name": "The PM at Condesa Arts & Boutique Experience",
@@ -118,10 +118,11 @@ const tripData = {
                 "attrezzatura",
                 "souvenir",
                 "valigia e bagagli extra",
-                "imprevisti"
+                "imprevisti",
+                "assicurazione di viaggio"
             ],
             "confirmedFlightsEuro": null,
-            "note": "Budget per 2 persone INCLUSI voli, hotel, trekking, trasporti, ingressi, pasti, attrezzatura prima della partenza, souvenir, valigia aggiuntiva e fondo imprevisti. Voli stimati come 2 biglietti da €1.073,68 ciascuno (screen prezzo biglietto, non prova acquisto), hotel prenotati €1.845 (non necessariamente pagati), trekking pagato 12.917,70 MXN. Tutti gli altri importi sono PREVISIONI, non preventivi o addebiti.",
+            "note": "Scenari per 2 persone, tetto massimo 10.000 € inclusi tutti i costi. Base: 2 biglietti ipotizzati da 1.073,68 € (non pagamento dimostrato), 8 hotel prenotati 1.845 €, trekking pagato 12.917,70 MXN (BCE 15/10/2026). Le altre voci sono stime, inclusa assicurazione; non sottrarre i pagamenti già effettuati dal costo totale.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
@@ -137,17 +138,24 @@ const tripData = {
             "pendingEstimates": [
                 {
                     "key": "esperienze",
-                    "label": "Esperienze, tour e ingressi non compresi nel trekking",
+                    "label": "Escursioni, guide e ingressi (escluso trekking)",
                     "estimateEuro": 1000,
                     "minEuro": 750,
                     "maxEuro": 1350
                 },
                 {
-                    "key": "trasporti",
-                    "label": "Treni, autobus, traghetti, taxi e transfer",
-                    "estimateEuro": 950,
-                    "minEuro": 650,
-                    "maxEuro": 1300
+                    "key": "intercity",
+                    "label": "ADO, Tren Maya, traghetti e altri mezzi interurbani",
+                    "estimateEuro": 520,
+                    "minEuro": 350,
+                    "maxEuro": 700
+                },
+                {
+                    "key": "taxi",
+                    "label": "Taxi, transfer e trasporti locali",
+                    "estimateEuro": 430,
+                    "minEuro": 300,
+                    "maxEuro": 600
                 },
                 {
                     "key": "pasti",
@@ -158,24 +166,31 @@ const tripData = {
                 },
                 {
                     "key": "attrezzatura",
-                    "label": "Attrezzatura da acquistare prima di partire",
+                    "label": "Attrezzatura da acquistare prima della partenza",
                     "estimateEuro": 300,
                     "minEuro": 150,
                     "maxEuro": 500
                 },
                 {
                     "key": "souvenir",
-                    "label": "Souvenir e acquisti personali",
+                    "label": "Souvenir, shopping e regali",
                     "estimateEuro": 350,
                     "minEuro": 150,
                     "maxEuro": 550
                 },
                 {
                     "key": "valigia",
-                    "label": "Valigia aggiuntiva e possibile bagaglio extra",
+                    "label": "Valigia aggiuntiva e bagaglio extra",
                     "estimateEuro": 130,
                     "minEuro": 70,
                     "maxEuro": 220
+                },
+                {
+                    "key": "assicurazione",
+                    "label": "Assicurazione viaggio per due (non verificata)",
+                    "estimateEuro": 170,
+                    "minEuro": 100,
+                    "maxEuro": 240
                 },
                 {
                     "key": "imprevisti",
@@ -185,9 +200,15 @@ const tripData = {
                     "maxEuro": 900
                 }
             ],
-            "forecastEuro": 9294.61,
-            "forecastRemainingEuro": 705.39
-        }
+            "forecastEuro": 9464.61,
+            "forecastRemainingEuro": 535.39,
+            "documentedReservationsEuro": 1845,
+            "documentedPaidEuroApprox": 622.25,
+            "forecastLowEuro": 8034.61,
+            "forecastHighEuro": 11424.61,
+            "experiencesAllowanceCentralEuro": 1535.39
+        },
+        "subtitle": "29 giorni tra cultura, foreste, montagne e due oceani"
     },
     "areas": [
         {
@@ -197,7 +218,7 @@ const tripData = {
             "badge": "Giorni 1 - 4 • Capitale",
             "locationText": "Città del Messico",
             "title": "Il Cuore della Capitale",
-            "description": "Esplora le rovine precolombiane, il cuore storico e i canali del sud.",
+            "description": "Teotihuacán e La Gruta il 21 dicembre, poi centro storico, Coyoacán e canali. Trasferimento notturno verso Oaxaca da prenotare.",
             "images": [
                 "assets/img/Citta_Del_Messico.png"
             ],
@@ -462,7 +483,7 @@ const tripData = {
             "badge": "24–29 Dic • Oaxaca, Pueblos Mancomunados e Caminos Reales",
             "locationText": "Oaxaca · Monte Albán · Sierra Norte · Oaxaca",
             "title": "Tradizioni zapoteche e trekking nella Sierra Norte",
-            "description": "Oaxaca e Jalatlaco prima e dopo il trekking comunitario Caminos Reales (26–28 dicembre, confermato e pagato). Natale dedicato a Hierve el Agua solo se l'apertura viene confermata; il 29 rimane jolly o riposo.",
+            "description": "Oaxaca, Monte Albán e trekking comunitario già pagato (26–28 dicembre). Hierve el Agua da verificare; il 29 resta giorno jolly.",
             "images": [
                 "assets/img/Oaxaca_Ciudad.png",
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
@@ -847,7 +868,7 @@ const tripData = {
             "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
             "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
             "title": "Il Pacifico: quattro notti senza fretta",
-            "description": "30 dicembre–3 gennaio: Capodanno e relax a San Agustinillo, con Mazunte, Punta Cometa e La Ventanilla facoltativi. Il 3 gennaio prosegue il viaggio verso il Chiapas, con collegamenti ancora da confermare.",
+            "description": "Quattro notti a San Agustinillo, con Mazunte e Punta Cometa liberi e La Ventanilla facoltativa. Il 3 gennaio inizia il trasferimento al Chiapas.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -991,12 +1012,17 @@ const tripData = {
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
             "title": "Palenque: giungla, città maya e cascate",
-            "description": "Palenque come base per la visita alle rovine maya del 5 gennaio e alle Cascadas Roberto Barrios del 6. Il 3–4 gennaio trasferimento dalla costa in più autobus non ancora prenotati; il 7 Tren Maya verso Bacalar.",
+            "description": "Palenque e Roberto Barrios il 5–6 gennaio; autobus dalla costa ancora da verificare. Toniná resta una possibilità alternativa, non programmata.",
             "images": [
                 "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
                 "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=600&q=80"
             ],
-            "links": [],
+            "links": [
+                {
+                    "text": "INAH · Toniná (orari e ingressi)",
+                    "url": "https://lugares.inah.gob.mx/es/node/5702"
+                }
+            ],
             "transferPlan": {
                 "eyebrow": "3–4 gennaio 2027 · Itinerario candidato, da prenotare",
                 "title": "Dal Pacifico alla giungla, seguendo la costa",
@@ -1263,7 +1289,13 @@ const tripData = {
                     }
                 ]
             },
-            "food": "Per colazioni e cene chiedere disponibilità in struttura o organizzare taxi per Palenque: l'hotel è immerso nel verde, non in pieno centro."
+            "food": "Per colazioni e cene chiedere disponibilità in struttura o organizzare taxi per Palenque: l'hotel è immerso nel verde, non in pieno centro.",
+            "researchNotes": [
+                {
+                    "title": "Toniná · possibilità da valutare, non inserita nel programma",
+                    "body": "Il sito archeologico è stato riaperto a marzo 2026, ma dista circa 118 km da Palenque per tratta. Una visita il 6 gennaio sostituirebbe Roberto Barrios: non aggiungerla senza una decisione. Prima verificare condizioni della strada 199, situazione locale, guida/transfer A/R, tempi e costo; nessuna prenotazione."
+                }
+            ]
         },
         {
             "id": 4,
@@ -1272,7 +1304,7 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "Due giornate piene (8–9 gennaio) sulla Laguna dei Sette Colori: kayak, nuoto nei punti consentiti e riposo. Il 7 arrivo da Palenque con Tren Maya, coincidenze/trasferimento da verificare.",
+            "description": "Due giornate per la laguna (8–9 gennaio). Il 7 gennaio Tren Maya, collegamenti e check-in tardivo sono ancora da confermare.",
             "images": [
                 "https://live.staticflickr.com/4459/36785406774_ba471186a0_o.jpg"
             ],
@@ -1506,7 +1538,7 @@ const tripData = {
             "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "Cozumel 10–12 gennaio, poi Akumal Pueblo 12–16. Possibile snorkeling notturno l'11, Chichén Itzá il 13 e canali di Muyil/Sian Ka’an il 14 (tutti NON prenotati). Il 15 gennaio resta libero per la spiaggia.",
+            "description": "Cozumel e Akumal: snorkeling notturno, Chichén Itzá e Muyil da prenotare. Il 15 gennaio rimane totalmente libero per il mare.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1635,16 +1667,7 @@ const tripData = {
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
                     "fullDesc": "<p><strong>13 gennaio: Chichén Itzá.</strong> Escursione guidata collettiva da Akumal <strong>NON prenotata</strong>. Dare priorità ad almeno due ore effettive nel sito archeologico, ingresso e tasse per stranieri inclusi e pickup da <strong>El Ultimo Maya</strong> o punto praticabile. I due operatori, i costi e le domande da inviare sono nel riquadro <strong>«Tour da contattare»</strong>.</p>",
-                    "links": [
-                        {
-                            "text": "🏛️ Chichen Itza Tours · preventivo",
-                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html"
-                        },
-                        {
-                            "text": "🏛️ Vive Cancún · Chichén económico",
-                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar"
-                        }
-                    ]
+                    "links": []
                 },
                 {
                     "id": "5-jan14",
@@ -1653,16 +1676,7 @@ const tripData = {
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
                     "fullDesc": "<p><strong>14 gennaio: Muyil e Sian Ka’an.</strong> Escursione <strong>NON prenotata</strong>: sito maya, barca nelle lagune e flottazione nei canali storici, se tutti inclusi nella formula scelta. Chiedere un transfer fino a <strong>El Ultimo Maya ad Akumal Pueblo</strong>. Costi indicativi e contatti nel riquadro <strong>«Tour da contattare»</strong>. Il 15 resta libero per mare e riposo.</p>",
-                    "links": [
-                        {
-                            "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
-                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/"
-                        },
-                        {
-                            "text": "🌿 Paseo Tours · Canali Muyil",
-                            "url": "https://www.paseotours.com/en/tour-muyil-canals/"
-                        }
-                    ]
+                    "links": []
                 },
                 {
                     "id": "5-jan15",
@@ -1711,7 +1725,6 @@ const tripData = {
                             "pickup": "Pickup negli hotel della Riviera Maya soggetto a restrizioni: per piccole strutture/appartamenti potrebbe essere un punto di incontro esterno. Chiedere specificamente per El Ultimo Maya ad Akumal Pueblo.",
                             "includes": "Autobus A/R, guida certificata, Chichén Itzá, pranzo buffet, cenote e breve Valladolid.",
                             "caution": "Verificare prezzo finale in MXN per 2 adulti, durata sul sito archeologico, eventuali soste commerciali e costi aggiuntivi (bevande, giubbotto cenote).",
-                            "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html",
                             "contacts": [
                                 {
                                     "label": "Apri tour e richiesta",
@@ -1729,7 +1742,6 @@ const tripData = {
                             "pickup": "Annuncia partenza dai punti/hotel della Riviera Maya, ma serve conferma ESPLICITA per El Ultimo Maya ad Akumal Pueblo e dell'eventuale supplemento.",
                             "includes": "Trasporto A/R, guida bilingue, ingresso Chichén, buffet, cenote e breve Valladolid.",
                             "caution": "Prevede anche rituale maya e tempo per acquisti/artigianato: chiedere se le soste commerciali sono obbligatorie. Bevande e noleggio giubbotto al cenote esclusi.",
-                            "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar",
                             "contacts": [
                                 {
                                     "label": "Apri offerta",
@@ -1756,7 +1768,6 @@ const tripData = {
                             "pickup": "Il tour Midday delle 10:00 include il transfer A/R da Akumal e Aventuras Akumal; per l'Early 06:00 è previsto un supplemento di 320 MXN/persona. Chiedere se il prelievo raggiunge El Ultimo Maya ad Akumal Pueblo, non solo la costa di Akumal.",
                             "includes": "Cooperativa maya locale, barca sulle lagune, flottazione nel canale antico, guida e pranzo tradizionale.",
                             "caution": "Verificare visita alle rovine di Muyil inclusa o meno, tassa federale aggiornata, eventuali commissioni e prezzo 2027. Il tour Midday occupa buona parte della giornata.",
-                            "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/",
                             "contacts": [
                                 {
                                     "label": "Tour della cooperativa",
@@ -1778,7 +1789,6 @@ const tripData = {
                             "pickup": "Il sito elenca hotel a Playa del Carmen, Tulum e Puerto Morelos, NON Akumal: chiedere preventivo di pickup diretto o punto d'incontro alternativo prima di scegliere.",
                             "includes": "Tour canali di Muyil con barca/flottazione secondo il programma del fornitore, guida e rientro tipicamente nel primo pomeriggio.",
                             "caution": "Non considerare incluso il trasporto da Akumal: eventuale taxi può annullare il vantaggio economico. Chiedere se il sito archeologico e le tasse siano inclusi.",
-                            "url": "https://www.paseotours.com/en/tour-muyil-canals/",
                             "contacts": [
                                 {
                                     "label": "Tour e modulo contatti",
