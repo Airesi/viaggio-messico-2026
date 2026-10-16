@@ -497,7 +497,35 @@ const tripData = {
                     "Bloccare per tempo l'ingresso alla Casa Azul e verificare gli orari dei musei.",
                     "La sera del 23 c'è il bus notturno per Oaxaca: prevedere margine per bagagli e terminal."
                 ]
-            }
+            },
+            "startDate": "2026-12-20",
+            "endDate": "2026-12-23",
+            "venues": [
+                {
+                    "name": "Maizajo",
+                    "kind": "Tacos e mais nativo",
+                    "where": "Condesa · vicino all'hotel",
+                    "description": "Taquería e cucina del mais criollo, con buone alternative vegetali e tortillas artigianali.",
+                    "tip": "La taquería non prende prenotazioni: evitare le ore di punta.",
+                    "url": "https://www.google.com/maps/search/?api=1&query=Maizajo%20Condesa%20CDMX"
+                },
+                {
+                    "name": "Casa Franca",
+                    "kind": "Jazz e cocktail",
+                    "where": "Roma Norte",
+                    "description": "Jazz e blues dal vivo in una casa dall'atmosfera intima: ideale per una serata di musica insieme.",
+                    "tip": "Provare martedì 22 dicembre; verificare cartellone, cover e tavoli vicino ai musicisti.",
+                    "url": "https://mexicocity.cdmx.gob.mx/venues/casa-franca/"
+                },
+                {
+                    "name": "Expendio de Maíz Sin Nombre",
+                    "kind": "Esperienza gastronomica informale",
+                    "where": "Roma Norte",
+                    "description": "Degustazione a sorpresa a base di mais e ingredienti del mercato, con cucina a vista e tavoli condivisi.",
+                    "tip": "Niente prenotazioni, attesa anche lunga; segnalare esigenze alimentari e portare contanti.",
+                    "url": "https://www.google.com/maps/search/?api=1&query=Expendio%20de%20Maiz%20Sin%20Nombre%20Roma%20Norte%20CDMX"
+                }
+            ]
         },
         {
             "id": 2,
@@ -865,7 +893,35 @@ const tripData = {
                     "Confermare l'apertura di Hierve el Agua il 25 dicembre prima di prenotare.",
                     "Chiedere al Cazomalli il deposito bagagli durante il trekking; il 29 resta flessibile."
                 ]
-            }
+            },
+            "startDate": "2026-12-24",
+            "endDate": "2026-12-29",
+            "venues": [
+                {
+                    "name": "Zapoteca Oaxaca",
+                    "kind": "Cucina istmeña e mezcal",
+                    "where": "Jalatlaco · vicino alla base",
+                    "description": "Specialità regionali dell'Istmo, patio e cocktail: una cena di quartiere senza formalità.",
+                    "tip": "Verificare apertura 24–25 dicembre; il 29 è un'alternativa più flessibile.",
+                    "url": "https://www.google.com/maps/search/?api=1&query=Zapoteca%20Oaxaca%205%20de%20Mayo%20307%20Jalatlaco"
+                },
+                {
+                    "name": "Totopo Güero Cocina Istmeña",
+                    "kind": "Specialità del Tehuantepec",
+                    "where": "Centro · Ignacio Allende 211",
+                    "description": "Piccolo locale con piatti dell'Istmo poco comuni nei menu turistici; bella scelta per chi ama esplorare sapori.",
+                    "tip": "Da considerare il 29 dicembre; verificare orario e piatti del giorno.",
+                    "url": "https://eatingtheworld.net/2026/04/02/totopo-guero-cocina-istmena-our-favorite-restaurant-in-oaxaca/"
+                },
+                {
+                    "name": "Itanoní",
+                    "kind": "Memelas, tetelas e mais tradizionale",
+                    "where": "Reforma · breve taxi",
+                    "description": "Tortillas e specialità fatte con mais nativo: una sosta semplice con la lavorazione del comal a vista.",
+                    "tip": "Meglio colazione/pranzo; normalmente pagamento in contanti.",
+                    "url": "https://guide.michelin.com/us/en/oaxaca/oaxaca-de-juarez_2056768/restaurant/itanoni"
+                }
+            ]
         },
         {
             "id": 6,
@@ -1039,7 +1095,35 @@ const tripData = {
                     "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
                     "Il 3 gennaio partire verso Pochutla con margine: autobus e coincidenze non sono ancora prenotati."
                 ]
-            }
+            },
+            "startDate": "2026-12-30",
+            "endDate": "2027-01-03",
+            "venues": [
+                {
+                    "name": "La Mora Café",
+                    "kind": "Brunch e caffè",
+                    "where": "San Agustinillo · Avenida Principal",
+                    "description": "Colazioni curate, succhi freschi e proposte vegetariane, perfette per mattine lente dopo il trekking.",
+                    "tip": "Locale diurno; ricontrollare orari nel periodo di Capodanno.",
+                    "url": "https://www.tripadvisor.it/Restaurant_Review-g674764-d7141246-Reviews-La_Mora_Cafe-San_Agustinillo_Southern_Mexico.html"
+                },
+                {
+                    "name": "El Navegante",
+                    "kind": "Pesce e cucina della costa",
+                    "where": "San Agustinillo",
+                    "description": "Cucina di mare e piatti messicani per una cena senza spostamenti lunghi.",
+                    "tip": "Recensioni 2026 miste: meglio controllare il menu e decidere sul posto.",
+                    "url": "https://www.tripadvisor.it/Restaurant_Review-g674764-d16759104-Reviews-El_Navegante-San_Agustinillo_Southern_Mexico.html"
+                },
+                {
+                    "name": "RestoBar del Fondo",
+                    "kind": "Cena tranquilla e cocktail",
+                    "where": "San Agustinillo · strada principale",
+                    "description": "Pesce, pizza e drink in atmosfera rilassata: un'opzione poco impegnativa per la sera.",
+                    "tip": "Per il 31 dicembre verificare disponibilità e possibili menu speciali.",
+                    "url": "https://www.google.com/maps/search/?api=1&query=RestoBar%20del%20Fondo%20San%20Agustinillo%20Oaxaca"
+                }
+            ]
         },
         {
             "id": 3,
@@ -1355,7 +1439,35 @@ const tripData = {
                     "Toniná resta un'alternativa da valutare, non una tappa aggiunta al 6 gennaio.",
                     "Lungo trasferimento il 3–4 gennaio: controllare orari e terminal prima di acquistare i bus."
                 ]
-            }
+            },
+            "startDate": "2027-01-03",
+            "endDate": "2027-01-07",
+            "venues": [
+                {
+                    "name": "Don Muchos · El Panchán",
+                    "kind": "Cena nella giungla e musica",
+                    "where": "Carretera Palenque–Ruinas · taxi",
+                    "description": "Locale rustico tra gli alberi, con musica dal vivo: piacevole se avete ancora energie dopo le rovine.",
+                    "tip": "Concordare un taxi di ritorno, soprattutto di sera.",
+                    "url": "https://palenque.gob.mx/restaurantes/"
+                },
+                {
+                    "name": "Restaurante Maya Cañada",
+                    "kind": "Cucina chiapaneca tradizionale",
+                    "where": "La Cañada · Palenque centro",
+                    "description": "Tamales e specialità regionali in una sala verde; buona alternativa alle cene sempre in hotel.",
+                    "tip": "Dalla struttura immersa nella giungla serve un taxi.",
+                    "url": "https://www.restaurantemayacanada.com/"
+                },
+                {
+                    "name": "Restaurante Bajlum",
+                    "kind": "Cucina ispirata alla tradizione maya",
+                    "where": "Carretera verso le rovine · taxi",
+                    "description": "Un'esperienza gastronomica particolare con ingredienti del territorio e racconti sulla cucina locale.",
+                    "tip": "Più costoso; recensioni contrastanti sul valore: chiedere menu e prezzo totale.",
+                    "url": "https://www.tripadvisor.com/Restaurant_Review-g249851-d7136276-Reviews-Restaurante_Bajlum-Palenque_Southern_Mexico.html"
+                }
+            ]
         },
         {
             "id": 4,
@@ -1620,7 +1732,35 @@ const tripData = {
                     "Proteggere gli stromatoliti e verificare chiusure ambientali.",
                     "Per il 7 gennaio sono ancora da confermare Tren Maya e check-in tardivo."
                 ]
-            }
+            },
+            "startDate": "2027-01-07",
+            "endDate": "2027-01-10",
+            "venues": [
+                {
+                    "name": "El Manatí Bacalar",
+                    "kind": "Caffè, brunch e arte",
+                    "where": "Centro · Calle 22",
+                    "description": "Giardino ombreggiato, piatti leggeri, arte e artigianato: ideale per una pausa lenta.",
+                    "tip": "Perfetto di giorno; verificare gli orari aggiornati.",
+                    "url": "https://www.google.com/maps/search/?api=1&query=El%20Manati%20Bacalar%20Calle%2022"
+                },
+                {
+                    "name": "Waah Cocina de Origen",
+                    "kind": "Cena creativa con sapori locali",
+                    "where": "Centro · Avenida 1",
+                    "description": "Cucina messicana contemporanea, alternative vegetali e cocktail, per una sera speciale senza resort.",
+                    "tip": "Consigliata prenotazione a cena, specialmente nel weekend.",
+                    "url": "https://www.tripadvisor.it/Restaurant_Review-g1202648-d19903370-Reviews-Waah-Bacalar_Yucatan_Peninsula.html"
+                },
+                {
+                    "name": "La Playita",
+                    "kind": "Mangiare e rilassarsi sulla laguna",
+                    "where": "Costera · fronte acqua",
+                    "description": "Cucina fusion, cocktail e vista sulla laguna: più una pausa lunga che un semplice pasto.",
+                    "tip": "Locale conosciuto e talvolta vivace: andarci di giorno per la vista.",
+                    "url": "https://www.laplayitabacalar.com/"
+                }
+            ]
         },
         {
             "id": 5,
@@ -1928,7 +2068,43 @@ const tripData = {
                     "Traghetti per Cozumel soggetti al meteo: lasciare margine negli spostamenti.",
                     "Il 15 gennaio resta libero: niente nuove escursioni."
                 ]
-            }
+            },
+            "startDate": "2027-01-10",
+            "endDate": "2027-01-16",
+            "venues": [
+                {
+                    "name": "La Choza",
+                    "kind": "Cucina messicana casalinga",
+                    "where": "Cozumel · San Miguel centro",
+                    "description": "Piatti yucatechi e messicani in un posto informale, lontano dai ristoranti dei resort.",
+                    "tip": "Dal Coral Princess serve taxi o trasferimento verso il centro.",
+                    "url": "https://cozumelmexico.net/la_choza/"
+                },
+                {
+                    "name": "Casa Kinta",
+                    "kind": "Cena romantica e vista mare",
+                    "where": "Cozumel · malecón",
+                    "description": "Bistrot messicano contemporaneo con ingredienti caraibici, perfetto per una cena al tramonto.",
+                    "tip": "Nuova apertura 2026: il vecchio Kinta in centro è chiuso; prenotare il tavolo.",
+                    "url": "https://casakinta.com/"
+                },
+                {
+                    "name": "La Casa del Pueblo",
+                    "kind": "Ceviche e tacos genuini",
+                    "where": "Akumal Pueblo",
+                    "description": "Piccolo locale di quartiere, con pesce fresco e cucina informale; più vicino alla vostra base dei beach club.",
+                    "tip": "Controllare l'orario serale prima di uscire dall'hotel.",
+                    "url": "https://www.tripadvisor.com/Restaurant_Review-g499445-d25411468-Reviews-La_Casa_Del_Pueblo-Akumal_Tulum_Yucatan_Peninsula.html"
+                },
+                {
+                    "name": "La Lunita",
+                    "kind": "Pranzo vista mare",
+                    "where": "Akumal · Half Moon Bay · taxi",
+                    "description": "Ceviche e pesce in una cornice più romantica: possibilità per la giornata libera del 15.",
+                    "tip": "Non è nel Pueblo: controllare orari, accesso e taxi.",
+                    "url": "https://www.akumalmx.com/dining-and-entertainment/2026-eating-guide-the-best-restaurants-in-akumal/"
+                }
+            ]
         }
     ],
     "locations": [
