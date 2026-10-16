@@ -215,6 +215,51 @@ function generateContent() {
             </section>
         ` : '';
 
+        // Contatti verificati per le escursioni da Akumal: proposte, NON prenotazioni.
+        // Il prezzo pubblicato è indicativo e il pickup al singolo hotel va sempre confermato.
+        const tourContactsHtml = (area.tourContacts || []).length ? `
+            <section id="tour-contacts-area-${area.id}" class="mb-8 rounded-[1.5rem] overflow-hidden border border-emerald-200 bg-white shadow-sm">
+                <div class="px-5 py-5 bg-gradient-to-r from-emerald-950 to-teal-900 text-white">
+                    <span class="block text-[10px] uppercase tracking-widest text-emerald-200 font-black">🧭 Esperienze da organizzare · 2 adulti</span>
+                    <h3 class="text-lg font-extrabold mt-1">Tour da contattare: Chichén Itzá e Muyil</h3>
+                    <p class="text-xs text-emerald-100 mt-2 leading-relaxed">Entrambi NON prenotati · richiesta preventivo con prelievo e rientro all'hotel di Akumal · prezzi indicativi da riconfermare.</p>
+                </div>
+                <div class="p-4 sm:p-5 space-y-5">
+                    ${(area.tourContacts || []).map(tour => `
+                        <article class="rounded-2xl border border-emerald-100 bg-emerald-50/30 overflow-hidden">
+                            <div class="p-4 sm:p-5 border-b border-emerald-100">
+                                <div class="flex justify-between gap-3 flex-wrap items-center">
+                                    <h4 class="text-base font-extrabold text-emerald-950">${tour.destination}</h4>
+                                    <span class="text-[10px] font-black text-amber-800 bg-amber-100 rounded-full px-3 py-1.5">${tour.date}</span>
+                                </div>
+                                <p class="text-[11px] text-emerald-800 font-bold mt-1">${tour.kind}</p>
+                                <p class="text-xs text-gray-600 mt-2 leading-relaxed">${tour.intro}</p>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 p-3 sm:p-4">
+                                ${(tour.providers || []).map(p => `
+                                    <div class="rounded-xl border border-gray-200 bg-white p-4 flex flex-col gap-2">
+                                        <h5 class="text-sm font-black text-gray-900">${p.name}</h5>
+                                        <p class="text-[11px] text-emerald-900 font-bold leading-relaxed">💰 ${p.price}</p>
+                                        <p class="text-[11px] text-gray-600 leading-relaxed"><strong class="text-gray-800">🚐 Pickup:</strong> ${p.pickup}</p>
+                                        <p class="text-[11px] text-gray-600 leading-relaxed"><strong class="text-gray-800">Incluso:</strong> ${p.includes}</p>
+                                        <p class="text-[11px] text-amber-900 bg-amber-50 rounded-lg p-3 leading-relaxed">⚠️ ${p.caution}</p>
+                                        <div class="mt-auto pt-2 flex gap-2 flex-wrap">
+                                            ${(p.contacts || []).map(c => `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 text-emerald-900 text-[11px] font-extrabold px-3 py-2">↗ ${c.label}</a>`).join('')}
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="mx-3 mb-3 sm:mx-4 sm:mb-4 rounded-xl bg-white border border-gray-200 p-4">
+                                <span class="block text-[10px] uppercase tracking-widest font-black text-orange-800 mb-2">✉️ Cosa chiedere prima di prenotare</span>
+                                <p class="text-xs text-gray-700 leading-relaxed">${tour.questions}</p>
+                            </div>
+                        </article>
+                    `).join('')}
+                    <p class="text-[11px] text-gray-500">I prezzi sono quelli pubblicizzati dagli operatori nel 2026 e non garantiscono disponibilità né tariffa per gennaio 2027. Nessuna escursione è prenotata finché non lo confermiamo.</p>
+                </div>
+            </section>
+        ` : '';
+
         // 2. ITINERARIO (Ora sta sotto, con il suo nuovo titoletto)
         let daysHtml = '';
         if (area.days && area.days.length > 0) {
@@ -257,6 +302,7 @@ function generateContent() {
             ${sierraGuideHtml}
             ${hotelSummaryHtml}
             ${hotelResearchHtml}
+            ${tourContactsHtml}
             ${transferHtml}
             ${daysHtml}
             <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
