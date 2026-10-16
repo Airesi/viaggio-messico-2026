@@ -1,5 +1,6 @@
 // Logica Principale - js/main.js
-let map; 
+let map;
+let heroImageRequestToken = 0; 
 
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
@@ -510,9 +511,7 @@ function switchArea(areaId) {
         const color = colors[areaIndex % colors.length];
 
         if (topText) {
-            topText.style.opacity = 0;
-            setTimeout(() => {
-                topText.innerHTML = `
+            topText.innerHTML = `
                     <div class="flex items-center gap-2 mb-2">
 
                         <span class="w-6 h-px bg-orange-300/70"></span>
@@ -552,30 +551,41 @@ function switchArea(areaId) {
                         ${selectedArea.description}
                     </p>
                 `;
-                topText.style.opacity = 1;
-            }, 150);
+            topText.style.opacity = 1;
         }
 
-        if (topImage && selectedArea.images && selectedArea.images.length > 0) {
-            // Un servizio esterno potrebbe non rispondere: lascia il titolo su uno sfondo gradevole.
-            topImage.onerror = () => {
-                topImage.classList.add('hidden');
-                const credit = document.getElementById('dynamic-area-credit');
-                if (credit) credit.classList.add('hidden');
-            };
-            topImage.onload = () => topImage.classList.remove('hidden');
-            topImage.alt = 'Panorama di ' + selectedArea.navTitle;
-            topImage.src = selectedArea.images[0];
-            topImage.style.opacity = 1;
-        }
+        // Ogni selezione ha una propria richiesta: le foto caricate in ritardo
+        // non possono sovrascrivere la regione attualmente selezionata.
+        const imageToken = ++heroImageRequestToken;
         const credit = document.getElementById('dynamic-area-credit');
+        if (topImage) {
+            topImage.classList.add('hidden');
+            const imageUrl = selectedArea.images?.[0];
+            if (imageUrl) {
+                const nextImage = new Image();
+                nextImage.onload = () => {
+                    if (imageToken !== heroImageRequestToken) return;
+                    topImage.src = imageUrl;
+                    topImage.alt = 'Panorama di ' + selectedArea.navTitle;
+                    topImage.classList.remove('hidden');
+                    topImage.style.opacity = 1;
+                    if (credit && selectedArea.heroCredit?.url) credit.classList.remove('hidden');
+                };
+                nextImage.onerror = () => {
+                    if (imageToken !== heroImageRequestToken) return;
+                    topImage.removeAttribute('src');
+                    topImage.classList.add('hidden');
+                    if (credit) credit.classList.add('hidden');
+                };
+                nextImage.src = imageUrl;
+            }
+        }
         if (credit) {
+            credit.classList.add('hidden');
             if (selectedArea.heroCredit?.url) {
                 credit.href = selectedArea.heroCredit.url;
                 credit.textContent = 'Foto: ' + selectedArea.heroCredit.author + ' · ' + selectedArea.heroCredit.license;
-                credit.classList.remove('hidden');
             } else {
-                credit.classList.add('hidden');
                 credit.removeAttribute('href');
                 credit.textContent = '';
             }
