@@ -33,7 +33,7 @@
     </main>
 
     <!-- Dati e Logica -->
-    <script src="js/data.js?v=20261016-content-review-1"></script>
+    <script src="js/data.js?v=20261016-phase3-media-1"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const dayId = urlParams.get('day');
@@ -49,10 +49,15 @@
         if (selectedDay) {
             const container = document.getElementById('day-content');
             
-            // Genera Immagini
-            const imagesHtml = (selectedDay.images || []).map(img => 
-                `<img src="${img}" alt="Luogo della tappa: ${selectedDay.title}" loading="lazy" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-4">`
-            ).join('');
+            // Foto verificate della tappa con attribuzioni Wikimedia Commons.
+            // L'immagine non implica che un'attività opzionale sia stata prenotata.
+            const imagesHtml = (selectedDay.images || []).map((img, i) => {
+                const credit = (selectedDay.imageCredits || [])[i];
+                return `<figure class="mb-5">
+                    <img src="${img}" alt="${credit?.caption || 'Fotografia rappresentativa di ' + selectedDay.location}" loading="lazy" decoding="async" width="960" height="630" class="w-full h-48 sm:h-64 object-cover rounded-xl bg-amber-50">
+                    ${credit ? `<figcaption class="pt-2 text-xs text-gray-500 leading-relaxed">${credit.caption} · Foto: <a href="${credit.url}" target="_blank" rel="noopener noreferrer" class="underline hover:text-emerald-800">${credit.author} · ${credit.license} · Wikimedia Commons</a>. Foto d'archivio: non ritrae necessariamente il giorno del viaggio.</figcaption>` : ''}
+                </figure>`;
+            }).join('');
 
             // Genera Link
             const linksHtml = (selectedDay.links || []).map(link => 
@@ -81,9 +86,14 @@
                     </section>
                 ` : ''}
                 
-                <!-- MAPPA -->
-                <h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mb-3">Itinerario su mappa</h2>
-                <div id="map-detail" class="mb-8 border border-gray-200 shadow-inner"></div>
+                <!-- MAPPA: marcatori orientativi, nessun percorso stradale fittizio -->
+                ${(selectedDay.route || []).length ? `
+                    <section class="mb-8">
+                        <h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mb-2">Luoghi sulla mappa</h2>
+                        <p class="text-xs text-gray-500 mb-3 leading-relaxed">${selectedDay.routeNote || 'I segnaposto indicano i luoghi in ordine di visita, non un tragitto stradale verificato.'} Per navigare sul posto usare un navigatore aggiornato.</p>
+                        <div id="map-detail" class="border border-gray-200 shadow-inner" role="region" aria-label="Mappa dei luoghi della giornata"></div>
+                    </section>`
+                    : `<p class="text-xs text-gray-500 my-5">Giornata di trasferimento senza tappe mappabili con precisione: consulta i collegamenti e gli operatori indicati.</p>`}
                 
                 ${linksHtml ? `<h2 class="text-lg sm:text-xl font-extrabold text-emerald-950 mb-3">Risorse utili</h2>
                 <div class="flex flex-wrap">${linksHtml}</div>` : ''}
@@ -118,21 +128,10 @@
                     latlngs.push(stop.coords);
                 });
 
-                // Disegna la linea se c'è più di un punto
-                if (latlngs.length > 1) {
-                    L.polyline(latlngs, {
-                        color: '#10b981', // Verde smeraldo
-                        weight: 4, 
-                        dashArray: '5, 10' // Linea tratteggiata
-                    }).addTo(mapDetail);
-                }
-                
-                // Centra la mappa su tutti i punti con un po' di margine (padding)
-                mapDetail.fitBounds(L.latLngBounds(latlngs), {padding: [30, 30]});
-            } else {
-                // Nascondi la mappa se non ci sono coordinate
-                document.getElementById('map-detail').style.display = 'none';
-                document.getElementById('map-detail').previousElementSibling.style.display = 'none';
+                // Solo punti reali/contenuti nel programma, non linee che sembrano percorsi verificati.
+                // Centra la mappa sui luoghi selezionati.
+                if (latlngs.length === 1) mapDetail.setView(latlngs[0], 12);
+                else mapDetail.fitBounds(L.latLngBounds(latlngs), {padding: [30, 30]});
             }
         }
     </script>
