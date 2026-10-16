@@ -1,6 +1,6 @@
 // Logica Principale - js/main.js
 let map;
-let heroImageRequestToken = 0; 
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
@@ -554,32 +554,10 @@ function switchArea(areaId) {
             topText.style.opacity = 1;
         }
 
-        // Ogni selezione ha una propria richiesta: le foto caricate in ritardo
-        // non possono sovrascrivere la regione attualmente selezionata.
-        const imageToken = ++heroImageRequestToken;
+        // Aggiorna subito src sul vero elemento IMG: niente preload bloccante.
+        // Una nuova selezione interrompe la richiesta precedente sullo stesso IMG.
+        const imageUrl = selectedArea.images?.[0] || '';
         const credit = document.getElementById('dynamic-area-credit');
-        if (topImage) {
-            topImage.classList.add('hidden');
-            const imageUrl = selectedArea.images?.[0];
-            if (imageUrl) {
-                const nextImage = new Image();
-                nextImage.onload = () => {
-                    if (imageToken !== heroImageRequestToken) return;
-                    topImage.src = imageUrl;
-                    topImage.alt = 'Panorama di ' + selectedArea.navTitle;
-                    topImage.classList.remove('hidden');
-                    topImage.style.opacity = 1;
-                    if (credit && selectedArea.heroCredit?.url) credit.classList.remove('hidden');
-                };
-                nextImage.onerror = () => {
-                    if (imageToken !== heroImageRequestToken) return;
-                    topImage.removeAttribute('src');
-                    topImage.classList.add('hidden');
-                    if (credit) credit.classList.add('hidden');
-                };
-                nextImage.src = imageUrl;
-            }
-        }
         if (credit) {
             credit.classList.add('hidden');
             if (selectedArea.heroCredit?.url) {
@@ -589,6 +567,23 @@ function switchArea(areaId) {
                 credit.removeAttribute('href');
                 credit.textContent = '';
             }
+        }
+        if (topImage) {
+            topImage.classList.add('hidden');
+            topImage.onload = () => {
+                if (topImage.getAttribute('src') !== imageUrl) return;
+                topImage.classList.remove('hidden');
+                topImage.style.opacity = 1;
+                if (credit && selectedArea.heroCredit?.url) credit.classList.remove('hidden');
+            };
+            topImage.onerror = () => {
+                if (topImage.getAttribute('src') !== imageUrl) return;
+                topImage.classList.add('hidden');
+                if (credit) credit.classList.add('hidden');
+            };
+            topImage.alt = 'Panorama di ' + selectedArea.navTitle;
+            if (imageUrl) topImage.src = imageUrl;
+            else topImage.removeAttribute('src');
         }
     }
 }
