@@ -31,7 +31,7 @@
     </div>
 
     <!-- Dati e Logica -->
-    <script src="js/data.js?v=20261016-nav-collapse-1"></script>
+    <script src="js/data.js?v=20261016-content-review-1"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const dayId = urlParams.get('day');
@@ -69,6 +69,15 @@
 
                 <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Programma della giornata</h3>
                 <div class="text-gray-600 leading-relaxed mb-8 space-y-4">${selectedDay.fullDesc}</div>
+
+                ${(selectedDay.operationalNotes || []).length ? `
+                    <section class="mb-8 border-l-4 border-amber-400 rounded-r-xl bg-amber-50 p-4 sm:p-5">
+                        <h3 class="text-sm font-extrabold text-amber-950 mb-2">📌 Verifiche e informazioni pratiche</h3>
+                        <ul class="space-y-2 text-sm leading-relaxed text-amber-950">
+                            ${selectedDay.operationalNotes.map(note => `<li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>${note}</span></li>`).join('')}
+                        </ul>
+                    </section>
+                ` : ''}
                 
                 <!-- MAPPA -->
                 <h3 class="text-xl font-bold text-gray-800 mb-3">Itinerario su Mappa</h3>
