@@ -1,5 +1,5 @@
 // Dati del Viaggio - js/data.js
-// Prenotazioni e importi Booking; prenotato non significa pagato.
+// Prenotazioni alberghiere confermate ≠ pagamenti verificati.
 
 const tripData = {
     "general": {
@@ -8,11 +8,11 @@ const tripData = {
         "footerName": "Spedizione Sud Messico (29 Giorni)",
         "footerSeason": "Dicembre - Gennaio",
         "hotelBookings": {
-            "source": "Riepilogo Booking aggiornato al 16 ottobre 2026: 7 prenotazioni confermate per due adulti.",
-            "totalEuro": 1679,
-            "paidStatus": "Prenotazioni confermate, pagamenti distinti: Coral Princess non pagato; Hotel Aires e gli altri senza addebito verificato nelle schermate.",
-            "validTotalEuro": 1679,
-            "warning": "Hotel Aires Bacalar 7–10 gennaio confermato a €290; Coral Princess Cozumel 10–12 gennaio confermato a €300. Il check-in tardivo ad Aires rimane da confermare con la struttura.",
+            "source": "Riepilogo Booking aggiornato al 16 ottobre 2026: 8 soggiorni confermati per 2 adulti, compreso El Ultimo Maya (€169 dal 12 al 16 gennaio).",
+            "totalEuro": 1848,
+            "paidStatus": "Prenotazioni confermate NON equivalgono a pagamenti: Coral Princess dichiarato non pagato; El Ultimo Maya e gli altri pagamenti non verificati.",
+            "validTotalEuro": 1848,
+            "warning": "Totale hotel €1.848 (8 prenotazioni; 23 notti). Non include notti nelle cabine del trekking Sierra Norte, trasporti, escursioni, eventuali altre notti o altri costi. All'Hotel Aires resta da confermare il check-in tardivo.",
             "items": [
                 {
                     "name": "The PM at Condesa Arts & Boutique Experience",
@@ -88,6 +88,19 @@ const tripData = {
                     "paymentStatus": "Non pagato",
                     "roomType": "Camera King Deluxe Fronte Oceano",
                     "breakfast": "Non inclusa",
+                    "areaId": 5
+                },
+                {
+                    "name": "El Ultimo Maya",
+                    "city": "Akumal Pueblo",
+                    "checkin": "2027-01-12",
+                    "checkout": "2027-01-16",
+                    "totalEuro": 169,
+                    "cancellation": "Cancellazione gratuita (offerta visualizzata: prima dell'11 gen 2027; verificare nella conferma)",
+                    "status": "Confermato",
+                    "paymentStatus": "Pagamento non verificato",
+                    "roomType": "Camera Deluxe · 2 letti singoli (tariffa selezionata; verificare nella conferma)",
+                    "breakfast": "Non indicata come inclusa",
                     "areaId": 5
                 }
             ]
@@ -1641,11 +1654,11 @@ const tripData = {
         {
             "id": 5,
             "navTitle": "Caribe",
-            "navSubtitle": "Cozumel e Akumal",
+            "navSubtitle": "Cozumel e Akumal · hotel prenotati",
             "badge": "10–16 Gen • Cozumel, Chichén Itzá, Muyil e riposo ad Akumal",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "10–12 gennaio: Coral Princess Hotel & Dive Resort a Cozumel CONFERMATO (€300, NON PAGATO). 12–16 gennaio: Akumal, quattro notti DA PRENOTARE. Da Akumal: 13 gennaio tour collettivo a Chichén Itzá, 14 gennaio canali di Muyil/Sian Ka’an, entrambi ANCORA DA CONTATTARE E PRENOTARE; 15 gennaio completamente libero per il mare. Il 16 transfer diretto all’aeroporto di Cancún.",
+            "description": "Coral Princess a Cozumel CONFERMATO 10–12 gen (€300, non pagato) ed El Ultimo Maya ad Akumal Pueblo CONFERMATO 12–16 gen (€169, pagamento da verificare). Chichén Itzá 13 gen e Muyil/Sian Ka’an 14 gen sono tour NON prenotati. Il 15 giornata di mare senza escursioni, il 16 volo da Cancún.",
             "images": [
                 "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
             ],
@@ -1684,15 +1697,15 @@ const tripData = {
                 }
             ],
             "basecamp": {
-                "zone": "Cozumel 10–12 gen (2 notti confermate) · Akumal 12–16 gen (4 notti da cercare)",
-                "hotelIdea": "Coral Princess Hotel & Dive Resort · 10–12 gen · King Deluxe Fronte Oceano · €300 CONFERMATO, NON PAGATO, cancellazione gratuita, senza colazione. Akumal 12–16 gen ancora da prenotare.",
-                "why": "Il 10 arrivo a Cozumel via Playa del Carmen e traghetto; Coral Princess prenotato a €300. 11 possibile snorkeling notturno; 12 Akumal (hotel da cercare). 13 Chichén Itzá con tour collettivo A/R; 14 Muyil e flottazione canali; 15 GIORNO LIBERO senza altri tour; 16 transfer diretto a Cancún Aeroporto. I tour 13/14 non sono prenotati, attendere preventivi pickup Akumal.",
+                "zone": "Cozumel 10–12 gen · Coral Princess CONFERMATO | Akumal 12–16 gen · El Ultimo Maya CONFERMATO",
+                "hotelIdea": "Coral Princess · 2 notti, 10–12 gen, King Deluxe Fronte Oceano, €300, CONFERMATO NON PAGATO. El Ultimo Maya · 4 notti, 12–16 gen, Camera Deluxe con letti singoli (da verificare nella conferma), €169, CONFERMATO, pagamento non verificato.",
+                "why": "10 gen arrivo a Cozumel via Playa del Carmen; 11 snorkeling notturno proposto (non prenotato); 12 traghetto e transfer fino a El Ultimo Maya ad Akumal Pueblo (prenotato). 13 Chichén Itzá e 14 Muyil: chiedere pickup specifico presso El Ultimo Maya. Il 15 mare e relax; 16 transfer aeroportuale. Non cambiare hotel per le escursioni.",
                 "tags": [
-                    "✅ Coral Princess prenotato",
-                    "🌙 Night snorkeling da prenotare",
-                    "🏛️ Chichén Itzá 13 gen · contatti pronti",
-                    "🌿 Muyil 14 gen · contatti pronti",
-                    "🏖️ 15 gen · mare senza programmi"
+                    "✅ Coral Princess · 10–12 gen",
+                    "✅ El Ultimo Maya · 12–16 gen",
+                    "🏛️ Chichén Itzá · tour 13 gen",
+                    "🌿 Muyil · tour 14 gen",
+                    "🏖️ 15 gen · giornata libera"
                 ],
                 "transports": [
                     {
@@ -1714,16 +1727,16 @@ const tripData = {
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "€300 · Coral Princess confermato e NON pagato; Akumal 12–16 da quotare",
-                "spent": "€0 pagati per Coral Princess (secondo quanto indicato); prenotazione confermata",
+                "total": "€469 · hotel Caribe confermati (Coral Princess €300 + El Ultimo Maya €169) · tour e trasferimenti esclusi",
+                "spent": "Stato pagamenti: Coral Princess non pagato; El Ultimo Maya non verificato",
                 "items": [
                     {
                         "name": "Coral Princess · 10–12 gen · King Deluxe Fronte Oceano",
                         "cost": "€300 · CONFERMATO, NON pagato, cancellazione gratuita"
                     },
                     {
-                        "name": "Akumal · alloggio 12–16 gen, 4 notti per due",
-                        "cost": "Da prenotare / quotare"
+                        "name": "El Ultimo Maya · Akumal · 12–16 gen · 4 notti",
+                        "cost": "€169 · CONFERMATO · cancellazione gratuita · pagamento non verificato"
                     },
                     {
                         "name": "Tren Maya Bacalar → Playa del Carmen + traghetto · 10 gen",
@@ -1773,9 +1786,9 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Hotel Akumal · 12–16 gen, 4 notti",
-                    "status": "DA PRENOTARE",
-                    "type": "warning"
+                    "name": "El Ultimo Maya · Akumal · 12–16 gen, 4 notti",
+                    "status": "CONFERMATO · €169 · pagamento da verificare",
+                    "type": "success"
                 },
                 {
                     "name": "Tour collettivo Chichén Itzá · 13 gen · 2 operatori da contattare",
@@ -1818,10 +1831,10 @@ const tripData = {
                 {
                     "id": "5-jan12",
                     "dayName": "Giorno 23 (12 Gen)",
-                    "title": "Da Cozumel ad Akumal: quattro notti da cercare",
+                    "title": "Da Cozumel ad Akumal: El Ultimo Maya confermato",
                     "location": "Cozumel → Playa del Carmen → Akumal",
-                    "shortDesc": "Traghetto verso Playa del Carmen e transfer ad Akumal; hotel 12–16 ancora da scegliere.",
-                    "fullDesc": "<p>Check-out dal Coral Princess e traghetto Cozumel → <strong>Playa del Carmen</strong>. Transfer via strada fino alla località di <strong>Akumal / Aventuras Akumal</strong> e check-in per <strong>quattro notti dal 12 al 16 gennaio</strong>, ancora da prenotare. Attenzione all'eventuale vento che potrebbe modificare la navigazione.</p><p><strong>Candidato non confermato:</strong> Aquatech Villas DeRosa Resort. Verificare se l'unità proposta è davvero fronte mare, se il ristorante è operativo, il costo dei taxi e il trasferimento per l'aeroporto.</p>"
+                    "shortDesc": "Traghetto per Playa del Carmen e transfer ad Akumal Pueblo; check-in El Ultimo Maya 12–16 gennaio già confermato.",
+                    "fullDesc": "<p>Check-out dal Coral Princess, traghetto Cozumel → <strong>Playa del Carmen</strong>, poi trasferimento ad <strong>Akumal Pueblo</strong>. Orari dei traghetti e taxi da verificare.</p><p><strong>El Ultimo Maya CONFERMATO su Booking</strong> per il <strong>12–16 gennaio 2027, 4 notti, 2 adulti, €169</strong>, cancellazione gratuita. L'offerta selezionata mostrava <strong>Camera Deluxe con 2 letti singoli</strong>, aria condizionata, balcone e bagno privato: verificare la categoria nel dettaglio della conferma. <strong>Pagamento non verificato.</strong> La struttura è ad Akumal Pueblo, non direttamente sulla spiaggia; raggiungere la baia mediante percorso pedonale sicuro oppure taxi.</p>"
                 },
                 {
                     "id": "5-jan13",
@@ -1829,7 +1842,7 @@ const tripData = {
                     "title": "Chichén Itzá: tour collettivo da Akumal",
                     "location": "Akumal → Chichén Itzá → Akumal",
                     "shortDesc": "Tour guidato di un giorno, senza guidare. Due operatori da contattare; pickup da confermare.",
-                    "fullDesc": "<p><strong>13 gennaio · Chichén Itzá</strong>: escursione collettiva A/R da Akumal, con trasporto e guida; hotel ad Akumal ancora da scegliere. <strong>NON PRENOTATO</strong>. Chiedere ai due operatori indicati nel riquadro «Tour da contattare» in Caribe un preventivo scritto per <strong>due adulti</strong> che comprenda <strong>pickup presso l'hotel</strong>, ingresso INAH e imposte per stranieri, guida, programma e prezzo finale. Le offerte pubblicizzate partono da circa <strong>1.300 MXN / 75 USD a persona</strong>, ma non sono preventivi per il 13/01/2027.</p><p>Controllare durata effettiva della visita a Chichén Itzá, eventuali soste commerciali e costi esclusi (bevande o giubbotto al cenote). Niente guida privata né auto a noleggio. Dopo la giornata, ritorno alla stessa base ad Akumal. Il <strong>15 gennaio</strong> resta libero.</p>",
+                    "fullDesc": "<p><strong>13 gennaio · Chichén Itzá</strong>: escursione collettiva A/R da Akumal, con trasporto e guida; El Ultimo Maya ad Akumal Pueblo già prenotato. <strong>NON PRENOTATO</strong>. Chiedere ai due operatori indicati nel riquadro «Tour da contattare» in Caribe un preventivo scritto per <strong>due adulti</strong> che comprenda <strong>pickup presso El Ultimo Maya (o punto di incontro concordato)</strong>, ingresso INAH e imposte per stranieri, guida, programma e prezzo finale. Le offerte pubblicizzate partono da circa <strong>1.300 MXN / 75 USD a persona</strong>, ma non sono preventivi per il 13/01/2027.</p><p>Controllare durata effettiva della visita a Chichén Itzá, eventuali soste commerciali e costi esclusi (bevande o giubbotto al cenote). Niente guida privata né auto a noleggio. Dopo la giornata, ritorno alla stessa base ad Akumal. Il <strong>15 gennaio</strong> resta libero.</p>",
                     "links": [
                         {
                             "text": "🏛️ Chichen Itza Tours · Riviera Maya",
@@ -1851,7 +1864,7 @@ const tripData = {
                     "title": "Muyil e flottazione nei canali di Sian Ka’an",
                     "location": "Akumal → Muyil / Sian Ka’an → Akumal",
                     "shortDesc": "Barca e flottazione: contattare la cooperativa maya e confrontare una soluzione più economica.",
-                    "fullDesc": "<p><strong>14 gennaio · Muyil e canali di Sian Ka’an</strong> da Akumal: barca sulle lagune e <strong>flottazione nel canale maya</strong> con guida autorizzata. Tour <strong>NON PRENOTATO</strong>. Contattare la <strong>Community Tours Sian Ka’an</strong>, cooperativa locale: il tour Ancient Canal Midday dichiara transfer incluso da Akumal, tariffa 2026 pubblicata <strong>3.380 MXN/persona</strong> più tassa di conservazione (~225 MXN/persona) ed eventuali commissioni. Chiedere costo finale e se comprende il <strong>sito archeologico di Muyil</strong>.</p><p><strong>Alternativa economica da verificare:</strong> Paseo Tours pubblicizza 100 €/persona per i canali, ma non indica pickup da Akumal: chiedere supplemento e disponibilità prima di scegliere. Sul sito principale del viaggio sono salvati entrambi i contatti e le domande da inviare.</p>",
+                    "fullDesc": "<p><strong>14 gennaio · Muyil e canali di Sian Ka’an</strong> da El Ultimo Maya ad Akumal Pueblo: barca sulle lagune e <strong>flottazione nel canale maya</strong> con guida autorizzata. Tour <strong>NON PRENOTATO</strong>. Contattare la <strong>Community Tours Sian Ka’an</strong>, cooperativa locale: il tour Ancient Canal Midday dichiara transfer incluso da Akumal, tariffa 2026 pubblicata <strong>3.380 MXN/persona</strong> più tassa di conservazione (~225 MXN/persona) ed eventuali commissioni. Chiedere costo finale e se comprende il <strong>sito archeologico di Muyil</strong>.</p><p><strong>Alternativa economica da verificare:</strong> Paseo Tours pubblicizza 100 €/persona per i canali, ma non indica pickup da Akumal: chiedere supplemento e disponibilità prima di scegliere. Sul sito principale del viaggio sono salvati entrambi i contatti e le domande da inviare.</p>",
                     "links": [
                         {
                             "text": "🌿 Community Tours Sian Ka’an · Ancient Canal",
@@ -1873,7 +1886,7 @@ const tripData = {
                     "title": "Akumal: giornata interamente libera",
                     "location": "Akumal · mare e relax",
                     "shortDesc": "Niente tour, niente trasferimenti: giornata di mare e riposo.",
-                    "fullDesc": "<p><strong>15 gennaio:</strong> giornata da difendere come <strong>relax totale</strong> ad Akumal, senza spostamenti programmati. Dopo Chichén Itzá e Muyil, niente Isla Contoy né nuove escursioni. Spiaggia, snorkeling semplice vicino all'hotel se lo desiderate, e nessuna sveglia.</p>"
+                    "fullDesc": "<p><strong>15 gennaio:</strong> giornata libera da difendere come <strong>relax totale</strong>. Partenza dall'El Ultimo Maya, ad Akumal Pueblo (non direttamente sul mare): raggiungere la baia con percorso pedonale sicuro o breve taxi e godersi la spiaggia. Dopo Chichén Itzá e Muyil, nessuna altra escursione e nessuna sveglia.</p>"
                 },
                 {
                     "id": "5-jan16",
@@ -1881,7 +1894,7 @@ const tripData = {
                     "title": "Ultime ore ad Akumal e volo da Cancún",
                     "location": "Akumal → Cancún Aeroporto",
                     "shortDesc": "Transfer via strada all'aeroporto CUN, volo AF651 delle 21:00.",
-                    "fullDesc": "<p>Check-out dal futuro hotel ad Akumal, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
+                    "fullDesc": "<p>Check-out dal El Ultimo Maya ad Akumal Pueblo, qualche ora di mare se gli orari lo consentono e <strong>transfer su strada direttamente all'aeroporto di Cancún, Terminal 4</strong>. Nessun traghetto il giorno del volo: prevedere comunque ampio margine per traffico e formalità. Volo Air France <strong>AF651 delle 21:00 del 16 gennaio</strong>.</p>"
                 },
                 {
                     "id": "5-jan17",
@@ -1909,20 +1922,16 @@ const tripData = {
                     "body": "Night Snorkel Cozumel da prenotare, preferibilmente la sera dell'11 gennaio; partenza locale e condizioni marine da confermare. Coral Princess è sul lato nord, Money Bar è a sud: taxi serale da organizzare."
                 },
                 {
-                    "title": "Akumal · prossima prenotazione",
-                    "body": "Ricerca 12–16 gennaio 2027 (4 notti, 2 adulti). Aquatech Villas DeRosa è un candidato, non una prenotazione: controllare camera fronte mare, accesso acqua, colazione/ristorante, taxi per le escursioni e transfer CUN."
+                    "title": "El Ultimo Maya · CONFERMATO 12–16 gennaio · €169",
+                    "body": "El Ultimo Maya ad Akumal Pueblo, 4 notti per 2 adulti, Booking confermato €169 e cancellazione gratuita. L'offerta visualizzata era Camera Deluxe con 2 letti singoli e bagno privato: controllare categoria definitiva nella conferma. L'hotel non è sul mare; verificare strada pedonale fino ad Akumal Bay e il pickup dei tour. Pagamento non verificato."
                 },
                 {
                     "title": "Spostamenti reali",
                     "body": "10 gen Bacalar → Playa del Carmen (treno da verificare) + porto + traghetto → Cozumel. 12 gen Cozumel → Playa del Carmen in traghetto + transfer Akumal. 16 gen Akumal → Cancún Aeroporto via strada, senza traghetto."
                 },
                 {
-                    "title": "Alternative precedentemente considerate",
-                    "body": "Il precedente piano Tulum 10–13 + zona Cancún 13–16 non è più quello attuale; Villas DeRosa non prenotato; La Villa Mexicana a Xpu-Há scartata per costo e lontananza dalla spiaggia."
-                },
-                {
                     "title": "13 gennaio · Chichén Itzá da Akumal (non prenotato)",
-                    "body": "Chichen Itza Tours Classic Riviera Maya pubblicizza da 75 USD/persona; Vive Cancún Económico da 1.300 MXN/persona. Entrambi da contattare: non è ancora confermato il prelievo al futuro hotel Akumal né il prezzo definitivo 2027. Chiedere ingresso INAH, tasse per stranieri, eventuali soste commerciali."
+                    "body": "Chichen Itza Tours Classic Riviera Maya pubblicizza da 75 USD/persona; Vive Cancún Económico da 1.300 MXN/persona. Entrambi da contattare: non è ancora confermato il prelievo al El Ultimo Maya ad Akumal Pueblo né il prezzo definitivo 2027. Chiedere ingresso INAH, tasse per stranieri, eventuali soste commerciali."
                 },
                 {
                     "title": "14 gennaio · Muyil Sian Ka’an (non prenotato)",
@@ -1931,31 +1940,13 @@ const tripData = {
                 {
                     "title": "15 gennaio · giornata libera protetta",
                     "body": "Isla Contoy eliminata dal programma: giornata di riposo e spiaggia ad Akumal senza escursioni o sveglie. Possibili cambi solo su richiesta."
-                }
-            ],
-            "hotelSearches": [
-                {
-                    "label": "Akumal · 12–16 gennaio (4 notti)",
-                    "ss": "Akumal, Quintana Roo, Messico",
-                    "checkin": "2027-01-12",
-                    "checkout": "2027-01-16",
-                    "note": "Cercare piccoli hotel fronte spiaggia, vera vista mare e transfer per CUN."
                 },
                 {
-                    "label": "Aquatech Villas DeRosa · 4 notti",
-                    "ss": "Aquatech Villas DeRosa Resort, Aventuras Akumal",
-                    "checkin": "2027-01-12",
-                    "checkout": "2027-01-16",
-                    "note": "Controllare categoria della camera, cucina, ristorante e costi taxi."
-                },
-                {
-                    "label": "Aventuras Akumal · piccoli alloggi sul mare",
-                    "ss": "Aventuras Akumal, Quintana Roo, Messico",
-                    "checkin": "2027-01-12",
-                    "checkout": "2027-01-16",
-                    "note": "Confrontare accesso diretto spiaggia, servizi, cancellazione gratuita."
+                    "title": "Altre sistemazioni valutate (non prenotate)",
+                    "body": "Aquatech Villas DeRosa, Las Villas Akumal, Natura Glamping, Camp Akumal, Magic Xcacel e Botånica Tulum erano alternative esaminate. Per il 12–16 gennaio l'hotel confermato è El Ultimo Maya."
                 }
             ],
+            "hotelSearches": [],
             "tourContacts": [
                 {
                     "date": "13 gennaio 2027",
@@ -1966,7 +1957,7 @@ const tripData = {
                         {
                             "name": "Chichen Itza Tours · Classic Riviera Maya",
                             "price": "Pubblicizza 75 USD per adulto, ingresso e imposte inclusi (circa 150 USD per due). Tariffe in diverse sezioni del sito non perfettamente coerenti: chiedere preventivo scritto.",
-                            "pickup": "Pickup negli hotel della Riviera Maya soggetto a restrizioni: per piccole strutture/appartamenti potrebbe essere un punto di incontro esterno. Chiedere specificamente per il futuro hotel ad Akumal.",
+                            "pickup": "Pickup negli hotel della Riviera Maya soggetto a restrizioni: per piccole strutture/appartamenti potrebbe essere un punto di incontro esterno. Chiedere specificamente per El Ultimo Maya ad Akumal Pueblo.",
                             "includes": "Autobus A/R, guida certificata, Chichén Itzá, pranzo buffet, cenote e breve Valladolid.",
                             "caution": "Verificare prezzo finale in MXN per 2 adulti, durata sul sito archeologico, eventuali soste commerciali e costi aggiuntivi (bevande, giubbotto cenote).",
                             "url": "https://chichen-itzatours.com/chichen-itza-tour-from-riviera-maya.html",
@@ -1984,7 +1975,7 @@ const tripData = {
                         {
                             "name": "Vive Cancún · Chichén económico Riviera Maya",
                             "price": "1.300 MXN per adulto pubblicizzati, 2.600 MXN per due, con ingresso e tasse dichiarati inclusi: confermare validità il 13/01/2027.",
-                            "pickup": "Annuncia partenza dai punti/hotel della Riviera Maya, ma serve conferma ESPLICITA per l'alloggio ad Akumal e dell'eventuale supplemento.",
+                            "pickup": "Annuncia partenza dai punti/hotel della Riviera Maya, ma serve conferma ESPLICITA per El Ultimo Maya ad Akumal Pueblo e dell'eventuale supplemento.",
                             "includes": "Trasporto A/R, guida bilingue, ingresso Chichén, buffet, cenote e breve Valladolid.",
                             "caution": "Prevede anche rituale maya e tempo per acquisti/artigianato: chiedere se le soste commerciali sono obbligatorie. Bevande e noleggio giubbotto al cenote esclusi.",
                             "url": "https://vivecancun.com/excursion-chichen-itza-economico-riviera-maya.php?s-categoria=reservar",
@@ -2000,7 +1991,7 @@ const tripData = {
                             ]
                         }
                     ],
-                    "questions": "Per 2 adulti il 13/01/2027: pickup e ritorno esattamente al nostro alloggio ad Akumal (nome da comunicare), prezzo finale con biglietti e tutte le imposte per stranieri, orari reali, durata della visita guidata, sosta cenote/Valladolid e eventuali soste commerciali."
+                    "questions": "Per 2 adulti il 13/01/2027: pickup e ritorno esattamente a El Ultimo Maya, Avenida Gonzalo Guerrero Manzana 6 Lote 3, Akumal Pueblo, prezzo finale con biglietti e tutte le imposte per stranieri, orari reali, durata della visita guidata, sosta cenote/Valladolid e eventuali soste commerciali."
                 },
                 {
                     "date": "14 gennaio 2027",
@@ -2011,7 +2002,7 @@ const tripData = {
                         {
                             "name": "Community Tours Sian Ka’an · Ancient Canal",
                             "price": "Midday pubblicizzato a 3.380 MXN per adulto (6.760 MXN in due) con transfer Akumal incluso; tassa federale riserva extra circa 225 MXN/persona, oltre a eventuali commissioni.",
-                            "pickup": "Il tour Midday delle 10:00 include il transfer A/R da Akumal e Aventuras Akumal; per l'Early 06:00 è previsto un supplemento di 320 MXN/persona. Concordare il punto esatto dell'hotel.",
+                            "pickup": "Il tour Midday delle 10:00 include il transfer A/R da Akumal e Aventuras Akumal; per l'Early 06:00 è previsto un supplemento di 320 MXN/persona. Chiedere se il prelievo raggiunge El Ultimo Maya ad Akumal Pueblo, non solo la costa di Akumal.",
                             "includes": "Cooperativa maya locale, barca sulle lagune, flottazione nel canale antico, guida e pranzo tradizionale.",
                             "caution": "Verificare visita alle rovine di Muyil inclusa o meno, tassa federale aggiornata, eventuali commissioni e prezzo 2027. Il tour Midday occupa buona parte della giornata.",
                             "url": "https://siankaantours.com.mx/experiences/ancient-canal-tour-sian-kaan/",
@@ -2045,7 +2036,7 @@ const tripData = {
                             ]
                         }
                     ],
-                    "questions": "Per 2 adulti il 14/01/2027: pickup e rientro ad Akumal o Aventuras Akumal (hotel da comunicare), prezzo totale per due CON trasporto, ingressi INAH/CONANP, barca, giubbotti e flottazione; confermare se sono comprese le rovine di Muyil, durata e politiche per maltempo."
+                    "questions": "Per 2 adulti il 14/01/2027: pickup e rientro a El Ultimo Maya, Avenida Gonzalo Guerrero Manzana 6 Lote 3, Akumal Pueblo, prezzo totale per due CON trasporto, ingressi INAH/CONANP, barca, giubbotti e flottazione; confermare se sono comprese le rovine di Muyil, durata e politiche per maltempo."
                 }
             ]
         }
@@ -2179,7 +2170,7 @@ const tripData = {
         },
         {
             "areaId": 5,
-            "name": "Akumal · alloggio ancora da scegliere (pin indicativo)",
+            "name": "Akumal Pueblo · El Ultimo Maya prenotato (pin indicativo)",
             "coords": [
                 20.398,
                 -87.32
