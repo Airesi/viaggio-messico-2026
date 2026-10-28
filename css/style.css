@@ -89,3 +89,28 @@
     .trip-nav .trip-nav-btn, .gallery-img { transition: none; }
     .trip-nav .trip-nav-btn:hover { transform: none; }
 }
+
+/* Teotihuacán: schematic day plan without discarded tours. */
+.trip-day-content .teo-plan { display: grid; gap: 1rem; font-size: .98rem; line-height: 1.65; }
+.trip-day-content .teo-status-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.trip-day-content .teo-status,
+.trip-day-content .teo-panel { border: 1px solid #e2e9e2; border-radius: 1rem; padding: 1.05rem 1.2rem; background: #fffdf8; }
+.trip-day-content .teo-status-confirmed { border-color: #b8dfca; background: #f1faf4; }
+.trip-day-content .teo-status-pending { border-color: #f1daa9; background: #fff9eb; }
+.trip-day-content .teo-kicker { display: inline-block; margin-bottom: .35rem; font-size: .78rem; font-weight: 800; letter-spacing: .015em; color: #37654b; }
+.trip-day-content .teo-status-pending .teo-kicker { color: #936019; }
+.trip-day-content .teo-plan h3 { margin: 0 0 .55rem; font-size: 1.1rem; font-weight: 800; line-height: 1.35; color: #185348; }
+.trip-day-content .teo-plan p { margin: .45rem 0 0; }
+.trip-day-content .teo-plan p + p { margin-top: .65rem; }
+.trip-day-content .teo-points { list-style: disc; padding-left: 1.3rem; margin: .5rem 0 .7rem; }
+.trip-day-content .teo-points li + li { margin-top: .55rem; }
+.trip-day-content .teo-timeline ol { list-style: decimal; padding-left: 1.3rem; margin: .5rem 0; }
+.trip-day-content .teo-timeline li + li { margin-top: .48rem; }
+.trip-day-content .teo-plan a { color: #0c6955; font-weight: 700; text-decoration: underline; text-underline-offset: .15em; }
+.trip-day-content .teo-plan .teo-small { font-size: .85rem; color: #586b62; }
+@media (max-width: 640px) {
+  .trip-day-content .teo-status-grid { grid-template-columns: 1fr; }
+  .trip-day-content .teo-status,
+  .trip-day-content .teo-panel { padding: .92rem 1rem; }
+  .trip-day-content .teo-plan h3 { font-size: 1.04rem; }
+}
