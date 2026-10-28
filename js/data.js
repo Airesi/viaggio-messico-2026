@@ -236,7 +236,7 @@ const tripData = {
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
                     "shortDesc": "Colossali piramidi precolombiane e pranzo all'interno di una grotta vulcanica.",
-                    "fullDesc": "<p><strong>Teotihuacán</strong>: percorrere la Calzada de los Muertos, esplorare i complessi della Piramide del Sole e della Piramide della Luna, senza contare sulla possibilità di salire sulle piramidi, soggetta a restrizioni di accesso. Calcolare diverse ore sul sito.</p><p><strong>La Gruta: tavolo prenotato per il 21 dicembre alle 13:00.</strong> Il conto è ancora da pagare. Valutare Uber o un bus per il trasferimento da Città del Messico; la precedente stima Uber di circa €75 non è un preventivo e va confermata (specie per il ritorno). Il biglietto INAH 2026 per visitatori stranieri è <strong>210 MXN a persona</strong>; verificare la tariffa di dicembre 2026.</p>",
+                    "fullDesc": "<p><strong>Teotihuacán</strong>: percorrere la Calzada de los Muertos, esplorare i complessi della Piramide del Sole e della Piramide della Luna, senza contare sulla possibilità di salire sulle piramidi, soggetta a restrizioni di accesso. Calcolare diverse ore sul sito.</p><p><strong>La Gruta: tavolo prenotato per il 21 dicembre alle 13:00.</strong> Il conto è ancora da pagare. Valutare Uber o un bus per il trasferimento da Città del Messico; la precedente stima Uber di circa €75 non è un preventivo e va confermata (specie per il ritorno). Il biglietto INAH 2026 per visitatori stranieri è <strong>210 MXN a persona</strong>; verificare la tariffa di dicembre 2026.</p><p><strong>Possibile tour guidato, NON prenotato:</strong> <a href=\"https://book.teotihuacantours.com/es/book/32446/select/?cookieBanner=false&currencyCode=USD&date=2026-12-21\" target=\"_blank\" rel=\"noopener noreferrer\">proposta Teotihuacan Tours per lunedì 21 dicembre 2026</a> (link di selezione condiviso). <strong>Compatibilità con La Gruta alle 13:00 ancora da verificare:</strong> non abbiamo conferma degli orari e del luogo della pausa pranzo per questa specifica opzione. Alcune visite organizzate includono soste presso altri ristoranti o un programma di gruppo rigido; non presumere che ci si possa staccare e poi rientrare. Prima di acquistare chiedere per iscritto all'operatore se è possibile essere alla Puerta 5 / La Gruta entro le 12:50, pranzare con calma e riprendere il tour o il transfer di ritorno. La Gruta è a circa 200 m dalla Puerta 5 e applica 10 minuti di tolleranza sulla prenotazione. <strong>Il pranzo resta prenotato; il tour no.</strong></p>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -252,6 +252,10 @@ const tripData = {
                         {
                             "text": "🔗 Amigo Tour per prenotare guida con Basilica",
                             "url": "https://amigotours.com/tours/mexico/mexico-city/teotihuacan-guadalupe-shrine"
+                        },
+                        {
+                            "text": "🎟️ Tour Teotihuacan Tours · 21 dic · possibilità da verificare (non prenotato)",
+                            "url": "https://book.teotihuacantours.com/es/book/32446/select/?cookieBanner=false&currencyCode=USD&date=2026-12-21"
                         }
                     ],
                     "route": [
@@ -279,6 +283,11 @@ const tripData = {
                             ],
                             "image": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&w=400&q=80"
                         }
+                    ],
+                    "operationalNotes": [
+                        "Tour proposto tramite Teotihuacan Tours (link del 21 dicembre): non prenotato, itinerario dettagliato e fascia pranzo non verificati per l'opzione selezionata.",
+                        "La Gruta: tavolo già prenotato il 21 dicembre alle 13:00. Il ristorante indica solo 10 minuti di tolleranza; essere lì entro le 13:10 non è sufficiente come pianificazione prudente: arrivare prima delle 13:00.",
+                        "Prima di acquistare il tour chiedere all'operatore conferma scritta di: sosta specifica a La Gruta, arrivo entro le 13:00, tempo per pranzare e possibilità di riprendere il gruppo o il trasferimento di rientro. Se non garantito, scegliere guida breve sul sito o visita autonoma per rispettare la prenotazione."
                     ]
                 },
                 {
