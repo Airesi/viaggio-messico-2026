@@ -235,39 +235,23 @@ const tripData = {
                     "dayName": "Giorno 1 (21 Dic)",
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
-                    "shortDesc": "Piramidi, Quetzalpapálotl e museo da valutare; pranzo a La Gruta già prenotato alle 13:00. Guida ideale ancora da scegliere.",
-                    "fullDesc": "<p><strong>Teotihuacán</strong>: percorrere la Calzada de los Muertos, esplorare i complessi della Piramide del Sole e della Piramide della Luna, senza contare sulla possibilità di salire sulle piramidi, soggetta a restrizioni di accesso. Calcolare diverse ore sul sito.</p><p><strong>La Gruta: tavolo prenotato per il 21 dicembre alle 13:00.</strong> Il conto è ancora da pagare. Trasporto ancora da organizzare: ipotesi <strong>Uber diretto da Condesa</strong>, con preventivi visualizzati di <strong>519,94 MXN all'andata (ore 07:00) e 619,93 MXN al ritorno (ore 17:00)</strong>, in totale circa <strong>1.139,87 MXN per due</strong>. Sono preventivi indicativi, non tariffe bloccate né corse garantite, soprattutto al ritorno; tenere come piano B il bus verso Terminal del Norte o concordare preventivamente un transfer A/R. Il biglietto INAH per visitatori stranieri è indicato come <strong>210 MXN a persona</strong>, con accesso ai musei del sito incluso; controllare le condizioni valide il 21 dicembre 2026.</p><p><strong>Guida/tour ideale ANCORA DA TROVARE · nessun tour prenotato.</strong> Priorità a <strong>archeologia e libertà degli orari</strong>, evitando le soste obbligatorie di 50 minuti a laboratori di ossidiana, degustazioni e negozi. Valutare una <strong>guida autorizzata sul posto</strong> (il sito ufficiale INAH ne conferma la presenza), una guida privata oppure un tour breve di 2–3 ore con ingresso e, solo se compatibile, trasporto A/R. Obiettivo: arrivare sul sito presto, dedicare tempo alle <strong>Piramidi del Sole e della Luna, al Tempio del Serpente Piumato, al Palazzo di Quetzalpapálotl e al Museo della Cultura Teotihuacana</strong>; scegliere cosa sacrificare se le distanze o il tempo non permettono tutto. <a href=\"https://visitateotihuacan.inah.gob.mx/en/explore/\" target=\"_blank\" rel=\"noopener noreferrer\">INAH propone il Family Trail di 1,5–2 ore</a> (piramidi, palazzo e museo, uscita Puerta 5) e un Explorer's Trail più completo di 4–5 ore: sono riferimenti per la progettazione, non tour già acquistati. Il pranzo a <strong>La Gruta resta confermato alle 13:00</strong>, quindi pianificare di raggiungere la Puerta 5 prima dell'orario di prenotazione.</p><p><strong>Tour già confrontati (NESSUNO prenotato):</strong> il <a href=\"https://book.teotihuacantours.com/es/book/32446/select/?cookieBanner=false&amp;currencyCode=USD&amp;date=2026-12-21\" target=\"_blank\" rel=\"noopener noreferrer\">gruppo ridotto Teotihuacan Tours delle 08:45</a> dura 6 ore, dedica soltanto 1 h 30 min alle piramidi e prevede una sosta pranzo/laboratorio di 30 minuti in un ristorante non identificato come La Gruta: <strong>non adatto alla prenotazione delle 13:00</strong>. Anche il <a href=\"https://www.viator.com/it-IT/tours/Mexico-City/All-included-Teotihuacan-Tour-Breakfast-in-a-Cave-Early-Access/d628-487522P1\" target=\"_blank\" rel=\"noopener noreferrer\">tour Viator / Yolotli Adventures con prelievo in hotel e sosta a La Gruta</a> non è la scelta ideale: comprende circa 50 minuti di laboratorio di ossidiana e non garantisce che la sosta a La Gruta coincida con le 13:00; alcune descrizioni della stessa esperienza parlano di colazione nella grotta e altre di pranzo. Le 2 h 30 min di visita archeologica e il trasporto A/R sono aspetti positivi, ma non compensano il programma poco flessibile. Eventuale guida a piedi di 2 ore alle 10:00: opzione da verificare per disponibilità, ingresso incluso, punto finale del tour e distanza dalla Puerta 5.</p>",
+                    "shortDesc": "Teotihuacán con guida ancora da scegliere: priorità alle rovine, senza soste commerciali. La Gruta prenotata alle 13:00.",
+                    "fullDesc": "<div class=\"teo-plan\">\n<section class=\"teo-status-grid\" aria-label=\"Stato delle prenotazioni\">\n  <div class=\"teo-status teo-status-confirmed\">\n    <span class=\"teo-kicker\">✓ Confermato</span>\n    <h3>La Gruta · 13:00</h3>\n    <p>Pranzo prenotato per <strong>lunedì 21 dicembre</strong>. Il conto è da pagare sul posto. Raggiungere il ristorante vicino alla <strong>Puerta 5</strong> prima delle 13:00; la tolleranza dichiarata è di 10 minuti.</p>\n  </div>\n  <div class=\"teo-status teo-status-pending\">\n    <span class=\"teo-kicker\">Da organizzare</span>\n    <h3>Guida e trasporto</h3>\n    <p><strong>Nessun tour ancora prenotato.</strong> Cerchiamo una guida archeologica per la mattina e un collegamento comodo da Condesa, con ritorno garantito o un'alternativa praticabile.</p>\n  </div>\n</section>\n<section class=\"teo-panel\">\n  <h3>Cosa vogliamo vedere</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Priorità:</strong> Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato.</li>\n    <li><strong>Se il tempo lo consente:</strong> Palazzo di Quetzalpapálotl e Museo della Cultura Teotihuacana, particolarmente interessanti per capire la storia e la vita della città.</li>\n  </ul>\n  <p>Il sito è molto esteso: scegliere un percorso realistico, senza contare sulla possibilità di salire sulle piramidi. La <a href=\"https://visitateotihuacan.inah.gob.mx/en/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">guida ufficiale INAH</a> riporta informazioni pratiche e <a href=\"https://visitateotihuacan.inah.gob.mx/en/explore/\" target=\"_blank\" rel=\"noopener noreferrer\">itinerari suggeriti</a>, tra cui un percorso breve e uno più completo.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>La visita guidata ideale</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Guida autorizzata</strong> sul posto oppure guida privata; in alternativa un tour archeologico breve di <strong>2–3 ore</strong>, da verificare.</li>\n    <li><strong>Tempo dedicato alle rovine</strong>, senza soste obbligatorie in negozi, degustazioni o laboratori.</li>\n    <li><strong>Arrivo a La Gruta entro le 13:00</strong>, tenendo conto delle distanze interne e dell'uscita dalla Puerta 5.</li>\n    <li>Confrontare <strong>ingresso incluso o escluso</strong> e possibilità di aggiungere il trasporto di andata e ritorno.</li>\n  </ul>\n  <p>Biglietto INAH per visitatori stranieri indicato a <strong>210 MXN a persona</strong>, con musei del sito inclusi: tariffa e aperture da riconfermare per il 21 dicembre 2026.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>Come arrivare da Condesa</h3>\n  <p><strong>Uber è un'ipotesi, non ancora prenotata.</strong> Nei preventivi visualizzati: <strong>519,94 MXN</strong> all'andata (ore 07:00) e <strong>619,93 MXN</strong> al ritorno (ore 17:00), per circa <strong>1.139,87 MXN totali per due</strong>. Prezzi e disponibilità non garantiti, soprattutto per il rientro da Teotihuacán.</p>\n  <p>Se possibile, concordare un transfer A/R oppure tenere come piano B il bus verso Terminal del Norte e il successivo collegamento urbano.</p>\n</section>\n<section class=\"teo-panel teo-timeline\">\n  <h3>Scaletta orientativa</h3>\n  <ol>\n    <li><strong>07:00 circa</strong> — Partenza da Condesa, in base al traffico.</li>\n    <li><strong>Mattina</strong> — Archeologia e guida; scegliere le tappe in base alle distanze e all'orario reale d'ingresso.</li>\n    <li><strong>Entro le 12:45–12:50</strong> — Raggiungere La Gruta e presentarsi per il tavolo.</li>\n    <li><strong>13:00</strong> — Pranzo prenotato, poi rientro a Città del Messico.</li>\n  </ol>\n  <p class=\"teo-small\">Questa è una proposta organizzativa, non un tour o un trasferimento già confermati.</p>\n</section>\n</div>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
                     "links": [
                         {
-                            "text": "🏛️ INAH · guida ufficiale alla visita: orari, biglietti, ingressi e guide autorizzate",
+                            "text": "🏛️ INAH · guida ufficiale alla visita",
                             "url": "https://visitateotihuacan.inah.gob.mx/en/visit/"
                         },
                         {
-                            "text": "🗺️ INAH · percorsi consigliati (Family Trail e Explorer's Trail)",
+                            "text": "🗺️ INAH · percorsi e suggerimenti",
                             "url": "https://visitateotihuacan.inah.gob.mx/en/explore/"
                         },
                         {
-                            "text": "🔗 Sito Ufficiale INAH - Teotihuacán",
-                            "url": "https://www.inah.gob.mx/zonas/23-zona-arqueologica-de-teotihuacan"
-                        },
-                        {
-                            "text": "🔗 Restaurante La Gruta, prenotato 21 alle 13 p.m.",
-                            "url": "https://lagruta.mx/"
-                        },
-                        {
-                            "text": "🚌 Amigo Tours · alternativa con Basilica (non selezionata)",
-                            "url": "https://amigotours.com/tours/mexico/mexico-city/teotihuacan-guadalupe-shrine"
-                        },
-                        {
-                            "text": "⚠️ Teotihuacan Tours 08:45 · tour da 6 h non compatibile con La Gruta (non prenotato)",
-                            "url": "https://book.teotihuacantours.com/es/book/32446/select/?cookieBanner=false&currencyCode=USD&date=2026-12-21"
-                        },
-                        {
-                            "text": "⚠️ Viator / Yolotli · con La Gruta ma sosta ossidiana di 50 min (non selezionato)",
-                            "url": "https://www.viator.com/it-IT/tours/Mexico-City/All-included-Teotihuacan-Tour-Breakfast-in-a-Cave-Early-Access/d628-487522P1"
+                            "text": "🍽️ La Gruta · prenotazione pranzo alle 13:00",
+                            "url": "https://www.lagruta.mx/"
                         }
                     ],
                     "route": [
@@ -297,12 +281,8 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "DA DEFINIRE: visita guidata ideale per il 21 dicembre. Preferire guida autorizzata in loco/privata o tour archeologico breve, senza laboratorio di ossidiana o soste commerciali obbligatorie. Nessun tour prenotato.",
-                        "INAH (guida ufficiale): https://visitateotihuacan.inah.gob.mx/en/visit/ — sito 08:00–17:00, musei 09:00–16:30; ingresso visitatori stranieri indicato a 210 MXN con musei inclusi. Riconfermare per dicembre.",
-                        "Da non perdere se tempi e percorsi lo consentono: Piramide del Sole, Piramide della Luna, Tempio del Serpente Piumato, Palazzo di Quetzalpapálotl, Museo della Cultura Teotihuacana. Family Trail INAH (1,5–2 h) include piramidi/palazzo/museo con uscita dalla Puerta 5; Explorer's Trail (4–5 h) offre più archeologia ma richiede più tempo.",
-                        "VINCOLO FISSO: tavolo a La Gruta il 21/12 alle 13:00, già prenotato. L'arrivo deve essere pianificato prima delle 13:00; la tolleranza dichiarata è di 10 minuti. Pranzo da pagare a parte.",
-                        "Trasporto ancora non acquistato: preventivi Uber mostrati 519,94 MXN andata 07:00 e 619,93 MXN ritorno 17:00 (totale 1.139,87 MXN in due); prezzi e disponibilità non garantiti, soprattutto al rientro. Prevedere alternativa/transfer A/R.",
-                        "Tour precedenti NON prenotati: proposta con grotta preispanica 08:45 troppo rigida e pranzo in ristorante non identificato; tour Viator/Yolotli con La Gruta include 50 minuti di sosta commerciale e orario del pranzo non garantito. Una guida di 2 ore alle 10:00 resta da verificare."
+                        "Da definire: guida autorizzata oppure visita archeologica breve e trasporto A/R. Prima di acquistare, verificare durata effettiva, punto di conclusione del tour, ingresso incluso e possibilità di arrivare a La Gruta entro le 13:00.",
+                        "Verificare sul sito INAH gli orari di apertura e l'accessibilità delle singole aree e dei musei il 21 dicembre. Per il ritorno, non contare su una corsa Uber immediatamente disponibile: preparare un'alternativa."
                     ]
                 },
                 {
@@ -528,8 +508,8 @@ const tripData = {
                     {
                         "icon": "🏛️",
                         "title": "Teotihuacán e La Gruta",
-                        "detail": "21 dic · La Gruta prenotata ore 13:00; guida e trasporto ancora da scegliere.",
-                        "state": "Guida da trovare · pranzo prenotato",
+                        "detail": "21 dic · visita archeologica da organizzare; La Gruta confermata alle 13:00.",
+                        "state": "Pranzo confermato · guida da scegliere",
                         "dayId": "1-1"
                     },
                     {
@@ -548,7 +528,6 @@ const tripData = {
                     }
                 ],
                 "tips": [
-                    "21 dicembre · Teotihuacán: cercare guida archeologica flessibile senza soste commerciali; riferimento ufficiale INAH nella scheda e pranzo a La Gruta alle 13:00 già prenotato.",
                     "Bloccare per tempo l'ingresso alla Casa Azul e verificare gli orari dei musei.",
                     "La sera del 23 c'è il bus notturno per Oaxaca: prevedere margine per bagagli e terminal."
                 ]
