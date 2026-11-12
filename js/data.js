@@ -420,22 +420,14 @@ const tripData = {
                     "title": "Borghi Colorati, Canali e... Partenza Notturna!",
                     "location": "Coyoacán, Xochimilco & Bus Notturno",
                     "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno acquistato: Taxqueña 22:30 → Oaxaca 05:30.",
-                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e visitando, <strong>solo con biglietto acquistato</strong>, la <em>Casa Azul</em> di Frida Kahlo. <strong>Mercoledì 23 dicembre</strong> l'orario ordinario pubblicato dal museo inizia alle <strong>11:00</strong>: la visita va prenotata in una fascia compatibile con il pomeriggio a Xochimilco. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Da qui parte il <strong>bus notturno già acquistato il 23 dicembre alle 22:30</strong>, con arrivo a <strong>Oaxaca il 24 dicembre alle 05:30</strong>. I <strong>due biglietti costano complessivamente 103 €</strong>. Controllare sul biglietto il vettore, la terminal d'arrivo esatta e le regole per i bagagli. Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
+                    "fullDesc": "<p>La giornata inizia con una passeggiata tranquilla per <strong>Coyoacán</strong>, tra le vie storiche, la Plaza Hidalgo, mercatini e caffè. La mattina rimane libera da ingressi museali e prenotazioni. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>, conservando margine per recuperare i bagagli e raggiungere Taxqueña in serata.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Da qui parte il <strong>bus notturno già acquistato il 23 dicembre alle 22:30</strong>, con arrivo a <strong>Oaxaca il 24 dicembre alle 05:30</strong>. I <strong>due biglietti costano complessivamente 103 €</strong>. Controllare sul biglietto il vettore, la terminal d'arrivo esatta e le regole per i bagagli. Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
                     "links": [
                         {
-                            "text": "🔗 Museo Frida Kahlo",
-                            "url": "https://www.museofridakahlo.org.mx/"
-                        },
-                        {
                             "text": "🔗 Biglietti Bus ADO (Notturno)",
                             "url": "https://www.ado.com.mx"
-                        },
-                        {
-                            "text": "🎟️ Biglietti ufficiali Casa Azul",
-                            "url": "https://boletos.museofridakahlo.org.mx/"
                         },
                         {
                             "text": "🚌 ADO · orari e prenotazioni",
@@ -450,14 +442,6 @@ const tripData = {
                                 -99.1626
                             ],
                             "image": "https://images.unsplash.com/photo-1587822557480-1a76a5df489c?auto=format&fit=crop&w=400&q=80"
-                        },
-                        {
-                            "name": "Casa Azul",
-                            "coords": [
-                                19.3551,
-                                -99.1625
-                            ],
-                            "image": "https://images.unsplash.com/photo-1596752763297-76eb95c96b75?auto=format&fit=crop&w=400&q=80"
                         },
                         {
                             "name": "Imbarcadero Xochimilco",
@@ -477,7 +461,6 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "Casa Azul: acquistare online dal canale ufficiale per mercoledì 23 dicembre; orari soggetti a variazioni.",
                         "Bus notturno acquistato: 2 persone, México Taxqueña 23 dic 22:30 → Oaxaca 24 dic 05:30; 103 € totali. Verificare la terminal di arrivo.",
                         "Recuperare i bagagli per tempo e raggiungere Taxqueña, idealmente entro le 21:30–21:45."
                     ]
@@ -582,13 +565,12 @@ const tripData = {
                     {
                         "icon": "🚤",
                         "title": "Coyoacán e Xochimilco",
-                        "detail": "23 dic · Casa Azul e canali in trajinera.",
-                        "state": "In programma",
+                        "detail": "23 dic · passeggiata a Coyoacán e canali di Xochimilco in trajinera.",
+                        "state": "In programma · senza visita museale",
                         "dayId": "1-3"
                     }
                 ],
                 "tips": [
-                    "Bloccare per tempo l'ingresso alla Casa Azul e verificare gli orari dei musei.",
                     "Bus già acquistato: Taxqueña, 23 dicembre ore 22:30; arrivo a Oaxaca il 24 dicembre alle 05:30."
                 ]
             },
