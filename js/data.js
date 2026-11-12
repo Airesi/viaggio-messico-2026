@@ -255,8 +255,8 @@ const tripData = {
                     "dayName": "Giorno 1 (21 Dic)",
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
-                    "shortDesc": "Teotihuacán con guida ancora da scegliere: priorità alle rovine, senza soste commerciali. La Gruta prenotata alle 13:00.",
-                    "fullDesc": "<div class=\"teo-plan\">\n<section class=\"teo-status-grid\" aria-label=\"Stato delle prenotazioni\">\n  <div class=\"teo-status teo-status-confirmed\">\n    <span class=\"teo-kicker\">✓ Confermato</span>\n    <h3>La Gruta · 13:00</h3>\n    <p>Pranzo prenotato per <strong>lunedì 21 dicembre</strong>. Il conto è da pagare sul posto. Raggiungere il ristorante vicino alla <strong>Puerta 5</strong> prima delle 13:00; la tolleranza dichiarata è di 10 minuti.</p>\n  </div>\n  <div class=\"teo-status teo-status-pending\">\n    <span class=\"teo-kicker\">Da organizzare</span>\n    <h3>Guida e trasporto</h3>\n    <p><strong>Nessun tour ancora prenotato.</strong> Cerchiamo una guida archeologica per la mattina e un collegamento comodo da Condesa, con ritorno garantito o un'alternativa praticabile.</p>\n  </div>\n</section>\n<section class=\"teo-panel\">\n  <h3>Cosa vogliamo vedere</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Priorità:</strong> Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato.</li>\n    <li><strong>Se il tempo lo consente:</strong> Palazzo di Quetzalpapálotl e Museo della Cultura Teotihuacana, particolarmente interessanti per capire la storia e la vita della città.</li>\n  </ul>\n  <p>Il sito è molto esteso: scegliere un percorso realistico, senza contare sulla possibilità di salire sulle piramidi. La <a href=\"https://visitateotihuacan.inah.gob.mx/en/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">guida ufficiale INAH</a> riporta informazioni pratiche e <a href=\"https://visitateotihuacan.inah.gob.mx/en/explore/\" target=\"_blank\" rel=\"noopener noreferrer\">itinerari suggeriti</a>, tra cui un percorso breve e uno più completo.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>La visita guidata ideale</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Guida autorizzata</strong> sul posto oppure guida privata; in alternativa un tour archeologico breve di <strong>2–3 ore</strong>, da verificare.</li>\n    <li><strong>Tempo dedicato alle rovine</strong>, senza soste obbligatorie in negozi, degustazioni o laboratori.</li>\n    <li><strong>Arrivo a La Gruta entro le 13:00</strong>, tenendo conto delle distanze interne e dell'uscita dalla Puerta 5.</li>\n    <li>Confrontare <strong>ingresso incluso o escluso</strong> e possibilità di aggiungere il trasporto di andata e ritorno.</li>\n  </ul>\n  <p>Biglietto INAH per visitatori stranieri indicato a <strong>210 MXN a persona</strong>, con musei del sito inclusi: tariffa e aperture da riconfermare per il 21 dicembre 2026.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>Come arrivare da Condesa</h3>\n  <p><strong>Uber è un'ipotesi, non ancora prenotata.</strong> Nei preventivi visualizzati: <strong>519,94 MXN</strong> all'andata (ore 07:00) e <strong>619,93 MXN</strong> al ritorno (ore 17:00), per circa <strong>1.139,87 MXN totali per due</strong>. Prezzi e disponibilità non garantiti, soprattutto per il rientro da Teotihuacán.</p>\n  <p>Se possibile, concordare un transfer A/R oppure tenere come piano B il bus verso Terminal del Norte e il successivo collegamento urbano.</p>\n</section>\n<section class=\"teo-panel teo-timeline\">\n  <h3>Scaletta orientativa</h3>\n  <ol>\n    <li><strong>07:00 circa</strong> — Partenza da Condesa, in base al traffico.</li>\n    <li><strong>Mattina</strong> — Archeologia e guida; scegliere le tappe in base alle distanze e all'orario reale d'ingresso.</li>\n    <li><strong>Entro le 12:45–12:50</strong> — Raggiungere La Gruta e presentarsi per il tavolo.</li>\n    <li><strong>13:00</strong> — Pranzo prenotato, poi rientro a Città del Messico.</li>\n  </ol>\n  <p class=\"teo-small\">Questa è una proposta organizzativa, non un tour o un trasferimento già confermati.</p>\n</section>\n</div>",
+                    "shortDesc": "Teotihuacán: richiesta guida inviata via email a Paseos Culturales INAH, risposta attesa. La Gruta prenotata alle 13:00.",
+                    "fullDesc": "<div class=\"teo-plan\">\n<section class=\"teo-status-grid\" aria-label=\"Stato delle prenotazioni\">\n  <div class=\"teo-status teo-status-confirmed\">\n    <span class=\"teo-kicker\">✓ Confermato</span>\n    <h3>La Gruta · 13:00</h3>\n    <p>Pranzo prenotato per <strong>lunedì 21 dicembre</strong>. Il conto è da pagare sul posto. Raggiungere il ristorante vicino alla <strong>Puerta 5</strong> prima delle 13:00; la tolleranza dichiarata è di 10 minuti.</p>\n  </div>\n  <div class=\"teo-status teo-status-pending\">\n    <span class=\"teo-kicker\">📩 Risposta attesa · INAH</span>\n    <h3>Guida richiesta a Paseos Culturales INAH</h3>\n    <p><strong>Richiesta inviata via email</strong> perché il sito di prenotazione non funzionava. <strong>Nessuna guida ancora confermata.</strong> Controllare la risposta (anche nello spam) e verificare disponibilità, lingua, orario di partenza, durata, prezzo, ingresso incluso, punto di incontro e conclusione della visita <strong>in tempo per La Gruta alle 13:00</strong>. Il trasporto da e per Condesa resta da organizzare.</p>\n  </div>\n</section>\n<section class=\"teo-panel\">\n  <h3>Cosa vogliamo vedere</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Priorità:</strong> Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato.</li>\n    <li><strong>Se il tempo lo consente:</strong> Palazzo di Quetzalpapálotl e Museo della Cultura Teotihuacana, particolarmente interessanti per capire la storia e la vita della città.</li>\n  </ul>\n  <p>Il sito è molto esteso: scegliere un percorso realistico, senza contare sulla possibilità di salire sulle piramidi. La <a href=\"https://visitateotihuacan.inah.gob.mx/en/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">guida ufficiale INAH</a> riporta informazioni pratiche e <a href=\"https://visitateotihuacan.inah.gob.mx/en/explore/\" target=\"_blank\" rel=\"noopener noreferrer\">itinerari suggeriti</a>, tra cui un percorso breve e uno più completo.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>La visita guidata ideale</h3>\n  <ul class=\"teo-points\">\n    <li><strong>Guida autorizzata</strong> sul posto oppure guida privata; in alternativa un tour archeologico breve di <strong>2–3 ore</strong>, da verificare.</li>\n    <li><strong>Tempo dedicato alle rovine</strong>, senza soste obbligatorie in negozi, degustazioni o laboratori.</li>\n    <li><strong>Arrivo a La Gruta entro le 13:00</strong>, tenendo conto delle distanze interne e dell'uscita dalla Puerta 5.</li>\n    <li>Confrontare <strong>ingresso incluso o escluso</strong> e possibilità di aggiungere il trasporto di andata e ritorno.</li>\n  </ul>\n  <p>Biglietto INAH per visitatori stranieri indicato a <strong>210 MXN a persona</strong>, con musei del sito inclusi: tariffa e aperture da riconfermare per il 21 dicembre 2026.</p>\n</section>\n<section class=\"teo-panel\">\n  <h3>Come arrivare da Condesa</h3>\n  <p><strong>Uber è un'ipotesi, non ancora prenotata.</strong> Nei preventivi visualizzati: <strong>519,94 MXN</strong> all'andata (ore 07:00) e <strong>619,93 MXN</strong> al ritorno (ore 17:00), per circa <strong>1.139,87 MXN totali per due</strong>. Prezzi e disponibilità non garantiti, soprattutto per il rientro da Teotihuacán.</p>\n  <p>Se possibile, concordare un transfer A/R oppure tenere come piano B il bus verso Terminal del Norte e il successivo collegamento urbano.</p>\n</section>\n<section class=\"teo-panel teo-timeline\">\n  <h3>Scaletta orientativa</h3>\n  <ol>\n    <li><strong>07:00 circa</strong> — Partenza da Condesa, in base al traffico.</li>\n    <li><strong>Mattina</strong> — Archeologia e guida; scegliere le tappe in base alle distanze e all'orario reale d'ingresso.</li>\n    <li><strong>Entro le 12:45–12:50</strong> — Raggiungere La Gruta e presentarsi per il tavolo.</li>\n    <li><strong>13:00</strong> — Pranzo prenotato, poi rientro a Città del Messico.</li>\n  </ol>\n  <p class=\"teo-small\">Questa è una proposta organizzativa, non un tour o un trasferimento già confermati.</p>\n</section>\n</div>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -301,7 +301,8 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "Da definire: guida autorizzata oppure visita archeologica breve e trasporto A/R. Prima di acquistare, verificare durata effettiva, punto di conclusione del tour, ingresso incluso e possibilità di arrivare a La Gruta entro le 13:00.",
+                        "📩 Risposta da controllare: Paseos Culturales INAH, richiesta guida via email per il 21 dicembre. Nessuna conferma ricevuta; verificare disponibilità, lingua, durata, costo, ingresso e compatibilità con La Gruta alle 13:00. Sollecitare se non rispondono.",
+                        "Guida richiesta a Paseos Culturales INAH (risposta attesa); trasporto A/R da definire. Prima di acquistare, verificare durata effettiva, punto di conclusione del tour, ingresso incluso e possibilità di arrivare a La Gruta entro le 13:00.",
                         "Verificare sul sito INAH gli orari di apertura e l'accessibilità delle singole aree e dei musei il 21 dicembre. Per il ritorno, non contare su una corsa Uber immediatamente disponibile: preparare un'alternativa."
                     ]
                 },
@@ -310,8 +311,8 @@ const tripData = {
                     "dayName": "Giorno 2 (22 Dic)",
                     "title": "Zócalo, Storia Azteca e il Polmone Verde",
                     "location": "CDMX (Centro e Ovest)",
-                    "shortDesc": "Dai resti dell'impero azteco al grande parco cittadino di Chapultepec",
-                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p>",
+                    "shortDesc": "Centro storico e Museo di Antropologia; alle 19:30 Lucha Libre all'Arena México. Biglietti non acquistati: risposta Ticketmaster sull'OTP attesa.",
+                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p><p><strong>Martedì sera · Lucha Libre all'Arena México (ore 19:30).</strong> Attività in programma, <strong>biglietti non ancora acquistati</strong>. Durante l'acquisto Ticketmaster México richiede la verifica del telefono, ma <strong>l'OTP non arriva al numero italiano</strong>: è stata <strong>contattata l'assistenza Ticketmaster</strong> e si attende risposta. Controllare email e spam, verificare se sbloccano l'acquisto; se non si risolve, chiedere disponibilità e orari della biglietteria fisica dell'Arena México. Pianificare il rientro dal museo con sufficiente anticipo.</p>",
                     "images": [
                         "assets/img/Centro_Historico.png"
                     ],
@@ -331,6 +332,14 @@ const tripData = {
                         {
                             "text": "🔗 Museo Nacional de Antropología",
                             "url": "https://www.mna.inah.gob.mx/"
+                        },
+                        {
+                            "text": "🤼 Lucha Libre · Arena México su Ticketmaster",
+                            "url": "https://www.ticketmaster.com.mx/arena-mexico-tickets-mexico/venue/164115"
+                        },
+                        {
+                            "text": "📩 Ticketmaster México · assistenza",
+                            "url": "https://help.ticketmaster.com.mx/hc/es-mx/requests/new?ticket_form_id=26928070885009"
                         }
                     ],
                     "route": [
@@ -385,7 +394,9 @@ const tripData = {
                     ],
                     "operationalNotes": [
                         "Prima della giornata verificare giorni e orari di apertura dei musei previsti.",
-                        "Lasciare almeno qualche ora al Museo Nacional de Antropología, evitando di sovraccaricare il centro storico."
+                        "Lasciare almeno qualche ora al Museo Nacional de Antropología, evitando di sovraccaricare il centro storico.",
+                        "📩 Risposta da controllare: assistenza Ticketmaster México, contattata perché non arriva l'OTP al numero italiano obbligatorio per acquistare i biglietti della Lucha Libre del 22 dicembre (ore 19:30). Biglietti NON acquistati.",
+                        "Se Ticketmaster non risolve, verificare disponibilità di biglietti e orari della taquilla dell'Arena México; non considerare l'accesso garantito."
                     ]
                 },
                 {
@@ -514,6 +525,16 @@ const tripData = {
                     "type": "success"
                 },
                 {
+                    "name": "Paseos Culturales INAH · guida Teotihuacán · 21 dic",
+                    "status": "Email inviata · risposta attesa",
+                    "type": "warning"
+                },
+                {
+                    "name": "Ticketmaster México · Lucha Libre Arena México · 22 dic",
+                    "status": "Assistenza contattata · risposta attesa (OTP)",
+                    "type": "warning"
+                },
+                {
                     "name": "Bus Taxqueña → Oaxaca · 23 dic 22:30 → 24 dic 05:30",
                     "status": "Acquistato · 103 € totali",
                     "type": "success"
@@ -533,14 +554,14 @@ const tripData = {
                         "icon": "🏛️",
                         "title": "Teotihuacán e La Gruta",
                         "detail": "21 dic · visita archeologica da organizzare; La Gruta confermata alle 13:00.",
-                        "state": "Pranzo confermato · guida da scegliere",
+                        "state": "La Gruta confermata · risposta guida INAH attesa",
                         "dayId": "1-1"
                     },
                     {
                         "icon": "🎨",
                         "title": "Centro e grandi musei",
-                        "detail": "22 dic · Zócalo, Templo Mayor e Antropologia.",
-                        "state": "In programma",
+                        "detail": "22 dic · Centro Histórico, Museo Antropologia e Lucha Libre all'Arena México alle 19:30.",
+                        "state": "Lucha Libre da acquistare · risposta Ticketmaster attesa",
                         "dayId": "1-2"
                     },
                     {
