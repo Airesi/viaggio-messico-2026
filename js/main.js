@@ -683,13 +683,13 @@ function generateHotelCosts(){
               "<p class='mb-4 p-4 rounded-xl border border-amber-200 bg-amber-50 text-xs text-amber-950 leading-relaxed'><strong>Confermato non significa pagato.</strong> Booking conferma gli hotel, ma non tutti gli addebiti. Il totale sopra comprende solo gli otto soggiorni in hotel; il trekking è pagato a parte.</p>",
 
               "<div class='mb-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-4 sm:p-5'>",
-                "<div class='flex flex-wrap justify-between items-center gap-3'><div><span class='block text-[10px] uppercase tracking-widest font-black text-emerald-800'>Budget complessivo · 2 persone</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.capEuro)+"</strong></div><p class='text-[11px] text-emerald-950'>Voli confermati per due (assicurazione inclusa) "+euro(budget.confirmedFlightsEuro)+" · Hotel prenotati "+euro(eurosTotal)+" · Trekking pagato ~"+euro(budget.trekkingApproxEuro)+"</p></div>",
+                "<div class='flex flex-wrap justify-between items-center gap-3'><div><span class='block text-[10px] uppercase tracking-widest font-black text-emerald-800'>Budget complessivo · 2 persone</span><strong class='text-xl font-black text-emerald-950'>"+euro(budget.capEuro)+"</strong></div><p class='text-[11px] text-emerald-950'>Voli confermati per due (assicurazione inclusa) "+euro(budget.confirmedFlightsEuro)+" · Hotel prenotati "+euro(eurosTotal)+" · Trekking pagato ~"+euro(budget.trekkingApproxEuro)+" · Bus Taxqueña → Oaxaca acquistato "+euro(budget.confirmedIntercityEuro)+"</p></div>",
                 "<div class='grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4'>",
                   box("Economico realistico",euro(budget.forecastLowEuro),"Totale stimato, non prenotato",false),
                   box("Scenario centrale",euro(budget.forecastEuro),"Residuo "+euro(budget.forecastRemainingEuro),true),
                   box("Scenario prudente",euro(budget.forecastHighEuro),"Rispetto al tetto: "+euro(budget.capEuro-budget.forecastHighEuro),false),
                 "</div>",
-                "<p class='text-[11px] text-emerald-900 mt-3 leading-relaxed'>I totali includono voli per due (assicurazione di viaggio già inclusa, senza doppio conteggio), hotel, trekking, escursioni, trasporti, pasti, acquisti prima della partenza, souvenir, valigia extra e imprevisti. Il prezzo dei voli è confermato per due persone ma il <strong>pagamento non è verificato</strong>; le altre voci non prenotate sono stime. Coral Princess è confermato ma non pagato; gli altri pagamenti hotel vanno verificati.</p>",
+                "<p class='text-[11px] text-emerald-900 mt-3 leading-relaxed'>I totali includono voli per due (assicurazione di viaggio già inclusa, senza doppio conteggio), hotel, trekking, escursioni, trasporti, pasti, acquisti prima della partenza, souvenir, valigia extra e imprevisti. Il prezzo dei voli è confermato per due persone ma il <strong>pagamento non è verificato</strong>; il bus Taxqueña → Oaxaca è già acquistato per 103 € in due; le altre voci non prenotate sono stime. Coral Princess è confermato ma non pagato; gli altri pagamenti hotel vanno verificati.</p>",
                 "<details class='mt-4 border-t border-emerald-200 pt-3' open>",
                   "<summary class='cursor-pointer text-[11px] font-black text-emerald-950'>Riepilogo completo delle spese · tre scenari</summary>",
                   "<p class='mt-2 text-[11px] leading-relaxed text-emerald-950'>Budget totale per <strong>due persone</strong>: comprende le spese già pagate, quelle prenotate e quelle stimate. Il trekking pagato resta incluso nel totale, ma <strong>non viene sommato due volte</strong>.</p>",
@@ -715,6 +715,10 @@ function generateHotelCosts(){
                         "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td>"+
                         "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td>"+
                         "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.trekkingApproxEuro)+"</td></tr>",
+                        "<tr><th scope='row' class='py-3 px-3 text-left font-semibold leading-snug'>Bus notturno México Taxqueña → Oaxaca · 23/24 dic <span class='block text-[10px] font-black text-emerald-700 mt-1'>ACQUISTATO · 2 biglietti · 23 dic 22:30 → 24 dic 05:30</span></th>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.confirmedIntercityEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right font-black tabular-nums whitespace-nowrap'>"+money2(budget.confirmedIntercityEuro)+"</td>"+
+                        "<td class='py-3 px-3 text-right tabular-nums whitespace-nowrap'>"+money2(budget.confirmedIntercityEuro)+"</td></tr>",
                         "<tr class='bg-slate-50/80'><th colspan='4' class='py-2 px-3 text-left text-[10px] uppercase tracking-wide font-black text-slate-600'>Altre spese ancora da stimare (tre scenari)</th></tr>",
                         budget.pendingEstimates.map(item=>
                           "<tr><th scope='row' class='py-3 px-3 text-left font-medium leading-snug'>"+safe(item.label)+"</th>"+
