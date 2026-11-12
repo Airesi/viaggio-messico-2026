@@ -122,7 +122,7 @@ const tripData = {
                 "assicurazione di viaggio (già compresa nei voli)"
             ],
             "confirmedFlightsEuro": 2147.36,
-            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus Taxqueña → Oaxaca del 23–24 dicembre già acquistato: 103 € totali per 2 persone, inclusi nella stima di 520 € dei trasporti interurbani (residuo stimato 417 €). Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
+            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus già acquistati: Taxqueña → Oaxaca del 23–24 dicembre (103 € totali) e Oaxaca → Pochutla del 30 dicembre 09:15–13:00 (52 € totali). Totale bus acquistati 155 €, inclusi nella stima iniziale di 520 € per gli interurbani; residuo stimato 365 €. Taxi/colectivo Pochutla → San Agustinillo ancora da organizzare. Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
@@ -134,7 +134,7 @@ const tripData = {
             "fxDate": "2026-10-15",
             "fxSource": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-mxn.en.html",
             "hotelBookingsEuro": 1845,
-            "knownExpensesApproxEuro": 4717.61,
+            "knownExpensesApproxEuro": 4769.61,
             "pendingEstimates": [
                 {
                     "key": "esperienze",
@@ -145,10 +145,10 @@ const tripData = {
                 },
                 {
                     "key": "intercity",
-                    "label": "Altri ADO, Tren Maya, traghetti e trasporti interurbani (escluso bus Taxqueña → Oaxaca già acquistato)",
-                    "estimateEuro": 417,
-                    "minEuro": 247,
-                    "maxEuro": 597
+                    "label": "Altri bus, Tren Maya, traghetti e mezzi interurbani (esclusi i due bus già acquistati)",
+                    "estimateEuro": 365,
+                    "minEuro": 195,
+                    "maxEuro": 545
                 },
                 {
                     "key": "taxi",
@@ -200,8 +200,8 @@ const tripData = {
             "forecastLowEuro": 7934.61,
             "forecastHighEuro": 11184.61,
             "experiencesAllowanceCentralEuro": 1705.39,
-            "confirmedIntercityEuro": 103,
-            "intercityEstimatedRemainingEuro": 417
+            "confirmedIntercityEuro": 155,
+            "intercityEstimatedRemainingEuro": 365
         },
         "subtitle": "29 giorni tra cultura, foreste, montagne e due oceani",
         "transportBookings": [
@@ -220,6 +220,21 @@ const tripData = {
                 "pricePerPersonEuro": 51.5,
                 "operator": "Da verificare sul biglietto",
                 "paymentStatus": "Da verificare"
+            },
+            {
+                "id": "bus-oaxaca-pochutla-2026-12-30",
+                "name": "Bus Oaxaca → Pochutla",
+                "status": "Acquistato",
+                "date": "2026-12-30",
+                "departureTime": "09:15",
+                "arrivalDate": "2026-12-30",
+                "arrivalTime": "13:00",
+                "origin": "Oaxaca (terminale da verificare sul biglietto)",
+                "destination": "Pochutla (fermata da verificare sul biglietto)",
+                "totalEuro": 52,
+                "operator": "Da verificare",
+                "paymentStatus": "Da verificare",
+                "notes": "Da organizzare il taxi/colectivo per San Agustinillo. Costo totale comunicato per la prenotazione."
             }
         ]
     },
@@ -613,7 +628,7 @@ const tripData = {
             "badge": "24–29 Dic • Oaxaca, Pueblos Mancomunados e Caminos Reales",
             "locationText": "Oaxaca · Monte Albán · Sierra Norte · Oaxaca",
             "title": "Tradizioni zapoteche e trekking nella Sierra Norte",
-            "description": "Oaxaca, Monte Albán e trekking comunitario già pagato (26–28 dicembre). Hierve el Agua da verificare; il 29 resta giorno jolly.",
+            "description": "Oaxaca, Monte Albán e trekking comunitario già pagato (26–28 dicembre). Hierve el Agua da verificare; il 29 resta giorno jolly. Bus Oaxaca → Pochutla 30 dicembre 09:15–13:00 già acquistato (52 € totali).",
             "images": [
                 "assets/img/Oaxaca_Ciudad.png",
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
@@ -643,6 +658,11 @@ const tripData = {
                         "icon": "👟",
                         "title": "29 dicembre · jolly",
                         "desc": "Oaxaca a piedi oppure Hierve el Agua / Mitla se il tour natalizio del 25 non si potesse fare."
+                    },
+                    {
+                        "icon": "🚌",
+                        "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
+                        "desc": "Partenza 09:15, arrivo 13:00; 52 € totali. Verificare terminal e organizzare taxi/colectivo per San Agustinillo."
                     }
                 ]
             },
@@ -658,6 +678,10 @@ const tripData = {
                     {
                         "name": "Hierve el Agua · 25 oppure 29 dic",
                         "cost": "Tour/apertura ancora da verificare"
+                    },
+                    {
+                        "name": "Bus Oaxaca → Pochutla · 30 dic",
+                        "cost": "52 € totali · acquistato · compreso nel budget interurbani"
                     }
                 ]
             },
@@ -681,6 +705,11 @@ const tripData = {
                     "name": "Hierve el Agua · 25/29 dic",
                     "status": "Da verificare",
                     "type": "warning"
+                },
+                {
+                    "name": "Bus Oaxaca → Pochutla · 30 dic 09:15–13:00",
+                    "status": "Acquistato · 52 € totali",
+                    "type": "success"
                 }
             ],
             "days": [
@@ -1025,7 +1054,7 @@ const tripData = {
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
-                "why": "Il 30 dicembre arrivo da Oaxaca. Il 3 gennaio raggiungere Pochutla con margine per l'eventuale AltaMar verso Salina Cruz; la coincidenza non è prenotata.",
+                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus già acquistato da Oaxaca; da organizzare taxi/colectivo per Posada Paloma. Il 3 gennaio nuova partenza da Pochutla per il Chiapas, ancora da definire.",
                 "tags": [
                     "🌊 Pacifico",
                     "🌅 Capodanno sul mare",
@@ -1034,8 +1063,8 @@ const tripData = {
                 "transports": [
                     {
                         "icon": "🚌",
-                        "title": "30 dic · Oaxaca → costa",
-                        "desc": "Verificare corsa verso Pochutla e taxi/colectivo per San Agustinillo."
+                        "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
+                        "desc": "Partenza Oaxaca 09:15, arrivo Pochutla 13:00, costo 52 € totali; ultimo tratto per San Agustinillo in taxi/colectivo da organizzare."
                     },
                     {
                         "icon": "🚶",
@@ -1051,19 +1080,28 @@ const tripData = {
             },
             "food": "Pesce fresco, frutta e specialità locali sul Pacifico. Dopo il trekking priorità a mare, riposo e Capodanno tranquillo a San Agustinillo.",
             "budget": {
-                "total": "Trasferimenti e attività costiere da quotare",
-                "spent": "Nessuna escursione costiera confermata",
+                "total": "Bus Oaxaca → Pochutla 52 € acquistato · taxi e attività costiere da quotare",
+                "spent": "Bus Oaxaca → Pochutla acquistato, 52 € totali; nessuna escursione costiera confermata",
                 "items": [
                     {
                         "name": "La Ventanilla · tour comunitario",
                         "cost": "Facoltativo, costo da chiedere"
+                    },
+                    {
+                        "name": "Bus Oaxaca → Pochutla · 30 dic",
+                        "cost": "52 € totali · acquistato, già incluso nel budget interurbani"
                     }
                 ]
             },
             "reservations": [
                 {
-                    "name": "Trasferimento Oaxaca → costa · 30 dic",
-                    "status": "Da organizzare",
+                    "name": "Bus Oaxaca → Pochutla · 30 dic 09:15–13:00",
+                    "status": "Acquistato · 52 € totali",
+                    "type": "success"
+                },
+                {
+                    "name": "Pochutla → San Agustinillo · 30 dic",
+                    "status": "Taxi/colectivo da organizzare",
                     "type": "warning"
                 },
                 {
@@ -1078,8 +1116,8 @@ const tripData = {
                     "dayName": "Giorno 10 (30 Dic)",
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Partenza da Oaxaca, trasferimento a San Agustinillo e inizio del soggiorno al mare.",
-                    "fullDesc": "<p>Lasciamo Oaxaca e raggiungiamo <strong>San Agustinillo</strong> sulla costa del Pacifico: controllare autobus fino a San Pedro Pochutla e taxi/colectivo per l'ultimo tratto, oppure un transfer diretto. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
+                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 già acquistato (52 € totali). Taxi/colectivo per San Agustinillo da organizzare.",
+                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Verificare sul biglietto i terminal esatti. Per arrivare a <strong>San Agustinillo / Posada Paloma</strong> rimane da organizzare un taxi o colectivo da Pochutla. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1095,14 +1133,14 @@ const tripData = {
                     ],
                     "route": [
                         {
-                            "name": "Oaxaca de Juárez · punto d'incontro da confermare",
+                            "name": "Oaxaca · bus ore 09:15 (terminal da verificare)",
                             "coords": [
                                 17.0605,
                                 -96.7251
                             ]
                         },
                         {
-                            "name": "San Pedro Pochutla",
+                            "name": "San Pedro Pochutla · arrivo ore 13:00",
                             "coords": [
                                 15.744,
                                 -96.466
@@ -1123,6 +1161,11 @@ const tripData = {
                             "url": "https://commons.wikimedia.org/wiki/File:Playa%20San%20Agustinillo.jpg",
                             "caption": "Playa San Agustinillo"
                         }
+                    ],
+                    "operationalNotes": [
+                        "Bus Oaxaca → Pochutla acquistato: 30 dicembre 2026, 09:15–13:00, 52 € totali.",
+                        "Verificare sul biglietto il terminal di Oaxaca e la fermata di Pochutla.",
+                        "Ultimo tratto Pochutla → San Agustinillo / Posada Paloma ancora da organizzare in taxi o colectivo."
                     ]
                 },
                 {
@@ -1166,7 +1209,7 @@ const tripData = {
                 "zoom": 12
             },
             "overview": {
-                "intro": "Quattro notti a ritmo lento tra oceano, tramonti e piccoli villaggi costieri.",
+                "intro": "Arrivo il 30 dicembre via Pochutla con bus acquistato; poi quattro notti al mare tra tramonti e piccoli villaggi costieri.",
                 "highlights": [
                     {
                         "icon": "🌊",
