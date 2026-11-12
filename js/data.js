@@ -230,11 +230,11 @@ const tripData = {
                 "arrivalDate": "2026-12-30",
                 "arrivalTime": "13:00",
                 "origin": "Oaxaca (terminale da verificare sul biglietto)",
-                "destination": "Pochutla (fermata da verificare sul biglietto)",
+                "destination": "Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900 (indirizzo sul biglietto; punto di discesa da confermare)",
                 "totalEuro": 52,
                 "operator": "Da verificare",
                 "paymentStatus": "Da verificare",
-                "notes": "Da organizzare il taxi/colectivo per San Agustinillo. Costo totale comunicato per la prenotazione."
+                "notes": "Trasferimento a Posada Paloma richiesto via messaggio all'hotel per 30 dicembre dopo le 13:00; risposta attesa, non confermato."
             }
         ]
     },
@@ -1036,7 +1036,7 @@ const tripData = {
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
-                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus già acquistato da Oaxaca; da organizzare taxi/colectivo per Posada Paloma. Il 3 gennaio nuova partenza da Pochutla per il Chiapas, ancora da definire.",
+                "why": "Bus acquistato Oaxaca → Pochutla il 30 dicembre 09:15–13:00, arrivo indicato in Calle Constitución, Centro. Pickup taxi richiesto a Posada Paloma via messaggio; risposta attesa. Il 3 gennaio ripartire per il Chiapas, ancora da organizzare.",
                 "tags": [
                     "🌊 Pacifico",
                     "🌅 Capodanno sul mare",
@@ -1046,7 +1046,12 @@ const tripData = {
                     {
                         "icon": "🚌",
                         "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
-                        "desc": "Partenza Oaxaca 09:15, arrivo Pochutla 13:00, costo 52 € totali; ultimo tratto per San Agustinillo in taxi/colectivo da organizzare."
+                        "desc": "Bus già acquistato: Oaxaca ore 09:15 → Pochutla ore 13:00, 52 € totali. Arrivo indicato: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Pickup taxi chiesto all'hotel; attendere risposta."
+                    },
+                    {
+                        "icon": "🚕",
+                        "title": "30 dic · Taxi richiesto a Posada Paloma",
+                        "desc": "Richiesta inviata per il pickup dopo le 13:00, 2 persone con bagagli, da Calle Constitución (Centro, Pochutla). Risposta, prezzo totale, punto d'incontro e recapito autista da verificare. Taxi NON confermato."
                     },
                     {
                         "icon": "🚶",
@@ -1082,8 +1087,8 @@ const tripData = {
                     "type": "success"
                 },
                 {
-                    "name": "Pochutla → San Agustinillo · 30 dic",
-                    "status": "Taxi/colectivo da organizzare",
+                    "name": "Taxi Pochutla → Posada Paloma · 30 dic",
+                    "status": "Richiesto all'hotel · risposta attesa",
                     "type": "warning"
                 },
                 {
@@ -1098,8 +1103,8 @@ const tripData = {
                     "dayName": "Giorno 10 (30 Dic)",
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 già acquistato (52 € totali). Taxi/colectivo per San Agustinillo da organizzare.",
-                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Verificare sul biglietto i terminal esatti. Per arrivare a <strong>San Agustinillo / Posada Paloma</strong> rimane da organizzare un taxi o colectivo da Pochutla. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
+                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 acquistato (52 €). Taxi per Posada Paloma richiesto all'hotel: risposta attesa.",
+                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Richiesta inviata a Posada Paloma</strong> per un taxi/pickup per due persone con bagagli. <strong>Risposta attesa: transfer non ancora prenotato.</strong> Verificare prezzo totale e punto d'incontro; altrimenti taxi locale o colectivo. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1122,7 +1127,7 @@ const tripData = {
                             ]
                         },
                         {
-                            "name": "San Pedro Pochutla · arrivo ore 13:00",
+                            "name": "Pochutla · Calle Constitución, Centro (arrivo ore 13:00; fermata da confermare)",
                             "coords": [
                                 15.744,
                                 -96.466
@@ -1146,8 +1151,9 @@ const tripData = {
                     ],
                     "operationalNotes": [
                         "Bus Oaxaca → Pochutla acquistato: 30 dicembre 2026, 09:15–13:00, 52 € totali.",
-                        "Verificare sul biglietto il terminal di Oaxaca e la fermata di Pochutla.",
-                        "Ultimo tratto Pochutla → San Agustinillo / Posada Paloma ancora da organizzare in taxi o colectivo."
+                        "Indirizzo riportato sul biglietto: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Punto preciso di discesa da verificare.",
+                        "Richiesta taxi inviata a Posada Paloma per 2 persone con bagagli; risposta attesa. Nessun taxi ancora prenotato.",
+                        "Alla risposta chiedere prezzo totale, punto d'incontro e contatto dell'autista. Alternativa: taxi locale/colectivo."
                     ]
                 },
                 {
@@ -1217,7 +1223,8 @@ const tripData = {
                 ],
                 "tips": [
                     "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
-                    "Il 3 gennaio partire verso Pochutla con margine: autobus e coincidenze non sono ancora prenotati."
+                    "Il 3 gennaio partire verso Pochutla con margine: autobus e coincidenze non sono ancora prenotati.",
+                    "30 dic: taxi da Pochutla richiesto alla Posada Paloma, in attesa della risposta su prezzo e pickup."
                 ]
             },
             "startDate": "2026-12-30",
