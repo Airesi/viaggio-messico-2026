@@ -122,7 +122,7 @@ const tripData = {
                 "assicurazione di viaggio (già compresa nei voli)"
             ],
             "confirmedFlightsEuro": 2147.36,
-            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Spese rimanenti stimate: escursioni, trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
+            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus Taxqueña → Oaxaca del 23–24 dicembre già acquistato: 103 € totali per 2 persone, inclusi nella stima di 520 € dei trasporti interurbani (residuo stimato 417 €). Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
@@ -134,7 +134,7 @@ const tripData = {
             "fxDate": "2026-10-15",
             "fxSource": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-mxn.en.html",
             "hotelBookingsEuro": 1845,
-            "knownExpensesApproxEuro": 4614.61,
+            "knownExpensesApproxEuro": 4717.61,
             "pendingEstimates": [
                 {
                     "key": "esperienze",
@@ -145,10 +145,10 @@ const tripData = {
                 },
                 {
                     "key": "intercity",
-                    "label": "ADO, Tren Maya, traghetti e altri mezzi interurbani",
-                    "estimateEuro": 520,
-                    "minEuro": 350,
-                    "maxEuro": 700
+                    "label": "Altri ADO, Tren Maya, traghetti e trasporti interurbani (escluso bus Taxqueña → Oaxaca già acquistato)",
+                    "estimateEuro": 417,
+                    "minEuro": 247,
+                    "maxEuro": 597
                 },
                 {
                     "key": "taxi",
@@ -199,9 +199,29 @@ const tripData = {
             "documentedPaidEuroApprox": 622.25,
             "forecastLowEuro": 7934.61,
             "forecastHighEuro": 11184.61,
-            "experiencesAllowanceCentralEuro": 1705.39
+            "experiencesAllowanceCentralEuro": 1705.39,
+            "confirmedIntercityEuro": 103,
+            "intercityEstimatedRemainingEuro": 417
         },
-        "subtitle": "29 giorni tra cultura, foreste, montagne e due oceani"
+        "subtitle": "29 giorni tra cultura, foreste, montagne e due oceani",
+        "transportBookings": [
+            {
+                "id": "bus-taxquena-oaxaca-2026-12-23",
+                "name": "Bus notturno México Taxqueña → Oaxaca",
+                "status": "Acquistato",
+                "date": "2026-12-23",
+                "departureTime": "22:30",
+                "arrivalDate": "2026-12-24",
+                "arrivalTime": "05:30",
+                "origin": "México Taxqueña (Central del Sur)",
+                "destination": "Oaxaca (terminal esatto da verificare sul biglietto)",
+                "passengers": 2,
+                "totalEuro": 103,
+                "pricePerPersonEuro": 51.5,
+                "operator": "Da verificare sul biglietto",
+                "paymentStatus": "Da verificare"
+            }
+        ]
     },
     "areas": [
         {
@@ -211,7 +231,7 @@ const tripData = {
             "badge": "Giorni 1 - 4 • Capitale",
             "locationText": "Città del Messico",
             "title": "Il Cuore della Capitale",
-            "description": "Teotihuacán e La Gruta il 21 dicembre, poi centro storico, Coyoacán e canali. Trasferimento notturno verso Oaxaca da prenotare.",
+            "description": "Teotihuacán e La Gruta il 21 dicembre, poi centro storico, Coyoacán e canali. Bus notturno già acquistato: Taxqueña 23 dic 22:30 → Oaxaca 24 dic 05:30 (103 € per due).",
             "images": [
                 "assets/img/Citta_Del_Messico.png"
             ],
@@ -373,8 +393,8 @@ const tripData = {
                     "dayName": "Giorno 3 (23 Dic)",
                     "title": "Borghi Colorati, Canali e... Partenza Notturna!",
                     "location": "Coyoacán, Xochimilco & Bus Notturno",
-                    "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno ADO per Oaxaca.",
-                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e visitando, <strong>solo con biglietto acquistato</strong>, la <em>Casa Azul</em> di Frida Kahlo. <strong>Mercoledì 23 dicembre</strong> l'orario ordinario pubblicato dal museo inizia alle <strong>11:00</strong>: la visita va prenotata in una fascia compatibile con il pomeriggio a Xochimilco. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Qui vorremmo prendere il pullman notturno <strong>non ancora prenotato</strong> della <em>ADO</em> (si raccomanda la classe GL o Platino per riposare comodamente). Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
+                    "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno acquistato: Taxqueña 22:30 → Oaxaca 05:30.",
+                    "fullDesc": "<p>La giornata inizia a <strong>Coyoacán</strong>, ammirando l'anima coloniale e visitando, <strong>solo con biglietto acquistato</strong>, la <em>Casa Azul</em> di Frida Kahlo. <strong>Mercoledì 23 dicembre</strong> l'orario ordinario pubblicato dal museo inizia alle <strong>11:00</strong>: la visita va prenotata in una fascia compatibile con il pomeriggio a Xochimilco. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Da qui parte il <strong>bus notturno già acquistato il 23 dicembre alle 22:30</strong>, con arrivo a <strong>Oaxaca il 24 dicembre alle 05:30</strong>. I <strong>due biglietti costano complessivamente 103 €</strong>. Controllare sul biglietto il vettore, la terminal d'arrivo esatta e le regole per i bagagli. Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
@@ -432,15 +452,15 @@ const tripData = {
                     ],
                     "operationalNotes": [
                         "Casa Azul: acquistare online dal canale ufficiale per mercoledì 23 dicembre; orari soggetti a variazioni.",
-                        "Bus notturno CDMX → Oaxaca: confermare compagnia, classe, corsa, terminal di partenza e arrivo prima di acquistare.",
-                        "Conservare un margine per tornare in hotel, recuperare bagagli e arrivare al terminal."
+                        "Bus notturno acquistato: 2 persone, México Taxqueña 23 dic 22:30 → Oaxaca 24 dic 05:30; 103 € totali. Verificare la terminal di arrivo.",
+                        "Recuperare i bagagli per tempo e raggiungere Taxqueña, idealmente entro le 21:30–21:45."
                     ]
                 }
             ],
             "basecamp": {
                 "zone": "Condesa · base per Città del Messico",
                 "hotelIdea": "Quartiere comodo per Roma/Condesa; per nome, date e importo dell'alloggio vedi «Alloggi confermati» qui sotto.",
-                "why": "Arrivo la sera del 20 dicembre: verificare con la struttura l'orario di accesso. Il 23 recuperare i bagagli e raggiungere il bus notturno per Oaxaca; il pernottamento 23–24 è sul bus, non in un altro hotel.",
+                "why": "Arrivo la sera del 20 dicembre: verificare con la struttura l'orario di accesso. Il 23 recuperare i bagagli e raggiungere Taxqueña per il bus notturno acquistato delle 22:30; il pernottamento 23–24 è sul bus, non in un altro hotel.",
                 "tags": [
                     "🌳 Condesa e Roma",
                     "🏛️ Musei e civiltà preispaniche",
@@ -466,8 +486,8 @@ const tripData = {
             },
             "food": "Pranzo preispanico in grotta, tacos al pastor in centro, churros serali ed elotes sui canali.",
             "budget": {
-                "total": "Ingressi, trasporti e pasti da definire (albergo nel riepilogo dedicato)",
-                "spent": "Pranzo La Gruta prenotato, da pagare",
+                "total": "Ingressi, pasti e altri trasporti da definire (bus €103 acquistato; hotel nel riepilogo dedicato)",
+                "spent": "Bus notturno €103 per due acquistato · La Gruta prenotata, da pagare",
                 "items": [
                     {
                         "name": "Teotihuacán · ingressi 2 stranieri",
@@ -480,6 +500,10 @@ const tripData = {
                     {
                         "name": "Museo Nacional de Antropología · 2 stranieri",
                         "cost": "420 MXN tariffa INAH 2026"
+                    },
+                    {
+                        "name": "Bus México Taxqueña → Oaxaca, 23/24 dic · 2 persone",
+                        "cost": "103 € totali · già acquistato · incluso nella stima trasporti interurbani"
                     }
                 ]
             },
@@ -490,9 +514,9 @@ const tripData = {
                     "type": "success"
                 },
                 {
-                    "name": "ADO CDMX → Oaxaca · notte 23/24 dic",
-                    "status": "Da prenotare",
-                    "type": "warning"
+                    "name": "Bus Taxqueña → Oaxaca · 23 dic 22:30 → 24 dic 05:30",
+                    "status": "Acquistato · 103 € totali",
+                    "type": "success"
                 }
             ],
             "mapFocus": {
@@ -529,7 +553,7 @@ const tripData = {
                 ],
                 "tips": [
                     "Bloccare per tempo l'ingresso alla Casa Azul e verificare gli orari dei musei.",
-                    "La sera del 23 c'è il bus notturno per Oaxaca: prevedere margine per bagagli e terminal."
+                    "Bus già acquistato: Taxqueña, 23 dicembre ore 22:30; arrivo a Oaxaca il 24 dicembre alle 05:30."
                 ]
             },
             "startDate": "2026-12-20",
@@ -577,7 +601,7 @@ const tripData = {
             "basecamp": {
                 "zone": "Jalatlaco / Oaxaca · Sierra Norte 26–28 dicembre",
                 "hotelIdea": "La stessa base a Jalatlaco prima e dopo il trekking: chiedere deposito bagagli per le due notti in cabaña già incluse nel pacchetto Sierra Norte.",
-                "why": "Il trekking parte da Oaxaca il 26 alle 08:00, con rientro il 28 nel pomeriggio. Verificare il punto d'incontro del pacchetto; tenere flessibile il 29 dopo 40 km di cammino.",
+                "why": "Bus già acquistato con arrivo a Oaxaca il 24 alle 05:30. Chiedere il deposito bagagli al Cazomalli prima del check-in. Trekking dal 26 alle 08:00 al 28 pomeriggio; il 29 resta flessibile.",
                 "tags": [
                     "🏛️ Oaxaca 24–25 e 29",
                     "🥾 Sierra 26–28",
@@ -586,8 +610,8 @@ const tripData = {
                 "transports": [
                     {
                         "icon": "🚌",
-                        "title": "ADO CDMX → Oaxaca",
-                        "desc": "Arrivo notturno il 24, controllare orario e deposito bagagli presso Cazomalli."
+                        "title": "Bus acquistato · Taxqueña → Oaxaca",
+                        "desc": "Partenza 23 dicembre alle 22:30 da México Taxqueña; arrivo 24 dicembre alle 05:30 a Oaxaca · 103 € totali per due. Verificare terminal d'arrivo e deposito bagagli al Cazomalli."
                     },
                     {
                         "icon": "🚐",
@@ -623,9 +647,9 @@ const tripData = {
                     "type": "success"
                 },
                 {
-                    "name": "ADO CDMX → Oaxaca · notte 23/24 dic",
-                    "status": "Da prenotare",
-                    "type": "warning"
+                    "name": "Bus Taxqueña → Oaxaca · 23 dic 22:30 → 24 dic 05:30",
+                    "status": "Acquistato · 103 € totali",
+                    "type": "success"
                 },
                 {
                     "name": "Monte Albán · 24 dic",
@@ -644,8 +668,8 @@ const tripData = {
                     "dayName": "Giorno 4 (24 Dic)",
                     "title": "Monte Albán nella Vigilia, poi Oaxaca centro",
                     "location": "Monte Albán → Santo Domingo · mercati · centro",
-                    "shortDesc": "Visita alla città zapoteca di Monte Albán se l'orario d'arrivo da CDMX lo consente; mercati e centro storico nel pomeriggio, Vigilia in città.",
-                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo in città dal <strong>bus notturno ADO da Città del Messico</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; se l'ADO arriva tardi, accorciamo le visite in centro invece di correre.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
+                    "shortDesc": "Visita alla città zapoteca di Monte Albán dopo l'arrivo previsto del bus alle 05:30; mercati e centro storico nel pomeriggio, Vigilia in città.",
+                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo previsto a <strong>Oaxaca alle 05:30</strong> con il <strong>bus notturno già acquistato</strong> da <strong>México Taxqueña (23 dicembre, ore 22:30)</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; con l'arrivo previsto alle 05:30 c'è margine per colazione e deposito bagagli, ma gli orari festivi del sito vanno verificati.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
@@ -665,7 +689,7 @@ const tripData = {
                     ],
                     "route": [
                         {
-                            "name": "Terminal ADO Oaxaca",
+                            "name": "Arrivo bus Oaxaca · 05:30 (terminal da verificare)",
                             "coords": [
                                 17.0694,
                                 -96.7188
@@ -702,7 +726,7 @@ const tripData = {
                     ],
                     "operationalNotes": [
                         "Confermare l'orario del 24 dicembre di Monte Albán e dei servizi turistici prima di organizzare il transfer.",
-                        "L'arrivo dal bus notturno può comprimere il programma: dare priorità a Monte Albán e poi scegliere quante soste fare in centro."
+                        "Bus già acquistato, arrivo a Oaxaca previsto alle 05:30 del 24 dicembre: organizzare colazione e deposito bagagli. Verificare la terminal di arrivo sul biglietto."
                     ]
                 },
                 {
