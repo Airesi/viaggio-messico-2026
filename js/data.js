@@ -1036,7 +1036,7 @@ const tripData = {
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
-                "why": "Bus acquistato Oaxaca → Pochutla il 30 dicembre 09:15–13:00, arrivo indicato in Calle Constitución, Centro. Pickup taxi richiesto a Posada Paloma via messaggio; risposta attesa. Il 3 gennaio ripartire per il Chiapas, ancora da organizzare.",
+                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus acquistato da Oaxaca; pickup taxi richiesto a Posada Paloma, risposta attesa. Domenica 3 gennaio rientro a Pochutla per il bus delle 14:10 verso Oaxaca, prima tappa del collegamento candidato per Villahermosa e Palenque.",
                 "tags": [
                     "🌊 Pacifico",
                     "🌅 Capodanno sul mare",
@@ -1060,8 +1060,8 @@ const tripData = {
                     },
                     {
                         "icon": "🚕",
-                        "title": "3 gen · Pochutla",
-                        "desc": "Partire con margine per AltaMar 16:15 → Salina Cruz, ancora da confermare."
+                        "title": "3 gen · Pochutla → Oaxaca · da acquistare",
+                        "desc": "Bus candidato alle 14:10 da Calle Constitución (Pochutla), arrivo 17:55 a Oaxaca, 5 de Mayo 900. Prezzo indicato: 992 MXN totali da verificare in checkout; taxi/colectivo da San Agustinillo a Pochutla ancora da organizzare."
                     }
                 ]
             },
@@ -1092,8 +1092,8 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "AltaMar Pochutla → Salina Cruz · 3 gen",
-                    "status": "Da verificare",
+                    "name": "Bus Pochutla → Oaxaca · 3 gen 14:10–17:55",
+                    "status": "In acquisto · non ancora confermato",
                     "type": "warning"
                 }
             ],
@@ -1223,7 +1223,7 @@ const tripData = {
                 ],
                 "tips": [
                     "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
-                    "Il 3 gennaio partire verso Pochutla con margine: autobus e coincidenze non sono ancora prenotati.",
+                    "3 gen: raggiungere Pochutla con margine per il bus delle 14:10 verso Oaxaca; biglietto ancora da acquistare, poi proseguimento notturno per Villahermosa.",
                     "30 dic: taxi da Pochutla richiesto alla Posada Paloma, in attesa della risposta su prezzo e pickup."
                 ]
             },
@@ -1268,7 +1268,7 @@ const tripData = {
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
             "title": "Palenque: giungla, città maya e cascate",
-            "description": "Palenque e Roberto Barrios il 5–6 gennaio; autobus dalla costa ancora da verificare. Toniná resta una possibilità alternativa, non programmata.",
+            "description": "Dal Pacifico verso Palenque via Oaxaca e Villahermosa: collegamenti 3–4 gennaio in fase di acquisto. Check-in tardivo a Los Susurros da confermare; possibile notte a Villahermosa il 4 gennaio come piano B, senza modificare le prenotazioni esistenti.",
             "images": [
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/640px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
             ],
@@ -1279,62 +1279,68 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "3–4 gennaio 2027 · Itinerario candidato, da prenotare",
-                "title": "Dal Pacifico alla giungla, seguendo la costa",
-                "subtitle": "San Agustinillo → Pochutla → Salina Cruz → Villahermosa → Palenque",
-                "cost": "~135–150 € in due per 3 bus, più trasferimenti locali",
-                "duration": "Dal 3 gennaio pomeriggio al 4 gennaio ore 13:00 · ~22 ore complessive",
+                "eyebrow": "3–4 gennaio 2027 · Itinerario individuato, acquisti in corso (NON confermati)",
+                "title": "Dalla costa al Chiapas, via Oaxaca e Villahermosa",
+                "subtitle": "San Agustinillo → Pochutla → Oaxaca → Villahermosa → Palenque",
+                "cost": "4.660 MXN indicati complessivi per i tre autobus, supponendo importi per 2 persone: 992 + 2.964 + 704 MXN. Verificare in fase d'acquisto; taxi esclusi.",
+                "duration": "Pochutla 3 gen ore 14:10 → Palenque 4 gen ore 20:30 · 30 h 20 min, incluse 3 h 35 min a Oaxaca e 7 h 50 min a Villahermosa",
                 "legs": [
                     {
                         "day": "3 gen",
-                        "time": "Prima delle 16:15",
+                        "time": "Prima delle 14:10",
                         "from": "San Agustinillo",
-                        "to": "San Pedro Pochutla",
-                        "operator": "Taxi / colectivo",
-                        "duration": "30–45 min indicativi",
-                        "price": "Da verificare",
-                        "note": "Partire con margine e individuare il punto di salita AltaMar a Pochutla."
+                        "to": "Pochutla, Calle Constitución (Centro)",
+                        "operator": "Taxi/colectivo locale",
+                        "duration": "Da verificare",
+                        "price": "Da quotare",
+                        "note": "Zaino in spalla. Arrivare in anticipo alla fermata indicata e verificare il punto preciso."
                     },
                     {
                         "day": "3 gen",
-                        "time": "16:15 → 20:10",
-                        "from": "Pochutla",
-                        "to": "Salina Cruz",
-                        "operator": "AltaMar · diretto (Rome2Rio)",
-                        "duration": "3 h 55 min",
-                        "price": "13–20 € / persona, indicativi",
-                        "note": "Orario mostrato su Rome2Rio per il 3 gennaio; verificare la corsa e il punto esatto d'arrivo. Margine teorico prima dell'ADO: 2 h 50 min."
+                        "time": "14:10 → 17:55",
+                        "from": "Pochutla, Calle Constitución, Centro",
+                        "to": "Oaxaca, 5 de Mayo 900",
+                        "operator": "Autobus (vettore da verificare)",
+                        "duration": "3 h 45 min",
+                        "price": "992 MXN mostrati (verificare se per 2)",
+                        "note": "L'utente sta per acquistare questa tratta, ma non ha ancora confermato l'acquisto. Margine a Oaxaca prima del bus successivo: 3 h 35 min."
                     },
                     {
                         "day": "3 → 4 gen",
-                        "time": "23:00 → 08:55 (+1)",
-                        "from": "Salina Cruz",
-                        "to": "Villahermosa",
-                        "operator": "ADO · notturno",
-                        "duration": "9 h 55 min",
-                        "price": "964 MXN / persona; 1.928 MXN in due",
-                        "note": "Partenza da Calle Primero de Mayo 32, colonia Espinal (Salina Cruz). Arrivo ad Av. Francisco Javier Mina 297 (Villahermosa). Prezzo e orario mostrati nella ricerca ADO; non prenotato."
+                        "time": "21:30 → 10:25 (+1)",
+                        "from": "Oaxaca, 5 de Mayo 900",
+                        "to": "Villahermosa, Av. Francisco Javier Mina 297",
+                        "operator": "Autobus notturno (vettore da verificare)",
+                        "duration": "12 h 55 min",
+                        "price": "2.964 MXN mostrati (verificare se per 2)",
+                        "note": "Seconda tratta che l'utente intende acquistare; stessa via e numero del terminal di arrivo a Oaxaca. Biglietto non ancora confermato."
                     },
                     {
                         "day": "4 gen",
-                        "time": "10:30 → 13:00",
-                        "from": "Villahermosa Tabasco Central",
-                        "to": "Palenque",
-                        "operator": "Autobus · Rome2Rio",
-                        "duration": "2 h 30 min",
-                        "price": "~7 € / persona, indicativi",
-                        "note": "Arrivo alla Central de Autobuses ADO Palenque. Margine teorico dall'ADO notturno: 1 h 35 min. Potrebbe essere necessario spostarsi tra due terminal a Villahermosa."
-                    }
-                ],
-                "warning": "Corsa AltaMar delle 16:15 e collegamento Villahermosa–Palenque delle 10:30: orari indicativi Rome2Rio, da confermare per il 3–4 gennaio 2027. Verificare la fermata AltaMar a Salina Cruz, il terminal ADO di partenza e l'eventuale spostamento tra terminal a Villahermosa. Coincidenze NON garantite su biglietti separati; nessun biglietto ancora acquistato. <strong>Piano B, se una corsa manca o gli orari non coincidono:</strong> prima di pagare cercare un itinerario con meno cambi o una diversa combinazione di orari, confrontando i terminal; se necessario rivedere con anticipo il giorno di trasferimento senza spostare automaticamente le notti già prenotate. Il piano candidato non è una coincidenza garantita.",
-                "sources": [
-                    {
-                        "text": "Controlla gli autobus ADO",
-                        "url": "https://www.ado.com.mx/"
+                        "time": "10:25 → 18:15",
+                        "from": "Villahermosa, Av. Francisco Javier Mina 297",
+                        "to": "Villahermosa · visita in città",
+                        "operator": "Pausa tra le corse, zaino in spalla",
+                        "duration": "7 h 50 min di attesa",
+                        "price": "Visite, taxi e pasti extra",
+                        "note": "Possibile Parque Museo La Venta, laguna e pranzo; verificare aperture, trasporti e ritorno al terminal in anticipo. Nessun deposito bagagli necessario: solo zaini."
                     },
                     {
-                        "text": "Confronta su Rome2Rio",
-                        "url": "https://www.rome2rio.com/it/"
+                        "day": "4 gen",
+                        "time": "18:15 → 20:30",
+                        "from": "Villahermosa, Av. Francisco Javier Mina 297",
+                        "to": "Palenque, Carretera Catazajá–Rancho Nuevo (fermata esatta da confermare)",
+                        "operator": "Autobus (vettore da verificare)",
+                        "duration": "2 h 15 min",
+                        "price": "704 MXN mostrati (verificare se per 2)",
+                        "note": "Terza tratta ancora da decidere e acquistare. All'arrivo richiedere taxi verso Los Susurros; check-in tardivo alle 21:00–21:30 da confermare."
+                    }
+                ],
+                "warning": "<strong>Priorità:</strong> ottenere conferma scritta da Los Susurros per il check-in dopo le 21:00 e per un taxi o un contatto affidabile dalla fermata autobus. Non è chiaro dove termini esattamente la corsa a Palenque. <strong>Piano B:</strong> se la struttura non accetta l'arrivo tardivo, notte del 4 gennaio a Villahermosa, bus per Palenque il 5 mattina e richiesta di modificare Los Susurros dal 4–7 al 5–7 gennaio. Non cambiare la prenotazione attuale prima di risposta scritta e verifica delle condizioni. Con un giorno in meno a Palenque andrebbero rivalutate visite e cascate. Tutti i prezzi sono importi riferiti dall'utente per la ricerca, non acquisti confermati; coincidenze tra biglietti separati non garantite.",
+                "sources": [
+                    {
+                        "text": "ADO · verifica orari e acquisto",
+                        "url": "https://www.ado.com.mx/"
                     }
                 ]
             },
@@ -1342,10 +1348,10 @@ const tripData = {
                 {
                     "id": "3-jan03",
                     "dayName": "Giorno 14 (3 Gen)",
-                    "title": "Da San Agustinillo verso Salina Cruz: la costa di Oaxaca",
-                    "location": "San Agustinillo · Pochutla · Salina Cruz",
-                    "shortDesc": "Collegamenti indicativi Pochutla → Salina Cruz → Villahermosa; biglietti separati e non prenotati.",
-                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>, poi taxi/colectivo per <strong>San Pedro Pochutla</strong>. Da qui è candidato l'autobus <strong>AltaMar</strong> verso <strong>Salina Cruz</strong>, seguito da un <strong>ADO notturno</strong> per Villahermosa. <strong>Nessun biglietto prenotato.</strong></p><p>Gli orari indicativi, gli indirizzi dei terminal, i prezzi e gli avvisi sulle coincidenze a biglietti separati sono nella scheda <strong>«Dal Pacifico alla giungla»</strong>, dentro <strong>Logistica e spostamenti</strong> nella colonna sotto la mappa; verificarli prima di acquistare, senza basarsi su una coincidenza non garantita.</p>",
+                    "title": "Dal Pacifico a Oaxaca e bus notturno per Villahermosa",
+                    "location": "San Agustinillo · Pochutla · Oaxaca · Villahermosa (notturno)",
+                    "shortDesc": "Rientro a Pochutla, bus delle 14:10 per Oaxaca e notturno delle 21:30 per Villahermosa: tratte in acquisto, non ancora confermate.",
+                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>; poi taxi/colectivo per la fermata a <strong>Pochutla, Calle Constitución (Centro)</strong>. L'autobus individuato parte alle <strong>14:10</strong> e arriva a <strong>Oaxaca, Calle 5 de Mayo 900, alle 17:55</strong> (prezzo mostrato: <strong>992 MXN</strong>, da verificare per due). Ripartenza dallo <strong>stesso indirizzo</strong> alle <strong>21:30</strong> per <strong>Villahermosa</strong>, arrivo alle <strong>10:25 del 4 gennaio</strong> (2.964 MXN mostrati). <strong>L'utente intende comprare le prime due tratte, ma gli acquisti non sono ancora confermati.</strong></p><p>Margine di <strong>3 h 35 min a Oaxaca</strong>. In totale viaggio zaino in spalla, senza valigie. Prezzi, operatori e indirizzi esatti vanno verificati sul biglietto prima del pagamento. Per tutti gli orari vedere la scheda <strong>Logistica e spostamenti</strong>.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1364,25 +1370,27 @@ const tripData = {
                             ]
                         },
                         {
-                            "name": "Salina Cruz",
+                            "name": "Oaxaca, Centro",
                             "coords": [
-                                16.169,
-                                -95.199
+                                17.0605,
+                                -96.7251
                             ]
                         }
                     ],
                     "operationalNotes": [
-                        "I trasferimenti AltaMar e ADO sono ancora proposte: verificare corse del 3 gennaio, terminal e disponibilità.",
-                        "Le coincidenze su biglietti separati non sono garantite. Se non funzionano, valutare un'alternativa con meno cambi prima di acquistare, tenendo conto del check-in a Palenque il 4 gennaio."
+                        "Prima tratta in acquisto: 3 gen 14:10 Pochutla → 17:55 Oaxaca, 992 MXN mostrati (importo per 2 da verificare).",
+                        "Seconda tratta in acquisto: 3 gen 21:30 Oaxaca → 4 gen 10:25 Villahermosa, 2.964 MXN mostrati (importo per 2 da verificare).",
+                        "A Oaxaca sia arrivo sia partenza risultano a Calle 5 de Mayo 900; margine di 3 h 35 min. Verificare terminal reali e possibili ritardi.",
+                        "Biglietti non ancora confermati acquistati; il bus finale Villahermosa → Palenque è una decisione separata."
                     ]
                 },
                 {
                     "id": "3-jan04",
                     "dayName": "Giorno 15 (4 Gen)",
-                    "title": "Da Villahermosa a Palenque: arrivo nella giungla",
-                    "location": "Villahermosa · Palenque",
-                    "shortDesc": "Arrivo indicativo in autobus a Villahermosa, prosecuzione per Palenque e trasferimento alla struttura.",
-                    "fullDesc": "<p>Arrivo a <strong>Villahermosa</strong> e prosecuzione in autobus per <strong>Palenque</strong>, secondo l'itinerario candidato descritto in <strong>«Dal Pacifico alla giungla»</strong>, nella sezione <strong>Logistica e spostamenti</strong> sotto la mappa. Il percorso include potenzialmente un cambio di terminal e non è ancora prenotato.</p><p>All'arrivo a Palenque, raggiungere la struttura confermata lungo la <strong>Carretera Palenque–Ruinas</strong> con un taxi: chiedere deposito bagagli e check-in. Pomeriggio di riposo dopo il viaggio; il 5 gennaio sito archeologico, il 6 cascate.</p>",
+                    "title": "Villahermosa: una sosta olmeca prima di Palenque?",
+                    "location": "Villahermosa · Parque Museo La Venta · Palenque",
+                    "shortDesc": "Arrivo 10:25 a Villahermosa: visita La Venta possibile. Bus per Palenque 18:15–20:30, check-in tardivo Los Susurros da concordare; piano B notte a Villahermosa.",
+                    "fullDesc": "<p>Arrivo del bus a <strong>Villahermosa alle 10:25</strong> in <strong>Av. Francisco Javier Mina 297</strong>. Fino alle 18:15 si può trasformare la lunga attesa in una visita, con <strong>Parque Museo La Venta</strong> e una pausa pranzo: verificare apertura del lunedì, spostamenti e tempi di rientro al terminal. Si viaggia soltanto con gli zaini, senza necessità di deposito valigie.</p><p><strong>Piano A:</strong> bus Villahermosa <strong>18:15 → Palenque 20:30</strong> (prezzo mostrato: <strong>704 MXN</strong>, da verificare se per due), poi taxi verso <strong>Los Susurros</strong>. La fermata esatta a Palenque non è chiara: chiedere all'hotel se consiglia un taxista affidabile. <strong>Check-in previsto intorno alle 21:00–21:30, da confermare con la struttura.</strong> Il biglietto del bus finale non è ancora acquistato.</p><p><strong>Piano B, solo se Los Susurros non accetta il check-in tardivo:</strong> pernottare a <strong>Villahermosa il 4 gennaio</strong> e raggiungere Palenque il 5, chiedendo prima alla struttura se si può modificare l'hotel già confermato dal 4–7 al <strong>5–7 gennaio</strong>. Non considerare né il nuovo hotel né la modifica come confermati; in questo scenario occorrerà rivedere il programma delle rovine e delle cascate del 5–6 gennaio.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1402,8 +1410,10 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "Verificare se a Villahermosa serve cambiare terminal e quanto tempo occorre.",
-                        "Confermare l'ultimo autobus per Palenque e concordare taxi dall'arrivo al Los Susurros."
+                        "Il 4 gen Villahermosa 10:25 → bus Palenque 18:15: attesa 7 h 50 min, utilizzabile per Parque Museo La Venta (orario festivo da verificare).",
+                        "Palenque arrivo stimato ore 20:30, fermata esatta da verificare. Taxi per Los Susurros da concordare; non dare per scontato che siano 4 minuti dalla fermata reale.",
+                        "Scrivere a Los Susurros: conferma scritta check-in ore 21:00–21:30, indicazioni per taxi/taxista affidabile e prezzo indicativo.",
+                        "Se check-in impossibile, valutare notte del 4 a Villahermosa e chiedere se si può ridurre Los Susurros al 5–7 gennaio. Nessun hotel o bus modificato/acquistato finché non confermato."
                     ]
                 },
                 {
@@ -1494,12 +1504,12 @@ const tripData = {
                 }
             ],
             "budget": {
-                "total": "Autobus 3–4 gennaio ~135–150 € in due + ingressi e taxi da quotare",
-                "spent": "Nessun autobus o tour in Chiapas confermato",
+                "total": "Percorso candidato via Oaxaca e Villahermosa: 4.660 MXN indicati per 3 bus (totale da verificare per 2 persone) + taxi e visite",
+                "spent": "Nessuno dei 3 autobus del 3–4 gennaio ancora comunicato come acquistato; hotel Los Susurros già prenotato per 4–7 gennaio",
                 "items": [
                     {
-                        "name": "3–4 gen · tre autobus Pochutla → Palenque",
-                        "cost": "~135–150 € in due, tariffe e coincidenze da verificare"
+                        "name": "3–4 gen · Pochutla → Oaxaca → Villahermosa → Palenque",
+                        "cost": "992 + 2.964 + 704 = 4.660 MXN indicati (≈224 € al cambio BCE 15/10, solo se prezzi totali per 2). Nessun biglietto ancora confermato."
                     },
                     {
                         "name": "Palenque · ingresso sito e CONANP, 2 stranieri",
@@ -1513,18 +1523,23 @@ const tripData = {
             },
             "reservations": [
                 {
-                    "name": "AltaMar · 3 gen 16:15",
-                    "status": "Da verificare",
+                    "name": "Pochutla → Oaxaca · 3 gen 14:10–17:55",
+                    "status": "In acquisto · non ancora confermato",
                     "type": "warning"
                 },
                 {
-                    "name": "ADO · 3 gen 23:00",
-                    "status": "Da prenotare",
+                    "name": "Oaxaca → Villahermosa · 3/4 gen 21:30–10:25",
+                    "status": "In acquisto · non ancora confermato",
                     "type": "warning"
                 },
                 {
-                    "name": "Villahermosa–Palenque · 4 gen 10:30",
-                    "status": "Da verificare",
+                    "name": "Villahermosa → Palenque · 4 gen 18:15–20:30",
+                    "status": "Da decidere · non acquistato",
+                    "type": "warning"
+                },
+                {
+                    "name": "Los Susurros · check-in 4 gen ore 21:00–21:30 e taxi",
+                    "status": "Da chiedere all'hotel · risposta attesa solo dopo invio",
                     "type": "warning"
                 },
                 {
@@ -1548,7 +1563,7 @@ const tripData = {
             "basecamp": {
                 "zone": "Palenque · area strada per le rovine",
                 "hotelIdea": "Sistemazione immersa nel verde, non in centro: prevedere taxi per stazione bus, cascate e fermata del Tren Maya.",
-                "why": "L'arrivo il 4 gennaio e il trasferimento per il Tren Maya del 7 richiedono taxi da concordare. Riferimenti dell'alloggio nel riepilogo hotel, autobus nella scheda trasferimento.",
+                "why": "Soggiorno Los Susurros 4–7 gennaio già confermato. Percorso candidato Pochutla → Oaxaca → Villahermosa → Palenque: arrivo previsto il 4 gennaio alle 20:30, taxi per l'hotel e check-in verso le 21:00–21:30 da confermare. Se la struttura non accetta l'arrivo tardivo, possibile notte a Villahermosa il 4 e ingresso a Palenque il 5: cambiare l'hotel soltanto dopo conferma.",
                 "tags": [
                     "🐒 Natura e primati",
                     "🏛️ Sito maya di Palenque",
@@ -1557,8 +1572,8 @@ const tripData = {
                 "transports": [
                     {
                         "icon": "🚕",
-                        "title": "4 gen · autobus → hotel",
-                        "desc": "Arrivo a Palenque indicativamente alle 13:00, concordare eventuale taxi e deposito bagagli prima del check-in."
+                        "title": "4 gen · Palenque alle 20:30 (ipotesi)",
+                        "desc": "Bus da Villahermosa 18:15 → Palenque 20:30, ancora da acquistare. Fermata finale sul biglietto non chiara; eventuale taxi da concordare con Los Susurros, chiedendo prezzo e riferimento di un autista. Verificare check-in alle 21:00–21:30."
                     },
                     {
                         "icon": "🏛️",
@@ -1600,7 +1615,7 @@ const tripData = {
                 "tips": [
                     "Arrivare presto al sito archeologico e verificare le aree visitabili.",
                     "Toniná resta un'alternativa da valutare, non una tappa aggiunta al 6 gennaio.",
-                    "Lungo trasferimento il 3–4 gennaio: controllare orari e terminal prima di acquistare i bus."
+                    "4 gen: sosta a Villahermosa dalle 10:25 alle 18:15, possibile visita a La Venta. Chiedere a Los Susurros disponibilità check-in dopo le 21 e taxi affidabile; piano B notte a Villahermosa."
                 ]
             },
             "startDate": "2027-01-03",
