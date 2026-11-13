@@ -122,7 +122,7 @@ const tripData = {
                 "assicurazione di viaggio (già compresa nei voli)"
             ],
             "confirmedFlightsEuro": 2147.36,
-            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus già acquistati: Taxqueña → Oaxaca del 23–24 dicembre (103 € totali) e Oaxaca → Pochutla del 30 dicembre 09:15–13:00 (52 € totali). Totale bus acquistati 155 €, inclusi nella stima iniziale di 520 € per gli interurbani; residuo stimato 365 €. Taxi/colectivo Pochutla → San Agustinillo ancora da organizzare. Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
+            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus acquistati: Taxqueña → Oaxaca del 23–24 dicembre (103 € totali), Oaxaca → Pochutla del 30 dicembre 09:15–13:00 (52 € totali), Pochutla → Oaxaca del 3 gennaio 14:10 (1.030 MXN pagati per 2) e Oaxaca → Villahermosa del 3 gennaio 21:30 (3.002 MXN pagati per 2). Ultimi due pagati il 13/11/2026 via PayPal, totale 4.032 MXN. I precedenti 155 € sono contabilizzati separatamente; evitare doppi conteggi nel budget. Taxi/colectivo Pochutla → San Agustinillo ancora da organizzare. Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
@@ -1036,7 +1036,7 @@ const tripData = {
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
-                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus acquistato da Oaxaca; pickup taxi richiesto a Posada Paloma, risposta attesa. Domenica 3 gennaio rientro a Pochutla per il bus delle 14:10 verso Oaxaca, prima tappa del collegamento candidato per Villahermosa e Palenque.",
+                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus acquistato da Oaxaca; pickup taxi richiesto a Posada Paloma, risposta attesa. Domenica 3 gennaio rientro a Pochutla per il bus delle 14:10 verso Oaxaca, tratta acquistata del collegamento via Oaxaca e Villahermosa verso Palenque.",
                 "tags": [
                     "🌊 Pacifico",
                     "🌅 Capodanno sul mare",
@@ -1060,8 +1060,8 @@ const tripData = {
                     },
                     {
                         "icon": "🚕",
-                        "title": "3 gen · Pochutla → Oaxaca · da acquistare",
-                        "desc": "Bus candidato alle 14:10 da Calle Constitución (Pochutla), arrivo 17:55 a Oaxaca, 5 de Mayo 900. Prezzo indicato: 992 MXN totali da verificare in checkout; taxi/colectivo da San Agustinillo a Pochutla ancora da organizzare."
+                        "title": "3 gen · Pochutla → Oaxaca · acquistato",
+                        "desc": "Bus ADO acquistato per due: partenza 14:10 da Pochutla, arrivo previsto 17:55 a Oaxaca, 5 de Mayo 900. Pagati 1.030 MXN. Taxi/colectivo da San Agustinillo a Pochutla ancora da organizzare; verificare fermata sul biglietto."
                     }
                 ]
             },
@@ -1093,8 +1093,8 @@ const tripData = {
                 },
                 {
                     "name": "Bus Pochutla → Oaxaca · 3 gen 14:10–17:55",
-                    "status": "In acquisto · non ancora confermato",
-                    "type": "warning"
+                    "status": "Acquistato per 2 · 1.030 MXN pagati",
+                    "type": "success"
                 }
             ],
             "days": [
@@ -1104,7 +1104,7 @@ const tripData = {
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
                     "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 acquistato (52 €). Taxi per Posada Paloma richiesto all'hotel: risposta attesa.",
-                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Richiesta inviata a Posada Paloma</strong> per un taxi/pickup per due persone con bagagli. <strong>Risposta attesa: transfer non ancora prenotato.</strong> Verificare prezzo totale e punto d'incontro; altrimenti taxi locale o colectivo. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per il trasferimento al Chiapas, ancora da organizzare.</p>",
+                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Richiesta inviata a Posada Paloma</strong> per un taxi/pickup per due persone con bagagli. <strong>Risposta attesa: transfer non ancora prenotato.</strong> Verificare prezzo totale e punto d'incontro; altrimenti taxi locale o colectivo. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per i due autobus ADO acquistati fino a Villahermosa; taxi iniziale e collegamento finale per Palenque ancora da organizzare.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1223,7 +1223,7 @@ const tripData = {
                 ],
                 "tips": [
                     "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
-                    "3 gen: raggiungere Pochutla con margine per il bus delle 14:10 verso Oaxaca; biglietto ancora da acquistare, poi proseguimento notturno per Villahermosa.",
+                    "3 gen: arrivare in anticipo a Pochutla per il bus ADO acquistato delle 14:10; acquistato anche il notturno delle 21:30 per Villahermosa.",
                     "30 dic: taxi da Pochutla richiesto alla Posada Paloma, in attesa della risposta su prezzo e pickup."
                 ]
             },
@@ -1268,7 +1268,7 @@ const tripData = {
             "badge": "3–6 Gen · Dalla costa alla giungla",
             "locationText": "San Agustinillo → Palenque",
             "title": "Palenque: giungla, città maya e cascate",
-            "description": "Dal Pacifico verso Palenque via Oaxaca e Villahermosa: collegamenti 3–4 gennaio in fase di acquisto. Check-in tardivo a Los Susurros da confermare; possibile notte a Villahermosa il 4 gennaio come piano B, senza modificare le prenotazioni esistenti.",
+            "description": "Dal Pacifico verso Palenque via Oaxaca e Villahermosa: prime due corse ADO acquistate e pagate per due persone; ultima tratta Villahermosa → Palenque non acquistata. Check-in tardivo a Los Susurros da confermare; possibile notte a Villahermosa il 4 gennaio come piano B, senza modificare le prenotazioni esistenti.",
             "images": [
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Temple_of_inscription_in_Palenque_Chiapas_02.jpg/640px-Temple_of_inscription_in_Palenque_Chiapas_02.jpg"
             ],
@@ -1279,10 +1279,10 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "3–4 gennaio 2027 · Itinerario individuato, acquisti in corso (NON confermati)",
+                "eyebrow": "3–4 gennaio 2027 · Prime due corse ADO acquistate e pagate",
                 "title": "Dalla costa al Chiapas, via Oaxaca e Villahermosa",
                 "subtitle": "San Agustinillo → Pochutla → Oaxaca → Villahermosa → Palenque",
-                "cost": "4.660 MXN indicati complessivi per i tre autobus, supponendo importi per 2 persone: 992 + 2.964 + 704 MXN. Verificare in fase d'acquisto; taxi esclusi.",
+                "cost": "4.032 MXN già pagati per i primi due autobus ADO per 2 persone (1.030 + 3.002 MXN). Villahermosa → Palenque ancora da acquistare, 704 MXN mostrati come prezzo indicativo; taxi esclusi.",
                 "duration": "Pochutla 3 gen ore 14:10 → Palenque 4 gen ore 20:30 · 30 h 20 min, incluse 3 h 35 min a Oaxaca e 7 h 50 min a Villahermosa",
                 "legs": [
                     {
@@ -1302,8 +1302,8 @@ const tripData = {
                         "to": "Oaxaca, 5 de Mayo 900",
                         "operator": "Autobus (vettore da verificare)",
                         "duration": "3 h 45 min",
-                        "price": "992 MXN mostrati (verificare se per 2)",
-                        "note": "L'utente sta per acquistare questa tratta, ma non ha ancora confermato l'acquisto. Margine a Oaxaca prima del bus successivo: 3 h 35 min."
+                        "price": "1.030 MXN pagati per 2",
+                        "note": "ADO acquistato e pagato per due il 13/11/2026. Margine a Oaxaca prima del bus successivo: 3 h 35 min."
                     },
                     {
                         "day": "3 → 4 gen",
@@ -1312,8 +1312,8 @@ const tripData = {
                         "to": "Villahermosa, Av. Francisco Javier Mina 297",
                         "operator": "Autobus notturno (vettore da verificare)",
                         "duration": "12 h 55 min",
-                        "price": "2.964 MXN mostrati (verificare se per 2)",
-                        "note": "Seconda tratta che l'utente intende acquistare; stessa via e numero del terminal di arrivo a Oaxaca. Biglietto non ancora confermato."
+                        "price": "3.002 MXN pagati per 2",
+                        "note": "ADO acquistato e pagato per due il 13/11/2026; verificare terminal sui biglietti."
                     },
                     {
                         "day": "4 gen",
@@ -1336,7 +1336,7 @@ const tripData = {
                         "note": "Terza tratta ancora da decidere e acquistare. All'arrivo richiedere taxi verso Los Susurros; check-in tardivo alle 21:00–21:30 da confermare."
                     }
                 ],
-                "warning": "<strong>Priorità:</strong> ottenere conferma scritta da Los Susurros per il check-in dopo le 21:00 e per un taxi o un contatto affidabile dalla fermata autobus. Non è chiaro dove termini esattamente la corsa a Palenque. <strong>Piano B:</strong> se la struttura non accetta l'arrivo tardivo, notte del 4 gennaio a Villahermosa, bus per Palenque il 5 mattina e richiesta di modificare Los Susurros dal 4–7 al 5–7 gennaio. Non cambiare la prenotazione attuale prima di risposta scritta e verifica delle condizioni. Con un giorno in meno a Palenque andrebbero rivalutate visite e cascate. Tutti i prezzi sono importi riferiti dall'utente per la ricerca, non acquisti confermati; coincidenze tra biglietti separati non garantite.",
+                "warning": "<strong>Priorità:</strong> ottenere conferma scritta da Los Susurros per il check-in dopo le 21:00 e per un taxi o un contatto affidabile dalla fermata autobus. Non è chiaro dove termini esattamente la corsa a Palenque. <strong>Piano B:</strong> se la struttura non accetta l'arrivo tardivo, notte del 4 gennaio a Villahermosa, bus per Palenque il 5 mattina e richiesta di modificare Los Susurros dal 4–7 al 5–7 gennaio. Non cambiare la prenotazione attuale prima di risposta scritta e verifica delle condizioni. Con un giorno in meno a Palenque andrebbero rivalutate visite e cascate. I primi due autobus ADO sono acquistati per 2 (4.032 MXN pagati); Villahermosa → Palenque non è ancora acquistato. Coincidenze tra biglietti separati non garantite.",
                 "sources": [
                     {
                         "text": "ADO · verifica orari e acquisto",
@@ -1350,8 +1350,8 @@ const tripData = {
                     "dayName": "Giorno 14 (3 Gen)",
                     "title": "Dal Pacifico a Oaxaca e bus notturno per Villahermosa",
                     "location": "San Agustinillo · Pochutla · Oaxaca · Villahermosa (notturno)",
-                    "shortDesc": "Rientro a Pochutla, bus delle 14:10 per Oaxaca e notturno delle 21:30 per Villahermosa: tratte in acquisto, non ancora confermate.",
-                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>; poi taxi/colectivo per la fermata a <strong>Pochutla, Calle Constitución (Centro)</strong>. L'autobus individuato parte alle <strong>14:10</strong> e arriva a <strong>Oaxaca, Calle 5 de Mayo 900, alle 17:55</strong> (prezzo mostrato: <strong>992 MXN</strong>, da verificare per due). Ripartenza dallo <strong>stesso indirizzo</strong> alle <strong>21:30</strong> per <strong>Villahermosa</strong>, arrivo alle <strong>10:25 del 4 gennaio</strong> (2.964 MXN mostrati). <strong>L'utente intende comprare le prime due tratte, ma gli acquisti non sono ancora confermati.</strong></p><p>Margine di <strong>3 h 35 min a Oaxaca</strong>. In totale viaggio zaino in spalla, senza valigie. Prezzi, operatori e indirizzi esatti vanno verificati sul biglietto prima del pagamento. Per tutti gli orari vedere la scheda <strong>Logistica e spostamenti</strong>.</p>",
+                    "shortDesc": "Rientro a Pochutla, bus delle 14:10 per Oaxaca e notturno delle 21:30 per Villahermosa: tratte ADO acquistate e pagate per due.",
+                    "fullDesc": "<p>Ultime ore a <strong>San Agustinillo</strong>; poi taxi/colectivo per la fermata a <strong>Pochutla, Calle Constitución (Centro)</strong>. L'autobus individuato parte alle <strong>14:10</strong> e arriva a <strong>Oaxaca, Calle 5 de Mayo 900, alle 17:55</strong> (<strong>1.030 MXN pagati per due</strong>). Ripartenza dallo <strong>stesso indirizzo</strong> alle <strong>21:30</strong> per <strong>Villahermosa</strong>, arrivo alle <strong>10:25 del 4 gennaio</strong> (<strong>3.002 MXN pagati per due</strong>). <strong>Entrambi i bus ADO acquistati e pagati, per 4.032 MXN totali.</strong></p><p>Margine di <strong>3 h 35 min a Oaxaca</strong>. In totale viaggio zaino in spalla, senza valigie. Prezzi, operatori e indirizzi esatti vanno verificati sul biglietto prima del pagamento. Per tutti gli orari vedere la scheda <strong>Logistica e spostamenti</strong>.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1378,10 +1378,10 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "Prima tratta in acquisto: 3 gen 14:10 Pochutla → 17:55 Oaxaca, 992 MXN mostrati (importo per 2 da verificare).",
-                        "Seconda tratta in acquisto: 3 gen 21:30 Oaxaca → 4 gen 10:25 Villahermosa, 2.964 MXN mostrati (importo per 2 da verificare).",
+                        "Prima tratta ADO acquistata per 2: 3 gen 14:10 Pochutla → 17:55 Oaxaca, 1.030 MXN pagati.",
+                        "Seconda tratta ADO acquistata per 2: 3 gen 21:30 Oaxaca → 4 gen 10:25 Villahermosa, 3.002 MXN pagati.",
                         "A Oaxaca sia arrivo sia partenza risultano a Calle 5 de Mayo 900; margine di 3 h 35 min. Verificare terminal reali e possibili ritardi.",
-                        "Biglietti non ancora confermati acquistati; il bus finale Villahermosa → Palenque è una decisione separata."
+                        "Entrambi i bus ADO acquistati per 2, totale pagato 4.032 MXN; bus finale Villahermosa → Palenque ancora da acquistare."
                     ]
                 },
                 {
@@ -1504,12 +1504,12 @@ const tripData = {
                 }
             ],
             "budget": {
-                "total": "Percorso candidato via Oaxaca e Villahermosa: 4.660 MXN indicati per 3 bus (totale da verificare per 2 persone) + taxi e visite",
-                "spent": "Nessuno dei 3 autobus del 3–4 gennaio ancora comunicato come acquistato; hotel Los Susurros già prenotato per 4–7 gennaio",
+                "total": "Due bus ADO acquistati e pagati (4.032 MXN per 2), bus finale Villahermosa → Palenque da acquistare + taxi e visite",
+                "spent": "Due autobus ADO del 3 gennaio acquistati e pagati (4.032 MXN totali per 2); Villahermosa → Palenque non acquistato; Los Susurros prenotato 4–7 gennaio",
                 "items": [
                     {
                         "name": "3–4 gen · Pochutla → Oaxaca → Villahermosa → Palenque",
-                        "cost": "992 + 2.964 + 704 = 4.660 MXN indicati (≈224 € al cambio BCE 15/10, solo se prezzi totali per 2). Nessun biglietto ancora confermato."
+                        "cost": "4.032 MXN pagati per due bus ADO il 13/11 (1.030 + 3.002). Villahermosa → Palenque non acquistato: 704 MXN mostrati; totale stimato 4.736 MXN se confermato, taxi esclusi."
                     },
                     {
                         "name": "Palenque · ingresso sito e CONANP, 2 stranieri",
@@ -1524,13 +1524,13 @@ const tripData = {
             "reservations": [
                 {
                     "name": "Pochutla → Oaxaca · 3 gen 14:10–17:55",
-                    "status": "In acquisto · non ancora confermato",
-                    "type": "warning"
+                    "status": "Acquistato per 2 · 1.030 MXN pagati",
+                    "type": "success"
                 },
                 {
                     "name": "Oaxaca → Villahermosa · 3/4 gen 21:30–10:25",
-                    "status": "In acquisto · non ancora confermato",
-                    "type": "warning"
+                    "status": "Acquistato per 2 · 3.002 MXN pagati",
+                    "type": "success"
                 },
                 {
                     "name": "Villahermosa → Palenque · 4 gen 18:15–20:30",
