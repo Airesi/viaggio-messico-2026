@@ -1863,7 +1863,7 @@ const tripData = {
                     "title": "Bacalar senza orologio",
                     "location": "Bacalar",
                     "shortDesc": "Seconda giornata piena di laguna: calma, fotografia, tramonto e solo un'eventuale breve uscita in barca.",
-                    "fullDesc": "<p>Seconda giornata senza orologio: nuoto, fotografie, kayak o una breve uscita in barca, soltanto se ne avete voglia. Il <strong>10 gennaio</strong> partire verso Playa del Carmen, poi traghetto per Cozumel; orari e coincidenze da verificare nella tappa Caribe.</p>",
+                    "fullDesc": "<p>Seconda giornata senza orologio: nuoto, fotografie, kayak o una breve uscita in barca, soltanto se ne avete voglia. Il <strong>10 gennaio</strong> il bus ADO è già acquistato: partenza da Bacalar alle 08:10 e arrivo a Playa del Carmen Alterna alle 12:20; resta il traghetto per Cozumel.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/640px-Bacalar_lagoon.jpg"
                     ],
@@ -2012,7 +2012,7 @@ const tripData = {
                     {
                         "icon": "🚆",
                         "title": "10 gen · Bacalar → Cozumel",
-                        "desc": "Tren Maya verso Playa del Carmen (se compatibile) + taxi porto + traghetto; orari non confermati."
+                        "desc": "ADO acquistato: Bacalar 08:10 → Playa del Carmen Alterna 12:20 (1.370 MXN per 2). Poi molo e traghetto da acquistare."
                     },
                     {
                         "icon": "⛴️",
@@ -2028,8 +2028,8 @@ const tripData = {
             },
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
-                "total": "Tour Cozumel / Chichén Itzá / Muyil + trasferimenti da prenotare (hotel esclusi)",
-                "spent": "Nessun tour o trasferimento della tappa confermato",
+                "total": "ADO Bacalar → Playa del Carmen pagato 1.370 MXN per 2; traghetti, taxi e tour ancora da preventivare (hotel esclusi)",
+                "spent": "ADO Bacalar → Playa del Carmen del 10 gennaio acquistato per 2, 1.370 MXN pagati; traghetto e tour ancora da prenotare",
                 "items": [
                     {
                         "name": "Night Snorkel Cozumel · 11 gen · 2 adulti",
@@ -2047,9 +2047,9 @@ const tripData = {
             },
             "reservations": [
                 {
-                    "name": "Treno Bacalar → Playa + traghetto per Cozumel · 10 gen",
-                    "status": "Da verificare/prenotare",
-                    "type": "warning"
+                    "name": "ADO Bacalar → Playa del Carmen Alterna · 10 gen 08:10–12:20",
+                    "status": "Acquistato per 2 · 1.370 MXN pagati",
+                    "type": "success"
                 },
                 {
                     "name": "Night Snorkel Cozumel · preferibilmente 11 gen",
@@ -2083,11 +2083,11 @@ const tripData = {
                     "dayName": "Giorno 21 (10 Gen)",
                     "title": "Bacalar → Cozumel: traghetto e arrivo sull'isola",
                     "location": "Bacalar → Playa del Carmen → Cozumel",
-                    "shortDesc": "Trasferimento via Playa del Carmen e traghetto per Cozumel; orari e biglietti da verificare.",
-                    "fullDesc": "<p>Partenza da Bacalar e trasferimento verso <strong>Playa del Carmen</strong> (Tren Maya come opzione, orari del 10/1/2027 da verificare); taxi al porto, traghetto per Cozumel e taxi per la <strong>Zona Hotelera Norte</strong>. I traghetti possono essere influenzati dal vento.</p><p>La prenotazione dell'alloggio sull'isola è già confermata: dettagli della camera e dell'importo nel pannello <strong>Logistica e spostamenti</strong> sotto la mappa o nel riepilogo <strong>Hotel & costi</strong>..</p>",
+                    "shortDesc": "Bus ADO Bacalar 08:10 → Playa Alterna 12:20 acquistato per 2 (1.370 MXN). Traghetto per Cozumel ancora da prendere.",
+                    "fullDesc": "<p><strong>10 gennaio · ADO acquistato per 2 persone: Bacalar 08:10 → Playa del Carmen Alterna 12:20, 1.370 MXN pagati.</strong> Partenza indicata da Av. 19 o Libramiento, Reg. 4 Mz. 64 Lt. 5 (tra calles 42 e 40); arrivo in Av. 20 Norte con Calle 12 Norte. Dal terminal raggiungere il molo e prendere il traghetto per Cozumel, <strong>ancora da acquistare</strong>; preferire una partenza pomeridiana con margine per eventuali ritardi. Poi taxi per il Coral Princess. Il traghetto può subire variazioni per il vento.</p>",
                     "operationalNotes": [
-                        "Tren Maya o bus Bacalar → Playa del Carmen: verificare corse e terminal reali del 10 gennaio.",
-                        "Verificare orari e operatività del traghetto; dal porto di Cozumel serve un taxi fino al Coral Princess."
+                        "ADO acquistato per due: Bacalar 08:10 → Playa del Carmen Alterna 12:20; verificare la posizione della fermata a Bacalar indicata sul biglietto.",
+                        "Traghetto per Cozumel ancora da acquistare; puntare al pomeriggio con margine dopo l’arrivo ADO delle 12:20. Dal porto di Cozumel taxi per Coral Princess."
                     ],
                     "links": [
                         {
