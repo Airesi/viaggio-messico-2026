@@ -1279,10 +1279,10 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "3–4 gennaio 2027 · Prime due corse ADO acquistate e pagate",
+                "eyebrow": "3–4 gennaio 2027 · Tutte e tre le corse ADO acquistate per due",
                 "title": "Dalla costa al Chiapas, via Oaxaca e Villahermosa",
                 "subtitle": "San Agustinillo → Pochutla → Oaxaca → Villahermosa → Palenque",
-                "cost": "4.032 MXN già pagati per i primi due autobus ADO per 2 persone (1.030 + 3.002 MXN). Villahermosa → Palenque ancora da acquistare, 704 MXN mostrati come prezzo indicativo; taxi esclusi.",
+                "cost": "4.032 MXN già pagati per i primi due autobus ADO per 2 persone (1.030 + 3.002 MXN). Villahermosa → Palenque acquistato per 2 persone, 4 gennaio ore 18:15; un biglietto costa 352 MXN, importo del secondo da verificare. Taxi esclusi.",
                 "duration": "Pochutla 3 gen ore 14:10 → Palenque 4 gen ore 20:30 · 30 h 20 min, incluse 3 h 35 min a Oaxaca e 7 h 50 min a Villahermosa",
                 "legs": [
                     {
@@ -1332,11 +1332,11 @@ const tripData = {
                         "to": "Palenque, Carretera Catazajá–Rancho Nuevo (fermata esatta da confermare)",
                         "operator": "Autobus (vettore da verificare)",
                         "duration": "2 h 15 min",
-                        "price": "704 MXN mostrati (verificare se per 2)",
-                        "note": "Terza tratta ancora da acquistare. Los Susurros ha confermato il check-in serale; secondo l'hotel, fuori dal terminal ADO di Palenque si trovano taxi sicuri per raggiungere la struttura."
+                        "price": "Biglietti acquistati per 2 · 352 MXN confermati per un passeggero, costo del secondo da verificare",
+                        "note": "Terza tratta acquistata per 2, partenza da Villahermosa alle 18:15 del 4 gennaio. Los Susurros conferma check-in serale e indica taxi sicuri fuori dal terminal ADO; verificare l'effettiva fermata di arrivo sul biglietto."
                     }
                 ],
-                "warning": "<strong>Confermato da Los Susurros:</strong> check-in serale del 4 gennaio consentito; la struttura aspetterà gli ospiti. Secondo l'hotel, fuori dal terminal ADO di Palenque sono disponibili taxi sicuri. <strong>Da fare:</strong> acquistare Villahermosa → Palenque e verificare sul biglietto l'effettivo terminal di arrivo, prima di contare sui taxi ADO. I primi due autobus ADO sono acquistati per 2 (4.032 MXN pagati); Villahermosa → Palenque non è ancora acquistato. Coincidenze tra biglietti separati non garantite.",
+                "warning": "<strong>Confermato da Los Susurros:</strong> check-in serale del 4 gennaio consentito; la struttura aspetterà gli ospiti. Secondo l'hotel, fuori dal terminal ADO di Palenque sono disponibili taxi sicuri. <strong>Da fare:</strong> verificare sui biglietti l'effettivo terminal di arrivo a Palenque, prima di contare sui taxi ADO. Tutte e tre le tratte ADO del 3–4 gennaio sono acquistate per due; delle ultime due prenotazioni individuali è noto il costo di 352 MXN per una persona, mentre il prezzo dell'altra non è ancora comunicato. Coincidenze tra biglietti separati non garantite.",
                 "sources": [
                     {
                         "text": "ADO · verifica orari e acquisto",
@@ -1389,8 +1389,8 @@ const tripData = {
                     "dayName": "Giorno 15 (4 Gen)",
                     "title": "Villahermosa: una sosta olmeca prima di Palenque?",
                     "location": "Villahermosa · Parque Museo La Venta · Palenque",
-                    "shortDesc": "Arrivo 10:25 a Villahermosa: visita La Venta possibile. Bus per Palenque 18:15–20:30 ancora da acquistare; check-in serale Los Susurros già confermato, taxi disponibili fuori dal terminal ADO.",
-                    "fullDesc": "<p>Arrivo del bus a <strong>Villahermosa alle 10:25</strong> in <strong>Av. Francisco Javier Mina 297</strong>. Fino alle 18:15 si può trasformare la lunga attesa in una visita, con <strong>Parque Museo La Venta</strong> e una pausa pranzo: verificare apertura del lunedì, spostamenti e tempi di rientro al terminal. Si viaggia soltanto con gli zaini, senza necessità di deposito valigie.</p><p><strong>Trasferimento previsto:</strong> bus Villahermosa <strong>18:15 → Palenque 20:30</strong> (prezzo mostrato: <strong>704 MXN</strong>, da verificare se per due), poi taxi verso <strong>Los Susurros</strong>. <strong>Check-in serale confermato dalla struttura</strong>: ci aspetteranno anche in caso di arrivo in serata. L'hotel indica che fuori dal terminal ADO di Palenque ci sono taxi sicuri; controllare comunque la fermata effettiva della corsa sul biglietto. <strong>Il bus finale non è ancora acquistato.</strong></p>",
+                    "shortDesc": "Arrivo 10:25 a Villahermosa: visita La Venta possibile. Bus per Palenque 18:15–20:30 acquistato per due; check-in serale Los Susurros confermato, taxi disponibili fuori dal terminal ADO.",
+                    "fullDesc": "<p>Arrivo del bus a <strong>Villahermosa alle 10:25</strong> in <strong>Av. Francisco Javier Mina 297</strong>. Fino alle 18:15 si può trasformare la lunga attesa in una visita, con <strong>Parque Museo La Venta</strong> e una pausa pranzo: verificare apertura del lunedì, spostamenti e tempi di rientro al terminal. Si viaggia soltanto con gli zaini, senza necessità di deposito valigie.</p><p><strong>Trasferimento previsto:</strong> bus Villahermosa <strong>18:15 → Palenque 20:30</strong> (biglietti <strong>acquistati per due</strong>, 352 MXN confermati per un passeggero), poi taxi verso <strong>Los Susurros</strong>. <strong>Check-in serale confermato dalla struttura</strong>: ci aspetteranno anche in caso di arrivo in serata. L'hotel indica che fuori dal terminal ADO di Palenque ci sono taxi sicuri; controllare comunque la fermata effettiva della corsa sul biglietto. <strong>Entrambi i biglietti del bus finale sono acquistati.</strong></p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1411,9 +1411,9 @@ const tripData = {
                     ],
                     "operationalNotes": [
                         "Il 4 gen Villahermosa 10:25 → bus Palenque 18:15: attesa 7 h 50 min, utilizzabile per Parque Museo La Venta (orario festivo da verificare).",
-                        "Palenque arrivo stimato ore 20:30, fermata esatta da verificare. Taxi per Los Susurros da concordare; non dare per scontato che siano 4 minuti dalla fermata reale.",
-                        "Los Susurros ha confermato il check-in notturno e indica taxi sicuri fuori dal terminal ADO; verificare il terminal di arrivo del bus non ancora acquistato.",
-                        "Se check-in impossibile, valutare notte del 4 a Villahermosa e chiedere se si può ridurre Los Susurros al 5–7 gennaio. Nessun hotel o bus modificato/acquistato finché non confermato."
+                        "Palenque arrivo previsto ore 20:30, fermata esatta da verificare sul biglietto. Secondo Los Susurros i taxi fuori dal terminal ADO sono sicuri; durata taxi da confermare.",
+                        "Los Susurros ha confermato il check-in serale e indica taxi sicuri fuori dal terminal ADO; verificare il terminal di arrivo sui biglietti acquistati.",
+                        "Check-in serale già confermato: non occorre il pernottamento alternativo a Villahermosa."
                     ]
                 },
                 {
@@ -1504,12 +1504,12 @@ const tripData = {
                 }
             ],
             "budget": {
-                "total": "Due bus ADO acquistati e pagati (4.032 MXN per 2), bus finale Villahermosa → Palenque da acquistare + taxi e visite",
-                "spent": "Due autobus ADO del 3 gennaio acquistati e pagati (4.032 MXN totali per 2); Villahermosa → Palenque non acquistato; Los Susurros prenotato 4–7 gennaio",
+                "total": "Tre tratte ADO acquistate per 2: 4.032 MXN pagati per le prime due; terza tratta 352 MXN confermati per un biglietto e importo del secondo da verificare; taxi e visite esclusi",
+                "spent": "Tre tratte ADO acquistate per 2: prime due pagate 4.032 MXN, terza del 4 gennaio 18:15 con un biglietto da 352 MXN e secondo importo da verificare; Los Susurros prenotato 4–7 gennaio",
                 "items": [
                     {
                         "name": "3–4 gen · Pochutla → Oaxaca → Villahermosa → Palenque",
-                        "cost": "4.032 MXN pagati per due bus ADO il 13/11 (1.030 + 3.002). Villahermosa → Palenque non acquistato: 704 MXN mostrati; totale stimato 4.736 MXN se confermato, taxi esclusi."
+                        "cost": "4.032 MXN pagati per le prime due tratte (1.030 + 3.002). Villahermosa → Palenque del 4 gennaio acquistato per due: 352 MXN confermati per un biglietto, importo dell'altro da verificare. Totale effettivo incompleto; taxi esclusi."
                     },
                     {
                         "name": "Palenque · ingresso sito e CONANP, 2 stranieri",
@@ -1534,8 +1534,8 @@ const tripData = {
                 },
                 {
                     "name": "Villahermosa → Palenque · 4 gen 18:15–20:30",
-                    "status": "Da decidere · non acquistato",
-                    "type": "warning"
+                    "status": "Acquistato per 2 · 352 MXN un biglietto, secondo importo da verificare",
+                    "type": "success"
                 },
                 {
                     "name": "Los Susurros · check-in serale del 4 gen e taxi ADO",
@@ -1573,7 +1573,7 @@ const tripData = {
                     {
                         "icon": "🚕",
                         "title": "4 gen · Palenque alle 20:30 (ipotesi)",
-                        "desc": "Bus da Villahermosa 18:15 → Palenque 20:30, ancora da acquistare. Check-in serale confermato da Los Susurros; taxi considerati sicuri dall'hotel disponibili fuori dal terminal ADO. Verificare l'effettivo arrivo al terminal ADO sul biglietto."
+                        "desc": "Bus da Villahermosa 18:15 → Palenque 20:30 acquistato per 2. Check-in serale confermato da Los Susurros; taxi considerati sicuri dall'hotel disponibili fuori dal terminal ADO. Verificare l'effettivo arrivo al terminal ADO sul biglietto."
                     },
                     {
                         "icon": "🏛️",
@@ -1615,7 +1615,7 @@ const tripData = {
                 "tips": [
                     "Arrivare presto al sito archeologico e verificare le aree visitabili.",
                     "Toniná resta un'alternativa da valutare, non una tappa aggiunta al 6 gennaio.",
-                    "4 gen: sosta a Villahermosa dalle 10:25 alle 18:15, possibile visita a La Venta. Los Susurros conferma check-in serale e taxi sicuri fuori dal terminal ADO di Palenque; resta da acquistare il bus finale."
+                    "4 gen: sosta a Villahermosa dalle 10:25 alle 18:15, possibile visita a La Venta. Bus finale acquistato per 2; Los Susurros conferma check-in serale e taxi sicuri fuori dal terminal ADO di Palenque."
                 ]
             },
             "startDate": "2027-01-03",
