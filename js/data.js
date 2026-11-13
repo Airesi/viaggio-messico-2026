@@ -1279,10 +1279,10 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "3–4 gennaio 2027 · Tutte e tre le corse ADO acquistate per due",
+                "eyebrow": "3–4 gennaio · ADO acquistati per 2",
                 "title": "Dalla costa al Chiapas, via Oaxaca e Villahermosa",
                 "subtitle": "San Agustinillo → Pochutla → Oaxaca → Villahermosa → Palenque",
-                "cost": "4.032 MXN già pagati per i primi due autobus ADO per 2 persone (1.030 + 3.002 MXN). Villahermosa → Palenque acquistato per 2 persone, 4 gennaio ore 18:15; un biglietto costa 352 MXN, importo del secondo da verificare. Taxi esclusi.",
+                "cost": "4.032 MXN pagati per le prime due corse; terza acquistata per 2 (352 MXN confermati per un biglietto). Taxi esclusi.",
                 "duration": "Pochutla 3 gen ore 14:10 → Palenque 4 gen ore 20:30 · 30 h 20 min, incluse 3 h 35 min a Oaxaca e 7 h 50 min a Villahermosa",
                 "legs": [
                     {
@@ -1336,7 +1336,7 @@ const tripData = {
                         "note": "Terza tratta acquistata per 2, partenza da Villahermosa alle 18:15 del 4 gennaio. Los Susurros conferma check-in serale e indica taxi sicuri fuori dal terminal ADO; verificare l'effettiva fermata di arrivo sul biglietto."
                     }
                 ],
-                "warning": "<strong>Confermato da Los Susurros:</strong> check-in serale del 4 gennaio consentito; la struttura aspetterà gli ospiti. Secondo l'hotel, fuori dal terminal ADO di Palenque sono disponibili taxi sicuri. <strong>Da fare:</strong> verificare sui biglietti l'effettivo terminal di arrivo a Palenque, prima di contare sui taxi ADO. Tutte e tre le tratte ADO del 3–4 gennaio sono acquistate per due; delle ultime due prenotazioni individuali è noto il costo di 352 MXN per una persona, mentre il prezzo dell'altra non è ancora comunicato. Coincidenze tra biglietti separati non garantite.",
+                "warning": "Verificare sul biglietto il terminal di arrivo a Palenque. Los Susurros conferma il check-in serale e indica taxi disponibili fuori dal terminal ADO; coincidenze tra corse separate non garantite.",
                 "sources": [
                     {
                         "text": "ADO · verifica orari e acquisto",
@@ -1562,8 +1562,8 @@ const tripData = {
             },
             "basecamp": {
                 "zone": "Palenque · area strada per le rovine",
-                "hotelIdea": "Sistemazione immersa nel verde, non in centro: prevedere taxi per stazione bus, cascate e fermata del Tren Maya.",
-                "why": "Soggiorno Los Susurros 4–7 gennaio già confermato e check-in serale del 4 espressamente autorizzato dall'hotel. Arrivo a Palenque previsto alle 20:30 con bus ancora da acquistare; secondo Los Susurros, fuori dal terminal ADO si trovano taxi sicuri per la struttura.",
+                "hotelIdea": "Fuori dal centro: per escursioni e Tren Maya valutare taxi.",
+                "why": "",
                 "tags": [
                     "🐒 Natura e primati",
                     "🏛️ Sito maya di Palenque",
@@ -1571,19 +1571,14 @@ const tripData = {
                 ],
                 "transports": [
                     {
-                        "icon": "🚕",
-                        "title": "4 gen · Palenque alle 20:30 (ipotesi)",
-                        "desc": "Bus da Villahermosa 18:15 → Palenque 20:30 acquistato per 2. Check-in serale confermato da Los Susurros; taxi considerati sicuri dall'hotel disponibili fuori dal terminal ADO. Verificare l'effettivo arrivo al terminal ADO sul biglietto."
-                    },
-                    {
                         "icon": "🏛️",
                         "title": "5 gen · rovine maya",
-                        "desc": "Alloggio sulla strada per le rovine; verificare mezzi e tragitto con la struttura."
+                        "desc": "Organizzare il trasferimento al sito archeologico."
                     },
                     {
                         "icon": "🚆",
                         "title": "7 gen · Tren Maya",
-                        "desc": "Verificare transfer e orario di partenza dalla struttura per la stazione, non necessariamente vicina."
+                        "desc": "Organizzare il transfer dall'hotel alla stazione."
                     }
                 ]
             },
