@@ -109,7 +109,7 @@ function generateContent() {
                             ${area.transferPlan ? area.transferPlan.title : (area.basecamp?.zone || 'Alloggi, trasporti e note utili')}
                         </span>
                         <span class="block text-[10px] font-bold mt-1.5 ${area.transferPlan ? 'text-amber-700' : 'text-emerald-700'}">
-                            ${area.transferPlan ? '⚠️ Collegamenti da verificare' : '📍 Promemoria della tappa'}
+                            ${area.transferPlan ? (area.id === 3 ? '✓ Bus acquistati · fermata da verificare' : '⚠️ Collegamenti da verificare') : '📍 Promemoria della tappa'}
                             ${areaBookings.length ? ' · 🏨 ' + areaBookings.length + (areaBookings.length === 1 ? ' soggiorno' : ' soggiorni') : ''}
                         </span>
                     </span>
@@ -168,7 +168,7 @@ function generateContent() {
                                     `).join('')}
                                 </ol>
                                 <div class="bg-amber-50 border border-amber-100 rounded-lg p-3 text-[11px] leading-relaxed text-amber-950">
-                                    <strong>⚠️ Prima di prenotare:</strong> ${area.transferPlan.warning}
+                                    <strong>📌 Nota pratica:</strong> ${area.transferPlan.warning}
                                 </div>
                                 <div class="flex flex-wrap gap-x-3 gap-y-2">
                                     ${(area.transferPlan.sources || []).map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-emerald-900 underline">↗ ${link.text}</a>`).join('')}
