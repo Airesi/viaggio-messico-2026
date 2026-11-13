@@ -1654,7 +1654,7 @@ const tripData = {
             "badge": "7–10 Gen • Dalla giungla alla Laguna dei Sette Colori",
             "locationText": "Palenque → Escárcega → Bacalar",
             "title": "Il Tren Maya e la laguna dai sette colori",
-            "description": "Due giornate per la laguna (8–9 gennaio). Il 7 gennaio restano da confermare gli orari del Tren Maya; Hotel Aires ha autorizzato il check-in a mezzanotte.",
+            "description": "Due giornate per la laguna (8–9 gennaio). Tren Maya del 7 gennaio acquistato; itinerario e orari esatti da riportare dai biglietti. Hotel Aires conferma il check-in a mezzanotte.",
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bacalar_lagoon.jpg/640px-Bacalar_lagoon.jpg"
             ],
@@ -1665,10 +1665,10 @@ const tripData = {
                 }
             ],
             "transferPlan": {
-                "eyebrow": "7 gennaio 2027 · Biglietti e orari da verificare",
+                "eyebrow": "7 gennaio 2027 · Tren Maya acquistato · dettagli biglietto da inserire",
                 "title": "Attraverso la penisola con il Tren Maya",
                 "subtitle": "Palenque → Escárcega → stazione Bacalar → alloggio",
-                "cost": "Treno e trasferimento finale: prezzi da quotare",
+                "cost": "Biglietto Tren Maya acquistato; importo da registrare. Taxi stazione → Hotel Aires non ancora prenotato.",
                 "duration": "Un pomeriggio e una serata di viaggio · possibile arrivo tardi",
                 "legs": [
                     {
@@ -1702,7 +1702,7 @@ const tripData = {
                         "note": "Hotel Aires conferma il check-in a mezzanotte e può richiedere un taxi alla stazione: scrivere alla reception WhatsApp +9831124656 almeno 2 giorni prima (entro il 5 gennaio)."
                     }
                 ],
-                "warning": "Tren Maya del 7 gennaio: orari e collegamento diretto/cambio a Escárcega ancora da verificare sul canale ufficiale prima di comprare. Hotel Aires conferma check-in a mezzanotte; addebiterà la prima notte sulla carta dopo le 18:00. Taxi dalla stazione richiedibile tramite reception WhatsApp +9831124656, almeno 2 giorni prima (entro 5 gennaio).",
+                "warning": "Tren Maya del 7 gennaio già acquistato: sostituire gli orari e il percorso indicativi con quelli riportati sul biglietto (verificare eventuale cambio a Escárcega). Hotel Aires conferma check-in a mezzanotte; addebiterà la prima notte sulla carta dopo le 18:00. Taxi dalla stazione richiedibile tramite reception WhatsApp +9831124656, almeno 2 giorni prima (entro 5 gennaio).",
                 "sources": [
                     {
                         "text": "Orari ufficiali Tren Maya",
@@ -1738,8 +1738,8 @@ const tripData = {
             },
             "food": "Colazione con vista sulla laguna, cucina del Quintana Roo e due cene senza fretta nel centro di Bacalar.",
             "budget": {
-                "total": "Tren Maya, taxi e attività in laguna da quotare",
-                "spent": "Nessun biglietto ferroviario o tour in laguna confermato",
+                "total": "Tren Maya acquistato (importo da registrare); taxi e attività in laguna da quotare",
+                "spent": "Tren Maya del 7 gennaio acquistato, costo pagato da inserire; nessun tour in laguna confermato",
                 "items": [
                     {
                         "name": "Tour collettivo laguna o kayak · 8/9 gennaio",
@@ -1747,7 +1747,7 @@ const tripData = {
                     },
                     {
                         "name": "Tren Maya Palenque → Bacalar · 7 gennaio",
-                        "cost": "Biglietto da acquistare"
+                        "cost": "Acquistato · importo da registrare"
                     },
                     {
                         "name": "Bacalar → Playa del Carmen · 10 gennaio",
@@ -1758,8 +1758,8 @@ const tripData = {
             "reservations": [
                 {
                     "name": "Tren Maya Palenque → Bacalar · 7 gen",
-                    "status": "Orario 2027 da confermare",
-                    "type": "warning"
+                    "status": "Acquistato · orario e importo da inserire dai biglietti",
+                    "type": "success"
                 },
                 {
                     "name": "Hotel Aires · check-in a mezzanotte",
@@ -1779,7 +1779,7 @@ const tripData = {
                     "title": "Tren Maya: dalle rovine alla Laguna di Bacalar",
                     "location": "Palenque · Escárcega · Bacalar",
                     "shortDesc": "Tren Maya Palenque → Bacalar e taxi serale. Check-in a mezzanotte confermato da Hotel Aires; taxi da richiedere entro il 5 gennaio.",
-                    "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong>, biglietti ancora da acquistare. Gli orari attuali indicano un percorso candidato via Escárcega, ma non garantito per il <strong>7 gennaio 2027</strong>.</p><p>Per coincidenze, taxi dalla stazione e ingresso tardivo all'Hotel Aires consulta la scheda del trasferimento: <strong>Hotel Aires conferma il check-in a mezzanotte</strong>; la prima notte verrà addebitata alla carta dopo le 18:00. Per il taxi dalla stazione contattare la reception al +9831124656 due giorni prima.</p>",
+                    "fullDesc": "<p>Tren Maya <strong>Palenque → Bacalar</strong> del <strong>7 gennaio 2027 acquistato</strong>. I dettagli del biglietto (orari, diretto o cambio a Escárcega e costo) non sono ancora stati riportati sul sito: gli orari illustrati nella logistica sono solo indicativi.</p><p>Per coincidenze, taxi dalla stazione e ingresso tardivo all'Hotel Aires consulta la scheda del trasferimento: <strong>Hotel Aires conferma il check-in a mezzanotte</strong>; la prima notte verrà addebitata alla carta dopo le 18:00. Per il taxi dalla stazione contattare la reception al +9831124656 due giorni prima.</p>",
                     "images": [],
                     "links": [
                         {
@@ -1811,9 +1811,9 @@ const tripData = {
                         }
                     ],
                     "operationalNotes": [
-                        "Tren Maya 703/704: coincidenza indicativa di 20 minuti a Escárcega, non confermata per il 7 gennaio.",
+                        "Tren Maya acquistato: confermare dagli effettivi biglietti se la corsa è diretta o richiede cambio a Escárcega; non basarsi sugli orari indicativi.",
                         "Hotel Aires conferma il check-in a mezzanotte; avvisare tempestivamente in caso di ritardo oltre mezzanotte.",
-                        "Richiedere taxi stazione → Hotel Aires via WhatsApp +9831124656 entro il 5 gennaio; verificare orario treno prima di comprare."
+                        "Richiedere taxi stazione → Hotel Aires via WhatsApp +9831124656 entro il 5 gennaio, comunicando l'orario del treno acquistato."
                     ]
                 },
                 {
@@ -1936,7 +1936,7 @@ const tripData = {
                 "tips": [
                     "L'hotel è in centro, non direttamente sulla laguna: scegliere un accesso consentito.",
                     "Proteggere gli stromatoliti e verificare chiusure ambientali.",
-                    "Per il 7 gennaio: verificare il Tren Maya; check-in a mezzanotte confermato, taxi richiedibile entro il 5 gennaio."
+                    "Per il 7 gennaio: Tren Maya acquistato; taxi richiedibile entro il 5 gennaio. Check-in a mezzanotte confermato."
                 ]
             },
             "startDate": "2027-01-07",
