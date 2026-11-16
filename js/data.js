@@ -1980,7 +1980,7 @@ const tripData = {
             "badge": "10–16 Gen · Cozumel e Akumal · 17 Gen rientro",
             "locationText": "Bacalar → Playa del Carmen → Cozumel → Akumal → Cancún Aeroporto",
             "title": "Snorkeling a Cozumel e relax ad Akumal",
-            "description": "Cozumel e Akumal dal 10 al 16 gennaio: snorkeling notturno, Chichén Itzá e Muyil da prenotare, giornata libera il 15. Il 17 gennaio è il rientro in Italia.",
+            "description": "Cozumel e Akumal dal 10 al 16 gennaio: snorkeling notturno prenotato l'11 gennaio alle 19:30; Chichén Itzá e Muyil ancora da prenotare, giornata libera il 15. Il 17 gennaio è il rientro in Italia.",
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cozumel_Beach.jpg/640px-Cozumel_Beach.jpg"
             ],
@@ -2003,7 +2003,7 @@ const tripData = {
                 "hotelIdea": "Prima base sul mare a Cozumel, poi Akumal Pueblo (non fronte spiaggia). Nomi, date e tariffe sono già nella scheda «Alloggi prenotati».",
                 "why": "10 gen Cozumel via traghetto, 12 gen trasferimento ad Akumal. I tour del 13 e 14 richiedono conferma del punto di raccolta presso El Ultimo Maya. Il 15 senza escursioni, il 16 aeroporto di Cancún via strada.",
                 "tags": [
-                    "🌙 Snorkeling notturno proposto",
+                    "🌙 Snorkeling notturno · 11 gen 19:30 · prenotato",
                     "🏛️ Chichén Itzá · preventivo",
                     "🌿 Muyil · preventivo",
                     "🏖️ 15 gen · riposo"
@@ -2029,11 +2029,11 @@ const tripData = {
             "food": "Ultimi giorni a ritmo lento: pesce fresco, frutta, piccoli locali sul mare e nessuna tabella di marcia.",
             "budget": {
                 "total": "ADO Bacalar → Playa del Carmen pagato 1.370 MXN per 2; traghetti, taxi e tour ancora da preventivare (hotel esclusi)",
-                "spent": "ADO Bacalar → Playa del Carmen del 10 gennaio acquistato per 2, 1.370 MXN pagati; traghetto e tour ancora da prenotare",
+                "spent": "ADO Bacalar → Playa del Carmen del 10 gennaio acquistato per 2, 1.370 MXN pagati. Snorkeling notturno dell’11 gennaio alle 19:30 prenotato: 600 MXN pagati, 2.000 MXN ancora da saldare (totale 2.600 MXN); traghetti e altri tour da prenotare",
                 "items": [
                     {
-                        "name": "Night Snorkel Cozumel · 11 gen · 2 adulti",
-                        "cost": "65 USD/persona pubblicizzati; taxi escluso"
+                        "name": "Night Snorkel Cozumel · 11 gen ore 19:30 · prenotato",
+                        "cost": "2.600 MXN totali · 600 MXN pagati, 2.000 MXN da saldare; taxi escluso"
                     },
                     {
                         "name": "Chichén Itzá · 13 gen · tour da Akumal",
@@ -2052,9 +2052,9 @@ const tripData = {
                     "type": "success"
                 },
                 {
-                    "name": "Night Snorkel Cozumel · preferibilmente 11 gen",
-                    "status": "Da verificare/prenotare",
-                    "type": "warning"
+                    "name": "Night Snorkel Cozumel · 11 gen ore 19:30",
+                    "status": "Prenotato · 600 MXN pagati, saldo 2.000 MXN",
+                    "type": "success"
                 },
                 {
                     "name": "Traghetto Cozumel → Playa e transfer Akumal · 12 gen",
@@ -2140,10 +2140,10 @@ const tripData = {
                     "dayName": "Giorno 22 (11 Gen)",
                     "title": "Cozumel: mare e snorkeling notturno",
                     "location": "Cozumel · Money Bar",
-                    "shortDesc": "Giornata sul mare e Night Snorkel Cozumel in serata, ancora da prenotare.",
-                    "fullDesc": "<p>Giornata di mare e snorkeling dall'hotel, se condizioni e correnti lo consentono. Al tramonto possibile esperienza di <strong>snorkeling notturno guidato</strong> con <a href='https://nightsnorkelcozumel.com/' target='_blank' rel='noopener noreferrer'>Night Snorkel Cozumel</a>, con ritrovo da verificare al <strong>Money Bar</strong>. Si tratta di un'attività <strong>non ancora prenotata</strong>: verificare disponibilità l'11 gennaio, livello richiesto, meteo e trasporto serale in taxi dal Coral Princess.</p><p>Avvistamenti di fauna notturna non garantiti; programmare il ritorno all'hotel in sicurezza. Se disponibile il 10 e compatibile con il trasferimento, il tour potrebbe essere anticipato, ma non basare il piano su questa ipotesi.</p>",
+                    "shortDesc": "Giornata sul mare; snorkeling notturno prenotato alle 19:30 (600 MXN pagati, saldo 2.000 MXN).",
+                    "fullDesc": "<p>Giornata di mare e snorkeling dall'hotel, se condizioni e correnti lo consentono. <strong>Snorkeling notturno guidato prenotato per l'11 gennaio alle 19:30</strong> con <a href='https://nightsnorkelcozumel.com/' target='_blank' rel='noopener noreferrer'>Night Snorkel Cozumel</a>. <strong>Costo totale 2.600 MXN: 600 MXN già pagati e 2.000 MXN da saldare.</strong> Verificare sulla conferma il punto di incontro (Money Bar è un riferimento indicativo) e organizzare il taxi serale dal Coral Princess.</p><p>Avvistamenti di fauna notturna non garantiti; verificare le condizioni meteo e concordare il ritorno all'hotel in sicurezza.</p>",
                     "operationalNotes": [
-                        "Snorkeling notturno NON prenotato: chiedere all'operatore disponibilità, livello richiesto, luogo/ora d'incontro e politica meteo.",
+                        "Snorkeling notturno prenotato per 11 gennaio ore 19:30: 600 MXN pagati, 2.000 MXN da saldare; verificare dalla conferma ritrovo, requisiti e politica meteo.",
                         "Organizzare il taxi serale di andata e ritorno dal Coral Princess; nessun avvistamento garantito."
                     ],
                     "links": [
@@ -2517,8 +2517,8 @@ const tripData = {
                     {
                         "icon": "🌙",
                         "title": "Snorkeling notturno a Cozumel",
-                        "detail": "11 gen · uscita guidata proposta al Money Bar.",
-                        "state": "Non prenotato",
+                        "detail": "11 gen ore 19:30 · prenotato · 600 MXN pagati, saldo 2.000 MXN; ritrovo da verificare.",
+                        "state": "Prenotato",
                         "dayId": "5-jan11"
                     },
                     {
