@@ -258,8 +258,8 @@ const tripData = {
                     "dayName": "Giorno 1 (21 Dic)",
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
-                    "shortDesc": "Visita archeologica privata prenotata dalle 09:30 alle 12:30 e pranzo a La Gruta alle 13:00.",
-                    "fullDesc": "<p><strong>09:30–12:30 · Teotihuacán.</strong> Visita privata A fondo in spagnolo prenotata con Ruta Mágica, senza negozi né degustazioni. Percorso tra Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, compatibilmente con i tempi. <strong>Tour prenotato.</strong> Biglietti archeologici esclusi; importi e saldo nella sezione budget.</p><p><strong>13:00 · La Gruta.</strong> Pranzo già prenotato. La visita deve concludersi vicino alla Puerta 5 alle 12:30 per raggiungere il ristorante puntuali.</p>",
+                    "shortDesc": "Teotihuacán e La Gruta prenotati; la sera mariachi a Plaza Garibaldi (proposta).",
+                    "fullDesc": "<p><strong>09:30–12:30 · Teotihuacán.</strong> Visita privata A fondo in spagnolo prenotata con Ruta Mágica, senza negozi né degustazioni. Percorso tra Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, compatibilmente con i tempi. <strong>Tour prenotato.</strong> Biglietti archeologici esclusi; importi e saldo nella sezione budget.</p><p><strong>13:00 · La Gruta.</strong> Pranzo già prenotato. La visita deve concludersi vicino alla Puerta 5 alle 12:30 per raggiungere il ristorante puntuali.</p><p><strong>Sera · Plaza Garibaldi (proposta, non prenotata).</strong> Ascoltare i mariachi in piazza indicativamente dalle 19:00, con eventuale cena o drink allo storico Salón Tenampa. Ingresso alla piazza libero; concordare il prezzo prima di chiedere una canzone. Se preferiamo una serata jazz, Jazzatlán Capital a Roma Norte rimane un’alternativa da verificare.</p>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -275,6 +275,10 @@ const tripData = {
                         {
                             "text": "🍽️ La Gruta · prenotazione pranzo alle 13:00",
                             "url": "https://www.lagruta.mx/"
+                        },
+                        {
+                            "text": "🎺 Plaza Garibaldi · mariachi e Salón Tenampa",
+                            "url": "https://www.google.com/maps/search/?api=1&query=Plaza+Garibaldi+Ciudad+de+Mexico"
                         }
                     ],
                     "route": [
@@ -301,6 +305,13 @@ const tripData = {
                                 -98.8384
                             ],
                             "image": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&w=400&q=80"
+                        },
+                        {
+                            "name": "Plaza Garibaldi · mariachi",
+                            "coords": [
+                                19.4408,
+                                -99.1382
+                            ]
                         }
                     ],
                     "operationalNotes": []
@@ -395,11 +406,16 @@ const tripData = {
                     "title": "Coyoacán e canali di Xochimilco",
                     "location": "Coyoacán · Xochimilco",
                     "shortDesc": "Passeggiata a Coyoacán e giro in trajinera a Xochimilco, da organizzare.",
-                    "fullDesc": "<p><strong>Coyoacán.</strong> Passeggiata fra le vie del quartiere, Plaza Hidalgo, mercatini e caffè. Nessun museo obbligatorio.</p><p><strong>Xochimilco.</strong> Giro in trajinera sui canali; valutare un percorso più tranquillo nella zona di Cuemanco anziché le proposte festaioli. Durata e imbarcadero ancora da scegliere.</p>",
+                    "fullDesc": "<p><strong>Coyoacán.</strong> Passeggiata fra le vie del quartiere, Plaza Hidalgo, mercatini e caffè. Nessun museo obbligatorio.</p><p><strong>Xochimilco.</strong> Giro in trajinera sui canali; valutare un percorso più tranquillo nella zona di Cuemanco anziché le proposte festaioli. <strong>Da fare:</strong> scegliere il circuito ecologico e l’imbarcadero dal sito Xochimilco.com; verificare durata, prezzo, punto di partenza e disponibilità del 23 dicembre. Nessun tour prenotato.</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🛶 Xochimilco · scegli circuito ecologico e imbarcadero",
+                            "url": "https://xochimilco.com/es/embarcaderos/?circuit=ecologico"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "Plaza Hidalgo, Coyoacán",
@@ -443,6 +459,11 @@ const tripData = {
                     },
                     {
                         "icon": "🚕",
+                        "title": "21 dic sera · Plaza Garibaldi · attenzione alla sicurezza",
+                        "desc": "Zona meno sicura di Condesa/Roma, soprattutto di notte e nelle vie laterali. Per i mariachi restare nella piazza illuminata e frequentata, senza avventurarsi nelle strade secondarie; scegliere orari non troppo tardi e arrivare/rientrare con Uber/DiDi o taxi affidabile direttamente all'ingresso. Non lasciare incustoditi telefono e oggetti di valore. Escursione serale proposta, non prenotata."
+                    },
+                    {
+                        "icon": "🚕",
                         "title": "22 dic · Arena México",
                         "desc": "Organizzare andata e ritorno serali dall'Arena México a Condesa con trasporto affidabile; lo spettacolo inizia alle 19:30."
                     },
@@ -458,7 +479,7 @@ const tripData = {
                     }
                 ]
             },
-            "food": "La Gruta è già prenotata per il pranzo del 21. Per altre esperienze gastronomiche: Maizajo ed Expendio de Maíz; per la sera del 21, Jazzatlán Capital è una proposta jazz aperta di lunedì, programma da confermare.",
+            "food": "La Gruta è prenotata per il pranzo del 21; Maizajo ed Expendio de Maíz sono altre opzioni gastronomiche. Jazzatlán Capital resta l'alternativa jazz alla serata mariachi del 21 (programma musicale da verificare).",
             "budget": {
                 "total": "≈ 950 € stimati per 2 · CDMX 20–23 dicembre · bus per Oaxaca escluso",
                 "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica prenotato con acconto pagato e saldo ancora dovuto.",
