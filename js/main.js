@@ -214,7 +214,7 @@ function generateContent() {
                             </div>
                         </details>
                     ` : ''}
-                    ${(area.food || (area.venues || []).length) ? `
+                    ${area.id !== 1 && (area.food || (area.venues || []).length) ? `
                         <details class="rounded-xl bg-white border border-gray-200 p-3">
                             <summary class="cursor-pointer text-xs font-bold text-slate-900">🌮 Pasti e consigli sul posto ${(area.venues || []).length ? '· ' + area.venues.length + ' locali' : ''}</summary>
                             ${area.food ? `<p class="mt-2 text-[11px] leading-relaxed text-gray-600">${area.food}</p>` : ''}
@@ -322,6 +322,41 @@ function generateContent() {
         ` : '';
 
 
+        // CDMX: gastronomia e curiosità stanno nella colonna delle attività.
+        // I contenuti provengono da area.food, area.venues e area.curiosities:
+        // non vengono ripetuti nella sidebar logistica.
+        const cityDiscoverHtml = area.id === 1 ? `
+            <section class="mb-5 sm:mb-6 rounded-[1.5rem] bg-white border border-gray-200/80 shadow-sm overflow-hidden" aria-label="Pasti e locali consigliati a Città del Messico">
+                <div class="px-5 pt-4 pb-3 sm:px-6">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-amber-800">🌮 Dove mangiare</span>
+                    <p class="text-xs leading-relaxed text-slate-600 mt-1">${area.food || ''}</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 px-4 sm:px-5 pb-4">
+                    ${(area.venues || []).map(v => `
+                        <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="group rounded-xl border border-amber-100 bg-amber-50/35 hover:border-emerald-200 hover:bg-emerald-50/40 p-3 transition-colors">
+                            <strong class="block text-xs text-slate-900 group-hover:text-emerald-900">${v.name} ↗</strong>
+                            <span class="block text-[10px] text-amber-900 font-semibold mt-1">${v.kind} · ${v.where}</span>
+                            <p class="text-[11px] text-slate-600 mt-1.5 leading-snug">${v.description}</p>
+                            <span class="block text-[10px] text-slate-500 mt-2">${v.tip}</span>
+                        </a>
+                    `).join('')}
+                </div>
+            </section>
+            <section class="mb-5 sm:mb-6 rounded-[1.5rem] bg-white border border-gray-200/80 shadow-sm overflow-hidden" aria-label="Curiosità su Città del Messico">
+                <div class="px-5 pt-4 pb-3 sm:px-6">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-800">✨ Curiosità su CDMX</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 px-4 sm:px-5 pb-4">
+                    ${(area.curiosities || []).map(item => `
+                        <a href="${item.source}" target="_blank" rel="noopener noreferrer" class="block rounded-xl bg-slate-50/75 border border-slate-100 hover:border-emerald-200 p-3 transition-colors">
+                            <strong class="block text-xs text-slate-900">${item.icon} ${item.title} <span class="text-emerald-700">↗</span></strong>
+                            <p class="text-[11px] text-slate-600 leading-relaxed mt-1">${item.text}</p>
+                        </a>
+                    `).join('')}
+                </div>
+            </section>
+        ` : '';
+
         // 2. ITINERARIO (Ora sta sotto, con il suo nuovo titoletto)
         let daysHtml = '';
         if (area.days && area.days.length > 0) {
@@ -361,6 +396,7 @@ function generateContent() {
 
         contentDiv.innerHTML = `
             ${overviewHtml}
+            ${cityDiscoverHtml}
             ${daysHtml}
             ${sierraGuideHtml}
             ${tourContactsHtml}
