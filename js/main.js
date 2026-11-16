@@ -414,70 +414,17 @@ function generateContent() {
         walletDiv.innerHTML = sidebarLogisticsHtml; // Logistica discreta, prima del wallet
 
         if (area.budget || (area.reservations && area.reservations.length > 0)) {
-            let resList = '';
-            if (area.reservations) {
-                resList = area.reservations.map(res => {
-                    const badgeColor = res.type === 'success' ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : 'bg-orange-100 text-orange-700 border-orange-200';
-                    return `
-                    <div class="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
-                        <span class="text-xs font-bold text-gray-700 truncate pr-2">${res.name}</span>
-                        <span class="text-[9px] font-black uppercase px-2 py-0.5 rounded-full border ${badgeColor}">${res.status}</span>
-                    </div>`;
-                }).join('');
-            }
-
-            let budgetList = '';
-            if (area.budget && area.budget.items) {
-                budgetList = area.budget.items.map(item => `
-                    <div class="flex items-center justify-between py-1.5">
-                        <span class="text-[11px] text-gray-500">${item.name}</span>
-                        <span class="text-[11px] font-bold text-gray-800">${item.cost}</span>
-                    </div>
-                `).join('');
-            }
-
             walletDiv.innerHTML += `
-            <div class="trip-sidebar-accordion border border-gray-200/70 rounded-[1.5rem] overflow-hidden bg-white shadow-sm transition-all">
-                <button type="button" aria-expanded="false" aria-controls="wallet-collapse-${area.id}" onclick="toggleCollapse('wallet-collapse-${area.id}', this)" class="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50/50 transition-colors group outline-none">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 border border-gray-200">💼</div>
-                        <div class="text-left">
-                            <h3 class="text-sm font-extrabold text-gray-900">Attività & spese</h3>
-                            <p class="text-[11px] text-gray-500 font-medium">Costi extra e cose da organizzare</p>
-                        </div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 toggle-icon transition-transform">
-                        <svg class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                </button>
-                
-                <div id="wallet-collapse-${area.id}" class="hidden border-t border-gray-100 bg-gray-50/30 p-5">
-                    <div class="flex flex-col gap-5">
-                        <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
-                            <div class="flex justify-between items-end mb-4">
-                                <div>
-                                    <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block">Costi di attività e trasporti</span>
-                                    <span class="text-xl font-black text-gray-900">${area.budget ? area.budget.total : '€ 0'}</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-[9px] uppercase tracking-widest text-rose-400 font-bold block">Stato</span>
-                                    <span class="text-sm font-bold text-rose-600">${area.budget ? area.budget.spent : '€ 0'}</span>
-                                </div>
-                            </div>
-                            <div class="pt-3 border-t border-gray-200">
-                                ${budgetList}
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm flex flex-col">
-                            <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-2">Conferme e azioni aperte</span>
-                            <div class="flex-grow flex flex-col justify-center">
-                                ${resList || '<p class="text-xs text-gray-400 italic">Nessuna prenotazione inserita.</p>'}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
+                <button type="button" onclick="openActivityCostsModal(${area.id})"
+                    aria-haspopup="dialog" aria-controls="activity-costs-modal"
+                    class="trip-sidebar-accordion w-full rounded-[1.5rem] border border-gray-200/70 bg-white shadow-sm p-4 flex items-center gap-3 hover:bg-emerald-50/50 hover:border-emerald-200 transition-colors text-left">
+                    <span class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xl">💼</span>
+                    <span class="flex-1 min-w-0">
+                        <strong class="block text-sm font-extrabold text-slate-900">Attività & spese</strong>
+                        <span class="block text-[11px] text-slate-500 mt-0.5">Riepilogo costi · apri la finestra</span>
+                    </span>
+                    <span aria-hidden="true" class="font-bold text-emerald-800 text-lg">↗</span>
+                </button>`;
         }
         walletContainer.appendChild(walletDiv);
     });
@@ -659,6 +606,57 @@ function initMap() {
 }
 
 
+
+// Modale condivisa per attività e spese della tappa corrente.
+function openActivityCostsModal(areaId) {
+    const area = tripData.areas.find(x => x.id === Number(areaId));
+    const container = document.getElementById("activity-costs-modal-container");
+    if (!area || !container) return;
+    const safe = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+    const entries = (area.budget?.items || []).map(item => `
+        <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-1 sm:gap-4 py-3.5 border-b border-slate-100 last:border-0">
+            <strong class="text-sm text-slate-900 leading-snug">${safe(item.name)}</strong>
+            <span class="text-xs text-slate-600 leading-relaxed sm:text-right">${safe(item.cost)}</span>
+        </div>`).join("");
+    const reservations = (area.reservations || []).map(item => `
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-3 border-b border-slate-100 last:border-0">
+            <span class="text-xs font-bold text-slate-800">${safe(item.name)}</span>
+            <span class="text-xs text-slate-600 sm:text-right">${safe(item.status)}</span>
+        </div>`).join("");
+    container.innerHTML = `
+        <div id="activity-costs-modal" role="dialog" aria-modal="true" aria-labelledby="activity-costs-heading" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/50 backdrop-blur-md">
+            <div class="bg-slate-50 w-full max-w-4xl rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[94vh] border border-white/40">
+                <div class="bg-white border-b border-slate-100 px-5 sm:px-8 py-5 flex items-center justify-between gap-3">
+                    <div class="min-w-0"><span class="block text-[10px] font-black tracking-widest uppercase text-emerald-800">${safe(area.navTitle)}</span>
+                    <h2 id="activity-costs-heading" class="text-lg sm:text-xl font-black text-slate-900 mt-1">💼 Attività & spese</h2>
+                    <p class="text-xs text-slate-500 mt-1">Importi per due persone · prenotato e stimato sono stati diversi</p></div>
+                    <button type="button" onclick="closeActivityCostsModal()" aria-label="Chiudi attività e spese" class="h-10 w-10 shrink-0 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 font-bold">✕</button>
+                </div>
+                <div class="p-4 sm:p-7 overflow-y-auto">
+                    <section class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 mb-4">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-emerald-800">Budget della tappa</span>
+                        <p class="text-lg sm:text-xl font-black text-slate-900 mt-2 leading-snug">${safe(area.budget?.total || "Da definire")}</p>
+                        ${area.budget?.spent ? `<p class="text-xs text-slate-600 mt-2 leading-relaxed">${safe(area.budget.spent)}</p>` : ""}
+                    </section>
+                    ${entries ? `<section class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5"><h3 class="text-sm font-black text-slate-900 mb-2">Dettaglio spese</h3>${entries}</section>` : ""}
+                    ${reservations ? `<section class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 mt-4"><h3 class="text-sm font-black text-slate-900 mb-2">Prenotazioni e conferme</h3>${reservations}</section>` : ""}
+                </div>
+            </div>
+        </div>`;
+    const modal = document.getElementById("activity-costs-modal");
+    modal.addEventListener("click", event => {
+        if (event.target === modal) closeActivityCostsModal();
+    });
+    document.body.classList.add("overflow-hidden");
+    modal.querySelector('button[aria-label="Chiudi attività e spese"]')?.focus();
+}
+function closeActivityCostsModal() {
+    document.getElementById("activity-costs-modal-container")?.replaceChildren();
+    document.body.classList.remove("overflow-hidden");
+}
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && document.getElementById("activity-costs-modal")) closeActivityCostsModal();
+});
 
 // Sintesi costi hotel: stessi comportamenti della modale voli, importi dinamici.
 function generateHotelCosts(){
