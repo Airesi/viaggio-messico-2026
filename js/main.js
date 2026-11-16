@@ -128,7 +128,7 @@ function generateContent() {
                             <button type="button" onclick="toggleHotelCostsModal()" class="text-[11px] text-emerald-800 font-black underline hover:text-emerald-950">Hotel & costi ↗</button>
                         </div>
                     ` : ''}
-                    ${area.basecamp ? `
+                    ${area.basecamp && (area.basecamp.hotelIdea || area.basecamp.why) ? `
                         <div class="rounded-xl bg-white border border-gray-200 p-3 space-y-1">
                             <p class="text-[11px] font-black text-slate-800">📍 ${area.basecamp.zone || 'Base della tappa'}</p>
                             <p class="text-[11px] leading-relaxed text-slate-600">${area.basecamp.hotelIdea || area.basecamp.why || ''}</p>
