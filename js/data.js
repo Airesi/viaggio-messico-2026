@@ -458,7 +458,7 @@ const tripData = {
                     }
                 ]
             },
-            "food": "Cene in Condesa e proposte di cucina locale: consulta i locali qui sotto. Le stime di pranzi, cene e colazioni sono soltanto nella sezione Costi.",
+            "food": "Per mangiare bene senza locali costruiti per i turisti: taquerías in Condesa e cucina del mais a Roma Norte. La Gruta del 21 dicembre è già prenotata alle 13:00.",
             "budget": {
                 "total": "≈ 950 € stimati per 2 · CDMX 20–23 dicembre · bus per Oaxaca escluso",
                 "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica concordato ma non ancora pagato.",
@@ -535,6 +535,32 @@ const tripData = {
                     "description": "Degustazione a sorpresa a base di mais e ingredienti del mercato, con cucina a vista e tavoli condivisi.",
                     "tip": "Niente prenotazioni, attesa anche lunga; segnalare esigenze alimentari e portare contanti.",
                     "url": "https://www.google.com/maps/search/?api=1&query=Expendio%20de%20Maiz%20Sin%20Nombre%20Roma%20Norte%20CDMX"
+                }
+            ],
+            "curiosities": [
+                {
+                    "icon": "🏙️",
+                    "title": "Una capitale a 2.240 metri",
+                    "text": "CDMX sorge in quota: le giornate possono essere miti, ma la sera di dicembre rinfresca.",
+                    "source": "https://mexicocity.cdmx.gob.mx/e/about/about-mexico-city/"
+                },
+                {
+                    "icon": "🌊",
+                    "title": "Sotto il centro c’era un lago",
+                    "text": "Il centro storico sorge sopra Tenochtitlán, antica capitale mexica costruita sul lago di Texcoco: al Templo Mayor i due mondi si sovrappongono.",
+                    "source": "https://whc.unesco.org/en/list/412/"
+                },
+                {
+                    "icon": "🌱",
+                    "title": "Xochimilco è un paesaggio vivo",
+                    "text": "I canali e le chinampas sono ciò che rimane dell'antico sistema lacustre: non sono solo uno sfondo per le trajineras.",
+                    "source": "https://whc.unesco.org/en/list/412/"
+                },
+                {
+                    "icon": "🚇",
+                    "title": "Le fermate della metro hanno un simbolo",
+                    "text": "La rete usa pittogrammi distintivi, parte dell'identità grafica della città: provate a riconoscerli.",
+                    "source": "https://mexicocity.cdmx.gob.mx/e/getting-around/using-the-metro/"
                 }
             ]
         },
