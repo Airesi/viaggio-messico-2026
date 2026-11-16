@@ -122,7 +122,7 @@ const tripData = {
                 "assicurazione di viaggio (già compresa nei voli)"
             ],
             "confirmedFlightsEuro": 2147.36,
-            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus acquistati: Taxqueña → Oaxaca del 23–24 dicembre (103 € totali), Oaxaca → Pochutla del 30 dicembre 09:15–13:00 (52 € totali), Pochutla → Oaxaca del 3 gennaio 14:10 (1.030 MXN pagati per 2) e Oaxaca → Villahermosa del 3 gennaio 21:30 (3.002 MXN pagati per 2). Ultimi due pagati il 13/11/2026 via PayPal, totale 4.032 MXN. I precedenti 155 € sono contabilizzati separatamente; evitare doppi conteggi nel budget. Taxi/colectivo Pochutla → San Agustinillo ancora da organizzare. Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
+            "note": "Budget complessivo per 2 persone, tetto €10.000 inclusi tutti i costi. Voli €2.147,36 TOTALI per due (importo confermato, assicurazione di viaggio inclusa; pagamento non verificato); hotel prenotati €1.845 (pagamenti da verificare); trekking Sierra Norte già pagato 12.917,70 MXN. Bus acquistati: Taxqueña → Oaxaca del 23–24 dicembre (103 € totali), Oaxaca → Pochutla del 30 dicembre 09:15–13:00 (52 € totali), Pochutla → Oaxaca del 3 gennaio 14:10 (1.030 MXN pagati per 2) e Oaxaca → Villahermosa del 3 gennaio 21:30 (3.002 MXN pagati per 2). Ultimi due pagati il 13/11/2026 via PayPal, totale 4.032 MXN. I precedenti 155 € sono contabilizzati separatamente; evitare doppi conteggi nel budget. Taxi Pochutla → San Agustinillo: Posada Paloma conferma che si trova un taxi de sitio fuori dalla terminal; nessuna prenotazione necessaria, tariffa da concordare. Spese rimanenti stimate: escursioni, altri trasporti, pasti, attrezzatura, souvenir, valigia extra, imprevisti. L'assicurazione inclusa nei voli non va conteggiata una seconda volta; verificare le coperture per le attività programmate.",
             "flightTicketPriceEuro": 1073.68,
             "flightPassengersAssumed": 2,
             "estimatedRoundtripFlightsEuro": 2147.36,
@@ -234,7 +234,7 @@ const tripData = {
                 "totalEuro": 52,
                 "operator": "Da verificare",
                 "paymentStatus": "Da verificare",
-                "notes": "Trasferimento a Posada Paloma richiesto via messaggio all'hotel per 30 dicembre dopo le 13:00; risposta attesa, non confermato."
+                "notes": "Posada Paloma ha risposto: taxi de sitio disponibili fuori dalla terminal di Pochutla all'arrivo il 30 dicembre alle 13:00. Taxi da San Agustinillo non autorizzati a prendere passeggeri a Pochutla; concordare tariffa prima della corsa."
             }
         ]
     },
@@ -644,7 +644,7 @@ const tripData = {
                     {
                         "icon": "🚌",
                         "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
-                        "desc": "Partenza 09:15, arrivo 13:00; 52 € totali. Verificare terminal e organizzare taxi/colectivo per San Agustinillo."
+                        "desc": "Partenza 09:15, arrivo 13:00; 52 € totali. Posada Paloma consiglia un taxi de sitio fuori dalla terminal di Pochutla; chiedere la tariffa prima di salire."
                     }
                 ]
             },
@@ -1036,7 +1036,7 @@ const tripData = {
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
-                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus acquistato da Oaxaca; pickup taxi richiesto a Posada Paloma, risposta attesa. Domenica 3 gennaio rientro a Pochutla per il bus delle 14:10 verso Oaxaca, tratta acquistata del collegamento via Oaxaca e Villahermosa verso Palenque.",
+                "why": "Il 30 dicembre arrivo a Pochutla alle 13:00 con bus acquistato da Oaxaca; Posada Paloma conferma taxi de sitio fuori dalla terminal di Pochutla, senza prenotazione. Domenica 3 gennaio rientro a Pochutla per il bus delle 14:10 verso Oaxaca, tratta acquistata del collegamento via Oaxaca e Villahermosa verso Palenque.",
                 "tags": [
                     "🌊 Pacifico",
                     "🌅 Capodanno sul mare",
@@ -1046,12 +1046,12 @@ const tripData = {
                     {
                         "icon": "🚌",
                         "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
-                        "desc": "Bus già acquistato: Oaxaca ore 09:15 → Pochutla ore 13:00, 52 € totali. Arrivo indicato: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Pickup taxi chiesto all'hotel; attendere risposta."
+                        "desc": "Bus già acquistato: Oaxaca ore 09:15 → Pochutla ore 13:00, 52 € totali. Arrivo indicato: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Posada Paloma conferma taxi de sitio fuori dalla terminal; non serve prenotare."
                     },
                     {
                         "icon": "🚕",
-                        "title": "30 dic · Taxi richiesto a Posada Paloma",
-                        "desc": "Richiesta inviata per il pickup dopo le 13:00, 2 persone con bagagli, da Calle Constitución (Centro, Pochutla). Risposta, prezzo totale, punto d'incontro e recapito autista da verificare. Taxi NON confermato."
+                        "title": "30 dic · Taxi locale Pochutla → Posada Paloma",
+                        "desc": "L'hotel conferma che all'uscita della terminal di Pochutla si trovano taxi de sitio; non è possibile mandare taxi da San Agustinillo per regole locali. Nessuna prenotazione necessaria; tariffa da concordare."
                     },
                     {
                         "icon": "🚶",
@@ -1088,7 +1088,7 @@ const tripData = {
                 },
                 {
                     "name": "Taxi Pochutla → Posada Paloma · 30 dic",
-                    "status": "Richiesto all'hotel · risposta attesa",
+                    "status": "Taxi de sitio alla terminal · indicazioni confermate dall’hotel",
                     "type": "warning"
                 },
                 {
@@ -1103,8 +1103,8 @@ const tripData = {
                     "dayName": "Giorno 10 (30 Dic)",
                     "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
                     "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 acquistato (52 €). Taxi per Posada Paloma richiesto all'hotel: risposta attesa.",
-                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Richiesta inviata a Posada Paloma</strong> per un taxi/pickup per due persone con bagagli. <strong>Risposta attesa: transfer non ancora prenotato.</strong> Verificare prezzo totale e punto d'incontro; altrimenti taxi locale o colectivo. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per i due autobus ADO acquistati fino a Villahermosa; taxi iniziale e collegamento finale per Palenque ancora da organizzare.</p>",
+                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 acquistato (52 €). Taxi de sitio alla terminal indicato da Posada Paloma; nessuna prenotazione necessaria.",
+                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Posada Paloma conferma</strong> che fuori dalla terminal di Pochutla si trovano taxi locali (taxi de sitio) senza prenotazione. I taxi di San Agustinillo non possono effettuare pickup a Pochutla per regole locali. Chiedere il costo prima di salire. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per i due autobus ADO acquistati fino a Villahermosa; taxi iniziale e collegamento finale per Palenque ancora da organizzare.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1152,8 +1152,8 @@ const tripData = {
                     "operationalNotes": [
                         "Bus Oaxaca → Pochutla acquistato: 30 dicembre 2026, 09:15–13:00, 52 € totali.",
                         "Indirizzo riportato sul biglietto: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Punto preciso di discesa da verificare.",
-                        "Richiesta taxi inviata a Posada Paloma per 2 persone con bagagli; risposta attesa. Nessun taxi ancora prenotato.",
-                        "Alla risposta chiedere prezzo totale, punto d'incontro e contatto dell'autista. Alternativa: taxi locale/colectivo."
+                        "Risposta Posada Paloma: all'uscita della terminal di Pochutla ci sono taxi de sitio, senza necessità di prenotare.",
+                        "I taxi di San Agustinillo non possono prelevare passeggeri a Pochutla: prendere taxi de sitio locale e accordare prima il prezzo."
                     ]
                 },
                 {
@@ -1224,7 +1224,7 @@ const tripData = {
                 "tips": [
                     "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
                     "3 gen: arrivare in anticipo a Pochutla per il bus ADO acquistato delle 14:10; acquistato anche il notturno delle 21:30 per Villahermosa.",
-                    "30 dic: taxi da Pochutla richiesto alla Posada Paloma, in attesa della risposta su prezzo e pickup."
+                    "30 dic: Posada Paloma conferma taxi de sitio fuori dalla terminal di Pochutla; nessuna prenotazione richiesta."
                 ]
             },
             "startDate": "2026-12-30",
