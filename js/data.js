@@ -259,7 +259,7 @@ const tripData = {
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
                     "shortDesc": "Visita archeologica privata prenotata dalle 09:30 alle 12:30 e pranzo a La Gruta alle 13:00.",
-                    "fullDesc": "<p><strong>09:30–12:30 · Teotihuacán.</strong> Visita privata A fondo in spagnolo prenotata con Ruta Mágica, senza negozi né degustazioni. Percorso tra Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, compatibilmente con i tempi. <strong>Tour prenotato:</strong> acconto 1.840 MXN pagato il 16 novembre; saldo 1.840 MXN ancora da pagare. Ingressi esclusi.</p><p><strong>13:00 · La Gruta.</strong> Pranzo già prenotato. La visita deve concludersi vicino alla Puerta 5 alle 12:30 per raggiungere il ristorante puntuali.</p>",
+                    "fullDesc": "<p><strong>09:30–12:30 · Teotihuacán.</strong> Visita privata A fondo in spagnolo prenotata con Ruta Mágica, senza negozi né degustazioni. Percorso tra Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, compatibilmente con i tempi. <strong>Tour prenotato.</strong> Biglietti archeologici esclusi; importi e saldo nella sezione budget.</p><p><strong>13:00 · La Gruta.</strong> Pranzo già prenotato. La visita deve concludersi vicino alla Puerta 5 alle 12:30 per raggiungere il ristorante puntuali.</p>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -439,7 +439,7 @@ const tripData = {
                     {
                         "icon": "🚐",
                         "title": "21 dic · Pickup per Teotihuacán",
-                        "desc": "Ruta Mágica: pickup direttamente a The PM tra le 08:00 e le 08:30 (ora precisa il 20 dic). Visita 09:30–12:30, fine vicino alla Puerta 5 per La Gruta alle 13:00; autista in attesa e rientro in hotel dopo pranzo. Prenotazione confermata tramite pagamento dell'acconto di 1.840 MXN; saldo 1.840 MXN da pagare. Orario preciso pickup comunicato il 20 dicembre."
+                        "desc": "Ruta Mágica: pickup direttamente a The PM tra le 08:00 e le 08:30 (ora precisa il 20 dic). Visita 09:30–12:30, fine vicino alla Puerta 5 per La Gruta alle 13:00; autista in attesa e rientro in hotel dopo pranzo. Prenotazione confermata. L'operatore comunica l'orario preciso di pickup il 20 dicembre. Condizioni del saldo nella sezione budget."
                     },
                     {
                         "icon": "🚕",
@@ -461,11 +461,11 @@ const tripData = {
             "food": "Per mangiare bene senza locali costruiti per i turisti: taquerías in Condesa e cucina del mais a Roma Norte. La Gruta del 21 dicembre è già prenotata alle 13:00.",
             "budget": {
                 "total": "≈ 950 € stimati per 2 · CDMX 20–23 dicembre · bus per Oaxaca escluso",
-                "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica prenotato (acconto 1.840 MXN pagato, saldo 1.840 MXN).",
+                "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica prenotato con acconto pagato e saldo ancora dovuto.",
                 "items": [
                     {
                         "name": "Ruta Mágica · Teotihuacán 21 dic · 2 persone",
-                        "cost": "3.680 MXN totali per 2 · prenotato; acconto 1.840 MXN pagato il 16/11, saldo 1.840 MXN da pagare; ingressi esclusi"
+                        "cost": "3.680 MXN per 2 · prenotato. Acconto 1.840 MXN ricevuto il 16/11; saldo 1.840 MXN obbligatorio entro 20/12/2026, in contanti o tramite bonifico secondo la ricevuta. Chiesto all'operatore se possibile pagare online con carta o in contanti all'autista il 21/12: risposta ancora da ricevere. Ingressi al sito esclusi."
                     },
                     {
                         "name": "Teotihuacán · ingressi per 2",
