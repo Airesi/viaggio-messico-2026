@@ -458,7 +458,7 @@ const tripData = {
                     }
                 ]
             },
-            "food": "Per mangiare bene senza locali costruiti per i turisti: taquerías in Condesa e cucina del mais a Roma Norte. La Gruta del 21 dicembre è già prenotata alle 13:00.",
+            "food": "La Gruta è già prenotata per il pranzo del 21. Per altre esperienze gastronomiche: Maizajo ed Expendio de Maíz; per la sera del 21, Jazzatlán Capital è una proposta jazz aperta di lunedì, programma da confermare.",
             "budget": {
                 "total": "≈ 950 € stimati per 2 · CDMX 20–23 dicembre · bus per Oaxaca escluso",
                 "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica prenotato con acconto pagato e saldo ancora dovuto.",
@@ -521,12 +521,12 @@ const tripData = {
                     "url": "https://www.google.com/maps/search/?api=1&query=Maizajo%20Condesa%20CDMX"
                 },
                 {
-                    "name": "Casa Franca",
-                    "kind": "Jazz e cocktail",
-                    "where": "Roma Norte",
-                    "description": "Jazz e blues dal vivo in una casa dall'atmosfera intima: ideale per una serata di musica insieme.",
-                    "tip": "Jazz dal vivo da martedì a sabato, prevalentemente in tarda serata; non compatibile con le nostre date CDMX (21 chiuso, 22 Lucha Libre, 23 bus per Oaxaca).",
-                    "url": "https://mexicocity.cdmx.gob.mx/venues/casa-franca/"
+                    "name": "Jazzatlán Capital",
+                    "kind": "Jazz dal vivo e cena · opzione lunedì 21",
+                    "where": "Guanajuato 239 · Roma Norte",
+                    "description": "Jazz club con musica dal vivo, cucina e cocktail. Aperto anche il lunedì dalle 18:00: perfetto per una serata dopo Teotihuacán, se il programma del 21 dicembre lo conferma.",
+                    "tip": "Verificare la cartellera del 21/12 e prenotare solo dopo aver scelto il concerto; nessun ingresso acquistato.",
+                    "url": "https://www.jazzatlan.club/capital"
                 },
                 {
                     "name": "Expendio de Maíz Sin Nombre",
