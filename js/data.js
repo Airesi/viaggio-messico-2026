@@ -247,32 +247,19 @@ const tripData = {
             "badge": "Giorni 1 - 4 • Capitale",
             "locationText": "Città del Messico",
             "title": "Il Cuore della Capitale",
-            "description": "Teotihuacán e La Gruta il 21 dicembre, poi centro storico, Coyoacán e canali. Bus notturno già acquistato: Taxqueña 23 dic 22:30 → Oaxaca 24 dic 05:30 (103 € per due).",
+            "description": "21 Teotihuacán e La Gruta · 22 Centro e Museo di Antropologia, sera Lucha Libre · 23 Coyoacán e Xochimilco.",
             "images": [
                 "assets/img/Citta_Del_Messico.png"
             ],
             "links": [],
             "days": [
                 {
-                    "id": "1-arrival-dec20",
-                    "dayName": "Arrivo (20 Dic)",
-                    "title": "Arrivo a Città del Messico e trasferimento a Condesa",
-                    "location": "Aeroporto MEX · Condesa",
-                    "fullDesc": "<p><strong>20 dicembre · arrivo in Messico.</strong> Volo Air France via Parigi; l'operativo riportato nei dettagli voli prevede l'arrivo all'aeroporto MEX, Terminal 1, alle <strong>20:55 locali</strong>. Dopo controlli d'ingresso e ritiro bagagli, transfer autorizzato o taxi/app verso <strong>The PM at Condesa Arts & Boutique Experience</strong>, con prenotazione dal 20 al 23 dicembre. <strong>Check-in dalle 22:00 alle 23:00 del 20 dicembre approvato dalla struttura tramite Booking.</strong></p><p><strong>Nessuna visita programmata per la sera:</strong> tenere conto dei tempi dell'aeroporto: l'hotel ha approvato la fascia di arrivo 22:00–23:00; avvisare soltanto in caso di ritardo fuori fascia. Le visite iniziano il 21 dicembre con Teotihuacán e pranzo prenotato a La Gruta.</p>",
-                    "operationalNotes": [
-                        "The PM ha approvato il check-in il 20 dicembre tra le 22:00 e le 23:00; contattare la struttura in caso di ritardo oltre le 23:00.",
-                        "Verificare eventuali variazioni dell'operativo del volo e usare un mezzo affidabile dall'aeroporto."
-                    ],
-                    "images": [],
-                    "links": []
-                },
-                {
                     "id": "1-1",
                     "dayName": "Giorno 1 (21 Dic)",
                     "title": "La Città degli Dei: Teotihuacán",
                     "location": "Teotihuacán (Nord CDMX)",
-                    "shortDesc": "Ruta Mágica: visita privata concordata 09:30–12:30, pickup The PM 08:00–08:30 e rientro dopo La Gruta delle 13:00. Preventivo 3.680 MXN, ancora da prenotare.",
-                    "fullDesc": "<div class=\"teo-plan\"><section class=\"teo-panel\"><h3>21 dicembre · Programma concordato con Ruta Mágica (non ancora prenotato)</h3><ol><li><strong>08:00–08:30</strong> — Pickup direttamente a The PM at Condesa Arts & Boutique Experience (ora esatta confermata il giorno prima).</li><li><strong>09:30–12:30</strong> — Tour privato A fondo in spagnolo alle rovine, senza laboratori, negozi o degustazioni. Fine vicino alla <strong>Puerta 5</strong>.</li><li><strong>13:00</strong> — Pranzo già prenotato al <strong>ristorante La Gruta</strong>, vicino alla Puerta 5.</li><li><strong>Dopo pranzo</strong> — Autista in attesa e trasferimento di ritorno all'hotel.</li></ol><p><strong>Preventivo Ruta Mágica 3.680 MXN totali per due</strong>, inclusi trasporto A/R, guida e attesa durante il pranzo; ingressi esclusi, circa 200–210 MXN a persona da pagare in biglietteria. Il programma è confermato via messaggio dall'operatore, ma <strong>l'acconto non risulta ancora pagato</strong> e la prenotazione non è completata.</p></section><section class=\"teo-panel\"><h3>Priorità archeologiche</h3><p>Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, modulando il percorso perché la guida termini davvero alle 12:30 vicino alla Porta 5. Conservare la prenotazione del pranzo e le istruzioni del tour.</p><p><a href=\"https://visitateotihuacan.inah.gob.mx/en/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">Informazioni ufficiali INAH</a>.</p></section></div>",
+                    "shortDesc": "Visita archeologica guidata e pranzo prenotato a La Gruta.",
+                    "fullDesc": "<p><strong>09:30–12:30 · Teotihuacán.</strong> Visita privata A fondo in spagnolo concordata con Ruta Mágica, senza negozi né degustazioni. Percorso tra Piramide del Sole, Piramide della Luna, Calzada de los Muertos e Tempio del Serpente Piumato, compatibilmente con i tempi. <strong>Tour non ancora prenotato:</strong> programma e prezzo confermati per iscritto dall’operatore.</p><p><strong>13:00 · La Gruta.</strong> Pranzo già prenotato. La visita deve concludersi vicino alla Puerta 5 alle 12:30 per raggiungere il ristorante puntuali.</p>",
                     "images": [
                         "assets/img/Teotihuacan_Piramide_Sole.png"
                     ],
@@ -316,19 +303,15 @@ const tripData = {
                             "image": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&w=400&q=80"
                         }
                     ],
-                    "operationalNotes": [
-                        "Ruta Mágica conferma pickup hotel 08:00–08:30, visita 09:30–12:30 fino alla Puerta 5 e trasporto di ritorno dopo La Gruta alle 13:00; 3.680 MXN per 2, ingressi esclusi.",
-                        "Verificare link di prenotazione e modalità di pagamento dell’acconto; prezzo e condizioni concordati per iscritto, ma prenotazione non ancora finalizzata.",
-                        "Riconfermare punto preciso di fine visita presso la Puerta 5, biglietti INAH da acquistare in biglietteria e ora pickup comunicata dal tour il giorno precedente."
-                    ]
+                    "operationalNotes": []
                 },
                 {
                     "id": "1-2",
                     "dayName": "Giorno 2 (22 Dic)",
-                    "title": "Zócalo, Storia Azteca e il Polmone Verde",
-                    "location": "CDMX (Centro e Ovest)",
-                    "shortDesc": "Centro storico e Museo di Antropologia; alle 19:30 Lucha Libre all'Arena México. 2 biglietti acquistati: settore RING R, fila 8, posti 107–108, 1.130 MXN totali.",
-                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p><p><strong>Martedì sera · Lucha Libre all'Arena México (ore 19:30), biglietti acquistati per due.</strong> <strong>Settore RING R, fila 8, posti 107 e 108; totale 1.130 MXN.</strong> Pianificare l'arrivo all'arena con anticipo e il rientro serale a Condesa.</p>",
+                    "title": "Centro storico, Antropologia e Lucha Libre",
+                    "location": "Centro Histórico · Chapultepec · Arena México",
+                    "shortDesc": "Centro storico e Museo di Antropologia; alle 19:30 Lucha Libre all'Arena México (biglietti acquistati).",
+                    "fullDesc": "<p><strong>Mattina · Centro Histórico.</strong> Zócalo e Templo Mayor sono le priorità. Palazzo Nazionale, Museo Vivo del Muralismo, Casa de los Azulejos e Torre Latinoamericana rimangono opzioni: meglio scegliere poche visite e approfondirle.</p><p><strong>Pomeriggio · Museo Nacional de Antropología.</strong> Dedicate almeno un paio d'ore alla collezione; il parco di Chapultepec è un'eventuale passeggiata, senza aggiungere troppe tappe.</p><p><strong>19:30 · Lucha Libre all'Arena México.</strong> Due biglietti già acquistati: settore <strong>RING R, fila 8, posti 107–108</strong>.</p>",
                     "images": [
                         "assets/img/Centro_Historico.png"
                     ],
@@ -352,10 +335,6 @@ const tripData = {
                         {
                             "text": "🤼 Lucha Libre · Arena México su Ticketmaster",
                             "url": "https://www.ticketmaster.com.mx/arena-mexico-tickets-mexico/venue/164115"
-                        },
-                        {
-                            "text": "📩 Ticketmaster México · assistenza",
-                            "url": "https://help.ticketmaster.com.mx/hc/es-mx/requests/new?ticket_form_id=26928070885009"
                         }
                     ],
                     "route": [
@@ -408,33 +387,19 @@ const tripData = {
                             "image": "assets/img/Bosque_Chapultepec.png"
                         }
                     ],
-                    "operationalNotes": [
-                        "Prima della giornata verificare giorni e orari di apertura dei musei previsti.",
-                        "Lasciare almeno qualche ora al Museo Nacional de Antropología, evitando di sovraccaricare il centro storico.",
-                        "Lucha Libre Arena México prenotata per il 22 dicembre ore 19:30: 2 biglietti settore RING R, fila 8, posti 107–108, 1.130 MXN totali.",
-                        "Conservare i biglietti acquistati e controllare modalità di accesso all’Arena México; organizzare il rientro serale in hotel."
-                    ]
+                    "operationalNotes": []
                 },
                 {
                     "id": "1-3",
                     "dayName": "Giorno 3 (23 Dic)",
-                    "title": "Borghi Colorati, Canali e... Partenza Notturna!",
-                    "location": "Coyoacán, Xochimilco & Bus Notturno",
-                    "shortDesc": "Atmosfere bohémien, trajineras a Xochimilco e in serata bus notturno acquistato: Taxqueña 22:30 → Oaxaca 05:30.",
-                    "fullDesc": "<p>La giornata inizia con una passeggiata tranquilla per <strong>Coyoacán</strong>, tra le vie storiche, la Plaza Hidalgo, mercatini e caffè. La mattina rimane libera da ingressi museali e prenotazioni. Nel pomeriggio ci spostiamo verso <strong>Xochimilco</strong> per navigare sui canali a bordo di una colorata <em>trajinera</em>, conservando margine per recuperare i bagagli e raggiungere Taxqueña in serata.</p><p>Al termine della giornata, recuperiamo i bagagli e ci dirigiamo al <strong>Terminal Taxqueña (Sud CDMX)</strong>. Da qui parte il <strong>bus notturno già acquistato il 23 dicembre alle 22:30</strong>, con arrivo a <strong>Oaxaca il 24 dicembre alle 05:30</strong>. I <strong>due biglietti costano complessivamente 103 €</strong>. Controllare sul biglietto il vettore, la terminal d'arrivo esatta e le regole per i bagagli. Viaggiando di notte cullati dalle curve della Sierra Madre, risparmieremo tempo prezioso, pronti a svegliarci il mattino seguente direttamente a Oaxaca!</p>",
+                    "title": "Coyoacán e canali di Xochimilco",
+                    "location": "Coyoacán · Xochimilco",
+                    "shortDesc": "Passeggiata a Coyoacán e giro in trajinera a Xochimilco, da organizzare.",
+                    "fullDesc": "<p><strong>Coyoacán.</strong> Passeggiata fra le vie del quartiere, Plaza Hidalgo, mercatini e caffè. Nessun museo obbligatorio.</p><p><strong>Xochimilco.</strong> Giro in trajinera sui canali; valutare un percorso più tranquillo nella zona di Cuemanco anziché le proposte festaioli. Durata e imbarcadero ancora da scegliere.</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
-                    "links": [
-                        {
-                            "text": "🔗 Biglietti Bus ADO (Notturno)",
-                            "url": "https://www.ado.com.mx"
-                        },
-                        {
-                            "text": "🚌 ADO · orari e prenotazioni",
-                            "url": "https://www.ado.com.mx/"
-                        }
-                    ],
+                    "links": [],
                     "route": [
                         {
                             "name": "Plaza Hidalgo, Coyoacán",
@@ -451,26 +416,15 @@ const tripData = {
                                 -99.1035
                             ],
                             "image": "assets/img/Xochimilco_trajineras.jpg"
-                        },
-                        {
-                            "name": "Terminal Taxqueña (Partenza)",
-                            "coords": [
-                                19.344,
-                                -99.1398
-                            ],
-                            "image": "https://images.unsplash.com/photo-1605315510619-756188cc5c3b?auto=format&fit=crop&w=400&q=80"
                         }
                     ],
-                    "operationalNotes": [
-                        "Bus notturno acquistato: 2 persone, México Taxqueña 23 dic 22:30 → Oaxaca 24 dic 05:30; 103 € totali. Verificare la terminal di arrivo.",
-                        "Recuperare i bagagli per tempo e raggiungere Taxqueña, idealmente entro le 21:30–21:45."
-                    ]
+                    "operationalNotes": []
                 }
             ],
             "basecamp": {
-                "zone": "Condesa · base per Città del Messico",
-                "hotelIdea": "Quartiere comodo per Roma/Condesa; per nome, date e importo dell'alloggio vedi «Alloggi confermati» qui sotto.",
-                "why": "Check-in del 20 dicembre tra le 22:00 e le 23:00 approvato da The PM. Il 23 recuperare gli zaini e raggiungere Taxqueña per il bus notturno acquistato delle 22:30; quel bus è conteggiato solo nel budget trasporti interurbani, non nel budget CDMX.",
+                "zone": "CDMX · Trasporti e orari",
+                "hotelIdea": "",
+                "why": "",
                 "tags": [
                     "🌳 Condesa e Roma",
                     "🏛️ Musei e civiltà preispaniche",
@@ -478,37 +432,47 @@ const tripData = {
                 ],
                 "transports": [
                     {
+                        "icon": "✈️",
+                        "title": "20 dic · MEX → The PM Condesa",
+                        "desc": "Volo previsto a MEX T1 alle 20:55. Taxi autorizzato/app per The PM at Condesa Arts & Boutique Experience. Check-in 22:00–23:00 approvato; avvisare l'hotel se si arriva dopo le 23:00."
+                    },
+                    {
+                        "icon": "🚐",
+                        "title": "21 dic · Pickup per Teotihuacán",
+                        "desc": "Ruta Mágica: pickup direttamente a The PM tra le 08:00 e le 08:30 (ora precisa il 20 dic). Visita 09:30–12:30, fine vicino alla Puerta 5 per La Gruta alle 13:00; autista in attesa e rientro in hotel dopo pranzo. Accordo scritto, prenotazione e acconto ancora da completare."
+                    },
+                    {
                         "icon": "🚕",
-                        "title": "Uber / DiDi",
-                        "desc": "Comodi per le tratte urbane e aeroporto. Per Teotihuacán valutare autobus o tour e pianificare il ritorno; la tariffa taxi varia."
+                        "title": "22 dic · Arena México",
+                        "desc": "Organizzare andata e ritorno serali dall'Arena México a Condesa con trasporto affidabile; lo spettacolo inizia alle 19:30."
                     },
                     {
-                        "icon": "👟",
-                        "title": "A Piedi",
-                        "desc": "Perfetto per esplorare il Centro Storico (Zócalo) e i quartieri Condesa/Roma."
+                        "icon": "🛶",
+                        "title": "23 dic · Coyoacán → Xochimilco",
+                        "desc": "Raggiungere l'imbarcadero scelto e programmare il rientro in hotel per recuperare gli zaini. Spostamenti locali non prenotati."
                     },
                     {
-                        "icon": "🚇",
-                        "title": "MetroBus",
-                        "desc": "Opzionale per muoversi velocemente lungo il Paseo de la Reforma."
+                        "icon": "🚌",
+                        "title": "23 dic · CDMX Taxqueña → Oaxaca",
+                        "desc": "Bus notturno acquistato per due: partenza da Terminal del Sur Taxqueña alle 22:30, arrivo a Oaxaca il 24 alle 05:30. Presentarsi indicativamente entro 21:30–21:45; costo 103 € registrato soltanto nel budget trasporti interurbani."
                     }
                 ]
             },
-            "food": "La Gruta il 21 alle 13:00 (pranzo completo stimato 58–82 € per due); altri pranzi il 22 e 23 (circa 36–60 € insieme), cene Condesa 20–22 (circa 94–145 €), più colazioni e bevande. Le stime dei pasti sono già comprese nel budget CDMX di circa 950 €, non aggiungerle una seconda volta.",
+            "food": "Cene in Condesa e proposte di cucina locale: consulta i locali qui sotto. Le stime di pranzi, cene e colazioni sono soltanto nella sezione Costi.",
             "budget": {
-                "total": "Budget CDMX circa 950 € per 2 persone, incluse 3 notti hotel (223 €), pasti, esperienze, museo, trasporti urbani e margine. ESCLUSO bus CDMX → Oaxaca (€103, contabilizzato solo nei trasporti interurbani).",
-                "spent": "Lucha Libre 1.130 MXN acquistata per 2; hotel The PM prenotato (223 €, pagamento da verificare). La Gruta prenotata, pranzo da pagare; Ruta Mágica preventivo confermato ma non ancora prenotato.",
+                "total": "≈ 950 € stimati per 2 · CDMX 20–23 dicembre · bus per Oaxaca escluso",
+                "spent": "Hotel prenotato; Lucha Libre acquistata; La Gruta prenotata; Ruta Mágica concordato ma non ancora pagato.",
                 "items": [
                     {
                         "name": "Ruta Mágica · Teotihuacán 21 dic · 2 persone",
-                        "cost": "3.680 MXN preventivo, non ancora prenotato · guida spagnolo 09:30–12:30, pickup The PM 08:00–08:30 e rientro dopo pranzo; ingresso escluso"
+                        "cost": "3.680 MXN per 2 · preventivo confermato, prenotazione da completare"
                     },
                     {
                         "name": "Teotihuacán · ingressi per 2",
                         "cost": "Circa 400–420 MXN, da pagare sul posto (esclusi da Ruta Mágica)"
                     },
                     {
-                        "name": "La Gruta · pranzo 21 dic ore 13:00",
+                        "name": "Pranzo La Gruta · 21 dic",
                         "cost": "Prenotato; budget pranzo completo per 2: 1.200–1.700 MXN (circa 58–82 €), ancora da pagare"
                     },
                     {
@@ -516,7 +480,7 @@ const tripData = {
                         "cost": "Circa 420 MXN (20 €) · visita in programma, ingressi da comprare"
                     },
                     {
-                        "name": "Lucha Libre Arena México · 22 dic 19:30",
+                        "name": "Lucha Libre · 22 dic (2 biglietti acquistati)",
                         "cost": "1.130 MXN totali per 2, acquistati · RING R fila 8, posti 107–108"
                     },
                     {
@@ -537,63 +501,13 @@ const tripData = {
                     }
                 ]
             },
-            "reservations": [
-                {
-                    "name": "Restaurante La Gruta · 21 dic",
-                    "status": "Confermato",
-                    "type": "success"
-                },
-                {
-                    "name": "Ruta Mágica · Teotihuacán · 21 dic · visita 09:30–12:30",
-                    "status": "Itinerario e preventivo confermati · 3.680 MXN per 2 · prenotazione e acconto ancora da effettuare",
-                    "type": "warning"
-                },
-                {
-                    "name": "Lucha Libre Arena México · 22 dic 19:30 · RING R fila 8 posti 107–108",
-                    "status": "2 biglietti acquistati · 1.130 MXN totali",
-                    "type": "success"
-                },
-                {
-                    "name": "Bus Taxqueña → Oaxaca · 23 dic 22:30 → 24 dic 05:30",
-                    "status": "Acquistato · 103 € totali",
-                    "type": "success"
-                }
-            ],
+            "reservations": [],
             "mapFocus": {
                 "coords": [
                     19.35,
                     -99.13
                 ],
                 "zoom": 10
-            },
-            "overview": {
-                "intro": "Tre giornate tra grandi civiltà, quartieri vivaci e canali della capitale.",
-                "highlights": [
-                    {
-                        "icon": "🏛️",
-                        "title": "Teotihuacán e La Gruta",
-                        "detail": "21 dic · Ruta Mágica: guida privata in spagnolo 09:30–12:30, rientro dopo pranzo; La Gruta confermata alle 13:00.",
-                        "state": "Ruta Mágica concordato · da prenotare; La Gruta confermata",
-                        "dayId": "1-1"
-                    },
-                    {
-                        "icon": "🎨",
-                        "title": "Centro e grandi musei",
-                        "detail": "22 dic · Centro Histórico, Museo Antropologia e Lucha Libre all'Arena México alle 19:30.",
-                        "state": "Lucha Libre acquistata · RING R fila 8 · 1.130 MXN per 2",
-                        "dayId": "1-2"
-                    },
-                    {
-                        "icon": "🚤",
-                        "title": "Coyoacán e Xochimilco",
-                        "detail": "23 dic · passeggiata a Coyoacán e canali di Xochimilco in trajinera.",
-                        "state": "In programma · senza visita museale",
-                        "dayId": "1-3"
-                    }
-                ],
-                "tips": [
-                    "Bus già acquistato: Taxqueña, 23 dicembre ore 22:30; arrivo a Oaxaca il 24 dicembre alle 05:30."
-                ]
             },
             "startDate": "2026-12-20",
             "endDate": "2026-12-23",
