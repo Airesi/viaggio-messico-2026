@@ -525,7 +525,7 @@ const tripData = {
                     "kind": "Jazz e cocktail",
                     "where": "Roma Norte",
                     "description": "Jazz e blues dal vivo in una casa dall'atmosfera intima: ideale per una serata di musica insieme.",
-                    "tip": "Provare martedì 22 dicembre; verificare cartellone, cover e tavoli vicino ai musicisti.",
+                    "tip": "Jazz dal vivo da martedì a sabato, prevalentemente in tarda serata; non compatibile con le nostre date CDMX (21 chiuso, 22 Lucha Libre, 23 bus per Oaxaca).",
                     "url": "https://mexicocity.cdmx.gob.mx/venues/casa-franca/"
                 },
                 {
