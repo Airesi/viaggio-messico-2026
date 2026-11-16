@@ -20,6 +20,7 @@ const tripData = {
                     "city": "Città del Messico",
                     "checkin": "2026-12-20",
                     "checkout": "2026-12-23",
+                    "checkinNote": "Check-in 20 dicembre 22:00–23:00 approvato dalla struttura tramite Booking.",
                     "totalEuro": 223,
                     "cancellation": "Non rimborsabile",
                     "status": "Confermato",
@@ -257,9 +258,9 @@ const tripData = {
                     "dayName": "Arrivo (20 Dic)",
                     "title": "Arrivo a Città del Messico e trasferimento a Condesa",
                     "location": "Aeroporto MEX · Condesa",
-                    "fullDesc": "<p><strong>20 dicembre · arrivo in Messico.</strong> Volo Air France via Parigi; l'operativo riportato nei dettagli voli prevede l'arrivo all'aeroporto MEX, Terminal 1, alle <strong>20:55 locali</strong>. Dopo controlli d'ingresso e ritiro bagagli, transfer autorizzato o taxi/app verso <strong>The PM at Condesa Arts & Boutique Experience</strong>, con prenotazione dal 20 al 23 dicembre.</p><p><strong>Nessuna visita programmata per la sera:</strong> tenere conto dei tempi dell'aeroporto e avvisare l'hotel dell'arrivo serale. Le visite iniziano il 21 dicembre con Teotihuacán e pranzo prenotato a La Gruta.</p>",
+                    "fullDesc": "<p><strong>20 dicembre · arrivo in Messico.</strong> Volo Air France via Parigi; l'operativo riportato nei dettagli voli prevede l'arrivo all'aeroporto MEX, Terminal 1, alle <strong>20:55 locali</strong>. Dopo controlli d'ingresso e ritiro bagagli, transfer autorizzato o taxi/app verso <strong>The PM at Condesa Arts & Boutique Experience</strong>, con prenotazione dal 20 al 23 dicembre. <strong>Check-in dalle 22:00 alle 23:00 del 20 dicembre approvato dalla struttura tramite Booking.</strong></p><p><strong>Nessuna visita programmata per la sera:</strong> tenere conto dei tempi dell'aeroporto: l'hotel ha approvato la fascia di arrivo 22:00–23:00; avvisare soltanto in caso di ritardo fuori fascia. Le visite iniziano il 21 dicembre con Teotihuacán e pranzo prenotato a La Gruta.</p>",
                     "operationalNotes": [
-                        "Confermare con The PM le modalità di accesso e il check-in in tarda serata.",
+                        "The PM ha approvato il check-in il 20 dicembre tra le 22:00 e le 23:00; contattare la struttura in caso di ritardo oltre le 23:00.",
                         "Verificare eventuali variazioni dell'operativo del volo e usare un mezzo affidabile dall'aeroporto."
                     ],
                     "images": [],
