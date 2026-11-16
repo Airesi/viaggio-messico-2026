@@ -327,8 +327,8 @@ const tripData = {
                     "dayName": "Giorno 2 (22 Dic)",
                     "title": "Zócalo, Storia Azteca e il Polmone Verde",
                     "location": "CDMX (Centro e Ovest)",
-                    "shortDesc": "Centro storico e Museo di Antropologia; alle 19:30 Lucha Libre all'Arena México. Biglietti non acquistati: risposta Ticketmaster sull'OTP attesa.",
-                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p><p><strong>Martedì sera · Lucha Libre all'Arena México (ore 19:30).</strong> Attività in programma, <strong>biglietti non ancora acquistati</strong>. Durante l'acquisto Ticketmaster México richiede la verifica del telefono, ma <strong>l'OTP non arriva al numero italiano</strong>: è stata <strong>contattata l'assistenza Ticketmaster</strong> e si attende risposta. Controllare email e spam, verificare se sbloccano l'acquisto; se non si risolve, chiedere disponibilità e orari della biglietteria fisica dell'Arena México. Pianificare il rientro dal museo con sufficiente anticipo.</p>",
+                    "shortDesc": "Centro storico e Museo di Antropologia; alle 19:30 Lucha Libre all'Arena México. 2 biglietti acquistati: settore RING R, fila 8, posti 107–108, 1.130 MXN totali.",
+                    "fullDesc": "<p><strong>Giornata culturale intensa, con tappe selezionabili:</strong> partenza al mattino per esplorare il cuore storico: il <strong>Zócalo</strong>, il <strong>Palacio Nacional</strong> e il <strong>Templo Mayor</strong>. Proseguiremo il percorso artistico al <strong>Museo Vivo del Muralismo</strong>, per poi ammirare la splendida facciata in maiolica della <strong>Casa de los Azulejos</strong>. Sosta panoramica salendo sulla <strong>Torre Latinoamericana</strong> per ammirare la megalopoli dall'alto. Nel primo pomeriggio ci allontaniamo dal cemento per immergerci nel <strong>Bosque de Chapultepec</strong>, un'oasi verde immensa, dove concluderemo la giornata all'incredibile <em>Museo Nacional de Antropología</em>.</p><p><strong>Priorità consigliata:</strong> Centro Histórico con Templo Mayor al mattino e Museo di Antropologia nel pomeriggio. Palacio Nacional (accesso da verificare), Museo Vivo del Muralismo, Torre Latinoamericana e Casa de los Azulejos restano fermate facoltative: non puntare a visitarle tutte se si vuole approfondire il museo.</p><p><strong>Martedì sera · Lucha Libre all'Arena México (ore 19:30), biglietti acquistati per due.</strong> <strong>Settore RING R, fila 8, posti 107 e 108; totale 1.130 MXN.</strong> Pianificare l'arrivo all'arena con anticipo e il rientro serale a Condesa.</p>",
                     "images": [
                         "assets/img/Centro_Historico.png"
                     ],
@@ -411,8 +411,8 @@ const tripData = {
                     "operationalNotes": [
                         "Prima della giornata verificare giorni e orari di apertura dei musei previsti.",
                         "Lasciare almeno qualche ora al Museo Nacional de Antropología, evitando di sovraccaricare il centro storico.",
-                        "📩 Risposta da controllare: assistenza Ticketmaster México, contattata perché non arriva l'OTP al numero italiano obbligatorio per acquistare i biglietti della Lucha Libre del 22 dicembre (ore 19:30). Biglietti NON acquistati.",
-                        "Se Ticketmaster non risolve, verificare disponibilità di biglietti e orari della taquilla dell'Arena México; non considerare l'accesso garantito."
+                        "Lucha Libre Arena México prenotata per il 22 dicembre ore 19:30: 2 biglietti settore RING R, fila 8, posti 107–108, 1.130 MXN totali.",
+                        "Conservare i biglietti acquistati e controllare modalità di accesso all’Arena México; organizzare il rientro serale in hotel."
                     ]
                 },
                 {
@@ -529,9 +529,9 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Ticketmaster México · Lucha Libre Arena México · 22 dic",
-                    "status": "Assistenza contattata · risposta attesa (OTP)",
-                    "type": "warning"
+                    "name": "Lucha Libre Arena México · 22 dic 19:30 · RING R fila 8 posti 107–108",
+                    "status": "2 biglietti acquistati · 1.130 MXN totali",
+                    "type": "success"
                 },
                 {
                     "name": "Bus Taxqueña → Oaxaca · 23 dic 22:30 → 24 dic 05:30",
@@ -560,7 +560,7 @@ const tripData = {
                         "icon": "🎨",
                         "title": "Centro e grandi musei",
                         "detail": "22 dic · Centro Histórico, Museo Antropologia e Lucha Libre all'Arena México alle 19:30.",
-                        "state": "Lucha Libre da acquistare · risposta Ticketmaster attesa",
+                        "state": "Lucha Libre acquistata · RING R fila 8 · 1.130 MXN per 2",
                         "dayId": "1-2"
                     },
                     {
