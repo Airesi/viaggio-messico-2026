@@ -629,7 +629,7 @@ function openActivityCostsModal(areaId) {
                 <div class="bg-white border-b border-slate-100 px-5 sm:px-8 py-5 flex items-center justify-between gap-3">
                     <div class="min-w-0"><span class="block text-[10px] font-black tracking-widest uppercase text-emerald-800">${safe(area.navTitle)}</span>
                     <h2 id="activity-costs-heading" class="text-lg sm:text-xl font-black text-slate-900 mt-1">💼 Attività & spese</h2>
-                    <p class="text-xs text-slate-500 mt-1">Importi per due persone · prenotato e stimato sono stati diversi</p></div>
+                    <p class="text-xs text-slate-500 mt-1">Importi per due persone · costi confermati e stime distinti</p></div>
                     <button type="button" onclick="closeActivityCostsModal()" aria-label="Chiudi attività e spese" class="h-10 w-10 shrink-0 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 font-bold">✕</button>
                 </div>
                 <div class="p-4 sm:p-7 overflow-y-auto">
