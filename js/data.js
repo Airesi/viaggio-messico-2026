@@ -641,7 +641,7 @@ const tripData = {
                     },
                     {
                         "name": "Civitatis · Hierve el Agua · 25 dic · 2 persone",
-                        "cost": "Prenotato: 71,12 € totali (pagamento da verificare). Ingressi 70 MXN a persona, 140 MXN per 2 (~6,86 €) esclusi; totale previsto con ingressi ~77,98 €. Trekking guidato facoltativo +450 MXN a persona (900 MXN per 2), non incluso. Cibo e bevande esclusi."
+                        "cost": "Prenotato e pagato: 71,12 € totali per 2 persone. Ingressi 70 MXN a persona, 140 MXN per 2 (~6,86 €) esclusi; totale previsto con ingressi ~77,98 €. Trekking guidato facoltativo +450 MXN a persona (900 MXN per 2), non incluso. Cibo e bevande esclusi."
                     },
                     {
                         "name": "Bus Oaxaca → Pochutla · 30 dic",
@@ -667,7 +667,7 @@ const tripData = {
                 },
                 {
                     "name": "Civitatis · Hierve el Agua · 25 dic ore 09:00 · 2 persone",
-                    "status": "Prenotato · 71,12 € · pagamento da verificare",
+                    "status": "Prenotato e pagato · 71,12 € per 2",
                     "type": "success"
                 },
                 {
