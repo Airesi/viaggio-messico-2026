@@ -592,7 +592,7 @@ const tripData = {
             "badge": "24–29 Dic • Oaxaca, Pueblos Mancomunados e Caminos Reales",
             "locationText": "Oaxaca · Monte Albán · Sierra Norte · Oaxaca",
             "title": "Tradizioni zapoteche e trekking nella Sierra Norte",
-            "description": "Oaxaca, Monte Albán e trekking comunitario già pagato (26–28 dicembre). Hierve el Agua da verificare; il 29 resta giorno jolly. Bus Oaxaca → Pochutla 30 dicembre 09:15–13:00 già acquistato (52 € totali).",
+            "description": "Oaxaca: Monte Albán il 24, Hierve el Agua prenotato il 25, Caminos Reales 26–28 dicembre già pagato; il 29 resta libero.",
             "images": [
                 "assets/img/Oaxaca_Ciudad.png",
                 "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
@@ -615,13 +615,13 @@ const tripData = {
                     },
                     {
                         "icon": "🚐",
-                        "title": "Sierra Norte 26–28",
-                        "desc": "Partenza da Oaxaca il 26 alle 08:00; ritorno da Benito Juárez nel pomeriggio del 28, incluso nel pacchetto."
+                        "title": "25 dic · Civitatis per Hierve el Agua",
+                        "desc": "Ritrovo alle 09:00 all'Hotel Quinta Real di Oaxaca, come da conferma Civitatis per 2 persone. Calcolare anticipo per arrivare puntuali dal proprio hotel. Trasferimento A/R al sito incluso; rientro allo stesso punto circa 6 ore dopo la partenza (orario indicativo)."
                     },
                     {
-                        "icon": "👟",
-                        "title": "29 dicembre · jolly",
-                        "desc": "Oaxaca a piedi oppure Hierve el Agua / Mitla se il tour natalizio del 25 non si potesse fare."
+                        "icon": "🚐",
+                        "title": "Sierra Norte 26–28",
+                        "desc": "Partenza da Oaxaca il 26 alle 08:00; ritorno da Benito Juárez nel pomeriggio del 28, incluso nel pacchetto."
                     },
                     {
                         "icon": "🚌",
@@ -640,8 +640,8 @@ const tripData = {
                         "cost": "420 MXN tariffa INAH 2026, trasporto escluso"
                     },
                     {
-                        "name": "Hierve el Agua · 25 oppure 29 dic",
-                        "cost": "Tour/apertura ancora da verificare"
+                        "name": "Civitatis · Hierve el Agua · 25 dic · 2 persone",
+                        "cost": "Prenotato: 71,12 € totali (pagamento da verificare). Ingressi 70 MXN a persona, 140 MXN per 2 (~6,86 €) esclusi; totale previsto con ingressi ~77,98 €. Trekking guidato facoltativo +450 MXN a persona (900 MXN per 2), non incluso. Cibo e bevande esclusi."
                     },
                     {
                         "name": "Bus Oaxaca → Pochutla · 30 dic",
@@ -666,9 +666,9 @@ const tripData = {
                     "type": "warning"
                 },
                 {
-                    "name": "Hierve el Agua · 25/29 dic",
-                    "status": "Da verificare",
-                    "type": "warning"
+                    "name": "Civitatis · Hierve el Agua · 25 dic ore 09:00 · 2 persone",
+                    "status": "Prenotato · 71,12 € · pagamento da verificare",
+                    "type": "success"
                 },
                 {
                     "name": "Bus Oaxaca → Pochutla · 30 dic 09:15–13:00",
@@ -683,7 +683,7 @@ const tripData = {
                     "title": "Monte Albán nella Vigilia, poi Oaxaca centro",
                     "location": "Monte Albán → Santo Domingo · mercati · centro",
                     "shortDesc": "Visita alla città zapoteca di Monte Albán dopo l'arrivo previsto del bus alle 05:30; mercati e centro storico nel pomeriggio, Vigilia in città.",
-                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo previsto a <strong>Oaxaca alle 05:30</strong> con il <strong>bus notturno già acquistato</strong> da <strong>México Taxqueña (23 dicembre, ore 22:30)</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; con l'arrivo previsto alle 05:30 c'è margine per colazione e deposito bagagli, ma gli orari festivi del sito vanno verificati.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p><p><strong>Il 25 dicembre</strong> vorremmo andare a Hierve el Agua soltanto se un operatore conferma l'accesso e il servizio festivo; il trekking Sierra Norte già pagato inizia il <strong>26 dicembre alle 08:00</strong> da Oaxaca.</p>",
+                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo previsto a <strong>Oaxaca alle 05:30</strong> con il <strong>bus notturno già acquistato</strong> da <strong>México Taxqueña (23 dicembre, ore 22:30)</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; con l'arrivo previsto alle 05:30 c'è margine per colazione e deposito bagagli, ma gli orari festivi del sito vanno verificati.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
@@ -746,21 +746,17 @@ const tripData = {
                 {
                     "id": "2-2",
                     "dayName": "Giorno 5 (25 Dic)",
-                    "title": "Natale a Hierve el Agua, se aperto",
+                    "title": "Hierve el Agua · tour diretto prenotato",
                     "location": "Hierve el Agua · Mitla e Tlacolula, se disponibili",
-                    "shortDesc": "Prima scelta: le cascate pietrificate a Natale, con trasporto e accesso confermati. Piano B: Oaxaca tranquilla; recupero dell'escursione il 29.",
-                    "fullDesc": "<p><strong>Obiettivo di Natale: Hierve el Agua.</strong> Le cascate pietrificate e le piscine minerali sono una delle esperienze naturalistiche a cui teniamo di più. Gli orari generalmente pubblicati sono giornalieri, ma <strong>NON è confermata l'apertura del 25 dicembre 2026</strong>: l'accesso dipende anche dalle comunità locali e i trasporti organizzati possono non operare a Natale.</p><p><strong>Se confermato:</strong> partenza da Oaxaca al mattino con <strong>tour autorizzato o autista privato</strong> che garantisca esplicitamente il 25 dicembre, visita alle formazioni e ai belvedere, rientro nel pomeriggio. L'intera uscita può richiedere <strong>7–10 ore</strong> in base alle soste. <strong>Mitla, Árbol del Tule e mezcal</strong> sono aggiunte facoltative, soltanto se aperti e senza togliere troppo tempo a Hierve el Agua; per Mitla l'orario INAH ordinario è 08:00–17:00, da riconfermare per Natale.</p><p><strong>Piano B se accesso o trasporto non sono confermati:</strong> Natale tranquillo a Oaxaca, tra passeggiate, cibo locale e riposo prima del trekking. <strong>Il 29 dicembre</strong> resta libero e potrà essere usato per recuperare Hierve el Agua o Mitla, se avremo voglia dopo i 40 km di Sierra Norte.</p><p><strong>Da fare:</strong> chiedere conferma scritta dell'operatività natalizia a un operatore, prima di pagare l'escursione. Non presentare Hierve el Agua del 25 come prenotato.</p>",
+                    "shortDesc": "25 dicembre · tour Civitatis prenotato, partenza 09:00; tre ore libere alle cascate pietrificate.",
+                    "fullDesc": "<p><strong>Natale a Hierve el Agua.</strong> Escursione diretta prenotata con Civitatis per <strong>venerdì 25 dicembre 2026</strong>: circa sei ore complessive, di cui <strong>tre ore libere</strong> per ammirare le cascate pietrificate, passeggiare tra i belvedere e visitare le piscine minerali. Nessuna sosta commerciale prevista nel programma.</p><p>Il sentiero panoramico con guida locale è facoltativo e non compreso nel tour. Tempo libero da gestire tra camminata, paesaggi e relax: valutare sul posto il percorso in base alle condizioni e all'apertura delle aree.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
                     ],
                     "links": [
                         {
-                            "text": "💧 Hierve el Agua · orari di riferimento, non validi per Natale",
-                            "url": "https://www.hierveelaguashuttle.com/hierve.html"
-                        },
-                        {
-                            "text": "🏛️ Zona archeologica di Mitla · INAH",
-                            "url": "https://lugares.inah.gob.mx/es/node/4350"
+                            "text": "💧 Civitatis · escursione diretta a Hierve el Agua",
+                            "url": "https://www.civitatis.com/es/oaxaca/excursion-hierve-agua/"
                         }
                     ],
                     "route": [
@@ -793,10 +789,7 @@ const tripData = {
                             ]
                         }
                     ],
-                    "operationalNotes": [
-                        "Hierve el Agua il 25 dicembre NON è confermata: chiedere disponibilità scritta sia per l'accesso sia per il trasporto.",
-                        "Piano B: giornata tranquilla a Oaxaca, eventuale recupero il 29 dicembre; nessun acquisto senza conferma."
-                    ]
+                    "operationalNotes": []
                 },
                 {
                     "id": "6-dec26",
@@ -897,10 +890,10 @@ const tripData = {
                 {
                     "id": "6-dec29",
                     "dayName": "Giorno 9 (29 Dic)",
-                    "title": "Oaxaca jolly: recupero Hierve el Agua oppure riposo",
+                    "title": "Oaxaca con calma dopo il trekking",
                     "location": "Oaxaca · Hierve el Agua / Mitla (opzionali)",
-                    "shortDesc": "Giornata flessibile dopo 40 km di trekking: recupero dell'escursione di Natale, oppure mercati, cucina e riposo prima della costa.",
-                    "fullDesc": "<p>Il <strong>29 dicembre</strong> è libero dopo il trekking in Sierra Norte. Se <strong>Hierve el Agua</strong> non sarà visitabile a Natale, possiamo recuperarla oggi, eventualmente con <strong>Mitla</strong> o un palenque di mezcal se avremo energie e gli orari lo permetteranno.</p><p>Altrimenti giornata tranquilla a <strong>Oaxaca</strong> fra Jalatlaco, Santo Domingo, mercati e cucina locale. <strong>Non c'è alcun cambio di hotel da sistemare:</strong> il Cazomalli copre già la notte del 29 dicembre e Posada Paloma inizia correttamente il <strong>30 dicembre</strong>. Le prenotazioni non si sovrappongono.</p>",
+                    "shortDesc": "Giornata flessibile dopo il trekking: mercati, cucina locale e riposo prima della costa.",
+                    "fullDesc": "<p><strong>29 dicembre · giornata libera a Oaxaca</strong> dopo i tre giorni di trekking nella Sierra Norte. Passeggiata a Jalatlaco e nel centro storico, mercati, buona cucina e riposo prima della costa. Eventuali visite aggiuntive solo se abbiamo energia; nessun tour prenotato per oggi.</p>",
                     "images": [
                         "assets/img/Oaxaca_Ciudad.png"
                     ],
@@ -948,13 +941,6 @@ const tripData = {
                         "dayId": "2-1"
                     },
                     {
-                        "icon": "💧",
-                        "title": "Hierve el Agua",
-                        "detail": "25 dic se aperto, altrimenti recupero il 29.",
-                        "state": "Apertura da verificare",
-                        "dayId": "2-2"
-                    },
-                    {
                         "icon": "🥾",
                         "title": "Caminos Reales · Sierra Norte",
                         "detail": "26–28 dic · 40 km guidati, 2 notti in cabañas.",
@@ -970,7 +956,6 @@ const tripData = {
                     }
                 ],
                 "tips": [
-                    "Confermare l'apertura di Hierve el Agua il 25 dicembre prima di prenotare.",
                     "Chiedere al Cazomalli il deposito bagagli durante il trekking; il 29 resta flessibile."
                 ]
             },
