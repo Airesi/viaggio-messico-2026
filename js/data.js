@@ -895,7 +895,7 @@ const tripData = {
                     "title": "Oaxaca con calma dopo il trekking",
                     "location": "Oaxaca · Hierve el Agua / Mitla (opzionali)",
                     "shortDesc": "Giornata flessibile dopo il trekking: mercati, cucina locale e riposo prima della costa.",
-                    "fullDesc": "<p><strong>29 dicembre · giornata libera a Oaxaca</strong> dopo i tre giorni di trekking nella Sierra Norte. Passeggiata a Jalatlaco e nel centro storico, mercati, buona cucina e riposo prima della costa. Eventuali visite aggiuntive solo se abbiamo energia; nessun tour prenotato per oggi.</p>",
+                    "fullDesc": "<p><strong>29 dicembre · giornata libera a Oaxaca</strong> dopo i tre giorni di trekking nella Sierra Norte. Passeggiata a Jalatlaco e nel centro storico, mercati e riposo prima della costa. <strong>Colazione o pranzo da Itanoní</strong> per assaggiare memelas e tetelas di mais nativo (da verificare apertura e possibilità di prenotare). Eventuali visite aggiuntive solo se abbiamo energia; nessun tour prenotato per oggi.</p>",
                     "images": [
                         "assets/img/Oaxaca_Ciudad.png"
                     ],
@@ -956,7 +956,7 @@ const tripData = {
                     "kind": "Memelas, tetelas e mais tradizionale",
                     "where": "Reforma · breve taxi",
                     "description": "Tortillas e specialità fatte con mais nativo: una sosta semplice con la lavorazione del comal a vista.",
-                    "tip": "Per il 24 dicembre chiedere se aperto e se è possibile pranzare verso le 14:30. Orario ordinario 07:00–16:00, chiuso a cena; prenotazioni non confermate, possibile accesso senza prenotazione. Tel. +52 951 205 2282; portare contanti.",
+                    "tip": "Per martedì 29 dicembre: ideale a colazione o pranzo, aperto ordinariamente 07:00–16:00. Verificare l'apertura e se accettano prenotazioni; tel. +52 951 205 2282. Portare contanti.",
                     "url": "https://guide.michelin.com/es/es/oaxaca/oaxaca-de-juarez_2056768/restaurante/itanoni"
                 }
             ],
