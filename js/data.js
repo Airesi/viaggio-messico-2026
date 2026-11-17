@@ -603,9 +603,9 @@ const tripData = {
             ],
             "links": [],
             "basecamp": {
-                "zone": "Jalatlaco / Oaxaca · Sierra Norte 26–28 dicembre",
-                "hotelIdea": "La stessa base a Jalatlaco prima e dopo il trekking: chiedere deposito bagagli per le due notti in cabaña già incluse nel pacchetto Sierra Norte.",
-                "why": "Bus già acquistato con arrivo a Oaxaca il 24 alle 05:30. Chiedere il deposito bagagli al Cazomalli prima del check-in. Trekking dal 26 alle 08:00 al 28 pomeriggio; il 29 resta flessibile.",
+                "zone": "Oaxaca · collegamenti e trasferimenti",
+                "hotelIdea": "",
+                "why": "",
                 "tags": [
                     "🏛️ Oaxaca 24–25 e 29",
                     "🥾 Sierra 26–28",
@@ -614,27 +614,32 @@ const tripData = {
                 "transports": [
                     {
                         "icon": "🚌",
-                        "title": "Bus acquistato · Taxqueña → Oaxaca",
-                        "desc": "Partenza 23 dicembre alle 22:30 da México Taxqueña; arrivo 24 dicembre alle 05:30 a Oaxaca · 103 € totali per due. Verificare terminal d'arrivo e deposito bagagli al Cazomalli."
+                        "title": "24 dic · Arrivo da CDMX e deposito zaini",
+                        "desc": "Bus acquistato Taxqueña 23/12 22:30 → Oaxaca 24/12 05:30. Raggiungere Hotel Cazomalli a Jalatlaco e chiedere deposito zaini prima del check-in; terminal di arrivo da controllare sul biglietto. Costo bus (€103 per 2) nel budget trasporti interurbani."
+                    },
+                    {
+                        "icon": "🚕",
+                        "title": "24 dic · Oaxaca → Monte Albán",
+                        "desc": "Organizzare andata e ritorno al sito archeologico dopo aver lasciato gli zaini. Verificare orari festivi INAH del 24 dicembre e modalità del ritorno."
                     },
                     {
                         "icon": "🚐",
-                        "title": "25 dic · Civitatis per Hierve el Agua",
-                        "desc": "Ritrovo alle 09:00 all'Hotel Quinta Real di Oaxaca, come da conferma Civitatis per 2 persone. Calcolare anticipo per arrivare puntuali dal proprio hotel. Trasferimento A/R al sito incluso; rientro allo stesso punto circa 6 ore dopo la partenza (orario indicativo)."
+                        "title": "25 dic · Civitatis → Hierve el Agua",
+                        "desc": "Ritrovo confermato alle 09:00 presso Hotel Quinta Real, nel centro di Oaxaca; calcolare margine per arrivare dal Cazomalli. Trasferimento andata/ritorno incluso, fine prevista circa 15:00 al Quinta Real."
                     },
                     {
-                        "icon": "🚐",
-                        "title": "Sierra Norte 26–28",
-                        "desc": "Partenza da Oaxaca il 26 alle 08:00; ritorno da Benito Juárez nel pomeriggio del 28, incluso nel pacchetto."
+                        "icon": "🥾",
+                        "title": "26–28 dic · Trekking Sierra Norte",
+                        "desc": "26/12 pickup/partenza da Oaxaca alle 08:00; controllare il punto esatto sul voucher. 28/12 trasferimento incluso da Benito Juárez a Oaxaca dalle 16:00 circa. Due pernottamenti in cabañas inclusi; chiedere al Cazomalli se può custodire gli zaini durante il trekking."
                     },
                     {
                         "icon": "🚌",
-                        "title": "30 dic · Bus Oaxaca → Pochutla acquistato",
-                        "desc": "Partenza 09:15, arrivo 13:00; 52 € totali. Posada Paloma consiglia un taxi de sitio fuori dalla terminal di Pochutla; chiedere la tariffa prima di salire."
+                        "title": "30 dic · Oaxaca → Pochutla",
+                        "desc": "Bus acquistato 09:15–13:00, costo €52 per 2 contabilizzato nei trasporti interurbani. A Pochutla prendere un taxi de sitio fuori dalla terminal per Posada Paloma, concordando la tariffa."
                     }
                 ]
             },
-            "food": "Mercati e cucina oaxaqueña il 24–25 e il 29; pasti comunitari inclusi nel pacchetto Sierra Norte, con trota, pulque e tepache.",
+            "food": "Cucina oaxaqueña nei mercati e nei locali di quartiere: specialità dell'Istmo, memelas e tetelas di mais nativo. Per la Vigilia del 24 verificare aperture e disponibilità delle cene; il 29 è la giornata più flessibile per provare i locali.",
             "budget": {
                 "total": "12.917,70 MXN · trekking già pagato",
                 "spent": "Transfer, guide, pasti e 2 cabañas inclusi",
@@ -686,8 +691,8 @@ const tripData = {
                     "dayName": "Giorno 4 (24 Dic)",
                     "title": "Monte Albán nella Vigilia, poi Oaxaca centro",
                     "location": "Monte Albán → Santo Domingo · mercati · centro",
-                    "shortDesc": "Visita alla città zapoteca di Monte Albán dopo l'arrivo previsto del bus alle 05:30; mercati e centro storico nel pomeriggio, Vigilia in città.",
-                    "fullDesc": "<p><strong>Vigilia a Oaxaca.</strong> Arrivo previsto a <strong>Oaxaca alle 05:30</strong> con il <strong>bus notturno già acquistato</strong> da <strong>México Taxqueña (23 dicembre, ore 22:30)</strong>. All'arrivo chiedere deposito bagagli al mattino presso l'hotel già confermato a Jalatlaco, perché l'early check-in non è garantito. Dopo aver lasciato i bagagli, trasferimento a <strong>Monte Albán</strong> per esplorare la città zapoteca: Gran Plaza, terrazze monumentali, panorami sulla valle e, in base ai percorsi aperti, le strutture archeologiche.</p><p><strong>Orario ordinario INAH:</strong> 08:00–17:00, ultimo accesso 16:00; la disponibilità e l'eventuale riduzione di orario per <strong>giovedì 24 dicembre 2026</strong> vanno confermate poco prima della visita. L'ideale è arrivare al mattino e prevedere <strong>circa 3 ore</strong> per il sito; con l'arrivo previsto alle 05:30 c'è margine per colazione e deposito bagagli, ma gli orari festivi del sito vanno verificati.</p><p><strong>Pomeriggio e sera:</strong> Templo de Santo Domingo, mercato 20 de Noviembre, vie del centro e atmosfera della <em>Nochebuena</em>, verificando quali attività siano effettivamente aperte. Cena della Vigilia con prenotazione consigliata. I festeggiamenti religiosi e le calendas possono variare: nessun evento dato per confermato.</p>",
+                    "shortDesc": "Mattina a Monte Albán, pomeriggio nel centro storico e Vigilia a Oaxaca.",
+                    "fullDesc": "<p><strong>Mattina · Monte Albán.</strong> Visita alla città zapoteca: Gran Plaza, terrazze monumentali e panorami sulla valle. Prevedere circa tre ore. L'orario ordinario INAH è 08:00–17:00, ma quello festivo del <strong>24 dicembre</strong> va confermato.</p><p><strong>Pomeriggio · Oaxaca centro.</strong> Templo de Santo Domingo, mercato 20 de Noviembre e passeggiata fra le vie storiche. In serata atmosfera della <em>Nochebuena</em>; eventi e calendas non sono ancora verificati. Cena della Vigilia da organizzare in base alle aperture.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=400&q=80"
                     ],
@@ -699,10 +704,6 @@ const tripData = {
                         {
                             "text": "🏛️ Museo sito Monte Albán · INAH",
                             "url": "https://lugares.inah.gob.mx/es/node/4308"
-                        },
-                        {
-                            "text": "🚌 ADO · arrivo da CDMX",
-                            "url": "https://www.ado.com.mx/"
                         }
                     ],
                     "route": [
@@ -742,18 +743,15 @@ const tripData = {
                             ]
                         }
                     ],
-                    "operationalNotes": [
-                        "Confermare l'orario del 24 dicembre di Monte Albán e dei servizi turistici prima di organizzare il transfer.",
-                        "Bus già acquistato, arrivo a Oaxaca previsto alle 05:30 del 24 dicembre: organizzare colazione e deposito bagagli. Verificare la terminal di arrivo sul biglietto."
-                    ]
+                    "operationalNotes": []
                 },
                 {
                     "id": "2-2",
                     "dayName": "Giorno 5 (25 Dic)",
                     "title": "Hierve el Agua · tour diretto prenotato",
                     "location": "Hierve el Agua · Mitla e Tlacolula, se disponibili",
-                    "shortDesc": "25 dicembre · tour Civitatis prenotato, partenza 09:00; tre ore libere alle cascate pietrificate.",
-                    "fullDesc": "<p><strong>Natale a Hierve el Agua.</strong> Escursione diretta prenotata con Civitatis per <strong>venerdì 25 dicembre 2026</strong>: circa sei ore complessive, di cui <strong>tre ore libere</strong> per ammirare le cascate pietrificate, passeggiare tra i belvedere e visitare le piscine minerali. Nessuna sosta commerciale prevista nel programma.</p><p>Il sentiero panoramico con guida locale è facoltativo e non compreso nel tour. Tempo libero da gestire tra camminata, paesaggi e relax: valutare sul posto il percorso in base alle condizioni e all'apertura delle aree.</p>",
+                    "shortDesc": "Tour diretto di Hierve el Agua già prenotato e pagato; tre ore libere alle cascate pietrificate.",
+                    "fullDesc": "<p><strong>Natale · Hierve el Agua.</strong> Escursione diretta Civitatis già prenotata e pagata per due persone. Tre ore libere tra cascate pietrificate, belvedere e piscine minerali, senza soste commerciali previste.</p><p>Il sentiero panoramico è facoltativo e può essere percorso con guida locale a pagamento. Scegliere il cammino in base alle condizioni sul posto e al tempo disponibile.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1577903792019-90b501d7fa74?auto=format&fit=crop&w=400&q=80"
                     ],
@@ -800,8 +798,8 @@ const tripData = {
                     "dayName": "Giorno 6 (26 Dic)",
                     "title": "Caminos Reales I: Las Minas e Amatlán",
                     "location": "Oaxaca → San Miguel Amatlán · Las Minas",
-                    "shortDesc": "08:00 partenza da Oaxaca; 10:00 Las Minas, 12 km in 4 ore, pranzo con trota, sala dei codici e prima notte in cabaña.",
-                    "fullDesc": "<p><strong>26 dicembre · Las Minas e San Miguel Amatlán (12 km, circa 4 ore).</strong> Alle <strong>08:00</strong> transfer incluso da Oaxaca; alle <strong>10:00</strong> inizio del sentiero Las Minas. <strong>14:00</strong> pranzo con trota, <strong>17:00</strong> visita alla sala dei codici e antichità, <strong>19:00</strong> cena e <strong>20:00</strong> prima notte nella cabaña ad Amatlán.</p><p>La guida e la cabaña sono comprese nel pacchetto già pagato. <strong>Da confermare:</strong> punto di ritrovo del transfer sul voucher e possibili variazioni degli orari. Per cosa portare e condizioni dell'operatore consulta la <a href='sierra-norte.html'>guida Sierra Norte</a>.</p>",
+                    "shortDesc": "Sentiero Las Minas: 12 km, pranzo con trota, sala dei codici e prima notte ad Amatlán.",
+                    "fullDesc": "<p><strong>Las Minas · San Miguel Amatlán (12 km, circa 4 ore).</strong> Inizio del cammino guidato previsto alle 10:00. Pranzo con trota alle 14:00, visita alla sala dei codici e antichità alle 17:00 e serata nel villaggio; prima notte in cabaña.</p><p>Per preparazione e condizioni del trekking consulta la <a href='sierra-norte.html'>guida Sierra Norte</a>.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -833,8 +831,8 @@ const tripData = {
                     "dayName": "Giorno 7 (27 Dic)",
                     "title": "Caminos Reales II: Lachatao → Latuvi",
                     "location": "Camino Real da Lachatao a Santa Marta Latuvi",
-                    "shortDesc": "08:00 colazione; 09:00 partenza trekking 16 km / 5–6 ore; pomeriggio con laboratorio di pulque e tepache e notte a Latuvi.",
-                    "fullDesc": "<p><strong>27 dicembre · Lachatao → Santa Marta Latuvi (16 km, circa 5–6 ore).</strong> <strong>08:00</strong> colazione, <strong>09:00</strong> partenza per il Camino Real guidato, <strong>15:00</strong> pranzo e <strong>16:00</strong> laboratorio di pulque e tepache. <strong>19:00</strong> cena e <strong>20:00</strong> seconda notte nella cabaña a Latuvi.</p><p>È la tappa più lunga dei tre giorni. Orari e attività seguono il programma dell'operatore e possono variare per meteo e indicazioni della guida locale; pernottamento e pasti previsti sono già inclusi.</p>",
+                    "shortDesc": "Camino Real di 16 km verso Santa Marta Latuvi, laboratorio di pulque e tepache.",
+                    "fullDesc": "<p><strong>Lachatao → Santa Marta Latuvi (16 km, circa 5–6 ore).</strong> Colazione alle 08:00, inizio trekking guidato alle 09:00. Pranzo verso le 15:00 e laboratorio di pulque e tepache alle 16:00; seconda notte in cabaña a Latuvi.</p><p>È la giornata di cammino più lunga: il programma può variare per meteo e decisioni della guida locale.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -859,10 +857,10 @@ const tripData = {
                 {
                     "id": "6-dec28",
                     "dayName": "Giorno 8 (28 Dic)",
-                    "title": "Caminos Reales III: Benito Juárez e ritorno a Oaxaca",
+                    "title": "Caminos Reales III: Benito Juárez e mirador",
                     "location": "Santa Marta Latuvi → Benito Juárez → Oaxaca",
-                    "shortDesc": "Tappa finale di 12 km / circa 4 ore e mezza via mirador e ponte sospeso; pranzo alle 14:30 e rientro a Oaxaca dalle 16:00.",
-                    "fullDesc": "<p><strong>28 dicembre · Santa Marta Latuvi → Benito Juárez → Oaxaca (12 km, circa 4 ore e mezza).</strong> <strong>08:00</strong> colazione, <strong>09:00</strong> partenza via mirador e ponte sospeso, <strong>14:30</strong> pranzo; <strong>dalle 16:00</strong> transfer incluso di rientro a Oaxaca. <strong>Orario esatto dell'arrivo in città da confermare.</strong></p><p>Si conclude così il trekking di 40 km in tre giorni. La notte del 28 è già prenotata all'Hotel Cazomalli, mentre il 29 rimane libero per recupero e riposo.</p>",
+                    "shortDesc": "Ultima tappa di 12 km via mirador e ponte sospeso, poi pranzo conclusivo.",
+                    "fullDesc": "<p><strong>Santa Marta Latuvi → Benito Juárez (12 km, circa 4 ore e mezza).</strong> Colazione alle 08:00 e trekking dalle 09:00 attraverso belvedere e ponte sospeso. Pranzo conclusivo verso le 14:30.</p><p>Ultima giornata dei Caminos Reales: tre tappe per circa 40 km complessivi.</p>",
                     "images": [
                         "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
                     ],
@@ -934,35 +932,6 @@ const tripData = {
                 ],
                 "zoom": 10
             },
-            "overview": {
-                "intro": "Archeologia zapoteca, tradizioni oaxaqueñe e tre giorni di trekking comunitario.",
-                "highlights": [
-                    {
-                        "icon": "🏺",
-                        "title": "Monte Albán e Oaxaca",
-                        "detail": "24 dic · rovine zapoteche, centro e mercati.",
-                        "state": "Da organizzare",
-                        "dayId": "2-1"
-                    },
-                    {
-                        "icon": "🥾",
-                        "title": "Caminos Reales · Sierra Norte",
-                        "detail": "26–28 dic · 40 km guidati, 2 notti in cabañas.",
-                        "state": "Già pagato",
-                        "dayId": "6-dec26"
-                    },
-                    {
-                        "icon": "🌮",
-                        "title": "Oaxaca con calma",
-                        "detail": "29 dic · mercati, cucina locale o giornata jolly.",
-                        "state": "Flessibile",
-                        "dayId": "6-dec29"
-                    }
-                ],
-                "tips": [
-                    "Chiedere al Cazomalli il deposito bagagli durante il trekking; il 29 resta flessibile."
-                ]
-            },
             "startDate": "2026-12-24",
             "endDate": "2026-12-29",
             "venues": [
@@ -989,6 +958,32 @@ const tripData = {
                     "description": "Tortillas e specialità fatte con mais nativo: una sosta semplice con la lavorazione del comal a vista.",
                     "tip": "Meglio colazione/pranzo; normalmente pagamento in contanti.",
                     "url": "https://guide.michelin.com/us/en/oaxaca/oaxaca-de-juarez_2056768/restaurant/itanoni"
+                }
+            ],
+            "curiosities": [
+                {
+                    "icon": "🏺",
+                    "title": "Monte Albán è molto più antico della città coloniale",
+                    "text": "Fondato intorno al 500 a.C., fu per secoli un grande centro zapoteco. Il sito archeologico e il centro storico di Oaxaca sono insieme Patrimonio UNESCO.",
+                    "source": "https://whc.unesco.org/en/list/415/"
+                },
+                {
+                    "icon": "🌽",
+                    "title": "Il mais è una cultura, non solo un ingrediente",
+                    "text": "Memelas, tetelas e tlayudas mostrano modi diversi di lavorare la masa e il mais; i mercati sono il posto giusto per assaggiarli.",
+                    "source": "https://ich.unesco.org/en/RL/traditional-mexican-cuisine-ancestral-ongoing-community-culture-the-michoacan-paradigm-00400"
+                },
+                {
+                    "icon": "🧶",
+                    "title": "Molti tessuti raccontano la provenienza",
+                    "text": "Disegni, colori e tecniche cambiano tra le comunità di Oaxaca. Un pezzo comprato direttamente da un artigiano ha spesso una storia da farsi raccontare.",
+                    "source": "https://www.oaxaca.gob.mx/"
+                },
+                {
+                    "icon": "🌿",
+                    "title": "La Sierra Norte è fatta di comunità",
+                    "text": "I Caminos Reales attraversano territori e villaggi dove il turismo comunitario affianca la cura dei boschi: il trekking è anche un incontro con chi vive questi luoghi.",
+                    "source": "https://www.sierranorte.org.mx/"
                 }
             ]
         },
