@@ -398,7 +398,6 @@ function generateContent() {
             ${overviewHtml}
             ${cityDiscoverHtml}
             ${daysHtml}
-            ${sierraGuideHtml}
             ${tourContactsHtml}
             ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-2">
                 <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mr-2 flex items-center">Altre risorse:</span>
@@ -411,7 +410,7 @@ function generateContent() {
         const walletDiv = document.createElement('div');
         walletDiv.id = `wallet-area-${area.id}`;
         walletDiv.className = "wallet-content hidden space-y-3"; // Nascosto di base per il routing
-        walletDiv.innerHTML = sidebarLogisticsHtml; // Logistica discreta, prima del wallet
+        walletDiv.innerHTML = sidebarLogisticsHtml + sierraGuideHtml; // Preparazione Sierra Norte e logistica solo a sinistra
 
         if (area.budget || (area.reservations && area.reservations.length > 0)) {
             walletDiv.innerHTML += `
