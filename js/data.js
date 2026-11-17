@@ -994,7 +994,7 @@ const tripData = {
             "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
             "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
             "title": "Il Pacifico: quattro notti senza fretta",
-            "description": "Quattro notti a San Agustinillo, con Mazunte e Punta Cometa liberi e La Ventanilla facoltativa. Il 3 gennaio inizia il trasferimento al Chiapas.",
+            "description": "30 dicembre arrivo e primo pomeriggio al mare; 31 dicembre spiagge, Museo delle Tartarughe e Capodanno; 1 gennaio giornata libera; 2 gennaio tour naturalistico a La Ventanilla da prenotare.",
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
             ],
@@ -1020,9 +1020,14 @@ const tripData = {
                         "desc": "L'hotel conferma che all'uscita della terminal di Pochutla si trovano taxi de sitio; non è possibile mandare taxi da San Agustinillo per regole locali. Nessuna prenotazione necessaria; tariffa da concordare."
                     },
                     {
-                        "icon": "🚶",
-                        "title": "31 dic–2 gen · dintorni",
-                        "desc": "Mazunte, Punta Cometa e La Ventanilla facoltativi, senza spostare l'alloggio."
+                        "icon": "🚕",
+                        "title": "31 dic · San Agustinillo ↔ Mazunte",
+                        "desc": "Visita al Centro Mexicano de la Tortuga e eventuale serata tra i locali di Mazunte. Rientro notturno con taxi affidabile organizzato in anticipo; concordare prezzo e disponibilità festiva."
+                    },
+                    {
+                        "icon": "🛶",
+                        "title": "2 gen · Trasferimento a La Ventanilla",
+                        "desc": "Tour comunitario ancora da prenotare; verificare l'esatta posizione di ritrovo e organizzare il trasferimento da San Agustinillo. Chiedere eventuale trasporto incluso."
                     },
                     {
                         "icon": "🚕",
@@ -1034,15 +1039,27 @@ const tripData = {
             "food": "Pesce fresco, frutta e specialità locali sul Pacifico. Dopo il trekking priorità a mare, riposo e Capodanno tranquillo a San Agustinillo.",
             "budget": {
                 "total": "Bus Oaxaca → Pochutla 52 € acquistato · taxi e attività costiere da quotare",
-                "spent": "Bus Oaxaca → Pochutla acquistato, 52 € totali; nessuna escursione costiera confermata",
+                "spent": "Bus Oaxaca → Pochutla acquistato; cena di Capodanno, museo e tour di La Ventanilla da organizzare.",
                 "items": [
                     {
-                        "name": "La Ventanilla · tour comunitario",
-                        "cost": "Facoltativo, costo da chiedere"
+                        "name": "31 dic · Cena di Capodanno",
+                        "cost": "Ristorante e menu da scegliere/prenotare; prezzo ancora da definire."
+                    },
+                    {
+                        "name": "Centro Mexicano de la Tortuga · 31 dic",
+                        "cost": "Visita da confermare per festività; ingresso ordinario indicato 50 MXN a persona (100 MXN per 2), prezzo e orario festivo da verificare."
+                    },
+                    {
+                        "name": "La Ventanilla · tour natura · 2 gen · 2 persone",
+                        "cost": "Da prenotare con operatore locale: verificare prezzo totale, durata e inclusione di attività tartarughe; nessun pagamento effettuato."
                     },
                     {
                         "name": "Bus Oaxaca → Pochutla · 30 dic",
                         "cost": "52 € totali · acquistato, già incluso nel budget interurbani"
+                    },
+                    {
+                        "name": "1 gen · Surf facoltativo",
+                        "cost": "Solo se interessati: lezione e tariffa da verificare sul posto, nessuna prenotazione."
                     }
                 ]
             },
@@ -1067,10 +1084,10 @@ const tripData = {
                 {
                     "id": "6-dec30",
                     "dayName": "Giorno 10 (30 Dic)",
-                    "title": "Da Oaxaca al Pacifico: check-in a Posada Paloma",
-                    "location": "Oaxaca → zona Pochutla → San Agustinillo",
-                    "shortDesc": "Bus Oaxaca 09:15 → Pochutla 13:00 acquistato (52 €). Taxi de sitio alla terminal indicato da Posada Paloma; nessuna prenotazione necessaria.",
-                    "fullDesc": "<p>Bus <strong>Oaxaca → Pochutla acquistato per il 30 dicembre</strong>: partenza alle <strong>09:15</strong> e arrivo alle <strong>13:00</strong>, spesa <strong>52 € totali</strong>. Il biglietto indica arrivo in <strong>Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900</strong>; verificare il punto preciso di discesa. <strong>Posada Paloma conferma</strong> che fuori dalla terminal di Pochutla si trovano taxi locali (taxi de sitio) senza prenotazione. I taxi di San Agustinillo non possono effettuare pickup a Pochutla per regole locali. Chiedere il costo prima di salire. Il soggiorno sul Pacifico è già confermato; dettagli e prezzo nel riquadro <strong>Logistica e spostamenti</strong> sotto la mappa, o in <strong>Hotel & costi</strong>.</p><p>Primo pomeriggio di mare e relax dopo i 40 km del trekking nella Sierra Norte. Il 3 gennaio partenza verso Pochutla per i due autobus ADO acquistati fino a Villahermosa; taxi iniziale e collegamento finale per Palenque ancora da organizzare.</p>",
+                    "title": "Primo pomeriggio sul Pacifico",
+                    "location": "San Agustinillo",
+                    "shortDesc": "Primo pomeriggio in spiaggia dopo il viaggio e il trekking.",
+                    "fullDesc": "<p>Arrivo a San Agustinillo e primo pomeriggio lento sulla spiaggia. Passeggiata per conoscere il paese, mare e cena senza programmi impegnativi dopo il trekking nella Sierra Norte.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1078,27 +1095,9 @@ const tripData = {
                         {
                             "text": "🏖️ San Agustinillo · guida locale",
                             "url": "https://mazunte.gob.mx/locations/san-agustinillo/"
-                        },
-                        {
-                            "text": "🚌 Autobus ADO",
-                            "url": "https://www.ado.com.mx/"
                         }
                     ],
                     "route": [
-                        {
-                            "name": "Oaxaca · bus ore 09:15 (terminal da verificare)",
-                            "coords": [
-                                17.0605,
-                                -96.7251
-                            ]
-                        },
-                        {
-                            "name": "Pochutla · Calle Constitución, Centro (arrivo ore 13:00; fermata da confermare)",
-                            "coords": [
-                                15.744,
-                                -96.466
-                            ]
-                        },
                         {
                             "name": "Playa San Agustinillo",
                             "coords": [
@@ -1115,24 +1114,28 @@ const tripData = {
                             "caption": "Playa San Agustinillo"
                         }
                     ],
-                    "operationalNotes": [
-                        "Bus Oaxaca → Pochutla acquistato: 30 dicembre 2026, 09:15–13:00, 52 € totali.",
-                        "Indirizzo riportato sul biglietto: Calle Constitución, Centro, San Pedro Pochutla, Oaxaca, C.P. 70900. Punto preciso di discesa da verificare.",
-                        "Risposta Posada Paloma: all'uscita della terminal di Pochutla ci sono taxi de sitio, senza necessità di prenotare.",
-                        "I taxi di San Agustinillo non possono prelevare passeggeri a Pochutla: prendere taxi de sitio locale e accordare prima il prezzo."
-                    ]
+                    "operationalNotes": []
                 },
                 {
-                    "id": "6-dec31-jan02",
-                    "dayName": "Giorni 11–13 (31 Dic – 2 Gen)",
-                    "title": "San Agustinillo: Capodanno e tre giorni sul Pacifico",
-                    "location": "San Agustinillo · Mazunte · Punta Cometa",
-                    "shortDesc": "Tre giorni al Pacifico: relax e Capodanno; facoltative Mazunte, Punta Cometa e La Ventanilla.",
-                    "fullDesc": "<p><strong>31 dicembre–2 gennaio:</strong> giornate libere per il mare, Capodanno tranquillo e piccole uscite facoltative a <strong>Mazunte</strong>, al tramonto di <strong>Punta Cometa</strong> (se il sentiero è percorribile) o alle mangrovie di <strong>La Ventanilla</strong> con guida comunitaria.</p><p><strong>2 gennaio:</strong> ultima giornata completa di relax, prima del lungo trasferimento del 3–4 gennaio. Nessuna escursione né ulteriore alloggio prenotati per queste attività.</p>",
+                    "id": "6-dec31",
+                    "dayName": "Giorno 11 (31 Dic)",
+                    "title": "Spiagge, tartarughe e Capodanno",
+                    "location": "San Agustinillo · Mazunte",
+                    "shortDesc": "Spiagge e Museo delle Tartarughe se aperto; cena di Capodanno da prenotare, poi serata nei locali del paese.",
+                    "fullDesc": "<p><strong>Giorno:</strong> spiagge di San Agustinillo e Mazunte, senza orari rigidi. Se confermata l'apertura festiva, visita al <strong>Centro Mexicano de la Tortuga</strong> di Mazunte (orario ordinario giovedì 10:00–16:30, da verificare per il 31 dicembre). Il centro è dedicato alla conoscenza e conservazione delle tartarughe marine e terrestri.</p><p><strong>Serata:</strong> scegliere e prenotare un ristorante per il cenone o una cena speciale del 31, quindi passeggiata tra i locali di San Agustinillo/Mazunte secondo l'atmosfera. Possibile evento musicale sulla Playa Mermejita, da confermare per il Capodanno 2026–27; non considerarlo prenotato.</p>",
                     "images": [
-                        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
-                    "links": [],
+                    "links": [
+                        {
+                            "text": "🐢 Centro Mexicano de la Tortuga · orari e costo",
+                            "url": "https://tortugasmazunte.org/horarios-y-costos/"
+                        },
+                        {
+                            "text": "🎉 Mazunte · festività di Capodanno e Mermejita",
+                            "url": "https://mazunte.gob.mx/festivales/"
+                        }
+                    ],
                     "route": [
                         {
                             "name": "Playa San Agustinillo",
@@ -1142,17 +1145,78 @@ const tripData = {
                             ]
                         },
                         {
-                            "name": "Mazunte",
+                            "name": "Centro Mexicano de la Tortuga",
                             "coords": [
-                                15.6648,
-                                -96.554
+                                15.6673,
+                                -96.5558
+                            ]
+                        },
+                        {
+                            "name": "Playa Mermejita",
+                            "coords": [
+                                15.6675,
+                                -96.5674
                             ]
                         }
                     ],
-                    "operationalNotes": [
-                        "Le uscite a Mazunte, Punta Cometa e La Ventanilla sono facoltative e non prenotate.",
-                        "Il 3 gennaio inizia il trasferimento lungo per il Chiapas: verificare i bus con anticipo."
+                    "operationalNotes": [],
+                    "imageCredits": [
+                        {
+                            "author": "Sgroey",
+                            "license": "CC BY-SA 4.0",
+                            "url": "https://commons.wikimedia.org/wiki/File:Playa%20San%20Agustinillo.jpg",
+                            "caption": "Playa San Agustinillo"
+                        }
                     ]
+                },
+                {
+                    "id": "6-jan01",
+                    "dayName": "Giorno 12 (1 Gen)",
+                    "title": "Capodanno lento: spiaggia, mangrovie o surf",
+                    "location": "San Agustinillo · Mazunte",
+                    "shortDesc": "Giornata senza prenotazioni: relax; solo se ne abbiamo voglia, mangrovie oppure surf con istruttore.",
+                    "fullDesc": "<p><strong>Nessun impegno fissato.</strong> Dormire senza sveglia, colazione con calma, spiaggia e pranzo lungo dopo la sera di Capodanno.</p><p><strong>Opzione A:</strong> breve giro nelle mangrovie con guida locale, soltanto se siamo riposati; attenzione perché il 2 è già previsto un tour naturalistico più completo a La Ventanilla. <strong>Opzione B:</strong> pomeriggio in spiaggia e surf con istruttore, soltanto con mare e condizioni fisiche adatte. In alternativa, niente di più del mare e un tramonto.</p>",
+                    "images": [],
+                    "links": [],
+                    "route": [
+                        {
+                            "name": "Playa San Agustinillo",
+                            "coords": [
+                                15.6659,
+                                -96.5438
+                            ]
+                        }
+                    ],
+                    "operationalNotes": []
+                },
+                {
+                    "id": "6-jan02",
+                    "dayName": "Giorno 13 (2 Gen)",
+                    "title": "La Ventanilla: coccodrilli, iguane e tartarughe",
+                    "location": "La Ventanilla · vicino a Mazunte",
+                    "shortDesc": "Tour di ecoturismo comunitario da scegliere e prenotare: mangrovie, coccodrilli, iguane e possibile attività con tartarughe.",
+                    "fullDesc": "<p><strong>Tour naturalistico a La Ventanilla, da prenotare per sabato 2 gennaio.</strong> Preferire la cooperativa locale <strong>Servicios Ecoturísticos La Ventanilla</strong>: escursione guidata in laguna fra mangrovie, con possibilità di osservare coccodrilli, iguane e uccelli nel loro habitat. <strong>Le tartarughe non sono garantite</strong>: chiedere se in quella data è disponibile anche un'attività di conservazione o avvistamento responsabile.</p><p>Concordare direttamente con l'operatore prezzo per due, durata, ora di partenza e punto d'incontro; evitare proposte che promettano contatto o manipolazione degli animali. Rispettare le restrizioni locali presso Boca Barra, dove è segnalata la presenza di coccodrilli: solo percorsi consentiti con guide autorizzate.</p>",
+                    "images": [],
+                    "links": [
+                        {
+                            "text": "🐊 La Ventanilla · cooperativa comunitaria",
+                            "url": "https://www.laventanilla.com.mx/"
+                        },
+                        {
+                            "text": "🐢 La Ventanilla · esperienze di conservazione",
+                            "url": "https://www.laventanilla.com.mx/inicio"
+                        }
+                    ],
+                    "route": [
+                        {
+                            "name": "Laguna La Ventanilla",
+                            "coords": [
+                                15.667,
+                                -96.577
+                            ]
+                        }
+                    ],
+                    "operationalNotes": []
                 }
             ],
             "mapFocus": {
@@ -1161,37 +1225,6 @@ const tripData = {
                     -96.5438
                 ],
                 "zoom": 12
-            },
-            "overview": {
-                "intro": "Arrivo il 30 dicembre via Pochutla con bus acquistato; poi quattro notti al mare tra tramonti e piccoli villaggi costieri.",
-                "highlights": [
-                    {
-                        "icon": "🌊",
-                        "title": "San Agustinillo e Capodanno",
-                        "detail": "Spiaggia e riposo dopo la Sierra Norte.",
-                        "state": "Soggiorno confermato",
-                        "dayId": "6-dec31-jan02"
-                    },
-                    {
-                        "icon": "🌅",
-                        "title": "Mazunte e Punta Cometa",
-                        "detail": "Passeggiata e tramonto, se il sentiero è praticabile.",
-                        "state": "Facoltativo",
-                        "dayId": "6-dec31-jan02"
-                    },
-                    {
-                        "icon": "🌿",
-                        "title": "La Ventanilla",
-                        "detail": "Mangrovie e natura con guida comunitaria.",
-                        "state": "Facoltativo",
-                        "dayId": "6-dec31-jan02"
-                    }
-                ],
-                "tips": [
-                    "Le uscite nei dintorni sono opzionali: tenere spazio al relax.",
-                    "3 gen: arrivare in anticipo a Pochutla per il bus ADO acquistato delle 14:10; acquistato anche il notturno delle 21:30 per Villahermosa.",
-                    "30 dic: Posada Paloma conferma taxi de sitio fuori dalla terminal di Pochutla; nessuna prenotazione richiesta."
-                ]
             },
             "startDate": "2026-12-30",
             "endDate": "2027-01-03",
