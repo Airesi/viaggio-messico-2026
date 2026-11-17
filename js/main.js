@@ -410,7 +410,7 @@ function generateContent() {
         const walletDiv = document.createElement('div');
         walletDiv.id = `wallet-area-${area.id}`;
         walletDiv.className = "wallet-content hidden space-y-3"; // Nascosto di base per il routing
-        walletDiv.innerHTML = sidebarLogisticsHtml + sierraGuideHtml; // Preparazione Sierra Norte e logistica solo a sinistra
+        walletDiv.innerHTML = ""; // Prima Attività & spese, poi Logistica, poi guida trekking (Oaxaca)
 
         if (area.budget || (area.reservations && area.reservations.length > 0)) {
             walletDiv.innerHTML += `
@@ -425,6 +425,7 @@ function generateContent() {
                     <span aria-hidden="true" class="font-bold text-emerald-800 text-lg">↗</span>
                 </button>`;
         }
+        walletDiv.innerHTML += sidebarLogisticsHtml + sierraGuideHtml;
         walletContainer.appendChild(walletDiv);
     });
 }
