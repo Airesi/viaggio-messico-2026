@@ -1036,7 +1036,7 @@ const tripData = {
                     }
                 ]
             },
-            "food": "Pesce fresco, frutta e specialità locali sul Pacifico. Dopo il trekking priorità a mare, riposo e Capodanno tranquillo a San Agustinillo.",
+            "food": "Colazioni lente a San Agustinillo, pesce e cucina della costa per cena. Per il 31 dicembre chiedere in anticipo menu, prezzo e disponibilità: la cena di Capodanno non è ancora prenotata.",
             "budget": {
                 "total": "Bus Oaxaca → Pochutla 52 € acquistato · taxi e attività costiere da quotare",
                 "spent": "Bus Oaxaca → Pochutla acquistato; cena di Capodanno, museo e tour di La Ventanilla da organizzare.",
@@ -1258,7 +1258,33 @@ const tripData = {
                 "author": "Sgroey",
                 "license": "CC BY-SA 4.0",
                 "url": "https://commons.wikimedia.org/wiki/File:Playa%20San%20Agustinillo.jpg"
-            }
+            },
+            "curiosities": [
+                {
+                    "icon": "🐢",
+                    "title": "Da caccia alle tartarughe a conservazione",
+                    "text": "Mazunte era legata allo sfruttamento delle tartarughe; dopo il divieto nazionale del 1990, parte della comunità ha costruito una nuova economia intorno alla tutela marina.",
+                    "source": "https://www.oaxaca.travel/index.php/es/sitios-de-interes-es/pueblos-magicos-es/mazunte-es"
+                },
+                {
+                    "icon": "🐋",
+                    "title": "È stagione di megattere",
+                    "text": "Tra dicembre e marzo le balene megattere migrano lungo questa costa. Gli avvistamenti sono possibili ma mai garantiti; eventuali uscite solo con operatori autorizzati.",
+                    "source": "https://mazunte.gob.mx/turismo-ecologico/"
+                },
+                {
+                    "icon": "🌅",
+                    "title": "Punta Cometa e il significato del tramonto",
+                    "text": "Il promontorio vicino a Mazunte è un luogo simbolico per le comunità locali e un bel punto panoramico sull'oceano. Il sentiero richiede scarpe adatte e luce per il rientro.",
+                    "source": "https://mazunte.gob.mx/locations/punta-cometa/"
+                },
+                {
+                    "icon": "🌿",
+                    "title": "La Ventanilla protegge le mangrovie",
+                    "text": "Cooperative della comunità organizzano la tutela della laguna e visite guidate a basso impatto: il turismo sostiene il lavoro locale e la conservazione.",
+                    "source": "https://mazunte.gob.mx/turismo-ecologico/"
+                }
+            ]
         },
         {
             "id": 3,
