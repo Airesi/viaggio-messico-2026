@@ -214,7 +214,7 @@ function generateContent() {
                             </div>
                         </details>
                     ` : ''}
-                    ${area.id > 2 && (area.food || (area.venues || []).length) ? `
+                    ${area.id > 2 && area.id !== 6 && (area.food || (area.venues || []).length) ? `
                         <details class="rounded-xl bg-white border border-gray-200 p-3">
                             <summary class="cursor-pointer text-xs font-bold text-slate-900">🌮 Pasti e consigli sul posto ${(area.venues || []).length ? '· ' + area.venues.length + ' locali' : ''}</summary>
                             ${area.food ? `<p class="mt-2 text-[11px] leading-relaxed text-gray-600">${area.food}</p>` : ''}
@@ -322,10 +322,10 @@ function generateContent() {
         ` : '';
 
 
-        // CDMX e Oaxaca: gastronomia e curiosità stanno nella colonna delle attività.
+        // CDMX, Oaxaca e Pacifico: locali e curiosità nella colonna delle attività.
         // I contenuti provengono da area.food, area.venues e area.curiosities:
         // non vengono ripetuti nella sidebar logistica.
-        const cityDiscoverHtml = [1, 2].includes(area.id) ? `
+        const cityDiscoverHtml = [1, 2, 6].includes(area.id) ? `
             <section class="mb-5 sm:mb-6 rounded-[1.5rem] bg-white border border-gray-200/80 shadow-sm overflow-hidden" aria-label="Pasti e locali consigliati per la tappa">
                 <div class="px-5 pt-4 pb-3 sm:px-6">
                     <span class="text-[10px] font-black uppercase tracking-widest text-amber-800">🌮 Dove mangiare</span>
@@ -344,7 +344,7 @@ function generateContent() {
             </section>
             <section class="mb-5 sm:mb-6 rounded-[1.5rem] bg-white border border-gray-200/80 shadow-sm overflow-hidden" aria-label="Curiosità sulla tappa">
                 <div class="px-5 pt-4 pb-3 sm:px-6">
-                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-800">✨ Curiosità su ${area.id === 1 ? "CDMX" : "Oaxaca"}</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-800">✨ Curiosità su ${area.id === 1 ? "CDMX" : area.id === 2 ? "Oaxaca" : "Pacifico"}</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 px-4 sm:px-5 pb-4">
                     ${(area.curiosities || []).map(item => `
