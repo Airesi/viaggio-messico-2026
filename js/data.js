@@ -405,14 +405,18 @@ const tripData = {
                     "dayName": "Giorno 3 (23 Dic)",
                     "title": "Coyoacán e canali di Xochimilco",
                     "location": "Coyoacán · Xochimilco",
-                    "shortDesc": "Passeggiata a Coyoacán e giro in trajinera a Xochimilco, da organizzare.",
-                    "fullDesc": "<p><strong>Coyoacán.</strong> Passeggiata fra le vie del quartiere, Plaza Hidalgo, mercatini e caffè. Nessun museo obbligatorio.</p><p><strong>Xochimilco.</strong> Giro in trajinera sui canali; valutare un percorso più tranquillo nella zona di Cuemanco anziché le proposte festaioli. <strong>Da fare:</strong> scegliere il circuito ecologico e l’imbarcadero dal sito Xochimilco.com; verificare durata, prezzo, punto di partenza e disponibilità del 23 dicembre. Nessun tour prenotato.</p>",
+                    "shortDesc": "Coyoacán e tour ecologico Xochimilco: Xochimilco.com è il canale preferito, scelta e prenotazione ancora da fare.",
+                    "fullDesc": "<p><strong>Coyoacán.</strong> Passeggiata fra le vie del quartiere, Plaza Hidalgo, mercatini e caffè. Nessun museo obbligatorio.</p><p><strong>Xochimilco.</strong> Giro in trajinera sui canali; valutare un percorso più tranquillo nella zona di Cuemanco anziché le proposte festaioli. <strong>Da fare:</strong> scegliere e prenotare tramite Xochimilco.com un giro ecologico di 2–3 ore, possibilmente da Cuemanco, privilegiando chinampas e canali tranquilli; confermare disponibilità del 23 dicembre, prezzo totale per due, imbarcadero e orario. Il portale è una guida turistica con prenotazioni via WhatsApp, non un sito istituzionale. Nessun tour prenotato.</p>",
                     "images": [
                         "assets/img/Xochimilco_trajineras.jpg"
                     ],
                     "links": [
                         {
-                            "text": "🛶 Xochimilco · scegli circuito ecologico e imbarcadero",
+                            "text": "🛶 Xochimilco.com · esperienze e prenotazioni (prima scelta)",
+                            "url": "https://xochimilco.com/"
+                        },
+                        {
+                            "text": "🌿 Xochimilco.com · imbarcaderi ecologici",
                             "url": "https://xochimilco.com/es/embarcaderos/?circuit=ecologico"
                         }
                     ],
