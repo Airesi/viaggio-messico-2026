@@ -956,8 +956,8 @@ const tripData = {
                     "kind": "Memelas, tetelas e mais tradizionale",
                     "where": "Reforma · breve taxi",
                     "description": "Tortillas e specialità fatte con mais nativo: una sosta semplice con la lavorazione del comal a vista.",
-                    "tip": "Meglio colazione/pranzo; normalmente pagamento in contanti.",
-                    "url": "https://guide.michelin.com/us/en/oaxaca/oaxaca-de-juarez_2056768/restaurant/itanoni"
+                    "tip": "Per il 24 dicembre chiedere se aperto e se è possibile pranzare verso le 14:30. Orario ordinario 07:00–16:00, chiuso a cena; prenotazioni non confermate, possibile accesso senza prenotazione. Tel. +52 951 205 2282; portare contanti.",
+                    "url": "https://guide.michelin.com/es/es/oaxaca/oaxaca-de-juarez_2056768/restaurante/itanoni"
                 }
             ],
             "curiosities": [
@@ -976,8 +976,8 @@ const tripData = {
                 {
                     "icon": "🧶",
                     "title": "Molti tessuti raccontano la provenienza",
-                    "text": "Disegni, colori e tecniche cambiano tra le comunità di Oaxaca. Un pezzo comprato direttamente da un artigiano ha spesso una storia da farsi raccontare.",
-                    "source": "https://www.oaxaca.gob.mx/"
+                    "text": "I motivi, le tecniche e i materiali variano tra le comunità di Oaxaca: il Museo Textil conserva e racconta queste tradizioni. Si trova nel centro storico, ingresso normalmente gratuito; apertura del 24 dicembre da verificare.",
+                    "source": "https://museotextildeoaxaca.org/museo/"
                 },
                 {
                     "icon": "🌿",
