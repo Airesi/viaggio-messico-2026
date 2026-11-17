@@ -1172,10 +1172,10 @@ const tripData = {
                 {
                     "id": "6-jan01",
                     "dayName": "Giorno 12 (1 Gen)",
-                    "title": "Capodanno lento: spiaggia, mangrovie o surf",
+                    "title": "Capodanno lento: spiaggia, surf o Puerto Ángel",
                     "location": "San Agustinillo · Mazunte",
-                    "shortDesc": "Giornata senza prenotazioni: relax; solo se ne abbiamo voglia, mangrovie oppure surf con istruttore.",
-                    "fullDesc": "<p><strong>Nessun impegno fissato.</strong> Dormire senza sveglia, colazione con calma, spiaggia e pranzo lungo dopo la sera di Capodanno.</p><p><strong>Opzione A:</strong> breve giro nelle mangrovie con guida locale, soltanto se siamo riposati; attenzione perché il 2 è già previsto un tour naturalistico più completo a La Ventanilla. <strong>Opzione B:</strong> pomeriggio in spiaggia e surf con istruttore, soltanto con mare e condizioni fisiche adatte. In alternativa, niente di più del mare e un tramonto.</p>",
+                    "shortDesc": "Giornata senza prenotazioni: mare e relax; facoltativi surf, mangrovie o una mezza giornata a Puerto Ángel.",
+                    "fullDesc": "<p><strong>Nessun impegno fissato.</strong> Dormire senza sveglia, colazione con calma e spiaggia dopo la sera di Capodanno.</p><p><strong>Solo se ne abbiamo voglia:</strong> surf con istruttore e mare adatto; un giro breve nelle mangrovie (ma il 2 è già prevista La Ventanilla); oppure <strong>Puerto Ángel</strong>, con snorkeling a <strong>Playa Estacahuite</strong> e pranzo di pesce a <strong>Playa Panteón</strong>. Sceglieremo sul momento in base alle energie, al meteo e al mare.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1283,6 +1283,80 @@ const tripData = {
                     "title": "La Ventanilla protegge le mangrovie",
                     "text": "Cooperative della comunità organizzano la tutela della laguna e visite guidate a basso impatto: il turismo sostiene il lavoro locale e la conservazione.",
                     "source": "https://mazunte.gob.mx/turismo-ecologico/"
+                }
+            ],
+            "beaches": [
+                {
+                    "name": "San Agustinillo",
+                    "area": "A due passi dall'alloggio",
+                    "highlight": "Base per il relax",
+                    "description": "Tre piccole baie e locali sulla sabbia. La più pratica per il primo pomeriggio e per le giornate lente.",
+                    "safety": "Onde e correnti variabili: scegliere solo i tratti indicati come balneabili sul posto.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+San+Agustinillo+Oaxaca"
+                },
+                {
+                    "name": "Playa Rinconcito",
+                    "area": "Mazunte",
+                    "highlight": "Caletta riparata",
+                    "description": "Piccola insenatura vicina al paese, comoda per una passeggiata e una nuotata se il mare è calmo.",
+                    "safety": "Verificare sempre risacca e condizioni dell'acqua.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Rinconcito+Mazunte"
+                },
+                {
+                    "name": "Playa Mazunte",
+                    "area": "Mazunte",
+                    "highlight": "Spiaggia e paese",
+                    "description": "Perfetta da abbinare al Museo delle Tartarughe, ai negozietti e a un pranzo.",
+                    "safety": "Mare aperto: non tutte le zone sono adatte al bagno.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Mazunte+Oaxaca"
+                },
+                {
+                    "name": "Playa Mermejita",
+                    "area": "Ovest di Mazunte",
+                    "highlight": "Panorami e tramonto",
+                    "description": "Spiaggia selvaggia, ampia e scenografica vicino al promontorio di Punta Cometa.",
+                    "safety": "Forti correnti e onde: da preferire per passeggiare e osservare il paesaggio, non per nuotare.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Mermejita+Oaxaca"
+                },
+                {
+                    "name": "Zipolite",
+                    "area": "Verso Puerto Ángel",
+                    "highlight": "Atmosfera alternativa",
+                    "description": "Lunga spiaggia con bar e locali, nota anche per la tradizione naturista. Carina per passeggiare e fermarsi a bere qualcosa.",
+                    "safety": "Correnti e risacca possono essere molto forti: prudenza massima con il bagno.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Zipolite+Oaxaca"
+                },
+                {
+                    "name": "Playa del Amor",
+                    "area": "Estremità di Zipolite",
+                    "highlight": "Piccola baia appartata",
+                    "description": "Caletta raggiungibile a piedi dal lato occidentale di Zipolite; più scenografica che necessaria nel programma.",
+                    "safety": "Accesso e mare da verificare, soprattutto con alta marea e moto ondoso.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+del+Amor+Zipolite"
+                },
+                {
+                    "name": "Playa Estacahuite",
+                    "area": "Puerto Ángel",
+                    "highlight": "La scelta per snorkeling",
+                    "description": "Tre piccole cale rocciose con fondali interessanti, ideali per una mezza giornata se l'acqua è limpida.",
+                    "safety": "Snorkeling soltanto con condizioni calme; non calpestare fondali o coralli.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Estacahuite+Puerto+Angel"
+                },
+                {
+                    "name": "Playa Panteón",
+                    "area": "Puerto Ángel",
+                    "highlight": "Pranzo di pesce e porticciolo",
+                    "description": "Baia frequentata anche dai locali, con piccoli ristoranti e barche dei pescatori. Si abbina a Estacahuite.",
+                    "safety": "Rispettare l'area di manovra delle barche e valutare il mare sul posto.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+Panteon+Puerto+Angel"
+                },
+                {
+                    "name": "Playa La Boquilla",
+                    "area": "Oltre Puerto Ángel",
+                    "highlight": "Baia più appartata",
+                    "description": "Caletta più distante, immersa nel verde. Bella ma richiede un trasferimento dedicato: solo se resta tempo.",
+                    "safety": "Strada di accesso e disponibilità taxi da verificare; nuoto solo con mare adatto.",
+                    "maps": "https://www.google.com/maps/search/?api=1&query=Playa+La+Boquilla+Puerto+Angel"
                 }
             ]
         },
