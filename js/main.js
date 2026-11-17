@@ -426,6 +426,18 @@ function generateContent() {
                 </button>`;
         }
         walletDiv.innerHTML += sidebarLogisticsHtml + sierraGuideHtml;
+        if (area.id === 6 && area.beaches?.length) {
+            walletDiv.innerHTML += `
+                <button type="button" onclick="openPacificBeachesModal()" aria-haspopup="dialog" aria-controls="pacific-beaches-modal"
+                    class="trip-sidebar-accordion w-full rounded-[1.5rem] border border-sky-200 bg-white shadow-sm p-4 flex items-center gap-3 hover:bg-sky-50/70 transition-colors text-left">
+                    <span class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-xl">🏖️</span>
+                    <span class="flex-1 min-w-0">
+                        <strong class="block text-sm font-extrabold text-slate-900">Spiagge da scoprire</strong>
+                        <span class="block text-[11px] text-slate-500 mt-0.5">San Agustinillo, Mazunte, Zipolite e Puerto Ángel · apri la guida</span>
+                    </span>
+                    <span aria-hidden="true" class="font-bold text-sky-800 text-lg">↗</span>
+                </button>`;
+        }
         walletContainer.appendChild(walletDiv);
     });
 }
@@ -606,6 +618,58 @@ function initMap() {
 }
 
 
+
+// Guida alle spiagge del Pacifico, consultabile dalla colonna sinistra senza sovraccaricare l'itinerario.
+function openPacificBeachesModal() {
+    const area = tripData.areas.find(a => a.id === 6);
+    const container = document.getElementById("pacific-beaches-modal-container");
+    if (!area || !container) return;
+    const safe = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+    const cards = (area.beaches || []).map(spot => `
+        <article class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+                <div>
+                    <h3 class="font-black text-slate-900 text-sm">${safe(spot.name)}</h3>
+                    <p class="text-[11px] text-slate-500 mt-0.5">${safe(spot.area)}</p>
+                </div>
+                <span class="rounded-lg bg-sky-50 text-sky-900 text-[10px] font-bold px-2.5 py-1">${safe(spot.highlight)}</span>
+            </div>
+            <p class="text-xs text-slate-700 mt-3 leading-relaxed">${safe(spot.description)}</p>
+            <p class="text-[11px] text-amber-900 mt-2 leading-relaxed">🌊 ${safe(spot.safety)}</p>
+            <a href="${safe(spot.maps)}" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center mt-3 text-xs font-extrabold text-emerald-800 hover:underline">📍 Apri la mappa ↗</a>
+        </article>`).join("");
+    container.innerHTML = `
+        <div id="pacific-beaches-modal" role="dialog" aria-modal="true" aria-labelledby="pacific-beaches-heading"
+            class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-900/50 backdrop-blur-md">
+            <div class="bg-slate-50 w-full max-w-5xl rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[94vh] border border-white/40">
+                <div class="bg-white border-b border-slate-100 px-5 sm:px-8 py-5 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <span class="block text-[10px] font-black tracking-widest uppercase text-sky-800">Costa del Pacifico · Oaxaca</span>
+                        <h2 id="pacific-beaches-heading" class="text-lg sm:text-xl font-black text-slate-900 mt-1">🏖️ Spiagge da scoprire</h2>
+                        <p class="text-xs text-slate-500 mt-1">Proposte facoltative, nessuna escursione prenotata · scegliete in base al mare e alle energie</p>
+                    </div>
+                    <button type="button" onclick="closePacificBeachesModal()" aria-label="Chiudi guida alle spiagge"
+                        class="h-10 w-10 shrink-0 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 font-bold">✕</button>
+                </div>
+                <div class="p-4 sm:p-7 overflow-y-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">${cards}</div>
+                    <p class="mt-4 text-xs text-slate-500 leading-relaxed">Per nuotare o fare snorkeling, chiedere sempre indicazioni locali aggiornate su correnti, onde, maree e zone autorizzate. Non entrare in acqua soltanto perché la baia sembra riparata.</p>
+                </div>
+            </div>
+        </div>`;
+    const modal = document.getElementById("pacific-beaches-modal");
+    modal.addEventListener("click", e => { if (e.target === modal) closePacificBeachesModal(); });
+    document.body.classList.add("overflow-hidden");
+    modal.querySelector('button[aria-label="Chiudi guida alle spiagge"]')?.focus();
+}
+function closePacificBeachesModal() {
+    document.getElementById("pacific-beaches-modal-container")?.replaceChildren();
+    document.body.classList.remove("overflow-hidden");
+}
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && document.getElementById("pacific-beaches-modal")) closePacificBeachesModal();
+});
 
 // Modale condivisa per attività e spese della tappa corrente.
 function openActivityCostsModal(areaId) {
