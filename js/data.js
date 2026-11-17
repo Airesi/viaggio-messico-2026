@@ -998,7 +998,16 @@ const tripData = {
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
             ],
-            "links": [],
+            "links": [
+                {
+                    "text": "🐋 Yubarta Ecoturismo · ricerca e avvistamento responsabile",
+                    "url": "https://es.wired.com/articulos/rescatar-ballenas-en-mexico-raben"
+                },
+                {
+                    "text": "📞 Yubarta · contatto pubblicato (da riconfermare)",
+                    "url": "https://www.allbiz.mx/yubarta-ecoturismo-958-117-7257"
+                }
+            ],
             "basecamp": {
                 "zone": "San Agustinillo · costa del Pacifico",
                 "hotelIdea": "Quattro notti nella stessa struttura, senza cambi durante Capodanno. Dettagli dell'alloggio nella sezione prenotazioni.",
@@ -1175,7 +1184,7 @@ const tripData = {
                     "title": "Capodanno lento: spiaggia, surf o Puerto Ángel",
                     "location": "San Agustinillo · Mazunte",
                     "shortDesc": "Giornata senza prenotazioni: mare e relax; facoltativi surf, mangrovie o una mezza giornata a Puerto Ángel.",
-                    "fullDesc": "<p><strong>Nessun impegno fissato.</strong> Dormire senza sveglia, colazione con calma e spiaggia dopo la sera di Capodanno.</p><p><strong>Solo se ne abbiamo voglia:</strong> surf con istruttore e mare adatto; un giro breve nelle mangrovie (ma il 2 è già prevista La Ventanilla); oppure <strong>Puerto Ángel</strong>, con snorkeling a <strong>Playa Estacahuite</strong> e pranzo di pesce a <strong>Playa Panteón</strong>. Sceglieremo sul momento in base alle energie, al meteo e al mare.</p>",
+                    "fullDesc": "<p><strong>Nessun impegno fissato.</strong> Dormire senza sveglia, colazione con calma e spiaggia dopo la sera di Capodanno.</p><p><strong>Solo se ne abbiamo voglia:</strong> surf con istruttore e mare adatto; un giro breve nelle mangrovie (ma il 2 è già prevista La Ventanilla); oppure <strong>Puerto Ángel</strong>, con snorkeling a <strong>Playa Estacahuite</strong> e pranzo di pesce a <strong>Playa Panteón</strong>. Da Puerto Ángel è interessante anche Yubarta Ecoturismo, gruppo di biologi impegnato nel monitoraggio delle megattere e nella rete RABEN: valutare un'uscita scientifico-naturalistica solo se autorizzata per la stagione 2026–27 e disponibile il 1° gennaio, senza togliere libertà alla giornata. <a href='https://es.wired.com/articulos/rescatar-ballenas-en-mexico-raben' target='_blank' rel='noopener noreferrer'>Leggi la storia su WIRED</a>. Sceglieremo sul momento in base alle energie, al meteo e al mare.</p>",
                     "images": [],
                     "links": [],
                     "route": [
@@ -1187,7 +1196,10 @@ const tripData = {
                             ]
                         }
                     ],
-                    "operationalNotes": []
+                    "operationalNotes": [
+                        "Yubarta Ecoturismo (Puerto Ángel): chiedere disponibilità di un tour scientifico/whale watching responsabile per 31 dicembre–2 gennaio, prezzo per 2, punto d'imbarco, durata e autorizzazione SEMARNAT valida per la stagione 2026–27. Nessuna prenotazione effettuata.",
+                        "Il numero +52 958 117 7257 compare in una directory di terzi, ma non è stato confermato da un canale ufficiale: https://www.allbiz.mx/yubarta-ecoturismo-958-117-7257"
+                    ]
                 },
                 {
                     "id": "6-jan02",
@@ -1268,9 +1280,9 @@ const tripData = {
                 },
                 {
                     "icon": "🐋",
-                    "title": "È stagione di megattere",
-                    "text": "Tra dicembre e marzo le balene megattere migrano lungo questa costa. Gli avvistamenti sono possibili ma mai garantiti; eventuali uscite solo con operatori autorizzati.",
-                    "source": "https://mazunte.gob.mx/turismo-ecologico/"
+                    "title": "Megattere e biologi di Yubarta",
+                    "text": "Le megattere (yubartas) transitano in inverno davanti a Mazunte e Puerto Ángel. WIRED (2024) racconta il lavoro dei biologi Priscila Sarmiento e Francisco Villegas di Yubarta Ecoturismo: fotografano le code, uniche come impronte digitali, per monitorare gli individui. Francisco fa parte anche della rete RABEN per il soccorso alle balene impigliate nelle reti. Yubarta figurava tra gli operatori autorizzati nella stagione 2025–26, ma prima di prenotare occorre verificare il permesso NOM-131 per il 2026–27. Gli avvistamenti non sono garantiti; mai inseguire, toccare o entrare in acqua con i cetacei.",
+                    "source": "https://es.wired.com/articulos/rescatar-ballenas-en-mexico-raben"
                 },
                 {
                     "icon": "🌅",
