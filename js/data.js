@@ -994,7 +994,7 @@ const tripData = {
             "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
             "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
             "title": "Il Pacifico: quattro notti senza fretta",
-            "description": "30 dicembre arrivo e primo pomeriggio al mare; 31 dicembre spiagge, Museo delle Tartarughe e Capodanno; 1 gennaio giornata libera; 2 gennaio tour naturalistico a La Ventanilla da prenotare.",
+            "description": "Dal 30 dicembre, arrivo nel primo pomeriggio e prime ore di mare; 31 dicembre spiagge, Museo delle Tartarughe e Capodanno; 1 gennaio giornata libera; 2 gennaio tour naturalistico a La Ventanilla da prenotare.",
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
             ],
@@ -1084,10 +1084,10 @@ const tripData = {
                 {
                     "id": "6-dec30",
                     "dayName": "Giorno 10 (30 Dic)",
-                    "title": "Primo pomeriggio sul Pacifico",
+                    "title": "Arrivo nel primo pomeriggio, spiaggia e tramonto",
                     "location": "San Agustinillo",
-                    "shortDesc": "Primo pomeriggio in spiaggia dopo il viaggio e il trekking.",
-                    "fullDesc": "<p>Arrivo a San Agustinillo e primo pomeriggio lento sulla spiaggia. Passeggiata per conoscere il paese, mare e cena senza programmi impegnativi dopo il trekking nella Sierra Norte.</p>",
+                    "shortDesc": "Bus a Pochutla alle 13:00; dopo il taxi e il check-in, pomeriggio già libero a San Agustinillo.",
+                    "fullDesc": "<p><strong>Dal primo pomeriggio:</strong> arriviamo a San Agustinillo dopo il bus che raggiunge Pochutla alle 13:00. Lasciati gli zaini a Posada Paloma e completato il check-in, abbiamo già diverse ore per il primo bagno o per rilassarci sulla spiaggia.</p><p><strong>Verso il tramonto:</strong> prima passeggiata sul lungomare e tra i locali di San Agustinillo, per ambientarci senza fretta. <strong>Sera:</strong> cena di pesce o cucina locale vicino all'alloggio; nessuna attività impegnativa prevista dopo il trekking nella Sierra Norte.</p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
