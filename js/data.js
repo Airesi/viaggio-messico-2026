@@ -994,7 +994,7 @@ const tripData = {
             "badge": "30 Dic – 3 Gen • San Agustinillo e Capodanno sul Pacifico",
             "locationText": "Costa di Oaxaca · San Agustinillo, Mazunte e Punta Cometa",
             "title": "Il Pacifico: quattro notti senza fretta",
-            "description": "Dal 30 dicembre, arrivo nel primo pomeriggio e prime ore di mare; 31 dicembre spiagge, Museo delle Tartarughe e Capodanno; 1 gennaio giornata libera; 2 gennaio tour naturalistico a La Ventanilla da prenotare.",
+            "description": "Dal 30 dicembre mare e relax; il 31 street food e festa sulla spiaggia a San Agustinillo, con salsa e cumbia se disponibili; 1 gennaio libero e 2 gennaio La Ventanilla da prenotare.",
             "images": [
                 "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
             ],
@@ -1030,8 +1030,8 @@ const tripData = {
                     },
                     {
                         "icon": "🚕",
-                        "title": "31 dic · San Agustinillo ↔ Mazunte",
-                        "desc": "Visita al Centro Mexicano de la Tortuga e eventuale serata tra i locali di Mazunte. Rientro notturno con taxi affidabile organizzato in anticipo; concordare prezzo e disponibilità festiva."
+                        "title": "31 dic · Mazunte di giorno, notte a San Agustinillo",
+                        "desc": "Eventuale visita al Centro Mexicano de la Tortuga a Mazunte durante il giorno. La sera preferiamo cenare e festeggiare sulla spiaggia vicino a Posada Paloma, senza taxi notturni; Mazunte solo come alternativa se compare una festa latina confermata."
                     },
                     {
                         "icon": "🛶",
@@ -1045,14 +1045,14 @@ const tripData = {
                     }
                 ]
             },
-            "food": "Colazioni lente a San Agustinillo, pesce e cucina della costa per cena. Per il 31 dicembre chiedere in anticipo menu, prezzo e disponibilità: la cena di Capodanno non è ancora prenotata.",
+            "food": "31 dicembre: niente cenone. Preferenza per tacos di pesce, antojitos e comedores familiari lungo la strada principale, oppure cibo da asporto sulla spiaggia. Riferimento: Visit San Agustinillo · guida allo street food. Se i chioschi chiudono presto, piano B El Navegante o RestoBar del Fondo (apertura e menu alla carta da verificare). Poi festeggiamenti sulla spiaggia vicino a Posada Paloma: salsa/cumbia sì, elettronica no; falò solo se esiste un evento autorizzato.",
             "budget": {
                 "total": "Bus Oaxaca → Pochutla 52 € acquistato · taxi e attività costiere da quotare",
-                "spent": "Bus Oaxaca → Pochutla acquistato; cena di Capodanno, museo e tour di La Ventanilla da organizzare.",
+                "spent": "Bus Oaxaca → Pochutla acquistato; street food e festa del 31 dicembre senza prenotazioni, museo e tour di La Ventanilla da verificare.",
                 "items": [
                     {
-                        "name": "31 dic · Cena di Capodanno",
-                        "cost": "Ristorante e menu da scegliere/prenotare; prezzo ancora da definire."
+                        "name": "31 dic · Street food + spiaggia (niente cenone)",
+                        "cost": "Stima orientativa 300–500 MXN in due per cena informale e bevande semplici, da confermare sul posto; nessuna prenotazione."
                     },
                     {
                         "name": "Centro Mexicano de la Tortuga · 31 dic",
@@ -1129,9 +1129,9 @@ const tripData = {
                     "id": "6-dec31",
                     "dayName": "Giorno 11 (31 Dic)",
                     "title": "Spiagge, tartarughe e Capodanno",
-                    "location": "San Agustinillo · Mazunte",
-                    "shortDesc": "Spiagge e Museo delle Tartarughe se aperto; cena di Capodanno da prenotare, poi serata nei locali del paese.",
-                    "fullDesc": "<p><strong>Giorno:</strong> spiagge di San Agustinillo e Mazunte, senza orari rigidi. Se confermata l'apertura festiva, visita al <strong>Centro Mexicano de la Tortuga</strong> di Mazunte (orario ordinario giovedì 10:00–16:30, da verificare per il 31 dicembre). Il centro è dedicato alla conoscenza e conservazione delle tartarughe marine e terrestri.</p><p><strong>Serata:</strong> scegliere e prenotare un ristorante per il cenone o una cena speciale del 31, quindi passeggiata tra i locali di San Agustinillo/Mazunte secondo l'atmosfera. Possibile evento musicale sulla Playa Mermejita, da confermare per il Capodanno 2026–27; non considerarlo prenotato.</p>",
+                    "location": "San Agustinillo · Mazunte di giorno",
+                    "shortDesc": "Spiagge e Museo delle Tartarughe se aperto; street food senza cenone, poi festa sulla spiaggia vicino a Paloma (salsa/cumbia e possibile falò da verificare).",
+                    "fullDesc": "<p><strong>Giorno:</strong> spiagge di San Agustinillo e Mazunte, senza orari rigidi. Se confermata l'apertura festiva, visita al <strong>Centro Mexicano de la Tortuga</strong> di Mazunte (orario ordinario giovedì 10:00–16:30, da verificare per il 31 dicembre). Il centro è dedicato alla conoscenza e conservazione delle tartarughe marine e terrestri.</p><p><strong>Serata:</strong> niente cenone: verso le 18:30–20:00 cercare tacos, antojitos o un comedor locale lungo la strada principale di <strong>San Agustinillo</strong>, anche da asporto per mangiare sulla sabbia. Se chiusi, piano B <strong>El Navegante</strong> o <strong>RestoBar del Fondo</strong>, previa verifica del servizio alla carta. Dopo cena, <strong>mezzanotte e festa sulla spiaggia vicino a Posada Paloma</strong>: cerchiamo salsa o cumbia, non musica elettronica; un falò sarebbe bello solo se autorizzato e rispettoso delle tartarughe. <strong>Eventi e musica del 31 dicembre non ancora confermati.</strong></p>",
                     "images": [
                         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Playa_San_Agustinillo.jpg/640px-Playa_San_Agustinillo.jpg"
                     ],
@@ -1141,8 +1141,8 @@ const tripData = {
                             "url": "https://tortugasmazunte.org/horarios-y-costos/"
                         },
                         {
-                            "text": "🎉 Mazunte · festività di Capodanno e Mermejita",
-                            "url": "https://mazunte.gob.mx/festivales/"
+                            "text": "🌮 San Agustinillo · guida allo street food",
+                            "url": "https://visitsanagustinillo.com/restaurantes/comida-callejera-san-agustinillo/"
                         }
                     ],
                     "route": [
@@ -1161,14 +1161,18 @@ const tripData = {
                             ]
                         },
                         {
-                            "name": "Playa Mermejita",
+                            "name": "Playa San Agustinillo · festa desiderata",
                             "coords": [
-                                15.6675,
-                                -96.5674
+                                15.6659,
+                                -96.5438
                             ]
                         }
                     ],
-                    "operationalNotes": [],
+                    "operationalNotes": [
+                        "31/12: cercare eventi con salsa o cumbia e festa sulla spiaggia a San Agustinillo; nessun evento confermato. Evitare feste di musica elettronica (es. Mermejita).",
+                        "Per cena: cercare street food tra le 18:30 e le 20:00; apertura festiva e prezzi da verificare. Piano B El Navegante o RestoBar del Fondo, solo se servizio alla carta disponibile.",
+                        "Falò sulla spiaggia solo se organizzato e autorizzato, nel rispetto delle aree di nidificazione delle tartarughe."
+                    ],
                     "imageCredits": [
                         {
                             "author": "Sgroey",
